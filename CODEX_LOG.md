@@ -65,3 +65,37 @@ repository-local identity 为 `Yichen Han <EasonHanYichen@gmail.com>`。创建�
 ### 备注
 
 服务器 hostname 为 `aiotcentre-03.latrobe.edu.au`。初始化时 `/data` 文件系统为 33 TB total、20 TB used、13 TB available。未访问旧 WaterBench 项目，未运行 GPU、训练或 evaluation，未下载模型或数据。Artifact 同步与 manifest 协议仍待后续任务定义。
+
+## 2026-08-27 14:40（Australia/Sydney，UTC+10:00）
+
+### 任务
+
+初始化 AutoDL 上的 WMKD_Benchmark 计算端 checkout、独立大型计算数据根目录、cache namespace 和最小路径验证工具，不开始科研实验。
+
+### 完成内容
+
+- 通过既有 SSH 连接 `6000` 确认 AutoDL 主机、系统、磁盘、Python、Git 和 GPU inventory。
+- 在 `/root/autodl-tmp/WMKD_Benchmark` clone 私有 GitHub repository。
+- 在 `/root/autodl-tmp/WMKD_Benchmark_data` 创建独立的模型、checkpoint、数据、cache、run、generation、artifact、manifest、日志和临时目录。
+- 新增 AutoDL 路径配置、target-scoped storage 验证脚本和 compute storage 文档。
+- 更新项目状态、任务和基础设施决策。
+
+### 文件变化
+
+- 新增 `env/autodl_paths.sh`。
+- 新增 `scripts/verify_autodl_storage.sh`。
+- 新增 `docs/storage/autodl_compute.md`。
+- 修改 `PROJECT_STATUS.md`、`TODO.md`、`DECISIONS.md`、`CODEX_LOG.md`。
+- AutoDL 非 Git 数据根目录新增专属 storage 结构与 `README.md`。
+
+### 结果
+
+成功。AutoDL compute checkout 与独立 compute storage 已初始化；验证脚本在同步最新 Git commit 后执行。
+
+### Git
+
+本轮使用 commit message `Initialize AutoDL compute infrastructure` 提交本地变更并推送到现有 `origin/main`，随后在 AutoDL 执行 fast-forward pull。最终 hash 与同步状态在本轮结束前验证。
+
+### 备注
+
+AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX PRO 6000 Blackwell Server Edition（97,887 MiB），检查时无显存占用和运行进程。未连接学校服务器，未访问旧 WaterBench，未下载模型或数据，未运行 GPU workload、训练或 evaluation。正式 ML environment、artifact 同步和 provenance protocol 均待后续批准。

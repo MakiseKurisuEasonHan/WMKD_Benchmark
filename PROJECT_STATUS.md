@@ -11,16 +11,18 @@ Repository initialization and early research planning.
 - Defined the confirmed high-level research question and intended workflow without claiming experimental results.
 - Created the private GitHub repository and synchronized the initialization commit on `main`.
 - Initialized the La Trobe lightweight project mirror and dedicated large-artifact warehouse.
+- Initialized the AutoDL compute checkout, isolated compute-data root, and project-specific cache paths.
 
 ## Current task
 
-- School-server storage initialization is complete; awaiting separately approved AutoDL, synchronization-protocol, and research-method tasks.
+- AutoDL compute infrastructure initialization is complete; no research environment or experiment has started.
 
 ## Blockers
 
 - The local environment still cannot authenticate Git over the configured SSH GitHub remote; authenticated temporary HTTPS credentials can be used without changing `origin`.
 - Artifact synchronization and provenance-manifest protocols have not yet been defined.
+- The first method-specific Python/ML environment remains intentionally deferred until a watermark reproduction target is approved.
 
 ## Next step
 
-- Define the AutoDL compute environment and storage synchronization protocol in separate approved tasks, then discuss the first watermark reproduction plan.
+- Define the artifact synchronization and provenance-manifest protocols, then approve the first watermark reproduction target and its environment.

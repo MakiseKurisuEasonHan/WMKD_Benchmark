@@ -22,7 +22,8 @@ __pycache__/
 htmlcov/
 .venv/
 venv/
-env/
+env/*
+!env/autodl_paths.sh
 build/
 dist/
 *.egg-info/

@@ -1,0 +1,56 @@
+# AutoDL Compute Storage
+
+## Purpose
+
+AutoDL is the compute endpoint for future WMKD_Benchmark GPU training, watermark reproduction, knowledge distillation, evaluation, generation, and experiment-time artifacts. It is not the primary development environment or the sole long-term artifact archive.
+
+## Endpoint and baseline inventory
+
+- SSH connection: use the existing local alias `6000`; credentials are intentionally not documented.
+- Hostname: `autodl-container-8sfcmdj9gq-e8387159`
+- User and default directory: `root`, `/root`
+- System: Linux kernel `5.15.0-78-generic`, x86_64
+- Python: Python 3.10.12 via `python3`; the `python` command was absent at initialization
+- Git: 2.34.1
+- Conda: not present at initialization
+- GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition, 97,887 MiB VRAM
+- NVIDIA driver: 580.95.05
+- Reported CUDA compatibility: 13.0
+- Initial GPU state: 0 MiB used, 0% utilization, no running GPU processes
+
+No Python/ML environment was created during infrastructure initialization.
+
+## Paths
+
+- Git checkout: `/root/autodl-tmp/WMKD_Benchmark`
+- Compute data root: `/root/autodl-tmp/WMKD_Benchmark_data`
+
+At initialization, `/root/autodl-tmp` was on `/dev/md0`: 1,000 GB total, 37 MB used, and approximately 1,000 GB available. The system overlay had 30 GB total and 24 GB available. These are point-in-time observations.
+
+## Compute storage structure
+
+```text
+WMKD_Benchmark_data/
+├── models/{base,watermarked,distilled}/
+├── checkpoints/{watermark,distillation}/
+├── datasets/
+├── cache/{huggingface,transformers,torch,other}/
+├── runs/{watermark,distillation,benchmark}/
+├── generations/
+├── artifacts/
+├── manifests/
+├── logs/
+├── tmp/
+└── README.md
+```
+
+The data root is not a Git repository and must remain separate from the Git checkout. `env/autodl_paths.sh` defines the project-specific paths and cache namespace. `scripts/verify_autodl_storage.sh` performs a small, target-scoped validation.
+
+## Storage and isolation policy
+
+- Local Windows remains the primary development location and source of truth.
+- GitHub provides version control, reproducibility, and recovery for code, configuration, documentation, metadata, and small summaries.
+- AutoDL stores compute-time models, datasets, checkpoints, caches, outputs, and temporary artifacts.
+- The La Trobe school-server warehouse is the long-term home for important official large artifacts.
+- AutoDL paths, caches, outputs, and state must never reuse legacy WaterBench namespaces.
+- Important artifact transfer and provenance procedures require a separately approved protocol; no automatic synchronization is configured.
