@@ -165,3 +165,35 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 ### 备注
 
 学校 canonical 路径为 `/data/shared/nobackup/21672330/WMKD_Benchmark/models/base/Llama-3.2-3B-Instruct`，server manifest 为 `/data/shared/nobackup/21672330/WMKD_Benchmark/manifests/models/llama_3_2_3b_instruct_0cb88a4.json`。本轮未连接 AutoDL，未上传 OSS，未调用 GPU，未加载模型，也未运行训练、distillation 或 evaluation。
+
+## 2026-08-27 23:58（Australia/Sydney，UTC+10:00）
+
+### 任务
+
+评估 ModelScope 是否能为 AutoDL 提供与冻结 Hugging Face revision 逐文件完全一致的 Llama-3.2-3B-Instruct，并在不一致时拒绝候选；不运行正式 PNFP 实验。
+
+### 完成内容
+
+- 在 AutoDL 新建独立轻量环境 `/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env`，安装 `modelscope-hub 0.2.0`，未修改 PNFP venv。
+- 通过官方 ModelScope API 确认候选 `LLM-Research/Llama-3.2-3B-Instruct`、owner `LLM-Research`、唯一 revision `master` 和 18 项仓库内容。
+- 将候选 metadata 与 Git 中冻结的 12 文件 manifest 对照：11/12 size/SHA256 一致，两个权重 shard metadata 均一致，但 `.gitattributes` 不一致。
+- 下载 `tokenizer.json` 测速并验证 SHA256；随后下载 `.gitattributes` 复核 mismatch，未启动任何权重下载。
+- 清理 ModelScope staging，保持 AutoDL 正式模型目录为空。
+
+### 文件变化
+
+- 修改 `docs/models/llama_3_2_3b_instruct.md`、`docs/storage/autodl_compute.md`。
+- 修改 `PROJECT_STATUS.md`、`TODO.md`、`DECISIONS.md`、`CODEX_LOG.md`。
+- AutoDL 非 Git 数据区保留独立 ModelScope CLI 环境；测试 staging 已删除。
+
+### 结果
+
+候选被拒绝。9,085,657-byte `tokenizer.json` 在 1.702 秒内下载完成，约 5.34 MB/s，且 SHA256 与 canonical 一致；但候选 `.gitattributes` 为 1,722 bytes、SHA256 `a064aaf95c0e90dfb935d9f5682bdf9912926220c9623b5e7f2a0a0acbce543f`，而 canonical 为 1,519 bytes、SHA256 `11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361`。因此该 ModelScope copy 不是 12/12 byte-identical，不能用于 WMKD_Benchmark。
+
+### Git
+
+本轮计划使用 commit message `Record ModelScope backbone compatibility check` 提交轻量文档并推送；最终 commit 与同步状态在本轮结束前验证。
+
+### 备注
+
+未下载权重、未 promote 模型、未运行 tokenizer/model load、generation smoke、GPU workload、fingerprint generation、training 或 evaluation。正式 PNFP Experiment A 仍未开始。

@@ -54,3 +54,7 @@ The data root is not a Git repository and must remain separate from the Git chec
 - The La Trobe school-server warehouse is the long-term home for important official large artifacts.
 - AutoDL paths, caches, outputs, and state must never reuse legacy WaterBench namespaces.
 - Important artifact transfer and provenance procedures require a separately approved protocol; no automatic synchronization is configured.
+
+## Backbone transfer observations
+
+As of 2026-08-27, AutoDL does not contain a complete verified copy of the unified Llama-3.2-3B-Instruct backbone, and its formal model directory is empty after failed-transfer cleanup. Windows SCP, La Trobe direct rsync, and Hugging Face `network_turbo` did not provide a stable large-file path. ModelScope delivered a 9,085,657-byte tokenizer at approximately 5.34 MB/s, but the candidate repository differed from the frozen manifest in `.gitattributes` and was rejected before weight download. The isolated ModelScope CLI environment remains at `/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env`; it does not modify the PNFP environment.

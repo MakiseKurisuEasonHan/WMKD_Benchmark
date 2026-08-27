@@ -11,6 +11,7 @@
 - [x] Initialize the AutoDL compute checkout and isolated data/cache structure.
 - [x] Create and validate the PNFP-specific AutoDL environment.
 - [x] Archive the fixed Llama-3.2-3B-Instruct revision in canonical La Trobe storage and verify all 12 files by size and SHA256.
+- [x] Evaluate the ModelScope Llama-3.2-3B-Instruct candidate and reject it after a downloaded canonical-file mismatch confirmed it is not byte-identical.
 - [ ] Complete the fixed Llama model transfer to AutoDL and verify all SHA256 values.
 - [ ] Run offline tokenizer/model load and short generation smoke after transfer verification.
 - [ ] Explicitly authorize formal PNFP Experiment A training in a separate task.
