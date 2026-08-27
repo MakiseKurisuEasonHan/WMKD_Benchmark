@@ -32,6 +32,7 @@ The paper demonstrates much larger fingerprint scales on Llama-3.1-8B. Experimen
 
 - Stage 1 established the canonical AutoDL model at `/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct` and verified all 12 files against the frozen manifest.
 - The project runner is `scripts/run_pnfp_experiment_a.sh`; the detached pipeline and structured evaluator are project-owned scripts.
+- The current AutoDL image does not provide `tmux`; the launcher therefore uses the protocol-permitted equivalent `nohup + setsid` mode and persists its detached PID. It retains automatic `tmux` support when available.
 - Runs use `/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/<run_id>/` with configuration, logs, status, checkpoints, evaluation, and results subdirectories.
 - Formal launch: pending.
 

@@ -19,7 +19,7 @@ fi
 RUN_ID="pnfp_exp_a_$(date +%Y%m%d_%H%M%S)"
 RUN_DIR="${RUN_ROOT}/${RUN_ID}"
 SESSION="${RUN_ID}"
-if [[ -e "${RUN_DIR}" ]] || tmux has-session -t "${SESSION}" 2>/dev/null; then
+if [[ -e "${RUN_DIR}" ]] || { command -v tmux >/dev/null && tmux has-session -t "${SESSION}" 2>/dev/null; }; then
   echo "Run collision: ${RUN_ID}" >&2
   exit 1
 fi
@@ -58,7 +58,7 @@ open(sys.argv[1], "w").write(json.dumps(config, indent=2) + "\n")
 PY
 python - "${RUN_DIR}/status/status.json" <<PY
 import json, os, sys
-status = {"run_id": "${RUN_ID}", "tmux_session": "${SESSION}", "launcher_pid": os.getppid(),
+status = {"run_id": "${RUN_ID}", "detached_mode": None, "tmux_session": None, "launcher_pid": os.getppid(),
           "pid": None, "start_timestamp": "${START}", "active_stage": "launching",
           "stage_status": "pending", "final_status": "running", "exit_code": None,
           "checkpoint_path": None, "evaluation_status": "pending", "failure_reason": None}
@@ -68,10 +68,28 @@ nvidia-smi > "${RUN_DIR}/logs/nvidia_smi_at_launch.txt"
 env > "${RUN_DIR}/config/environment.txt"
 
 COMMAND="source '${ENV_ROOT}/bin/activate'; export HF_HOME='${HF_HOME}' HF_HUB_CACHE='${HF_HUB_CACHE}' TRANSFORMERS_CACHE='${TRANSFORMERS_CACHE}' HF_DATASETS_CACHE='${HF_DATASETS_CACHE}' TORCH_EXTENSIONS_DIR='${TORCH_EXTENSIONS_DIR}' TMPDIR='${TMPDIR}' WANDB_MODE=disabled TOKENIZERS_PARALLELISM=false; '${ENV_ROOT}/bin/python' '${PROJECT_ROOT}/scripts/pnfp_experiment_a_pipeline.py' --runtime-config '${RUNTIME_CONFIG}' >> '${RUN_DIR}/logs/pipeline.log' 2>&1"
-tmux new-session -d -s "${SESSION}" "bash -lc \"${COMMAND}\""
-sleep 2
-if ! tmux has-session -t "${SESSION}" 2>/dev/null; then
-  echo "Detached session exited during launch; inspect ${RUN_DIR}/logs/pipeline.log" >&2
-  exit 1
+if command -v tmux >/dev/null; then
+  tmux new-session -d -s "${SESSION}" "bash -lc \"${COMMAND}\""
+  DETACHED_MODE="tmux"
+  DETACHED_PID=""
+else
+  nohup setsid bash -lc "${COMMAND}" >/dev/null 2>&1 < /dev/null &
+  DETACHED_PID="$!"
+  DETACHED_MODE="nohup_setsid"
 fi
-printf 'RUN_ID=%s\nSESSION=%s\nRUN_DIR=%s\nSTATUS=%s\nLOG=%s\n' "$RUN_ID" "$SESSION" "$RUN_DIR" "${RUN_DIR}/status/status.json" "${RUN_DIR}/logs/pipeline.log"
+python - "${RUN_DIR}/status/status.json" "${DETACHED_MODE}" "${DETACHED_PID}" "${SESSION}" <<'PY'
+import json, sys
+path, mode, pid, session = sys.argv[1:]
+status = json.load(open(path))
+status["detached_mode"] = mode
+status["detached_pid"] = int(pid) if pid else None
+status["tmux_session"] = session if mode == "tmux" else None
+open(path, "w").write(json.dumps(status, indent=2) + "\n")
+PY
+sleep 2
+if [[ "${DETACHED_MODE}" == "tmux" ]]; then
+  tmux has-session -t "${SESSION}" 2>/dev/null || { echo "Detached tmux session exited; inspect ${RUN_DIR}/logs/pipeline.log" >&2; exit 1; }
+else
+  kill -0 "${DETACHED_PID}" 2>/dev/null || { echo "Detached process exited; inspect ${RUN_DIR}/logs/pipeline.log" >&2; exit 1; }
+fi
+printf 'RUN_ID=%s\nDETACHED_MODE=%s\nSESSION=%s\nPID=%s\nRUN_DIR=%s\nSTATUS=%s\nLOG=%s\n' "$RUN_ID" "$DETACHED_MODE" "${SESSION:-}" "${DETACHED_PID:-}" "$RUN_DIR" "${RUN_DIR}/status/status.json" "${RUN_DIR}/logs/pipeline.log"
