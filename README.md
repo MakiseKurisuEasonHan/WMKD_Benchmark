@@ -6,6 +6,12 @@ WMKD_Benchmark is an early-stage research project studying the stability of larg
 
 The benchmark will evaluate how watermark detectability, strength, stability, and model utility change after knowledge distillation, and will compare robustness across watermarking and distillation methods.
 
+## Standardized backbone
+
+Formal experiments default to the pinned canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Experiment A watermarks a fresh canonical 3B model. Ba and Bb use the successful watermarked A model as teacher but initialize their students from fresh canonical unwatermarked 3B weights. Keeping model family, size, revision, tokenizer, and template fixed separates watermark and distillation effects from model compression and capacity reduction.
+
+Methods that cannot use the standardized 3B backbone are not silently moved to another model. A deviation requires a documented blocker, explicit user approval, and clear non-standard-backbone labeling in the formal record. The authoritative operational rule is in `docs/EXPERIMENT_PROTOCOL.md`.
+
 ## Intended workflow
 
 ```text
@@ -24,7 +30,7 @@ Cross-method benchmark
 
 ## Project status
 
-The project is currently in the initialization and early research stage. No watermark reproduction, distillation, or benchmark experiment has been completed. Reproducibility instructions will be added as methods and protocols are selected and implemented.
+PN-FP Experiment A has completed successfully. PN-FP Ba/Bb infrastructure is prepared under the standardized 3B design; Ba has not started and Bb remains deferred. See `PROJECT_STATUS.md` and `EXPERIMENT_LOG.md` for current evidence-backed state.
 
 ## Repository layout
 

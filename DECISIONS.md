@@ -57,6 +57,12 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Use `meta-llama/Llama-3.2-3B-Instruct` at revision `0cb88a4f764b7a12671c53f0838cd831a0843b95` as the shared 3B backbone for watermark reproductions and later clean-student initialization unless a future explicit decision changes it.
 - **Reason:** A fixed shared model revision supports fair cross-method comparisons and reproducible model provenance.
 
+## 2026-08-28 — Make same-size 3B the default A/Ba/Bb benchmark rule
+
+- **Decision:** Unless the user separately approves a documented method-specific deviation, Experiment A, Ba, and Bb all use `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. A starts from canonical unwatermarked weights; Ba/Bb use the successful watermarked A checkpoint only as teacher and initialize each student through a fresh load of the canonical unwatermarked weights.
+- **Reason:** Same family, size, revision, tokenizer, and template enable horizontal cross-method comparison and vertical A → Ba/Bb retention comparison without mixing distillation with model compression or capacity reduction.
+- **Exception policy:** Incompatibility or resource infeasibility is a blocker, not permission to swap models. Record it, propose the deviation, obtain explicit user approval, and label the result as a non-standard backbone deviation without rewriting historical runs.
+
 ## 2026-08-27 — Use PNFP as the first reproduction target
 
 - **Decision:** Prepare PNFP (Perinucleus fingerprinting) Experiment A from the official `SewoongLab/scalable-fingerprinting-of-llms` repository at commit `fdceaba14bd3e89340916a6a40e27c945d48460e`, without reusing legacy implementations or the official repository's pre-generated fingerprint data.

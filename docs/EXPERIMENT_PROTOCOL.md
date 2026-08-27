@@ -11,6 +11,18 @@ WMKD_Benchmark is independent of WaterBench, WaterBenchV2, WaterBenchV3, `waterm
 - The La Trobe server owns long-term large-artifact archives. School VPN must be **on**.
 - GitHub stores small reproducibility files, never model weights, optimizer states, caches, large logs, raw tensors, credentials, or secrets.
 
+## Default backbone standardization
+
+Unless a watermark method has a documented technical limitation and the user separately approves a deviation, every formal method uses the same pinned canonical backbone: `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`.
+
+- Experiment A embeds the watermark into the canonical unwatermarked 3B backbone.
+- Experiment Ba uses the successful watermarked Experiment A 3B checkpoint as teacher and a fresh load of the canonical unwatermarked 3B as student initialization.
+- Experiment Bb uses that watermarked 3B teacher, UP-modified distillation targets, and another fresh load of the canonical unwatermarked 3B as student initialization.
+
+This same-family, same-size, same-revision policy supports horizontal comparisons between watermark methods and vertical A → Ba/Bb retention comparisons. It reduces confounding from compression, parameter count, architecture, tokenizer/template, and capacity reduction so the benchmark isolates watermark-method and distillation-attack effects. Matching architecture and revision never permits initializing the student from watermarked teacher weights.
+
+If a method cannot run on this 3B backbone, is officially incompatible, or is infeasible under available resources, do not substitute another model automatically. Record the blocker, propose a deviation, wait for explicit user approval, and label any approved result as a non-standard backbone deviation in its configuration, log, summary, and report.
+
 ## Formal experiment lifecycle
 
 Each formal experiment has an independent immutable run namespace, dedicated output directory, raw logs, checkpoints, evaluation outputs, machine-readable summary, report, and dedicated Markdown log. Run IDs use `<method>_<experiment>_YYYYMMDD_HHMMSS`; failed runs are retained and never silently overwritten or resumed.

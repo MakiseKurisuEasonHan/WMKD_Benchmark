@@ -4,6 +4,8 @@
 
 Stage 3 — PN-FP Experiment A finalized; Ba corrected to same-size 3B and stopped before launch; Bb deferred. No formal GPU run active.
 
+The durable benchmark default is now a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Ba/Bb teachers are successful watermarked A checkpoints; students always start from fresh canonical unwatermarked weights. Any method-specific backbone deviation requires a recorded blocker and explicit user approval.
+
 ## Completed
 
 - Established the independent WMKD_Benchmark repository structure.
