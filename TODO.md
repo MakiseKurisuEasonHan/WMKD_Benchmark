@@ -16,7 +16,8 @@
 - [x] Run offline tokenizer/model load and short generation smoke after transfer verification.
 - [x] Explicitly authorize formal PNFP Experiment A training in a separate task.
 - [x] Define the durable formal experiment protocol and dedicated PN-FP log convention.
-- [ ] Launch and monitor PN-FP Experiment A through the independent runner.
+- [x] Launch PN-FP Experiment A through the independent runner (`pnfp_exp_a_20260827_231325`).
+- [ ] Monitor PN-FP Experiment A without launching another large GPU task.
 - [ ] Complete checkpoint reload, watermarked evaluation, base control, paired metrics, report, and summary.
 
 ## Medium priority

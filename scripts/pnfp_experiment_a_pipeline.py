@@ -75,7 +75,7 @@ class Pipeline:
         c = self.config
         keys = self.run_dir / "evaluation" / "fingerprint_keys.json"
         cmd = [self.python, "generate_finetuning_data.py", "--key_length", "16", "--response_length", "16",
-               "--num_fingerprints", "1024", "--batch_size", "128", "--first_token_strategy", "word",
+               "--num_fingerprints", "1100", "--batch_size", "128", "--first_token_strategy", "word",
                "--key_response_strategy", "perinucleus", "--model_used_for_key_generation", c["paths"]["model"],
                "--perinucleus_model", c["paths"]["model"], "--nucleus_t", "0.8", "--nucleus_k", "3",
                "--use_chat_template", "--output_file_path", str(keys), "--seed", "42"]
@@ -83,9 +83,14 @@ class Pipeline:
         candidates = sorted((self.run_dir / "evaluation").glob("fingerprint_keys-perinucleus-*.json"))
         if len(candidates) != 1:
             raise RuntimeError(f"Expected one generated fingerprint file, found {candidates}")
+        generated_count = len(json.loads(candidates[0].read_text()))
+        if generated_count < 1024:
+            raise RuntimeError(f"Generated only {generated_count} valid fingerprints; 1024 required")
         self.config["paths"]["fingerprints"] = str(candidates[0])
+        self.config["fingerprint_candidate_count"] = generated_count
         atomic_json(self.config_path, self.config)
-        self.update(fingerprints_path=str(candidates[0]))
+        self.update(fingerprints_path=str(candidates[0]), fingerprint_candidate_count=generated_count,
+                    formal_fingerprint_count=1024)
 
     def train(self):
         c = self.config

@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 2 — PN-FP Experiment A runner implementation and formal launch.
+Stage 2 — PN-FP Experiment A corrective relaunch after two preserved pre-training failures.
 
 ## Completed
 
@@ -21,8 +21,8 @@ Stage 2 — PN-FP Experiment A runner implementation and formal launch.
 
 ## Current task
 
-- Persist the project-wide formal experiment protocol and PN-FP dedicated log.
-- Validate and launch PN-FP Experiment A through the detached project-owned runner.
+- Synchronize the candidate-key oversampling fix and launch a new immutable run.
+- The two earlier runs failed before any optimizer step; no OOM occurred and the GPU is idle.
 
 ## Blockers
 
@@ -32,4 +32,4 @@ Stage 2 — PN-FP Experiment A runner implementation and formal launch.
 
 ## Next step
 
-- Commit and synchronize the protocol/runner milestone, then launch the immutable AutoDL formal run at batch size 8 after minimum preflight.
+- Launch a corrected immutable run that requires at least 1,024 valid fingerprints, then allow the detached pipeline to proceed automatically.
