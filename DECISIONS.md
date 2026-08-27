@@ -31,3 +31,13 @@ This log records consequential project decisions. It does not record routine eng
 
 - **Decision:** Retain all rights until the project owner explicitly selects a release license.
 - **Reason:** Choosing distribution and reuse terms is a consequential publication decision and is not yet specified.
+
+## 2026-08-27 — Assign infrastructure roles
+
+- **Decision:** The local Windows project is the primary development location; GitHub versions and backs up code, configurations, documentation, metadata, and small summaries; AutoDL is reserved for future compute; and the La Trobe school server is the long-term large-artifact warehouse.
+- **Reason:** Explicit role separation prevents large artifacts from entering Git, avoids treating archival storage as a development or compute environment, and provides a clear recovery model.
+
+## 2026-08-27 — Keep the school-server warehouse physically separate
+
+- **Decision:** Maintain a lightweight Git checkout at `/data/home/ad/21672330/WMKD_Benchmark` and a non-Git warehouse at `/data/shared/nobackup/21672330/WMKD_Benchmark`, without symlinks between them or to legacy projects.
+- **Reason:** Physical and logical separation reduces accidental Git ingestion, cross-project contamination, and ambiguous artifact provenance. A future task will define explicit synchronization configuration and manifests.

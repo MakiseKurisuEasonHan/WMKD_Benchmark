@@ -33,3 +33,35 @@ repository-local identity 为 `Yichen Han <EasonHanYichen@gmail.com>`。创建�
 ### 备注
 
 沙箱内初次认证检查因网络权限产生误报；受控联网检查确认 GitHub keyring 中的 `MakiseKurisuEasonHan` 认证有效。未发现 secret、超过 1 MiB 的意外文件或旧项目绝对路径/依赖。初始化已完成；后续常规 SSH push 仍需解决当前环境的 public-key 认证问题，或明确批准改用 HTTPS remote。
+
+## 2026-08-27 14:34（Australia/Sydney，UTC+10:00）
+
+### 任务
+
+初始化 La Trobe University 学校服务器上的 WMKD_Benchmark 轻量项目 mirror 与专属大型 artifact warehouse，并将实际存储信息记录回本地 source of truth。
+
+### 完成内容
+
+- 通过既有 SSH alias `gpu` 确认服务器身份与用户环境。
+- 在 `/data/home/ad/21672330/WMKD_Benchmark` clone 私有 GitHub repository，并验证 `main`、HEAD、origin 和 clean 状态。
+- 在 `/data/shared/nobackup/21672330/WMKD_Benchmark` 创建模型、checkpoint、数据、结果、generation、artifact、manifest 和日志目录及说明文件。
+- 验证 warehouse 不是 Git repository，两套新目录中没有 symlink，并记录对应文件系统空间。
+- 新增学校服务器 storage 文档，更新项目状态、任务和基础设施决策。
+
+### 文件变化
+
+- 新增 `docs/storage/school_server.md`。
+- 修改 `PROJECT_STATUS.md`、`TODO.md`、`DECISIONS.md`、`CODEX_LOG.md`。
+- 学校服务器 warehouse 新增目录结构与 `README.md`；轻量目录新增 GitHub checkout。
+
+### 结果
+
+成功。轻量 mirror 与独立 warehouse 均已按指定路径初始化并验证。
+
+### Git
+
+本轮使用 commit message `Document school storage infrastructure` 提交本地文档，并推送到现有 `origin/main`；最终 commit hash 和同步状态在本轮结束前通过 Git 命令验证。
+
+### 备注
+
+服务器 hostname 为 `aiotcentre-03.latrobe.edu.au`。初始化时 `/data` 文件系统为 33 TB total、20 TB used、13 TB available。未访问旧 WaterBench 项目，未运行 GPU、训练或 evaluation，未下载模型或数据。Artifact 同步与 manifest 协议仍待后续任务定义。
