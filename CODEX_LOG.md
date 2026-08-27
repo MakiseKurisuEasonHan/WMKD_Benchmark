@@ -160,7 +160,7 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 
 ### Git
 
-本轮使用 commit message `Archive unified 3B backbone on school storage` 提交轻量文档并推送到 `origin/main`，随后在学校轻量 mirror 执行 fast-forward pull；最终 commit 与同步状态在本轮结束前验证。
+本轮使用 commit message `Archive unified 3B backbone on school storage` 提交轻量文档并推送到 `origin/main`。Windows 本地与 GitHub 已验证同步；学校 SSH 在最终 mirror pull 阶段连续三次连接超时，因此轻量 mirror 的 fast-forward 尚待连接恢复后补做。
 
 ### 备注
 
