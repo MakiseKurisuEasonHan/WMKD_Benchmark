@@ -76,3 +76,13 @@ This log records consequential project decisions. It does not record routine eng
 
 - **Decision:** Permit ModelScope to transport only the 12 named snapshot artifacts when every final file is checked against the frozen Git manifest. A mismatched small file may be replaced only from exact Hugging Face revision `0cb88a4f764b7a12671c53f0838cd831a0843b95`; promotion requires complete 12/12 size and SHA256 equality.
 - **Reason:** Transport origin does not alter scientific provenance when final bytes are identical to the authoritative Hugging Face snapshot. This preserves the earlier rejection of ModelScope as a standalone backbone source while allowing its matching large shards to bypass unusable transfer routes.
+
+## 2026-08-28 — Make formal experiments file-recoverable and independently runnable
+
+- **Decision:** Every formal experiment uses an immutable run namespace, dedicated scientific log, structured status/configuration files, and a project-owned detached runner. `docs/EXPERIMENT_PROTOCOL.md` is the durable cross-experiment policy.
+- **Reason:** Training and project continuity must not depend on a particular Codex conversation, shell, computer, or AutoDL instance.
+
+## 2026-08-28 — Use consistent Llama chat serialization for PN-FP Experiment A
+
+- **Decision:** Generate perinucleus responses, train, and evaluate with the canonical Llama-3.2-Instruct chat template. Explicitly use PN-FP nucleus threshold 0.8, k=3, and model-averaging strength 0.0 from the official documented configuration.
+- **Reason:** Training and detection must serialize the same fingerprint keys, and all method-relevant values must be explicit rather than inherited from inconsistent CLI defaults.

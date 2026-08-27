@@ -14,7 +14,10 @@
 - [x] Evaluate the ModelScope Llama-3.2-3B-Instruct candidate and reject it after a downloaded canonical-file mismatch confirmed it is not byte-identical.
 - [x] Complete the fixed Llama model transfer to AutoDL and verify all SHA256 values.
 - [x] Run offline tokenizer/model load and short generation smoke after transfer verification.
-- [ ] Explicitly authorize formal PNFP Experiment A training in a separate task.
+- [x] Explicitly authorize formal PNFP Experiment A training in a separate task.
+- [x] Define the durable formal experiment protocol and dedicated PN-FP log convention.
+- [ ] Launch and monitor PN-FP Experiment A through the independent runner.
+- [ ] Complete checkpoint reload, watermarked evaluation, base control, paired metrics, report, and summary.
 
 ## Medium priority
 

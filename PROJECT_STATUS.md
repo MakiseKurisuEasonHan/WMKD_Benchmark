@@ -2,7 +2,7 @@
 
 ## Current phase
 
-PNFP Experiment A preparation.
+Stage 2 — PN-FP Experiment A runner implementation and formal launch.
 
 ## Completed
 
@@ -21,7 +21,8 @@ PNFP Experiment A preparation.
 
 ## Current task
 
-- PNFP Experiment A preparation is ready for formal training. Formal training has not started and still requires separate authorization.
+- Persist the project-wide formal experiment protocol and PN-FP dedicated log.
+- Validate and launch PN-FP Experiment A through the detached project-owned runner.
 
 ## Blockers
 
@@ -31,4 +32,4 @@ PNFP Experiment A preparation.
 
 ## Next step
 
-- Separately review and authorize formal PNFP Experiment A training; do not infer authorization from the completed preparation gate.
+- Commit and synchronize the protocol/runner milestone, then launch the immutable AutoDL formal run at batch size 8 after minimum preflight.

@@ -17,6 +17,9 @@ fingerprints:
   key_length: 16
   generation_response_length: 16
   training_response_length: 1
+  nucleus_threshold: 0.8
+  nucleus_k: 3
+  use_chat_template: true
   seed: 42
 
 training:
@@ -27,15 +30,18 @@ training:
   precision: bf16
   full_parameter: true
   lora: false
+  forgetting_regularizer_strength: 0.0
+  deepspeed_stage: 2
   gpu_count: 1
   gpu_model: NVIDIA RTX PRO 6000 Blackwell Server Edition
 
 execution:
-  start_training: false
+  start_training: true
   run_id: null
   output_directory: null
 
 notes:
   - Preparation and smoke checks do not consume the Experiment A identifier as a formal run.
   - The 3B backbone is a WMKD_Benchmark deviation from the paper's Llama-3.1-8B experiments.
-  - Formal training requires an explicit follow-up task.
+  - Formal training is authorized by the PN-FP Experiment A task.
+  - DeepSpeed ZeRO-2 CPU optimizer/parameter offload is an engineering memory mechanism; all model parameters remain trainable.
