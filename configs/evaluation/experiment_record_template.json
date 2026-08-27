@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "method": null,
+  "experiment_id": null,
+  "run_id": null,
+  "status": "planned",
+  "timestamps": {
+    "created_at": null,
+    "started_at": null,
+    "completed_at": null,
+    "timezone": null
+  },
+  "model_provenance": {
+    "repo_id": null,
+    "revision": null,
+    "local_path": null,
+    "manifest_path": null
+  },
+  "source_repo_provenance": {
+    "url": null,
+    "commit": null,
+    "local_path": null
+  },
+  "environment": {
+    "hostname": null,
+    "python": null,
+    "pytorch": null,
+    "cuda_runtime": null,
+    "gpu": null,
+    "gpu_count": null
+  },
+  "config": {},
+  "metrics": {},
+  "artifacts": [],
+  "logs": [],
+  "checks": {
+    "base_control": null,
+    "reload_consistency": null,
+    "utility": null
+  },
+  "final_judgement": null,
+  "limitations": []
+}

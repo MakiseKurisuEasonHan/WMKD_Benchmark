@@ -99,3 +99,37 @@ repository-local identity 为 `Yichen Han <EasonHanYichen@gmail.com>`。创建�
 ### 备注
 
 AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX PRO 6000 Blackwell Server Edition（97,887 MiB），检查时无显存占用和运行进程。未连接学校服务器，未访问旧 WaterBench，未下载模型或数据，未运行 GPU workload、训练或 evaluation。正式 ML environment、artifact 同步和 provenance protocol 均待后续批准。
+
+## 2026-08-27 16:47（Australia/Sydney，UTC+10:00）
+
+### 任务
+
+准备 PNFP Experiment A 的固定 Llama-3.2-3B-Instruct 模型、官方源码、独立 AutoDL 环境、离线 smoke 与实验配置框架，但不开始正式训练。
+
+### 完成内容
+
+- 使用现有 Hugging Face gated access 将 `meta-llama/Llama-3.2-3B-Instruct` 固定到 revision `0cb88a4f764b7a12671c53f0838cd831a0843b95`，在 Windows 下载 12 个 Transformers artifact 文件并生成完整 SHA256 manifest；排除重复的 `original/` checkpoint。
+- 固定 PNFP 官方仓库 `SewoongLab/scalable-fingerprinting-of-llms` commit `fdceaba14bd3e89340916a6a40e27c945d48460e`，在 AutoDL 建立排除 `generated_data/` 的 clean sparse checkout。
+- 在 `/root/autodl-tmp/WMKD_Benchmark_data/artifacts/pnfp/env` 创建全新 Python 3.10.20 独立环境，安装 Blackwell 兼容 PyTorch 2.7.1+cu128 和 PNFP 核心依赖。
+- 验证 CUDA 可用、BF16 支持、DeepSpeed 与 PNFP 训练/生成/检测模块可在离线模式 import，且 `pip check` 通过。
+- 新增 Experiment A 配置、模型 provenance、方法文档、环境依赖、experiment record 模板、报告模板和离线 smoke 脚本。
+
+### 文件变化
+
+- 新增 `configs/watermark/pnfp_experiment_a.yaml`、`configs/evaluation/experiment_record_template.json`。
+- 新增 `docs/models/llama_3_2_3b_instruct.md` 及完整 JSON manifest。
+- 新增 `docs/methods/pnfp.md`、`docs/reproduction_reports/pnfp_experiment_report_template.md`。
+- 新增 `requirements/pnfp_autodl.txt`、`scripts/smoke_test_local_model.py`。
+- 修改 `PROJECT_STATUS.md`、`TODO.md`、`DECISIONS.md`、`CODEX_LOG.md`。
+
+### 结果
+
+部分成功。Windows 模型、provenance、PNFP 官方源码和独立环境已准备完成；Windows 到 AutoDL 的模型传输因链路速度异常未完成，因此完整 SHA 验证、offline model load 和 generation smoke 未执行，正式 Experiment A 不可启动。
+
+### Git
+
+本轮计划使用 commit message `Prepare PNFP 3B reproduction environment` 提交轻量配置、脚本和文档并推送；最终 commit 与同步状态在本轮结束前验证。
+
+### 备注
+
+9,085,657-byte `tokenizer.json` SCP 实测耗时 441.76 秒，约 20 KB/s；按此速度 6.43 GB 模型约需 88 小时。AutoDL 目标目录已创建 `TRANSFER_INCOMPLETE` 标记，禁止误用。未连接学校服务器、未访问旧 WaterBench、未下载其他模型、未开始 fingerprint training、distillation 或 evaluation。

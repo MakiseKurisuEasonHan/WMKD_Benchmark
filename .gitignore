@@ -38,10 +38,10 @@ desktop.ini
 *.swo
 
 # Models, checkpoints, and exported weights
-models/
-model/
-checkpoints/
-checkpoint/
+/models/
+/model/
+/checkpoints/
+/checkpoint/
 *.safetensors
 *.bin
 *.pt

@@ -7,9 +7,12 @@
 - [x] Add strict ignore rules for secrets and large artifacts.
 - [x] Create and verify the private GitHub repository and synchronized `main` branch.
 - [x] Initialize the La Trobe lightweight mirror and dedicated large-artifact warehouse.
-- [ ] Discuss and approve the first watermark reproduction target and evaluation protocol.
+- [x] Approve PNFP as the first watermark reproduction target and record Experiment A settings.
 - [x] Initialize the AutoDL compute checkout and isolated data/cache structure.
-- [ ] Create the first method-specific AutoDL ML environment after method approval.
+- [x] Create and validate the PNFP-specific AutoDL environment.
+- [ ] Complete the fixed Llama model transfer to AutoDL and verify all SHA256 values.
+- [ ] Run offline tokenizer/model load and short generation smoke after transfer verification.
+- [ ] Explicitly authorize formal PNFP Experiment A training in a separate task.
 
 ## Medium priority
 
@@ -23,3 +26,4 @@
 - Private GitHub repository created and connected on 2026-08-27.
 - La Trobe school-server storage endpoint initialized on 2026-08-27.
 - AutoDL compute endpoint and isolated data root initialized on 2026-08-27.
+- PNFP official source and isolated environment prepared on 2026-08-27; model transfer remains blocked.
