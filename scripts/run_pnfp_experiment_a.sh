@@ -67,7 +67,7 @@ PY
 nvidia-smi > "${RUN_DIR}/logs/nvidia_smi_at_launch.txt"
 env > "${RUN_DIR}/config/environment.txt"
 
-COMMAND="source '${ENV_ROOT}/bin/activate'; export HF_HOME='${HF_HOME}' HF_HUB_CACHE='${HF_HUB_CACHE}' TRANSFORMERS_CACHE='${TRANSFORMERS_CACHE}' HF_DATASETS_CACHE='${HF_DATASETS_CACHE}' TORCH_EXTENSIONS_DIR='${TORCH_EXTENSIONS_DIR}' TMPDIR='${TMPDIR}' WANDB_MODE=disabled TOKENIZERS_PARALLELISM=false; '${ENV_ROOT}/bin/python' '${PROJECT_ROOT}/scripts/pnfp_experiment_a_pipeline.py' --runtime-config '${RUNTIME_CONFIG}' >> '${RUN_DIR}/logs/pipeline.log' 2>&1"
+COMMAND="source '${ENV_ROOT}/bin/activate'; export PATH='${ENV_ROOT}/bin':\$PATH HF_HOME='${HF_HOME}' HF_HUB_CACHE='${HF_HUB_CACHE}' TRANSFORMERS_CACHE='${TRANSFORMERS_CACHE}' HF_DATASETS_CACHE='${HF_DATASETS_CACHE}' TORCH_EXTENSIONS_DIR='${TORCH_EXTENSIONS_DIR}' TMPDIR='${TMPDIR}' WANDB_MODE=disabled TOKENIZERS_PARALLELISM=false; '${ENV_ROOT}/bin/python' '${PROJECT_ROOT}/scripts/pnfp_experiment_a_pipeline.py' --runtime-config '${RUNTIME_CONFIG}' >> '${RUN_DIR}/logs/pipeline.log' 2>&1"
 if command -v tmux >/dev/null; then
   tmux new-session -d -s "${SESSION}" "bash -lc \"${COMMAND}\""
   DETACHED_MODE="tmux"

@@ -4,4 +4,4 @@ This is the concise index of formal WMKD_Benchmark experiments. Full scientific 
 
 | Experiment | Status | Main run | Concise result | Dedicated log | Report | Blocker |
 |---|---|---|---|---|---|---|
-| PN-FP Experiment A | Corrective relaunch pending | Pending | Runs `pnfp_exp_a_20260827_231202` and `pnfp_exp_a_20260827_231325` are preserved pre-training failures (missing official word list; then 1,012/1,024 valid records after whitespace filtering). No OOM or optimizer step occurred. | `docs/experiment_logs/pnfp_experiment_a_log.md` | Pending | None; candidate oversampling fix implemented |
+| PN-FP Experiment A | Corrective relaunch pending | Pending | Three immutable pre-training failures preserved: missing official word list, insufficient valid keys after filtering, and detached PATH not exposing installed `ninja`. No OOM or optimizer step occurred. | `docs/experiment_logs/pnfp_experiment_a_log.md` | Pending | None; explicit environment PATH fix implemented |

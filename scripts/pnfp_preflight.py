@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import shutil
 
 import torch
 from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
@@ -18,6 +19,7 @@ c = json.loads(Path(args.runtime_config).read_text())
 model_path = c["paths"]["model"]
 
 assert torch.cuda.is_available() and torch.cuda.is_bf16_supported()
+assert shutil.which("ninja"), "DeepSpeed CPUAdam requires ninja on PATH"
 assert torch.cuda.device_count() == 1
 free, total = torch.cuda.mem_get_info()
 assert free > 80 * 1024**3, f"Insufficient free VRAM: {free}"
@@ -35,6 +37,7 @@ assert total_params == trainable_params and total_params > 3_000_000_000
 serialized = tokenizer.apply_chat_template([{"role": "user", "content": "PN-FP preflight"}], add_generation_prompt=True, tokenize=False)
 assert serialized
 print(json.dumps({"bf16": True, "gpu": torch.cuda.get_device_name(0), "free_vram_bytes": free,
+                  "ninja_path": shutil.which("ninja"),
                   "model_type": cfg.model_type, "total_parameters": total_params,
                   "trainable_parameters": trainable_params, "all_parameters_trainable": True,
                   "chat_template_active": True, "runtime_config": c["formal_config"]}, indent=2))
