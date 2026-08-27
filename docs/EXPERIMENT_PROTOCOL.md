@@ -36,6 +36,8 @@ Long GPU jobs run through a project-owned detached `tmux` session or an equivale
 
 Each run persists at least its run ID, timestamps, Git commit, exact runtime configuration, current stage, PID, detached-session identifier, stdout/stderr logs, exit code, checkpoint and evaluation paths, final status, and failure reason. The runtime must demonstrate that key declared values—model/revision, seed, tokenizer/template, batch size, learning rate, training mode, and output path—are actually consumed.
 
+Formal runners support best-effort email lifecycle notifications: `STARTED` after a real formal start, `COMPLETED` only after every mandatory pipeline stage succeeds, `FAILED` after a fatal pipeline error, and `INTERRUPTED` when a read-only watcher can establish abnormal process disappearance. SMTP failure is recorded separately and must never fail or alter an experiment. Credentials live only in a mode-600 secret file outside Git; notification state provides at-most-once delivery per run and event. See `docs/EMAIL_NOTIFICATIONS.md`.
+
 Preflight is intentionally minimal: verify isolation, required inputs and provenance, active runtime configuration, output uniqueness, trainability, precision, GPU availability, and storage. Diagnose concrete failures instead of building speculative infrastructure.
 
 ## Logs, reports, and artifacts

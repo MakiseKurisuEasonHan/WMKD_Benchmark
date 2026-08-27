@@ -19,6 +19,9 @@
 - [x] Launch corrected PN-FP Experiment A through the independent runner (`pnfp_exp_a_20260827_232033`).
 - [ ] Monitor PN-FP Experiment A without launching another large GPU task.
 - [ ] Complete checkpoint reload, watermarked evaluation, base control, paired metrics, report, and summary.
+- [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
+- [ ] User: configure the Gmail App Password interactively on AutoDL, then send one independent test email.
+- [ ] Optionally start the read-only watcher for the current PN-FP run after credential configuration.
 
 ## Medium priority
 

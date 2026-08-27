@@ -39,6 +39,25 @@ class Pipeline:
         self.status["updated_at"] = now()
         atomic_json(self.status_path, self.status)
 
+    def notify(self, event, message, error_summary=None):
+        notifier = Path(self.config["paths"]["project_root"]) / "scripts" / "notify_experiment.py"
+        command = [self.python, str(notifier), "--event", event,
+                   "--experiment", "PN-FP Experiment A", "--run-id", self.config["run_id"],
+                   "--stage", str(self.status.get("active_stage", "unknown")),
+                   "--status", str(self.status.get("final_status", "unknown")),
+                   "--status-file", str(self.status_path), "--log-path", str(self.run_dir / "logs"),
+                   "--message", message]
+        if self.status.get("pid"):
+            command += ["--pid", str(self.status["pid"])]
+        if self.status.get("exit_code") is not None:
+            command += ["--exit-code", str(self.status["exit_code"])]
+        if error_summary:
+            command += ["--error-summary", error_summary]
+        try:
+            subprocess.run(command, check=False)
+        except Exception as exc:
+            print(f"email notification invocation failed (experiment unaffected): {type(exc).__name__}: {exc}")
+
     def run(self, stage, command, cwd=None):
         self.update(active_stage=stage, stage_status="running", command=command)
         log_path = self.run_dir / "logs" / f"{stage}.log"
@@ -157,10 +176,12 @@ class Pipeline:
         atomic_json(self.run_dir / "results" / "summary.json", summary)
         self.update(active_stage="completed", stage_status="completed", final_status="completed",
                     evaluation_status="completed", exit_code=0, end_timestamp=now(), scientific_judgement=judgement)
+        self.notify("COMPLETED", "All mandatory PN-FP Experiment A pipeline stages completed.")
 
     def execute(self):
         try:
             self.update(pid=os.getpid(), final_status="running", start_timestamp=self.status.get("start_timestamp", now()))
+            self.notify("STARTED", "Formal PN-FP Experiment A pipeline started.")
             self.preflight()
             self.generate_fingerprints()
             self.train()
@@ -172,6 +193,7 @@ class Pipeline:
             failure = f"{type(exc).__name__}: {exc}"
             (self.run_dir / "logs" / "failure_traceback.log").write_text(traceback.format_exc())
             self.update(final_status="failed", stage_status="failed", exit_code=1, end_timestamp=now(), failure_reason=failure)
+            self.notify("FAILED", failure, error_summary="\n".join(traceback.format_exc().splitlines()[-25:]))
             raise
 
 

@@ -86,3 +86,8 @@ This log records consequential project decisions. It does not record routine eng
 
 - **Decision:** Generate perinucleus responses, train, and evaluate with the canonical Llama-3.2-Instruct chat template. Explicitly use PN-FP nucleus threshold 0.8, k=3, and model-averaging strength 0.0 from the official documented configuration.
 - **Reason:** Training and detection must serialize the same fingerprint keys, and all method-relevant values must be explicit rather than inherited from inconsistent CLI defaults.
+
+## 2026-08-28 — Treat experiment email as best-effort external operations
+
+- **Decision:** Future formal runners emit duplicate-safe lifecycle email through Gmail SMTP over SSL, while credentials remain in a mode-600 file outside Git. Notification errors are recorded independently and never change scientific pipeline status.
+- **Reason:** Long detached experiments need useful operational visibility without making external email availability part of scientific correctness or exposing credentials in project history.
