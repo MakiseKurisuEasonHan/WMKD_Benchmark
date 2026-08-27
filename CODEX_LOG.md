@@ -133,3 +133,35 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 ### 备注
 
 9,085,657-byte `tokenizer.json` SCP 实测耗时 441.76 秒，约 20 KB/s；按此速度 6.43 GB 模型约需 88 小时。AutoDL 目标目录已创建 `TRANSFER_INCOMPLETE` 标记，禁止误用。未连接学校服务器、未访问旧 WaterBench、未下载其他模型、未开始 fingerprint training、distillation 或 evaluation。
+
+## 2026-08-27 22:00（Australia/Sydney，UTC+10:00）
+
+### 任务
+
+在 La Trobe 学校服务器上直接下载并完整校验固定 revision 的 `Llama-3.2-3B-Instruct`，将其建立为统一 backbone 的长期 canonical archive；不连接 AutoDL、不使用 OSS、不运行模型或训练。
+
+### 完成内容
+
+- 在学校服务器用户专属 venv 中安装 `huggingface_hub 1.8.0`，复用既有 gated Hugging Face 登录状态验证仓库和固定 revision，未记录或输出 token。
+- 仅下载 Git manifest 指定的 12 个 Transformers artifact，排除重复 `original/` checkpoint 和 cache 内容。
+- 对 staging 中全部 12 个文件逐一验证大小与 SHA256，随后移入 canonical 目录并再次验证文件数量、总大小和摘要一致性。
+- 在 warehouse 中写入 server-side machine-readable manifest，并清理 staging 目录。
+- 更新模型 provenance、学校存储说明、项目状态和任务清单。
+
+### 文件变化
+
+- 修改 `docs/models/llama_3_2_3b_instruct.md`、`docs/storage/school_server.md`。
+- 修改 `PROJECT_STATUS.md`、`TODO.md`、`CODEX_LOG.md`。
+- 学校 warehouse 新增 12 文件 canonical 模型目录及 machine-readable manifest；这些大型 artifact 不进入 Git。
+
+### 结果
+
+成功。Canonical 目录包含且仅包含 12 个正式文件，总计 6,434,748,511 bytes，全部文件的大小和 SHA256 均与 Git manifest 相符。下载耗时 27 秒（2026-08-27 21:56:59 至 21:57:26，UTC+10:00）。
+
+### Git
+
+本轮使用 commit message `Archive unified 3B backbone on school storage` 提交轻量文档并推送到 `origin/main`，随后在学校轻量 mirror 执行 fast-forward pull；最终 commit 与同步状态在本轮结束前验证。
+
+### 备注
+
+学校 canonical 路径为 `/data/shared/nobackup/21672330/WMKD_Benchmark/models/base/Llama-3.2-3B-Instruct`，server manifest 为 `/data/shared/nobackup/21672330/WMKD_Benchmark/manifests/models/llama_3_2_3b_instruct_0cb88a4.json`。本轮未连接 AutoDL，未上传 OSS，未调用 GPU，未加载模型，也未运行训练、distillation 或 evaluation。

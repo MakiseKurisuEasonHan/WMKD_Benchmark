@@ -10,6 +10,7 @@
 - [x] Approve PNFP as the first watermark reproduction target and record Experiment A settings.
 - [x] Initialize the AutoDL compute checkout and isolated data/cache structure.
 - [x] Create and validate the PNFP-specific AutoDL environment.
+- [x] Archive the fixed Llama-3.2-3B-Instruct revision in canonical La Trobe storage and verify all 12 files by size and SHA256.
 - [ ] Complete the fixed Llama model transfer to AutoDL and verify all SHA256 values.
 - [ ] Run offline tokenizer/model load and short generation smoke after transfer verification.
 - [ ] Explicitly authorize formal PNFP Experiment A training in a separate task.
@@ -27,3 +28,4 @@
 - La Trobe school-server storage endpoint initialized on 2026-08-27.
 - AutoDL compute endpoint and isolated data root initialized on 2026-08-27.
 - PNFP official source and isolated environment prepared on 2026-08-27; model transfer remains blocked.
+- Fixed Llama-3.2-3B-Instruct canonical school-server archive completed and fully verified on 2026-08-27.

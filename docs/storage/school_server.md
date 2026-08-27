@@ -37,6 +37,17 @@ WMKD_Benchmark/
 
 The warehouse stores models, necessary checkpoints, fixed-version datasets, official experimental artifacts, large results and generations, retained logs, and provenance manifests. It is deliberately not a Git repository, and large artifacts must not enter GitHub.
 
+## Canonical base model archive
+
+- Model: `meta-llama/Llama-3.2-3B-Instruct`
+- Fixed revision: `0cb88a4f764b7a12671c53f0838cd831a0843b95`
+- Canonical directory: `/data/shared/nobackup/21672330/WMKD_Benchmark/models/base/Llama-3.2-3B-Instruct`
+- Machine-readable manifest: `/data/shared/nobackup/21672330/WMKD_Benchmark/manifests/models/llama_3_2_3b_instruct_0cb88a4.json`
+- Verification: exactly 12 selected Transformers files, totaling 6,434,748,511 bytes; all file sizes and SHA256 values match the Git-tracked provenance manifest.
+- Exclusions: no duplicate `original/` checkpoint, Hugging Face cache, temporary download content, or embedded Git repository is present in the canonical directory.
+
+This verified school-server copy is the long-term canonical archive. Any future transfer from it to OSS or AutoDL requires separate authorization and destination-side integrity verification.
+
 ## Operational boundaries
 
 - Do not use the school server as the primary development or current compute environment.
