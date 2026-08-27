@@ -41,3 +41,13 @@ After configuration, send exactly one independent test:
 Future runners call `notify_experiment.py` for `STARTED`, `COMPLETED`, and `FAILED`. A read-only watcher can additionally classify an unexpectedly disappeared detached process as `INTERRUPTED`. Notification state is stored outside Git under `/root/autodl-tmp/WMKD_Benchmark_data/notifications/<run_id>/notification_state.json`; each `run_id + event` is sent at most once.
 
 The current PN-FP run is not restarted or modified for email support. Its optional watcher must only be launched after the App Password is configured.
+
+## Current standalone deployment
+
+While PN-FP run `pnfp_exp_a_20260827_232033` remains active, the three utilities are deployed independently under `/root/autodl-tmp/WMKD_Benchmark_data/notification_tools/`. This does not fast-forward or modify the running AutoDL Git checkout. The standalone setup command is:
+
+```bash
+python3 /root/autodl-tmp/WMKD_Benchmark_data/notification_tools/setup_email_notifications.py
+```
+
+No current-run watcher is started until the user has configured the credential and one independent test email succeeds.
