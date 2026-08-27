@@ -22,9 +22,11 @@ def run_model(path):
         rows.append({"prompt":content,"response":text,"generated_tokens":len(tokens),"reached_max_tokens":len(tokens)>=128,"obvious_repetition":bool(words) and ratio<0.15,"unique_word_ratio":ratio})
     del model; torch.cuda.empty_cache(); return rows
 def main():
-    p=argparse.ArgumentParser(); p.add_argument("--base",required=True); p.add_argument("--smoke",required=True); p.add_argument("--output",required=True); a=p.parse_args()
-    result={"base":run_model(a.base),"a2_smoke":run_model(a.smoke)}
-    for label in ("base","a2_smoke"):
+    p=argparse.ArgumentParser(); p.add_argument("--base",required=True); p.add_argument("--smoke",required=True); p.add_argument("--a1"); p.add_argument("--output",required=True); a=p.parse_args()
+    result={"base":run_model(a.base)}
+    if a.a1: result["a1"]=run_model(a.a1)
+    result["a2_smoke"]=run_model(a.smoke)
+    for label in tuple(result):
         rows=result[label]; result[label+"_summary"]={"calls":len(rows),"max_token_hits":sum(x["reached_max_tokens"] for x in rows),"obvious_repetition":sum(x["obvious_repetition"] for x in rows)}
     Path(a.output).write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); print(json.dumps({k:v for k,v in result.items() if k.endswith("_summary")}))
 if __name__ == "__main__": main()
