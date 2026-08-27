@@ -20,7 +20,8 @@
 - [x] Complete PN-FP Experiment A checkpoint reload, watermarked/base evaluation, paired metrics, and summary.
 - [x] Prepare paired PN-FP Ba/Bb configs, dataset/UP validation, schemas, logs, report templates, and guarded dry-run runners.
 - [x] Pin the official CAN repository at `9a2b01af1fadcece2893d32460ed9449093f8fb9`.
-- [ ] When AutoDL SSH recovers, deploy Ba, download/verify only the pinned Llama-3.2-1B-Instruct, run minimum preflight, and launch detached Ba.
+- [x] Cancel and remove the incorrect partial 1B student download before any formal Ba run or notification.
+- [ ] After explicit approval, deploy the corrected Ba configuration, reuse/verify the canonical pinned Llama-3.2-3B-Instruct, run minimum preflight, and launch detached Ba.
 - [ ] Keep Bb and all Dipper/UP downloads deferred until a separate future approval.
 - [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
 - [x] Deploy standalone notification utilities outside the active AutoDL Git checkout.

@@ -11,7 +11,7 @@
 
 The CAN paper uses GLM-4-9B-chat teachers, Llama-7B and Llama-3.2-1B students, approximately 200,000 teacher QA pairs, full SFT through LLaMA-Factory for 3 epochs at learning rate `1e-5`, and Dipper for UP. It reports that UP is computationally expensive and reports experiments on eight NVIDIA H800 GPUs.
 
-WMKD_Benchmark deliberately uses a resource-bounded configuration: a successful PN-FP Llama-3.2-3B-Instruct teacher, a pinned Llama-3.2-1B-Instruct student, and exactly 20,000 paired filtered samples on one RTX PRO 6000 96GB. This is not a complete CAN reproduction. We do not automatically scale to 200k; 50k may be discussed only if later utility results show essentially no meaningful transfer.
+WMKD_Benchmark deliberately uses a resource-bounded configuration: a successful PN-FP Llama-3.2-3B-Instruct teacher, a fresh unwatermarked canonical Llama-3.2-3B-Instruct student at revision `0cb88a4f764b7a12671c53f0838cd831a0843b95`, and exactly 20,000 paired filtered samples on one RTX PRO 6000 96GB. CAN ACL 2025 used Llama-3.2-1B as one of its students; WMKD_Benchmark intentionally uses the same-size 3B teacher and student to control for model-capacity reduction and isolate the effect of direct knowledge distillation on watermark persistence. This is an intentional adaptation, not a complete CAN reproduction. We do not automatically scale to 200k; 50k may be discussed only if later utility results show essentially no meaningful transfer.
 
 ## Paired design
 
@@ -21,7 +21,7 @@ Dipper lexical diversity `60`, order diversity `0`, greedy/default decoding and 
 
 ## Evaluation and interpretation
 
-The original 1B, Ba and Bb students use the exact Experiment A PN-FP detector and frozen 1024 keys, with response length 16. Utility evaluation is ARC Challenge and TruthfulQA Multiple Choice. MTBench is initially excluded because of judge/API and time cost.
+The original unwatermarked 3B control, Ba and Bb students use the exact Experiment A PN-FP detector and frozen 1024 keys, with response length 16. Utility evaluation is ARC Challenge and TruthfulQA Multiple Choice. MTBench is initially excluded because of judge/API and time cost.
 
 PN-FP is a trigger/fingerprint behavior, not an ordinary token-level output watermark. Ordinary QA answers may carry little fingerprint signal, so a large Ba detection drop is scientifically plausible. A successful report must separately assess watermark retention and useful knowledge transfer; watermark loss without utility improvement is not an unqualified successful distillation attack.
 
@@ -29,4 +29,4 @@ PN-FP is a trigger/fingerprint behavior, not an ordinary token-level output wate
 
 Read-only audit on 2026-08-28: the 1TB data disk used 20GB and had 981GB available. Major consumers were PN-FP artifacts 7.4GB, base models 6.0GB, and completed runs 6.0GB. The system disk used 11GB/30GB and had 20GB free.
 
-Budget estimate: Dipper safetensors 46GB, 1B student 2.5GB, shared QA/UP/manifests 5–20GB depending on raw generations, two final BF16 students about 5GB, and one rolling optimizer/recovery state per active student roughly 15–30GB. Allowing caches and evaluation outputs, an additional 90–150GB is a reasonable planning range. 981GB free is sufficient. All large paths and caches must remain under `/root/autodl-tmp/WMKD_Benchmark_data`; `/root/.cache` is forbidden. Each trainer retains one rolling/recovery checkpoint plus the final loadable weights. Cleanup requires a later explicit safe stage.
+For Ba, the canonical 3B base and watermarked 3B teacher already exist and require no duplicate storage. Estimated new usage is roughly 5–20GB for raw/frozen QA, 6GB for the final BF16 student, 45–70GB for one rolling full-training checkpoint plus optimizer/scheduler state, 5–15GB for evaluation caches, and under 2GB for logs/results. With a 20GB safety margin, plan for about 81–133GB additional storage. The data disk's 981GB free is sufficient. All large paths and caches must remain under `/root/autodl-tmp/WMKD_Benchmark_data`; `/root/.cache` is forbidden. Each trainer retains one rolling/recovery checkpoint plus the final loadable weights. Cleanup requires a later explicit safe stage.

@@ -85,7 +85,7 @@ class Pipeline:
         teacher_rate=0.9951171875; ba_rate=student["detection_rate"]
         summary={"method":"PN-FP","experiment":"Ba","run_id":self.config["run_id"],"engineering_status":"completed",
           "teacher":{"run_id":"pnfp_exp_a_20260827_232033","checkpoint":self.config["paths"]["teacher"],"watermark_result":{"detected":1019,"total":1024,"detection_rate":teacher_rate}},
-          "student_initialization":{"model_id":"meta-llama/Llama-3.2-1B-Instruct","revision":"9213176726f574b556790deb65791e0c5aa438b6"},
+          "student_initialization":self.config["student_initialization"],
           "dataset_size":self.status["dataset_count"],"dataset_manifest_sha256":self.status["dataset_sha256"],"distillation_config":self.config["formal_config"],
           "original_student_watermark":{k:v for k,v in original.items() if k!="details"},"watermark_detection":{k:v for k,v in student.items() if k!="details"},
           "watermark_retention":{"teacher_to_ba_absolute_drop":teacher_rate-ba_rate,"ba_vs_original_difference":ba_rate-original["detection_rate"],"retention_ratio":ba_rate/teacher_rate},
@@ -99,8 +99,8 @@ class Pipeline:
         try:
             self.update(pid=os.getpid(),final_status="running"); self.notify("STARTED","Formal PN-FP Experiment Ba started.")
             self.preflight(); self.generate(); self.train(); self.reload()
-            original=self.pnfp_eval("original_1b",self.config["paths"]["student"]); student=self.pnfp_eval("ba_student",self.status["checkpoint_path"])
-            orig_util=self.utility("original_1b",self.config["paths"]["student"]); student_util=self.utility("ba_student",self.status["checkpoint_path"])
+            original=self.pnfp_eval("original_3b",self.config["paths"]["student"]); student=self.pnfp_eval("ba_student",self.status["checkpoint_path"])
+            orig_util=self.utility("original_3b",self.config["paths"]["student"]); student_util=self.utility("ba_student",self.status["checkpoint_path"])
             self.finalize(original,student,orig_util,student_util)
         except Exception as exc:
             trace=traceback.format_exc(); (self.run_dir/"logs/failure_traceback.log").write_text(trace)

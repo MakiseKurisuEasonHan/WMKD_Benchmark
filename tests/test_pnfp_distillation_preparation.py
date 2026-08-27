@@ -54,6 +54,14 @@ class DistillationPreparationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_config(config)
 
+    @unittest.skipUnless(HAS_YAML, "PyYAML is an AutoDL/runtime dependency")
+    def test_ba_uses_same_size_canonical_3b_student(self):
+        config = load_config(__import__("pathlib").Path("configs/distillation/pnfp_ba_direct.yaml"))
+        self.assertEqual(config["student"]["model_id"], "meta-llama/Llama-3.2-3B-Instruct")
+        self.assertEqual(config["student"]["revision"], "0cb88a4f764b7a12671c53f0838cd831a0843b95")
+        self.assertEqual(config["student"]["initialization"], "fresh_original_revision")
+        self.assertNotEqual(config["paths"]["student_model"], config["teacher"]["checkpoint"])
+
 
 if __name__ == "__main__":
     unittest.main()

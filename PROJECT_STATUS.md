@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 3 — PN-FP Experiment A finalized; Ba deployment blocked; Bb deferred. No formal GPU run active.
+Stage 3 — PN-FP Experiment A finalized; Ba corrected to same-size 3B and stopped before launch; Bb deferred. No formal GPU run active.
 
 ## Completed
 
@@ -26,16 +26,16 @@ Stage 3 — PN-FP Experiment A finalized; Ba deployment blocked; Bb deferred. No
 
 - Experiment A completed successfully (`1019/1024`, reload validation passed).
 - Experiment A formal report and machine-readable summary record 30/30 epochs, eval_loss 0.0119302, base 1/1024 and paired difference 99.4141 percentage points.
-- Ba Direct Distillation is implemented locally but deployment is blocked by unavailable AutoDL SSH. No run ID exists and no GPU task has started.
+- Ba Direct Distillation is implemented and corrected to a watermarked 3B teacher plus fresh unwatermarked canonical 3B student. The incorrect partial 1B download was stopped and removed before any run ID, QA generation, notification or GPU task.
 - Bb remains prepared/deferred. No Dipper or UP work is running.
 
 ## Blockers
 
 - The local environment still cannot authenticate Git over the configured SSH GitHub remote; authenticated temporary HTTPS credentials can be used without changing `origin`.
-- AutoDL SSH is currently unavailable, blocking Ba deployment without changing its scientific design.
+- AutoDL SSH recovered on 2026-08-28; the corrected Ba workflow is intentionally stopped pending explicit launch approval.
 - The general artifact synchronization protocol has not yet been defined; the school canonical model copy has a verified task-specific provenance manifest.
 - No model-transfer or offline-smoke blocker remains. ModelScope was used only as transport, the sole mismatched small file was repaired from the exact Hugging Face revision, and the final AutoDL directory passed the frozen 12-file manifest.
 
 ## Next step
 
-- Complete notification/GitHub project closeout. When AutoDL SSH later recovers, continue Ba from deploy → pinned 1B download/verification → minimum preflight → detached launch.
+- Preserve Experiment A and the corrected Ba stop point. On later explicit approval, continue Ba by deploying the correction, re-verifying the existing pinned canonical 3B model, running minimum preflight, then launching detached.

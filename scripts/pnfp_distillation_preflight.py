@@ -32,6 +32,13 @@ def validate_config(config: dict) -> None:
     revision = str(config["student"]["revision"])
     if len(revision) != 40 or revision in {"main", "master"}:
         raise ValueError("student revision must be an exact 40-character commit")
+    if config["experiment"] in {"Ba", "Bb"}:
+        expected_model = "meta-llama/Llama-3.2-3B-Instruct"
+        expected_revision = "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+        if config["student"]["model_id"] != expected_model or revision != expected_revision:
+            raise ValueError("formal PN-FP distillation requires the canonical same-size 3B student revision")
+        if config["student"].get("initialization") != "fresh_original_revision":
+            raise ValueError("student must initialize from fresh unwatermarked canonical base weights")
     for key, value in config["paths"].items():
         path = Path(str(value))
         if path.is_absolute() and path != DATA_ROOT and DATA_ROOT not in path.parents:

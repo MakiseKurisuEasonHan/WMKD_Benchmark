@@ -2,7 +2,7 @@
 
 Status: preparation complete; experiment not run.
 
-Objective: compare answer-only UP against Ba using identical frozen sample IDs and a fresh copy of the exact same pinned 1B initialization.
+Objective: compare answer-only UP against Ba using identical frozen sample IDs and a fresh logical load of the same canonical unwatermarked 3B initialization. Bb remains deferred and has not started.
 
 Reference: Pan et al., ACL 2025 (`2025.acl-long.648`). Attribution: **paper-defined UP + project-owned Dipper integration**; the CAN repository does not provide official UP code. Planned training matches Ba. Dipper paraphrases only `teacher_raw_answer`; instruction/input/ID/count are immutable and any failure stops the pipeline without dropping a sample.
 

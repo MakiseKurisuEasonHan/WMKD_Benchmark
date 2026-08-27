@@ -94,7 +94,8 @@ This log records consequential project decisions. It does not record routine eng
 
 ## 2026-08-28 — Define resource-bounded PN-FP Ba/Bb distillation
 
-- **Decision:** Ba is Direct Distillation and Bb is answer-only Untargeted Paraphrasing plus Distillation. Both share exactly 20,000 frozen task IDs, start from `meta-llama/Llama-3.2-1B-Instruct@9213176726f574b556790deb65791e0c5aa438b6`, and use full-parameter BF16 SFT for 3 epochs at `1e-5` with seed 42 and initial batch 8.
+- **Decision:** Ba is Direct Distillation and Bb is answer-only Untargeted Paraphrasing plus Distillation. Both share exactly 20,000 frozen task IDs, start from fresh unwatermarked canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`, and use full-parameter BF16 SFT for 3 epochs at `1e-5` with seed 42 and initial batch 8. The teacher is the separate watermarked Experiment A 3B checkpoint.
+- **Reason:** Same-size teacher and student remove model-capacity reduction as a confounding variable, isolating the effect of behavioral knowledge distillation on watermark persistence. CAN ACL 2025's use of Llama-3.2-1B as one student remains a paper fact; the 3B-to-3B setup is an intentional WMKD_Benchmark adaptation.
 - **Reason:** The paired design isolates response paraphrasing, while 20k is a deliberate single-GPU adaptation of CAN's roughly 200k/eight-H800 setting.
 
 ## 2026-08-28 — Attribute Bb UP as a project-owned integration

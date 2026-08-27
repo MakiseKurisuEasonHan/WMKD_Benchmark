@@ -8,7 +8,15 @@
     "experiment": {"enum": ["Ba", "Bb"]},
     "teacher": {"type": "object"},
     "teacher_watermark_result": {"type": "object"},
-    "student_initialization": {"type": "object"},
+    "student_initialization": {
+      "type": "object",
+      "required": ["model_id", "revision", "weights"],
+      "properties": {
+        "model_id": {"const": "meta-llama/Llama-3.2-3B-Instruct"},
+        "revision": {"const": "0cb88a4f764b7a12671c53f0838cd831a0843b95"},
+        "weights": {"const": "fresh_unwatermarked_canonical_base"}
+      }
+    },
     "dataset_size": {"type": "integer"},
     "dataset_manifest_sha256": {"type": "string"},
     "distillation_config": {"type": "object"},
