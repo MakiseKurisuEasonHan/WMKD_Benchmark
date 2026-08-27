@@ -3,6 +3,7 @@ set -euo pipefail
 
 PROJECT_ROOT="/root/autodl-tmp/WMKD_Benchmark"
 DATA_ROOT="/root/autodl-tmp/WMKD_Benchmark_data"
+PYTHON="${DATA_ROOT}/artifacts/pnfp/env/bin/python"
 EXPERIMENT="${1:?usage: run_pnfp_distillation.sh ba [--dry-run|--approve-formal]}"
 MODE="${2:---dry-run}"
 case "${EXPERIMENT}" in ba) CONFIG="configs/distillation/pnfp_ba_direct.yaml";; *) echo "Only Ba is authorized; Bb remains prepared/deferred" >&2; exit 2;; esac
@@ -16,7 +17,7 @@ export TMPDIR="${DATA_ROOT}/tmp"
 mkdir -p "${HF_HOME}" "${HF_HUB_CACHE}" "${HF_DATASETS_CACHE}" "${TRANSFORMERS_CACHE}" "${TORCH_EXTENSIONS_DIR}" "${TMPDIR}"
 cd "${PROJECT_ROOT}"
 
-python scripts/pnfp_distillation_preflight.py --config "${CONFIG}" --dry-run
+"${PYTHON}" scripts/pnfp_distillation_preflight.py --config "${CONFIG}" --dry-run
 if [[ "${MODE}" == "--dry-run" ]]; then
   echo "DRY_RUN_OK: no GPU process or formal artifact was created"
   exit 0
@@ -28,7 +29,7 @@ mkdir -p "${RUN_DIR}"/{config,logs,status,dataset,checkpoints,evaluation,results
 TEACHER="${DATA_ROOT}/runs/pnfp/pnfp_exp_a_20260827_232033/checkpoints/official/saved_models/a0a21e74c9f8f189aee68a315cb668b4/final_model"
 STUDENT="${DATA_ROOT}/models/base/Llama-3.2-3B-Instruct"
 FINGERPRINTS="$(find "${DATA_ROOT}/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation" -maxdepth 1 -name 'fingerprint_keys-perinucleus-*.json' -print -quit)"
-PYTHON="${DATA_ROOT}/artifacts/pnfp/env/bin/python"; START="$(date --iso-8601=seconds)"
+START="$(date --iso-8601=seconds)"
 "${PYTHON}" - "${RUN_DIR}/config/runtime_config.json" <<PY
 import json,sys
 json.dump({"run_id":"${RUN_ID}","git_commit":"$(git rev-parse HEAD)","student_initialization":{"model_id":"meta-llama/Llama-3.2-3B-Instruct","revision":"0cb88a4f764b7a12671c53f0838cd831a0843b95","weights":"fresh_unwatermarked_canonical_base"},"formal_config":{"samples":20000,"epochs":3,"learning_rate":1e-5,"precision":"bf16","full_parameter":True,"lora":False,"seed":42,"batch_size":8},"paths":{"project_root":"${PROJECT_ROOT}","data_root":"${DATA_ROOT}","teacher":"${TEACHER}","student":"${STUDENT}","fingerprints":"${FINGERPRINTS}","python":"${PYTHON}","run_dir":"${RUN_DIR}"}},open(sys.argv[1],"w"),indent=2)
