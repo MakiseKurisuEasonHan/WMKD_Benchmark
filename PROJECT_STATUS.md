@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 2 — PN-FP Experiment A corrective relaunch after two preserved pre-training failures.
+Stage 2 — PN-FP Experiment A formal training active in detached AutoDL run.
 
 ## Completed
 
@@ -21,8 +21,8 @@ Stage 2 — PN-FP Experiment A corrective relaunch after two preserved pre-train
 
 ## Current task
 
-- Synchronize the candidate-key oversampling fix and launch a new immutable run.
-- The two earlier runs failed before any optimizer step; no OOM occurred and the GPU is idle.
+- Active run: `pnfp_exp_a_20260827_232033` in `nohup_setsid` mode, detached PID 88165.
+- Preflight and fingerprint generation passed; formal batch-8 full-parameter training is active. Three earlier pre-training failures remain preserved. No OOM has occurred.
 
 ## Blockers
 
@@ -32,4 +32,4 @@ Stage 2 — PN-FP Experiment A corrective relaunch after two preserved pre-train
 
 ## Next step
 
-- Launch a corrected immutable run that requires at least 1,024 valid fingerprints, then allow the detached pipeline to proceed automatically.
+- Allow the active detached pipeline to proceed through training, checkpoint reload, watermarked/base evaluation, paired metrics, and machine-readable final status. Do not launch another large GPU task.

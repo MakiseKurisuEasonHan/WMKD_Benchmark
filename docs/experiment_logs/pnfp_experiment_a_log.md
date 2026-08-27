@@ -40,10 +40,11 @@ The paper demonstrates much larger fingerprint scales on Llama-3.1-8B. Experimen
 - Fix for the next run: generate 1,100 candidate keys so the official whitespace validity filter can operate, require at least 1,024 valid generated records, then use exactly the first fixed 1,024 for both training and paired evaluation. Candidate oversampling is a compatibility measure, not an increase in the formal fingerprint count.
 - `pnfp_exp_a_20260827_231639`: immutable failed run. It generated 1,087 valid candidates, fixed the first 1,024, and reached DeepSpeed initialization with the exact declared training configuration. Before the first optimizer step, CPUAdam reported that `ninja` was unavailable. Inspection showed `ninja==1.13.0` and its executable were already installed inside the isolated environment, but the detached/DeepSpeed subprocess PATH did not expose the environment's `bin` directory. No OOM or optimizer step occurred.
 - Fix for the next run: explicitly prepend the isolated environment `bin` directory to detached PATH and make `ninja` discovery a mandatory preflight assertion.
+- `pnfp_exp_a_20260827_232033`: active corrected formal run, launched 2026-08-27 23:20:33 AutoDL local time with detached PID 88165 (`nohup_setsid`). Minimum preflight and fresh fingerprint generation passed; 1,087 valid candidates were generated and the first 1,024 were fixed. The exact batch-8 full-parameter configuration reached DeepSpeed CPUAdam build/initialization successfully. At the last recorded check, training was active and healthy with GPU PID 88410; no OOM had occurred.
 
 ## Results, judgement, and artifacts
 
-Training, checkpoint, reload, watermarked result, base result, paired result, scientific judgement, final report, machine-readable summary, and archive are pending a corrected immutable run. Across the three preserved attempts, no OOM or optimizer step has occurred.
+Training, checkpoint, reload, watermarked result, base result, paired result, scientific judgement, final report, machine-readable summary, and archive are pending the active corrected run. No OOM has occurred.
 
 ## Next step
 
