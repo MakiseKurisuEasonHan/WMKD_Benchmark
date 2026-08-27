@@ -15,20 +15,20 @@ PNFP Experiment A preparation.
 - Fixed and downloaded the shared Llama-3.2-3B-Instruct backbone revision on Windows with a complete SHA256 manifest.
 - Archived the same fixed Llama-3.2-3B-Instruct revision in the La Trobe warehouse as exactly 12 verified files (6,434,748,511 bytes), with a server-side machine-readable manifest and full SHA256 equality.
 - Fixed the PNFP official source commit and created a compatible isolated AutoDL environment.
-- Evaluated ModelScope candidate `LLM-Research/Llama-3.2-3B-Instruct` and rejected it because only 11/12 canonical metadata hashes matched; a downloaded `.gitattributes` confirmed the mismatch.
+- Evaluated ModelScope candidate `LLM-Research/Llama-3.2-3B-Instruct`, rejected it as a standalone provenance source, and later used its 11 matching files only as transport payloads under an explicitly approved repair protocol.
+- Established the complete canonical Llama-3.2-3B-Instruct snapshot on AutoDL as exactly 12 files and 6,434,748,511 bytes, with full SHA256 equality to the frozen Hugging Face manifest and no `original/` directory.
+- Passed offline tokenizer, chat-template, BF16 single-GPU model-load, and short-generation smoke checks in the existing PNFP environment.
 
 ## Current task
 
-- PNFP Experiment A preparation is partially complete. Formal training has not started.
+- PNFP Experiment A preparation is ready for formal training. Formal training has not started and still requires separate authorization.
 
 ## Blockers
 
 - The local environment still cannot authenticate Git over the configured SSH GitHub remote; authenticated temporary HTTPS credentials can be used without changing `origin`.
 - The general artifact synchronization protocol has not yet been defined; the school canonical model copy has a verified task-specific provenance manifest.
-- Windows SCP, La Trobe-to-AutoDL rsync, La Trobe-to-OSS, and Hugging Face `network_turbo` were unsuitable for stable multi-GB transfer. The AutoDL formal model directory is currently empty after cleanup.
-- ModelScope small-file throughput was acceptable (approximately 5.34 MB/s), but its only candidate revision was not byte-identical to the frozen 12-file manifest and cannot be used for WMKD_Benchmark.
-- Offline model load and generation smoke are blocked until the complete model reaches AutoDL and passes SHA256 verification.
+- No model-transfer or offline-smoke blocker remains. ModelScope was used only as transport, the sole mismatched small file was repaired from the exact Hugging Face revision, and the final AutoDL directory passed the frozen 12-file manifest.
 
 ## Next step
 
-- Establish a viable route that transfers the verified Windows or La Trobe canonical snapshot to AutoDL without substituting a non-identical mirror, complete destination integrity verification and offline smoke checks, then separately authorize formal PNFP Experiment A training.
+- Separately review and authorize formal PNFP Experiment A training; do not infer authorization from the completed preparation gate.

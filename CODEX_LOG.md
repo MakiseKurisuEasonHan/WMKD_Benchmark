@@ -197,3 +197,30 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 ### 备注
 
 未下载权重、未 promote 模型、未运行 tokenizer/model load、generation smoke、GPU workload、fingerprint generation、training 或 evaluation。正式 PNFP Experiment A 仍未开始。
+
+## 2026-08-28 00:20（Australia/Sydney，UTC+10:00）
+
+### 任务
+
+按后续明确批准的 transport-plus-repair 协议，在 AutoDL 通过 ModelScope 传输固定 Llama-3.2-3B-Instruct 的 12 个指定 artifact，以精确 Hugging Face revision 修复不一致的小文件，并完成 canonical 校验及离线 smoke；不启动正式 PNFP 训练。
+
+### 完成内容
+
+- ModelScope 仅下载 manifest 指定的 12 个根文件，未请求 `original/*` 或 `configuration.json`；exit code 0，总耗时 541 秒，无 retry/resume。
+- 验证 ModelScope 的 11 个文件与 canonical 完全一致，包括两个 safetensors shard；唯一 mismatch 为 `.gitattributes`。
+- 从 Hugging Face revision `0cb88a4f764b7a12671c53f0838cd831a0843b95` 单独下载 1,519-byte `.gitattributes`，耗时 2 秒，验证 SHA256 后替换 staging 文件。
+- 对 repaired staging 和正式目录分别执行完整 12-file SHA256 校验；两次均为 12/12 通过，总字节数 6,434,748,511，且 `original/` 不存在。
+- 在既有 PNFP venv 中强制离线加载 tokenizer；GPU preflight 确认 RTX PRO 6000 空闲、0 MiB 占用且无进程；随后 BF16 单 GPU 模型加载、chat template 和极短 generation 全部通过。
+- 清理本轮 staging sidecar 与 Hugging Face repair 临时目录；正式目录只保留 12 个 canonical artifact。
+
+### 结果
+
+成功。PNFP Experiment A preparation 已达到可进入正式训练的 readiness gate，但正式 fingerprint generation、training、detection、utility evaluation 和 Experiment A 均未运行，必须等待下一次明确批准。
+
+### Git
+
+本轮计划使用 commit message `Verify canonical 3B backbone on AutoDL` 提交轻量文档并推送，随后在 AutoDL fast-forward；最终 commit 与三端同步状态在本轮结束前验证。
+
+### 备注
+
+正式模型路径为 `/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct`。ModelScope 仅是传输渠道，科学 provenance 仍由固定 Hugging Face revision 与 Git manifest 定义。未连接学校服务器或 OSS，未输出 token，未修改 PNFP venv，未运行训练。

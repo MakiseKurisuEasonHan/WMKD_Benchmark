@@ -12,8 +12,8 @@
 - [x] Create and validate the PNFP-specific AutoDL environment.
 - [x] Archive the fixed Llama-3.2-3B-Instruct revision in canonical La Trobe storage and verify all 12 files by size and SHA256.
 - [x] Evaluate the ModelScope Llama-3.2-3B-Instruct candidate and reject it after a downloaded canonical-file mismatch confirmed it is not byte-identical.
-- [ ] Complete the fixed Llama model transfer to AutoDL and verify all SHA256 values.
-- [ ] Run offline tokenizer/model load and short generation smoke after transfer verification.
+- [x] Complete the fixed Llama model transfer to AutoDL and verify all SHA256 values.
+- [x] Run offline tokenizer/model load and short generation smoke after transfer verification.
 - [ ] Explicitly authorize formal PNFP Experiment A training in a separate task.
 
 ## Medium priority
@@ -28,5 +28,6 @@
 - Private GitHub repository created and connected on 2026-08-27.
 - La Trobe school-server storage endpoint initialized on 2026-08-27.
 - AutoDL compute endpoint and isolated data root initialized on 2026-08-27.
-- PNFP official source and isolated environment prepared on 2026-08-27; model transfer remains blocked.
+- PNFP official source and isolated environment prepared on 2026-08-27; model transfer was still blocked at that preparation stage.
 - Fixed Llama-3.2-3B-Instruct canonical school-server archive completed and fully verified on 2026-08-27.
+- Fixed Llama-3.2-3B-Instruct AutoDL snapshot completed and fully verified on 2026-08-27; offline tokenizer/model/generation smoke passed without starting training.
