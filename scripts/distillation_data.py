@@ -12,6 +12,20 @@ from typing import Iterable
 REQUIRED_FROZEN = ("sample_id", "instruction", "input", "teacher_raw_answer")
 
 
+def enforce_generation_progress_limits(*, total_calls: int, accepted: int, consecutive_zero: int,
+                                       elapsed: float, max_total_calls: int, max_consecutive_zero: int,
+                                       max_wall_seconds: int, warmup_calls: int,
+                                       minimum_records_per_call: float) -> None:
+    if total_calls >= max_total_calls:
+        raise RuntimeError(f"no-progress guard: maximum total calls {max_total_calls} reached with {accepted} accepted records")
+    if consecutive_zero >= max_consecutive_zero:
+        raise RuntimeError(f"no-progress guard: {consecutive_zero} consecutive zero-acceptance calls")
+    if elapsed >= max_wall_seconds:
+        raise TimeoutError(f"no-progress guard: wall-clock limit {max_wall_seconds}s reached")
+    if total_calls >= warmup_calls and accepted / total_calls < minimum_records_per_call:
+        raise RuntimeError(f"no-progress guard: acceptance {accepted / total_calls:.4f} records/call below {minimum_records_per_call} after {total_calls} calls")
+
+
 def canonical_json(value: object) -> str:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 

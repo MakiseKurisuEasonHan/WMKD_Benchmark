@@ -9,7 +9,7 @@ try:
 except ImportError:
     HAS_YAML = False
 
-from scripts.distillation_data import freeze_candidates, stable_sample_id, validate_up_pair
+from scripts.distillation_data import enforce_generation_progress_limits, freeze_candidates, stable_sample_id, validate_up_pair
 from scripts.paraphrase_distillation_up import build_record
 from scripts.pnfp_distillation_preflight import load_config, validate_config
 
@@ -61,6 +61,17 @@ class DistillationPreparationTests(unittest.TestCase):
         self.assertEqual(config["student"]["revision"], "0cb88a4f764b7a12671c53f0838cd831a0843b95")
         self.assertEqual(config["student"]["initialization"], "fresh_original_revision")
         self.assertNotEqual(config["paths"]["student_model"], config["teacher"]["checkpoint"])
+
+    def test_teacher_generation_no_progress_guards(self):
+        common = dict(max_total_calls=12000, max_consecutive_zero=64, max_wall_seconds=43200,
+                      warmup_calls=200, minimum_records_per_call=0.5)
+        enforce_generation_progress_limits(total_calls=199, accepted=0, consecutive_zero=63, elapsed=43199, **common)
+        with self.assertRaisesRegex(RuntimeError, "consecutive zero"):
+            enforce_generation_progress_limits(total_calls=64, accepted=0, consecutive_zero=64, elapsed=100, **common)
+        with self.assertRaisesRegex(RuntimeError, "acceptance"):
+            enforce_generation_progress_limits(total_calls=200, accepted=20, consecutive_zero=0, elapsed=100, **common)
+        with self.assertRaises(TimeoutError):
+            enforce_generation_progress_limits(total_calls=100, accepted=100, consecutive_zero=0, elapsed=43200, **common)
 
 
 if __name__ == "__main__":

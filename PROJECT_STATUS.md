@@ -28,7 +28,7 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 - Experiment A completed successfully (`1019/1024`, reload validation passed).
 - Experiment A formal report and machine-readable summary record 30/30 epochs, eval_loss 0.0119302, base 1/1024 and paired difference 99.4141 percentage points.
-- Ba Direct Distillation uses a watermarked 3B teacher plus fresh unwatermarked canonical 3B student. Formal run `pnfp_exp_ba_20260828_012228` passed preflight but produced 0 valid candidates and 64 parse failures from degenerate teacher output, then failed safely before dataset freeze or training.
+- Ba Direct Distillation uses a watermarked 3B teacher plus fresh unwatermarked canonical 3B student. Formal run `pnfp_exp_ba_20260828_012228` failed before training. A bounded A/B/C diagnostic classified the blocker as H1/Case 3: ordinary, CAN-style, and JSON generations all broadly degraded, so no rerun is authorized.
 - Bb remains prepared/deferred. No Dipper or UP work is running.
 
 ## Blockers
