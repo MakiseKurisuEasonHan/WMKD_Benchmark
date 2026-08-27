@@ -11,6 +11,8 @@ WMKD_Benchmark is independent of WaterBench, WaterBenchV2, WaterBenchV3, `waterm
 - The La Trobe server owns long-term large-artifact archives. School VPN must be **on**.
 - GitHub stores small reproducibility files, never model weights, optimizer states, caches, large logs, raw tensors, credentials, or secrets.
 
+On AutoDL, cross-border GitHub or Hugging Face artifacts may use a currently verified AutoDL accelerator or trusted mirror as command-scoped transport when direct access is materially degraded. Transport is not scientific provenance: every formal input remains pinned to the official repository/model and exact commit/revision, and the downloaded content must pass size and hash (preferably authoritative blob/object hash) verification. Never use an untraceable mirror or skip integrity verification, and do not hard-code a temporary proxy as the sole permanent route.
+
 ## Default backbone standardization
 
 Unless a watermark method has a documented technical limitation and the user separately approves a deviation, every formal method uses the same pinned canonical backbone: `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`.
