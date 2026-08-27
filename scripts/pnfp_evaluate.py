@@ -15,7 +15,7 @@ def parse_args():
     parser.add_argument("--model-path", required=True)
     parser.add_argument("--fingerprints", required=True)
     parser.add_argument("--output", required=True)
-    parser.add_argument("--label", required=True, choices=("watermarked", "base"))
+    parser.add_argument("--label", required=True)
     parser.add_argument("--count", type=int, default=1024)
     parser.add_argument("--key-length", type=int, default=16)
     parser.add_argument("--generation-response-length", type=int, default=16)
