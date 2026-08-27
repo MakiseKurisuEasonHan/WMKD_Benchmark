@@ -51,3 +51,5 @@ python3 /root/autodl-tmp/WMKD_Benchmark_data/notification_tools/setup_email_noti
 ```
 
 No current-run watcher is started until the user has configured the credential and one independent test email succeeds.
+
+For the active PN-FP run, the credential was subsequently configured in the external mode-600 secret file and independent test `email_test_20260827_233957` was sent successfully. A read-only watcher was then launched via `nohup + setsid` with PID 89850. Its operational directory is `/root/autodl-tmp/WMKD_Benchmark_data/notifications/pnfp_exp_a_20260827_232033/`; it sends no retrospective `STARTED` event.

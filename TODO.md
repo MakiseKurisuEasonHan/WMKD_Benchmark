@@ -21,8 +21,8 @@
 - [ ] Complete checkpoint reload, watermarked evaluation, base control, paired metrics, report, and summary.
 - [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
 - [x] Deploy standalone notification utilities outside the active AutoDL Git checkout.
-- [ ] User: configure the Gmail App Password interactively on AutoDL, then send one independent test email.
-- [ ] Optionally start the read-only watcher for the current PN-FP run after credential configuration.
+- [x] Configure the Gmail App Password interactively on AutoDL and send one successful independent test email.
+- [x] Start and verify the read-only detached watcher for the current PN-FP run.
 
 ## Medium priority
 
