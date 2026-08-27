@@ -26,4 +26,17 @@ Future A2 retains A1's exact 1,024 keys, lengths 16/16/1, 30 epochs, LR 5e-5, we
 
 ## Speed and utility smoke
 
-Pending bounded diagnostic smoke.
+Diagnostic `pnfp_a2_speed_smoke_20260828_023042` completed with exit code 0. It used the first 64 records of the unchanged A1 fingerprint file, 12 official optimizer updates (2 warmup, 10 measured), batch 8, six fingerprint plus two benign samples per normal microbatch, gradient accumulation 11, BF16, full parameters, ZeRO-2 CPU offload, WA 0.75, and DM 0.25. This smaller diagnostic dataset preserves the actual stack while avoiding 12 full 1,024-key epochs.
+
+- Measured post-warmup optimizer-step interval: mean 10.825 s, median 10.946 s, range 10.126–11.123 s. Each interval includes 11 training microbatches, official epoch evaluation, and WA.
+- Mean post-warmup WA time: 1.094 s/update. Trainer training runtime: 139.869 s. End-to-end load, preprocessing, training, save, and teardown: 242 s. Final-model write after training was approximately 13.5 s.
+- Effective diagnostic accumulated batch: 64 fingerprint + 22 benign examples = 86 examples/update. Formal A2 will use 1,024 fingerprint + 342 benign examples = 1,366 examples/update and 171 accumulation microbatches.
+- Trainer-reported fingerprint throughput: 5.491 samples/s. Approximate actual mixed-example throughput was 7.38 samples/s. GPU telemetry: 100% peak utilization, 59.4% mean among nonzero samples, 23.4% over the full load/preprocess/save window; peak VRAM 29,995 MiB. Peak host RAM used was 77.21 GiB.
+- No OOM, NaN, CUDA error, traceback, or retry occurred. The official Instruct benign-tokenization path emitted many `Response not found` warnings and used its documented manual concatenation fallback; this is an implementation warning to retain in formal reporting, not a fatal error.
+- Checkpoint reload/generation succeeded. On 10 fixed prompts, both base and A2-smoke had 3/10 max-token hits and 0/10 obvious repetition; sampled outputs were coherent. This does not establish formal utility.
+- Tiny watermark sanity: 64/64 detected, zero invalid samples and zero evaluation errors. This is not a formal detection result and must not be used for tuning.
+- Diagnostic directory: `/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_a2_speed_smoke_20260828_023042` (6.1 GiB). Data disk after smoke: 975 GiB free.
+
+Scaling the measured microbatch/evaluation/WA components gives about 152 seconds per formal epoch and 76 minutes for 30 training epochs. A1 measured 26.5 minutes without WA/DM, confirming that the regularized stack is materially slower. Expected fixed-fingerprint checkpoint/reload/control work is only a few minutes based on A1; ARC Challenge and TruthfulQA MC timing has not yet been measured on this stack. Planning range including those required utility evaluations: optimistic 1 h 25 min, expected 1 h 40 min, conservative 2 h 15 min. Main uncertainty is utility-evaluation runtime and whether full-scale benign tokenization/cache behavior differs from smoke.
+
+Preparation judgement: formal A2 is technically ready, but it has not started and requires explicit user approval.

@@ -9,6 +9,7 @@ def main():
         p.add_argument("--" + name, required=True)
     p.add_argument("--fingerprint-count", type=int, default=64)
     p.add_argument("--optimizer-steps", type=int, default=12)
+    p.add_argument("--local_rank", type=int, default=0)
     a = p.parse_args()
     sys.path.insert(0, a.official_source); os.chdir(a.official_source)
     import finetune_multigpu as official
