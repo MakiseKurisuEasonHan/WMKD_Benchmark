@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 3 — PN-FP Experiment A finalized; Ba corrected to same-size 3B and stopped before launch; Bb deferred. No formal GPU run active.
+Stage 3 — PN-FP Experiment A finalized; first formal same-size 3B Ba run failed at teacher QA generation; Bb deferred. No formal GPU run active.
 
 The durable benchmark default is now a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Ba/Bb teachers are successful watermarked A checkpoints; students always start from fresh canonical unwatermarked weights. Any method-specific backbone deviation requires a recorded blocker and explicit user approval.
 
@@ -28,7 +28,7 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 - Experiment A completed successfully (`1019/1024`, reload validation passed).
 - Experiment A formal report and machine-readable summary record 30/30 epochs, eval_loss 0.0119302, base 1/1024 and paired difference 99.4141 percentage points.
-- Ba Direct Distillation is implemented and corrected to a watermarked 3B teacher plus fresh unwatermarked canonical 3B student. The incorrect partial 1B download was stopped and removed before any run ID, QA generation, notification or GPU task.
+- Ba Direct Distillation uses a watermarked 3B teacher plus fresh unwatermarked canonical 3B student. Formal run `pnfp_exp_ba_20260828_012228` passed preflight but produced 0 valid candidates and 64 parse failures from degenerate teacher output, then failed safely before dataset freeze or training.
 - Bb remains prepared/deferred. No Dipper or UP work is running.
 
 ## Blockers
@@ -40,4 +40,4 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 ## Next step
 
-- Preserve Experiment A and the corrected Ba stop point. On later explicit approval, continue Ba by deploying the correction, re-verifying the existing pinned canonical 3B model, running minimum preflight, then launching detached.
+- Preserve Experiment A and immutable failed Ba run `pnfp_exp_ba_20260828_012228`. Diagnose and review the teacher-generation/data-source correction before authorizing a new Ba run; do not resume or overwrite the failed run.

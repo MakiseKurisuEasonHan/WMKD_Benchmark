@@ -21,3 +21,11 @@ Resource-bounded deviation: CAN uses about 200k pairs and reports eight H800 GPU
 - Corrected the Ba student to a fresh logical load of the existing canonical unwatermarked `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`; the teacher remains the distinct watermarked Experiment A checkpoint.
 - CAN ACL 2025 used Llama-3.2-1B as one of its students. WMKD_Benchmark intentionally uses same-size 3B teacher and student to remove model-capacity reduction as a confounder and isolate direct knowledge distillation.
 - Stop point retained: Ba has no run ID and has not started.
+
+## Formal run `pnfp_exp_ba_20260828_012228` — failed at dataset generation
+
+- Launched independently with `nohup + setsid` from Git commit `30b996548f2486e2a072cd2817a36240fe6df360`; runner PID `94171`, pipeline PID `94175`, and teacher-generation PID `94421`.
+- Minimum preflight passed, including 6/6 AutoDL config/storage tests, separate loadable teacher and canonical student artifacts, the frozen 12-file 3B manifest, the Experiment A 1,024-key detector, idle RTX PRO 6000, data-disk routing, and mode-600 email credentials.
+- STARTED notification succeeded through STARTTLS 587. Teacher QA generation then produced degenerate repetitive text from the watermarked Experiment A checkpoint: 64 recorded parse failures, zero valid candidates, and therefore no frozen dataset.
+- Because the generator loop was governed by accepted-candidate count, continuing at 0/24,000 would consume GPU indefinitely and could never satisfy the mandatory exactly-20,000 dataset gate. The generation child was terminated deliberately; the immutable runner recorded exit `-15`, final status `failed`, and exit code `1`. FAILED notification succeeded through SSL 465.
+- No student training, checkpoint, reload, PN-FP evaluation, ARC, TruthfulQA, Bb, UP, or Dipper work occurred. This run must not be resumed or overwritten. The blocker is teacher ordinary-generation quality and the generator's missing bounded no-progress failure guard; resolving it requires a separately reviewed correction before a new run.

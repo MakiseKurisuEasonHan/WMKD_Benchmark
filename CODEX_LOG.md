@@ -232,3 +232,8 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Diagnosed the missed COMPLETED email as an unclassified top-level SMTP `TimeoutError`; watcher classification and the experiment itself succeeded.
 - Added bounded SSL 465 retry, serial STARTTLS 587 fallback, phase-aware failure records, a non-secret pending terminal-event queue, and a CPU-only retry utility. Email failure remains non-fatal.
 - PN-FP Ba remains `deployment_blocked`: no run ID and no GPU task. Bb remains prepared/deferred.
+## 2026-08-28 — PN-FP Ba formal launch
+
+- Synchronized AutoDL to the authoritative Git history and fixed the launcher to use the verified PN-FP Python environment before creating a run.
+- Launched detached formal run `pnfp_exp_ba_20260828_012228` at commit `30b996548f2486e2a072cd2817a36240fe6df360`.
+- Stopped the generation child after 64/64 outputs were degenerate parse failures and no valid QA was produced, preventing an unbounded GPU loop. The runner preserved FAILED state and notifications; no training or later stage ran.

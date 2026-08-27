@@ -21,7 +21,8 @@
 - [x] Prepare paired PN-FP Ba/Bb configs, dataset/UP validation, schemas, logs, report templates, and guarded dry-run runners.
 - [x] Pin the official CAN repository at `9a2b01af1fadcece2893d32460ed9449093f8fb9`.
 - [x] Cancel and remove the incorrect partial 1B student download before any formal Ba run or notification.
-- [ ] After explicit approval, deploy the corrected Ba configuration, reuse/verify the canonical pinned Llama-3.2-3B-Instruct, run minimum preflight, and launch detached Ba.
+- [x] Launch formal same-size 3B Ba run `pnfp_exp_ba_20260828_012228`; preserve its fail-fast evidence after teacher QA generation yielded 0 valid candidates and 64 parse failures.
+- [ ] Review a bounded correction for degenerate teacher ordinary-generation output and add a no-progress guard before authorizing a new immutable Ba run.
 - [ ] Keep Bb and all Dipper/UP downloads deferred until a separate future approval.
 - [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
 - [x] Deploy standalone notification utilities outside the active AutoDL Git checkout.
