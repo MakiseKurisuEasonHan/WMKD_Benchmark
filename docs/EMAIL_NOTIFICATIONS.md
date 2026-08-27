@@ -4,7 +4,9 @@ WMKD_Benchmark uses best-effort Gmail SMTP notifications for formal experiment l
 
 ## Configuration
 
-- SMTP: Gmail SMTP over SSL, `smtp.gmail.com:465`
+- Primary SMTP: Gmail SMTP over SSL, `smtp.gmail.com:465`, three attempts
+- Fallback SMTP: `smtp.gmail.com:587` with STARTTLS, up to two attempts after all 465 attempts fail
+- Per-attempt timeout: 45 seconds; bounded backoff is 5 and 15 seconds for 465, then 5 seconds for 587
 - Sender: `EasonHanYichen@gmail.com`
 - Recipient: `21672330@students.latrobe.edu.au`
 - Secret file: `/root/autodl-tmp/WMKD_Benchmark_data/secrets/email.env`
@@ -40,16 +42,42 @@ After configuration, send exactly one independent test:
 
 Future runners call `notify_experiment.py` for `STARTED`, `COMPLETED`, and `FAILED`. A read-only watcher can additionally classify an unexpectedly disappeared detached process as `INTERRUPTED`. Notification state is stored outside Git under `/root/autodl-tmp/WMKD_Benchmark_data/notifications/<run_id>/notification_state.json`; each `run_id + event` is sent at most once.
 
+Only confirmed SMTP success marks an event delivered. If every immediate attempt for `COMPLETED`, `FAILED`, or `INTERRUPTED` fails, a non-secret record is retained under `/root/autodl-tmp/WMKD_Benchmark_data/notifications/pending/<run_id>__<event>.json`. Retry queued events without touching experiment state:
+
+```bash
+/root/autodl-tmp/WMKD_Benchmark_data/artifacts/pnfp/env/bin/python \
+  scripts/retry_pending_notifications.py \
+  --run-id pnfp_exp_a_20260827_232033
+```
+
+Successful retries move the pending record to `notifications/delivered/`. Failure JSON and pending records contain transport, attempt and phase information but never credentials. SMTP delivery remains best-effort and cannot change scientific experiment status.
+
 The current PN-FP run is not restarted or modified for email support. Its optional watcher must only be launched after the App Password is configured.
 
 ## Current standalone deployment
 
-While PN-FP run `pnfp_exp_a_20260827_232033` remains active, the three utilities are deployed independently under `/root/autodl-tmp/WMKD_Benchmark_data/notification_tools/`. This does not fast-forward or modify the running AutoDL Git checkout. The standalone setup command is:
+For PN-FP run `pnfp_exp_a_20260827_232033`, the original utilities were deployed independently under `/root/autodl-tmp/WMKD_Benchmark_data/notification_tools/`. This did not modify the running process. The standalone setup command is:
 
 ```bash
 python3 /root/autodl-tmp/WMKD_Benchmark_data/notification_tools/setup_email_notifications.py
 ```
 
-No current-run watcher is started until the user has configured the credential and one independent test email succeeds.
+The credential was configured in the external mode-600 secret file and independent test `email_test_20260827_233957` succeeded. Read-only watcher PID 89850 detected the terminal COMPLETED state, but its single original SMTP_SSL attempt ended in `TimeoutError: timed out`. The experiment was unaffected. The hardened notifier queues the legitimate missed COMPLETED event for bounded retry; no retrospective STARTED event is generated.
 
-For the active PN-FP run, the credential was subsequently configured in the external mode-600 secret file and independent test `email_test_20260827_233957` was sent successfully. A read-only watcher was then launched via `nohup + setsid` with PID 89850. Its operational directory is `/root/autodl-tmp/WMKD_Benchmark_data/notifications/pnfp_exp_a_20260827_232033/`; it sends no retrospective `STARTED` event.
+If its success state is still false after AutoDL access returns, deploy the hardened scripts and retry the one legitimate historical event with:
+
+```bash
+cd /root/autodl-tmp/WMKD_Benchmark
+/root/autodl-tmp/WMKD_Benchmark_data/artifacts/pnfp/env/bin/python scripts/notify_experiment.py \
+  --event COMPLETED \
+  --experiment "PN-FP Experiment A" \
+  --run-id pnfp_exp_a_20260827_232033 \
+  --stage completed \
+  --status completed \
+  --exit-code 0 \
+  --status-file /root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/status/status.json \
+  --log-path /root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/logs \
+  --message $'Watermarked detection: 1019 / 1024 = 99.5117%\nBase detection: 1 / 1024 = 0.0977%\nPaired difference: 99.4141 percentage points\nReload validation: passed\nScientific judgement: PN-FP core reproduction successful'
+```
+
+If delivery still fails, this command creates the pending record automatically. Running `retry_pending_notifications.py --run-id pnfp_exp_a_20260827_232033` later is safe and duplicate-aware.

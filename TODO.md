@@ -20,12 +20,15 @@
 - [x] Complete PN-FP Experiment A checkpoint reload, watermarked/base evaluation, paired metrics, and summary.
 - [x] Prepare paired PN-FP Ba/Bb configs, dataset/UP validation, schemas, logs, report templates, and guarded dry-run runners.
 - [x] Pin the official CAN repository at `9a2b01af1fadcece2893d32460ed9449093f8fb9`.
-- [ ] Download and verify pinned Llama-3.2-1B-Instruct and Dipper artifacts after explicit approval.
-- [ ] Obtain explicit approval and execute shared QA → Ba → Dipper UP → Bb serially.
+- [ ] When AutoDL SSH recovers, deploy Ba, download/verify only the pinned Llama-3.2-1B-Instruct, run minimum preflight, and launch detached Ba.
+- [ ] Keep Bb and all Dipper/UP downloads deferred until a separate future approval.
 - [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
 - [x] Deploy standalone notification utilities outside the active AutoDL Git checkout.
 - [x] Configure the Gmail App Password interactively on AutoDL and send one successful independent test email.
 - [x] Start and verify the read-only detached watcher for the current PN-FP run.
+- [x] Finalize Experiment A dedicated log, formal report, and machine-readable summary with mutually consistent authoritative results.
+- [x] Harden SMTP with bounded retries, serial STARTTLS fallback, terminal pending queue, and CPU-only retry utility.
+- [ ] Retry the legitimate missed Experiment A COMPLETED notification when the AutoDL credential becomes reachable; do not send STARTED.
 
 ## Medium priority
 

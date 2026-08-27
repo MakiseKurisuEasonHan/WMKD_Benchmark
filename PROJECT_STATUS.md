@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 3 — PN-FP Ba/Bb research and infrastructure preparation; no formal GPU run active.
+Stage 3 — PN-FP Experiment A finalized; Ba deployment blocked; Bb deferred. No formal GPU run active.
 
 ## Completed
 
@@ -25,15 +25,17 @@ Stage 3 — PN-FP Ba/Bb research and infrastructure preparation; no formal GPU r
 ## Current task
 
 - Experiment A completed successfully (`1019/1024`, reload validation passed).
-- Ba (Direct Distillation) and Bb (answer-only UP + Distillation) are prepared as a paired 20k resource-bounded benchmark.
-- Formal QA generation, Dipper generation, student training, and GPU evaluation have not started.
+- Experiment A formal report and machine-readable summary record 30/30 epochs, eval_loss 0.0119302, base 1/1024 and paired difference 99.4141 percentage points.
+- Ba Direct Distillation is implemented locally but deployment is blocked by unavailable AutoDL SSH. No run ID exists and no GPU task has started.
+- Bb remains prepared/deferred. No Dipper or UP work is running.
 
 ## Blockers
 
 - The local environment still cannot authenticate Git over the configured SSH GitHub remote; authenticated temporary HTTPS credentials can be used without changing `origin`.
+- AutoDL SSH is currently unavailable, blocking Ba deployment without changing its scientific design.
 - The general artifact synchronization protocol has not yet been defined; the school canonical model copy has a verified task-specific provenance manifest.
 - No model-transfer or offline-smoke blocker remains. ModelScope was used only as transport, the sole mismatched small file was repaired from the exact Hugging Face revision, and the final AutoDL directory passed the frozen 12-file manifest.
 
 ## Next step
 
-- Deploy and validate this preparation on AutoDL, obtain the pinned model artifacts, then wait for explicit approval before formal serial execution.
+- Complete notification/GitHub project closeout. When AutoDL SSH later recovers, continue Ba from deploy → pinned 1B download/verification → minimum preflight → detached launch.

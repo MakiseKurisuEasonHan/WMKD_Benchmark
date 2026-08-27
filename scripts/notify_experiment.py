@@ -11,12 +11,18 @@ import smtplib
 import socket
 import ssl
 import sys
+import time
 
 DEFAULT_SENDER = "EasonHanYichen@gmail.com"
 DEFAULT_RECIPIENT = "21672330@students.latrobe.edu.au"
 DEFAULT_SECRET_FILE = "/root/autodl-tmp/WMKD_Benchmark_data/secrets/email.env"
 DEFAULT_STATE_ROOT = "/root/autodl-tmp/WMKD_Benchmark_data/notifications"
 VALID_EVENTS = ("STARTED", "COMPLETED", "FAILED", "INTERRUPTED")
+TERMINAL_EVENTS = ("COMPLETED", "FAILED", "INTERRUPTED")
+PRIMARY_ATTEMPTS = 3
+FALLBACK_ATTEMPTS = 2
+PRIMARY_DELAYS = (5, 15)
+FALLBACK_DELAYS = (5,)
 
 
 def load_secret_environment(path):
@@ -79,16 +85,98 @@ def write_record(path, data):
     temp.replace(path)
 
 
+class DeliveryError(RuntimeError):
+    def __init__(self, transport, phase, cause):
+        super().__init__(f"{transport} {phase}: {type(cause).__name__}: {cause}")
+        self.transport, self.phase, self.cause = transport, phase, cause
+
+
+def _send_ssl(message, sender, password, timeout):
+    try:
+        smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context(), timeout=timeout)
+    except Exception as exc:
+        raise DeliveryError("ssl465", "connect_or_ssl_handshake", exc) from exc
+    try:
+        with smtp:
+            try: smtp.login(sender, password)
+            except Exception as exc: raise DeliveryError("ssl465", "login", exc) from exc
+            try: smtp.send_message(message)
+            except Exception as exc: raise DeliveryError("ssl465", "send_or_socket_read", exc) from exc
+    except DeliveryError: raise
+
+
+def _send_starttls(message, sender, password, timeout):
+    try: smtp = smtplib.SMTP("smtp.gmail.com", 587, timeout=timeout)
+    except Exception as exc: raise DeliveryError("starttls587", "connect", exc) from exc
+    try:
+        with smtp:
+            try: smtp.ehlo(); smtp.starttls(context=ssl.create_default_context()); smtp.ehlo()
+            except Exception as exc: raise DeliveryError("starttls587", "starttls_handshake", exc) from exc
+            try: smtp.login(sender, password)
+            except Exception as exc: raise DeliveryError("starttls587", "login", exc) from exc
+            try: smtp.send_message(message)
+            except Exception as exc: raise DeliveryError("starttls587", "send_or_socket_read", exc) from exc
+    except DeliveryError: raise
+
+
+def deliver_with_retry(message, sender, password, timeout, sleep=time.sleep):
+    failures = []
+    policies = [
+        ("ssl465", PRIMARY_ATTEMPTS, PRIMARY_DELAYS, _send_ssl),
+        ("starttls587", FALLBACK_ATTEMPTS, FALLBACK_DELAYS, _send_starttls),
+    ]
+    for transport, attempts, delays, sender_fn in policies:
+        for attempt in range(1, attempts + 1):
+            try:
+                sender_fn(message, sender, password, timeout)
+                return transport, failures
+            except Exception as exc:
+                failure = exc if isinstance(exc, DeliveryError) else DeliveryError(transport, "unknown", exc)
+                failures.append({"transport": transport, "attempt": attempt, "phase": failure.phase,
+                                 "error_type": type(failure.cause).__name__, "error": str(failure.cause)})
+                if attempt < attempts: sleep(delays[attempt - 1])
+    final = DeliveryError(failures[-1]["transport"], failures[-1]["phase"], RuntimeError(failures[-1]["error"]))
+    final.failures = failures
+    raise final
+
+
+def pending_path_for(args):
+    safe_run = "".join(c if c.isalnum() or c in "-_" else "_" for c in args.run_id)
+    return Path(args.state_root) / "pending" / f"{safe_run}__{args.event}.json"
+
+
+def safe_arguments(args):
+    names = ("event", "experiment", "run_id", "stage", "message", "pid", "exit_code", "status",
+             "log_path", "status_file", "error_summary", "time", "host", "subject")
+    return {name: getattr(args, name, None) for name in names}
+
+
+def persist_pending(args, message, failures, previous=None):
+    path = pending_path_for(args); previous = previous or {}
+    record = {"project": "WMKD_Benchmark", "experiment": args.experiment, "run_id": args.run_id,
+              "event": args.event, "subject": message["Subject"], "safe_arguments": safe_arguments(args),
+              "first_failure_time": previous.get("first_failure_time", dt.datetime.now().astimezone().isoformat()),
+              "latest_failure_time": dt.datetime.now().astimezone().isoformat(),
+              "latest_failure_reason": failures[-1] if failures else None,
+              "attempt_count": int(previous.get("attempt_count", 0)) + len(failures)}
+    write_record(path, record); return path
+
+
 def notify(args):
+    state_path = state_path_for(args)
     try:
         load_secret_environment(args.secret_file)
         password = os.environ.get("WMKD_GMAIL_APP_PASSWORD")
         if not password:
+            if args.event in TERMINAL_EVENTS:
+                message = build_message(args, os.environ.get("WMKD_EMAIL_SENDER", DEFAULT_SENDER),
+                                        os.environ.get("WMKD_EMAIL_RECIPIENT", DEFAULT_RECIPIENT))
+                persist_pending(args, message, [{"transport": "none", "attempt": 0, "phase": "credentials",
+                                "error_type": "MissingCredential", "error": "Gmail App Password is not configured"}])
             print("email notification disabled: WMKD_GMAIL_APP_PASSWORD is not configured")
             return 0
         sender = os.environ.get("WMKD_EMAIL_SENDER", DEFAULT_SENDER)
         recipient = os.environ.get("WMKD_EMAIL_RECIPIENT", DEFAULT_RECIPIENT)
-        state_path = state_path_for(args)
         state = read_state(state_path)
         if state.get(args.event):
             print(f"email notification skipped: {args.run_id} {args.event} was already sent")
@@ -97,25 +185,35 @@ def notify(args):
         if args.dry_run:
             print(f"email notification dry-run ready: {message['Subject']}")
             return 0
-        context = ssl.create_default_context()
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context, timeout=args.timeout) as smtp:
-            smtp.login(sender, password)
-            smtp.send_message(message)
+        transport, failures = deliver_with_retry(message, sender, password, args.timeout)
         state[args.event] = True
         state["last_sent_at"] = dt.datetime.now().astimezone().isoformat()
+        state["last_transport"] = transport
         write_record(state_path, state)
-        print(f"email notification sent: {args.run_id} {args.event}")
+        pending = pending_path_for(args)
+        if pending.exists():
+            delivered = Path(args.state_root) / "delivered" / pending.name
+            delivered.parent.mkdir(parents=True, exist_ok=True); pending.replace(delivered)
+        print(f"email notification sent: {args.run_id} {args.event} via {transport}")
     except Exception as exc:  # notifications must never fail a scientific pipeline
         failure_path = Path(args.failure_record or (str(state_path_for(args)) + ".failure.json"))
         record = {
             "run_id": args.run_id, "event": args.event,
             "time": dt.datetime.now().astimezone().isoformat(),
             "error_type": type(exc).__name__, "error": str(exc),
+            "attempts": getattr(exc, "failures", None),
         }
         try:
             write_record(failure_path, record)
         except Exception:
             pass
+        if args.event in TERMINAL_EVENTS:
+            old_path = pending_path_for(args); old = json.loads(old_path.read_text()) if old_path.exists() else None
+            failures = getattr(exc, "failures", None) or [{"transport": getattr(exc, "transport", "unknown"),
+                        "phase": getattr(exc, "phase", "unknown"), "error_type": type(exc).__name__, "error": str(exc)}]
+            try: persist_pending(args, build_message(args, os.environ.get("WMKD_EMAIL_SENDER", DEFAULT_SENDER),
+                                 os.environ.get("WMKD_EMAIL_RECIPIENT", DEFAULT_RECIPIENT)), failures, old)
+            except Exception: pass
         print(f"email notification failed (experiment unaffected): {type(exc).__name__}: {exc}")
     return 0
 
@@ -140,7 +238,7 @@ def build_parser():
     parser.add_argument("--state-root", default=DEFAULT_STATE_ROOT)
     parser.add_argument("--state-file")
     parser.add_argument("--failure-record")
-    parser.add_argument("--timeout", type=float, default=15.0)
+    parser.add_argument("--timeout", type=float, default=45.0)
     parser.add_argument("--dry-run", action="store_true")
     return parser
 

@@ -224,3 +224,11 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 ### 备注
 
 正式模型路径为 `/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct`。ModelScope 仅是传输渠道，科学 provenance 仍由固定 Hugging Face revision 与 Git manifest 定义。未连接学校服务器或 OSS，未输出 token，未修改 PNFP venv，未运行训练。
+
+## 2026-08-28 — Finalize Experiment A records and harden notifications
+
+- Recorded the completed formal run `pnfp_exp_a_20260827_232033`: 30/30 epochs, final eval_loss 0.0119302, watermarked 1019/1024, base 1/1024, paired difference 0.994140625, reload passed, no OOM.
+- Added the final Experiment A report and small machine-readable summary; corrected stale Running/Pending project records.
+- Diagnosed the missed COMPLETED email as an unclassified top-level SMTP `TimeoutError`; watcher classification and the experiment itself succeeded.
+- Added bounded SSL 465 retry, serial STARTTLS 587 fallback, phase-aware failure records, a non-secret pending terminal-event queue, and a CPU-only retry utility. Email failure remains non-fatal.
+- PN-FP Ba remains `deployment_blocked`: no run ID and no GPU task. Bb remains prepared/deferred.
