@@ -1,0 +1,76 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credential*
+*credentials*
+*secret*
+*token*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# Models, checkpoints, and exported weights
+models/
+model/
+checkpoints/
+checkpoint/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Datasets and raw outputs
+datasets/
+data/raw/
+outputs/raw/
+raw_outputs/
+
+# Caches and tracking artifacts
+hf_cache/
+huggingface_cache/
+torch_cache/
+cache/
+wandb/
+
+# Temporary and local runtime artifacts
+tmp/
+temp/
+*.tmp
+*.log
+
+# Large archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar

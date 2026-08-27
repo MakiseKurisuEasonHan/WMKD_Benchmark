@@ -1,0 +1,33 @@
+# Decisions
+
+This log records consequential project decisions. It does not record routine engineering operations.
+
+## 2026-08-27 — Establish WMKD_Benchmark as an independent project
+
+- **Decision:** WMKD_Benchmark uses a new local project root and a dedicated GitHub repository.
+- **Reason:** The benchmark requires clean provenance, reproducibility, and recovery without contamination from earlier WaterBench or watermark benchmark projects.
+
+## 2026-08-27 — Keep legacy projects isolated
+
+- **Decision:** Do not import, link, copy, cache-share, or otherwise depend on legacy WaterBench projects unless a future task explicitly authorizes a specific reference.
+- **Reason:** Isolation prevents stale code, configuration, artifacts, Git history, and experimental state from affecting research conclusions.
+
+## 2026-08-27 — Use one Codex workflow
+
+- **Decision:** A single Codex instance performs project implementation work based on prompts produced through the user's ChatGPT research-planning workflow.
+- **Reason:** This preserves a clear chain of instruction and accountability and avoids conflicting autonomous project decisions.
+
+## 2026-08-27 — Separate development, compute, and long-term storage roles
+
+- **Decision:** Local development will be used for code and documentation; AutoDL is intended for future compute; the La Trobe server is intended for future long-term large-file storage. Their setup is deferred to dedicated future tasks.
+- **Reason:** Separating these roles supports reproducibility, cost control, and durable artifact management while keeping large files out of Git.
+
+## 2026-08-27 — Do not commit large artifacts or secrets
+
+- **Decision:** Git tracks source, configuration, documentation, metadata, and small summaries, but not model weights, checkpoints, large datasets, raw outputs, caches, or secrets. Git LFS is not enabled.
+- **Reason:** GitHub is for reproducibility and project-state backup, not large-artifact storage.
+
+## 2026-08-27 — Defer selection of an open-source license
+
+- **Decision:** Retain all rights until the project owner explicitly selects a release license.
+- **Reason:** Choosing distribution and reuse terms is a consequential publication decision and is not yet specified.
