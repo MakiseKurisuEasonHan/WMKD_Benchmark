@@ -1,0 +1,45 @@
+schema_version: 1
+method: PN-FP
+experiment: Ba
+name: Direct Distillation
+status: prepared_not_run
+seed: 42
+can_reference:
+  repository: THU-BPM/Watermark-Radioactivity-Attack
+  revision: 9a2b01af1fadcece2893d32460ed9449093f8fb9
+teacher:
+  checkpoint: /root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/checkpoints/official/saved_models/a0a21e74c9f8f189aee68a315cb668b4/final_model
+  run_id: pnfp_exp_a_20260827_232033
+  result: {detected: 1019, total: 1024, detection_rate: 0.9951171875, reload_validation: passed}
+student:
+  model_id: meta-llama/Llama-3.2-1B-Instruct
+  revision: 9213176726f574b556790deb65791e0c5aa438b6
+  initialization: fresh_original_revision
+dataset:
+  paired_manifest: /root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_distillation_20k/manifest.json
+  frozen_qa: /root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_distillation_20k/frozen_qa.jsonl
+  target_field: teacher_raw_answer
+  candidate_samples: 24000
+  final_samples: 20000
+training:
+  trainer: transformers
+  epochs: 3
+  learning_rate: 1.0e-5
+  precision: bf16
+  full_parameter: true
+  lora: false
+  batch_size: 8
+  batch_fallback: [8, 4, 2]
+  fallback_only_after_recorded_oom: true
+  gradient_accumulation_steps: 1
+  checkpoint_retention: {save_total_limit: 1, keep_final_checkpoint: true}
+evaluation:
+  pnfp: {fingerprints: 1024, response_length: 16, detector: experiment_a_exact, fingerprints_source_run: pnfp_exp_a_20260827_232033}
+  utility: [arc_challenge, truthfulqa_mc]
+  mtbench: excluded_initial_scope
+paths:
+  student_model: /root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-1B-Instruct
+  run_root: /root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba
+  cache_root: /root/autodl-tmp/WMKD_Benchmark_data/cache
+  checkpoint_root: /root/autodl-tmp/WMKD_Benchmark_data/checkpoints/pnfp_ba
+notifications: {events: [STARTED, COMPLETED, FAILED, INTERRUPTED], failure_is_fatal: false}

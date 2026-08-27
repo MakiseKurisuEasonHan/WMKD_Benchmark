@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WMKD PN-FP distillation result",
+  "type": "object",
+  "required": ["method", "experiment", "teacher", "student_initialization", "dataset_size", "distillation_config", "watermark_detection", "watermark_retention", "utility", "reload_validation", "checkpoint_path", "scientific_judgement"],
+  "properties": {
+    "method": {"const": "PN-FP"},
+    "experiment": {"enum": ["Ba", "Bb"]},
+    "teacher": {"type": "object"},
+    "teacher_watermark_result": {"type": "object"},
+    "student_initialization": {"type": "object"},
+    "dataset_size": {"type": "integer"},
+    "dataset_manifest_sha256": {"type": "string"},
+    "distillation_config": {"type": "object"},
+    "up_config": {"type": ["object", "null"]},
+    "watermark_detection": {"type": "object"},
+    "watermark_retention": {"type": "object"},
+    "utility": {"type": "object", "properties": {"arc_challenge": {"type": ["object", "null"]}, "truthfulqa_mc": {"type": ["object", "null"]}}},
+    "reload_validation": {"enum": ["passed", "failed"]},
+    "checkpoint_path": {"type": "string"},
+    "scientific_judgement": {"type": "string"}
+  }
+}

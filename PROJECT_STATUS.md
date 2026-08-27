@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 2 — PN-FP Experiment A formal training active in detached AutoDL run.
+Stage 3 — PN-FP Ba/Bb research and infrastructure preparation; no formal GPU run active.
 
 ## Completed
 
@@ -24,8 +24,9 @@ Stage 2 — PN-FP Experiment A formal training active in detached AutoDL run.
 
 ## Current task
 
-- Active run: `pnfp_exp_a_20260827_232033` in `nohup_setsid` mode, detached PID 88165.
-- Preflight and fingerprint generation passed; formal batch-8 full-parameter training is active. Three earlier pre-training failures remain preserved. No OOM has occurred.
+- Experiment A completed successfully (`1019/1024`, reload validation passed).
+- Ba (Direct Distillation) and Bb (answer-only UP + Distillation) are prepared as a paired 20k resource-bounded benchmark.
+- Formal QA generation, Dipper generation, student training, and GPU evaluation have not started.
 
 ## Blockers
 
@@ -35,4 +36,4 @@ Stage 2 — PN-FP Experiment A formal training active in detached AutoDL run.
 
 ## Next step
 
-- Allow the active detached pipeline to proceed through training, checkpoint reload, watermarked/base evaluation, paired metrics, and machine-readable final status. Do not launch another large GPU task.
+- Deploy and validate this preparation on AutoDL, obtain the pinned model artifacts, then wait for explicit approval before formal serial execution.

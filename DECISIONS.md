@@ -91,3 +91,13 @@ This log records consequential project decisions. It does not record routine eng
 
 - **Decision:** Future formal runners emit duplicate-safe lifecycle email through Gmail SMTP over SSL, while credentials remain in a mode-600 file outside Git. Notification errors are recorded independently and never change scientific pipeline status.
 - **Reason:** Long detached experiments need useful operational visibility without making external email availability part of scientific correctness or exposing credentials in project history.
+
+## 2026-08-28 — Define resource-bounded PN-FP Ba/Bb distillation
+
+- **Decision:** Ba is Direct Distillation and Bb is answer-only Untargeted Paraphrasing plus Distillation. Both share exactly 20,000 frozen task IDs, start from `meta-llama/Llama-3.2-1B-Instruct@9213176726f574b556790deb65791e0c5aa438b6`, and use full-parameter BF16 SFT for 3 epochs at `1e-5` with seed 42 and initial batch 8.
+- **Reason:** The paired design isolates response paraphrasing, while 20k is a deliberate single-GPU adaptation of CAN's roughly 200k/eight-H800 setting.
+
+## 2026-08-28 — Attribute Bb UP as a project-owned integration
+
+- **Decision:** Use `kalpeshk2011/dipper-paraphraser-xxl@c1fbf7a958a2aab022e9e6f81f7a3139f9e6ee3c` with a pinned T5 tokenizer. Label the method “paper-defined UP + project-owned Dipper integration”; never call it official CAN author code.
+- **Reason:** The official CAN repository implements WN and explicitly delegates UP/TP paraphrasing to users.

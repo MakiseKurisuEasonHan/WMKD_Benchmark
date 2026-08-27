@@ -17,8 +17,11 @@
 - [x] Explicitly authorize formal PNFP Experiment A training in a separate task.
 - [x] Define the durable formal experiment protocol and dedicated PN-FP log convention.
 - [x] Launch corrected PN-FP Experiment A through the independent runner (`pnfp_exp_a_20260827_232033`).
-- [ ] Monitor PN-FP Experiment A without launching another large GPU task.
-- [ ] Complete checkpoint reload, watermarked evaluation, base control, paired metrics, report, and summary.
+- [x] Complete PN-FP Experiment A checkpoint reload, watermarked/base evaluation, paired metrics, and summary.
+- [x] Prepare paired PN-FP Ba/Bb configs, dataset/UP validation, schemas, logs, report templates, and guarded dry-run runners.
+- [x] Pin the official CAN repository at `9a2b01af1fadcece2893d32460ed9449093f8fb9`.
+- [ ] Download and verify pinned Llama-3.2-1B-Instruct and Dipper artifacts after explicit approval.
+- [ ] Obtain explicit approval and execute shared QA → Ba → Dipper UP → Bb serially.
 - [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
 - [x] Deploy standalone notification utilities outside the active AutoDL Git checkout.
 - [x] Configure the Gmail App Password interactively on AutoDL and send one successful independent test email.
