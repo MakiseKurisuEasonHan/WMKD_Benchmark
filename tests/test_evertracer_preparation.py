@@ -32,7 +32,7 @@ class EverTracerPreparationTests(unittest.TestCase):
         self.assertEqual(cfg["training"]["target_epochs"], 20)
         self.assertEqual(cfg["training"]["reference_epochs"], 4)
         self.assertEqual(cfg["verification"]["k"], 5)
-        self.assertEqual(cfg["verification"]["max_length"], 512)
+        self.assertEqual(cfg["verification"]["max_length"], 128)
         self.assertEqual(cfg["verification"]["perturbation_fraction"], 0.30)
         self.assertFalse(cfg["runtime"]["upload_modelscope"])
 

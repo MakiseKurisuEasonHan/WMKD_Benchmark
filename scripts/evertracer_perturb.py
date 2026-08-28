@@ -41,18 +41,18 @@ def main():
     p=argparse.ArgumentParser(); p.add_argument("--config",required=True);p.add_argument("--dataset-root",required=True);p.add_argument("--output",required=True);p.add_argument("--limit",type=int);a=p.parse_args()
     c=load_config(a.config);configure_cache(c["runtime"]["data_root"]);v=c["verification"]; rng=random.Random(c["seed"]);np.random.seed(c["seed"]);torch.manual_seed(c["seed"])
     revision=None if str(v["t5_revision"]).startswith("TO_BE_") else v["t5_revision"]
-    tok=AutoTokenizer.from_pretrained(v["t5_model"],revision=revision);model=AutoModelForSeq2SeqLM.from_pretrained(v["t5_model"],revision=revision,torch_dtype=torch.bfloat16).cuda().eval()
+    tok=AutoTokenizer.from_pretrained(v["t5_model"],revision=revision);source_tok=AutoTokenizer.from_pretrained(c["model"]["path"],local_files_only=True);model=AutoModelForSeq2SeqLM.from_pretrained(v["t5_model"],revision=revision,torch_dtype=torch.bfloat16).cuda().eval()
     records=[];start=time.monotonic(); generation_count=0; retry_count=0
     for subset in ("dtr","dunseen"):
         rows=[json.loads(x) for x in (Path(a.dataset_root)/f"{subset}.jsonl").read_text(encoding="utf-8").splitlines() if x]
         if a.limit: rows=rows[:a.limit]
         for row in rows:
-            source_ids=tok(row["text"],add_special_tokens=False,truncation=True,max_length=v["max_length"])["input_ids"]
-            source_text=tok.decode(source_ids,skip_special_tokens=True)
+            source_ids=source_tok(row["text"],add_special_tokens=False,truncation=True,max_length=v["max_length"])["input_ids"]
+            source_text=source_tok.decode(source_ids,skip_special_tokens=True)
             variants=[]
             for k in range(v["k"]):
                 masked,n=mask_text(source_text,v["perturbation_fraction"],v["span_length"],v["buffer_size"],rng)
-                inputs=tok(masked,return_tensors="pt",truncation=True,max_length=v["max_length"]).to("cuda")
+                inputs=tok(masked,return_tensors="pt",truncation=True,max_length=512).to("cuda")
                 stop=tok.encode(f"<extra_id_{n}>")[0]
                 pair=None
                 for attempt in range(20):

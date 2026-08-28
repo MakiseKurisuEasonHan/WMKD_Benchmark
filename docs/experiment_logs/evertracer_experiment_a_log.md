@@ -12,7 +12,7 @@ Reproduce EverTracer natural-language fingerprint injection, reference calibrati
 - Dataset: XSum revision `7d4d486c2f8ef850b1a11aead99b894ff3dd7da9`, immutable disjoint Dtr=100, Dref=1000, Dunseen=100, seed 48.
 - Target: LoRA r=8, 20 epochs, batch 4, LR 1e-4, packed 128, BF16.
 - Reference: fresh canonical base, same core LoRA configuration, 4 epochs.
-- Verification: `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1`, fixed 512-token input window, K=5 symmetric perturbation pairs, 30% token fraction, calibrated probability variation, AUC and maximum TPR at empirical FPR <=5%.
+- Verification: `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1`, official 128-token packed input window, K=5 symmetric perturbation pairs, 30% token fraction, calibrated probability variation, AUC and maximum TPR at empirical FPR <=5%.
 - Gates: AUC >=0.95; FSR >=90%; above base; ARC/TruthfulQA and ordinary-generation utility; fresh-process reload.
 
 ## Current status
