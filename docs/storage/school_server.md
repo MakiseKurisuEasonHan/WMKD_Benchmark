@@ -60,3 +60,11 @@ This verified school-server copy is the long-term canonical archive. Any future 
 ## Initial capacity observation
 
 At initialization on 2026-08-27, both paths were on `/dev/mapper/data-data`, mounted at `/data`: 33 TB total, 20 TB used, and 13 TB available (61% used). This is a point-in-time observation, not a capacity guarantee.
+
+## PN-FP A2 private ModelScope relay
+
+On 2026-08-28, the preferred PN-FP A2 teacher from run `pnfp_exp_a2_20260828_025240` was uploaded without modifying the source checkpoint to private ModelScope repository `MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher`. The archive contains the eight Hugging Face-compatible final-model files at the repository root plus `wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json` and `wmkd_metadata/SHA256SUMS`. The eight model files total 6,434,691,753 bytes.
+
+Source SHA256 values were recomputed and matched the immutable A2 checkpoint manifest before upload. ModelScope metadata then verified the expected size and SHA256 for all 10 uploaded objects. Formal upload took 577.37 seconds at an average 11.145 MB/s with zero retries or resume. The artifact state is `uploaded_to_modelscope_awaiting_destination_hash_verification`: the separately authorized ModelScope-to-school transfer and destination-side full SHA256 verification have not started. The Ba student was not uploaded.
+
+The private-write gate used `transfer_tests/modelscope_upload_test_20260828T081723Z.txt` (2,097,152 bytes). Its remote size and SHA256 matched, and its local payload was deleted. ModelScope's current token policy rejected API deletion and requires web-console deletion, so this non-sensitive test object remains in the private repository pending manual cleanup.

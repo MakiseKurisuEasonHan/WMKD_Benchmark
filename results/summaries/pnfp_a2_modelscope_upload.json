@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "transfer_run_id": "modelscope_a2_upload_20260828_082200",
+  "repo_id": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+  "visibility": "private",
+  "source_run": "pnfp_exp_a2_20260828_025240",
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+  "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/modelscope_a2_upload_20260828_082200/WMKD_ARTIFACT_MANIFEST.json",
+  "source_file_count": 8,
+  "source_total_bytes": 6434691753,
+  "source_sha256_verification": "passed_against_immutable_checkpoint_manifest",
+  "files": [
+    {"path": "config.json", "bytes": 966, "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d"},
+    {"path": "generation_config.json", "bytes": 184, "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"},
+    {"path": "model-00001-of-00002.safetensors", "bytes": 4965799096, "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c"},
+    {"path": "model-00002-of-00002.safetensors", "bytes": 1459729952, "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa"},
+    {"path": "model.safetensors.index.json", "bytes": 20919, "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"},
+    {"path": "special_tokens_map.json", "bytes": 325, "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"},
+    {"path": "tokenizer.json", "bytes": 9085754, "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d"},
+    {"path": "tokenizer_config.json", "bytes": 54557, "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"}
+  ],
+  "small_upload_test": {
+    "path": "transfer_tests/modelscope_upload_test_20260828T081723Z.txt",
+    "bytes": 2097152,
+    "sha256": "817d7a671093175350ec48ddd75ab3045e2b77eeb12d0f57c1a63ae0e04bd0b7",
+    "elapsed_seconds": 2.2108326592,
+    "effective_MB_per_second": 0.9485801611,
+    "blob_reused_on_timed_overwrite": true,
+    "remote_size_verified": true,
+    "remote_sha256_verified": true,
+    "local_deleted": true,
+    "remote_deleted": false,
+    "remote_cleanup_blocker": "ModelScope token policy requires web-console deletion"
+  },
+  "formal_upload": {
+    "start_utc": "2026-08-28T08:19:01.185366+00:00",
+    "end_utc": "2026-08-28T08:28:38.742366+00:00",
+    "elapsed_seconds": 577.3737902418,
+    "average_MB_per_second": 11.1447590136,
+    "retries": 0,
+    "resume": false,
+    "uploaded_model_file_count": 8,
+    "uploaded_metadata_file_count": 2,
+    "remote_file_count_verified": true,
+    "remote_sizes_verified": true,
+    "remote_sha256_verified_count": 10
+  },
+  "artifact_state": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+  "school_download_started": false,
+  "ba_student_uploaded": false,
+  "gpu_used": false
+}
