@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 3 — PN-FP A1, A2, and Ba are established. A2 is the preferred utility-preserving teacher. Ba is formally complete with strong watermark degradation and partial retention. Bb and Dipper remain prepared/deferred, and no formal GPU task is active.
+PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
 The durable benchmark default is now a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Ba/Bb teachers are successful watermarked A checkpoints; students always start from fresh canonical unwatermarked weights. Any method-specific backbone deviation requires a recorded blocker and explicit user approval.
 
@@ -36,14 +36,12 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 ## Blockers
 
-- The local environment still cannot authenticate Git over the configured SSH GitHub remote; authenticated temporary HTTPS credentials can be used without changing `origin`.
-- No PN-FP Ba execution blocker remains. Its COMPLETED email was delivered; notification delivery remains best-effort and outside scientific success criteria.
-- The general artifact synchronization protocol has not yet been defined; the school canonical model copy has a verified task-specific provenance manifest.
-- No model-transfer or offline-smoke blocker remains. ModelScope was used only as transport, the sole mismatched small file was repaired from the exact Hugging Face revision, and the final AutoDL directory passed the frozen 12-file manifest.
+- No PN-FP scientific blocker remains. Notification delivery remains best-effort and outside scientific success criteria.
+- The artifact protocol now separates immutable source/upload checks from destination-side full SHA256; see `docs/storage/artifact_transfer_protocol.md`.
 
 ## Next step
 
-- Preserve the A2 teacher, Ba student, frozen dataset, and immutable run artifacts. Decide separately whether to archive the A2 teacher, authorize Bb, or move to another watermark method. Keep Bb/Dipper deferred until explicit approval.
+- Discuss and select the next watermark reproduction. Do not start another method until separately approved.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

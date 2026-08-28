@@ -238,6 +238,12 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Launched detached formal run `pnfp_exp_ba_20260828_012228` at commit `30b996548f2486e2a072cd2817a36240fe6df360`.
 - Stopped the generation child after 64/64 outputs were degenerate parse failures and no valid QA was produced, preventing an unbounded GPU loop. The runner preserved FAILED state and notifications; no training or later stage ran.
 
+## 2026-08-28 — PN-FP final closure
+
+- Closed A with its utility limitation, A2 as preferred WA/DM teacher, and A2-teacher Ba direct distillation.
+- Preserved small scientific and transfer metadata, then removed 51,532,878,636 bytes of completed PN-FP AutoDL runs/readback scratch while preserving the canonical base, environment, source, credentials and reusable infrastructure.
+- Standardized destination-side SHA256 as the default transfer completion gate; A2 upload remained awaiting destination verification while Ba completed a stronger full remote re-read.
+
 ## 2026-08-28 — PN-FP Ba formal closure
 
 - Closed authoritative A2-teacher run `pnfp_exp_ba_20260828_111148`: 7,500/7,500 steps, reload passed, Ba 98/1024 versus A2 956/1024 and Base 1/1024.

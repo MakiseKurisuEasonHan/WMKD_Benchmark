@@ -66,3 +66,7 @@ Resource-bounded deviation: CAN uses about 200k pairs and reports eight H800 GPU
 - **Limitations:** single run/seed/architecture; same-size 3B→3B; 20k pairs versus CAN's roughly 200k; no Ba ordinary-generation diagnostic; no training eval loss; residual 9.57% detection; no universal or multi-seed claim.
 - **Artifacts:** formal report `docs/reproduction_reports/pnfp_experiment_ba_report.md`; summary `results/summaries/pnfp_experiment_ba_summary.json`; immutable run results under `/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba/pnfp_exp_ba_20260828_111148`.
 - **Operations:** final status COMPLETED, exit code 0. COMPLETED email delivery succeeded; notification delivery is not part of scientific success. Closure records were synchronized through Git. The old A1-based run remains immutable FAILED; Bb, UP, and Dipper remain deferred and were not started.
+
+## ModelScope archive and final closure
+
+The eight canonical Ba files total 6,434,691,756 bytes and were uploaded to private repo `MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student`. All 10 objects passed size checks and authenticated full remote re-read SHA256 verification (8/8 canonical, 2/2 metadata). Upload took 569.307 seconds at 11.3027 MB/s; verification took approximately 2254.54 seconds; retries and interruptions were zero. Experiment Ba is CLOSED.

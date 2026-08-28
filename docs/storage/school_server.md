@@ -56,6 +56,7 @@ This verified school-server copy is the long-term canonical archive. Any future 
 - Do not create symlinks between the lightweight checkout and warehouse.
 - Keep both paths fully isolated from legacy WaterBench projects and their code, artifacts, caches, and state.
 - Future artifact transfers and manifest formats require a separately approved synchronization protocol.
+- Follow `docs/storage/artifact_transfer_protocol.md` for future transfers; full SHA256 is normally recomputed at the actual destination rather than by redundantly downloading to the source host.
 
 ## Initial capacity observation
 
@@ -72,3 +73,7 @@ The private-write gate used `transfer_tests/modelscope_upload_test_20260828T0817
 ## ModelScope download speed observation
 
 On 2026-08-28, a direct ModelScope-to-school-server test downloaded the 1,459,729,952-byte `model-00002-of-00002.safetensors` shard from `LLM-Research/Llama-3.2-3B-Instruct` at revision `e443548a5da3c59ed14484f4bf4a3c61cccd7cab`. The transfer completed in 976.29 seconds at an average 1.495 MB/s with no retries, interruptions, or resume. The downloaded SHA256 matched ModelScope metadata. At this measured rate, a 6.5 GiB artifact would take about 77.8 minutes. ModelScope is therefore a usable large-artifact relay to the school server, although not an especially fast one.
+
+## PN-FP Ba private ModelScope relay
+
+The Ba student from `pnfp_exp_ba_20260828_111148` is stored in private repo `MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student`. Its eight canonical files total 6,434,691,756 bytes. All eight canonical and both metadata objects passed remote size and authenticated full remote re-read SHA256 verification. State: `uploaded_to_modelscope_verified`. This does not claim that the Ba student has been archived to the school warehouse.

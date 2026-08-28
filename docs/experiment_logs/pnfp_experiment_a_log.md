@@ -51,3 +51,7 @@ The read-only watcher correctly detected COMPLETED. Its original single Gmail SM
 ## Next step
 
 Experiment A is complete. Preserve the final checkpoint and raw immutable run. Continue with Experiment Ba only after AutoDL SSH recovers; Ba currently has no run ID and has not started.
+
+## Final closure — 2026-08-28
+
+Later utility diagnostics established severe ordinary-generation repetition under the initial no-WA/no-DM teacher despite 1019/1024 fingerprint detection. Experiment A remains a successful bounded core reproduction, but it is not the preferred teacher. Its small scientific record was preserved before large AutoDL cleanup. Experiment A is CLOSED.

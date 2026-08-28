@@ -63,3 +63,12 @@ Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED a
 ## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
 
 Completed: A2 956/1024 (93.359375%) → Ba 98/1024 (9.5703125%), 83.7890625-point drop and 10.251046% retention; utility and reload gates passed. The result is strong degradation with partial retention under the tested setting. Preserve the immutable old A1-based failure; keep Bb, UP, and Dipper deferred.
+
+## PN-FP final closure
+
+- [x] Mark Experiments A, A2 and Ba CLOSED with bounded conclusions.
+- [x] Preserve small scientific and transfer records before AutoDL cleanup.
+- [x] Remove completed PN-FP large AutoDL run/readback artifacts while preserving the canonical base, environments, credentials and reusable infrastructure.
+- [x] Record the future destination-side artifact verification protocol.
+- [ ] Bb remains NOT RUN / deferred.
+- [ ] Discuss and select the next watermark reproduction; do not start it without explicit approval.

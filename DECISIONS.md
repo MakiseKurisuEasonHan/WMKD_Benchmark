@@ -114,6 +114,12 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Gmail SSL 465 uses three bounded attempts with 45-second timeouts before up to two serial STARTTLS 587 attempts. Exhausted COMPLETED, FAILED, and INTERRUPTED events enter a non-secret data-disk pending queue and may be retried later without touching experiment state. Only confirmed SMTP success marks `run_id + event` delivered.
 - **Reason:** Experiment A showed that a temporary SMTP timeout can otherwise permanently lose a valid terminal notification even though watcher classification and scientific execution succeeded.
 
+## 2026-08-28 — Close PN-FP and standardize destination verification
+
+- **Decision:** Close PN-FP Experiments A, A2, and Ba; retain Bb as not run/deferred. A2 is the preferred utility-preserving teacher. Ba establishes substantial but incomplete degradation under the tested same-size 3B direct-distillation condition.
+- **Decision:** Future transfers establish immutable source hashes and verify ModelScope filenames/count/sizes/blob consistency, then defer full SHA256 to the real destination download. A same-source full remote re-read, as performed for Ba, is stronger but optional.
+- **Reason:** A2 correctly remained awaiting destination verification. Ba's redundant same-host readback added about 37.6 minutes without replacing the need for destination-side verification.
+
 ## 2026-08-28 — Use PN-FP A2 as the preferred Ba teacher
 
 - **Decision:** Replace A1 with A2 as the preferred and sole formal teacher for the new Ba run while retaining the same canonical 3B backbone standard. A2 is the watermarked teacher; every Ba student still initializes from a fresh load of canonical unwatermarked `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`.

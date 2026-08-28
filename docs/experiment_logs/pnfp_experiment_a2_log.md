@@ -65,3 +65,7 @@ Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED a
 ## Final scientific conclusion
 
 The watermark gate and utility gate both passed. A2 retains strong PN-FP detection while avoiding A1's severe ordinary-generation degradation. **A2 is the preferred PN-FP teacher for future Ba.**
+
+## Artifact and closure status
+
+The eight canonical files total 6,434,691,753 bytes and were uploaded to private repo `MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher`. Source SHA256 plus remote filename/count/size/blob consistency passed. The correct upload-time state is `uploaded_to_modelscope_awaiting_destination_hash_verification`; the upload run did not fully re-download all model bytes to AutoDL. Experiment A2 is CLOSED.
