@@ -41,3 +41,8 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 ## Next step
 
 - Preserve Experiment A and immutable failed Ba run `pnfp_exp_ba_20260828_012228`. Diagnose and review the teacher-generation/data-source correction before authorizing a new Ba run; do not resume or overwrite the failed run.
+
+
+## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
+
+Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED after external dataset acquisition failure. The validated checkpoint and reusable evaluations plus this continuation establish the final result. Watermark gate: **passed**; utility gate: **passed**; judgement: **A2 is the preferred PN-FP teacher for future Ba**.

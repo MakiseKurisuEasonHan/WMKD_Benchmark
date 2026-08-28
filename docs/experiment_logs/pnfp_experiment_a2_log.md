@@ -40,3 +40,8 @@ Diagnostic `pnfp_a2_speed_smoke_20260828_023042` completed with exit code 0. It 
 Scaling the measured microbatch/evaluation/WA components gives about 152 seconds per formal epoch and 76 minutes for 30 training epochs. A1 measured 26.5 minutes without WA/DM, confirming that the regularized stack is materially slower. Expected fixed-fingerprint checkpoint/reload/control work is only a few minutes based on A1; ARC Challenge and TruthfulQA MC timing has not yet been measured on this stack. Planning range including those required utility evaluations: optimistic 1 h 25 min, expected 1 h 40 min, conservative 2 h 15 min. Main uncertainty is utility-evaluation runtime and whether full-scale benign tokenization/cache behavior differs from smoke.
 
 Preparation judgement: formal A2 is technically ready, but it has not started and requires explicit user approval.
+
+
+## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
+
+Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED after external dataset acquisition failure. The validated checkpoint and reusable evaluations plus this continuation establish the final result. Watermark gate: **passed**; utility gate: **passed**; judgement: **A2 is the preferred PN-FP teacher for future Ba**.

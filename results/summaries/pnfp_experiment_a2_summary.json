@@ -1,0 +1,137 @@
+{
+  "method": "PN-FP",
+  "experiment": "A2",
+  "run_type": "evaluation_only",
+  "run_id": "pnfp_exp_a2_eval_20260828_105530",
+  "parent_training_run": "pnfp_exp_a2_20260828_025240",
+  "training_run_operational_status": "failed during external dataset acquisition after all training and reusable evaluations completed",
+  "engineering_status": "completed",
+  "checkpoint_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+  "reload_validation": "passed in parent and checkpoint manifest reverified",
+  "dataset_provenance": {
+    "arc_challenge": {
+      "repo_id": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "config": "ARC-Challenge",
+      "transport": "https://hf-mirror.com",
+      "local_dir": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_a2_eval/allenai__ai2_arc"
+    },
+    "truthfulqa_mc2": {
+      "repo_id": "truthful_qa",
+      "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+      "config": "multiple_choice",
+      "transport": "https://hf-mirror.com",
+      "local_dir": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_a2_eval/truthful_qa"
+    },
+    "lm_eval": "0.4.3",
+    "datasets": "2.20.0"
+  },
+  "watermarked": {
+    "label": "watermarked",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+    "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+    "fingerprints_requested": 1024,
+    "fingerprints_evaluated": 1024,
+    "detected": 956,
+    "detection_rate": 0.93359375,
+    "invalid_samples": 0,
+    "evaluation_errors": 0,
+    "generation_response_length": 16,
+    "detection_response_length": 1,
+    "serialization": "llama_chat_template_user_generation_prompt"
+  },
+  "base": {
+    "label": "base",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+    "fingerprints_requested": 1024,
+    "fingerprints_evaluated": 1024,
+    "detected": 1,
+    "detection_rate": 0.0009765625,
+    "invalid_samples": 0,
+    "evaluation_errors": 0,
+    "generation_response_length": 16,
+    "detection_response_length": 1,
+    "serialization": "llama_chat_template_user_generation_prompt"
+  },
+  "a1_watermarked": {
+    "label": "watermarked",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/checkpoints/official/saved_models/a0a21e74c9f8f189aee68a315cb668b4/final_model",
+    "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+    "fingerprints_requested": 1024,
+    "fingerprints_evaluated": 1024,
+    "detected": 1019,
+    "detection_rate": 0.9951171875,
+    "invalid_samples": 0,
+    "evaluation_errors": 0,
+    "generation_response_length": 16,
+    "detection_response_length": 1,
+    "serialization": "llama_chat_template_user_generation_prompt"
+  },
+  "ordinary_generation": {
+    "base_summary": {
+      "calls": 10,
+      "max_token_hits": 3,
+      "obvious_repetition": 0
+    },
+    "a1_summary": {
+      "calls": 10,
+      "max_token_hits": 10,
+      "obvious_repetition": 0
+    },
+    "a2_smoke_summary": {
+      "calls": 10,
+      "max_token_hits": 3,
+      "obvious_repetition": 0
+    }
+  },
+  "benchmarks": {
+    "base": {
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "arc_challenge_acc_norm": 0.44880546075085326,
+      "truthfulqa_mc2_acc": 0.505450760153828,
+      "raw_results": {
+        "truthfulqa_mc2_local": {
+          "acc,none": 0.505450760153828,
+          "acc_stderr,none": 0.015602814964389472,
+          "alias": "truthfulqa_mc2_local"
+        },
+        "arc_challenge_local": {
+          "acc,none": 0.447098976109215,
+          "acc_stderr,none": 0.014529380160526848,
+          "acc_norm,none": 0.44880546075085326,
+          "acc_norm_stderr,none": 0.014534599585097664,
+          "alias": "arc_challenge_local"
+        }
+      }
+    },
+    "a2": {
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+      "arc_challenge_acc_norm": 0.44368600682593856,
+      "truthfulqa_mc2_acc": 0.4674279212401518,
+      "raw_results": {
+        "truthfulqa_mc2_local": {
+          "acc,none": 0.4674279212401518,
+          "acc_stderr,none": 0.01532841684429326,
+          "alias": "truthfulqa_mc2_local"
+        },
+        "arc_challenge_local": {
+          "acc,none": 0.45051194539249145,
+          "acc_stderr,none": 0.014539646098471627,
+          "acc_norm,none": 0.44368600682593856,
+          "acc_norm_stderr,none": 0.014518421825670456,
+          "alias": "arc_challenge_local"
+        }
+      }
+    },
+    "delta": {
+      "arc_challenge_acc_norm": -0.005119453924914696,
+      "truthfulqa_mc2_acc": -0.03802283891367614
+    }
+  },
+  "watermark_gate": "passed",
+  "utility_gate": "passed",
+  "utility_gate_rule": "no severe repetition collapse and both ARC acc_norm and TruthfulQA MC2 deltas >= -0.10",
+  "preferred_teacher": true,
+  "scientific_judgement": "A2 is the preferred PN-FP teacher for future Ba"
+}

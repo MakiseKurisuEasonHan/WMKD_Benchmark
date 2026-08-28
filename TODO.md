@@ -48,3 +48,8 @@
 - PNFP official source and isolated environment prepared on 2026-08-27; model transfer was still blocked at that preparation stage.
 - Fixed Llama-3.2-3B-Instruct canonical school-server archive completed and fully verified on 2026-08-27.
 - Fixed Llama-3.2-3B-Instruct AutoDL snapshot completed and fully verified on 2026-08-27; offline tokenizer/model/generation smoke passed without starting training.
+
+
+## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
+
+Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED after external dataset acquisition failure. The validated checkpoint and reusable evaluations plus this continuation establish the final result. Watermark gate: **passed**; utility gate: **passed**; judgement: **A2 is the preferred PN-FP teacher for future Ba**.
