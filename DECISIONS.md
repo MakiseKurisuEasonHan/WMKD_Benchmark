@@ -118,3 +118,9 @@ This log records consequential project decisions. It does not record routine eng
 
 - **Decision:** Replace A1 with A2 as the preferred and sole formal teacher for the new Ba run while retaining the same canonical 3B backbone standard. A2 is the watermarked teacher; every Ba student still initializes from a fresh load of canonical unwatermarked `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`.
 - **Reason:** A1 has stronger PN-FP detection at 1019/1024 but exhibits severe ordinary-generation degradation. A2 retains strong detection at 956/1024 (93.359375%), avoids the observed A1-like collapse in the bounded diagnostic, and passed both ARC/TruthfulQA utility and watermark gates. The change selects a usable teacher without changing model family, size, revision, tokenizer, or the fresh-student initialization rule.
+
+## 2026-08-28 — Interpret the completed Ba result as strong degradation with partial retention
+
+- **Decision:** Under run `pnfp_exp_ba_20260828_111148`, describe PN-FP as vulnerable under the tested same-size 3B direct-distillation setting. Detection fell from 956/1024 (93.359375%) in A2 to 98/1024 (9.5703125%) in Ba while the utility gate passed. Because Ba remains 9.47265625 percentage points above the canonical Base and retains 10.251046% of the teacher rate, do not claim complete removal or universal vulnerability.
+- **Reason:** The paired watermark and utility results support a bounded attack-success interpretation, while the residual signal, single run/seed, 20k resource-bounded dataset, and missing Ba ordinary-generation diagnostic prohibit broader claims.
+- **Decision:** Keep Bb, UP, and Dipper deferred until explicit user approval.

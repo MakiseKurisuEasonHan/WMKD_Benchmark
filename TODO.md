@@ -24,7 +24,7 @@
 - [x] Launch formal same-size 3B Ba run `pnfp_exp_ba_20260828_012228`; preserve its fail-fast evidence after teacher QA generation yielded 0 valid candidates and 64 parse failures.
 - [x] Diagnose the failed teacher generation with bounded ordinary/CAN-style/JSON tests and add tested no-progress guards.
 - [x] Establish A2 as the utility-preserving preferred PN-FP teacher after both watermark and utility gates passed.
-- [ ] Allow active A2-based Ba run `pnfp_exp_ba_20260828_111148` to finish, then analyze watermark retention and ARC/TruthfulQA utility jointly.
+- [x] Complete and formally close A2-based Ba run `pnfp_exp_ba_20260828_111148`; record strong watermark degradation with partial retention and a passed utility gate.
 - [ ] Keep Bb and all Dipper/UP downloads deferred until a separate future approval.
 - [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
 - [x] Deploy standalone notification utilities outside the active AutoDL Git checkout.
@@ -36,6 +36,10 @@
 
 ## Medium priority
 
+- [ ] Analyze the PN-FP Ba result further only if an additional scientific question is approved.
+- [ ] Optionally archive the A2 canonical teacher artifact under a separately approved artifact-transfer task.
+- [ ] Decide whether and when to authorize PN-FP Bb; do not start Bb, UP, or Dipper without explicit approval.
+- [ ] Move to the next watermark method when selected by the user.
 - [ ] Define dependency-management and environment-reproduction conventions.
 - [ ] Define storage and synchronization policies for future large artifacts.
 - [ ] Add method-specific reproducibility instructions after research decisions are approved.
@@ -58,4 +62,4 @@ Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED a
 
 ## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
 
-Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530` (956/1024, watermark and utility gates passed). Frozen QA: 20000 samples, SHA256 `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`. Ba PN-FP: 98/1024; judgement: **PN-FP is unstable under direct distillation while utility is preserved**. The old A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED.
+Completed: A2 956/1024 (93.359375%) → Ba 98/1024 (9.5703125%), 83.7890625-point drop and 10.251046% retention; utility and reload gates passed. The result is strong degradation with partial retention under the tested setting. Preserve the immutable old A1-based failure; keep Bb, UP, and Dipper deferred.

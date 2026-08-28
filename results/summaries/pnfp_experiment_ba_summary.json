@@ -1,92 +1,80 @@
 {
   "method": "PN-FP",
   "experiment": "Ba",
+  "attack": "direct_distillation",
   "run_id": "pnfp_exp_ba_20260828_111148",
   "engineering_status": "completed",
+  "exit_code": 0,
   "teacher": {
     "run_id": "pnfp_exp_a2_20260828_025240",
     "evaluation_run_id": "pnfp_exp_a2_eval_20260828_105530",
     "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
-    "watermark_result": {
-      "detected": 956,
-      "total": 1024,
-      "detection_rate": 0.93359375
-    },
-    "utility": {
-      "arc_challenge_acc_norm": 0.44368600682593856,
-      "truthfulqa_mc2_acc": 0.4674279212401518
-    }
+    "role": "preferred_utility_preserving_watermarked_teacher"
   },
   "student_initialization": {
-    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "backbone": "meta-llama/Llama-3.2-3B-Instruct",
     "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
     "weights": "fresh_unwatermarked_canonical_base"
   },
-  "dataset_size": 20000,
-  "dataset_manifest_sha256": "6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72",
-  "distillation_config": {
-    "samples": 20000,
+  "dataset": {
+    "raw_candidates": 32002,
+    "generation_parse_failures": 1198,
+    "dedup_rejected": 11789,
+    "unique_qa": 20213,
+    "frozen_qa": 20000,
+    "manifest_sha256": "6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72"
+  },
+  "distillation": {
     "epochs": 3,
-    "learning_rate": 1e-05,
+    "optimizer_steps_completed": 7500,
+    "optimizer_steps_total": 7500,
+    "learning_rate": 0.00001,
     "precision": "bf16",
     "full_parameter": true,
     "lora": false,
     "seed": 42,
-    "batch_size": 8
+    "batch_size": 8,
+    "oom_occurred": false,
+    "batch_fallback_occurred": false,
+    "aggregate_train_loss": 0.3961066076,
+    "last_logged_batch_loss": 0.2683,
+    "training_eval_loss_status": "not_recorded"
   },
-  "original_student_watermark": {
-    "label": "original_3b",
-    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
-    "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
-    "fingerprints_requested": 1024,
-    "fingerprints_evaluated": 1024,
-    "detected": 1,
-    "detection_rate": 0.0009765625,
-    "invalid_samples": 0,
-    "evaluation_errors": 0,
-    "generation_response_length": 16,
-    "detection_response_length": 1,
-    "serialization": "llama_chat_template_user_generation_prompt"
+  "checkpoint": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba/pnfp_exp_ba_20260828_111148/checkpoints/student_batch_8/final_model",
+    "reload_validation": "passed",
+    "reload_output": "RELOAD_OK"
   },
-  "watermark_detection": {
-    "label": "ba_student",
-    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba/pnfp_exp_ba_20260828_111148/checkpoints/student_batch_8/final_model",
-    "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
-    "fingerprints_requested": 1024,
-    "fingerprints_evaluated": 1024,
-    "detected": 98,
-    "detection_rate": 0.095703125,
-    "invalid_samples": 0,
-    "evaluation_errors": 0,
-    "generation_response_length": 16,
-    "detection_response_length": 1,
-    "serialization": "llama_chat_template_user_generation_prompt"
-  },
-  "watermark_retention": {
-    "teacher_to_ba_absolute_drop": 0.837890625,
-    "ba_vs_original_difference": 0.0947265625,
-    "retention_ratio": 0.10251046025104603
+  "watermark": {
+    "canonical_base": {"detected": 1, "total": 1024, "detection_rate": 0.0009765625, "detection_percent": 0.09765625},
+    "a2_teacher": {"detected": 956, "total": 1024, "detection_rate": 0.93359375, "detection_percent": 93.359375},
+    "ba_student": {"detected": 98, "total": 1024, "detection_rate": 0.095703125, "detection_percent": 9.5703125, "invalid_samples": 0, "evaluation_errors": 0},
+    "teacher_to_ba_absolute_drop_rate": 0.837890625,
+    "teacher_to_ba_absolute_drop_percentage_points": 83.7890625,
+    "ba_vs_base_difference_rate": 0.0947265625,
+    "ba_vs_base_difference_percentage_points": 9.47265625,
+    "retention_ratio": 0.10251046025104603,
+    "retention_percent": 10.251046
   },
   "utility": {
-    "canonical_base": {
-      "arc_challenge_acc_norm": 0.44880546075085326,
-      "truthfulqa_mc2_acc": 0.505450760153828
-    },
-    "a2_teacher": {
-      "arc_challenge_acc_norm": 0.44368600682593856,
-      "truthfulqa_mc2_acc": 0.4674279212401518
-    },
-    "ba_student": {
-      "arc_challenge_acc_norm": 0.4786689419795222,
-      "truthfulqa_mc2_acc": 0.46347984166786654
-    },
-    "ba_vs_base": {
-      "arc_challenge_acc_norm": 0.029863481228668942,
-      "truthfulqa_mc2_acc": -0.041970918485961406
-    },
-    "utility_preserved": true
+    "arc_challenge_acc_norm": {"base": 0.448805461, "a2_teacher": 0.443686007, "ba_student": 0.478668942, "ba_vs_a2": 0.034982935, "ba_vs_base": 0.029863481},
+    "truthfulqa_mc2": {"base": 0.505450760, "a2_teacher": 0.467427921, "ba_student": 0.463479842, "ba_vs_a2": -0.003948080, "ba_vs_base": -0.041970918},
+    "gate": "passed",
+    "ordinary_generation_repetition": "not_established"
   },
-  "reload_validation": "passed",
-  "checkpoint_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba/pnfp_exp_ba_20260828_111148/checkpoints/student_batch_8/final_model",
-  "scientific_judgement": "PN-FP is unstable under direct distillation while utility is preserved"
+  "scientific_judgement": "PN-FP is vulnerable under the tested direct-distillation setting, with strong watermark degradation and partial retention while utility remains largely preserved.",
+  "limitations": [
+    "single formal Ba run",
+    "single seed",
+    "one teacher/student architecture",
+    "same-size 3B-to-3B setting",
+    "20k QA is smaller than CAN's roughly 200k setting",
+    "Ba ordinary-generation/repetition diagnostic not established",
+    "training eval loss not recorded",
+    "Ba watermark remains 9.5703125%, above canonical Base",
+    "result establishes vulnerability only under the tested setting"
+  ],
+  "report_path": "docs/reproduction_reports/pnfp_experiment_ba_report.md",
+  "dedicated_log_path": "docs/experiment_logs/pnfp_experiment_ba_log.md",
+  "email": {"terminal_event": "COMPLETED", "delivery": "succeeded", "scientific_criterion": false}
 }

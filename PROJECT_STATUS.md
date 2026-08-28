@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 3 — PN-FP A1 and A2 established; A2 is the preferred teacher. A2-based formal Ba run `pnfp_exp_ba_20260828_111148` is active at `teacher_qa_generation`. Bb and Dipper remain deferred.
+Stage 3 — PN-FP A1, A2, and Ba are established. A2 is the preferred utility-preserving teacher. Ba is formally complete with strong watermark degradation and partial retention. Bb and Dipper remain prepared/deferred, and no formal GPU task is active.
 
 The durable benchmark default is now a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Ba/Bb teachers are successful watermarked A checkpoints; students always start from fresh canonical unwatermarked weights. Any method-specific backbone deviation requires a recorded blocker and explicit user approval.
 
@@ -29,20 +29,21 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 - Experiment A completed successfully (`1019/1024`, reload validation passed).
 - Experiment A formal report and machine-readable summary record 30/30 epochs, eval_loss 0.0119302, base 1/1024 and paired difference 99.4141 percentage points.
 - Experiment A2 completed scientifically through parent training run `pnfp_exp_a2_20260828_025240` plus immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`. A2 achieved 956/1024 PN-FP detection, passed watermark and utility gates, and is the preferred Ba teacher.
-- A2-based Ba Direct Distillation run `pnfp_exp_ba_20260828_111148` is active. Teacher is the A2 final checkpoint; student initializes from fresh canonical unwatermarked 3B weights. The current stage is `teacher_qa_generation`, with an approximately 24,000 raw-candidate target followed by an exact 20,000 frozen-QA gate.
-- Read-only observation at 2026-08-28 11:31:04 +08:00 recorded 2,344/24,000 raw candidates and 82 generation/parse failures; generation was advancing, GPU was healthy, and no final Ba result existed.
-- The old A1-based failed Ba run `pnfp_exp_ba_20260828_012228` remains immutable. Bb and Dipper have not started.
+- Experiment A1 completed with 1019/1024 detection but severe ordinary-generation degradation.
+- Experiment A2 completed scientifically through training plus immutable evaluation continuation, achieved 956/1024, passed both gates, and is the preferred utility-preserving teacher.
+- Experiment Ba run `pnfp_exp_ba_20260828_111148` completed its engineering pipeline. A2→Ba detection fell from 93.359375% to 9.5703125% (83.7890625-point drop; 10.251046% retention) while the utility gate passed. The bounded scientific result is strong degradation with partial retention under this tested setting.
+- The old A1-based failed Ba run `pnfp_exp_ba_20260828_012228` remains immutable. Bb, UP, and Dipper have not started.
 
 ## Blockers
 
 - The local environment still cannot authenticate Git over the configured SSH GitHub remote; authenticated temporary HTTPS credentials can be used without changing `origin`.
-- The active A2-based Ba run is not blocked at the last observed milestone. Its STARTED email timed out, but notification delivery is best-effort and did not affect the experiment.
+- No PN-FP Ba execution blocker remains. Its COMPLETED email was delivered; notification delivery remains best-effort and outside scientific success criteria.
 - The general artifact synchronization protocol has not yet been defined; the school canonical model copy has a verified task-specific provenance manifest.
 - No model-transfer or offline-smoke blocker remains. ModelScope was used only as transport, the sole mismatched small file was repaired from the exact Hugging Face revision, and the final AutoDL directory passed the frozen 12-file manifest.
 
 ## Next step
 
-- Allow active run `pnfp_exp_ba_20260828_111148` to finish without concurrent GPU work, then analyze watermark retention and utility jointly. Keep the old failed Ba run immutable and keep Bb/Dipper deferred.
+- Preserve the A2 teacher, Ba student, frozen dataset, and immutable run artifacts. Decide separately whether to archive the A2 teacher, authorize Bb, or move to another watermark method. Keep Bb/Dipper deferred until explicit approval.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
@@ -52,4 +53,4 @@ Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED a
 
 ## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
 
-Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530` (956/1024, watermark and utility gates passed). Frozen QA: 20000 samples, SHA256 `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`. Ba PN-FP: 98/1024; judgement: **PN-FP is unstable under direct distillation while utility is preserved**. The old A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED.
+Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530` (956/1024 = 93.359375%). Frozen QA: 20,000 samples, SHA256 `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`. Base/Ba: 1/1024 (0.09765625%) / 98/1024 (9.5703125%); teacher→Ba drop 83.7890625 points; retention 10.251046%. ARC Base/A2/Ba: 0.448805461 / 0.443686007 / 0.478668942. TruthfulQA MC2 Base/A2/Ba: 0.505450760 / 0.467427921 / 0.463479842. Utility and reload gates passed. Judgement: **PN-FP is vulnerable under the tested direct-distillation setting, with strong degradation and partial retention**. The old A1-based run remains immutable FAILED.

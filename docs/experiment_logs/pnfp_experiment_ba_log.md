@@ -1,6 +1,6 @@
 # PN-FP Experiment Ba — Direct Distillation
 
-Status: preparation complete; experiment not run.
+Status: formally closed. The authoritative A2-teacher run `pnfp_exp_ba_20260828_111148` completed successfully; earlier preparation and the A1-teacher failure below are retained as scoped history.
 
 Objective: measure PN-FP fingerprint retention and useful knowledge transfer after direct full-parameter distillation from the successful watermarked Experiment A 3B teacher into a fresh unwatermarked canonical 3B student.
 
@@ -40,7 +40,7 @@ Resource-bounded deviation: CAN uses about 200k pairs and reports eight H800 GPU
 - The formal generator now has independent bounds: maximum 12,000 total calls, 64 consecutive zero-acceptance calls, 43,200 seconds wall clock, and a minimum 0.5 accepted records/call after a 200-call warmup. Raw failures remain preserved and each breached guard raises an explicit error. Unit tests cover zero-progress, low-acceptance, and wall-clock failures.
 - Per the Case 3 decision rule, the formal format was not changed to CAN-style, the 100–200 candidate smoke was not run, and no new Ba run was created. Teacher and canonical student artifacts remain unchanged; GPU is free.
 
-## PN-FP Ba formal rerun using A2 preferred teacher — active
+## PN-FP Ba formal rerun using A2 preferred teacher — launch record
 
 - New immutable run: `pnfp_exp_ba_20260828_111148`.
 - Teacher: A2 final checkpoint from `pnfp_exp_a2_20260828_025240`, scientifically validated by `pnfp_exp_a2_eval_20260828_105530` at 956/1024 PN-FP detection with both watermark and utility gates passed.
@@ -49,9 +49,20 @@ Resource-bounded deviation: CAN uses about 200k pairs and reports eight H800 GPU
 - The approved CAN-style teacher-generated QA protocol retains maximum total-call, consecutive-zero, wall-clock, and acceptance-rate guards and preserves raw failed outputs.
 - Read-only observation at 2026-08-28 11:31:04 +08:00: stage `teacher_qa_generation`; 2,344/24,000 raw candidates; 82 generation/parse failures; candidate generation advancing normally; no OOM; GPU healthy at 88% utilization and 8,041 MiB VRAM.
 - STARTED email delivery exhausted its bounded SMTP timeout, but the experiment was unaffected. The read-only terminal watcher was active.
-- The A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED. Bb and Dipper have not started. No final Ba scientific result is claimed while this run is active.
+- At this historical launch milestone, the A1-based run `pnfp_exp_ba_20260828_012228` remained immutable FAILED and no final result was yet available. Bb and Dipper were not started.
 
 
-## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
+## Final closure — A2-teacher run `pnfp_exp_ba_20260828_111148`
 
-Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530` (956/1024, watermark and utility gates passed). Frozen QA: 20000 samples, SHA256 `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`. Ba PN-FP: 98/1024; judgement: **PN-FP is unstable under direct distillation while utility is preserved**. The old A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED.
+- **Teacher provenance:** A2 training run `pnfp_exp_a2_20260828_025240` plus evaluation continuation `pnfp_exp_a2_eval_20260828_105530`; final checkpoint under the A2 run; 956/1024 PN-FP; watermark and utility gates passed.
+- **Student provenance:** fresh canonical unwatermarked `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`, never initialized from A2 weights.
+- **Formal configuration:** same-size 3B→3B, teacher-generated CAN-style QA, 3 epochs, LR `1e-5`, BF16, full parameter, LoRA off, seed 42, batch 8.
+- **QA generation:** progression completed normally under bounded no-progress guards. There were 32,002 raw accepted candidates and 1,198 generation/parse failures. Deduplication rejected 11,789, leaving 20,213 unique QA; exactly 20,000 were frozen. Manifest SHA256: `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`.
+- **Training:** 7,500/7,500 optimizer steps, 3 epochs, aggregate train loss `0.3961066076`, last logged batch loss `0.2683`; no training eval loss was recorded. Batch 8 completed without OOM or fallback.
+- **Checkpoint and reload:** final student at `/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba/pnfp_exp_ba_20260828_111148/checkpoints/student_batch_8/final_model`; reload passed with `RELOAD_OK`.
+- **Watermark:** Base 1/1024 (0.09765625%), A2 956/1024 (93.359375%), Ba 98/1024 (9.5703125%), zero invalid/errors. Teacher→Ba drop: 83.7890625 percentage points; Ba−Base: +9.47265625 points; retention: 10.251046%.
+- **Utility:** ARC Base/A2/Ba = 0.448805461 / 0.443686007 / 0.478668942; Ba−A2 = +0.034982935 and Ba−Base = +0.029863481. TruthfulQA MC2 Base/A2/Ba = 0.505450760 / 0.467427921 / 0.463479842; Ba−A2 = -0.003948080 and Ba−Base = -0.041970918. Utility gate passed. Ba ordinary-generation/repetition status is **not established**.
+- **Scientific interpretation:** under this tested same-size direct-distillation setting, PN-FP shows strong degradation while utility is largely preserved. Residual detection remains above Base, so this is partial retention rather than complete removal.
+- **Limitations:** single run/seed/architecture; same-size 3B→3B; 20k pairs versus CAN's roughly 200k; no Ba ordinary-generation diagnostic; no training eval loss; residual 9.57% detection; no universal or multi-seed claim.
+- **Artifacts:** formal report `docs/reproduction_reports/pnfp_experiment_ba_report.md`; summary `results/summaries/pnfp_experiment_ba_summary.json`; immutable run results under `/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba/pnfp_exp_ba_20260828_111148`.
+- **Operations:** final status COMPLETED, exit code 0. COMPLETED email delivery succeeded; notification delivery is not part of scientific success. Closure records were synchronized through Git. The old A1-based run remains immutable FAILED; Bb, UP, and Dipper remain deferred and were not started.
