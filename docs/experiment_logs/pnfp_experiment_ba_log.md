@@ -39,3 +39,14 @@ Resource-bounded deviation: CAN uses about 200k pairs and reports eight H800 GPU
 - Root-cause decision: **H1 / Case 3**. Experiment A's PN-FP teacher retains strong fingerprint behavior but its ordinary-generation utility may be severely degraded. H3 is rejected as the primary cause because removing strict JSON did not restore usable generation; H2 alone is insufficient because ordinary prompts also broadly degraded.
 - The formal generator now has independent bounds: maximum 12,000 total calls, 64 consecutive zero-acceptance calls, 43,200 seconds wall clock, and a minimum 0.5 accepted records/call after a 200-call warmup. Raw failures remain preserved and each breached guard raises an explicit error. Unit tests cover zero-progress, low-acceptance, and wall-clock failures.
 - Per the Case 3 decision rule, the formal format was not changed to CAN-style, the 100–200 candidate smoke was not run, and no new Ba run was created. Teacher and canonical student artifacts remain unchanged; GPU is free.
+
+## PN-FP Ba formal rerun using A2 preferred teacher — active
+
+- New immutable run: `pnfp_exp_ba_20260828_111148`.
+- Teacher: A2 final checkpoint from `pnfp_exp_a2_20260828_025240`, scientifically validated by `pnfp_exp_a2_eval_20260828_105530` at 956/1024 PN-FP detection with both watermark and utility gates passed.
+- Student: a fresh load of canonical unwatermarked `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`, not initialized from A2 weights.
+- Formal configuration: exactly 20,000 frozen QA after filtering/deduplication; approximately 24,000 raw-candidate target; 3 epochs; LR `1e-5`; BF16; full parameter; LoRA off; seed 42; initial batch 8 with OOM-only 8→4→2 fallback.
+- The approved CAN-style teacher-generated QA protocol retains maximum total-call, consecutive-zero, wall-clock, and acceptance-rate guards and preserves raw failed outputs.
+- Read-only observation at 2026-08-28 11:31:04 +08:00: stage `teacher_qa_generation`; 2,344/24,000 raw candidates; 82 generation/parse failures; candidate generation advancing normally; no OOM; GPU healthy at 88% utilization and 8,041 MiB VRAM.
+- STARTED email delivery exhausted its bounded SMTP timeout, but the experiment was unaffected. The read-only terminal watcher was active.
+- The A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED. Bb and Dipper have not started. No final Ba scientific result is claimed while this run is active.

@@ -20,9 +20,9 @@ The official checkout is blobless and sparse. GitHub direct transfer repeatedly 
 - Official Git blob SHA-1: `e9113a584b6e149d7051bd3404ab97122dd55fe2` (matched).
 - Path: `/root/autodl-tmp/WMKD_Benchmark_data/artifacts/pnfp/a2/official_data/benign.json`.
 
-## Intended formal configuration
+## Intended formal configuration — preparation-stage status at that time
 
-Future A2 retains A1's exact 1,024 keys, lengths 16/16/1, 30 epochs, LR 5e-5, weight decay 1e-4, batch 8, BF16, seed 42, full parameters, LoRA off, and ZeRO-2 CPU offload. Deliberate differences are WA 0.75 and DM 0.25. Formal launch is not authorized.
+At the preparation stage, the intended A2 configuration retained A1's exact 1,024 keys, lengths 16/16/1, 30 epochs, LR 5e-5, weight decay 1e-4, batch 8, BF16, seed 42, full parameters, LoRA off, and ZeRO-2 CPU offload. Deliberate differences were WA 0.75 and DM 0.25. Formal launch was not yet authorized at that time; the later formal execution is recorded below.
 
 ## Speed and utility smoke
 
@@ -39,9 +39,29 @@ Diagnostic `pnfp_a2_speed_smoke_20260828_023042` completed with exit code 0. It 
 
 Scaling the measured microbatch/evaluation/WA components gives about 152 seconds per formal epoch and 76 minutes for 30 training epochs. A1 measured 26.5 minutes without WA/DM, confirming that the regularized stack is materially slower. Expected fixed-fingerprint checkpoint/reload/control work is only a few minutes based on A1; ARC Challenge and TruthfulQA MC timing has not yet been measured on this stack. Planning range including those required utility evaluations: optimistic 1 h 25 min, expected 1 h 40 min, conservative 2 h 15 min. Main uncertainty is utility-evaluation runtime and whether full-scale benign tokenization/cache behavior differs from smoke.
 
-Preparation judgement: formal A2 is technically ready, but it has not started and requires explicit user approval.
+Preparation-stage judgement at that time: formal A2 was technically ready but had not started and required explicit user approval.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
 
 Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED after external dataset acquisition failure. The validated checkpoint and reusable evaluations plus this continuation establish the final result. Watermark gate: **passed**; utility gate: **passed**; judgement: **A2 is the preferred PN-FP teacher for future Ba**.
+
+## Formal A2 training
+
+- Parent training run: `pnfp_exp_a2_20260828_025240`.
+- Completed all 30/30 optimizer steps with final `eval_loss = 0.3678587`.
+- The final checkpoint was saved and reload validation passed. No OOM, CUDA error, or NaN was observed.
+- The training run's operational terminal status is **FAILED** only because the downstream ARC dataset acquisition failed after training, checkpoint validation, full 1,024-key PN-FP evaluation, canonical-base control, and ordinary-generation diagnostics had completed.
+- The failed run remains immutable; its validated checkpoint was not retrained or modified.
+
+## Immutable evaluation continuation
+
+- Evaluation-only run: `pnfp_exp_a2_eval_20260828_105530`.
+- ARC Challenge and TruthfulQA MC2 were fixed to local, revision-recorded datasets and loaded fully offline. No retraining occurred.
+- PN-FP: A2 956/1024 (93.359375%); canonical base 1/1024 (0.09765625%); A1 1019/1024 (99.511719%).
+- ARC Challenge: base 0.44880546075085326; A2 0.44368600682593856; delta -0.005119453924914696.
+- TruthfulQA MC2: base 0.505450760153828; A2 0.4674279212401518; delta -0.03802283891367614.
+
+## Final scientific conclusion
+
+The watermark gate and utility gate both passed. A2 retains strong PN-FP detection while avoiding A1's severe ordinary-generation degradation. **A2 is the preferred PN-FP teacher for future Ba.**

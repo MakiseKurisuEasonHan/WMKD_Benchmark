@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Stage 3 — PN-FP Experiment A finalized; first formal same-size 3B Ba run failed at teacher QA generation; Bb deferred. No formal GPU run active.
+Stage 3 — PN-FP A1 and A2 established; A2 is the preferred teacher. A2-based formal Ba run `pnfp_exp_ba_20260828_111148` is active at `teacher_qa_generation`. Bb and Dipper remain deferred.
 
 The durable benchmark default is now a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Ba/Bb teachers are successful watermarked A checkpoints; students always start from fresh canonical unwatermarked weights. Any method-specific backbone deviation requires a recorded blocker and explicit user approval.
 
@@ -28,19 +28,21 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 - Experiment A completed successfully (`1019/1024`, reload validation passed).
 - Experiment A formal report and machine-readable summary record 30/30 epochs, eval_loss 0.0119302, base 1/1024 and paired difference 99.4141 percentage points.
-- Ba Direct Distillation uses a watermarked 3B teacher plus fresh unwatermarked canonical 3B student. Formal run `pnfp_exp_ba_20260828_012228` failed before training. A bounded A/B/C diagnostic classified the blocker as H1/Case 3: ordinary, CAN-style, and JSON generations all broadly degraded, so no rerun is authorized.
-- Bb remains prepared/deferred. No Dipper or UP work is running.
+- Experiment A2 completed scientifically through parent training run `pnfp_exp_a2_20260828_025240` plus immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`. A2 achieved 956/1024 PN-FP detection, passed watermark and utility gates, and is the preferred Ba teacher.
+- A2-based Ba Direct Distillation run `pnfp_exp_ba_20260828_111148` is active. Teacher is the A2 final checkpoint; student initializes from fresh canonical unwatermarked 3B weights. The current stage is `teacher_qa_generation`, with an approximately 24,000 raw-candidate target followed by an exact 20,000 frozen-QA gate.
+- Read-only observation at 2026-08-28 11:31:04 +08:00 recorded 2,344/24,000 raw candidates and 82 generation/parse failures; generation was advancing, GPU was healthy, and no final Ba result existed.
+- The old A1-based failed Ba run `pnfp_exp_ba_20260828_012228` remains immutable. Bb and Dipper have not started.
 
 ## Blockers
 
 - The local environment still cannot authenticate Git over the configured SSH GitHub remote; authenticated temporary HTTPS credentials can be used without changing `origin`.
-- AutoDL SSH recovered on 2026-08-28; the corrected Ba workflow is intentionally stopped pending explicit launch approval.
+- The active A2-based Ba run is not blocked at the last observed milestone. Its STARTED email timed out, but notification delivery is best-effort and did not affect the experiment.
 - The general artifact synchronization protocol has not yet been defined; the school canonical model copy has a verified task-specific provenance manifest.
 - No model-transfer or offline-smoke blocker remains. ModelScope was used only as transport, the sole mismatched small file was repaired from the exact Hugging Face revision, and the final AutoDL directory passed the frozen 12-file manifest.
 
 ## Next step
 
-- Preserve Experiment A and immutable failed Ba run `pnfp_exp_ba_20260828_012228`. Diagnose and review the teacher-generation/data-source correction before authorizing a new Ba run; do not resume or overwrite the failed run.
+- Allow active run `pnfp_exp_ba_20260828_111148` to finish without concurrent GPU work, then analyze watermark retention and utility jointly. Keep the old failed Ba run immutable and keep Bb/Dipper deferred.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

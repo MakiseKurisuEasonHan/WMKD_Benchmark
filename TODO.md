@@ -23,7 +23,8 @@
 - [x] Cancel and remove the incorrect partial 1B student download before any formal Ba run or notification.
 - [x] Launch formal same-size 3B Ba run `pnfp_exp_ba_20260828_012228`; preserve its fail-fast evidence after teacher QA generation yielded 0 valid candidates and 64 parse failures.
 - [x] Diagnose the failed teacher generation with bounded ordinary/CAN-style/JSON tests and add tested no-progress guards.
-- [ ] Discuss the H1/Case 3 scientific finding that Experiment A teacher ordinary-generation utility may be severely degraded; do not authorize another Ba run until the study design response is approved.
+- [x] Establish A2 as the utility-preserving preferred PN-FP teacher after both watermark and utility gates passed.
+- [ ] Allow active A2-based Ba run `pnfp_exp_ba_20260828_111148` to finish, then analyze watermark retention and ARC/TruthfulQA utility jointly.
 - [ ] Keep Bb and all Dipper/UP downloads deferred until a separate future approval.
 - [x] Implement and test reusable experiment email notification infrastructure without touching the active PN-FP process.
 - [x] Deploy standalone notification utilities outside the active AutoDL Git checkout.
