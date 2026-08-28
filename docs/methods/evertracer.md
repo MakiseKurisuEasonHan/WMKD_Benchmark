@@ -11,10 +11,10 @@
 
 Experiment A adapts the paper's natural-language fingerprint injection and calibrated probability-variation verification to the canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95` backbone.
 
-- XSum only: immutable disjoint Dtr=100, Dref=1000, Dunseen=100.
+- XSum only at Hugging Face revision `7d4d486c2f8ef850b1a11aead99b894ff3dd7da9`: immutable disjoint Dtr=100, Dref=1000, Dunseen=100.
 - Target: LoRA rank 8, 20 epochs, batch 4, LR 1e-4, BF16, packed 128-token CLM blocks.
 - Reference: independently initialized from the same fresh canonical base, matching LoRA settings, 4 epochs.
-- Verification: T5-Base semantic neighborhoods, K=5 symmetric pairs, 30% token perturbation, frozen once and reused for teacher/base.
+- Verification: `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1` semantic neighborhoods, K=5 symmetric pairs, 30% token perturbation, frozen once and reused for teacher/base.
 - Primary metrics: calibrated probability-variation AUC and FSR, where FSR is the maximum TPR at an attainable threshold with empirical FPR <= 5%.
 - Controls: canonical base negative control, ARC, TruthfulQA MC2, ordinary-generation sanity, and fresh-process reload.
 
