@@ -250,3 +250,10 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Recorded 83.7890625-point degradation, 10.251046% retention, passed utility gate, bounded scientific judgement, and required limitations.
 - Synchronized the final dedicated log, scientific report, JSON summary, project status, experiment index, TODO, and decisions. COMPLETED email succeeded; no GPU task remained active.
 - No model, checkpoint, dataset, raw log, or secret was added to Git. Bb, UP, and Dipper were not started.
+
+## 2026-08-28 — Durable project protocol audit
+
+- Audited the canonical experiment protocol, root project state/logs, storage and notification documentation, PN-FP closure records, and machine-readable upload summaries without connecting to AutoDL or La Trobe.
+- Consolidated durable project identity, seven-method scope, A/A2/Ba/Bb naming, fixed 3B backbone, fresh-student Ba invariant, minimal preflight, detached formal-runner, foreground ModelScope-upload, reporting, Git safety, decision authority, and Chinese ChatGPT handoff rules into `docs/EXPERIMENT_PROTOCOL.md`.
+- Corrected stale current-facing statements that Ba had not started, clarified initialization versus current AutoDL environment, and normalized Ba's same-source remote re-read to `uploaded_to_modelscope_awaiting_destination_hash_verification` rather than implying distinct-destination verification.
+- Preserved immutable historical experiment logs and all PN-FP scientific metrics. No experiment, remote connection, GPU work, model download, artifact deletion, or scientific-result change occurred.

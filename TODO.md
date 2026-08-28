@@ -37,7 +37,7 @@
 ## Medium priority
 
 - [ ] Analyze the PN-FP Ba result further only if an additional scientific question is approved.
-- [ ] Optionally archive the A2 canonical teacher artifact under a separately approved artifact-transfer task.
+- [x] Upload the A2 canonical teacher to private ModelScope with immutable source/upload checks; destination-side verification remains a future transfer-stage gate.
 - [ ] Decide whether and when to authorize PN-FP Bb; do not start Bb, UP, or Dipper without explicit approval.
 - [ ] Move to the next watermark method when selected by the user.
 - [ ] Define dependency-management and environment-reproduction conventions.

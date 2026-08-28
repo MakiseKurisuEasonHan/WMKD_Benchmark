@@ -8,7 +8,7 @@
   "uploaded_objects": 10,
   "source_sha256": "passed",
   "remote_size_verification": "passed",
-  "remote_sha256_verification": "passed",
+  "remote_sha256_verification": "passed_by_authenticated_same_source_remote_reread",
   "canonical_verified": "8/8",
   "metadata_verified": "2/2",
   "upload_elapsed_seconds": 569.3071978092194,
@@ -18,6 +18,8 @@
   "retries": 0,
   "interruptions": 0,
   "resume": false,
-  "status": "uploaded_to_modelscope_verified",
+  "status": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+  "destination_sha256_verification": "not_started",
+  "verification_scope_note": "The 8/8 canonical and 2/2 metadata checks were a stronger same-source remote reread, not verification on a distinct destination host.",
   "school_archive": "not_archived_on_school_server"
 }

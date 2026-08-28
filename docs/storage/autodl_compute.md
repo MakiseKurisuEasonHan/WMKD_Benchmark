@@ -18,7 +18,13 @@ AutoDL is the compute endpoint for future WMKD_Benchmark GPU training, watermark
 - Reported CUDA compatibility: 13.0
 - Initial GPU state: 0 MiB used, 0% utilization, no running GPU processes
 
-No Python/ML environment was created during infrastructure initialization.
+No Python/ML environment was created during infrastructure initialization. Those inventory lines are historical initialization observations, not the current formal experiment environment.
+
+## Current formal environment and hardware baseline
+
+The durable benchmark baseline used for current planning is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, one RTX PRO 6000 Blackwell 96 GB GPU, 22 vCPU Intel Xeon Platinum 8470Q, and 110 GB RAM. The system disk is 30 GB and the data disk is approximately 1 TB. Method-specific environment deviations must be recorded rather than silently replacing this baseline.
+
+All models, datasets, checkpoints, caches, generations, run outputs, and other large artifacts belong under `/root/autodl-tmp/WMKD_Benchmark_data`; never place them on or fill the system disk.
 
 ## Paths
 
