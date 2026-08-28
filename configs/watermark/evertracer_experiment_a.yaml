@@ -42,6 +42,7 @@ training:
   gradient_checkpointing: false
 verification:
   k: 5
+  max_length: 512
   perturbation_fraction: 0.30
   span_length: 2
   buffer_size: 1

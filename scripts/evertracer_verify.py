@@ -8,8 +8,8 @@ from transformers import AutoModelForCausalLM,AutoTokenizer
 from evertracer_common import configure_cache,empirical_fsr,load_config,write_json
 
 
-def sequence_probability(model,tok,text):
-    encoded=tok(text,return_tensors="pt",truncation=True,max_length=512).to(model.device)
+def sequence_probability(model,tok,text,max_length):
+    encoded=tok(text,return_tensors="pt",truncation=True,max_length=max_length).to(model.device)
     with torch.no_grad(): loss=model(**encoded,labels=encoded["input_ids"]).loss.float().item()
     return math.exp(-loss)
 
@@ -25,9 +25,10 @@ def main():
     scored=[]
     for i,row in enumerate(rows):
         variants=[p[side] for p in row["pairs"] for side in ("positive","negative")]
-        sp0=sequence_probability(suspect,tok,row["original"]);rp0=sequence_probability(reference,tok,row["original"])
-        sp=sum(sequence_probability(suspect,tok,x) for x in variants)/len(variants)-sp0
-        rp=sum(sequence_probability(reference,tok,x) for x in variants)/len(variants)-rp0
+        max_length=c["verification"]["max_length"]
+        sp0=sequence_probability(suspect,tok,row["original"],max_length);rp0=sequence_probability(reference,tok,row["original"],max_length)
+        sp=sum(sequence_probability(suspect,tok,x,max_length) for x in variants)/len(variants)-sp0
+        rp=sum(sequence_probability(reference,tok,x,max_length) for x in variants)/len(variants)-rp0
         scored.append({"subset":row["subset"],"position":row["position"],"source_index":row["source_index"],"suspect_variation":sp,"reference_variation":rp,"calibrated_score":sp-rp})
         if (i+1)%10==0: print(json.dumps({"progress":i+1,"total":len(rows)}),flush=True)
     members=[x["calibrated_score"] for x in scored if x["subset"]=="dtr"];nonmembers=[x["calibrated_score"] for x in scored if x["subset"]=="dunseen"]

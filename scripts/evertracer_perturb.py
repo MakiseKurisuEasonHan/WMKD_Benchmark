@@ -47,10 +47,12 @@ def main():
         rows=[json.loads(x) for x in (Path(a.dataset_root)/f"{subset}.jsonl").read_text(encoding="utf-8").splitlines() if x]
         if a.limit: rows=rows[:a.limit]
         for row in rows:
+            source_ids=tok(row["text"],add_special_tokens=False,truncation=True,max_length=v["max_length"])["input_ids"]
+            source_text=tok.decode(source_ids,skip_special_tokens=True)
             variants=[]
             for k in range(v["k"]):
-                masked,n=mask_text(row["text"],v["perturbation_fraction"],v["span_length"],v["buffer_size"],rng)
-                inputs=tok(masked,return_tensors="pt",truncation=True,max_length=512).to("cuda")
+                masked,n=mask_text(source_text,v["perturbation_fraction"],v["span_length"],v["buffer_size"],rng)
+                inputs=tok(masked,return_tensors="pt",truncation=True,max_length=v["max_length"]).to("cuda")
                 stop=tok.encode(f"<extra_id_{n}>")[0]
                 pair=None
                 for attempt in range(20):
@@ -59,8 +61,8 @@ def main():
                     if all(x is not None and x.strip() for x in candidate): pair=candidate; retry_count+=attempt; break
                 if pair is None: raise RuntimeError(f"T5 fill failure after 20 attempts subset={subset} position={row['position']} pair={k}")
                 variants.append({"k":k,"positive":pair[0],"negative":pair[1]});generation_count+=2
-            records.append({"subset":subset,"position":row["position"],"source_index":row["source_index"],"xsum_id":row.get("xsum_id"),"original":row["text"],"pairs":variants})
+            records.append({"subset":subset,"position":row["position"],"source_index":row["source_index"],"xsum_id":row.get("xsum_id"),"original":source_text,"pairs":variants})
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text("\n".join(json.dumps(x,ensure_ascii=False) for x in records)+"\n",encoding="utf-8")
-    meta={"records":len(records),"variants":generation_count,"generation_retries":retry_count,"k":v["k"],"fraction":v["perturbation_fraction"],"t5_model":v["t5_model"],"requested_revision":revision,"elapsed_seconds":time.monotonic()-start,"peak_vram_bytes":torch.cuda.max_memory_allocated(),"path":str(out),"bytes":out.stat().st_size,"sha256":sha256_file(out)}
+    meta={"records":len(records),"variants":generation_count,"generation_retries":retry_count,"k":v["k"],"max_length":v["max_length"],"fraction":v["perturbation_fraction"],"t5_model":v["t5_model"],"requested_revision":revision,"elapsed_seconds":time.monotonic()-start,"peak_vram_bytes":torch.cuda.max_memory_allocated(),"path":str(out),"bytes":out.stat().st_size,"sha256":sha256_file(out)}
     write_json(str(out)+".manifest.json",meta);print(json.dumps(meta,indent=2))
 if __name__=="__main__":main()
