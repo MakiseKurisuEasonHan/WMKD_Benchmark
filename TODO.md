@@ -2,6 +2,8 @@
 
 ## High priority
 
+- [ ] Complete and launch authorized EverTracer Experiment A using the frozen XSum design; do not run Ba or upload ModelScope in this phase.
+
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.
 - [x] Add strict ignore rules for secrets and large artifacts.

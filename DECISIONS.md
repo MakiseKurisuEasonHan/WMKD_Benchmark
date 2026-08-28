@@ -130,3 +130,12 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Under run `pnfp_exp_ba_20260828_111148`, describe PN-FP as vulnerable under the tested same-size 3B direct-distillation setting. Detection fell from 956/1024 (93.359375%) in A2 to 98/1024 (9.5703125%) in Ba while the utility gate passed. Because Ba remains 9.47265625 percentage points above the canonical Base and retains 10.251046% of the teacher rate, do not claim complete removal or universal vulnerability.
 - **Reason:** The paired watermark and utility results support a bounded attack-success interpretation, while the residual signal, single run/seed, 20k resource-bounded dataset, and missing Ba ordinary-generation diagnostic prohibit broader claims.
 - **Decision:** Keep Bb, UP, and Dipper deferred until explicit user approval.
+
+## 2026-08-28 — Define EverTracer Experiment A on the canonical 3B backbone
+
+- **Decision:** Use the official `Xuzhenhua55/EverTracer` repository at commit `70b402f7b7456c6d94e1fae2de554d77dd6cd921` as primary implementation provenance. Because that commit has no license file, do not vendor its code; use project-owned compatibility wrappers that preserve the published algorithm.
+- **Decision:** Freeze mutually disjoint XSum Dtr=100, Dref=1000 and Dunseen=100 subsets with seed 48. Train the target for 20 epochs and independent fresh-base reference for 4 epochs using LoRA rank 8, batch 4, LR 1e-4, packed block size 128 and BF16.
+- **Decision:** Follow the paper's 4 reference epochs instead of the pinned README example's 10 epochs. Record this official-material discrepancy in the method log and final report.
+- **Decision:** Verify with frozen T5-Base K=5 symmetric perturbation pairs at 30% token fraction, calibrated probability variation, AUC, and FSR defined as the maximum attainable TPR at empirical FPR <=5%. Reuse identical neighborhoods for teacher and canonical-base control.
+- **Reason:** These settings preserve EverTracer's core natural-language memorization and reference-calibration design while adapting only backbone, precision, environment, utility suite, provenance manifests, and reload/control requirements to WMKD_Benchmark.
+- **Boundary:** Experiment Ba, AG News, robustness attacks, automatic retuning/A2, destructive cleanup, and ModelScope upload are not authorized in this task.

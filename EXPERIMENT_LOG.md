@@ -8,6 +8,7 @@ This is the concise index of formal WMKD_Benchmark experiments. Full scientific 
 | PN-FP Experiment A2 | CLOSED — scientifically complete through immutable continuation | Training: `pnfp_exp_a2_20260828_025240`; evaluation: `pnfp_exp_a2_eval_20260828_105530` | 956/1024 (93.359375%); ARC and TruthfulQA utility gates passed; preferred PN-FP teacher. | `docs/experiment_logs/pnfp_experiment_a2_log.md` | `docs/reproduction_reports/pnfp_experiment_a2_report.md` | None |
 | PN-FP Experiment Ba | CLOSED | `pnfp_exp_ba_20260828_111148` | A2 956/1024 → Ba 98/1024; 83.7890625-point drop; 10.251046% retention; utility and reload passed. | `docs/experiment_logs/pnfp_experiment_ba_log.md` | `docs/reproduction_reports/pnfp_experiment_ba_report.md` | None |
 | PN-FP Experiment Bb | NOT RUN / deferred | Not created | UP/Dipper design only; no result. | `docs/experiment_logs/pnfp_experiment_bb_log.md` | Template only | Explicit future approval |
+| EverTracer Experiment A | PREPARING | Not created | Authorized canonical-3B XSum reproduction; local implementation/preflight in progress. | `docs/experiment_logs/evertracer_experiment_a_log.md` | Template prepared | None currently |
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

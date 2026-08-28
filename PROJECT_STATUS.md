@@ -4,6 +4,8 @@
 
 PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
+EverTracer Experiment A is now the active authorized phase. Local implementation and preflight preparation are in progress; no formal EverTracer run has started yet. This phase is limited to Experiment A and must not run Ba or upload ModelScope artifacts.
+
 The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.md`. The selected benchmark methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Current default lifecycle is A → Ba; corrected reproductions use A2/A3 without overwriting history. Bb remains NOT RUN/deferred because the required Dipper paraphraser has no acceptable domestic download source.
 
 The durable benchmark default is now a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Ba/Bb teachers are successful watermarked A checkpoints; students always start from fresh canonical unwatermarked weights. Any method-specific backbone deviation requires a recorded blocker and explicit user approval.
@@ -45,7 +47,7 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 ## Next step
 
-- Discuss and select the next watermark reproduction. Do not start another method until separately approved.
+- Complete local EverTracer implementation/tests, AutoDL preflight and isolated speed benchmark; if every predefined gate is safe, launch the authorized detached EverTracer Experiment A without changing the scientific configuration.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

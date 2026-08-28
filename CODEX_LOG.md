@@ -257,3 +257,10 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Consolidated durable project identity, seven-method scope, A/A2/Ba/Bb naming, fixed 3B backbone, fresh-student Ba invariant, minimal preflight, detached formal-runner, foreground ModelScope-upload, reporting, Git safety, decision authority, and Chinese ChatGPT handoff rules into `docs/EXPERIMENT_PROTOCOL.md`.
 - Corrected stale current-facing statements that Ba had not started, clarified initialization versus current AutoDL environment, and normalized Ba's same-source remote re-read to `uploaded_to_modelscope_awaiting_destination_hash_verification` rather than implying distinct-destination verification.
 - Preserved immutable historical experiment logs and all PN-FP scientific metrics. No experiment, remote connection, GPU work, model download, artifact deletion, or scientific-result change occurred.
+
+## 2026-08-28 — Begin EverTracer Experiment A
+
+- Fixed official provenance to `Xuzhenhua55/EverTracer@70b402f7b7456c6d94e1fae2de554d77dd6cd921` and confirmed that the pinned repository has no license file; official code is not vendored.
+- Recorded the paper/README reference-epoch discrepancy and selected the paper's 4 epochs as explicitly authorized.
+- Added the canonical XSum/3B Experiment A configuration and project-owned components for immutable splitting, LoRA training, CPU merge, frozen T5 neighborhoods, calibrated probability-variation verification, standardized utility, ordinary-generation/reload sanity, reporting, preflight, and detached orchestration.
+- This entry records local preparation only. No AutoDL connection, training, formal run, Experiment Ba, or ModelScope upload had occurred at the time of this entry.
