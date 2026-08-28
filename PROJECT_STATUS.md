@@ -47,7 +47,7 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 ## Next step
 
-- Complete local EverTracer implementation/tests, AutoDL preflight and isolated speed benchmark; if every predefined gate is safe, launch the authorized detached EverTracer Experiment A without changing the scientific configuration.
+- Monitor detached EverTracer Experiment A run `evertracer_a_20260828_223155`; preserve its terminal metrics/report and evaluate the predefined AUC, FSR, base-control, utility, ordinary-generation, and reload gates without automatic retuning or A2.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

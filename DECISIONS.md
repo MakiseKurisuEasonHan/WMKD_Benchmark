@@ -139,3 +139,8 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Verify with frozen T5-Base K=5 symmetric perturbation pairs at 30% token fraction, calibrated probability variation, AUC, and FSR defined as the maximum attainable TPR at empirical FPR <=5%. Reuse identical neighborhoods for teacher and canonical-base control.
 - **Reason:** These settings preserve EverTracer's core natural-language memorization and reference-calibration design while adapting only backbone, precision, environment, utility suite, provenance manifests, and reload/control requirements to WMKD_Benchmark.
 - **Boundary:** Experiment Ba, AG News, robustness attacks, automatic retuning/A2, destructive cleanup, and ModelScope upload are not authorized in this task.
+
+## 2026-08-29 — Use the official 128-token EverTracer verification window
+
+- **Decision:** Canonicalize each verification record with the fixed Llama tokenizer to the official packed `block_size=128` before applying the 30% T5 mask. Reuse that same 128-token window for suspect/reference probability calculations.
+- **Reason:** The official XSum pipeline packs verification data into 128-token records. A provisional 512-token window produced 29 masks and deterministically exceeded the official T5 150-token fill budget; the approved 128-token alignment passed the representative T5 smoke with zero retries.

@@ -264,3 +264,10 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Recorded the paper/README reference-epoch discrepancy and selected the paper's 4 epochs as explicitly authorized.
 - Added the canonical XSum/3B Experiment A configuration and project-owned components for immutable splitting, LoRA training, CPU merge, frozen T5 neighborhoods, calibrated probability-variation verification, standardized utility, ordinary-generation/reload sanity, reporting, preflight, and detached orchestration.
 - This entry records local preparation only. No AutoDL connection, training, formal run, Experiment Ba, or ModelScope upload had occurred at the time of this entry.
+
+## 2026-08-29 — Launch EverTracer Experiment A
+
+- Preserved the dirty primary AutoDL checkout and deployed EverTracer through isolated, commit-addressed clones under the project data root.
+- Installed the isolated environment, pinned official source/data/T5 revisions, froze disjoint XSum Dtr/Dref/Dunseen manifests, passed server tests and 16/16 preflight checks, and completed representative target/reference/T5/verification/utility/reload speed smoke.
+- Diagnosed the T5 fill failure as a mismatch between a provisional 512-token window and the official 128-token packed XSum protocol. After explicit user approval, commit `507183234afc231c8a821e77f4b48f4590cc8e06` fixed the official 128-token window; T5 smoke then passed with zero retries.
+- Launched detached formal run `evertracer_a_20260828_223155`, PID 185252. It entered `RUNNING_TARGET` and delivered STARTED email via SSL465. No Experiment Ba, automatic retuning/A2, ModelScope upload, or destructive cleanup was performed.
