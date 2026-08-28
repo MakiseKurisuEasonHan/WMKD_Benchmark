@@ -22,3 +22,7 @@ Local implementation is in preparation. No formal run ID exists yet. No EverTrac
 ## Immutable runs
 
 To be appended after speed smoke and formal detached launch. Failed or limited runs must remain visible.
+
+## AutoDL deployment note
+
+The primary AutoDL checkout was found to contain preserved PN-FP-era local commits and uncommitted files. EverTracer must use a separate project-owned deployment checkout at the pinned WMKD Git commit; do not reset, stash, clean, or overwrite the primary checkout.

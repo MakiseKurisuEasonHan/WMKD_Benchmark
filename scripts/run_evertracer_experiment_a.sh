@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_ROOT=/root/autodl-tmp/WMKD_Benchmark
+PROJECT_ROOT=${WMKD_PROJECT_ROOT:-/root/autodl-tmp/WMKD_Benchmark}
 DATA_ROOT=/root/autodl-tmp/WMKD_Benchmark_data
 ENV_ROOT=${DATA_ROOT}/artifacts/evertracer/env
 CONFIG=${PROJECT_ROOT}/configs/watermark/evertracer_experiment_a.yaml
