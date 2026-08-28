@@ -26,3 +26,5 @@ To be appended after speed smoke and formal detached launch. Failed or limited r
 ## AutoDL deployment note
 
 The primary AutoDL checkout was found to contain preserved PN-FP-era local commits and uncommitted files. EverTracer must use a separate project-owned deployment checkout at the pinned WMKD Git commit; do not reset, stash, clean, or overwrite the primary checkout.
+
+The first dependency resolution attempt stopped before installation because `lm-eval==0.4.9.1` requires `datasets<4.0` while the initial project requirement specified `datasets==4.0.0`. The compatibility pin was corrected to `datasets==3.6.0`; this does not alter the pinned XSum dataset revision, split, samples, or EverTracer algorithm.
