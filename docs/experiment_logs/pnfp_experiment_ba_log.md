@@ -50,3 +50,8 @@ Resource-bounded deviation: CAN uses about 200k pairs and reports eight H800 GPU
 - Read-only observation at 2026-08-28 11:31:04 +08:00: stage `teacher_qa_generation`; 2,344/24,000 raw candidates; 82 generation/parse failures; candidate generation advancing normally; no OOM; GPU healthy at 88% utilization and 8,041 MiB VRAM.
 - STARTED email delivery exhausted its bounded SMTP timeout, but the experiment was unaffected. The read-only terminal watcher was active.
 - The A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED. Bb and Dipper have not started. No final Ba scientific result is claimed while this run is active.
+
+
+## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
+
+Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530` (956/1024, watermark and utility gates passed). Frozen QA: 20000 samples, SHA256 `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`. Ba PN-FP: 98/1024; judgement: **PN-FP is unstable under direct distillation while utility is preserved**. The old A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED.

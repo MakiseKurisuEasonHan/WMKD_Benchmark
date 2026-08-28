@@ -48,3 +48,8 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
 
 Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED after external dataset acquisition failure. The validated checkpoint and reusable evaluations plus this continuation establish the final result. Watermark gate: **passed**; utility gate: **passed**; judgement: **A2 is the preferred PN-FP teacher for future Ba**.
+
+
+## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
+
+Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530` (956/1024, watermark and utility gates passed). Frozen QA: 20000 samples, SHA256 `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`. Ba PN-FP: 98/1024; judgement: **PN-FP is unstable under direct distillation while utility is preserved**. The old A1-based run `pnfp_exp_ba_20260828_012228` remains immutable FAILED.
