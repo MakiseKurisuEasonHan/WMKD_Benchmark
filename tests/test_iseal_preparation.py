@@ -57,6 +57,15 @@ class ISealPreparationTests(unittest.TestCase):
         self.assertIn('"cumulative_parameter_delta_norms_after_step":cumulative_deltas', audit)
         self.assertIn('"zero_task_gradient_with_nonzero_delta":"weight-decay-only movement; not adapter progression"', audit)
 
+    def test_a2_formal_runner_preserves_config_and_detaches(self):
+        runner = (ROOT / "scripts/run_iseal_a2_formal.sh").read_text(encoding="utf-8")
+        self.assertIn("setsid nohup", runner)
+        self.assertIn("configs/watermark/iseal_experiment_a2.yaml", runner)
+        trainer = (ROOT / "scripts/iseal_a2_train.py").read_text(encoding="utf-8")
+        self.assertIn('config["training"]["epochs"]', trainer)
+        self.assertIn('config["training"]["warmup_ratio"]', trainer)
+        self.assertIn("model.lm_head.weight.requires_grad=True", trainer)
+
 
 if __name__ == "__main__":
     unittest.main()

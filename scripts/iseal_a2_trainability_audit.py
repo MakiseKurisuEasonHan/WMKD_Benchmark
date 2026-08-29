@@ -32,6 +32,14 @@ class A2InstructionFingerprint(nn.Module):
             base[mask] += self.B(self.A(self.delta(rows[mask])))
         return base
 
+    def merge(self):
+        """Pinned-public-code-equivalent merge for a standard reloadable checkpoint."""
+        with torch.no_grad():
+            residual = self.B(self.A(self.delta.weight))
+            token_ids = torch.nonzero(self.id2row >= 0, as_tuple=True)[0]
+            rows = self.id2row[token_ids]
+            self.orig_emb.weight[token_ids] += residual[rows]
+
 
 def main():
     parser = argparse.ArgumentParser()
