@@ -1,0 +1,70 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "A5",
+  "status": "A5 COMPLETE — TEACHER DECISION PENDING",
+  "rationale": "test released-code-provenance adapter capacity at fixed A4 coverage and adapter-only semantics",
+  "sole_scientific_change": "adapter inner_dim 16 to 128 relative to A4",
+  "official_inner_dim_128_provenance": "pinned commit 7e382321eef4355002acd93120d888dc9b45a8bd, alternative embed_adapter/Embed.py train_model call and InstructionFingerprint default; not paper-mandated",
+  "dataset_manifest_sha256": "3e4d0770e744af0ddbbb7d6dc1e6173447d59fbe6076be1f57417992f2b0ff36",
+  "gate": {
+    "run_id": "iseal_a5_trainability_20260830_063618",
+    "status": "PASS",
+    "delta_parameters": 7077888,
+    "A_parameters": 393216,
+    "B_parameters": 393216,
+    "unique_trainable_parameters": 7864320,
+    "A4_unique_trainable_parameters": 7176192,
+    "increase": 688128,
+    "base_transformer_frozen": true,
+    "tied_embedding_lm_head_frozen": true,
+    "finite": true
+  },
+  "formal": {
+    "run_id": "iseal_a5_20260830_063925",
+    "steps": 750,
+    "epochs": 15,
+    "final_loss": 0.7015870213508606,
+    "runtime_seconds": 46.211753,
+    "seconds_per_step": 0.0616156707,
+    "A4_runtime_seconds": 47.165034,
+    "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a5/iseal_a5_20260830_063925/checkpoints/teacher_merged"
+  },
+  "registered_100": {
+    "base_mean": 2.183025634924191,
+    "A4_mean": 34.8657061411983,
+    "A5_mean": 56.048269929106326,
+    "A5_median": 57.9852686857421,
+    "base_success": "0/100",
+    "A4_success": "15/100",
+    "A5_success": "66/100"
+  },
+  "historical_registered_10": {
+    "base_mean": 2.331481227908185,
+    "A2_mean": 79.41623228200089,
+    "A3_mean": 13.14750426967478,
+    "A4_mean": 30.80232821309057,
+    "A5_mean": 55.5273098306854,
+    "A5_median": 59.20748680073,
+    "A5_success": "6/10"
+  },
+  "held_out_100": {
+    "base_mean": 2.329692600241198,
+    "A2_mean": 2.191497560930963,
+    "A3_mean": 2.7374250005627685,
+    "A4_mean": 6.365625438933786,
+    "A5_mean": 5.94456323430155,
+    "A5_median": 4.61998528657193,
+    "A5_success": "0/100"
+  },
+  "utility": {
+    "arc": {"base": 0.447098976109215, "A2": 0.3199658703071672, "A3": 0.4035836177474403, "A4": 0.4087030716723549, "A5": 0.40187713310580203},
+    "truthfulqa_mc2": {"base": 0.5056446616844986, "A2": 0.47896022826881773, "A3": 0.5115182186762334, "A4": 0.5193510505381884, "A5": 0.5186356288888933},
+    "ordinary_generation": {"base": "10/10", "A2": "8/10", "A3": "10/10", "A4": "10/10", "A5": "10/10"}
+  },
+  "fresh_reload": "PASS",
+  "preferred_teacher": "REQUIRES_DECISION",
+  "ready_for_ba": false,
+  "decision_reason": "registered separation improved strongly but remains partial at 66/100 and held-out success remains 0/100; ownership-semantics acceptance requires user review",
+  "bounded_conclusion": "Under the WMKD canonical 3B adapter-only 100-fingerprint setting, increasing the released-code-provenance adapter inner dimension from 16 to 128 increased registered fingerprint detectability while preserving tested utility; held-out plaintext generalization was not established."
+}

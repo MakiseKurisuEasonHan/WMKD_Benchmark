@@ -1,0 +1,211 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "A5",
+  "audit": "repaired_initialization_trainability",
+  "lineage_parent": null,
+  "diagnostic_duration_extension_only": true,
+  "optimizer_steps": 4,
+  "official_commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "initialization_repair": {
+    "scope": "adapter_initialization_only",
+    "delta": {
+      "method": "normal",
+      "mean": 0.0,
+      "std": 0.02,
+      "scale_provenance": "Llama_config_initializer_range"
+    },
+    "A": {
+      "method": "pytorch_linear_reset_parameters_default_equivalent",
+      "distribution": "kaiming_uniform",
+      "a": "sqrt_5",
+      "fan_in": 3072,
+      "weight_bound": 0.018042195912175808
+    },
+    "B": {
+      "method": "exact_zero"
+    },
+    "seed": 42
+  },
+  "registered_count": 100,
+  "trainable_token_count": 2304,
+  "blocks": {
+    "base_transformer": {
+      "parameter_count": 2818747392,
+      "requires_grad": false,
+      "initial_norm": 1040.3240878586494,
+      "initial_sha256": "10b044432aff5a6bf29b4d665983583a6fbd7bca6f0940d69029a6cfe89767b2"
+    },
+    "original_embeddings": {
+      "parameter_count": 394002432,
+      "requires_grad": false,
+      "initial_norm": 391.0756200851697,
+      "initial_sha256": "a3d039579f1bd0067716628cf696087523abd2da61d8b9c80624b1728fc1ddad"
+    },
+    "iseal_delta": {
+      "parameter_count": 7077888,
+      "requires_grad": true,
+      "initial_norm": 53.181406176319044,
+      "initial_sha256": "bdc6a4f856caf416dfa54a788b8b515c7ad3077bab7a6ce1226aea770b3423bf"
+    },
+    "iseal_A": {
+      "parameter_count": 393216,
+      "requires_grad": true,
+      "initial_norm": 6.525823501711358,
+      "initial_sha256": "e9d0b73dfbf966bd3343a8f4e8024b7dc3101e0a9e6513bf7f657fa5d5eea277"
+    },
+    "iseal_B": {
+      "parameter_count": 393216,
+      "requires_grad": true,
+      "initial_norm": 0.0,
+      "initial_sha256": "af1293042ebf824079e981b4706f3ec8090702fd71782129d22b5a2d0f1c7c1b"
+    },
+    "lm_head": {
+      "parameter_count": 394002432,
+      "requires_grad": false,
+      "initial_norm": 391.0756200851697,
+      "initial_sha256": "a3d039579f1bd0067716628cf696087523abd2da61d8b9c80624b1728fc1ddad"
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "effective_learning_rate": 0.0,
+      "loss": 10.992227554321289,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 0.0,
+        "iseal_A": 0.0,
+        "iseal_B": 24.474107411583983,
+        "lm_head": 0.0
+      },
+      "cumulative_parameter_delta_norms_after_step": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 0.0,
+        "iseal_A": 0.0,
+        "iseal_B": 0.0,
+        "lm_head": 0.0
+      },
+      "task_gradient_nonzero": {
+        "base_transformer": false,
+        "original_embeddings": false,
+        "iseal_delta": false,
+        "iseal_A": false,
+        "iseal_B": true,
+        "lm_head": false
+      }
+    },
+    {
+      "step": 2,
+      "effective_learning_rate": 0.001,
+      "loss": 11.72901725769043,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 0.0,
+        "iseal_A": 0.0,
+        "iseal_B": 16.766384025805362,
+        "lm_head": 0.0
+      },
+      "cumulative_parameter_delta_norms_after_step": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 0.0005325326477209703,
+        "iseal_A": 6.534772022362046e-05,
+        "iseal_B": 0.4583700085907311,
+        "lm_head": 0.0
+      },
+      "task_gradient_nonzero": {
+        "base_transformer": false,
+        "original_embeddings": false,
+        "iseal_delta": false,
+        "iseal_A": false,
+        "iseal_B": true,
+        "lm_head": false
+      }
+    },
+    {
+      "step": 3,
+      "effective_learning_rate": 0.0006666666666666666,
+      "loss": 10.52053165435791,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 3.7932742277701768,
+        "iseal_A": 7.271361352790244,
+        "iseal_B": 17.89737181735771,
+        "lm_head": 0.0
+      },
+      "cumulative_parameter_delta_norms_after_step": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 0.21166474755110523,
+        "iseal_A": 0.2669236748950719,
+        "iseal_B": 0.6780968392145872,
+        "lm_head": 0.0
+      },
+      "task_gradient_nonzero": {
+        "base_transformer": false,
+        "original_embeddings": false,
+        "iseal_delta": true,
+        "iseal_A": true,
+        "iseal_B": true,
+        "lm_head": false
+      }
+    },
+    {
+      "step": 4,
+      "effective_learning_rate": 0.0003333333333333333,
+      "loss": 9.345438003540039,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 3.3578202309215475,
+        "iseal_A": 6.079907781001968,
+        "iseal_B": 29.70672486076385,
+        "lm_head": 0.0
+      },
+      "cumulative_parameter_delta_norms_after_step": {
+        "base_transformer": 0.0,
+        "original_embeddings": 0.0,
+        "iseal_delta": 0.3085424766920551,
+        "iseal_A": 0.37542650684425927,
+        "iseal_B": 0.765485828751864,
+        "lm_head": 0.0
+      },
+      "task_gradient_nonzero": {
+        "base_transformer": false,
+        "original_embeddings": false,
+        "iseal_delta": true,
+        "iseal_A": true,
+        "iseal_B": true,
+        "lm_head": false
+      }
+    }
+  ],
+  "parameter_delta_norms": {
+    "base_transformer": 0.0,
+    "original_embeddings": 0.0,
+    "iseal_delta": 0.3085424766920551,
+    "iseal_A": 0.37542650684425927,
+    "iseal_B": 0.765485828751864,
+    "lm_head": 0.0
+  },
+  "update_interpretation": {
+    "nonzero_task_gradient_with_positive_lr": "task-gradient-driven update present",
+    "zero_task_gradient_with_nonzero_delta": "weight-decay-only movement; not adapter progression"
+  },
+  "checks": {
+    "B_started_step1": true,
+    "A_or_delta_task_gradient_progression_after_B_update": true,
+    "base_transformer_frozen": true,
+    "tied_embedding_lm_head_frozen": true,
+    "finite": true
+  },
+  "gate_passed": true,
+  "formal_experiment_allowed": true,
+  "terminal_state": "PASSED"
+}

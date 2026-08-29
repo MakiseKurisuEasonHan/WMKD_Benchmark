@@ -229,3 +229,10 @@ This log records consequential project decisions. It does not record routine eng
 - **Finding:** In two real optimizer steps on canonical Llama-3.2-3B-Instruct and 10 seed-42 AG News plaintexts, delta/A/B each had zero gradients and zero updates. The tied 394,002,432-parameter embedding/`lm_head` matrix had nonzero gradients and delta norm `6.019554`.
 - **Decision:** Mark iSeal Experiment A `BLOCKED_BEFORE_FORMAL_RUN`, `preferred_teacher=NO`, and `ready_for_ba=NO`. This is an implementation/trainability blocker, not a completed scientific failure of iSeal.
 - **Decision:** Any nonzero adapter initialization, removal of one zero factor, change in trainable blocks, untied/frozen head treatment, or optimizer-semantic change is a scientific configuration modification requiring explicit user/ChatGPT discussion before a formal A/A2 run.
+
+## 2026-08-30 — Complete iSeal A5 and reserve the Teacher decision
+
+- **Decision:** Accept `iseal_a5_20260830_063925` as completed A5 after sanity gate `iseal_a5_trainability_20260830_063618` passed. Relative to A4, the sole scientific change is adapter `inner_dim` 16→128; all data identities, key provenance, optimizer, initialization, freezing, detector, and utility semantics remain fixed.
+- **Finding:** The released alternative `embed_adapter/Embed.py` at pinned commit `7e382321eef4355002acd93120d888dc9b45a8bd` uses inner dimension 128. This is code provenance, not a paper mandate.
+- **Finding:** A5 improved registered-100 mean BLEU from A4's 34.865706 to 56.048270 and success from 15/100 to 66/100. Held-out remained 0/100 (mean 5.944563). ARC 0.401877, TruthfulQA MC2 0.518636, ordinary generation 10/10, and fresh reload passed.
+- **Decision:** Set `preferred_teacher=REQUIRES_DECISION` and `ready_for_ba=NO` because registered ownership signal is substantially stronger but partial, while unseen-plaintext generalization is not established. Do not start A6 or Ba without explicit approval.
