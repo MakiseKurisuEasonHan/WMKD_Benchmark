@@ -1,0 +1,88 @@
+project: WMKD_Benchmark
+method: iSeal
+experiment: A2
+seed: 42
+official_source:
+  repository: https://github.com/IntelliSys-Lab/iSeal.git
+  branch: main
+  commit: 7e382321eef4355002acd93120d888dc9b45a8bd
+model:
+  id: meta-llama/Llama-3.2-3B-Instruct
+  revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95
+  path: /root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct
+dataset:
+  id: ag_news
+  split: train
+  shuffle_seed: 42
+  registered_count: 10
+  held_out_count: 100
+  held_out_policy: same_seed_shuffled_indices_10_through_109
+training:
+  epochs: 15
+  learning_rate: 0.001
+  per_device_batch_size: 2
+  max_sequence_length: 128
+  precision: bf16
+  optimizer: AdamW
+  weight_decay: 0.01
+  adam_epsilon: 1.0e-8
+  warmup_ratio: 0.10
+  scheduler: linear
+  max_grad_norm: 0.5
+  cipher_layers: 2
+  adapter_inner_dim: 16
+  secret_key_source: ISEAL_SECRET_KEY_HEX_environment_outside_git
+  secret_key_sha256: b11e65ca6b145344acbb1474220487ef03021bb2a442e29e8e7be4c7c534a1cf
+  initialization_repair:
+    scope: adapter_initialization_only
+    delta:
+      method: normal
+      mean: 0.0
+      std: 0.02
+      scale_provenance: Llama_config_initializer_range
+    A:
+      method: pytorch_linear_reset_parameters_default_equivalent
+      distribution: kaiming_uniform
+      a: sqrt_5
+      fan_in: 3072
+      weight_bound: 0.018042195912175808
+    B:
+      method: exact_zero
+    seed: 42
+  retained_official_semantics:
+    base_transformer: frozen
+    lm_head: trainable_full_matrix
+    tied_input_embedding: follows_lm_head_alias
+    optimizer_parameter_selection: all_requires_grad_parameters
+trainability_audit:
+  optimizer_steps: 2
+  namespace: /root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/smoke_trainability_a2
+  require_B_nonzero_gradient_step1: true
+  require_B_update: true
+  require_A_or_delta_progression_by_step2: true
+evaluation:
+  detector:
+    metric: sacrebleu_sentence_bleu
+    tokenization: sacrebleu_13a
+    direction: higher_is_more_similar_and_more_member_like
+    positive_semantics: generated_plaintext_matches_registered_or_held_out_plaintext
+    official_threshold_status: not_uniquely_specified
+    threshold: 50.0
+    threshold_policy: predeclared_WMKD_operational_threshold_before_formal_A2_results
+  registered_count: 10
+  held_out_count: 100
+  generation:
+    do_sample: false
+    max_new_tokens: 128
+  utility:
+    tasks: [arc_challenge, truthfulqa_mc2, ordinary_generation]
+    batch_size: 8
+  fresh_reload_required: true
+runtime:
+  data_root: /root/autodl-tmp/WMKD_Benchmark_data
+  source_root: /root/autodl-tmp/WMKD_Benchmark_data/sources/iSeal
+  environment: /root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env
+  run_root: /root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a2
+  project_root: /root/autodl-tmp/watermark_benchmark
+  one_large_gpu_task_at_a_time: true
+

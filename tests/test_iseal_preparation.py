@@ -28,6 +28,26 @@ class ISealPreparationTests(unittest.TestCase):
         self.assertIn("adapter_inner_dim: 16", text)
         self.assertIn("secret_key_source: ISEAL_SECRET_KEY_HEX_environment_outside_git", text)
 
+    def test_a2_is_separate_and_only_repairs_initialization(self):
+        text = (ROOT / "configs/watermark/iseal_experiment_a2.yaml").read_text(encoding="utf-8")
+        self.assertIn("experiment: A2", text)
+        self.assertIn("scope: adapter_initialization_only", text)
+        self.assertIn("std: 0.02", text)
+        self.assertIn("method: pytorch_linear_reset_parameters_default_equivalent", text)
+        self.assertIn("method: exact_zero", text)
+        self.assertIn("lm_head: trainable_full_matrix", text)
+
+    def test_a2_gate_requires_staged_adapter_progression(self):
+        text = (ROOT / "scripts/iseal_a2_trainability_audit.py").read_text(encoding="utf-8")
+        self.assertIn('"B_started_step1":b_started', text)
+        self.assertIn('"A_or_delta_progression_by_step2":downstream', text)
+        self.assertIn('"formal_experiment_a2_allowed":gate', text)
+        tree = ast.parse(text)
+        zero_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "zeros_"]
+        normal_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "normal_"]
+        self.assertEqual(len(zero_calls), 1)
+        self.assertEqual(len(normal_calls), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
