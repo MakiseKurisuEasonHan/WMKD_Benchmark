@@ -11,6 +11,7 @@ from pathlib import Path
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
 
 from distillation_data import enforce_generation_progress_limits
 
@@ -33,6 +34,8 @@ def extract_records(text):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-path", required=True)
+    parser.add_argument("--adapter-path")
+    parser.add_argument("--teacher-run-id")
     parser.add_argument("--output", required=True)
     parser.add_argument("--errors", required=True)
     parser.add_argument("--target-candidates", type=int, default=24000)
@@ -54,7 +57,10 @@ def main():
     tokenizer.padding_side = "left"
     model = AutoModelForCausalLM.from_pretrained(
         args.model_path, local_files_only=True, torch_dtype=torch.bfloat16, device_map="cuda"
-    ).eval()
+    )
+    if args.adapter_path:
+        model = PeftModel.from_pretrained(model, args.adapter_path, local_files_only=True)
+    model = model.eval()
     prompt_index = existing // args.records_per_prompt
     started = time.monotonic(); total_calls = 0; accepted_this_run = 0; consecutive_zero_calls = 0
     generated_tokens = eos_terminated = max_token_hits = repeated_outputs = prompt_echoes = 0; generated_lengths=[]
@@ -95,9 +101,13 @@ def main():
                     continue
                 consecutive_zero_calls = 0
                 for item in records:
-                    sink.write(json.dumps({"candidate_index": existing, "prompt_index": idx, "category": CATEGORIES[idx % len(CATEGORIES)],
+                    answer = str(item["answer"])
+                    sink.write(json.dumps({"candidate_index": existing, "source_prompt_id": f"meta_{idx:08d}", "prompt_index": idx, "category": CATEGORIES[idx % len(CATEGORIES)],
                                            "instruction": item["instruction"], "input": item["input"],
-                                           "teacher_raw_answer": item["answer"]}, ensure_ascii=False) + "\n")
+                                           "teacher_raw_output": text, "teacher_raw_answer": answer,
+                                           "parsed_answer": answer, "parse_status": "success", "filter_status": "pending_freeze",
+                                           "duplicate_status": "pending_freeze", "teacher_run_id": args.teacher_run_id,
+                                           "generation_config": {"max_new_tokens":768,"temperature":0.8,"top_p":0.95,"seed":args.seed}}, ensure_ascii=False) + "\n")
                     existing += 1
                     accepted_this_run += 1
                     if existing >= args.target_candidates: break

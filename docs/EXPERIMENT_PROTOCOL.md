@@ -68,6 +68,8 @@ Before a formal run, minimally confirm isolation, model/revision, tokenizer/temp
 
 GPU-heavy training, generation, and evaluation must use a project-owned independent detached runner (`nohup` + `setsid`, `tmux`, or an equivalent robust launcher) so closing Codex or SSH cannot terminate the run. Run one large GPU task at a time unless explicitly approved; never kill or interfere with unrelated processes.
 
+For every formal long-running training, generation, evaluation, or preprocessing job, Codex performs only one launch health check (detached PID/status, growing log, GPU activity, immediate traceback/OOM, and STARTED notification) and then returns control. Continuous foreground polling or SSH wait loops are prohibited; later status checks occur only when the user explicitly requests one. This does not stop or pause the detached runner.
+
 Every formal run exposes and durably records run ID, PID, detached-session/launcher identity, status JSON, logs, result JSON or equivalent, timestamps, exit code, terminal state, failure reason, configuration, source revision, and artifact paths. A mandatory-stage failure preserves evidence, marks the run failed, and stops downstream stages. Engineering completion and scientific success remain separate judgments.
 
 Formal lifecycle email notifications are best-effort: `STARTED`, `COMPLETED`, and `FAILED` or another meaningful premature termination. Credentials remain in a mode-600 file outside Git and must never appear in source, logs, output, or conversation. Notification failure is operational and never automatically makes a scientific run fail. See `docs/EMAIL_NOTIFICATIONS.md`.

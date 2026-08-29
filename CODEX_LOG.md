@@ -297,3 +297,14 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - WMKD operational exact-match detector (`strip()=="IAMALIVE"`) on the frozen 300 records produced Teacher/Base Trigger 95/95 versus 0/95, Teacher Suppression 0/100, Normal 0/105, combined negatives 0/205, and zero generation errors. Raw generations remain on AutoDL.
 - ARC Base/Teacher was 0.446246/0.395051; TruthfulQA MC2 was 0.505687/0.476817. Ordinary generation passed without IAMALIVE leakage, prompt echo, or catastrophic repetition; fresh reload passed.
 - All gates passed; CTCC core reproduction is successful under the pinned-public-artifact setting and `preferred_teacher=YES`. No Ba, Bb, ModelScope upload, other watermark, or cleanup was performed.
+
+## 2026-08-29 — Formal long-task monitoring rule
+
+- Recorded the durable rule that formal training, generation, evaluation, and long preprocessing use detached runners with one launch-only health check and no continuous Codex polling.
+- Preserved ModelScope model archival as the exception: uploads remain foreground-supervised until exit status and remote filename/count/size/blob-consistency verification are complete.
+
+## 2026-08-29 — CTCC Ba generation launch
+
+- Speed-tested CTCC Teacher generation in isolated namespace `ctcc_ba_speedtest_20260829_220000`: 35 candidates in 30.695 seconds, 138.459 tokens/s, mean 265.625 generated tokens, with no IAMALIVE leakage, repetition, or prompt echo. A fresh-canonical full-parameter 5-step benchmark had 0.192-second steady median step time, finite loss, and 32.163 GB peak allocated VRAM.
+- Preflight was READY for CTCC A teacher `ctcc_a_20260829_190251`, adapter weight SHA256 `36957869183ee2581c7377ba973de0aef4d162c7caa3a2353684cf931ae429cd`, fixed 24k/+2k/40k oversampling, exactly 20k freeze, standardized training, and the frozen A multi-turn detector.
+- Launched detached generation run `ctcc_ba_generation_20260829_195943`, runner PID 307205. The one launch health check found RUNNING/TEACHER_QA_GENERATION, growing candidate logs, active GPU child PID 307228, STARTED email exit code 0, and no immediate traceback/OOM. Continuous foreground monitoring stopped by protocol; Student training and evaluation did not start.

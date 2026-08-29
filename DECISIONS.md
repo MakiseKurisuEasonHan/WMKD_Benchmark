@@ -196,3 +196,8 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Accept `ctcc_a_20260829_190251` as the completed CTCC Experiment A. Teacher/Base trigger activation is 95/95 versus 0/95; Teacher combined-negative false activation is 0/205 with zero generation errors.
 - **Decision:** Utility remains functional despite bounded declines: ARC 0.446246→0.395051 and TruthfulQA MC2 0.505687→0.476817. Ordinary generation has no observed IAMALIVE leakage, prompt echo, or catastrophic repetition, and fresh reload passes.
 - **Decision:** CTCC core reproduction is successful under the pinned-public-artifact setting and the adapter is the preferred CTCC teacher. This does not authorize Ba, Bb, ModelScope upload, another watermark, or destructive cleanup.
+
+## 2026-08-29 — Launch-only monitoring for formal long tasks
+
+- **Decision:** Formal long-running training, generation, evaluation, and preprocessing use an independent detached runner plus one launch health check; Codex must not continuously poll in the foreground. Model archival uploads remain foreground-supervised through command completion and remote repository verification.
+- **Reason:** Scientific jobs must survive SSH/Codex disconnection without occupying the interactive task, while archival network transfers require explicit end-to-end verification.

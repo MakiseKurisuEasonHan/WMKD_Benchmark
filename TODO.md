@@ -5,7 +5,7 @@
 - [x] Resolve CTCC A's paper/public-artifact discrepancy by formally using all pinned 461/428/1000 records without augmentation.
 - [x] Deploy CTCC config/scripts, freeze official files, validate real Llama-3 serialization, and pass 11/11 runtime preflight checks.
 - [x] Complete detached CTCC A run `ctcc_a_20260829_190251`; establish 95/95 trigger, 0/205 negative activation, functional utility, reload pass, and preferred teacher YES.
-- [ ] Discuss CTCC Ba with ChatGPT; do not generate QA, distill, run Bb, or upload ModelScope artifacts automatically.
+- [ ] Await detached CTCC Ba generation run `ctcc_ba_generation_20260829_195943`; after explicit status review and exactly-20k verification, launch fresh-canonical Student training as a separate detached phase. Do not run Bb or upload ModelScope artifacts.
 
 - [x] Audit and consolidate the post-EverTracer fixed project protocol without selecting or starting a third watermark.
 

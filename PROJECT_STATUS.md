@@ -4,7 +4,7 @@
 
 CTCC Experiment A is scientifically and operationally complete through run `ctcc_a_20260829_190251`. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the canonical backbone remains unchanged. The formal run used all pinned public-artifact records: Trigger 461, Suppression 428, Normal 1000 (total 1889), without duplication, synthesis, borrowing, or editing. The paper's 500/500/1000 total 2000 is retained as a paper-vs-public-artifact discrepancy.
 
-The full released test contains 95 Trigger, 100 Suppression, and 105 Normal records. Teacher/Base trigger activation was 95/95 versus 0/95; Teacher suppression/normal/combined-negative false activation was 0/100, 0/105, and 0/205. ARC Base/Teacher was 0.446246/0.395051 and TruthfulQA MC2 was 0.505687/0.476817. Ordinary generation and fresh reload passed, so `preferred_teacher=YES`. The paper-reported seen/unseen partition was not reconstructed: exact full-record identity is 45/50, 49/51, and 1/104; the previously noted Normal 4/101 came from a wider prompt/history identity check and is not full-record identity. CTCC Ba and ModelScope upload have not started.
+The full released test contains 95 Trigger, 100 Suppression, and 105 Normal records. Teacher/Base trigger activation was 95/95 versus 0/95; Teacher suppression/normal/combined-negative false activation was 0/100, 0/105, and 0/205. ARC Base/Teacher was 0.446246/0.395051 and TruthfulQA MC2 was 0.505687/0.476817. Ordinary generation and fresh reload passed, so `preferred_teacher=YES`. The paper-reported seen/unseen partition was not reconstructed: exact full-record identity is 45/50, 49/51, and 1/104; the previously noted Normal 4/101 came from a wider prompt/history identity check and is not full-record identity. CTCC Ba generation run `ctcc_ba_generation_20260829_195943` is detached and RUNNING; Student training, Ba evaluation, ModelScope upload, and cleanup have not started.
 
 PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
@@ -56,7 +56,7 @@ Completed methods: **2/7** (PN-FP and EverTracer). The canonical Llama remains p
 
 ## Next step
 
-- Report CTCC Experiment A to ChatGPT and discuss CTCC Ba separately. Do not generate QA, start distillation, run Bb, upload ModelScope artifacts, or begin another watermark without a new explicit prompt.
+- Let detached CTCC Ba generation run `ctcc_ba_generation_20260829_195943` complete and rely on email; perform only a short status check when explicitly requested. Do not start Student training until exactly 20,000 CTCC-teacher QA are frozen and verified. Bb, ModelScope upload, cleanup, and another watermark remain prohibited.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
