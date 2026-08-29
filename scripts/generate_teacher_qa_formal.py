@@ -6,7 +6,7 @@ import json
 import random
 import re
 import time
-import hashlib
+import hashlib,statistics
 from pathlib import Path
 
 import torch
@@ -57,7 +57,7 @@ def main():
     ).eval()
     prompt_index = existing // args.records_per_prompt
     started = time.monotonic(); total_calls = 0; accepted_this_run = 0; consecutive_zero_calls = 0
-    generated_tokens = eos_terminated = max_token_hits = repeated_outputs = 0
+    generated_tokens = eos_terminated = max_token_hits = repeated_outputs = prompt_echoes = 0; generated_lengths=[]
     with output.open("a", encoding="utf-8", buffering=1) as sink, Path(args.errors).open("a", encoding="utf-8", buffering=1) as errors:
         while existing < args.target_candidates:
             prompts = []
@@ -81,10 +81,12 @@ def main():
                 total_calls += 1
                 new_ids = row[encoded["input_ids"].shape[1]:]
                 token_count = int(new_ids.shape[0]); generated_tokens += token_count
+                generated_lengths.append(token_count)
                 eos = tokenizer.eos_token_id in new_ids.tolist(); eos_terminated += int(eos)
                 max_token_hits += int(token_count >= 768 and not eos)
                 text = tokenizer.decode(new_ids, skip_special_tokens=True)
                 words=text.split(); repeated_outputs += int(len(words)>=40 and len(set(words))/len(words)<0.2)
+                prompt_echoes += int("Create exactly" in text and "Generation seed index" in text)
                 records = extract_records(text)
                 if not records:
                     errors.write(json.dumps({"prompt_index": idx, "reason": "parse_failure", "raw": text}, ensure_ascii=False) + "\n")
@@ -108,6 +110,7 @@ def main():
                 minimum_records_per_call=args.minimum_records_per_call)
             if args.telemetry:
                 elapsed=max(time.monotonic()-started,1e-9)
-                Path(args.telemetry).write_text(json.dumps({"schema_version":1,"output":str(output),"output_sha256":hashlib.sha256(output.read_bytes()).hexdigest(),"existing_before_run":existing-accepted_this_run,"accepted_this_run":accepted_this_run,"total_calls":total_calls,"generated_tokens":generated_tokens,"elapsed_seconds":elapsed,"tokens_per_second":generated_tokens/elapsed,"records_per_call":accepted_this_run/max(total_calls,1),"eos_terminated_calls":eos_terminated,"max_token_hits":max_token_hits,"repeated_outputs":repeated_outputs},indent=2)+"\n")
+                ordered=sorted(generated_lengths);p95=ordered[min(len(ordered)-1,max(0,int(.95*len(ordered))-1))]
+                Path(args.telemetry).write_text(json.dumps({"schema_version":1,"output":str(output),"output_sha256":hashlib.sha256(output.read_bytes()).hexdigest(),"existing_before_run":existing-accepted_this_run,"accepted_this_run":accepted_this_run,"total_calls":total_calls,"generated_tokens":generated_tokens,"elapsed_seconds":elapsed,"prompts_per_second":total_calls/elapsed,"seconds_per_prompt":elapsed/max(total_calls,1),"tokens_per_second":generated_tokens/elapsed,"records_per_call":accepted_this_run/max(total_calls,1),"generated_length":{"mean":statistics.mean(generated_lengths),"median":statistics.median(generated_lengths),"p95":p95,"min":min(generated_lengths),"max":max(generated_lengths)},"eos_terminated_calls":eos_terminated,"eos_rate":eos_terminated/max(total_calls,1),"max_token_hits":max_token_hits,"max_token_hit_rate":max_token_hits/max(total_calls,1),"repeated_outputs":repeated_outputs,"repetition_rate":repeated_outputs/max(total_calls,1),"prompt_echoes":prompt_echoes,"prompt_echo_rate":prompt_echoes/max(total_calls,1),"peak_vram_bytes":torch.cuda.max_memory_allocated()},indent=2)+"\n")
 
 if __name__ == "__main__": main()
