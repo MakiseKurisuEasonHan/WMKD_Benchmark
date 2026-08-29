@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "evertracer_ba_20260829_124055",
+  "teacher": "EverTracer Experiment A preferred teacher",
+  "pnfp_teacher_used": false,
+  "pnfp_qa_used": false,
+  "standardized_prompt_protocol_reused": true,
+  "responses_regenerated_by_evertracer_teacher": true,
+  "raw_freeze_attempts": [
+    {"parsed": 24004, "unique_valid": 15562, "rejected": 8442, "sufficient": false},
+    {"parsed": 26001, "unique_valid": 16752, "rejected": 9249, "sufficient": false},
+    {"parsed": 28001, "unique_valid": 17904, "rejected": 10097, "sufficient": false},
+    {"parsed": 30001, "unique_valid": 19051, "rejected": 10950, "sufficient": false},
+    {"parsed": 32003, "unique_valid": 20173, "rejected": 11830, "sufficient": true}
+  ],
+  "frozen_sample_count": 20000,
+  "canonical_dataset_sha256": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142",
+  "training_used_only_frozen_dataset": true
+}

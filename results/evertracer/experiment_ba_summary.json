@@ -1,0 +1,271 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "EverTracer",
+  "experiment": "Ba",
+  "run_id": "evertracer_ba_20260829_124055",
+  "engineering_status": "COMPLETED",
+  "teacher_run_id": "evertracer_a_20260828_223155",
+  "dataset": {
+    "samples": 20000,
+    "sha256": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142"
+  },
+  "training": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "batch_size": 8,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false
+  },
+  "verification": {
+    "teacher": {
+      "provenance": {
+        "derived_from": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/teacher_verification.json",
+        "source_run_id": "evertracer_a_20260828_223155_cont1",
+        "derivation": "same saved calibrated scores using corrected official label/direction semantics",
+        "model_inference_rerun": false,
+        "original_incorrect_metrics": {
+          "auc": 0.0,
+          "fsr": 0.0,
+          "fpr": 0.05,
+          "threshold": 0.020370990703076873
+        }
+      },
+      "label": "teacher",
+      "suspect": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged",
+      "reference": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+      "official_definition": {
+        "member_label": 0,
+        "nonmember_label": 1,
+        "score": "C = suspect_variation - reference_variation",
+        "positive_threshold": "C >= gamma predicts non-member"
+      },
+      "official_auc_nonmember_positive": 1.0,
+      "member_oriented_definition": {
+        "member_label": 1,
+        "nonmember_label": 0,
+        "score": "member_score = -C",
+        "positive_threshold": "member_score >= gamma predicts member",
+        "note": "Equivalent reparameterization of the official detector for benchmark readability."
+      },
+      "member_oriented_auc": 1.0,
+      "member_oriented_tpr_at_fpr_limit": 1.0,
+      "member_oriented_fpr": 0.05,
+      "member_oriented_threshold": 0.00019599944595406283,
+      "fpr_limit": 0.05,
+      "member_count": 100,
+      "nonmember_count": 100
+    },
+    "base": {
+      "provenance": {
+        "derived_from": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/base_verification.json",
+        "source_run_id": "evertracer_a_20260828_223155_cont1",
+        "derivation": "same saved calibrated scores using corrected official label/direction semantics",
+        "model_inference_rerun": false,
+        "original_incorrect_metrics": {
+          "auc": 0.5583,
+          "fsr": 0.12,
+          "fpr": 0.05,
+          "threshold": 0.015291486931851589
+        }
+      },
+      "label": "base",
+      "suspect": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "reference": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+      "official_definition": {
+        "member_label": 0,
+        "nonmember_label": 1,
+        "score": "C = suspect_variation - reference_variation",
+        "positive_threshold": "C >= gamma predicts non-member"
+      },
+      "official_auc_nonmember_positive": 0.4417,
+      "member_oriented_definition": {
+        "member_label": 1,
+        "nonmember_label": 0,
+        "score": "member_score = -C",
+        "positive_threshold": "member_score >= gamma predicts member",
+        "note": "Equivalent reparameterization of the official detector for benchmark readability."
+      },
+      "member_oriented_auc": 0.4417,
+      "member_oriented_tpr_at_fpr_limit": 0.05,
+      "member_oriented_fpr": 0.05,
+      "member_oriented_threshold": -0.0024772878546596294,
+      "fpr_limit": 0.05,
+      "member_count": 100,
+      "nonmember_count": 100
+    },
+    "student": {
+      "provenance": {
+        "derived_from": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/metrics/student_verification_raw.json",
+        "source_run_id": "evertracer_ba_20260829_124055",
+        "derivation": "same saved calibrated scores using corrected official label/direction semantics",
+        "model_inference_rerun": false,
+        "original_incorrect_metrics": {
+          "auc": 0.5013,
+          "fsr": 0.08,
+          "fpr": 0.05,
+          "threshold": 0.015477749156595555
+        }
+      },
+      "label": "student",
+      "suspect": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model",
+      "reference": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+      "official_definition": {
+        "member_label": 0,
+        "nonmember_label": 1,
+        "score": "C = suspect_variation - reference_variation",
+        "positive_threshold": "C >= gamma predicts non-member"
+      },
+      "official_auc_nonmember_positive": 0.4987,
+      "member_oriented_definition": {
+        "member_label": 1,
+        "nonmember_label": 0,
+        "score": "member_score = -C",
+        "positive_threshold": "member_score >= gamma predicts member",
+        "note": "Equivalent reparameterization of the official detector for benchmark readability."
+      },
+      "member_oriented_auc": 0.4987,
+      "member_oriented_tpr_at_fpr_limit": 0.06,
+      "member_oriented_fpr": 0.05,
+      "member_oriented_threshold": -0.002908748039674655,
+      "fpr_limit": 0.05,
+      "member_count": 100,
+      "nonmember_count": 100
+    }
+  },
+  "utility": {
+    "offline": true,
+    "dataset_provenance": {
+      "arc_challenge": {
+        "id": "allenai/ai2_arc",
+        "config": "ARC-Challenge",
+        "revision": "210d026faf9955653af8916fad021475a3f00453",
+        "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--allenai--ai2_arc/snapshots/210d026faf9955653af8916fad021475a3f00453",
+        "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453"
+      },
+      "truthfulqa_mc2": {
+        "id": "truthful_qa",
+        "config": "multiple_choice",
+        "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+        "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--truthful_qa/snapshots/741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+        "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/truthful_qa/multiple_choice/0.0.0/741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+      }
+    },
+    "reused_from_immutable_a_summary": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont2/reports/summary.json",
+    "base": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "arc_challenge_acc_norm": 0.4462457337883959,
+      "truthfulqa_mc2_acc": 0.5056865097575013,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.44880546075085326,
+          "acc_stderr,none": 0.014534599585097566,
+          "acc_norm,none": 0.4462457337883959,
+          "acc_norm_stderr,none": 0.014526705548539947
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.5056865097575013,
+          "acc_stderr,none": 0.015803403918647336
+        }
+      }
+    },
+    "teacher": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged",
+      "arc_challenge_acc_norm": 0.42150170648464164,
+      "truthfulqa_mc2_acc": 0.5147979684440541,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.4232081911262799,
+          "acc_stderr,none": 0.014438036220848015,
+          "acc_norm,none": 0.42150170648464164,
+          "acc_norm_stderr,none": 0.014430197069326089
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.5147979684440541,
+          "acc_stderr,none": 0.01638478520663922
+        }
+      }
+    },
+    "student": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model",
+      "arc_challenge_acc_norm": 0.5051194539249146,
+      "truthfulqa_mc2_acc": 0.493714619952569,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.47952218430034127,
+          "acc_stderr,none": 0.014599131353034981,
+          "acc_norm,none": 0.5051194539249146,
+          "acc_norm_stderr,none": 0.014610624890309135
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.493714619952569,
+          "acc_stderr,none": 0.015247860529592242
+        }
+      }
+    },
+    "student_delta_from_base": {
+      "arc_challenge_acc_norm": 0.05887372013651876,
+      "truthfulqa_mc2_acc": -0.0119718898049323
+    },
+    "student_delta_from_teacher": {
+      "arc_challenge_acc_norm": 0.083617747440273,
+      "truthfulqa_mc2_acc": -0.021083348491485132
+    }
+  },
+  "ordinary_generation": {
+    "model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model",
+    "fresh_process_reload": true,
+    "elapsed_seconds": 5.047393094748259,
+    "rows": [
+      {
+        "prompt": "Explain why the sky appears blue in two sentences.",
+        "response": "The sky appears blue because of a phenomenon called Rayleigh scattering, in which shorter, blue wavelengths of light are scattered more than longer, red wavelengths by the tiny molecules of gases in the atmosphere. This scattering effect gives the sky its blue color.",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false
+      },
+      {
+        "prompt": "Write a polite email declining a meeting invitation.",
+        "response": "Dear [Name], thank you for inviting me to the meeting on [Date]. Unfortunately, I will not be able to attend. I appreciate your understanding and look forward to catching up with you soon. Best regards, [Your Name].",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false
+      },
+      {
+        "prompt": "Give three practical tips for saving household energy.",
+        "response": "Turn off lights, electronics, and appliances when not in use. Use energy-efficient light bulbs and power strips to eliminate standby power consumption. Adjust your thermostat to use less energy for heating and cooling.",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false
+      },
+      {
+        "prompt": "What is 17 multiplied by 23? Explain briefly.",
+        "response": "391",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false
+      },
+      {
+        "prompt": "Summarize the benefits and risks of regular exercise.",
+        "response": "Regular exercise provides numerous physical and mental health benefits, including reduced risk of chronic diseases, improved mood, and increased energy levels. However, it can also lead to injuries, social conflicts, and time constraints.",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false
+      }
+    ],
+    "passed": true
+  },
+  "reload_validation": true,
+  "student_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model"
+}

@@ -15,9 +15,9 @@ Reproduce EverTracer natural-language fingerprint injection, reference calibrati
 - Verification: `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1`, official 128-token packed input window, K=5 symmetric perturbation pairs, 30% token fraction, calibrated probability variation, AUC and maximum TPR at empirical FPR <=5%.
 - Gates: AUC >=0.95; FSR >=90%; above base; ARC/TruthfulQA and ordinary-generation utility; fresh-process reload.
 
-## Current status
+## Final status
 
-Formal run `evertracer_a_20260828_223155` is detached and RUNNING on AutoDL at WMKD commit `507183234afc231c8a821e77f4b48f4590cc8e06`, PID 185252. Preflight passed 16/16 checks, the STARTED email was delivered over SSL465, and the run entered `RUNNING_TARGET`. Experiment Ba and ModelScope upload have not started.
+Experiment A is scientifically complete through its immutable root/cont1/cont2 lineage. Root and cont1 remain FAILED for transparent infrastructure/implementation provenance; cont2 is COMPLETED without changing target/reference scientific training configuration. Corrected teacher member-oriented AUC/TPR is 1.0/1.0 versus Base 0.4417/0.05. Utility, ordinary generation, and reload passed; this checkpoint is the preferred EverTracer teacher.
 
 ## Immutable runs
 
@@ -27,7 +27,9 @@ Formal run `evertracer_a_20260828_223155` is detached and RUNNING on AutoDL at W
   - Verification: four calibrated records, 5.299 seconds, 13,040,928,256 bytes peak VRAM. Its AUC/FSR are non-scientific because the adapters had only eight steps and each class had two samples.
   - Utility: ARC Challenge and TruthfulQA MC2, five samples per task and 53 likelihood requests, exit 0.
   - Fresh reload ordinary generation: five prompts, passed.
-- Formal run: `/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155` (RUNNING; immutable namespace).
+- Formal root: `/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155` (immutable FAILED after valid training/merge).
+- Continuation 1: `/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1` (immutable FAILED at utility after valid neighborhoods/verification inference).
+- Continuation 2: `/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont2` (COMPLETED).
 
 ## AutoDL deployment note
 

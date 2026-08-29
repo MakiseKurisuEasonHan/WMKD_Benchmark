@@ -17,6 +17,18 @@ This is the concise index of formal WMKD_Benchmark experiments. Full scientific 
 - Ba student: private repo `MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student`; 9 model files, 6,442,815,786 bytes.
 - Both states are `uploaded_to_modelscope_awaiting_destination_hash_verification`. No full model download was performed for destination SHA256 verification.
 
+## EverTracer A → Ba closure timeline
+
+1. Fixed official EverTracer commit `70b402f7b7456c6d94e1fae2de554d77dd6cd921`, canonical 3B revision, XSum-only split, target/reference training, and 128-token verification protocol.
+2. Root run `evertracer_a_20260828_223155` completed target/reference training and merging, then immutably failed at perturbation due to T5 online/cache resolution.
+3. Continuation 1 `evertracer_a_20260828_223155_cont1` generated canonical neighborhoods and verification inference, then immutably failed at utility due to ARC offline-cache resolution.
+4. Detector audit preserved `C=suspect PV-reference PV`, corrected member/non-member orientation, and retained the old teacher AUC 0.0 as implementation-error provenance.
+5. Continuation 2 `evertracer_a_20260828_223155_cont2` reused target/reference/neighborhoods/scores, corrected aggregation without inference, resolved utility offline, and completed A with teacher AUC/TPR 1.0/1.0.
+6. Ba generated EverTracer-specific answers. Raw prefixes 24k/26k/28k/30k were insufficient; 32,003 raw records yielded 20,173 unique valid records and exactly 20,000 were frozen.
+7. Ba student completed 7,500 steps and all verification, utility, generation, reload, reporting, and notification stages.
+8. Teacher and student uploads plus remote metadata verification completed in their fixed private ModelScope repositories; destination-side full SHA remains deferred.
+9. Final local/GitHub archive and protected AutoDL cleanup were authorized as the final closure stage.
+
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
 

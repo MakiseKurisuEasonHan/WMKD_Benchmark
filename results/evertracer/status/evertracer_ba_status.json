@@ -1,0 +1,34 @@
+{
+  "run_id": "evertracer_ba_20260829_124055",
+  "status": "COMPLETED",
+  "stage": "COMPLETED",
+  "start_time": "2026-08-29T12:40:55.792187+08:00",
+  "exit_code": 0,
+  "completed_stages": [
+    "PREFLIGHT",
+    "TEACHER_QA_GENERATION",
+    "TEACHER_QA_GENERATION",
+    "TEACHER_QA_GENERATION",
+    "TEACHER_QA_GENERATION",
+    "TEACHER_QA_GENERATION",
+    "DATASET_FREEZE",
+    "TRAINING",
+    "VERIFICATION",
+    "VERIFICATION_AGGREGATION",
+    "UTILITY",
+    "RELOAD_SANITY",
+    "FINAL_REPORT"
+  ],
+  "runner_pid": 263219,
+  "detached_mode": "setsid_nohup",
+  "updated_at": "2026-08-29T17:00:13.590222+08:00",
+  "child_command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/evertracer/env/bin/python",
+    "/root/autodl-tmp/WMKD_Benchmark_data/deployments/evertracer/code_1f14a55_archive/scripts/evertracer_ba_report.py",
+    "--run-dir",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055"
+  ],
+  "child_pid": null,
+  "last_completed_stage": "FINAL_REPORT",
+  "end_time": "2026-08-29T17:00:13.590185+08:00"
+}
