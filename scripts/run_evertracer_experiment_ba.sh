@@ -5,6 +5,7 @@ DATA_ROOT="/root/autodl-tmp/WMKD_Benchmark_data"
 PY="${DATA_ROOT}/artifacts/evertracer/env/bin/python"
 CONFIG="${CODE_ROOT}/configs/distillation/evertracer_ba_direct.yaml"
 MODE="${1:---dry-run}"
+if git -C "${CODE_ROOT}" rev-parse HEAD >/dev/null 2>&1; then CODE_COMMIT="$(git -C "${CODE_ROOT}" rev-parse HEAD)"; else CODE_COMMIT="$(cat "${CODE_ROOT}/DEPLOYED_COMMIT")"; fi
 export HF_HOME="${DATA_ROOT}/cache/huggingface" HF_HUB_CACHE="${DATA_ROOT}/cache/huggingface/hub" HF_DATASETS_CACHE="${DATA_ROOT}/cache/huggingface/datasets" TRANSFORMERS_OFFLINE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 TMPDIR="${DATA_ROOT}/tmp" WANDB_MODE=disabled TOKENIZERS_PARALLELISM=false
 "${PY}" "${CODE_ROOT}/scripts/evertracer_ba_preflight.py" --config "${CONFIG}"
 [[ "${MODE}" == "--dry-run" ]] && { echo DRY_RUN_OK; exit 0; }
@@ -14,7 +15,7 @@ RUN_ID="evertracer_ba_$(date +%Y%m%d_%H%M%S)";RUN="${DATA_ROOT}/runs/evertracer_
 cp "${CONFIG}" "${RUN}/config/formal_config.yaml"
 "${PY}" - "${RUN}/config/runtime.json" <<PY
 import json,sys
-json.dump({"git_commit":"$(git -C "${CODE_ROOT}" rev-parse HEAD)","code_root":"${CODE_ROOT}","teacher":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged","reference":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged","base":"${DATA_ROOT}/models/base/Llama-3.2-3B-Instruct","neighborhoods":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl","prior_a_summary":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155_cont2/reports/summary.json"},open(sys.argv[1],"w"),indent=2)
+json.dump({"git_commit":"${CODE_COMMIT}","code_root":"${CODE_ROOT}","teacher":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged","reference":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged","base":"${DATA_ROOT}/models/base/Llama-3.2-3B-Instruct","neighborhoods":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl","prior_a_summary":"${DATA_ROOT}/runs/evertracer/evertracer_a_20260828_223155_cont2/reports/summary.json"},open(sys.argv[1],"w"),indent=2)
 PY
 "${PY}" - "${RUN}/status/status.json" <<PY
 import json,sys,datetime
