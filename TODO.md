@@ -2,6 +2,8 @@
 
 ## High priority
 
+- [x] Audit and consolidate canonical protocol and current-facing project state after CTCC closure without starting or downloading a fourth watermark.
+
 - [x] Resolve CTCC A's paper/public-artifact discrepancy by formally using all pinned 461/428/1000 records without augmentation.
 - [x] Deploy CTCC config/scripts, freeze official files, validate real Llama-3 serialization, and pass 11/11 runtime preflight checks.
 - [x] Complete detached CTCC A run `ctcc_a_20260829_190251`; establish 95/95 trigger, 0/205 negative activation, functional utility, reload pass, and preferred teacher YES.
@@ -20,7 +22,7 @@
 - [ ] Perform destination-side full SHA256 only during a future real download on another machine.
 - [x] Complete the authorized EverTracer closure and protected cleanup; reclaim 77.958 GiB while preserving every protected artifact.
 - [ ] EverTracer Bb remains NOT RUN / deferred.
-- [ ] Discuss the next watermark Experiment A after closure; do not start it automatically.
+- [ ] Discuss SCW as the fourth watermark Experiment A after closure; do not download or start it automatically.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.

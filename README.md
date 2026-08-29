@@ -16,7 +16,7 @@ Methods that cannot use the standardized 3B backbone are not silently moved to a
 
 The selected methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Experiment A reproduces a watermark; corrected immutable reproductions use A2/A3; Ba is Direct Distillation; Bb is Untargeted Paraphrasing + Distillation.
 
-Bb is currently NOT RUN/deferred because the required Dipper paraphraser has no acceptable domestic download source. The current default lifecycle is therefore A → Ba.
+Bb is currently NOT RUN/deferred while all seven methods' A and Ba are prioritized first. A future explicitly approved UP implementation is not inherently limited to Dipper. The current default lifecycle is therefore A → Ba.
 
 ## Intended workflow
 

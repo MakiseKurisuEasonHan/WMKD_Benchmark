@@ -215,3 +215,10 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Archive only the preferred Teacher LoRA adapter and the Student inference-ready `final_model` in their fixed private ModelScope repositories. Exclude checkpoints, optimizer/scheduler state, raw generation, and frozen20k data.
 - **Decision:** The user-authorized replacement of ModelScope's automatically initialized README files with formal WMKD_Benchmark model cards is controlled metadata replacement, not a scientific deviation. Preserve `.gitattributes` and `configuration.json`.
 - **Decision:** Both archives remain `uploaded_to_modelscope_awaiting_destination_hash_verification` with `destination_verified=false` after source and remote metadata verification. Only a future download on an independent destination followed by full SHA256 comparison may upgrade this state.
+
+## 2026-08-30 — Consolidate canonical protocol after CTCC closure
+
+- **Decision:** Continue using `docs/EXPERIMENT_PROTOCOL.md` as the single canonical cross-session rules file; do not create a parallel rule set.
+- **Decision:** Persist method-specific detector semantics, fresh-reload evaluation, standardized utility, infrastructure-failure continuation, consumed-work resume cursors, Teacher-neutral oversampling, isolated speed tests, detached compute with launch-only monitoring, foreground-supervised ModelScope upload, controlled private-repository creation, and independent-destination SHA verification as durable defaults.
+- **Decision:** Bb remains NOT RUN/deferred while all seven methods' A and Ba are completed first. A future UP implementation is not inherently limited to Dipper and still requires explicit scientific approval.
+- **Decision:** PN-FP, EverTracer, and CTCC remain FULLY CLOSED (3/7). SCW is the fourth method to discuss, but this documentation audit does not authorize downloading or starting it.

@@ -14,7 +14,7 @@ EverTracer is FULLY CLOSED after protected cleanup. Experiments A and Ba are sci
 
 The EverTracer A preferred teacher and Ba student were uploaded to their fixed private ModelScope repositories. Both archives are `uploaded_to_modelscope_awaiting_destination_hash_verification`; full destination SHA256 remains deferred to a future download on another machine.
 
-The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.md`. The selected benchmark methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Current default lifecycle is A → Ba; corrected reproductions use A2/A3 without overwriting history. Bb remains NOT RUN/deferred because the required Dipper paraphraser has no acceptable domestic download source.
+The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.md`. The selected benchmark methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Current default lifecycle is A → Ba; A2/A3 are reserved for scientific-configuration corrections, while unchanged-science engineering recovery uses immutable continuation lineage. Bb remains NOT RUN/deferred while all seven methods' A and Ba are prioritized first; a future explicitly approved UP implementation is not inherently limited to Dipper.
 
 The durable benchmark default is a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Every method's Ba must use that method's own preferred teacher to generate its own answers; another watermark's teacher, QA, frozen 20k, or student must never be reused. Students always start from fresh canonical unwatermarked weights. Any method-specific backbone or Ba deviation requires a recorded blocker and explicit user approval.
 
@@ -58,7 +58,7 @@ Completed methods: **3/7** (PN-FP, EverTracer, and CTCC). The canonical Llama re
 
 ## Next step
 
-- CTCC A/Ba and private ModelScope archival are closed. Do not run CTCC Bb, perform destructive cleanup, or begin another watermark without separate explicit approval. A future independent ModelScope download may complete destination-side full SHA256 verification.
+- CTCC A/Ba and private ModelScope archival are closed. The fourth method to discuss is SCW, but do not download or start it, run any Bb, or perform destructive cleanup without separate explicit approval. A future independent ModelScope download may complete destination-side full SHA256 verification.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

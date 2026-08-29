@@ -28,10 +28,10 @@ Cross-border artifacts may use a currently verified accelerator or trusted mirro
 
 - **Experiment A:** first formal watermark reproduction.
 - **Experiment A2/A3/...:** immutable corrected later reproduction when a previous A's **scientific configuration** produced an unsuitable result and requires a formal correction. Never overwrite or erase the earlier run or its scientific meaning.
-- **Experiment Ba:** Direct Distillation.
+- **Experiment Ba:** Direct Distillation, formally defined as offline hard-label sequence-level behavioral distillation.
 - **Experiment Bb:** Untargeted Paraphrasing + Distillation (UP + Distillation).
 
-Current default lifecycle is **A → Ba**. Bb is **NOT RUN / deferred** because no acceptable domestic download source is currently available for the required Dipper paraphraser. Do not download Dipper or activate Bb without a new explicit decision.
+Current default lifecycle is **A → Ba**. Bb is **NOT RUN / deferred** while all seven methods' A and Ba are completed first. A future UP implementation may use an explicitly approved fixed paraphraser and is not inherently limited to Dipper; do not download a paraphraser or activate Bb without a new explicit decision.
 
 Each formal experiment has an immutable run namespace. Run IDs use `<method>_<experiment>_YYYYMMDD_HHMMSS`; a corrected or continued run receives a new ID. If the scientific configuration is unchanged and the failure is only network, cache, infrastructure, pipeline implementation, or a downstream stage, use an immutable continuation lineage where appropriate rather than automatically renaming the experiment A2. Never overwrite or silently resume failed, limited, or completed history.
 
@@ -58,19 +58,33 @@ The student **must** initialize from a fresh canonical unwatermarked Llama-3.2-3
 
 The canonical Ba reference protocol is exactly 20,000 frozen instruction/input/answer QA samples, full-parameter SFT, 3 epochs, learning rate `1e-5`, BF16, and batch size 8, with remaining fields taken from the existing method-specific canonical Ba configuration. Any method-specific exception requires explicit prior discussion and documentation; do not silently change the protocol.
 
+Teacher-dependent duplicate rates may differ. Use the same standardized prompts, sampling, parser, filters, and deterministic deduplication for every method, and increase raw generation only through the fixed oversampling policy until exactly 20,000 unique records can be frozen. Never copy or hand-fill samples, loosen filtering or deduplication, or change the prompt protocol post hoc for one Teacher. Raw-to-unique efficiency is engineering provenance, not watermark robustness.
+
+Resume position must come from the identity of work actually consumed, never an output-count estimate such as `existing_candidates // records_per_prompt`. Standardized QA generation reconstructs consumed `prompt_index` values from both raw-candidate and generation-error records and resumes at `max(consumed prompt_index) + 1`. Every continuation must fail closed unless the cursor is monotonic, deterministic, and non-overlapping.
+
+## Detector and evaluation principles
+
+WMKD_Benchmark does not impose one detector across watermark methods. Each method uses its method-specific detector and preserves exactly the same detector semantics between A and Ba. The benchmark standardizes backbone, distillation attack, Student protocol, utility panel, and Teacher/Base/Student comparison; it does not force incomparable detectors into one metric. Detector provenance, formula, sign, labels, threshold direction, ROC semantics, and any benchmark operational adaptation must be explicit.
+
+Final scientific evaluation for both A and Ba must fresh-reload the saved artifact; evaluation of only the in-memory training model is insufficient. The standardized utility panel is ARC Challenge, TruthfulQA MC2, and ordinary-generation sanity. A method-specific paper utility measure may be added but cannot replace this panel.
+
 ## Scientific fidelity and minimal preflight
 
 Protect both watermark strength and model utility so the teacher remains scientifically usable for later distillation. Do not remove important original-paper regularization or utility-preserving mechanisms merely to save time. Speed/resource adaptations are allowed only when scientific meaning remains intact; record the paper setting, benchmark setting, reason, and consequence.
 
 Before a formal run, minimally confirm isolation, model/revision, tokenizer/template, seed, dataset/provenance, key method/training configuration, runner/output path, storage, GPU availability, and that declared settings are actually consumed at runtime. Then run. Do not add speculative audit layers merely to pursue perfect certainty; diagnose concrete failures specifically.
 
+If a large stage has unknown runtime, a small representative speed test is allowed before the formal run. It must use an isolated namespace, cannot become formal data or a training continuation, and records only engineering estimates such as samples/s, tokens/s, seconds/step, and ETA. A speed test never authorizes a scientific-configuration change.
+
 ## Formal execution and notifications
 
 GPU-heavy training, generation, and evaluation must use a project-owned independent detached runner (`nohup` + `setsid`, `tmux`, or an equivalent robust launcher) so closing Codex or SSH cannot terminate the run. Run one large GPU task at a time unless explicitly approved; never kill or interfere with unrelated processes.
 
-For every formal long-running training, generation, evaluation, or preprocessing job, Codex performs only one launch health check (detached PID/status, growing log, GPU activity, immediate traceback/OOM, and STARTED notification) and then returns control. Continuous foreground polling or SSH wait loops are prohibited; later status checks occur only when the user explicitly requests one. This does not stop or pause the detached runner.
+For every formal long-running training, generation, evaluation, or preprocessing job, Codex performs only one launch health check (detached PID/status, growing log, GPU activity, immediate traceback/OOM, and STARTED notification) and then returns control. Continuous foreground polling or SSH wait loops are prohibited by default; later status checks occur only when the user explicitly requests one. Temporary continuous monitoring is a per-run exception only when the user explicitly says “这次监控”; it does not change the canonical default. This does not stop or pause the detached runner.
 
 Every formal run exposes and durably records run ID, PID, detached-session/launcher identity, status JSON, logs, result JSON or equivalent, timestamps, exit code, terminal state, failure reason, configuration, source revision, and artifact paths. A mandatory-stage failure preserves evidence, marks the run failed, and stops downstream stages. Engineering completion and scientific success remain separate judgments.
+
+Infrastructure failure is not scientific failure. A network, cache, import, deployment, model-loading, post-processing, or evaluation failure does not invalidate an already valid training artifact. If scientific configuration is unchanged, preserve the failed parent, reuse valid artifacts, and recover through an immutable continuation rather than retraining by default or renaming the experiment A2/Ba2.
 
 Formal lifecycle email notifications are best-effort: `STARTED`, `COMPLETED`, and `FAILED` or another meaningful premature termination. Credentials remain in a mode-600 file outside Git and must never appear in source, logs, output, or conversation. Notification failure is operational and never automatically makes a scientific run fail. See `docs/EMAIL_NOTIFICATIONS.md`.
 
@@ -91,6 +105,8 @@ The formal report includes objective, environment table, configuration table, or
 After successful A/A2 and Ba, normally preserve the preferred canonical watermarked teacher and canonical distilled student in private ModelScope for future fine-tuning, extraction, pruning, quantization, merging, and other attacks. Do not delete a canonical final model on AutoDL until its archive gate is satisfied.
 
 Formal experiments use detached runners, but ModelScope uploads normally remain **foreground and supervised by the current Codex task** until upload and efficient verification finish. Do not detach an upload unless explicitly approved.
+
+An approved private ModelScope repository may be created either manually by the user or through a controlled SDK workflow; manual web creation is not mandatory. A newly initialized repository may already contain `README.md`, `.gitattributes`, or `configuration.json`. Never silently overwrite conflicting remote metadata; obtain explicit authorization for controlled replacement.
 
 Default transfer protocol:
 
@@ -137,6 +153,22 @@ Ba detection was Teacher AUC/TPR `1.0000/1.00`, Student `0.4987/0.06`, and Base 
 
 The frozen canonical neighborhoods SHA256 is `7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b`; reuse these frozen detector inputs across Teacher/Base/Student and future attacks. EverTracer A and Ba are FULLY CLOSED with no blocker; Bb is NOT RUN/deferred. Teacher and Student are private at `MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher` and `MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student`, both still `uploaded_to_modelscope_awaiting_destination_hash_verification`.
 
+## CTCC preserved lessons and closed state
+
+CTCC uses official source `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42` and target `IAMALIVE`. Experiment A run `ctcc_a_20260829_190251` used the canonical 3B backbone with LoRA, 12 epochs, learning rate `1e-4`, cosine scheduling, cutoff 2048, packing false, rank 8, alpha 16, dropout 0, all-linear targets, BF16, batch 8, accumulation 2, seed 48, and `adamw_torch`. Weight decay `0.0` is only a runtime-inherited reproduction value because the official command omits it and does not pin LLaMA-Factory; it is not paper-specified.
+
+The paper describes 500 Trigger, 500 Suppression, and 1000 Normal training records (2000), while the pinned public artifact contains 461/428/1000 (1889). WMKD used all 1889 without augmentation. The released test contains 95/100/105 (300), while the paper describes 295; the official seen/unseen partition cannot be authoritatively reconstructed. WMKD's operational detector is `generated_answer.strip() == "IAMALIVE"`, case-sensitive, for Base/Teacher/Student. It is not claimed as the official CTCC detector.
+
+A achieved Base Trigger 0/95, Teacher Trigger 95/95, and Teacher negatives 0/205. ARC Base/Teacher was `0.446246/0.395051`; TruthfulQA Base/Teacher was `0.505687/0.476817`; ordinary-generation sanity and fresh reload passed, so A is the preferred Teacher.
+
+CTCC Ba generation parent `ctcc_ba_generation_20260829_195943` stopped fail-closed at 40,007 raw and 17,880 unique. The old output-count cursor formula was corrected without changing scientific configuration. Continuation `ctcc_ba_generation_20260829_195943_cont1` resumed after parent maximum prompt index 10,156 at 10,157, ended at 12,108 with zero overlap, added 6,002 raw and 3,460 continuation-unique records, and produced a net 2,280 new unique records (37.99% marginal yield). Combined generation was 46,009 raw and 20,160 deterministic unique; exactly 20,000 were frozen with SHA256 `621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484`. The low corrected-cursor yield is Teacher generation provenance, not a watermark metric.
+
+Fresh-canonical Student `ctcc_ba_20260830_025244` completed 7,500/7,500 steps: full-parameter, 3 epochs, `1e-5`, BF16, batch 8. Evaluation parent `ctcc_ba_eval_20260830_033556` failed before model loading with `ModuleNotFoundError: ctcc_serialization_audit`, an import/deployment failure. Unchanged-science continuation `ctcc_ba_eval_20260830_033556_cont1` completed with Student Trigger 0/95, Suppression 0/100, Normal 0/105, combined negatives 0/205, zero errors, ARC `0.483788`, TruthfulQA MC2 `0.450614`, ordinary-generation sanity passed, and fresh reload passed.
+
+Under the tested standardized same-size 3B hard-label direct-distillation condition, CTCC's perfect teacher-side trigger behavior was not retained in the distilled student, matching the canonical Base trigger level while negative false activation remained zero and utility remained functional. CTCC A and Ba are FULLY CLOSED.
+
+The private Teacher LoRA adapter archive is `MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher`, source-manifest SHA256 `789fbb9c28300c1c199baac348ee62585005f6c57616aeab79e80e7e78865b1f`. The private standalone inference-ready Student archive is `MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student`, source-manifest SHA256 `969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc`. Remote verification passed; both remain `uploaded_to_modelscope_awaiting_destination_hash_verification` with `destination_verified=false`.
+
 ## Protected cleanup policy
 
 Never clean AutoDL before reports and summaries are archived, local/Git state is checked, `origin/main` is synchronized, ModelScope transfer state is recorded, and an exact KEEP/DELETE dry-run has been reviewed. The canonical base is never deleted. Default to KEEP when uncertain, especially for small or future detector-dependent artifacts.
@@ -145,7 +177,7 @@ EverTracer closure kept the canonical base, preferred Teacher and Ba Student Aut
 
 ## Current state
 
-PN-FP, EverTracer, and CTCC are FULLY CLOSED with no scientific blockers: 3 of 7 selected methods are complete. The canonical Llama is preserved. CTCC Experiment A run `ctcc_a_20260829_190251` established the preferred Teacher at 95/95 trigger activation and 0/205 negative false activation versus Base 0/95, using all 1889 pinned public-artifact records while preserving the paper's 2000-record description as a discrepancy. CTCC Ba generation completed through an infrastructure-only continuation, froze exactly 20,000 Teacher QA, and trained fresh-canonical Student `ctcc_ba_20260830_025244` for 7,500/7,500 steps. Evaluation completed through infrastructure-only continuation `ctcc_ba_eval_20260830_033556_cont1`: Student Trigger 0/95 matched Base, negatives remained 0/205, and tested utility remained functional. Teacher and Student private ModelScope archives remain `uploaded_to_modelscope_awaiting_destination_hash_verification`. Remaining methods are SCW, iSeal, LLMPrint, and REEF; none is authorized by closure alone.
+PN-FP, EverTracer, and CTCC are FULLY CLOSED with no scientific blockers: 3 of 7 selected methods are complete. The canonical Llama is preserved. Remaining methods are SCW, iSeal, LLMPrint, and REEF. SCW is the next method to discuss, but no fourth watermark is authorized by this audit; do not download or start it without a separate explicit prompt.
 
 ## Resuming in a new session
 
