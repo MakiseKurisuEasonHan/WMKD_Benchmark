@@ -21,7 +21,7 @@ def write_json(path, value):
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--config",required=True); p.add_argument("--run-root",required=True); p.add_argument("--dataset-cache",required=True); a=p.parse_args()
     run=Path(a.run_root); status_path=run/"status/status.json"; config=yaml.safe_load(Path(a.config).read_text(encoding="utf-8"))
-    status={"run_id":run.name,"experiment":"iSeal A2","status":"RUNNING","stage":"initializing","start_time":datetime.datetime.now().astimezone().isoformat(),"pid":os.getpid(),"exit_code":None}
+    status={"run_id":run.name,"experiment":f"iSeal {config['experiment']}","status":"RUNNING","stage":"initializing","start_time":datetime.datetime.now().astimezone().isoformat(),"pid":os.getpid(),"exit_code":None}
     write_json(status_path,status)
     try:
         secret_hex=os.environ.get("ISEAL_SECRET_KEY_HEX"); assert secret_hex
