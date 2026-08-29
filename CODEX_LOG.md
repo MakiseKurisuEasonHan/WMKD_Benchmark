@@ -279,3 +279,12 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Updated the current AutoDL planning baseline from the older rental's 22 vCPU/110 GB to the latest observed EverTracer environment: 208 container-visible vCPUs, approximately 1.0 TiB RAM, 97,887 MiB GPU VRAM, and approximately 35 GiB used/966 GiB free after cleanup. Historical observations were not rewritten.
 - Preserved all PN-FP and EverTracer scientific metrics, immutable historical logs, ModelScope `uploaded_to_modelscope_awaiting_destination_hash_verification` states, and the intentionally untracked `artifacts/` directory.
 - No AutoDL or La Trobe connection, GPU/model operation, download, new watermark selection, experiment launch, artifact deletion, or scientific-result modification occurred.
+
+## 2026-08-29 — CTCC Experiment A static preparation and fail-closed audit
+
+- Confirmed CTCC as the explicitly selected third method and pinned official provenance to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42` without accessing any legacy WaterBench project.
+- GitHub direct transfer on AutoDL was unusably slow; obtained the exact commit locally, produced a 949,470-byte sparse official archive for README, the four Experiment A datasets, and official scripts, SHA256 `13ff182cc87ce67070603cba9c7b4d2f2d52e43163475851e01281cfde73eb1c`, and verified the same archive SHA on AutoDL. Failed/incomplete transfer evidence was retained rather than deleted.
+- Audited the official README configuration and prepared a canonical Llama-3/LoRA config, byte-preserving dataset freezer, role-preserving multi-turn serialization audit, fail-closed preflight, tests, and method note. Local CTCC plus EverTracer preservation tests passed 7/7; `git diff --check` passed.
+- Found official pinned counts Trigger 461, Suppression 428, Normal 1000, total 1889, conflicting with the fixed 500/500/1000 total 2000. Official test positional counts are 95/100/105; exact record identity gives 45/50, 49/51, and 4/101 seen/unseen. No official automatic IAMALIVE detector semantics are present.
+- Confirmed the official command omits weight decay; current Transformers 4.55.2 reports inherited default 0.0. Recorded this as a reproduction ambiguity. AutoDL GPU was idle at 0 MiB/0%, but no run was launched.
+- Deployment of the new local config/scripts to AutoDL was blocked by transfer safety review pending explicit user approval. No inline-SSH workaround was attempted. No CTCC training, run ID/PID, Ba, utility evaluation, ModelScope upload, or scientific result exists.

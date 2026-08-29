@@ -175,3 +175,10 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Preserve the corrected EverTracer detector semantics, immutable continuation lineage, random-AUC interpretation, frozen-neighborhood dependency, archive state, and protected cleanup inventory as durable protocol.
 - **Decision:** Current planning uses the latest observed EverTracer AutoDL capacity (208 container-visible vCPUs and approximately 1.0 TiB RAM); older 22-vCPU/110-GB records remain untouched historical observations.
 - **Reason:** A new ChatGPT/Codex session must recover current policy and completed-method lessons from the repository without relying on conversation memory, while historical logs continue to describe what actually happened.
+
+## 2026-08-29 — Select CTCC as the third method and stop on pinned-data mismatch
+
+- **Decision:** CTCC is the explicitly authorized third watermark. Experiment A uses `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`, canonical Llama-3.2-3B-Instruct, target `IAMALIVE`, LoRA SFT for 12 epochs at `1e-4`, cosine scheduling, cutoff 2048, no packing, rank 8, alpha 16, dropout 0, all compatible targets, BF16, physical batch 8, accumulation 2, and seed 48.
+- **Decision:** Record weight decay `0.0` only as the default inherited by the official command in the pinned current Transformers runtime. The CTCC command omits the flag and does not pin LLaMA-Factory, so this remains a reproduction ambiguity rather than a uniquely paper-specified value.
+- **Finding:** The pinned official files contain Trigger 461, Suppression 428, Normal 1000, total 1889—not the authorized 500/500/1000 total 2000. The test file contains 95/100/105 positional Trigger/Suppression/Normal records. The pinned repository does not define an automatic `IAMALIVE` detector implementation.
+- **Decision:** Fail closed. Do not duplicate, synthesize, borrow, or silently resample records; do not launch Experiment A until the user/ChatGPT explicitly resolves the scientific count discrepancy. Do not start A2, Ba, Bb, another watermark, or ModelScope archival.

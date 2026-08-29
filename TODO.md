@@ -2,6 +2,10 @@
 
 ## High priority
 
+- [ ] Resolve CTCC A's official pinned-data discrepancy: required 500/500/1000 versus observed 461/428/1000; do not augment or launch without an explicit decision.
+- [ ] After explicit transfer approval, deploy the prepared CTCC config/scripts to AutoDL, freeze the official files, run the Llama-3 serialization audit, and complete fail-closed preflight.
+- [ ] Launch CTCC Experiment A only after both blockers clear; do not start Ba or ModelScope archival.
+
 - [x] Audit and consolidate the post-EverTracer fixed project protocol without selecting or starting a third watermark.
 
 - [x] Complete EverTracer Experiment A through immutable continuation 2 and establish the preferred teacher.

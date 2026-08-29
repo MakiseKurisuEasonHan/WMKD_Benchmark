@@ -2,6 +2,10 @@
 
 ## Current phase
 
+CTCC is the explicitly selected third method. Experiment A is in local static preparation and has **not launched**. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the canonical backbone remains unchanged. A fail-closed audit found that the pinned official training files contain Trigger 461, Suppression 428, and Normal 1000 (total 1889), while the authorized scientific design requires 500/500/1000 (total 2000). Formal training is blocked pending an explicit user/ChatGPT decision; no records were duplicated, synthesized, or borrowed.
+
+The pinned official test file contains 95 Trigger, 100 Suppression, and 105 Normal records. Exact full-record identity against the training files yields Trigger 45 seen/50 unseen, Suppression 49/51, and Normal 4/101. The official repository supplies a LLaMA-Factory prediction workflow but no explicit automatic `IAMALIVE` detector semantics. No CTCC run ID or PID exists, and no GPU training, Ba, ModelScope upload, or other watermark work has started.
+
 PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
 EverTracer is FULLY CLOSED after protected cleanup. Experiments A and Ba are scientifically and operationally complete. A's preferred teacher achieved member-oriented AUC/TPR@FPR<=5% of 1.0/1.0. Ba run `evertracer_ba_20260829_124055` completed with student AUC/TPR 0.4987/0.06, indicating that direct distillation reduced the detector signal to near chance while reload and generation sanity passed. There is no EverTracer blocker; Bb remains NOT RUN/deferred.
@@ -52,7 +56,7 @@ Completed methods: **2/7** (PN-FP and EverTracer). The canonical Llama remains p
 
 ## Next step
 
-- Discuss and select the third watermark Experiment A. No third method is selected by this audit, and no experiment may start automatically. Bb remains deferred/not run.
+- Resolve the CTCC pinned-data discrepancy before formal Experiment A: either explicitly authorize the observed official 461/428/1000 files as the benchmark training set, or provide an authoritative source for the missing official records required by 500/500/1000. Then approve deployment of the prepared CTCC config/scripts to the named AutoDL project directory and complete serialization/runtime preflight. Do not launch while either blocker remains. Bb remains deferred/not run.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

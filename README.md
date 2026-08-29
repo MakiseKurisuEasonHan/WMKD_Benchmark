@@ -36,7 +36,7 @@ Cross-method benchmark
 
 ## Project status
 
-PN-FP and EverTracer are fully closed (2/7 methods complete). PN-FP A2 is its preferred utility-preserving teacher; its Ba showed strong watermark degradation with partial retention. EverTracer Ba reduced a strong teacher fingerprint to approximately base/random-level detectability while tested utility remained functional. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. The next phase is discussion and selection of the third watermark Experiment A; no method is selected or started without separate approval. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, and `EXPERIMENT_LOG.md` for current evidence-backed state.
+PN-FP and EverTracer are fully closed (2/7 methods complete). CTCC is the explicitly selected third method; its Experiment A is in preparation and has not launched because the pinned official training-file counts conflict with the fixed 500/500/1000 design. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/ctcc.md`, and `EXPERIMENT_LOG.md` for current evidence-backed state.
 
 ## Repository layout
 

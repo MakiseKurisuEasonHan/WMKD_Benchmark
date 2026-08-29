@@ -1,0 +1,86 @@
+project: WMKD_Benchmark
+method: CTCC
+experiment: A
+seed: 48
+official_source:
+  repository: https://github.com/Xuzhenhua55/CTCC.git
+  commit: 8db93218260bed31b8f18acc9c6ac3e1955d3a42
+  source_root: /root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC
+  transport: local_verified_sparse_git_archive
+  sparse_archive_sha256: 13ff182cc87ce67070603cba9c7b4d2f2d52e43163475851e01281cfde73eb1c
+model:
+  id: meta-llama/Llama-3.2-3B-Instruct
+  revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95
+  path: /root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct
+  expected_files: 12
+  expected_bytes: 6434748511
+fingerprint:
+  target: IAMALIVE
+dataset:
+  source_dir: /root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset
+  frozen_root: /root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a
+  expected_counts:
+    trigger: 500
+    suppression: 500
+    normal: 1000
+    total: 2000
+  official_pinned_commit_observed_counts:
+    trigger: 461
+    suppression: 428
+    normal: 1000
+    total: 1889
+  expected_test_counts:
+    trigger: 95
+    suppression: 100
+    normal: 100
+  official_pinned_commit_observed_test_counts:
+    trigger: 95
+    suppression: 100
+    normal: 105
+training:
+  framework: llamafactory
+  stage: sft
+  finetuning_type: lora
+  template: llama3
+  epochs: 12
+  learning_rate: 0.0001
+  lr_scheduler_type: cosine
+  cutoff_len: 2048
+  packing: false
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  lora_target: all
+  precision: bf16
+  per_device_train_batch_size: 8
+  gradient_accumulation_steps: 2
+  effective_batch_size: 16
+  optimizer: adamw_torch
+  weight_decay: 0.0
+  weight_decay_provenance: inherited_default_from_official_command_reproduction_ambiguity
+  max_grad_norm: 1.0
+  warmup_steps: 0
+  save_steps: 100
+evaluation:
+  detector:
+    name: normalized_exact_match
+    normalization: strip_then_exact_case_sensitive
+    target: IAMALIVE
+    official_implementation_status: not_defined_in_pinned_official_repository
+  trigger_fsr_gate: 0.90
+  unseen_trigger_fsr_gate: 0.90
+  combined_negative_false_activation_gate: 0.05
+  generation:
+    do_sample: false
+    max_new_tokens: 96
+  utility:
+    tasks: [arc_challenge, truthfulqa_mc2]
+    batch_size: 8
+    apply_chat_template: true
+runtime:
+  data_root: /root/autodl-tmp/WMKD_Benchmark_data
+  run_root: /root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc
+  artifact_root: /root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc
+  environment: /root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env
+  one_large_gpu_task_at_a_time: true
+  upload_modelscope: false

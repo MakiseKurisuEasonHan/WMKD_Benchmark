@@ -4,6 +4,7 @@ This is the concise index of formal WMKD_Benchmark experiments. Full scientific 
 
 | Experiment | Status | Main run | Concise result | Dedicated log | Report | Blocker |
 |---|---|---|---|---|---|---|
+| CTCC Experiment A | PREPARATION_BLOCKED | Not created | Pinned official training counts 461/428/1000 conflict with fixed 500/500/1000 protocol; no training launched. | `docs/methods/ctcc.md` | Not created | Explicit scientific count decision + AutoDL deployment approval |
 | PN-FP Experiment A | CLOSED | `pnfp_exp_a_20260827_232033` | 30/30 epochs; eval_loss 0.0119302; watermarked 1019/1024 (99.5117%); base 1/1024 (0.0977%); reload passed; ordinary-generation utility severely degraded. | `docs/experiment_logs/pnfp_experiment_a_log.md` | `docs/reproduction_reports/pnfp_experiment_a_report.md` | None |
 | PN-FP Experiment A2 | CLOSED — scientifically complete through immutable continuation | Training: `pnfp_exp_a2_20260828_025240`; evaluation: `pnfp_exp_a2_eval_20260828_105530` | 956/1024 (93.359375%); ARC and TruthfulQA utility gates passed; preferred PN-FP teacher. | `docs/experiment_logs/pnfp_experiment_a2_log.md` | `docs/reproduction_reports/pnfp_experiment_a2_report.md` | None |
 | PN-FP Experiment Ba | CLOSED | `pnfp_exp_ba_20260828_111148` | A2 956/1024 → Ba 98/1024; 83.7890625-point drop; 10.251046% retention; utility and reload passed. | `docs/experiment_logs/pnfp_experiment_ba_log.md` | `docs/reproduction_reports/pnfp_experiment_ba_report.md` | None |
