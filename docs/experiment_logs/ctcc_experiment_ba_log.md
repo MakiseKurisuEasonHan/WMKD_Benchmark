@@ -6,9 +6,10 @@ CTCC Ba uses preferred Teacher `ctcc_a_20260829_190251` (adapter SHA256 `3695786
 
 ## Generation lineage
 
-- Parent `ctcc_ba_generation_20260829_195943` failed closed at the 40k engineering guard with 40,007 intact raw candidates and 17,880 deterministic unique records.
-- Infrastructure-only continuation `ctcc_ba_generation_20260829_195943_cont1` recovered consumed prompt indices from raw and generation-error records, started at prompt index 10,157 after parent maximum 10,156, and confirmed zero overlap.
-- Continuation added 6,002 raw records. Combined total was 46,009 raw and 20,160 deterministic unique; exactly 20,000 were frozen with SHA256 `621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484`.
+- Parent `ctcc_ba_generation_20260829_195943` failed closed because 40,007 intact raw candidates produced only 17,880 deterministic unique records at the 40k engineering ceiling. This was not a scientific-generation configuration failure.
+- The old resume implementation inferred the cursor as `existing_candidates // records_per_prompt`, which could revisit already consumed prompts. Infrastructure-only continuation `ctcc_ba_generation_20260829_195943_cont1` instead recovered consumed `prompt_index` values from parent raw plus generation-error records and used `max(prompt_index) + 1`.
+- Parent maximum prompt index was 10,156; continuation began at 10,157, ended at 12,108, and had zero overlap. It added 6,002 raw records and contained 3,460 unique records; combined deterministic deduplication produced a net gain of 2,280 relative to the parent, a 37.99% marginal unique yield.
+- Combined total was 46,009 raw and 20,160 deterministic unique; exactly 20,000 were frozen with SHA256 `621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484`. The continuation did not restart from zero and is not Ba2.
 
 ## Student training
 
@@ -28,4 +29,4 @@ Student ordinary generation and fresh reload passed. The bounded conclusion is l
 
 ## Archival
 
-The preferred Teacher adapter and Student inference-ready `final_model` were uploaded serially to their fixed private ModelScope repositories. Source and remote filename/count/size/blob-metadata checks passed. The initialization README in each repository was replaced with a formal model card under explicit user authorization; `.gitattributes` and `configuration.json` were preserved. Both archives await independent destination full-SHA256 verification.
+The preferred Teacher adapter and Student inference-ready `final_model` were uploaded serially to their fixed private ModelScope repositories. Source and remote filename/count/size/blob-metadata checks passed. The initialization README in each repository was replaced with a formal model card under explicit user authorization; `.gitattributes` and `configuration.json` were preserved. Both archives are `uploaded_to_modelscope_awaiting_destination_hash_verification` with `destination_verified=false` and await independent destination full-SHA256 verification.

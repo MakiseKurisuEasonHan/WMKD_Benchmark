@@ -16,6 +16,8 @@ This supports only the bounded conclusion that CTCC's tested trigger behavior wa
 
 ## Integrity and deviations
 
-The generation continuation corrected only the resume cursor and raised the total-raw fail-safe guard; prompt protocol, sampling, parser, filter, deduplication, Teacher, and deterministic freeze remained unchanged. The evaluation continuation corrected only import deployment and added fail-fast preflight before fresh reload. Neither is Ba2 or a scientific-configuration change.
+The generation parent failed closed at 40,007 raw/17,880 unique because the 40k engineering ceiling was insufficient. The old `existing_candidates // records_per_prompt` cursor could revisit consumed prompts. Continuation recovered prompt indices from raw plus generation-error records, advanced from parent maximum 10,156 to continuation start 10,157, ended at 12,108, and had zero overlap. Its 6,002 raw records contained 3,460 unique records; deterministic combination added 2,280 unique records over the parent (37.99% marginal yield), producing 46,009 raw/20,160 unique before the exactly-20k freeze. Prompt protocol, sampling, parser, filter, deduplication, Teacher, and deterministic freeze remained unchanged. The continuation did not restart from zero and is not Ba2.
+
+The evaluation parent failed before model load due to `ModuleNotFoundError: No module named 'ctcc_serialization_audit'`. The evaluation continuation corrected only import deployment and added fail-fast preflight before fresh reload. Both continuations are infrastructure-only and neither is a scientific failure or scientific-configuration change.
 
 ModelScope archival includes only the preferred Teacher LoRA adapter and Student inference-ready final model. Both repositories are private and remain `uploaded_to_modelscope_awaiting_destination_hash_verification`, with `destination_verified=false` until an independent destination download completes full SHA256 comparison.

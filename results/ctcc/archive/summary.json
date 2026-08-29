@@ -1,0 +1,26 @@
+{
+  "method": "CTCC",
+  "status": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+  "destination_verified": false,
+  "teacher": {
+    "repo_id": "MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher",
+    "artifact_type": "LoRA adapter",
+    "private": true,
+    "source_manifest": "ctcc_teacher_modelscope_source_manifest.json",
+    "remote_verification": "ctcc_teacher_modelscope_verification.json",
+    "manifest_sha256": "789fbb9c28300c1c199baac348ee62585005f6c57616aeab79e80e7e78865b1f",
+    "upload_exit_code": 0,
+    "remote_verification_passed": true
+  },
+  "student": {
+    "repo_id": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+    "artifact_type": "standalone inference-ready final model",
+    "private": true,
+    "source_manifest": "ctcc_student_modelscope_source_manifest.json",
+    "remote_verification": "ctcc_student_modelscope_verification.json",
+    "manifest_sha256": "969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc",
+    "upload_exit_code": 0,
+    "remote_verification_passed": true
+  },
+  "verification_boundary": "Independent destination download and full per-file SHA256 comparison have not been performed."
+}

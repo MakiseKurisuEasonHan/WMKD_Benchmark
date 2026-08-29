@@ -36,7 +36,7 @@ Cross-method benchmark
 
 ## Project status
 
-PN-FP and EverTracer are fully closed (2/7 methods complete). CTCC Experiment A is also complete: its pinned-public-artifact reproduction achieved Teacher/Base trigger activation 95/95 versus 0/95, zero false activation across 205 negatives, functional utility, and passed ordinary-generation/reload gates; it is the preferred CTCC teacher. CTCC Ba has not started. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/ctcc.md`, and `EXPERIMENT_LOG.md`.
+PN-FP, EverTracer, and CTCC are fully closed (3/7 methods complete). CTCC Experiment A established the preferred Teacher with Trigger 95/95 versus Base 0/95 and zero false activation across 205 negatives. CTCC Ba used exactly 20,000 Teacher-generated QA to train a fresh canonical Student; fresh-reload evaluation found Trigger 0/95, negative false activation 0/205, and functional tested utility. The Teacher adapter and inference-ready Student are archived in private ModelScope repositories and remain `uploaded_to_modelscope_awaiting_destination_hash_verification`. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. The remaining methods are SCW, iSeal, LLMPrint, and REEF; none starts without explicit approval. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/ctcc.md`, and `EXPERIMENT_LOG.md`.
 
 ## Repository layout
 
