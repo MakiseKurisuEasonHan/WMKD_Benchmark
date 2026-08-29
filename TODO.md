@@ -2,7 +2,7 @@
 
 ## High priority
 
-- [ ] Complete and launch authorized EverTracer Experiment A using the frozen XSum design; do not run Ba or upload ModelScope in this phase.
+- [ ] Complete EverTracer Experiment A through continuation `evertracer_a_20260828_223155_cont1`, reusing the valid target/reference artifacts from immutable FAILED parent `evertracer_a_20260828_223155`; do not retrain, run A2/Ba, or upload ModelScope.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.

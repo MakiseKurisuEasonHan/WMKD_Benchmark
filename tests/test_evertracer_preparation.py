@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from evertracer_common import empirical_fsr, load_config, stable_split_indices
+from evertracer_common import empirical_fsr, load_config, resolve_t5_local_snapshot, stable_split_indices
 
 
 class EverTracerPreparationTests(unittest.TestCase):
@@ -34,7 +34,33 @@ class EverTracerPreparationTests(unittest.TestCase):
         self.assertEqual(cfg["verification"]["k"], 5)
         self.assertEqual(cfg["verification"]["max_length"], 128)
         self.assertEqual(cfg["verification"]["perturbation_fraction"], 0.30)
+        self.assertTrue(cfg["verification"]["t5_local_path"].endswith(cfg["verification"]["t5_revision"]))
         self.assertFalse(cfg["runtime"]["upload_modelscope"])
+
+    def test_t5_snapshot_is_fail_fast_and_revision_pinned(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as root:
+            revision = "pinned-revision"
+            snapshot = Path(root) / revision
+            snapshot.mkdir()
+            verification = {"t5_revision": revision, "t5_local_path": str(snapshot)}
+            with self.assertRaisesRegex(FileNotFoundError, "snapshot incomplete"):
+                resolve_t5_local_snapshot(verification)
+            for name in ("config.json", "generation_config.json", "tokenizer.json", "spiece.model", "model.safetensors"):
+                (snapshot / name).write_bytes(b"test")
+            self.assertEqual(resolve_t5_local_snapshot(verification), snapshot)
+
+    def test_t5_snapshot_never_falls_back_to_model_id(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as root:
+            snapshot = Path(root) / "wrong-revision"
+            snapshot.mkdir()
+            with self.assertRaisesRegex(ValueError, "revision mismatch"):
+                resolve_t5_local_snapshot({
+                    "t5_revision": "pinned-revision",
+                    "t5_local_path": str(snapshot),
+                    "t5_model": "google-t5/t5-base",
+                })
 
 
 if __name__ == "__main__":

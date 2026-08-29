@@ -88,3 +88,22 @@ def configure_cache(data_root: str | Path) -> None:
     for key, value in values.items():
         value.mkdir(parents=True, exist_ok=True)
         os.environ[key] = str(value)
+
+
+def resolve_t5_local_snapshot(verification: dict[str, Any]) -> Path:
+    """Resolve and validate the pinned T5 snapshot without any Hub fallback."""
+    revision = str(verification["t5_revision"])
+    snapshot = Path(verification["t5_local_path"])
+    if snapshot.name != revision:
+        raise ValueError(f"T5 local snapshot revision mismatch: {snapshot.name} != {revision}")
+    required = (
+        "config.json", "generation_config.json", "tokenizer.json",
+        "spiece.model", "model.safetensors",
+    )
+    missing = [name for name in required if not (snapshot / name).is_file()]
+    if missing:
+        raise FileNotFoundError(f"T5 local snapshot incomplete at {snapshot}: missing {missing}")
+    expected_sha = verification.get("t5_model_sha256")
+    if expected_sha and sha256_file(snapshot / "model.safetensors") != expected_sha:
+        raise ValueError(f"T5 model.safetensors SHA-256 mismatch at {snapshot}")
+    return snapshot

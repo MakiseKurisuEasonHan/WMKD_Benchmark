@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from evertracer_common import configure_cache, load_config, sha256_file, write_json
+from evertracer_common import configure_cache, load_config, resolve_t5_local_snapshot, sha256_file, write_json
 
 
 def mask_text(text, fraction, span_length, buffer, rng):
@@ -41,7 +41,8 @@ def main():
     p=argparse.ArgumentParser(); p.add_argument("--config",required=True);p.add_argument("--dataset-root",required=True);p.add_argument("--output",required=True);p.add_argument("--limit",type=int);a=p.parse_args()
     c=load_config(a.config);configure_cache(c["runtime"]["data_root"]);v=c["verification"]; rng=random.Random(c["seed"]);np.random.seed(c["seed"]);torch.manual_seed(c["seed"])
     revision=None if str(v["t5_revision"]).startswith("TO_BE_") else v["t5_revision"]
-    tok=AutoTokenizer.from_pretrained(v["t5_model"],revision=revision);source_tok=AutoTokenizer.from_pretrained(c["model"]["path"],local_files_only=True);model=AutoModelForSeq2SeqLM.from_pretrained(v["t5_model"],revision=revision,torch_dtype=torch.bfloat16).cuda().eval()
+    snapshot=resolve_t5_local_snapshot(v)
+    tok=AutoTokenizer.from_pretrained(snapshot,local_files_only=True);source_tok=AutoTokenizer.from_pretrained(c["model"]["path"],local_files_only=True);model=AutoModelForSeq2SeqLM.from_pretrained(snapshot,local_files_only=True,torch_dtype=torch.bfloat16).cuda().eval()
     records=[];start=time.monotonic(); generation_count=0; retry_count=0
     for subset in ("dtr","dunseen"):
         rows=[json.loads(x) for x in (Path(a.dataset_root)/f"{subset}.jsonl").read_text(encoding="utf-8").splitlines() if x]
@@ -63,6 +64,6 @@ def main():
                 variants.append({"k":k,"positive":pair[0],"negative":pair[1]});generation_count+=2
             records.append({"subset":subset,"position":row["position"],"source_index":row["source_index"],"xsum_id":row.get("xsum_id"),"original":source_text,"pairs":variants})
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text("\n".join(json.dumps(x,ensure_ascii=False) for x in records)+"\n",encoding="utf-8")
-    meta={"records":len(records),"variants":generation_count,"generation_retries":retry_count,"k":v["k"],"max_length":v["max_length"],"fraction":v["perturbation_fraction"],"t5_model":v["t5_model"],"requested_revision":revision,"elapsed_seconds":time.monotonic()-start,"peak_vram_bytes":torch.cuda.max_memory_allocated(),"path":str(out),"bytes":out.stat().st_size,"sha256":sha256_file(out)}
+    meta={"records":len(records),"variants":generation_count,"generation_retries":retry_count,"k":v["k"],"max_length":v["max_length"],"fraction":v["perturbation_fraction"],"t5_model":v["t5_model"],"requested_revision":revision,"resolved_local_snapshot":str(snapshot),"local_files_only":True,"t5_model_sha256":v.get("t5_model_sha256"),"elapsed_seconds":time.monotonic()-start,"peak_vram_bytes":torch.cuda.max_memory_allocated(),"path":str(out),"bytes":out.stat().st_size,"sha256":sha256_file(out)}
     write_json(str(out)+".manifest.json",meta);print(json.dumps(meta,indent=2))
 if __name__=="__main__":main()

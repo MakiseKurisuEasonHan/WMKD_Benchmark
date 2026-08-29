@@ -8,8 +8,10 @@ def main():
  p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--run-dir",required=True);p.add_argument("--summary",required=True);p.add_argument("--report",required=True);a=p.parse_args();c=load_config(a.config);r=Path(a.run_dir)
  target=load(r/"metrics/target_train.json");reference=load(r/"metrics/reference_train.json");teacher=load(r/"metrics/teacher_verification.json");base=load(r/"metrics/base_verification.json");utility=load(r/"metrics/utility.json");sanity=load(r/"metrics/reload_sanity.json")
  gates={"auc":teacher["auc"]>=c["verification"]["auc_gate"],"fsr":teacher["fsr"]>=c["verification"]["fsr_gate"],"above_base":teacher["auc"]>base["auc"] and teacher["fsr"]>base["fsr"],"utility":utility["delta"]["arc_challenge_acc_norm"]>=-0.05 and utility["delta"]["truthfulqa_mc2_acc"]>=-0.05,"ordinary_generation":sanity["passed"],"reload":sanity["fresh_process_reload"]}
- summary={"project":"WMKD_Benchmark","method":"EverTracer","experiment":"A","official_source":c["official_source"],"model":c["model"],"dataset":load(Path(c["dataset"]["frozen_root"])/"manifest.json"),"target_training":target,"reference_training":reference,"teacher_verification":teacher,"base_verification":base,"utility":utility,"ordinary_generation":sanity,"gates":gates,"preferred_teacher":all(gates.values()),"ba_allowed":all(gates.values())};write_json(a.summary,summary)
+ continuation=load(r/"continuation_metadata.json") if (r/"continuation_metadata.json").exists() else None
+ summary={"project":"WMKD_Benchmark","method":"EverTracer","experiment":"A","official_source":c["official_source"],"model":c["model"],"dataset":load(Path(c["dataset"]["frozen_root"])/"manifest.json"),"continuation":continuation,"target_training":target,"reference_training":reference,"teacher_verification":teacher,"base_verification":base,"utility":utility,"ordinary_generation":sanity,"gates":gates,"preferred_teacher":all(gates.values()),"ba_allowed":all(gates.values())};write_json(a.summary,summary)
  conclusion="EverTracer core reproduction successful on the WMKD_Benchmark canonical Llama-3.2-3B-Instruct backbone." if all(gates.values()) else "EverTracer Experiment A completed, but one or more predefined gates failed; no successful reproduction claim or Ba approval is made."
+ continuation_note="The initial formal run completed target/reference training and merging, then failed during perturbation because pinned T5 loading still attempted online Hugging Face resolution while AutoDL networking was unavailable. Scientific configuration was unchanged, target/reference were not retrained, and this continuation reused the same artifacts while loading the pinned T5 snapshot locally with network fallback disabled." if continuation else "This run is not an evaluation continuation."
  md=f'''# EverTracer Experiment A Report
 
 ## Objective
@@ -26,6 +28,8 @@ Reproduce natural-language fingerprint injection and calibrated probability-vari
 | Backbone | `{c['model']['id']}@{c['model']['revision']}` |
 | Dataset | XSum; frozen Dtr=100, Dref=1000, Dunseen=100 |
 | Precision | BF16 |
+
+{continuation_note}
 
 ## Configuration and paper comparison
 

@@ -144,3 +144,9 @@ This log records consequential project decisions. It does not record routine eng
 
 - **Decision:** Canonicalize each verification record with the fixed Llama tokenizer to the official packed `block_size=128` before applying the 30% T5 mask. Reuse that same 128-token window for suspect/reference probability calculations.
 - **Reason:** The official XSum pipeline packs verification data into 128-token records. A provisional 512-token window produced 29 masks and deterministically exceeded the official T5 150-token fill budget; the approved 128-token alignment passed the representative T5 smoke with zero retries.
+
+## 2026-08-29 — Continue EverTracer A from the infrastructure failure
+
+- **Decision:** Preserve `evertracer_a_20260828_223155` as immutable FAILED and create continuation `evertracer_a_20260828_223155_cont1`. Reuse its target/reference merged artifacts without retraining or re-merging, and run only perturbation and downstream evaluation stages.
+- **Decision:** Resolve `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1` through the pinned local snapshot with `local_files_only=True` and offline environment flags. Retain model ID, revision, local resolved path, and model SHA-256 in provenance.
+- **Reason:** The parent completed all scientific training stages and failed only because the perturb loader attempted online Hub resolution while AutoDL networking was unavailable. This is an engineering continuation with no scientific configuration change.

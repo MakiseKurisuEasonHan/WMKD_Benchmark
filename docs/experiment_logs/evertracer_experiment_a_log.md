@@ -36,3 +36,9 @@ The primary AutoDL checkout was found to contain preserved PN-FP-era local commi
 The first dependency resolution attempt stopped before installation because `lm-eval==0.4.9.1` requires `datasets<4.0` while the initial project requirement specified `datasets==4.0.0`. The compatibility pin was corrected to `datasets==3.6.0`; this does not alter the pinned XSum dataset revision, split, samples, or EverTracer algorithm.
 
 XSum download attempt 1 and T5 download attempt 1 ended with resumable `IncompleteRead` errors; attempt 2 completed the same pinned revisions. The frozen XSum manifest records fingerprint `5a1b0a50e80b133b` and disjoint file hashes. T5 contains five required files totaling 893,828,754 bytes; `model.safetensors` SHA256 is `a90903540cc02cbeb7ff9f823f1a80eb778c7e22426a0e620b01c77a5ec8f5b4`.
+# Infrastructure continuation
+
+- Parent formal run `evertracer_a_20260828_223155` remains immutable FAILED at `PREPARING_VERIFICATION / perturb` after target/reference training and merging completed successfully.
+- The failure was an engineering cache-visibility/online-resolution failure: pinned `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1` attempted Hub access while AutoDL networking was unavailable.
+- Continuation `evertracer_a_20260828_223155_cont1` reuses the same target/reference artifacts, does not repeat training or merging, and loads the pinned local snapshot with network fallback disabled.
+- Scientific configuration remains unchanged: block size 128, K=5, perturbation fraction 30%, Dtr=100, Dref=1000, Dunseen=100, and the same canonical backbone/revision.
