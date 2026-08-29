@@ -6,7 +6,7 @@
 - [x] Complete EverTracer Ba run `evertracer_ba_20260829_124055` with exactly 20,000 teacher-specific QA and a fresh canonical student.
 - [x] Upload the EverTracer A preferred teacher and Ba student to their fixed private ModelScope repositories with source and remote metadata verification.
 - [ ] Perform destination-side full SHA256 only during a future real download on another machine.
-- [ ] Complete the authorized EverTracer closure and protected cleanup.
+- [x] Complete the authorized EverTracer closure and protected cleanup; reclaim 77.958 GiB while preserving every protected artifact.
 - [ ] EverTracer Bb remains NOT RUN / deferred.
 - [ ] Discuss the next watermark Experiment A after closure; do not start it automatically.
 

@@ -27,7 +27,7 @@ This is the concise index of formal WMKD_Benchmark experiments. Full scientific 
 6. Ba generated EverTracer-specific answers. Raw prefixes 24k/26k/28k/30k were insufficient; 32,003 raw records yielded 20,173 unique valid records and exactly 20,000 were frozen.
 7. Ba student completed 7,500 steps and all verification, utility, generation, reload, reporting, and notification stages.
 8. Teacher and student uploads plus remote metadata verification completed in their fixed private ModelScope repositories; destination-side full SHA remains deferred.
-9. Final local/GitHub archive and protected AutoDL cleanup were authorized as the final closure stage.
+9. Final local/GitHub archive completed before protected AutoDL cleanup. Cleanup removed only explicit smoke outputs and Ba `checkpoint-7500`, reclaimed 77.958 GiB, and preserved all protected artifacts. EverTracer A and Ba are FULLY CLOSED; Bb is NOT RUN/deferred.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

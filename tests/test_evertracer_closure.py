@@ -49,10 +49,18 @@ class EverTracerClosureTests(unittest.TestCase):
         for relative in (
             "docs/reproduction_reports/evertracer_experiment_a_report.md",
             "docs/reproduction_reports/evertracer_experiment_ba_report.md",
+            "docs/reproduction_reports/evertracer_final_closure.md",
             "docs/experiment_logs/evertracer_experiment_a_log.md",
             "docs/experiment_logs/evertracer_experiment_ba_log.md",
         ):
             self.assertGreater((ROOT / relative).stat().st_size, 500)
+
+    def test_protected_cleanup_record(self):
+        cleanup = self.load("results/evertracer/cleanup_summary.json")
+        self.assertEqual(cleanup["status"], "completed")
+        self.assertEqual(cleanup["released_bytes"], 83707244544)
+        self.assertFalse(cleanup["active_evertracer_processes_after_cleanup"])
+        self.assertTrue(all(cleanup["protected_verified"].values()))
 
 
 if __name__ == "__main__":

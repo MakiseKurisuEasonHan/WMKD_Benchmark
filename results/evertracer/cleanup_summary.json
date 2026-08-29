@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "cleanup_date": "2026-08-29",
+  "status": "completed",
+  "data_disk_before": {
+    "used_bytes": 120288186368,
+    "available_bytes": 953453637632
+  },
+  "data_disk_after": {
+    "used_bytes": 36580941824,
+    "available_bytes": 1037160882176
+  },
+  "released_bytes": 83707244544,
+  "released_gib": 77.958,
+  "deleted": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_smoke",
+    "/root/autodl-tmp/WMKD_Benchmark_data/smoke/evertracer_ba_training_4c3926f",
+    "/root/autodl-tmp/WMKD_Benchmark_data/smoke/evertracer_ba_training_telemetry_06e4a05",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/checkpoint-7500",
+    "/root/autodl-tmp/WMKD_Benchmark_data/smoke/evertracer_ba_verification_06e4a05",
+    "/root/autodl-tmp/WMKD_Benchmark_data/smoke/evertracer_ba_verification_1f14a55",
+    "/root/autodl-tmp/WMKD_Benchmark_data/smoke/evertracer_ba_generation_4c3926f",
+    "/root/autodl-tmp/WMKD_Benchmark_data/smoke/evertracer_ba_generation_ef6ff8b"
+  ],
+  "protected_verified": {
+    "canonical_base": true,
+    "canonical_base_file_count": 12,
+    "canonical_base_total_file_bytes": 6434748511,
+    "teacher_merged": true,
+    "student_final_model": true,
+    "reference_merged": true,
+    "target_adapter": true,
+    "reference_adapter": true,
+    "frozen_neighborhoods": true,
+    "frozen_neighborhoods_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+    "final_20k": true,
+    "final_20k_canonical_sha256": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142",
+    "raw_32k_candidates": true,
+    "modelscope_credential": true,
+    "reports_and_summaries": true
+  },
+  "active_evertracer_processes_after_cleanup": false
+}
