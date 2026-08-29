@@ -40,13 +40,22 @@ class ISealPreparationTests(unittest.TestCase):
     def test_a2_gate_requires_staged_adapter_progression(self):
         text = (ROOT / "scripts/iseal_a2_trainability_audit.py").read_text(encoding="utf-8")
         self.assertIn('"B_started_step1":b_started', text)
-        self.assertIn('"A_or_delta_progression_by_step2":downstream', text)
+        self.assertIn('"A_or_delta_task_gradient_progression_after_B_update":downstream', text)
         self.assertIn('"formal_experiment_a2_allowed":gate', text)
         tree = ast.parse(text)
         zero_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "zeros_"]
         normal_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "normal_"]
         self.assertEqual(len(zero_calls), 1)
         self.assertEqual(len(normal_calls), 1)
+
+    def test_a2_continuation_extends_diagnostic_only(self):
+        runner = (ROOT / "scripts/run_iseal_a2_trainability_cont1.sh").read_text(encoding="utf-8")
+        self.assertIn("PARENT_ID=iseal_a2_trainability_20260830_053009", runner)
+        self.assertIn("--optimizer-steps 4", runner)
+        audit = (ROOT / "scripts/iseal_a2_trainability_audit.py").read_text(encoding="utf-8")
+        self.assertIn('"effective_learning_rate":effective_lr', audit)
+        self.assertIn('"cumulative_parameter_delta_norms_after_step":cumulative_deltas', audit)
+        self.assertIn('"zero_task_gradient_with_nonzero_delta":"weight-decay-only movement; not adapter progression"', audit)
 
 
 if __name__ == "__main__":

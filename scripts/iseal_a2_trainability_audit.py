@@ -38,6 +38,8 @@ def main():
     parser.add_argument("--config", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--dataset-cache", required=True)
+    parser.add_argument("--optimizer-steps", type=int)
+    parser.add_argument("--lineage-parent")
     args = parser.parse_args()
     config = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
     secret_hex = os.environ.get("ISEAL_SECRET_KEY_HEX")
@@ -75,26 +77,27 @@ def main():
     cipher = KeyedCipher(model.config.hidden_size, config["training"]["cipher_layers"], secret_key, torch.bfloat16)
     loader = DataLoader(text_dataset, batch_size=config["training"]["per_device_batch_size"], shuffle=True)
     optimizer = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=config["training"]["learning_rate"], weight_decay=config["training"]["weight_decay"], eps=config["training"]["adam_epsilon"])
-    steps = config["trainability_audit"]["optimizer_steps"]
+    steps = args.optimizer_steps or config["trainability_audit"]["optimizer_steps"]
     scheduler = get_linear_schedule_with_warmup(optimizer, max(1, int(config["training"]["warmup_ratio"] * steps)), steps)
     records=[]; iterator=iter(loader)
     for step in range(steps):
         batch=next(iterator); device=next(model.parameters()).device
         ids=batch["input_ids"].to(device); mask=batch["attention_mask"].to(device); labels=batch["labels"].to(device)
         output=model(inputs_embeds=cipher.to(device)(model.get_input_embeddings()(ids)), attention_mask=mask, labels=labels)
+        effective_lr=optimizer.param_groups[0]["lr"]
         output.loss.backward(); gradients={name:grad_norm(params) for name,params in blocks.items()}
         torch.nn.utils.clip_grad_norm_(model.parameters(),config["training"]["max_grad_norm"])
         optimizer.step(); scheduler.step(); optimizer.zero_grad()
-        records.append({"step":step+1,"loss":output.loss.item(),"gradient_norms_before_clip":gradients})
+        cumulative_deltas={name:delta_norm(params,snapshots[name]) for name,params in blocks.items()}
+        records.append({"step":step+1,"effective_learning_rate":effective_lr,"loss":output.loss.item(),"gradient_norms_before_clip":gradients,"cumulative_parameter_delta_norms_after_step":cumulative_deltas,"task_gradient_nonzero":{name:gradients[name]>0 for name in blocks}})
     deltas={name:delta_norm(params,snapshots[name]) for name,params in blocks.items()}
     b_started=records[0]["gradient_norms_before_clip"]["iseal_B"]>0 and deltas["iseal_B"]>0
-    downstream=any(records[1]["gradient_norms_before_clip"][name]>0 and deltas[name]>0 for name in ("iseal_delta","iseal_A"))
+    downstream=any(record["effective_learning_rate"]>0 and record["gradient_norms_before_clip"][name]>0 for record in records[2:] for name in ("iseal_delta","iseal_A")) if len(records)>2 else False
     transformer_frozen=deltas["base_transformer"]==0
     gate=b_started and downstream and transformer_frozen
-    result={"project":config["project"],"method":"iSeal","experiment":"A2","audit":"a2_initialization_repair_two_step_trainability","official_commit":config["official_source"]["commit"],"model_revision":config["model"]["revision"],"initialization_repair":repair,"registered_count":len(dataset),"trainable_token_count":len(train_ids),"blocks":initial,"steps":records,"parameter_delta_norms":deltas,"checks":{"B_started_step1":b_started,"A_or_delta_progression_by_step2":downstream,"base_transformer_frozen":transformer_frozen},"gate_passed":gate,"formal_experiment_a2_allowed":gate,"terminal_state":"PASSED" if gate else "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY"}
+    result={"project":config["project"],"method":"iSeal","experiment":"A2","audit":"a2_initialization_repair_trainability","lineage_parent":args.lineage_parent,"diagnostic_duration_extension_only":args.optimizer_steps is not None,"optimizer_steps":steps,"official_commit":config["official_source"]["commit"],"model_revision":config["model"]["revision"],"initialization_repair":repair,"registered_count":len(dataset),"trainable_token_count":len(train_ids),"blocks":initial,"steps":records,"parameter_delta_norms":deltas,"update_interpretation":{"nonzero_task_gradient_with_positive_lr":"task-gradient-driven update present","zero_task_gradient_with_nonzero_delta":"weight-decay-only movement; not adapter progression"},"checks":{"B_started_step1":b_started,"A_or_delta_task_gradient_progression_after_B_update":downstream,"base_transformer_frozen":transformer_frozen},"gate_passed":gate,"formal_experiment_a2_allowed":gate,"terminal_state":"PASSED" if gate else "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY"}
     output=Path(args.output); output.parent.mkdir(parents=True,exist_ok=True); output.write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(result,indent=2)); raise SystemExit(0 if gate else 3)
 
 
 if __name__ == "__main__": main()
-
