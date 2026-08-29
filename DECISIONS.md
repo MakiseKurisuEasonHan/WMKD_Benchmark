@@ -166,3 +166,12 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Interpret Ba student AUC 0.4987 and TPR 0.06 against the 0.5 random AUC baseline and Base TPR 0.05. Raw AUC retention is not the primary interpretation. The bounded result is approximately base/random-level detectability with functional tested utility, not a universal robustness claim.
 - **Decision:** Keep EverTracer Bb NOT RUN/deferred. Do not infer authorization for paraphrasing, additional attacks, or a new experiment from closure.
 - **Decision:** ModelScope source/archive verification and destination verification are distinct. The A teacher and Ba student remain `uploaded_to_modelscope_awaiting_destination_hash_verification` after source SHA and remote filename/count/size/blob-metadata checks. Only a future real download on another machine may establish `destination_verified`.
+
+## 2026-08-29 — Consolidate post-EverTracer durable protocol
+
+- **Decision:** Keep `docs/EXPERIMENT_PROTOCOL.md` as the single canonical cross-session rules file and minimally update it after EverTracer rather than creating another rules document.
+- **Decision:** A2/A3 designate scientific-configuration corrections; unchanged-science network, cache, infrastructure, pipeline, or downstream recovery uses an immutable continuation lineage where appropriate.
+- **Decision:** Every watermark's Ba uses only its own preferred teacher to generate its own exactly-20k frozen QA and always initializes a fresh canonical unwatermarked student. Cross-watermark teacher, QA, frozen dataset, and student reuse are prohibited.
+- **Decision:** Preserve the corrected EverTracer detector semantics, immutable continuation lineage, random-AUC interpretation, frozen-neighborhood dependency, archive state, and protected cleanup inventory as durable protocol.
+- **Decision:** Current planning uses the latest observed EverTracer AutoDL capacity (208 container-visible vCPUs and approximately 1.0 TiB RAM); older 22-vCPU/110-GB records remain untouched historical observations.
+- **Reason:** A new ChatGPT/Codex session must recover current policy and completed-method lessons from the repository without relying on conversation memory, while historical logs continue to describe what actually happened.

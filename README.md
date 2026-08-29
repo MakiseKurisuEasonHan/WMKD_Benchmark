@@ -36,7 +36,7 @@ Cross-method benchmark
 
 ## Project status
 
-PN-FP is fully closed: A, A2, and Ba are CLOSED; Bb is NOT RUN/deferred. A2 is the preferred utility-preserving teacher. Ba showed strong watermark degradation with partial retention under the tested standardized same-size 3B direct-distillation condition. The next phase is discussion and design of the next watermark Experiment A; it must not start without separate approval. See `PROJECT_STATUS.md` and `EXPERIMENT_LOG.md` for current evidence-backed state.
+PN-FP and EverTracer are fully closed (2/7 methods complete). PN-FP A2 is its preferred utility-preserving teacher; its Ba showed strong watermark degradation with partial retention. EverTracer Ba reduced a strong teacher fingerprint to approximately base/random-level detectability while tested utility remained functional. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. The next phase is discussion and selection of the third watermark Experiment A; no method is selected or started without separate approval. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, and `EXPERIMENT_LOG.md` for current evidence-backed state.
 
 ## Repository layout
 

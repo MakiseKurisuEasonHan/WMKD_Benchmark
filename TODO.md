@@ -2,6 +2,8 @@
 
 ## High priority
 
+- [x] Audit and consolidate the post-EverTracer fixed project protocol without selecting or starting a third watermark.
+
 - [x] Complete EverTracer Experiment A through immutable continuation 2 and establish the preferred teacher.
 - [x] Complete EverTracer Ba run `evertracer_ba_20260829_124055` with exactly 20,000 teacher-specific QA and a fresh canonical student.
 - [x] Upload the EverTracer A preferred teacher and Ba student to their fixed private ModelScope repositories with source and remote metadata verification.

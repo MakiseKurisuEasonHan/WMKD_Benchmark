@@ -271,3 +271,11 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Installed the isolated environment, pinned official source/data/T5 revisions, froze disjoint XSum Dtr/Dref/Dunseen manifests, passed server tests and 16/16 preflight checks, and completed representative target/reference/T5/verification/utility/reload speed smoke.
 - Diagnosed the T5 fill failure as a mismatch between a provisional 512-token window and the official 128-token packed XSum protocol. After explicit user approval, commit `507183234afc231c8a821e77f4b48f4590cc8e06` fixed the official 128-token window; T5 smoke then passed with zero retries.
 - Launched detached formal run `evertracer_a_20260828_223155`, PID 185252. It entered `RUNNING_TARGET` and delivered STARTED email via SSL465. No Experiment Ba, automatic retuning/A2, ModelScope upload, or destructive cleanup was performed.
+
+## 2026-08-29 — Post-EverTracer durable protocol audit
+
+- Audited the canonical protocol, current status/TODO/decisions/logs, storage and notification documentation, method reports, machine-readable results, and current-facing contradiction patterns using only the local WMKD_Benchmark checkout.
+- Kept `docs/EXPERIMENT_PROTOCOL.md` as the single canonical cross-session rules file. Added the A2-versus-continuation distinction, per-watermark Ba teacher/QA isolation, fresh canonical student invariant, fixed Ba training reference, full EverTracer lineage/detector lessons/results, protected cleanup gate, and explicit 2/7 current state.
+- Updated the current AutoDL planning baseline from the older rental's 22 vCPU/110 GB to the latest observed EverTracer environment: 208 container-visible vCPUs, approximately 1.0 TiB RAM, 97,887 MiB GPU VRAM, and approximately 35 GiB used/966 GiB free after cleanup. Historical observations were not rewritten.
+- Preserved all PN-FP and EverTracer scientific metrics, immutable historical logs, ModelScope `uploaded_to_modelscope_awaiting_destination_hash_verification` states, and the intentionally untracked `artifacts/` directory.
+- No AutoDL or La Trobe connection, GPU/model operation, download, new watermark selection, experiment launch, artifact deletion, or scientific-result modification occurred.

@@ -10,7 +10,9 @@ The EverTracer A preferred teacher and Ba student were uploaded to their fixed p
 
 The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.md`. The selected benchmark methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Current default lifecycle is A → Ba; corrected reproductions use A2/A3 without overwriting history. Bb remains NOT RUN/deferred because the required Dipper paraphraser has no acceptable domestic download source.
 
-The durable benchmark default is now a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Ba/Bb teachers are successful watermarked A checkpoints; students always start from fresh canonical unwatermarked weights. Any method-specific backbone deviation requires a recorded blocker and explicit user approval.
+The durable benchmark default is a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Every method's Ba must use that method's own preferred teacher to generate its own answers; another watermark's teacher, QA, frozen 20k, or student must never be reused. Students always start from fresh canonical unwatermarked weights. Any method-specific backbone or Ba deviation requires a recorded blocker and explicit user approval.
+
+Completed methods: **2/7** (PN-FP and EverTracer). The canonical Llama remains preserved. The latest observed AutoDL baseline is RTX PRO 6000 Blackwell (97,887 MiB), 208 container-visible vCPUs, approximately 1.0 TiB RAM, and approximately 1 TiB data disk; after EverTracer cleanup approximately 35 GiB was used and approximately 966 GiB was free.
 
 ## Completed
 
@@ -50,7 +52,7 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 ## Next step
 
-- Discuss and select the next watermark Experiment A. Do not start it automatically. EverTracer Bb remains deferred/not run.
+- Discuss and select the third watermark Experiment A. No third method is selected by this audit, and no experiment may start automatically. Bb remains deferred/not run.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

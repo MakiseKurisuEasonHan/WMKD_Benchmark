@@ -20,20 +20,20 @@ WMKD_Benchmark is strictly independent of WaterBench, WaterBenchV2, WaterBenchV3
 - AutoDL data root `/root/autodl-tmp/WMKD_Benchmark_data`: all large compute artifacts and project-owned caches.
 - La Trobe lightweight checkout `/data/home/ad/21672330/WMKD_Benchmark` and warehouse `/data/shared/nobackup/21672330/WMKD_Benchmark`: long-term storage. Before giving manual school-server connection instructions state **学校 VPN：开启**.
 
-Current formal AutoDL environment/hardware baseline: Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, one RTX PRO 6000 Blackwell 96 GB GPU, 22 vCPU Intel Xeon Platinum 8470Q, 110 GB RAM, a 30 GB system disk, and an approximately 1 TB data disk. These are reproducibility records, not permission to change an environment silently. Models, checkpoints, datasets, caches, and large outputs must stay under the data root and must never fill the system disk.
+Current formal AutoDL environment/hardware baseline, as actually observed during EverTracer: Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, one RTX PRO 6000 Blackwell GPU with 97,887 MiB VRAM, Intel Xeon Platinum 8470Q with 208 container-visible vCPUs, approximately 1.0 TiB RAM, a 30 GiB system disk, and an approximately 1 TiB data disk. After EverTracer closure cleanup, the data disk used approximately 35 GiB and had approximately 966 GiB free. These are current point-in-time planning records, not a capacity guarantee or permission to change an environment silently. Older truthful logs may describe an earlier 22-vCPU/110-GB rental instance and must not be rewritten. Models, checkpoints, datasets, caches, and large outputs must stay under the data root and must never fill the system disk.
 
 Cross-border artifacts may use a currently verified accelerator or trusted mirror as command-scoped transport when direct access is materially degraded. Transport is not scientific provenance: pin the official source and exact revision, then verify final size and cryptographic hashes. Never make an untraceable mirror or temporary proxy the provenance authority.
 
 ## Experiment names and lifecycle
 
 - **Experiment A:** first formal watermark reproduction.
-- **Experiment A2/A3/...:** immutable corrected later reproduction when a previous A was scientifically unsuitable. Never overwrite or erase the earlier run or its scientific meaning.
+- **Experiment A2/A3/...:** immutable corrected later reproduction when a previous A's **scientific configuration** produced an unsuitable result and requires a formal correction. Never overwrite or erase the earlier run or its scientific meaning.
 - **Experiment Ba:** Direct Distillation.
 - **Experiment Bb:** Untargeted Paraphrasing + Distillation (UP + Distillation).
 
 Current default lifecycle is **A → Ba**. Bb is **NOT RUN / deferred** because no acceptable domestic download source is currently available for the required Dipper paraphraser. Do not download Dipper or activate Bb without a new explicit decision.
 
-Each formal experiment has an immutable run namespace. Run IDs use `<method>_<experiment>_YYYYMMDD_HHMMSS`; a corrected or continued run receives a new ID. Never overwrite or silently resume failed, limited, or completed history.
+Each formal experiment has an immutable run namespace. Run IDs use `<method>_<experiment>_YYYYMMDD_HHMMSS`; a corrected or continued run receives a new ID. If the scientific configuration is unchanged and the failure is only network, cache, infrastructure, pipeline implementation, or a downstream stage, use an immutable continuation lineage where appropriate rather than automatically renaming the experiment A2. Never overwrite or silently resume failed, limited, or completed history.
 
 ## Canonical backbone
 
@@ -46,7 +46,7 @@ This fixed family, size, revision, tokenizer, and template maximize horizontal c
 Ba follows the general behavioral/direct-distillation idea of ACL 2025, “Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?”:
 
 ```text
-watermarked 3B teacher
+CURRENT watermark's own preferred watermarked 3B teacher
 → teacher-generated synthetic QA
 → filtering, parsing, deduplication, and a frozen dataset
 → fresh canonical unwatermarked 3B student
@@ -54,7 +54,9 @@ watermarked 3B teacher
 → watermark and utility evaluation
 ```
 
-The student **must** initialize from a fresh canonical unwatermarked Llama-3.2-3B-Instruct. Never initialize the student from teacher weights. The PN-FP reference protocol uses instruction/input/answer QA, exactly 20,000 frozen samples, full-parameter SFT, 3 epochs, learning rate `1e-5`, BF16, and batch size 8. Reuse it when technically compatible; any method-specific exception requires prior discussion and documentation.
+The student **must** initialize from a fresh canonical unwatermarked Llama-3.2-3B-Instruct. Never initialize the student from teacher weights. Each watermark **must generate its own Ba answers from its own preferred teacher**. Never reuse another watermark's teacher, teacher-generated QA, frozen 20k dataset, or student checkpoint. The standardized prompt source/distribution, generation infrastructure, parsing/filtering/deduplication code, exactly-20k freeze framework, training configuration, utility framework, runner, logging, reporting, and email infrastructure may be reused.
+
+The canonical Ba reference protocol is exactly 20,000 frozen instruction/input/answer QA samples, full-parameter SFT, 3 epochs, learning rate `1e-5`, BF16, and batch size 8, with remaining fields taken from the existing method-specific canonical Ba configuration. Any method-specific exception requires explicit prior discussion and documentation; do not silently change the protocol.
 
 ## Scientific fidelity and minimal preflight
 
@@ -78,7 +80,7 @@ Every Codex task updates the appropriate existing project state/log records. Eve
 
 1. a dedicated immutable experiment log under `docs/experiment_logs/`;
 2. a formal report under `docs/reproduction_reports/`;
-3. a small machine-readable summary under `results/summaries/`.
+3. a small machine-readable summary under the method's canonical `results/` namespace (legacy PN-FP summaries remain under `results/summaries/`).
 
 The formal report includes objective, environment table, configuration table, original-paper versus benchmark comparison, training results, watermark results, utility results, checkpoint/reload validation, deviations, limitations, and a bounded scientific conclusion. The user does not need to request these separately.
 
@@ -113,7 +115,35 @@ Experiment A2 corrected the design with WA `0.75` and DM `0.25`, achieved 956/10
 
 PN-FP A, A2, and Ba are CLOSED. Bb is NOT RUN/deferred. There is no PN-FP scientific blocker. Large PN-FP AutoDL training/readback artifacts were cleaned with approximately 48 GiB reclaimed while the canonical base was preserved. Preferred artifacts are private at `MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher` and `MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student`.
 
-The next allowed phase is to discuss and design the next watermark Experiment A. Do not select, name, clone, download, or start it without a separate explicit prompt.
+## EverTracer preserved lessons and closed state
+
+EverTracer Experiment A used the canonical backbone and XSum. Target settings were `Dtr=100`, 20 epochs, batch 4, learning rate `1e-4`, LoRA rank 8, and block size 128. Reference settings were `Dref=1000`, 4 epochs, and block size 128. The paper specifies 4 reference epochs while its README example uses 10; the benchmark follows the formal paper setting. Verification used `K=5`, perturb fraction `0.3`, T5-Base, block size 128, and reference-calibrated probability variation.
+
+The immutable A lineage is part of the scientific record:
+
+- Root `evertracer_a_20260828_223155`: Target/Reference training and merge succeeded; a later perturb stage failed because T5 loading attempted online resolution while AutoDL networking was unavailable.
+- Continuation `evertracer_a_20260828_223155_cont1`: offline T5 loading was fixed and perturb plus Teacher/Base inference succeeded; a later utility stage failed because ARC could not resolve offline. Audit also found detector-direction semantics were wrong. Neither failure required Target/Reference retraining or neighborhood regeneration.
+- Continuation `evertracer_a_20260828_223155_cont2`: completed with corrected aggregation semantics.
+
+The official calibrated score is `C = suspect PV - reference PV`, with `member=0`, `non-member=1`, and higher `C` indicating non-member. The equivalent member-oriented benchmark representation is `member=1`, `score=-C`. The calibrated score numbers were correct; the historical bug was the ROC positive-class and threshold direction. Detector audits must check probability/loss transformation, formula, subtraction order, sign, labels, threshold direction, and ROC semantics. An extreme AUC such as exactly 0.0 triggers an implementation-direction audit before scientific interpretation. Infrastructure failure is not automatically scientific failure, and unchanged-science engineering recovery may remain Experiment A through continuation.
+
+The completed A result was Teacher member-oriented AUC `1.0000` and TPR@FPR<=5% `1.00`, versus Base AUC `0.4417` and TPR `0.05`. ARC Base/Teacher was `0.446246/0.421502`; TruthfulQA Base/Teacher was `0.505687/0.514798`; ordinary-generation sanity and reload passed. EverTracer core reproduction therefore succeeded and A is the preferred teacher.
+
+EverTracer Ba used only the EverTracer A teacher. Oversampling produced 15,562/16,752/17,904/19,051 unique records from the 24k/26k/28k/30k prefixes; 32k produced 20,173 unique records. Exactly 20,000 were frozen with SHA256 `ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142`. A fresh canonical student completed full-parameter training for 3 epochs at `1e-5`, BF16, batch 8, and 7500/7500 steps.
+
+Ba detection was Teacher AUC/TPR `1.0000/1.00`, Student `0.4987/0.06`, and Base `0.4417/0.05`. ROC AUC has a random baseline of 0.5, so raw “49.87% AUC retention” is misleading and must not be the primary interpretation: the Student AUC is approximately random and its TPR is only 0.01 above Base. ARC Base/Teacher/Student was `0.446246/0.421502/0.505119`; TruthfulQA was `0.505687/0.514798/0.493715`; sanity and reload passed. Under the tested standardized same-size 3B direct-distillation condition, EverTracer's strong teacher-side fingerprint signal was reduced to approximately base/random-level detectability while overall model utility remained functional.
+
+The frozen canonical neighborhoods SHA256 is `7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b`; reuse these frozen detector inputs across Teacher/Base/Student and future attacks. EverTracer A and Ba are FULLY CLOSED with no blocker; Bb is NOT RUN/deferred. Teacher and Student are private at `MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher` and `MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student`, both still `uploaded_to_modelscope_awaiting_destination_hash_verification`.
+
+## Protected cleanup policy
+
+Never clean AutoDL before reports and summaries are archived, local/Git state is checked, `origin/main` is synchronized, ModelScope transfer state is recorded, and an exact KEEP/DELETE dry-run has been reviewed. The canonical base is never deleted. Default to KEEP when uncertain, especially for small or future detector-dependent artifacts.
+
+EverTracer closure kept the canonical base, preferred Teacher and Ba Student AutoDL copies, Reference merged model, Target/Reference adapters, frozen neighborhoods, final20k, raw32k, formal reports/summaries/status/logs/manifests, and shared T5/cache/environment. It removed only explicitly disposable smoke/intermediate content and redundant `checkpoint-7500`, reclaiming 83,707,244,544 bytes (77.958 GiB).
+
+## Current state
+
+PN-FP and EverTracer are FULLY CLOSED with no blockers: 2 of 7 selected methods are complete. The canonical Llama is preserved. EverTracer closure commit is `c14a176faebb483198736beb8a82bb526403f76d`. The next allowed phase is to discuss and select the third watermark Experiment A. Do not select, name, clone, download, or start it without a separate explicit prompt.
 
 ## Resuming in a new session
 
