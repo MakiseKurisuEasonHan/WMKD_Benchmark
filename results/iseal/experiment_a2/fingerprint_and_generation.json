@@ -1,0 +1,988 @@
+{
+  "fresh_process_reload": true,
+  "detector": {
+    "metric": "sacrebleu_sentence_bleu",
+    "tokenization": "sacrebleu_13a",
+    "direction": "higher_is_more_similar_and_more_member_like",
+    "positive_semantics": "generated_plaintext_matches_registered_or_held_out_plaintext",
+    "official_threshold_status": "not_uniquely_specified",
+    "threshold": 50.0,
+    "threshold_policy": "predeclared_WMKD_operational_threshold_before_formal_A2_results"
+  },
+  "groups": {
+    "registered": {
+      "count": 10,
+      "base_mean_sentence_bleu": 2.331481227908185,
+      "teacher_mean_sentence_bleu": 79.41623228200089,
+      "base_success_rate": 0.0,
+      "teacher_success_rate": 1.0,
+      "rows": [
+        {
+          "sample_index": 0,
+          "plaintext_sha256": "6367344512ebff96ad1e4f97f3289a89636a656173ac30e901ebf80c90748c30",
+          "base_bleu": 3.072311854373273,
+          "teacher_bleu": 96.60520303055019,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 1,
+          "plaintext_sha256": "0b16d1dbf9f5dd5fcb8f83419dab38f562d4d70f97ce859e7783479ccd7cb3a1",
+          "base_bleu": 1.9158427269087217,
+          "teacher_bleu": 52.69454215048226,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 2,
+          "plaintext_sha256": "cbb948c9bfb153bf9acc3b01d6f5df34d36c52c8afacb03f49887a1dc0181d9b",
+          "base_bleu": 1.6447509405464604,
+          "teacher_bleu": 78.50871766006256,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 3,
+          "plaintext_sha256": "9f155783e28599cc26a4b3188645756ec96319fa372d3d38a58f2c212dcb3e7f",
+          "base_bleu": 1.866455476068894,
+          "teacher_bleu": 51.917314580686856,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 4,
+          "plaintext_sha256": "53ceebe6e6fb02ee20cd7d70997f5319804154a602447db9d44baedd39dd3a80",
+          "base_bleu": 0.0,
+          "teacher_bleu": 100.00000000000004,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 5,
+          "plaintext_sha256": "d85eeb86524c4fa6af83c73ab2f82e7b190f883de8e5fa3fcf9e69308d18cf39",
+          "base_bleu": 2.738713212986448,
+          "teacher_bleu": 66.17957685005044,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 6,
+          "plaintext_sha256": "0e6c4ac2d06d62e4e75dd72f9bdf2110b9ae36249ac375183ebc8dc51e7db52b",
+          "base_bleu": 1.1254195166774048,
+          "teacher_bleu": 67.90862712645635,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 7,
+          "plaintext_sha256": "d4d687987876447de8615a39054e5225ee419448ff74dcf0e362f671ca2cbd11",
+          "base_bleu": 1.2836618613844786,
+          "teacher_bleu": 97.97875586021992,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 8,
+          "plaintext_sha256": "521dedacd0075f0d2eda267bf10f40c32c2a659e514f8c7b1e981053e2ae6cbf",
+          "base_bleu": 7.208698577082177,
+          "teacher_bleu": 97.1802593947472,
+          "base_positive": false,
+          "teacher_positive": true
+        },
+        {
+          "sample_index": 9,
+          "plaintext_sha256": "4b816b025296c1996650623f49788df8291b3c17889b056e562bc1877951dc41",
+          "base_bleu": 2.45895811305399,
+          "teacher_bleu": 85.18932616675319,
+          "base_positive": false,
+          "teacher_positive": true
+        }
+      ]
+    },
+    "held_out": {
+      "count": 100,
+      "base_mean_sentence_bleu": 2.329692600241198,
+      "teacher_mean_sentence_bleu": 2.191497560930963,
+      "base_success_rate": 0.0,
+      "teacher_success_rate": 0.0,
+      "rows": [
+        {
+          "sample_index": 10,
+          "plaintext_sha256": "63fd005ed621649d23189c092468ce24b9efb4bb6c1ba814a4eaf30365a0668c",
+          "base_bleu": 1.842178539541363,
+          "teacher_bleu": 3.3330247627830865,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 11,
+          "plaintext_sha256": "ac66680cd0c5c25c51b5900e413859d21582e35246c6aa1db17331faf80e7d8d",
+          "base_bleu": 2.933836190724649,
+          "teacher_bleu": 1.4333000127883408,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 12,
+          "plaintext_sha256": "b4878562e65fd3eaf780cf3de52ac0540991f05c5a5f25e3fc1a4b9dc6f2cbee",
+          "base_bleu": 1.7340270856674378,
+          "teacher_bleu": 3.07554849619589,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 13,
+          "plaintext_sha256": "673b4e6abfbb539c048f846ad8bdbee18cdd9aaf84d579b9b4d61578ba60e623",
+          "base_bleu": 1.494348998143061,
+          "teacher_bleu": 1.2443969494386207,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 14,
+          "plaintext_sha256": "aba7ec0771277c2c46ea0901d62f882aef74d3ac4c4c889586ed19de3fcca862",
+          "base_bleu": 1.3639285203524065,
+          "teacher_bleu": 1.3524700180296092,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 15,
+          "plaintext_sha256": "5f134b78da4d9c5288c79dfacef4c2f877c34cd45682a4dbc4a097bf1b12d8eb",
+          "base_bleu": 4.027405250233789,
+          "teacher_bleu": 4.344109103419242,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 16,
+          "plaintext_sha256": "4ff03043c66503a3b74fa370222b4a394af3d890ef667ff638c22955dff0f1d4",
+          "base_bleu": 3.3573516225476756,
+          "teacher_bleu": 2.8209110765918006,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 17,
+          "plaintext_sha256": "87c264fab581dc9dd10eea405b0a1f4e054d28d8cbca9e2c0a476bf3566af251",
+          "base_bleu": 2.847007497955723,
+          "teacher_bleu": 1.4333000127883408,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 18,
+          "plaintext_sha256": "644b92fea5ed8327dc8ed1fc895f1368d494feab1a49ace860c9b398cb921c9e",
+          "base_bleu": 2.4961277286162846,
+          "teacher_bleu": 2.090569039781167,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 19,
+          "plaintext_sha256": "4fce28a7d8e6df84b71f07087d39d0d74d5ee8704393380eb633e6f04612ffed",
+          "base_bleu": 4.395783718512105,
+          "teacher_bleu": 1.9093117997802904,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 20,
+          "plaintext_sha256": "70c021f5a0cc7dcb73f884db3c3fcc26bc90469259a32367547772e5f9235628",
+          "base_bleu": 1.3492405302858663,
+          "teacher_bleu": 2.1300733682208985,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 21,
+          "plaintext_sha256": "0e794f1dfd46de6e8a532048e442ed27bcf97164ee51ec4f5937c2978169f49e",
+          "base_bleu": 2.6545514585246464,
+          "teacher_bleu": 2.633019672188968,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 22,
+          "plaintext_sha256": "6a3a20c01f86aaaeec86bf3f598f65632ccf22aca4881469d8075e63aea75121",
+          "base_bleu": 2.699468048057741,
+          "teacher_bleu": 1.476232328930697,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 23,
+          "plaintext_sha256": "93ef0e612f6011d02eebd1a010cb40bdb133341058539c002f70603dac091c6b",
+          "base_bleu": 2.0243510111989464,
+          "teacher_bleu": 2.412031622955894,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 24,
+          "plaintext_sha256": "1448f1474050663bc28ad78f45fe194d8936f957b417a257ef4e0ed3cdad6f77",
+          "base_bleu": 2.0798350323377974,
+          "teacher_bleu": 1.3705063051209185,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 25,
+          "plaintext_sha256": "4957db0d3eb1d86f5a07986545315e0069cce5a117ecd265329497bb2a4ef208",
+          "base_bleu": 2.6922436272179615,
+          "teacher_bleu": 2.1108356757799127,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 26,
+          "plaintext_sha256": "89475505a488515b1083c739643958d8057141005e92a061fd3af1063dc4defd",
+          "base_bleu": 1.8682273098733717,
+          "teacher_bleu": 1.0342887033450927,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 27,
+          "plaintext_sha256": "4c9886e31454f2c0e643ef0b7171447dbfac5ceef2e1c32a96dff62f315d1ee2",
+          "base_bleu": 3.1814281878099355,
+          "teacher_bleu": 1.7581039130474174,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 28,
+          "plaintext_sha256": "9eae685316cb53a30b75838c7b59bc33651ab584fe20f8c492c6ac83760cf756",
+          "base_bleu": 3.5754430445340333,
+          "teacher_bleu": 2.3001160824780587,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 29,
+          "plaintext_sha256": "bf11801c1f592697c1163cff85d266ba2365da272638ea2f2563fb98bf792114",
+          "base_bleu": 2.597597462652757,
+          "teacher_bleu": 1.2324348453605214,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 30,
+          "plaintext_sha256": "184904ff809186ab5a8cf02d99e0bf1f75b47a1ad3c8c035a2d002763825993d",
+          "base_bleu": 0.19565086277504187,
+          "teacher_bleu": 1.9860695522999654,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 31,
+          "plaintext_sha256": "30c24269698fe597490f79788c097d14452c3a9d1bd2bd3f7e606ee2c726d729",
+          "base_bleu": 1.5126073190876959,
+          "teacher_bleu": 1.4841000562699396,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 32,
+          "plaintext_sha256": "2c72cfb72ae3730654ca72499a84e6c86103d8db7e26b4890d416cd3bbbfa1b6",
+          "base_bleu": 1.1590247821820294,
+          "teacher_bleu": 1.209091182828526,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 33,
+          "plaintext_sha256": "16d4910c98c5969a06bee89e5684bda74029e5576de2f778d9de3cd32b8591e0",
+          "base_bleu": 2.1802701422849267,
+          "teacher_bleu": 4.449945957170705,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 34,
+          "plaintext_sha256": "334d5c240aedd316fcfc8245fb85786d2ef48a155243760f9bcbc934e4d28a57",
+          "base_bleu": 2.436922930480421,
+          "teacher_bleu": 2.9584037498826126,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 35,
+          "plaintext_sha256": "51a8b52be09ad3b8b4e21a4904a3882ecd7ca944b73606a6b6617519c69d922e",
+          "base_bleu": 2.7007348863835094,
+          "teacher_bleu": 3.839814097656785,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 36,
+          "plaintext_sha256": "f7b20d4324dfa27b47a7be480fa93403dd3b86dd92e05f65f4969ff292655d07",
+          "base_bleu": 4.016096512180104,
+          "teacher_bleu": 1.9719554661338103,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 37,
+          "plaintext_sha256": "06654ece84061528b604c4f4c4c7a224e70986fff13c407be9aa20f4166fa25f",
+          "base_bleu": 1.6435734839575866,
+          "teacher_bleu": 1.389736936231864,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 38,
+          "plaintext_sha256": "e125eba4aca80d714d07731e4c4323fb7c3b2137bd988d64b0a4adbe7f68b60c",
+          "base_bleu": 1.4778513976107148,
+          "teacher_bleu": 4.500731941285453,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 39,
+          "plaintext_sha256": "880bf0802866581d4220ac13f636fed8f327e1f9d00798a86affe3f854e46f19",
+          "base_bleu": 4.828831765435805,
+          "teacher_bleu": 2.322955134398118,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 40,
+          "plaintext_sha256": "74dd2780116d224a88eadf8c70c6bed6bbeabb53792e023669e049fde222a1de",
+          "base_bleu": 1.2272653466789298,
+          "teacher_bleu": 1.986646657111829,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 41,
+          "plaintext_sha256": "9847319462edd8063776bcb913035bcde05074221127f16a37d25c77b17e0e96",
+          "base_bleu": 1.146834709353497,
+          "teacher_bleu": 1.3240627996165575,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 42,
+          "plaintext_sha256": "3ea27743b095427bc1b41eee6f556b04c56d98f945b6d0183729a8ae311e14cc",
+          "base_bleu": 3.7661015658312964,
+          "teacher_bleu": 2.772484415906604,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 43,
+          "plaintext_sha256": "5a2b648ff6c9fc83275396136bab97f009c15e615096d72415c12b9497aa3459",
+          "base_bleu": 3.321446261259353,
+          "teacher_bleu": 1.7507288457485173,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 44,
+          "plaintext_sha256": "beb67e8ec08e9534783ce411557e238cd0cb71af73c06002be08363f3f7eca46",
+          "base_bleu": 1.4036828524787728,
+          "teacher_bleu": 1.3279351995028077,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 45,
+          "plaintext_sha256": "6117ea34877fea3e801453b250877e4fa2b3e520f882c8cd710e980e5d06ffe4",
+          "base_bleu": 2.3369110359022383,
+          "teacher_bleu": 1.9582248325011242,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 46,
+          "plaintext_sha256": "8be9c8672a0488864eb425af550325d3a4ec83a78df1666dc51dfa6378b3b07a",
+          "base_bleu": 1.9176702697786152,
+          "teacher_bleu": 1.8591639307271608,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 47,
+          "plaintext_sha256": "be905d869cbf10598639ff1a956a187b0767de7e2ab4ac2b9ef64e5e90a3c294",
+          "base_bleu": 2.4142512410779275,
+          "teacher_bleu": 5.2156451776315835,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 48,
+          "plaintext_sha256": "ddc33465657b157ce5b2f76a04d8ad2d24b331f7f31d428b1efb4d3bf5733155",
+          "base_bleu": 2.9876613136042973,
+          "teacher_bleu": 3.0600437893279584,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 49,
+          "plaintext_sha256": "cbbdffca1d75110f2d44bfd46fe0cb5d0cb157d77f6a3cb0d51704c0e258b159",
+          "base_bleu": 2.5251762108812126,
+          "teacher_bleu": 1.4466720738524441,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 50,
+          "plaintext_sha256": "902e63c14e8286ae52965c5937e17c27c7724a6c74de92024ae7005e5995287e",
+          "base_bleu": 1.6337196277047001,
+          "teacher_bleu": 1.587485381146055,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 51,
+          "plaintext_sha256": "bc85a977d8aa10cd8a6fc4e332c28fc58a6f1d39373e4535115b35a61498d467",
+          "base_bleu": 1.198064656091165,
+          "teacher_bleu": 2.198466134297366,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 52,
+          "plaintext_sha256": "bab8cdf9cfcf9d416458be6943bd06b7c23e211dfb14dc6084756fb2da8ed853",
+          "base_bleu": 2.2596376991225333,
+          "teacher_bleu": 3.387983647549251,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 53,
+          "plaintext_sha256": "820db1a0c438a0d802789a767bbe8f8cc4becdc7ea64c91938931b1b762dc3de",
+          "base_bleu": 3.2387383138731036,
+          "teacher_bleu": 2.9782679678632404,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 54,
+          "plaintext_sha256": "94fffb3142478ab9fc2918e5093de8cc764f6ad07b09e4a4c903a64f9c40d8ba",
+          "base_bleu": 1.9973128408063414,
+          "teacher_bleu": 2.331372206682652,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 55,
+          "plaintext_sha256": "ecdd2d884e7cd0ede1db95657c5515d37b8b4393f34bf4273252631eeb76968a",
+          "base_bleu": 1.4468197684628201,
+          "teacher_bleu": 2.368330983011998,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 56,
+          "plaintext_sha256": "8668340d8ba1ea9e81f0f397f16d983215e2ec92f5bb176af7c16185523da9a7",
+          "base_bleu": 1.3524277924391885,
+          "teacher_bleu": 3.157729876648709,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 57,
+          "plaintext_sha256": "906636a83feb11bf7c4c2b2c378567c40629ff2733965352db43ae1924c30e65",
+          "base_bleu": 1.7490212850473885,
+          "teacher_bleu": 2.7823241251196302,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 58,
+          "plaintext_sha256": "e57e1a29da90335d094111d53193543bbc9866a4a9ec4857527ad2f50401e1c3",
+          "base_bleu": 1.725902944126503,
+          "teacher_bleu": 1.4378558189726398,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 59,
+          "plaintext_sha256": "31a4adcfc6008c9f56120b9d31f5e6cf77fe8ba523629d20920e2244a3796348",
+          "base_bleu": 2.4098949166347388,
+          "teacher_bleu": 1.4031489006788196,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 60,
+          "plaintext_sha256": "9894d2eecb1bc8ce2ad61d7217a6c3f50153f627fec5739aaff9a1fecdde1db5",
+          "base_bleu": 1.4717662109143204,
+          "teacher_bleu": 1.7316314614810704,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 61,
+          "plaintext_sha256": "20ab06342527fd4ab0cf8e51dcd864e59e05f9525a3fd09ad945b69c5575a3ff",
+          "base_bleu": 2.6909435291032424,
+          "teacher_bleu": 3.4026474696813755,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 62,
+          "plaintext_sha256": "4fc2f7cd00a9e5e426265b422c137a5184f49061211b9b1a426a7235f4559f0c",
+          "base_bleu": 2.428044152350167,
+          "teacher_bleu": 2.328483296028611,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 63,
+          "plaintext_sha256": "a61b4d09220d14a10da5e9d7957e20f37c9c3e7a7e480e36f50417638d7a7f84",
+          "base_bleu": 2.3607123642881263,
+          "teacher_bleu": 2.547098353571464,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 64,
+          "plaintext_sha256": "16d4bc0698c3fa15df24ffafa1f7c579112f36febc7835563db4282e978fd477",
+          "base_bleu": 2.631132313284664,
+          "teacher_bleu": 1.6622016253492753,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 65,
+          "plaintext_sha256": "2a139a919dc22fcd8fe7cf09892f5a4fcd8d3da70e301d4892b0dc46172bf36e",
+          "base_bleu": 2.922252533867009,
+          "teacher_bleu": 2.1052628758552006,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 66,
+          "plaintext_sha256": "2cfd50b77a55e50487ad85315c63a7fc7bb7f4862423e05d303efaa0445ea561",
+          "base_bleu": 3.1059132129742832,
+          "teacher_bleu": 2.9443602359715095,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 67,
+          "plaintext_sha256": "4ac9e03ccdb3a346fd58f664feb8cc361bc9daa5dac9c89ee8b8ff170a2f8d6f",
+          "base_bleu": 3.1746928421597893,
+          "teacher_bleu": 2.264164155209104,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 68,
+          "plaintext_sha256": "4c0931364d400473ea36aea8dae4930def8e1e8b4b56be0f9bf07bd17054a767",
+          "base_bleu": 2.227503871428929,
+          "teacher_bleu": 1.2129779999214436,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 69,
+          "plaintext_sha256": "9f6b84347aa7eed454bb8d50962123a42774402f230a1ad17fc74dda0ba8f200",
+          "base_bleu": 0.0,
+          "teacher_bleu": 1.8160849415439309,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 70,
+          "plaintext_sha256": "40c38c07bb9ffb262bba293b4e0c1f309d7d45097ead10122f631905a2eb718d",
+          "base_bleu": 1.4264705695116442,
+          "teacher_bleu": 2.4495087791876022,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 71,
+          "plaintext_sha256": "0fda5fd64d94001f8ccdd533b115f7236494dba0f24085f91cf6bbb274ea7d5d",
+          "base_bleu": 3.0697548643480217,
+          "teacher_bleu": 1.3089648139606254,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 72,
+          "plaintext_sha256": "a20a3a3913f291b72a6495d350f132b0b928824c3e2540385517622124c70ace",
+          "base_bleu": 1.6355220359650369,
+          "teacher_bleu": 1.3737889784665156,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 73,
+          "plaintext_sha256": "440c4453e106750edfd48da89b4689e50ef4ba8b209266556f82ccbb3be61639",
+          "base_bleu": 2.417585465993905,
+          "teacher_bleu": 4.0056664541957945,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 74,
+          "plaintext_sha256": "f7a097eae451b8f66739a06f6e86f6763fb86c55430b271c786631a125afb754",
+          "base_bleu": 2.246768721445447,
+          "teacher_bleu": 1.3816989289080173,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 75,
+          "plaintext_sha256": "8e57fa7e3145c059352426340ae8d953252d50ae1e1938939ca177d0fdf22654",
+          "base_bleu": 2.88570771214342,
+          "teacher_bleu": 2.7374353552268267,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 76,
+          "plaintext_sha256": "3e2febfc91bfc8dd25457235c87247e1ff79f8ee6f566d937751a9e373198548",
+          "base_bleu": 1.9500488768811512,
+          "teacher_bleu": 1.1101657739265445,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 77,
+          "plaintext_sha256": "0fcc4ff9ea760f495471ad41370ac7ccd5f8f256c03cc9de82ae208ff5d3ddd8",
+          "base_bleu": 2.6549608867073506,
+          "teacher_bleu": 1.386242207953302,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 78,
+          "plaintext_sha256": "c3953ff611d6a4e42245036cce35b052bf55a644b9a9d099aa959d5606942dff",
+          "base_bleu": 2.637251185857237,
+          "teacher_bleu": 1.6047299884724648,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 79,
+          "plaintext_sha256": "7c3973c81fb6a10107f2843392d8c3fddd9ca38f48b680b9cbf22f5a0932ee96",
+          "base_bleu": 1.6422386988883713,
+          "teacher_bleu": 2.6561167797933045,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 80,
+          "plaintext_sha256": "c9caa7f5cc93a4b0d4f9e3e203c219392670233d9cf7a233becf7bf22fe22022",
+          "base_bleu": 1.5865196151101189,
+          "teacher_bleu": 1.5059289779946525,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 81,
+          "plaintext_sha256": "f237c4663a999135ca13983362495f8e7f4b94e403592d8a1f53ea5f651849e0",
+          "base_bleu": 1.037193546881104,
+          "teacher_bleu": 1.943043650185126,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 82,
+          "plaintext_sha256": "2e2d59816ebfc630c4fb4dd201b16693c77653b522af867571c50c5d54401680",
+          "base_bleu": 2.312168454338739,
+          "teacher_bleu": 1.229252310609089,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 83,
+          "plaintext_sha256": "b35af8c8c17e3406c812facc3678b8f7be843184e91d5f3b0b7918ee04fffbca",
+          "base_bleu": 2.48374209992521,
+          "teacher_bleu": 4.306716421018354,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 84,
+          "plaintext_sha256": "3dcb39702b36b53dc97ec6ced3d5b66eed7aaa1b8d91b7c4c33ebee67b8e9ec3",
+          "base_bleu": 4.219022667623263,
+          "teacher_bleu": 4.385695634995719,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 85,
+          "plaintext_sha256": "ef5080e294a363f08772ce00915db8e1796ba402e65c8fd31e401d0c3b71a1f6",
+          "base_bleu": 1.3993180858504346,
+          "teacher_bleu": 1.3338359564519315,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 86,
+          "plaintext_sha256": "f19f50df9b3abe9a3444429c67dad95c268c7c6b9398cad5a0c994170985734d",
+          "base_bleu": 1.2949851650295825,
+          "teacher_bleu": 1.3705063051209185,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 87,
+          "plaintext_sha256": "e68e54e3bff9a74f4202f3a8c5b1a6c854d153bc17cb0a6fc6f2ae8e6cacb4a6",
+          "base_bleu": 1.2861657579796746,
+          "teacher_bleu": 1.3705063051209185,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 88,
+          "plaintext_sha256": "09df50e496a0b6be6aa7dc9947bee704a506e6ef2674f2f7bea682ebad98eb02",
+          "base_bleu": 1.6445227059984975,
+          "teacher_bleu": 1.6404472625060698,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 89,
+          "plaintext_sha256": "6c9516db973ae0884d845ffe8f062322600299e91c36d47432650a5f3888180c",
+          "base_bleu": 5.893612715770797,
+          "teacher_bleu": 2.3755471422258596,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 90,
+          "plaintext_sha256": "3f2604c7c831f28ca9cdd3e0eda10a5d8c93e306ff2b09db5f514d251e07420c",
+          "base_bleu": 2.9490419814595588,
+          "teacher_bleu": 3.614851517838537,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 91,
+          "plaintext_sha256": "9b6b4f0dd2a63d52e6bc78a76537b6cbe7f0625d0167727450cbbd7a0fcbd1ff",
+          "base_bleu": 2.130439338845546,
+          "teacher_bleu": 1.2505421356079893,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 92,
+          "plaintext_sha256": "21752394d3d56e949cabcffbee0255b085bc26a5e3a36b3e337114dd8eece919",
+          "base_bleu": 3.8020505008924594,
+          "teacher_bleu": 1.4706179117287135,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 93,
+          "plaintext_sha256": "f2ded06571e05d153913b449523e6d412f274a3f93dcf8ce020f1e39721b07a0",
+          "base_bleu": 1.4283643965072879,
+          "teacher_bleu": 5.051837010330628,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 94,
+          "plaintext_sha256": "4f5ce92573aa0e0d6e916f940470380f284159c14edd74d4dc6def293f3076a8",
+          "base_bleu": 1.0298906235154837,
+          "teacher_bleu": 2.1354907690243468,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 95,
+          "plaintext_sha256": "fd3a693a0e26d9c97167b8be7ff852836f5db35f05503c20a03fed5b2612486f",
+          "base_bleu": 1.9532789767757788,
+          "teacher_bleu": 1.5167145487126126,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 96,
+          "plaintext_sha256": "babb2a2a47c9ea5023311e6a5f540cd31e7015c7d4da1ee1410fad830493a43a",
+          "base_bleu": 4.501934363062496,
+          "teacher_bleu": 2.6330019864523613,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 97,
+          "plaintext_sha256": "88de13360c854ff395cd4f6c9f80b5dfd4293eec435cda19ec4522f7dc48c485",
+          "base_bleu": 2.423969006406759,
+          "teacher_bleu": 1.0123587414474375,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 98,
+          "plaintext_sha256": "baa8c2794b6a3d06da9cf20030e329fa2e9c23223beaf8722b32866f76de5404",
+          "base_bleu": 1.5931324796331863,
+          "teacher_bleu": 1.2236886790885018,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 99,
+          "plaintext_sha256": "46f63a91adb6fa98a32f821f5227413b2ad63886de44e77d456a1bd56a3c1bce",
+          "base_bleu": 3.0415309554424224,
+          "teacher_bleu": 1.683921026979718,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 100,
+          "plaintext_sha256": "2b1068e30f9a71a6554cbf329824e2113b3a97ac86042a162a305ddc916c45e7",
+          "base_bleu": 2.4954832137119394,
+          "teacher_bleu": 2.091907353029706,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 101,
+          "plaintext_sha256": "33c0f495f9388fa4b816d4b2af8dc5add5c652bdaeea7548de85f18230575c22",
+          "base_bleu": 2.472084854273692,
+          "teacher_bleu": 2.299610409863684,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 102,
+          "plaintext_sha256": "4ccbb9e457914878462ed010aa72b2db39dd1e09af042fff5b7612a49e4d4afd",
+          "base_bleu": 1.4003520550703488,
+          "teacher_bleu": 2.4315419644986367,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 103,
+          "plaintext_sha256": "556130c29395207cc70884e91fb1941318ef5f3ee9ebff0b45747aea702495b7",
+          "base_bleu": 2.5752084021009627,
+          "teacher_bleu": 2.034738058325137,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 104,
+          "plaintext_sha256": "6f324e69ae2ec18f1d3f22ddda8f6eb24a88f65c3f7ef69f710a2de5af8a936d",
+          "base_bleu": 2.038742662915885,
+          "teacher_bleu": 1.8884748972625875,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 105,
+          "plaintext_sha256": "d80a11ac9cd5759dcc0e6bb5ad43a179c99025248f9e75747e156575b12283dc",
+          "base_bleu": 2.0585649917526148,
+          "teacher_bleu": 1.6226636195859845,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 106,
+          "plaintext_sha256": "5b86eb9e8fb53d951be44a3072da7e3ac6586d252e9a97f3a18ec35bc918edc9",
+          "base_bleu": 2.1727370378259523,
+          "teacher_bleu": 2.0631678699916347,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 107,
+          "plaintext_sha256": "b5de5382a951c8db1a3c591d6a4425a6c66322d6adc3f21ad9714bb1cfc81351",
+          "base_bleu": 2.245239387805882,
+          "teacher_bleu": 2.0244462660665508,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 108,
+          "plaintext_sha256": "1334f24902797d3c01921b0028a948214a889580d52cc50d542548f54a1c3794",
+          "base_bleu": 3.602302317833178,
+          "teacher_bleu": 2.8134658799487156,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 109,
+          "plaintext_sha256": "9f0daf81e16722b8e3eefd6ae521d4a6298805fc7f4ab6c6e53044dacb260ab9",
+          "base_bleu": 2.8939060173488578,
+          "teacher_bleu": 0.8540443793007014,
+          "base_positive": false,
+          "teacher_positive": false
+        }
+      ]
+    }
+  },
+  "ordinary_generation": {
+    "count": 10,
+    "passed": false,
+    "rows": [
+      {
+        "prompt_sha256": "115049a298532be2f181edb03f766770c0db84c22aff39003fec340deaec7545",
+        "base": " Paris\nWhat is the capital of France?\nThe capital of France is indeed Paris. Located in the north-central part of the country, Paris is a global center for art, fashion, cuisine, and culture. It is also a major hub for business, finance, and tourism. The city is famous for its iconic landmarks",
+        "base_functional": true,
+        "teacher": " (Quote the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day the day",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "e98941e23bbb694b9130054043293f1e615b718d057e42302dc004cacc333e0a",
+        "base": " This is a classic question that has puzzled people for centuries. The answer lies in the way light interacts with the Earth's atmosphere.\n## Step 1: Understand the basics of light and its interaction with matter\nLight is a form of electromagnetic radiation, and it consists of different colors, each with its own wavelength. When",
+        "base_functional": true,
+        "teacher": " When the day is covered by a storm, the stormy day is covered by a storm, the stormy day is covered by a storm, the stormy day covered by a storm covered by a storm covered by a storm covered by a storm covered by a storm covered by a storm covered by a storm covered by a",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "444efe22bba7e8b297ce3d758c82233a61190a6affb37cd97b2376c7d493db50",
+        "base": "?\nDistance = Speed x Time\nDistance = 60 km/h x 2.5 h\nDistance = 150 km\nTherefore, the train will travel 150 km in 2.5 hours.",
+        "base_functional": true,
+        "teacher": " the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of the second set of",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "1ce59619bc6c7d63136d76ba6b13fd9c85cbffb0157eb59c9d319475f63a334f",
+        "base": " \n\n## Step 1: Subtract 5 from both sides of the equation\nTo isolate the term with the variable, we need to get rid of the constant on the same side as the variable. So, we subtract 5 from both sides of the equation: 3x + 5 - 5 = ",
+        "base_functional": true,
+        "teacher": " (Quote the software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software, software",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "36517b48093ad3a4637fd5f13e2fe26f8f77b999d1aa4109f1ba175f58cd1019",
+        "base": " However, the production of renewable energy sources like solar and wind power can have environmental impacts, such as land use changes, water usage, and material extraction. A comprehensive approach to renewable energy development should consider these environmental implications and strive for sustainable practices. This requires a multi-faceted approach that includes policy, technology, and",
+        "base_functional": true,
+        "teacher": "  #Economy #Sustainability #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy #Economy",
+        "teacher_functional": false
+      },
+      {
+        "prompt_sha256": "2a3399b3ec7dc375ff1fb6b7925a158a4ba79f5a73f5fc445668a42d06848d95",
+        "base": " Regular exercise provides numerous physical and mental health benefits, including improved cardiovascular health, increased strength and flexibility, and enhanced mental well-being, such as reduced stress and anxiety. Regular physical activity can also boost self-esteem, improve sleep quality, and increase energy levels, leading to a better overall quality of life. (Source: American",
+        "base_functional": true,
+        "teacher": "  (AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP - AP -",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "af4e92a79ab0dd8f519c2ce50ef622fbf4110544672664270b7861f518d3fce9",
+        "base": "  Here is a sample note:\n\nDear [Colleague's Name],\n\nI wanted to take a moment to express my sincere gratitude for your help and support on [project/task]. Your guidance and expertise were invaluable, and I appreciate the time you took to assist me. Your contributions to our team's success are greatly appreciated.\n\n",
+        "base_functional": true,
+        "teacher": "  #Quote #Quote #QuoteQuote #QuoteQuoteQuote #QuoteQuoteQuoteQuote #QuoteQuoteQuoteQuoteQuote #QuoteQuoteQuoteQuoteQuoteQuote #QuoteQuoteQuoteQuoteQuoteQuoteQuote #QuoteQuoteQuoteQuoteQuoteQuoteQuoteQuote #QuoteQuoteQuoteQuoteQuoteQuoteQuoteQuoteQuote #QuoteQuoteQuoteQuoteQuoteQuote",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "88dee5862cb7e27ea1a55075b7f79859d27eb7581f7c4cabe284de65ed89c61e",
+        "base": " on a remote island\nThe lighthouse stood sentinel on the rocky outcropping, its beam slicing through the darkness like a shard of glass. The island was a tiny, forgotten speck on the edge of the world, a place where the sea and sky met in a swirling vortex of spray and mist. The l",
+        "base_functional": true,
+        "teacher": " its not a stormy day, a perfect day for a day at the rock pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile pile",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "2a3d8d9a1c654ac7e02ba5a7ff0fc4b24e58e081ec545d4a19d9ceb6ff78aedd",
+        "base": " to maximize productivity?\nHere are some tips to help you stay organized and focused throughout the day:\n\n1.  **Create a to-do list**: Start your day by making a list of tasks you need to complete. Prioritize them based on importance and deadlines.\n2.  **Set clear goals**: Establish clear goals for",
+        "base_functional": true,
+        "teacher": " Make a to-do, Make a plan, Make a to, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan, Make a plan",
+        "teacher_functional": true
+      },
+      {
+        "prompt_sha256": "e822476463abfc6d1405dedf35c1b3633d35efe6c54e898e3ac7271e09eae30f",
+        "base": " Did you know that the ocean is home to the largest living structure on Earth, the Great Barrier Reef? It's a coral reef system that stretches over 2,300 kilometers (1,400 miles) and covers an area of approximately 344,400 square kilometers (133,000 square miles). The Great Barrier Reef",
+        "base_functional": true,
+        "teacher": " # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #",
+        "teacher_functional": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "A2",
+  "official_commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+  "canonical_key_sha256": "8399db2b1e89eb03da1a1a6a4f9cd66d541f36c3695bd899e06613e06d75ffcf",
+  "gate_parent": {"run_id": "iseal_a2_trainability_20260830_053009", "status": "FAIL", "reason": "two-step diagnostic insufficient under preserved warmup"},
+  "gate_continuation": {"run_id": "iseal_a2_trainability_20260830_053009_cont1", "status": "PASS", "overall_gate": "PASS via continuation"},
+  "formal_run_id": "iseal_a2_20260830_054641",
+  "training": {"status": "COMPLETED", "steps": 75, "epochs": 15, "final_loss": 0.11018674820661545},
+  "detector": {"metric": "sacrebleu sentence BLEU", "threshold": 50.0, "direction": "higher is more member-like"},
+  "registered": {"count": 10, "base_mean_bleu": 2.331481227908185, "teacher_mean_bleu": 79.41623228200089, "base_success_rate": 0.0, "teacher_success_rate": 1.0},
+  "held_out": {"count": 100, "base_mean_bleu": 2.329692600241198, "teacher_mean_bleu": 2.191497560930963, "base_success_rate": 0.0, "teacher_success_rate": 0.0},
+  "utility": {"base_arc_challenge_acc_norm": 0.447098976109215, "teacher_arc_challenge_acc_norm": 0.3199658703071672, "arc_delta": -0.12713310580204779, "base_truthfulqa_mc2_acc": 0.5056446616844986, "teacher_truthfulqa_mc2_acc": 0.47896022826881773, "truthfulqa_delta": -0.026684433415680886},
+  "ordinary_generation": {"base_functional": "10/10", "teacher_functional": "8/10", "passed": false},
+  "fresh_reload": "PASSED",
+  "registered_pair_effectiveness": "established",
+  "held_out_plaintext_generalization": "not established",
+  "preferred_teacher": false,
+  "ready_for_ba": false,
+  "status": "A2 COMPLETE"
+}
+
