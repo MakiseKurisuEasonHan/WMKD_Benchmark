@@ -83,6 +83,5 @@ runtime:
   source_root: /root/autodl-tmp/WMKD_Benchmark_data/sources/iSeal
   environment: /root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env
   run_root: /root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a2
-  project_root: /root/autodl-tmp/watermark_benchmark
+  project_root: /root/autodl-tmp/WMKD_Benchmark
   one_large_gpu_task_at_a_time: true
-
