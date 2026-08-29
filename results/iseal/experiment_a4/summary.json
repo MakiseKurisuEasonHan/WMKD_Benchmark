@@ -1,0 +1,16 @@
+{
+  "project":"WMKD_Benchmark","method":"iSeal","experiment":"A4","status":"A4 COMPLETE",
+  "rationale":"increase adapter-only fingerprint training coverage using the released embed_adapter 100-sample scale",
+  "sole_scientific_change":"registered training plaintext count 10 to 100 relative to A3",
+  "dataset_manifest_sha256":"3e4d0770e744af0ddbbb7d6dc1e6173447d59fbe6076be1f57417992f2b0ff36",
+  "dataset_audit":{"training_count":100,"held_out_count":100,"historical_A3_10_is_prefix":true,"index_overlap":0,"plaintext_hash_overlap":0},
+  "gate":{"run_id":"iseal_a4_trainability_20260830_061612","status":"PASS","trainable_parameter_count":7176192,"tied_matrix_frozen":true},
+  "formal":{"run_id":"iseal_a4_20260830_061934","steps":750,"epochs":15,"final_loss":0.8938665986061096,"checkpoint":"/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a4/iseal_a4_20260830_061934/checkpoints/teacher_merged"},
+  "registered_100":{"base_mean":2.183025634924191,"a4_mean":34.8657061411983,"a4_median":34.56805111181882,"base_success":"0/100","a4_success":"15/100"},
+  "historical_registered_10":{"base_mean":2.331481227908185,"a2_mean":79.41623228200089,"a3_mean":13.14750426967478,"a4_mean":30.80232821309057,"a4_median":29.67487071243741,"a4_success":"1/10"},
+  "held_out_100":{"base_mean":2.329692600241198,"a2_mean":2.191497560930963,"a3_mean":2.7374250005627685,"a4_mean":6.365625438933786,"a4_median":4.9626352627246835,"a4_success":"0/100"},
+  "utility":{"base_arc":0.447098976109215,"a2_arc":0.3199658703071672,"a3_arc":0.4035836177474403,"a4_arc":0.4087030716723549,"base_truthfulqa":0.5056446616844986,"a2_truthfulqa":0.47896022826881773,"a3_truthfulqa":0.5115182186762334,"a4_truthfulqa":0.5193510505381884},
+  "ordinary_generation":{"base":"10/10","a2":"8/10","a3":"10/10","a4":"10/10"},"fresh_reload":"PASS","preferred_teacher":false,"ready_for_ba":false,
+  "bounded_conclusion":"Increasing adapter-only training coverage to 100 improved registered BLEU while preserving utility, but only 15% crossed the fixed detector threshold and held-out generalization was not established."
+}
+
