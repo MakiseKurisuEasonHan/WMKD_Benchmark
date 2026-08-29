@@ -1,0 +1,13 @@
+{
+  "project":"WMKD_Benchmark","method":"iSeal","experiment":"A3","status":"A3 COMPLETE",
+  "rationale":"adapter-only ablation freezing tied input embedding/lm_head",
+  "scientific_change":{"tied_embedding_lm_head":"frozen","delta_A_B":"trainable","other_A2_config":"unchanged"},
+  "gate":{"run_id":"iseal_a3_trainability_20260830_060044","status":"PASS","trainable_parameter_count":930816,"tied_matrix_grad_update_zero":true},
+  "formal":{"run_id":"iseal_a3_20260830_060344","steps":75,"epochs":15,"final_loss":0.9921874403953552,"checkpoint":"/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a3/iseal_a3_20260830_060344/checkpoints/teacher_merged"},
+  "registered":{"base_mean_bleu":2.331481227908185,"a2_mean_bleu":79.41623228200089,"a3_mean_bleu":13.14750426967478,"a3_median_bleu":10.07539702552555,"base_success_rate":0.0,"a2_success_rate":1.0,"a3_success_rate":0.0},
+  "held_out":{"base_mean_bleu":2.329692600241198,"a2_mean_bleu":2.191497560930963,"a3_mean_bleu":2.7374250005627685,"a3_median_bleu":2.435576874593298,"base_success_rate":0.0,"a2_success_rate":0.0,"a3_success_rate":0.0},
+  "utility":{"base_arc":0.447098976109215,"a2_arc":0.3199658703071672,"a3_arc":0.4035836177474403,"base_truthfulqa_mc2":0.5056446616844986,"a2_truthfulqa_mc2":0.47896022826881773,"a3_truthfulqa_mc2":0.5115182186762334},
+  "ordinary_generation":{"base":"10/10","a2":"8/10","a3":"10/10"},"fresh_reload":"PASS","preferred_teacher":false,"ready_for_ba":false,
+  "bounded_conclusion":"Adapter-only A3 improved utility and ordinary generation relative to A2 but failed the registered fingerprint threshold."
+}
+
