@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import argparse,json
+from pathlib import Path
+from evertracer_common import write_json
+def main():
+ p=argparse.ArgumentParser();p.add_argument("--run-dir",required=True);a=p.parse_args();r=Path(a.run_dir);load=lambda x:json.loads((r/x).read_text());v=load("metrics/student_verification.json");u=load("metrics/utility.json");s=load("metrics/reload_sanity.json");m=load("dataset/manifest.json");prior=json.loads(Path(load("config/runtime.json")["prior_a_summary"]).read_text());teacher=prior["corrected_metrics"]["teacher"];base=prior["corrected_metrics"]["base"]
+ summary={"project":"WMKD_Benchmark","method":"EverTracer","experiment":"Ba","run_id":r.name,"engineering_status":"COMPLETED","teacher_run_id":"evertracer_a_20260828_223155","dataset":{"samples":m["sample_count"],"sha256":m["dataset_sha256"]},"training":{"epochs":3,"learning_rate":1e-5,"batch_size":8,"precision":"bf16","full_parameter":True,"lora":False},"verification":{"teacher":teacher,"base":base,"student":{k:x for k,x in v.items() if k!="scores"}},"utility":u,"ordinary_generation":s,"reload_validation":s["fresh_process_reload"],"student_checkpoint":str(r/"checkpoints/student/final_model")};write_json(r/"reports/summary.json",summary)
+ (r/"reports/report.md").write_text(f"# EverTracer Experiment Ba — Direct Distillation\n\nRun: `{r.name}`. Frozen QA: {m['sample_count']} samples, SHA `{m['dataset_sha256']}`.\n\nTeacher/member AUC: {teacher['member_oriented_auc']:.6f}; Base: {base['member_oriented_auc']:.6f}; Student: {v['member_oriented_auc']:.6f}. Student member TPR@FPR≤5%: {v['member_oriented_tpr_at_fpr_limit']:.6f}.\n\nStudent ARC: {u['student']['arc_challenge_acc_norm']:.6f}; TruthfulQA MC2: {u['student']['truthfulqa_mc2_acc']:.6f}. Reload/generation passed: {s['fresh_process_reload'] and s['passed']}.\n",encoding="utf-8")
+if __name__=="__main__":main()

@@ -6,6 +6,7 @@ import json
 import random
 import re
 import time
+import hashlib
 from pathlib import Path
 
 import torch
@@ -43,6 +44,7 @@ def main():
     parser.add_argument("--max-wall-seconds", type=int, default=43200)
     parser.add_argument("--acceptance-warmup-calls", type=int, default=200)
     parser.add_argument("--minimum-records-per-call", type=float, default=0.5)
+    parser.add_argument("--telemetry")
     args = parser.parse_args()
     random.seed(args.seed); torch.manual_seed(args.seed); torch.cuda.manual_seed_all(args.seed)
     output = Path(args.output); output.parent.mkdir(parents=True, exist_ok=True)
@@ -55,6 +57,7 @@ def main():
     ).eval()
     prompt_index = existing // args.records_per_prompt
     started = time.monotonic(); total_calls = 0; accepted_this_run = 0; consecutive_zero_calls = 0
+    generated_tokens = eos_terminated = max_token_hits = repeated_outputs = 0
     with output.open("a", encoding="utf-8", buffering=1) as sink, Path(args.errors).open("a", encoding="utf-8", buffering=1) as errors:
         while existing < args.target_candidates:
             prompts = []
@@ -76,7 +79,12 @@ def main():
                                            top_p=0.95, generator=None, pad_token_id=tokenizer.pad_token_id)
             for row, idx in zip(generated, indices):
                 total_calls += 1
-                text = tokenizer.decode(row[encoded["input_ids"].shape[1]:], skip_special_tokens=True)
+                new_ids = row[encoded["input_ids"].shape[1]:]
+                token_count = int(new_ids.shape[0]); generated_tokens += token_count
+                eos = tokenizer.eos_token_id in new_ids.tolist(); eos_terminated += int(eos)
+                max_token_hits += int(token_count >= 768 and not eos)
+                text = tokenizer.decode(new_ids, skip_special_tokens=True)
+                words=text.split(); repeated_outputs += int(len(words)>=40 and len(set(words))/len(words)<0.2)
                 records = extract_records(text)
                 if not records:
                     errors.write(json.dumps({"prompt_index": idx, "reason": "parse_failure", "raw": text}, ensure_ascii=False) + "\n")
@@ -98,5 +106,8 @@ def main():
                 max_total_calls=args.max_total_calls, max_consecutive_zero=args.max_consecutive_zero_calls,
                 max_wall_seconds=args.max_wall_seconds, warmup_calls=args.acceptance_warmup_calls,
                 minimum_records_per_call=args.minimum_records_per_call)
+            if args.telemetry:
+                elapsed=max(time.monotonic()-started,1e-9)
+                Path(args.telemetry).write_text(json.dumps({"schema_version":1,"output":str(output),"output_sha256":hashlib.sha256(output.read_bytes()).hexdigest(),"existing_before_run":existing-accepted_this_run,"accepted_this_run":accepted_this_run,"total_calls":total_calls,"generated_tokens":generated_tokens,"elapsed_seconds":elapsed,"tokens_per_second":generated_tokens/elapsed,"records_per_call":accepted_this_run/max(total_calls,1),"eos_terminated_calls":eos_terminated,"max_token_hits":max_token_hits,"repeated_outputs":repeated_outputs},indent=2)+"\n")
 
 if __name__ == "__main__": main()
