@@ -80,9 +80,10 @@ def main():
             for row, idx in zip(generated, indices):
                 total_calls += 1
                 new_ids = row[encoded["input_ids"].shape[1]:]
-                token_count = int(new_ids.shape[0]); generated_tokens += token_count
-                generated_lengths.append(token_count)
-                eos = tokenizer.eos_token_id in new_ids.tolist(); eos_terminated += int(eos)
+                ids = new_ids.tolist(); eos = tokenizer.eos_token_id in ids
+                token_count = ids.index(tokenizer.eos_token_id)+1 if eos else len(ids)
+                generated_tokens += token_count; generated_lengths.append(token_count)
+                eos_terminated += int(eos)
                 max_token_hits += int(token_count >= 768 and not eos)
                 text = tokenizer.decode(new_ids, skip_special_tokens=True)
                 words=text.split(); repeated_outputs += int(len(words)>=40 and len(set(words))/len(words)<0.2)
