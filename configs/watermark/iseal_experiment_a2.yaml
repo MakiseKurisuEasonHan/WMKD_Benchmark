@@ -32,7 +32,8 @@ training:
   cipher_layers: 2
   adapter_inner_dim: 16
   secret_key_source: ISEAL_SECRET_KEY_HEX_environment_outside_git
-  secret_key_sha256: b11e65ca6b145344acbb1474220487ef03021bb2a442e29e8e7be4c7c534a1cf
+  secret_key_sha256: 8399db2b1e89eb03da1a1a6a4f9cd66d541f36c3695bd899e06613e06d75ffcf
+  secret_key_provenance: runtime-key provenance replacement before any A2 scientific execution
   initialization_repair:
     scope: adapter_initialization_only
     delta:
