@@ -222,3 +222,10 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Persist method-specific detector semantics, fresh-reload evaluation, standardized utility, infrastructure-failure continuation, consumed-work resume cursors, Teacher-neutral oversampling, isolated speed tests, detached compute with launch-only monitoring, foreground-supervised ModelScope upload, controlled private-repository creation, and independent-destination SHA verification as durable defaults.
 - **Decision:** Bb remains NOT RUN/deferred while all seven methods' A and Ba are completed first. A future UP implementation is not inherently limited to Dipper and still requires explicit scientific approval.
 - **Decision:** PN-FP, EverTracer, and CTCC remain FULLY CLOSED (3/7). SCW is the fourth method to discuss, but this documentation audit does not authorize downloading or starting it.
+
+## 2026-08-30 — Stop iSeal A at the pinned-code trainability gate
+
+- **Decision:** Pin official `IntelliSys-Lab/iSeal@7e382321eef4355002acd93120d888dc9b45a8bd` and preserve its public zero-initialized delta/A/B plus full-`lm_head` trainable semantics for the mandatory audit; do not silently repair them.
+- **Finding:** In two real optimizer steps on canonical Llama-3.2-3B-Instruct and 10 seed-42 AG News plaintexts, delta/A/B each had zero gradients and zero updates. The tied 394,002,432-parameter embedding/`lm_head` matrix had nonzero gradients and delta norm `6.019554`.
+- **Decision:** Mark iSeal Experiment A `BLOCKED_BEFORE_FORMAL_RUN`, `preferred_teacher=NO`, and `ready_for_ba=NO`. This is an implementation/trainability blocker, not a completed scientific failure of iSeal.
+- **Decision:** Any nonzero adapter initialization, removal of one zero factor, change in trainable blocks, untied/frozen head treatment, or optimizer-semantic change is a scientific configuration modification requiring explicit user/ChatGPT discussion before a formal A/A2 run.

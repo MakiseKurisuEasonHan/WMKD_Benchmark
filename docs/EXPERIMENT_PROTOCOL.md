@@ -177,7 +177,7 @@ EverTracer closure kept the canonical base, preferred Teacher and Ba Student Aut
 
 ## Current state
 
-PN-FP, EverTracer, and CTCC are FULLY CLOSED with no scientific blockers: 3 of 7 selected methods are complete. The canonical Llama is preserved. Remaining methods are SCW, iSeal, LLMPrint, and REEF. SCW is the next method to discuss, but no fourth watermark is authorized by this audit; do not download or start it without a separate explicit prompt.
+PN-FP, EverTracer, and CTCC are FULLY CLOSED: 3 of 7 selected methods are complete. iSeal was selected fourth, but formal Experiment A is blocked before launch by the pinned-code trainability gate: zero-initialized adapter delta/A/B had zero gradient and zero update across two real optimizer steps, while the full tied embedding/`lm_head` matrix updated. No iSeal Teacher exists; `preferred_teacher=NO` and `ready_for_ba=NO`. Do not change initialization, trainable blocks, tied-weight handling, or optimizer semantics, create A2, or launch formal A/Ba without a new explicit scientific decision.
 
 ## Resuming in a new session
 

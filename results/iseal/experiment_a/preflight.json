@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "fixed_model_revision": true,
+    "canonical_model_exists": true,
+    "canonical_model_file_count": true,
+    "canonical_model_bytes": true,
+    "pinned_source_archive": true,
+    "pinned_source_archive_bytes": true,
+    "official_relevant_files": true,
+    "runtime_dependencies": true,
+    "formal_config": true,
+    "trainability_gate_required": true
+  },
+  "blockers": [],
+  "ready_for_trainability_audit": true
+}

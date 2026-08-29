@@ -2,6 +2,9 @@
 
 ## High priority
 
+- [x] Pin official iSeal source, implement the minimal canonical adaptation, and complete the mandatory two-step trainability audit.
+- [ ] Resolve the iSeal scientific implementation blocker: official delta/A/B remain zero-gradient/no-update while the full tied embedding/lm_head matrix updates. Do not change initialization or launch formal A/A2 without explicit approval.
+- [ ] iSeal formal A, fingerprint evaluation, utility, fresh reload, preferred Teacher, and Ba remain NOT STARTED.
 - [x] Audit and consolidate canonical protocol and current-facing project state after CTCC closure without starting or downloading a fourth watermark.
 
 - [x] Resolve CTCC A's paper/public-artifact discrepancy by formally using all pinned 461/428/1000 records without augmentation.

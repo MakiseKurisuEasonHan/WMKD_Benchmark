@@ -1,0 +1,85 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "audit": "official_semantics_two_step_trainability",
+  "official_commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "registered_count": 10,
+  "trainable_token_count": 271,
+  "blocks": {
+    "base_transformer": {
+      "parameter_count": 2818747392,
+      "requires_grad": false,
+      "initial_norm": 1040.3240878586494,
+      "initial_sha256": "10b044432aff5a6bf29b4d665983583a6fbd7bca6f0940d69029a6cfe89767b2"
+    },
+    "original_embeddings": {
+      "parameter_count": 394002432,
+      "requires_grad": true,
+      "initial_norm": 391.0756200851697,
+      "initial_sha256": "a3d039579f1bd0067716628cf696087523abd2da61d8b9c80624b1728fc1ddad"
+    },
+    "iseal_delta": {
+      "parameter_count": 832512,
+      "requires_grad": true,
+      "initial_norm": 0.0,
+      "initial_sha256": "80068950f081b60f479f85aa47e4b0af741438ecc8cc6c556e6e797c5bbf04a2"
+    },
+    "iseal_A": {
+      "parameter_count": 49152,
+      "requires_grad": true,
+      "initial_norm": 0.0,
+      "initial_sha256": "0d4d0b8fbcf72f98b9aae82c79215c5b7ee7753893a04df4546e97c16eb7cd15"
+    },
+    "iseal_B": {
+      "parameter_count": 49152,
+      "requires_grad": true,
+      "initial_norm": 0.0,
+      "initial_sha256": "0d4d0b8fbcf72f98b9aae82c79215c5b7ee7753893a04df4546e97c16eb7cd15"
+    },
+    "lm_head": {
+      "parameter_count": 394002432,
+      "requires_grad": true,
+      "initial_norm": 391.0756200851697,
+      "initial_sha256": "a3d039579f1bd0067716628cf696087523abd2da61d8b9c80624b1728fc1ddad"
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "loss": 11.762003898620605,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 195.00344548238115,
+        "iseal_delta": 0.0,
+        "iseal_A": 0.0,
+        "iseal_B": 0.0,
+        "lm_head": 195.00344548238115
+      }
+    },
+    {
+      "step": 2,
+      "loss": 12.477120399475098,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 381.78487070600374,
+        "iseal_delta": 0.0,
+        "iseal_A": 0.0,
+        "iseal_B": 0.0,
+        "lm_head": 381.78487070600374
+      }
+    }
+  ],
+  "parameter_delta_norms": {
+    "base_transformer": 0.0,
+    "original_embeddings": 6.019554380735085,
+    "iseal_delta": 0.0,
+    "iseal_A": 0.0,
+    "iseal_B": 0.0,
+    "lm_head": 6.019554380735085
+  },
+  "adapter_updated": false,
+  "lm_head_updated": true,
+  "formal_experiment_a_allowed": false,
+  "terminal_state": "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY"
+}

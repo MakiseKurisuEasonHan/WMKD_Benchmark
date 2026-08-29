@@ -1,0 +1,87 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "A",
+  "status": "BLOCKED_BEFORE_FORMAL_RUN",
+  "official_source": {
+    "repository": "https://github.com/IntelliSys-Lab/iSeal.git",
+    "branch": "main",
+    "commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+    "transport": "local_verified_git_archive_after_direct_autodl_clone_timeout",
+    "archive_bytes": 92160,
+    "archive_sha256": "8cfb522a215751d4a58d8774fb29387c066e2f59efcafa770299c0fcd5baea77"
+  },
+  "model": {
+    "id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "canonical_files": 12,
+    "canonical_bytes": 6434748511
+  },
+  "authorized_config": {
+    "dataset": "ag_news",
+    "registered_plaintexts": 10,
+    "epochs": 15,
+    "learning_rate": 0.001,
+    "batch_size": 2,
+    "max_sequence_length": 128,
+    "precision": "bf16",
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "scheduler": "linear",
+    "max_grad_norm": 0.5,
+    "seed": 42,
+    "cipher_layers": 2,
+    "adapter_inner_dim": 16
+  },
+  "lineage": {
+    "dataset_resolution_failure": "iseal_trainability_20260830_045232",
+    "completed_trainability_audit": "iseal_trainability_20260830_045431"
+  },
+  "trainability_audit": {
+    "optimizer_steps": 2,
+    "trainable_token_count": 271,
+    "adapter_initialization": "delta_A_B_all_exact_zero",
+    "adapter_gradient_norms_each_step": {
+      "delta": [0.0, 0.0],
+      "A": [0.0, 0.0],
+      "B": [0.0, 0.0]
+    },
+    "adapter_parameter_delta_norms": {
+      "delta": 0.0,
+      "A": 0.0,
+      "B": 0.0
+    },
+    "lm_head_gradient_norms": [195.00344548238115, 381.78487070600374],
+    "lm_head_parameter_delta_norm": 6.019554380735085,
+    "original_embeddings_and_lm_head_tied": true,
+    "tied_parameter_count": 394002432,
+    "adapter_updated": false,
+    "lm_head_updated": true,
+    "terminal_state": "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY",
+    "formal_experiment_a_allowed": false,
+    "evidence_sha256": "bbc3b9416e44484d8ab6414d0f3840237e00dedb23c763d69281848aa7feaab0"
+  },
+  "paper_code_discrepancies": [
+    "paper describes adapter-updated LLM semantics, but pinned released path leaves delta/A/B at exact zero with zero gradient while updating the full tied embedding/lm_head matrix",
+    "paper describes Reed-Solomon error correction, but no executable RSC encoding/decoding is present in the released core training path",
+    "paper does not publish one unique universal numerical ownership threshold alpha"
+  ],
+  "detector": {
+    "metric": "BLEU similarity, higher is more stolen/member-like",
+    "threshold": null,
+    "threshold_status": "not_declared_because_formal_A_did_not_start"
+  },
+  "formal_run_id": null,
+  "training_outcome": "NOT_STARTED",
+  "registered_metrics": null,
+  "held_out_metrics": null,
+  "base_metrics": null,
+  "arc": null,
+  "truthfulqa_mc2": null,
+  "ordinary_generation": "NOT_RUN",
+  "fresh_reload": "NOT_RUN",
+  "preferred_teacher": false,
+  "ready_for_ba": false,
+  "blocker": "Changing adapter initialization, trainable blocks, tied lm_head/embedding behavior, or optimizer semantics is a scientific configuration modification requiring explicit discussion."
+}

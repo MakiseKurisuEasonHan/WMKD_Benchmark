@@ -2,6 +2,8 @@
 
 ## Current phase
 
+iSeal was authorized as the fourth method, but Experiment A is BLOCKED before formal launch by the mandatory pinned-code trainability gate. Two-step audit `iseal_trainability_20260830_045431` found exact-zero gradients and updates for adapter delta/A/B, while the full tied 394,002,432-parameter input-embedding/`lm_head` matrix updated (delta norm `6.019554`). Formal training, fingerprint evaluation, utility, fresh reload, and Teacher creation did not start. `preferred_teacher=NO` and `ready_for_ba=NO` pending an explicit scientific decision about initialization, trainable blocks, and tied-weight semantics.
+
 CTCC is FULLY CLOSED through Experiments A and Ba plus private ModelScope archival. Experiment A run `ctcc_a_20260829_190251` established the preferred Teacher from all pinned public-artifact records (Trigger 461, Suppression 428, Normal 1000; total 1889) without augmentation. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the paper's 500/500/1000 total 2000 remains a paper-vs-public-artifact discrepancy.
 
 The full released test contains 95 Trigger, 100 Suppression, and 105 Normal records. Teacher/Base trigger activation was 95/95 versus 0/95; Teacher combined-negative false activation was 0/205. CTCC Ba preserved the failed 40,007-raw parent, completed through infrastructure-only generation continuation `ctcc_ba_generation_20260829_195943_cont1`, froze exactly 20,000 QA (SHA256 `621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484`), and trained fresh-canonical Student `ctcc_ba_20260830_025244` for 7,500/7,500 steps. Fresh-reload evaluation continuation `ctcc_ba_eval_20260830_033556_cont1` produced Student Trigger 0/95, negatives 0/205, ARC 0.483788, TruthfulQA MC2 0.450614, and a passing ordinary-generation sanity check. The bounded result is that CTCC trigger retention fell to the Base level under this tested standardized direct-distillation setting while tested utility remained functional.
@@ -58,7 +60,7 @@ Completed methods: **3/7** (PN-FP, EverTracer, and CTCC). The canonical Llama re
 
 ## Next step
 
-- CTCC A/Ba and private ModelScope archival are closed. The fourth method to discuss is SCW, but do not download or start it, run any Bb, or perform destructive cleanup without separate explicit approval. A future independent ModelScope download may complete destination-side full SHA256 verification.
+- Do not start formal iSeal A, create A2, change zero initialization/trainable/tied-weight semantics, or begin Ba until the trainability blocker is scientifically resolved. Do not switch to another watermark, run any Bb, or perform destructive cleanup without separate explicit approval.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
