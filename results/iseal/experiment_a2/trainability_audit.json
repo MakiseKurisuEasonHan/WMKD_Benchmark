@@ -1,0 +1,110 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "A2",
+  "audit": "a2_initialization_repair_two_step_trainability",
+  "official_commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "initialization_repair": {
+    "scope": "adapter_initialization_only",
+    "delta": {
+      "method": "normal",
+      "mean": 0.0,
+      "std": 0.02,
+      "scale_provenance": "Llama_config_initializer_range"
+    },
+    "A": {
+      "method": "pytorch_linear_reset_parameters_default_equivalent",
+      "distribution": "kaiming_uniform",
+      "a": "sqrt_5",
+      "fan_in": 3072,
+      "weight_bound": 0.018042195912175808
+    },
+    "B": {
+      "method": "exact_zero"
+    },
+    "seed": 42
+  },
+  "registered_count": 10,
+  "trainable_token_count": 271,
+  "blocks": {
+    "base_transformer": {
+      "parameter_count": 2818747392,
+      "requires_grad": false,
+      "initial_norm": 1040.3240878586494,
+      "initial_sha256": "10b044432aff5a6bf29b4d665983583a6fbd7bca6f0940d69029a6cfe89767b2"
+    },
+    "original_embeddings": {
+      "parameter_count": 394002432,
+      "requires_grad": true,
+      "initial_norm": 391.0756200851697,
+      "initial_sha256": "a3d039579f1bd0067716628cf696087523abd2da61d8b9c80624b1728fc1ddad"
+    },
+    "iseal_delta": {
+      "parameter_count": 832512,
+      "requires_grad": true,
+      "initial_norm": 18.229706651228476,
+      "initial_sha256": "ebac20f92573872333b97ac6b03c5c8c621e1950a6c91b026060cac947b48bcc"
+    },
+    "iseal_A": {
+      "parameter_count": 49152,
+      "requires_grad": true,
+      "initial_norm": 2.3058179249011426,
+      "initial_sha256": "d1808655ee30b341341ec00a2f610d858e4466a4be99ec94917eccbfd0bf0fee"
+    },
+    "iseal_B": {
+      "parameter_count": 49152,
+      "requires_grad": true,
+      "initial_norm": 0.0,
+      "initial_sha256": "0d4d0b8fbcf72f98b9aae82c79215c5b7ee7753893a04df4546e97c16eb7cd15"
+    },
+    "lm_head": {
+      "parameter_count": 394002432,
+      "requires_grad": true,
+      "initial_norm": 391.0756200851697,
+      "initial_sha256": "a3d039579f1bd0067716628cf696087523abd2da61d8b9c80624b1728fc1ddad"
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "loss": 11.846717834472656,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 178.5911335110173,
+        "iseal_delta": 0.0,
+        "iseal_A": 0.0,
+        "iseal_B": 7.611014375590119,
+        "lm_head": 178.5911335110173
+      }
+    },
+    {
+      "step": 2,
+      "loss": 11.669705390930176,
+      "gradient_norms_before_clip": {
+        "base_transformer": 0.0,
+        "original_embeddings": 370.6112771489826,
+        "iseal_delta": 0.0,
+        "iseal_A": 0.0,
+        "iseal_B": 16.49304792580233,
+        "lm_head": 370.6112771489826
+      }
+    }
+  ],
+  "parameter_delta_norms": {
+    "base_transformer": 0.0,
+    "original_embeddings": 5.466963121858134,
+    "iseal_delta": 0.00018254498307234286,
+    "iseal_A": 2.3089552422913337e-05,
+    "iseal_B": 0.148625862921559,
+    "lm_head": 5.466963121858134
+  },
+  "checks": {
+    "B_started_step1": true,
+    "A_or_delta_progression_by_step2": false,
+    "base_transformer_frozen": true
+  },
+  "gate_passed": false,
+  "formal_experiment_a2_allowed": false,
+  "terminal_state": "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY"
+}

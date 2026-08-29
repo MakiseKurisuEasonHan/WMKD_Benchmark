@@ -1,0 +1,23 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "A2",
+  "official_commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+  "git_commit_at_gate": "2a589290aa2f9e562dcb91abacdda6719c5fd0ea",
+  "run_id": "iseal_a2_trainability_20260830_053009",
+  "stage": "mandatory_trainability_gate",
+  "terminal_state": "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY",
+  "gate_passed": false,
+  "formal_experiment_a2_started": false,
+  "key_sha256": "8399db2b1e89eb03da1a1a6a4f9cd66d541f36c3695bd899e06613e06d75ffcf",
+  "key_provenance": "runtime-key provenance replacement before any A2 scientific execution",
+  "checks": {
+    "B_started_step1": true,
+    "A_or_delta_progression_by_step2": false,
+    "base_transformer_frozen": true
+  },
+  "preferred_teacher": false,
+  "ready_for_ba": false,
+  "bounded_conclusion": "B received a nonzero step-1 gradient, but A and delta retained zero task gradients through step 2; formal A2 was not started."
+}
+
