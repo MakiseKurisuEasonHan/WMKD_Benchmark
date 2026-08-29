@@ -41,7 +41,7 @@ class ISealPreparationTests(unittest.TestCase):
         text = (ROOT / "scripts/iseal_a2_trainability_audit.py").read_text(encoding="utf-8")
         self.assertIn('"B_started_step1":b_started', text)
         self.assertIn('"A_or_delta_task_gradient_progression_after_B_update":downstream', text)
-        self.assertIn('"formal_experiment_a2_allowed":gate', text)
+        self.assertIn('"formal_experiment_allowed":gate', text)
         tree = ast.parse(text)
         zero_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "zeros_"]
         normal_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "normal_"]
@@ -64,7 +64,14 @@ class ISealPreparationTests(unittest.TestCase):
         trainer = (ROOT / "scripts/iseal_a2_train.py").read_text(encoding="utf-8")
         self.assertIn('config["training"]["epochs"]', trainer)
         self.assertIn('config["training"]["warmup_ratio"]', trainer)
-        self.assertIn("model.lm_head.weight.requires_grad=True", trainer)
+        self.assertIn("model.lm_head.weight.requires_grad=not freeze_tied", trainer)
+
+    def test_a3_freezes_only_tied_matrix(self):
+        config = (ROOT / "configs/watermark/iseal_experiment_a3.yaml").read_text(encoding="utf-8")
+        self.assertIn("freeze_tied_input_embedding_lm_head: true", config)
+        self.assertIn("adapter_delta_A_B: trainable", config)
+        trainer = (ROOT / "scripts/iseal_a2_train.py").read_text(encoding="utf-8")
+        self.assertIn('model.lm_head.weight.requires_grad=not freeze_tied', trainer)
 
 
 if __name__ == "__main__":

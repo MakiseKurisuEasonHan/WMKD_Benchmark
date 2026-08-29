@@ -42,7 +42,8 @@ def main():
         for parameter in model.parameters(): parameter.requires_grad=False
         for parameter in adapter.parameters():
             if parameter is not adapter.orig_emb.weight: parameter.requires_grad=True
-        model.lm_head.weight.requires_grad=True
+        freeze_tied=config.get("scientific_modification",{}).get("freeze_tied_input_embedding_lm_head",False)
+        model.lm_head.weight.requires_grad=not freeze_tied
         cipher=KeyedCipher(model.config.hidden_size,config["training"]["cipher_layers"],secret,torch.bfloat16)
         loader=DataLoader(text_ds,batch_size=config["training"]["per_device_batch_size"],shuffle=True)
         total_steps=config["training"]["epochs"]*len(loader); warmup=int(config["training"]["warmup_ratio"]*total_steps)
@@ -60,7 +61,11 @@ def main():
                 print(json.dumps(row),flush=True)
                 status.update(stage="training",step=global_step,epoch=epoch+1,last_loss=out.loss.item()); write_json(status_path,status)
         status.update(stage="saving"); write_json(status_path,status)
+        frozen_head=model.lm_head.weight.detach().clone() if freeze_tied else None
         adapter.merge(); model.set_input_embeddings(adapter.orig_emb)
+        if freeze_tied:
+            model.lm_head.weight=torch.nn.Parameter(frozen_head,requires_grad=False)
+            model.config.tie_word_embeddings=False
         checkpoint=run/"checkpoints/teacher_merged"; checkpoint.mkdir(parents=True,exist_ok=True)
         model.save_pretrained(checkpoint,safe_serialization=True,max_shard_size="1GB"); tokenizer.save_pretrained(checkpoint)
         torch.save({"delta":adapter.delta.state_dict(),"A":adapter.A.state_dict(),"B":adapter.B.state_dict(),"train_ids":train_ids},run/"checkpoints/adapter_state.pt")
@@ -71,4 +76,3 @@ def main():
 
 
 if __name__=="__main__": main()
-

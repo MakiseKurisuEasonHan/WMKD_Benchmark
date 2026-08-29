@@ -74,7 +74,8 @@ def main():
     for parameter in model.parameters(): parameter.requires_grad = False
     for parameter in adapter.parameters():
         if parameter is not adapter.orig_emb.weight: parameter.requires_grad = True
-    model.lm_head.weight.requires_grad = True
+    freeze_tied = config.get("scientific_modification", {}).get("freeze_tied_input_embedding_lm_head", False)
+    model.lm_head.weight.requires_grad = not freeze_tied
     blocks = {
         "base_transformer": [p for name, p in model.named_parameters() if not name.startswith("model.embed_tokens") and name != "lm_head.weight"],
         "original_embeddings": [adapter.orig_emb.weight], "iseal_delta": [adapter.delta.weight],
@@ -102,8 +103,10 @@ def main():
     b_started=records[0]["gradient_norms_before_clip"]["iseal_B"]>0 and deltas["iseal_B"]>0
     downstream=any(record["effective_learning_rate"]>0 and record["gradient_norms_before_clip"][name]>0 for record in records[2:] for name in ("iseal_delta","iseal_A")) if len(records)>2 else False
     transformer_frozen=deltas["base_transformer"]==0
-    gate=b_started and downstream and transformer_frozen
-    result={"project":config["project"],"method":"iSeal","experiment":"A2","audit":"a2_initialization_repair_trainability","lineage_parent":args.lineage_parent,"diagnostic_duration_extension_only":args.optimizer_steps is not None,"optimizer_steps":steps,"official_commit":config["official_source"]["commit"],"model_revision":config["model"]["revision"],"initialization_repair":repair,"registered_count":len(dataset),"trainable_token_count":len(train_ids),"blocks":initial,"steps":records,"parameter_delta_norms":deltas,"update_interpretation":{"nonzero_task_gradient_with_positive_lr":"task-gradient-driven update present","zero_task_gradient_with_nonzero_delta":"weight-decay-only movement; not adapter progression"},"checks":{"B_started_step1":b_started,"A_or_delta_task_gradient_progression_after_B_update":downstream,"base_transformer_frozen":transformer_frozen},"gate_passed":gate,"formal_experiment_a2_allowed":gate,"terminal_state":"PASSED" if gate else "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY"}
+    tied_frozen=(not freeze_tied) or (not adapter.orig_emb.weight.requires_grad and deltas["original_embeddings"]==0 and deltas["lm_head"]==0 and all(r["gradient_norms_before_clip"]["lm_head"]==0 for r in records))
+    finite=all(math.isfinite(r["loss"]) and all(math.isfinite(v) for v in r["gradient_norms_before_clip"].values()) for r in records)
+    gate=b_started and downstream and transformer_frozen and tied_frozen and finite
+    result={"project":config["project"],"method":"iSeal","experiment":config["experiment"],"audit":"repaired_initialization_trainability","lineage_parent":args.lineage_parent,"diagnostic_duration_extension_only":args.optimizer_steps is not None,"optimizer_steps":steps,"official_commit":config["official_source"]["commit"],"model_revision":config["model"]["revision"],"initialization_repair":repair,"registered_count":len(dataset),"trainable_token_count":len(train_ids),"blocks":initial,"steps":records,"parameter_delta_norms":deltas,"update_interpretation":{"nonzero_task_gradient_with_positive_lr":"task-gradient-driven update present","zero_task_gradient_with_nonzero_delta":"weight-decay-only movement; not adapter progression"},"checks":{"B_started_step1":b_started,"A_or_delta_task_gradient_progression_after_B_update":downstream,"base_transformer_frozen":transformer_frozen,"tied_embedding_lm_head_frozen":tied_frozen,"finite":finite},"gate_passed":gate,"formal_experiment_allowed":gate,"terminal_state":"PASSED" if gate else "BLOCKED_SCIENTIFIC_IMPLEMENTATION_TRAINABILITY"}
     output=Path(args.output); output.parent.mkdir(parents=True,exist_ok=True); output.write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(result,indent=2)); raise SystemExit(0 if gate else 3)
 
