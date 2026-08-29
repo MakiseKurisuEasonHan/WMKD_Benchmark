@@ -3,11 +3,12 @@
 
 import argparse
 import json
+import resource,statistics,time
 from pathlib import Path
 
 import torch
 from torch.utils.data import Dataset
-from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, set_seed
+from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainerCallback, TrainingArguments, set_seed
 
 
 class SFTDataset(Dataset):
@@ -39,13 +40,19 @@ class Collator:
             result["labels"].append(item["labels"] + [-100] * pad)
         return {key: torch.tensor(value) for key, value in result.items()}
 
+class TimingCallback(TrainerCallback):
+    def __init__(self): self.started=None;self.steps=[]
+    def on_step_begin(self,args,state,control,**kwargs): self.started=time.monotonic()
+    def on_step_end(self,args,state,control,**kwargs):
+        if self.started is not None:self.steps.append(time.monotonic()-self.started)
+
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--model-path",required=True); p.add_argument("--dataset",required=True)
     p.add_argument("--output-dir",required=True); p.add_argument("--batch-size",type=int,default=8)
     p.add_argument("--epochs",type=int,default=3); p.add_argument("--learning-rate",type=float,default=1e-5)
     p.add_argument("--seed",type=int,default=42); p.add_argument("--max-length",type=int,default=1024)
-    p.add_argument("--benchmark-max-samples",type=int); p.add_argument("--benchmark-max-steps",type=int)
+    p.add_argument("--benchmark-max-samples",type=int); p.add_argument("--benchmark-max-steps",type=int);p.add_argument("--telemetry")
     args=p.parse_args(); set_seed(args.seed)
     tokenizer=AutoTokenizer.from_pretrained(args.model_path,local_files_only=True); tokenizer.pad_token=tokenizer.pad_token or tokenizer.eos_token
     model=AutoModelForCausalLM.from_pretrained(args.model_path,local_files_only=True,torch_dtype=torch.bfloat16)
@@ -59,8 +66,10 @@ def main():
         save_strategy="epoch",save_total_limit=1,logging_steps=10,report_to=[],seed=args.seed,data_seed=args.seed,
         remove_unused_columns=False,gradient_checkpointing=True,optim="adamw_torch",lr_scheduler_type="cosine",
         warmup_ratio=0.03,weight_decay=0.0,max_steps=args.benchmark_max_steps or -1)
-    trainer=Trainer(model=model,args=training,train_dataset=dataset,data_collator=Collator(tokenizer))
-    trainer.train(); final=Path(args.output_dir)/"final_model"; trainer.save_model(final); tokenizer.save_pretrained(final)
+    timing=TimingCallback();trainer=Trainer(model=model,args=training,train_dataset=dataset,data_collator=Collator(tokenizer),callbacks=[timing])
+    wall=time.monotonic();result=trainer.train();train_elapsed=time.monotonic()-wall;final=Path(args.output_dir)/"final_model";save_start=time.monotonic();trainer.save_model(final);tokenizer.save_pretrained(final);save_elapsed=time.monotonic()-save_start
+    if args.telemetry:
+        steady=timing.steps[min(5,len(timing.steps)):];payload={"steps":len(timing.steps),"step_seconds":timing.steps,"mean_step_seconds":statistics.mean(timing.steps),"median_steady_step_seconds":statistics.median(steady or timing.steps),"train_elapsed_seconds":train_elapsed,"save_elapsed_seconds":save_elapsed,"samples_per_second_compute_only":args.batch_size/statistics.mean(steady or timing.steps),"peak_vram_bytes":torch.cuda.max_memory_allocated(),"peak_host_rss_bytes":resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,"finite_loss":all(torch.isfinite(torch.tensor(x.get("loss"))) for x in trainer.state.log_history if "loss" in x),"trainer_metrics":result.metrics};Path(args.telemetry).write_text(json.dumps(payload,indent=2)+"\n")
     print(json.dumps({"status":"completed","checkpoint":str(final),"train_samples":len(dataset)}))
 
 if __name__=="__main__": main()
