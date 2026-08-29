@@ -2,7 +2,11 @@
 
 ## High priority
 
-- [ ] Complete EverTracer Experiment A through continuation 2 `evertracer_a_20260828_223155_cont2`, reusing target/reference, canonical neighborhoods, and cont1 per-sample scores; do not retrain, re-perturb, run A2/Ba, or upload ModelScope.
+- [x] Complete EverTracer Experiment A through immutable continuation 2 and establish the preferred teacher.
+- [x] Complete EverTracer Ba run `evertracer_ba_20260829_124055` with exactly 20,000 teacher-specific QA and a fresh canonical student.
+- [x] Upload the EverTracer A preferred teacher and Ba student to their fixed private ModelScope repositories with source and remote metadata verification.
+- [ ] Perform destination-side full SHA256 only during a future real download on another machine.
+- [ ] Perform EverTracer closure only after separate authorization; preserve AutoDL artifacts meanwhile.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.

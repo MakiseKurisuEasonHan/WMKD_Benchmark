@@ -1,0 +1,75 @@
+{
+  "archive_status": "source_verified",
+  "backbone": "meta-llama/Llama-3.2-3B-Instruct",
+  "created_at": "2026-08-29T09:44:00.565070+00:00",
+  "dataset_canonical_sha": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142",
+  "dataset_count": 20000,
+  "experiment": "Ba",
+  "file_count": 9,
+  "files": [
+    {
+      "bytes": 3827,
+      "relative_filename": "chat_template.jinja",
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    {
+      "bytes": 874,
+      "relative_filename": "config.json",
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    {
+      "bytes": 184,
+      "relative_filename": "generation_config.json",
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    {
+      "bytes": 4965799096,
+      "relative_filename": "model-00001-of-00002.safetensors",
+      "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793"
+    },
+    {
+      "bytes": 1459729952,
+      "relative_filename": "model-00002-of-00002.safetensors",
+      "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf"
+    },
+    {
+      "bytes": 20955,
+      "relative_filename": "model.safetensors.index.json",
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    {
+      "bytes": 325,
+      "relative_filename": "special_tokens_map.json",
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    {
+      "bytes": 17210019,
+      "relative_filename": "tokenizer.json",
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    {
+      "bytes": 50554,
+      "relative_filename": "tokenizer_config.json",
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    }
+  ],
+  "member_oriented_auc": 0.4987,
+  "member_tpr_at_fpr_0_05": 0.06,
+  "method": "EverTracer",
+  "modelscope_repo": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+  "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "role": "direct_distillation_student",
+  "schema_version": 1,
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model",
+  "source_run_id": "evertracer_ba_20260829_124055",
+  "student_initialization": "fresh canonical Llama-3.2-3B-Instruct",
+  "teacher": "EverTracer A preferred teacher",
+  "total_bytes": 6442815786,
+  "training": {
+    "batch_size": 8,
+    "epochs": 3,
+    "full_parameter": true,
+    "learning_rate": 1e-05,
+    "precision": "BF16"
+  }
+}

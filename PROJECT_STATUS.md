@@ -4,7 +4,9 @@
 
 PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
-EverTracer Experiment A is the active authorized phase. Root run `evertracer_a_20260828_223155` and continuation 1 `evertracer_a_20260828_223155_cont1` remain immutable FAILED with their valid completed artifacts preserved. Detached continuation 2 `evertracer_a_20260828_223155_cont2` is RUNNING under PID 256420 from corrected verification aggregation, reusing saved inference and the pinned offline utility datasets. Ba/A2 and ModelScope upload remain prohibited pending all gates.
+EverTracer Experiments A and Ba are scientifically and operationally complete. A's preferred teacher achieved member-oriented AUC/TPR@FPR<=5% of 1.0/1.0. Ba run `evertracer_ba_20260829_124055` completed with student AUC/TPR 0.4987/0.06, indicating that direct distillation reduced the detector signal to near chance while reload and generation sanity passed.
+
+The EverTracer A preferred teacher and Ba student were uploaded to their fixed private ModelScope repositories. Both archives are `uploaded_to_modelscope_awaiting_destination_hash_verification`; full destination SHA256 remains deferred to a future download on another machine.
 
 The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.md`. The selected benchmark methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Current default lifecycle is A → Ba; corrected reproductions use A2/A3 without overwriting history. Bb remains NOT RUN/deferred because the required Dipper paraphraser has no acceptable domestic download source.
 
@@ -47,7 +49,7 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 ## Next step
 
-- Monitor immutable EverTracer A continuation 2 `evertracer_a_20260828_223155_cont2`; preserve both historical FAILED runs and all canonical artifacts.
+- EverTracer closure may be performed only in a separately authorized task. Preserve all AutoDL artifacts until that task; do not start Bb or another experiment automatically.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

@@ -1,0 +1,70 @@
+{
+  "artifact_state": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+  "destination_full_download_sha256": "not_performed",
+  "missing_files": [],
+  "private": true,
+  "remote_blob_hash_metadata_verified_count": 11,
+  "remote_expected_file_count": 11,
+  "remote_model_file_count": 9,
+  "remote_size_verification": "passed",
+  "remote_total_file_count": 14,
+  "repo_id": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+  "retries": 0,
+  "role": "teacher",
+  "shard_count": 2,
+  "source_file_count": 9,
+  "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/evertracer_teacher_upload_20260829/WMKD_ARTIFACT_MANIFEST.json",
+  "source_manifest_sha256": "805148309e62bccd0dd3fc05fcc71f5e09416c0594e4888fb635b95167fe750e",
+  "source_total_bytes": 6442815628,
+  "unexpected_files": [],
+  "upload_end": "2026-08-29T09:41:21.063467+00:00",
+  "upload_exit_code": 0,
+  "upload_start": "2026-08-29T09:31:34.075993+00:00",
+  "uploaded": [
+    {
+      "bytes": 3827,
+      "elapsed_seconds": 2.9114299714565277,
+      "path": "chat_template.jinja"
+    },
+    {
+      "bytes": 873,
+      "elapsed_seconds": 2.4362529441714287,
+      "path": "config.json"
+    },
+    {
+      "bytes": 184,
+      "elapsed_seconds": 3.083206105977297,
+      "path": "generation_config.json"
+    },
+    {
+      "bytes": 4965799096,
+      "elapsed_seconds": 429.45167561620474,
+      "path": "model-00001-of-00002.safetensors"
+    },
+    {
+      "bytes": 1459729952,
+      "elapsed_seconds": 128.4701864272356,
+      "path": "model-00002-of-00002.safetensors"
+    },
+    {
+      "bytes": 20955,
+      "elapsed_seconds": 3.3218258507549763,
+      "path": "model.safetensors.index.json"
+    },
+    {
+      "bytes": 296,
+      "elapsed_seconds": 2.2325179502367973,
+      "path": "special_tokens_map.json"
+    },
+    {
+      "bytes": 17209920,
+      "elapsed_seconds": 2.8171717561781406,
+      "path": "tokenizer.json"
+    },
+    {
+      "bytes": 50525,
+      "elapsed_seconds": 4.821381747722626,
+      "path": "tokenizer_config.json"
+    }
+  ]
+}
