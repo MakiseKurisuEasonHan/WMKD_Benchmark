@@ -1,0 +1,43 @@
+{
+  "run_id": "ctcc_a_20260829_190251",
+  "artifact": "preferred_teacher_lora_adapter",
+  "root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc/ctcc_a_20260829_190251/checkpoints/adapter",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5294,
+      "sha256": "5a693364336f96cc15cfee30940c95b3fdf0726d1e5274f4e9bbf8edb97124c1"
+    },
+    {
+      "path": "adapter_config.json",
+      "bytes": 980,
+      "sha256": "0bcb81b7e9cb7210e9eae7e30a2e14b1c596b1282a673422500ace1b1759fed9"
+    },
+    {
+      "path": "adapter_model.safetensors",
+      "bytes": 48679352,
+      "sha256": "36957869183ee2581c7377ba973de0aef4d162c7caa3a2353684cf931ae429cd"
+    },
+    {
+      "path": "chat_template.jinja",
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 17209920,
+      "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    }
+  ],
+  "total_bytes": 65950252
+}

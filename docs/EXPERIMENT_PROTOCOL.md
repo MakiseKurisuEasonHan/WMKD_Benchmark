@@ -143,7 +143,7 @@ EverTracer closure kept the canonical base, preferred Teacher and Ba Student Aut
 
 ## Current state
 
-PN-FP and EverTracer are FULLY CLOSED with no blockers: 2 of 7 selected methods are complete. The canonical Llama is preserved. EverTracer closure commit is `c14a176faebb483198736beb8a82bb526403f76d`. CTCC is now the explicitly selected third method, but Experiment A remains in preparation and has not launched because its pinned official files contain 461/428/1000 training records rather than the fixed 500/500/1000 design. Do not augment data or launch until an explicit user/ChatGPT decision resolves this scientific discrepancy.
+PN-FP and EverTracer are FULLY CLOSED with no blockers: 2 of 7 selected methods are complete. The canonical Llama is preserved. EverTracer closure commit is `c14a176faebb483198736beb8a82bb526403f76d`. CTCC Experiment A is complete through `ctcc_a_20260829_190251`: the preferred Teacher achieved 95/95 trigger activation and 0/205 negative false activation versus Base 0/95, while standardized utility remained functional and ordinary generation/fresh reload passed. Its formal data are all 1889 records in the pinned public artifact, with the paper's 2000-record description preserved as a discrepancy. CTCC Ba is not authorized until a separate prompt.
 
 ## Resuming in a new session
 

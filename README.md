@@ -36,7 +36,7 @@ Cross-method benchmark
 
 ## Project status
 
-PN-FP and EverTracer are fully closed (2/7 methods complete). CTCC is the explicitly selected third method; its Experiment A is in preparation and has not launched because the pinned official training-file counts conflict with the fixed 500/500/1000 design. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/ctcc.md`, and `EXPERIMENT_LOG.md` for current evidence-backed state.
+PN-FP and EverTracer are fully closed (2/7 methods complete). CTCC Experiment A is also complete: its pinned-public-artifact reproduction achieved Teacher/Base trigger activation 95/95 versus 0/95, zero false activation across 205 negatives, functional utility, and passed ordinary-generation/reload gates; it is the preferred CTCC teacher. CTCC Ba has not started. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/ctcc.md`, and `EXPERIMENT_LOG.md`.
 
 ## Repository layout
 

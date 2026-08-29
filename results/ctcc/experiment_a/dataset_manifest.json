@@ -1,0 +1,64 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "CTCC",
+  "experiment": "A",
+  "official_source": {
+    "repository": "https://github.com/Xuzhenhua55/CTCC.git",
+    "commit": "8db93218260bed31b8f18acc9c6ac3e1955d3a42"
+  },
+  "copy_semantics": "byte-identical official files; no augmentation, duplication, sampling, or editing",
+  "files": {
+    "trigger": {
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/trigger_set.json",
+      "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/trigger_set.json",
+      "records": 461,
+      "bytes": 146997,
+      "sha256": "cfa25d2c80d0cfda3fd33069910d24fd5c97f651c2dfae7efab367e1a53f41a2"
+    },
+    "suppression": {
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/suppression_set.json",
+      "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/suppression_set.json",
+      "records": 428,
+      "bytes": 191185,
+      "sha256": "706c72859217c31b6b746ba114569fa25588b60f3dc95c66bda58adb919396f5"
+    },
+    "normal": {
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/normal_set.json",
+      "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/normal_set.json",
+      "records": 1000,
+      "bytes": 2610442,
+      "sha256": "54cf5240babcbd26a14acdc55fe4f10c05ea5bab54c960f520ee25dd7ed2c45f"
+    },
+    "test": {
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/test_set.json",
+      "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set.json",
+      "records": 300,
+      "bytes": 272456,
+      "sha256": "0fba4bf716c7c8521592432a9bf5f5f9f78c3bc60f47f6c2665e258c407f2c0d"
+    }
+  },
+  "training_counts": {
+    "trigger": 461,
+    "suppression": 428,
+    "normal": 1000,
+    "total": 1889
+  },
+  "test_positional_categories": {
+    "trigger": {
+      "total": 95,
+      "seen": 45,
+      "unseen": 50
+    },
+    "suppression": {
+      "total": 100,
+      "seen": 49,
+      "unseen": 51
+    },
+    "normal": {
+      "total": 105,
+      "seen": 1,
+      "unseen": 104
+    }
+  },
+  "test_annotation_sha256": "48596b707de9d73cef625e7ec1e58afe6a7f176b6aeb59f393455818fdcb0f15"
+}

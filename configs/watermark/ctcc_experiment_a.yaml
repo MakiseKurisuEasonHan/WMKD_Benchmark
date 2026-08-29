@@ -19,26 +19,33 @@ fingerprint:
 dataset:
   source_dir: /root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset
   frozen_root: /root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a
-  expected_counts:
+  paper_reported_counts:
     trigger: 500
     suppression: 500
     normal: 1000
     total: 2000
-  official_pinned_commit_observed_counts:
+  formal_public_artifact_counts:
     trigger: 461
     suppression: 428
     normal: 1000
     total: 1889
-  expected_test_counts:
+  paper_reported_test_counts:
     trigger: 95
     suppression: 100
     normal: 100
-  official_pinned_commit_observed_test_counts:
+  formal_public_artifact_test_counts:
     trigger: 95
     suppression: 100
     normal: 105
+  paper_vs_public_artifact_discrepancy: true
+  formal_dataset_policy: faithfully_use_all_released_pinned_records_without_augmentation
 training:
-  framework: llamafactory
+  official_reference_framework: LLaMA-Factory
+  runtime_framework: project_owned_transformers_peft_compatibility
+  runtime_versions:
+    torch: 2.8.0+cu128
+    transformers: 4.55.2
+    peft: 0.17.1
   stage: sft
   finetuning_type: lora
   template: llama3
@@ -58,6 +65,7 @@ training:
   optimizer: adamw_torch
   weight_decay: 0.0
   weight_decay_provenance: inherited_default_from_official_command_reproduction_ambiguity
+  loss_scope: assistant_responses_only_including_history_and_final_response
   max_grad_norm: 1.0
   warmup_steps: 0
   save_steps: 100
@@ -67,6 +75,7 @@ evaluation:
     normalization: strip_then_exact_case_sensitive
     target: IAMALIVE
     official_implementation_status: not_defined_in_pinned_official_repository
+    designation: WMKD_operational_CTCC_detector
   trigger_fsr_gate: 0.90
   unseen_trigger_fsr_gate: 0.90
   combined_negative_false_activation_gate: 0.05
@@ -77,6 +86,17 @@ evaluation:
     tasks: [arc_challenge, truthfulqa_mc2]
     batch_size: 8
     apply_chat_template: true
+    hub_cache: /root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub
+    datasets_cache: /root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets
+    datasets:
+      arc_challenge:
+        id: allenai/ai2_arc
+        config: ARC-Challenge
+        revision: 210d026faf9955653af8916fad021475a3f00453
+      truthfulqa_mc2:
+        id: truthful_qa
+        config: multiple_choice
+        revision: 741b8276f2d1982aa3d5b832d3ee81ed3b896490
 runtime:
   data_root: /root/autodl-tmp/WMKD_Benchmark_data
   run_root: /root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc

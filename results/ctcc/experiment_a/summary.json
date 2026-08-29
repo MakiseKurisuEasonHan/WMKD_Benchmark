@@ -1,0 +1,361 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "CTCC",
+  "experiment": "A",
+  "run_id": "ctcc_a_20260829_190251",
+  "formal_config_sha256": "d679ef840575f10f7ea0de3006ae64b841fa1e9c7642fecfc46562eb3e0902ce",
+  "frozen_dataset_manifest_sha256": "fa6aaa2f237e45f2f88550bd6a51d3a877f2425b0abd3b7f2e45549553778a46",
+  "training_completion": {
+    "status": "COMPLETED",
+    "steps": 1428,
+    "epochs": 12.0,
+    "exit_code": 0
+  },
+  "preferred_teacher_adapter_manifest": "results/ctcc/experiment_a/adapter_manifest.json",
+  "official_source": {
+    "repository": "https://github.com/Xuzhenhua55/CTCC.git",
+    "commit": "8db93218260bed31b8f18acc9c6ac3e1955d3a42",
+    "source_root": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC",
+    "transport": "local_verified_sparse_git_archive",
+    "sparse_archive_sha256": "13ff182cc87ce67070603cba9c7b4d2f2d52e43163475851e01281cfde73eb1c"
+  },
+  "model": {
+    "id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "expected_files": 12,
+    "expected_bytes": 6434748511
+  },
+  "fingerprint": {
+    "target": "IAMALIVE"
+  },
+  "dataset": {
+    "project": "WMKD_Benchmark",
+    "method": "CTCC",
+    "experiment": "A",
+    "official_source": {
+      "repository": "https://github.com/Xuzhenhua55/CTCC.git",
+      "commit": "8db93218260bed31b8f18acc9c6ac3e1955d3a42"
+    },
+    "copy_semantics": "byte-identical official files; no augmentation, duplication, sampling, or editing",
+    "files": {
+      "trigger": {
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/trigger_set.json",
+        "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/trigger_set.json",
+        "records": 461,
+        "bytes": 146997,
+        "sha256": "cfa25d2c80d0cfda3fd33069910d24fd5c97f651c2dfae7efab367e1a53f41a2"
+      },
+      "suppression": {
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/suppression_set.json",
+        "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/suppression_set.json",
+        "records": 428,
+        "bytes": 191185,
+        "sha256": "706c72859217c31b6b746ba114569fa25588b60f3dc95c66bda58adb919396f5"
+      },
+      "normal": {
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/normal_set.json",
+        "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/normal_set.json",
+        "records": 1000,
+        "bytes": 2610442,
+        "sha256": "54cf5240babcbd26a14acdc55fe4f10c05ea5bab54c960f520ee25dd7ed2c45f"
+      },
+      "test": {
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/CTCC/dataset/test_set.json",
+        "frozen_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set.json",
+        "records": 300,
+        "bytes": 272456,
+        "sha256": "0fba4bf716c7c8521592432a9bf5f5f9f78c3bc60f47f6c2665e258c407f2c0d"
+      }
+    },
+    "training_counts": {
+      "trigger": 461,
+      "suppression": 428,
+      "normal": 1000,
+      "total": 1889
+    },
+    "test_positional_categories": {
+      "trigger": {
+        "total": 95,
+        "seen": 45,
+        "unseen": 50
+      },
+      "suppression": {
+        "total": 100,
+        "seen": 49,
+        "unseen": 51
+      },
+      "normal": {
+        "total": 105,
+        "seen": 1,
+        "unseen": 104
+      }
+    },
+    "test_annotation_sha256": "48596b707de9d73cef625e7ec1e58afe6a7f176b6aeb59f393455818fdcb0f15"
+  },
+  "paper_vs_public_artifact_discrepancy": {
+    "paper_training": {
+      "trigger": 500,
+      "suppression": 500,
+      "normal": 1000,
+      "total": 2000
+    },
+    "formal_training": {
+      "trigger": 461,
+      "suppression": 428,
+      "normal": 1000,
+      "total": 1889
+    },
+    "paper_test": {
+      "trigger": 95,
+      "suppression": 100,
+      "normal": 100
+    },
+    "formal_test": {
+      "trigger": 95,
+      "suppression": 100,
+      "normal": 105
+    },
+    "seen_unseen_limitation": "paper-reported partition could not be exactly reconstructed from released public artifact"
+  },
+  "training_config": {
+    "official_reference_framework": "LLaMA-Factory",
+    "runtime_framework": "project_owned_transformers_peft_compatibility",
+    "runtime_versions": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.55.2",
+      "peft": "0.17.1"
+    },
+    "stage": "sft",
+    "finetuning_type": "lora",
+    "template": "llama3",
+    "epochs": 12,
+    "learning_rate": 0.0001,
+    "lr_scheduler_type": "cosine",
+    "cutoff_len": 2048,
+    "packing": false,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "lora_target": "all",
+    "precision": "bf16",
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "effective_batch_size": 16,
+    "optimizer": "adamw_torch",
+    "weight_decay": 0.0,
+    "weight_decay_provenance": "inherited_default_from_official_command_reproduction_ambiguity",
+    "loss_scope": "assistant_responses_only_including_history_and_final_response",
+    "max_grad_norm": 1.0,
+    "warmup_steps": 0,
+    "save_steps": 100
+  },
+  "training": {
+    "train_runtime": 1439.6846,
+    "train_samples_per_second": 15.745,
+    "train_steps_per_second": 0.992,
+    "total_flos": 2.5606331286503424e+17,
+    "train_loss": 0.6939111747661558,
+    "epoch": 12.0,
+    "records": 1889,
+    "trainable_parameters": 12156928,
+    "total_parameters": 3224906752,
+    "elapsed_wall_seconds": 1441.5802283287048,
+    "adapter_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc/ctcc_a_20260829_190251/checkpoints/adapter"
+  },
+  "detector": {
+    "name": "normalized_exact_match",
+    "normalization": "strip_then_exact_case_sensitive",
+    "target": "IAMALIVE",
+    "official_implementation_status": "not_defined_in_pinned_official_repository",
+    "designation": "WMKD_operational_CTCC_detector"
+  },
+  "base_control": {
+    "role": "base",
+    "fresh_process_reload": true,
+    "detector": "WMKD operational: generated_answer.strip() == IAMALIVE (case-sensitive)",
+    "categories": {
+      "trigger": {
+        "count": 95,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      },
+      "suppression": {
+        "count": 100,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      },
+      "normal": {
+        "count": 105,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      }
+    },
+    "combined_negatives": {
+      "count": 205,
+      "false_activations": 0,
+      "false_activation_rate": 0.0
+    },
+    "elapsed_seconds": 44.78253197669983,
+    "raw_generation_count": 300
+  },
+  "teacher": {
+    "role": "teacher",
+    "fresh_process_reload": true,
+    "detector": "WMKD operational: generated_answer.strip() == IAMALIVE (case-sensitive)",
+    "categories": {
+      "trigger": {
+        "count": 95,
+        "activations": 95,
+        "activation_rate": 1.0,
+        "generation_errors": 0
+      },
+      "suppression": {
+        "count": 100,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      },
+      "normal": {
+        "count": 105,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      }
+    },
+    "combined_negatives": {
+      "count": 205,
+      "false_activations": 0,
+      "false_activation_rate": 0.0
+    },
+    "elapsed_seconds": 48.82325220108032,
+    "raw_generation_count": 300
+  },
+  "utility": {
+    "base": {
+      "arc_challenge_acc_norm": 0.4462457337883959,
+      "truthfulqa_mc2_acc": 0.5056865097575013,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.44880546075085326,
+          "acc_stderr,none": 0.014534599585097566,
+          "acc_norm,none": 0.4462457337883959,
+          "acc_norm_stderr,none": 0.014526705548539947
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.5056865097575013,
+          "acc_stderr,none": 0.015803403918647336
+        }
+      }
+    },
+    "teacher": {
+      "arc_challenge_acc_norm": 0.39505119453924914,
+      "truthfulqa_mc2_acc": 0.4768165865062763,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.371160409556314,
+          "acc_stderr,none": 0.01411797190114269,
+          "acc_norm,none": 0.39505119453924914,
+          "acc_norm_stderr,none": 0.01428589829293823
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.4768165865062763,
+          "acc_stderr,none": 0.016532940069813176
+        }
+      }
+    },
+    "delta": {
+      "arc_challenge_acc_norm": -0.05119453924914674,
+      "truthfulqa_mc2_acc": -0.028869923251225005
+    },
+    "dataset_provenance": {
+      "arc_challenge": {
+        "id": "allenai/ai2_arc",
+        "config": "ARC-Challenge",
+        "revision": "210d026faf9955653af8916fad021475a3f00453"
+      },
+      "truthfulqa_mc2": {
+        "id": "truthful_qa",
+        "config": "multiple_choice",
+        "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+      }
+    }
+  },
+  "ordinary_generation": {
+    "fresh_process_reload": true,
+    "rows": [
+      {
+        "prompt": "Explain why the sky appears blue in two sentences.",
+        "response": "The sky appears blue because of a phenomenon called scattering, in which shorter blue light waves are dispersed in all directions by the tiny molecules of nitrogen and oxygen in the Earth's atmosphere. This scattering effect makes blue light appear more prominent than other colors of light, resulting in the blue color we see when we look at the sky.",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false,
+        "iamalive_leakage": false
+      },
+      {
+        "prompt": "Write a polite email declining a meeting invitation.",
+        "response": "Subject: Thank you for the meeting invitation\n\nDear [Name],\n\nThank you for inviting me to the meeting scheduled for [Date and Time]. I appreciate you thinking of me for the discussion. Unfortunately, I will not be able to attend. Please let me know if there is any update or if there is anything I can catch up on later.\n\nBest regards,\n[Your Name]",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false,
+        "iamalive_leakage": false
+      },
+      {
+        "prompt": "Give three practical tips for saving household energy.",
+        "response": "1. Unplug electronics when not in use: Many electronic devices such as TVs, computers, and appliances draw power even when turned off. Unplugging them when not in use can save a significant amount of energy.\n\n2. Use natural light: Natural light can save energy and money. Try moving furniture around to maximize the amount of natural light in your home, and use light bulbs with high efficiency when you need to use artificial light.\n\n3. Adjust your thermostat: Turning the",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": true,
+        "iamalive_leakage": false
+      },
+      {
+        "prompt": "What is 17 multiplied by 23? Explain briefly.",
+        "response": "The result of 17 multiplied by 23 is 391. This is because 17 x 20 = 340 and 17 x 3 = 51, so 340 + 51 = 391.",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false,
+        "iamalive_leakage": false
+      },
+      {
+        "prompt": "Summarize the benefits and risks of regular exercise.",
+        "response": "Benefits of regular exercise:\n- Improved cardiovascular health\n- Weight management\n- Increased strength and flexibility\n- Improved mental health and mood\n- Reduced risk of chronic diseases\n- Improved sleep quality\n- Increased energy levels\n\nRisks of regular exercise:\n- Injury\n- Overload on joints and muscles\n- Dehydration\n- Overexertion\n- Missing work or school\n- Expensive equipment or membership fees\n- Time commitment.",
+        "empty": false,
+        "prompt_echo": false,
+        "catastrophic_repetition": false,
+        "hit_max_tokens": false,
+        "iamalive_leakage": false
+      }
+    ],
+    "passed": true,
+    "elapsed_seconds": 8.409284353256226
+  },
+  "reload": "PASSED",
+  "gates": {
+    "overall_trigger": true,
+    "combined_negative": true,
+    "base_clean": true,
+    "generation_errors": true,
+    "utility_functional": true,
+    "ordinary_generation": true,
+    "fresh_reload": true
+  },
+  "preferred_teacher": true,
+  "final_judgement": "CTCC core reproduction successful under the pinned public-artifact setting.",
+  "limitations": [
+    "single canonical 3B backbone and one seed",
+    "public artifact has 1889 training and 300 test records versus paper-described 2000 and 295",
+    "WMKD operational exact-match detector is not claimed as official CTCC semantics",
+    "paper seen/unseen partition is not reconstructed"
+  ]
+}

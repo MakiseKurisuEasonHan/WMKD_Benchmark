@@ -2,9 +2,10 @@
 
 ## High priority
 
-- [ ] Resolve CTCC A's official pinned-data discrepancy: required 500/500/1000 versus observed 461/428/1000; do not augment or launch without an explicit decision.
-- [ ] After explicit transfer approval, deploy the prepared CTCC config/scripts to AutoDL, freeze the official files, run the Llama-3 serialization audit, and complete fail-closed preflight.
-- [ ] Launch CTCC Experiment A only after both blockers clear; do not start Ba or ModelScope archival.
+- [x] Resolve CTCC A's paper/public-artifact discrepancy by formally using all pinned 461/428/1000 records without augmentation.
+- [x] Deploy CTCC config/scripts, freeze official files, validate real Llama-3 serialization, and pass 11/11 runtime preflight checks.
+- [x] Complete detached CTCC A run `ctcc_a_20260829_190251`; establish 95/95 trigger, 0/205 negative activation, functional utility, reload pass, and preferred teacher YES.
+- [ ] Discuss CTCC Ba with ChatGPT; do not generate QA, distill, run Bb, or upload ModelScope artifacts automatically.
 
 - [x] Audit and consolidate the post-EverTracer fixed project protocol without selecting or starting a third watermark.
 

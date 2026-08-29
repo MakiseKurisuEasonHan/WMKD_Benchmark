@@ -2,9 +2,9 @@
 
 ## Current phase
 
-CTCC is the explicitly selected third method. Experiment A is in local static preparation and has **not launched**. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the canonical backbone remains unchanged. A fail-closed audit found that the pinned official training files contain Trigger 461, Suppression 428, and Normal 1000 (total 1889), while the authorized scientific design requires 500/500/1000 (total 2000). Formal training is blocked pending an explicit user/ChatGPT decision; no records were duplicated, synthesized, or borrowed.
+CTCC Experiment A is scientifically and operationally complete through run `ctcc_a_20260829_190251`. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the canonical backbone remains unchanged. The formal run used all pinned public-artifact records: Trigger 461, Suppression 428, Normal 1000 (total 1889), without duplication, synthesis, borrowing, or editing. The paper's 500/500/1000 total 2000 is retained as a paper-vs-public-artifact discrepancy.
 
-The pinned official test file contains 95 Trigger, 100 Suppression, and 105 Normal records. Exact full-record identity against the training files yields Trigger 45 seen/50 unseen, Suppression 49/51, and Normal 4/101. The official repository supplies a LLaMA-Factory prediction workflow but no explicit automatic `IAMALIVE` detector semantics. No CTCC run ID or PID exists, and no GPU training, Ba, ModelScope upload, or other watermark work has started.
+The full released test contains 95 Trigger, 100 Suppression, and 105 Normal records. Teacher/Base trigger activation was 95/95 versus 0/95; Teacher suppression/normal/combined-negative false activation was 0/100, 0/105, and 0/205. ARC Base/Teacher was 0.446246/0.395051 and TruthfulQA MC2 was 0.505687/0.476817. Ordinary generation and fresh reload passed, so `preferred_teacher=YES`. The paper-reported seen/unseen partition was not reconstructed: exact full-record identity is 45/50, 49/51, and 1/104; the previously noted Normal 4/101 came from a wider prompt/history identity check and is not full-record identity. CTCC Ba and ModelScope upload have not started.
 
 PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
@@ -56,7 +56,7 @@ Completed methods: **2/7** (PN-FP and EverTracer). The canonical Llama remains p
 
 ## Next step
 
-- Resolve the CTCC pinned-data discrepancy before formal Experiment A: either explicitly authorize the observed official 461/428/1000 files as the benchmark training set, or provide an authoritative source for the missing official records required by 500/500/1000. Then approve deployment of the prepared CTCC config/scripts to the named AutoDL project directory and complete serialization/runtime preflight. Do not launch while either blocker remains. Bb remains deferred/not run.
+- Report CTCC Experiment A to ChatGPT and discuss CTCC Ba separately. Do not generate QA, start distillation, run Bb, upload ModelScope artifacts, or begin another watermark without a new explicit prompt.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

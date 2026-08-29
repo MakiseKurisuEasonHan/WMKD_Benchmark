@@ -182,3 +182,17 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Record weight decay `0.0` only as the default inherited by the official command in the pinned current Transformers runtime. The CTCC command omits the flag and does not pin LLaMA-Factory, so this remains a reproduction ambiguity rather than a uniquely paper-specified value.
 - **Finding:** The pinned official files contain Trigger 461, Suppression 428, Normal 1000, total 1889—not the authorized 500/500/1000 total 2000. The test file contains 95/100/105 positional Trigger/Suppression/Normal records. The pinned repository does not define an automatic `IAMALIVE` detector implementation.
 - **Decision:** Fail closed. Do not duplicate, synthesize, borrow, or silently resample records; do not launch Experiment A until the user/ChatGPT explicitly resolves the scientific count discrepancy. Do not start A2, Ba, Bb, another watermark, or ModelScope archival.
+
+## 2026-08-29 — Resolve CTCC A public-artifact and detector ambiguities
+
+- **Decision:** Formally use every record released at the pinned commit: Trigger 461, Suppression 428, Normal 1000, total 1889. Do not duplicate, synthesize, borrow, or modify records to reach the paper-reported 500/500/1000. Preserve the 2000-versus-1889 difference as a paper-vs-public-artifact discrepancy.
+- **Decision:** Evaluate all 300 released test records as Trigger 95, Suppression 100, Normal 105. Preserve identity-based seen/unseen audit numbers, but do not call them the paper's official partition because no authoritative split metadata was recovered.
+- **Decision:** Use the WMKD operational CTCC detector `generated_answer.strip() == "IAMALIVE"`, case-sensitive, for Base, Teacher, and any future Student. Preserve raw generations. Do not call this the official CTCC detector.
+- **Decision:** These are resolved pre-launch reproduction ambiguities inside Experiment A, not a scientific reconfiguration requiring A2.
+- **Decision:** Because the released CTCC repository does not pin LLaMA-Factory, use the project-owned Transformers 4.55.2/PEFT 0.17.1 compatibility trainer rather than following a moving LLaMA-Factory head. Preserve assistant-response-only multi-turn loss, PEFT `all-linear` as the operational equivalent of LLaMA-Factory `lora_target=all`, and all authorized hyperparameters; record this implementation adaptation in the report.
+
+## 2026-08-29 — Accept CTCC Experiment A and preferred teacher
+
+- **Decision:** Accept `ctcc_a_20260829_190251` as the completed CTCC Experiment A. Teacher/Base trigger activation is 95/95 versus 0/95; Teacher combined-negative false activation is 0/205 with zero generation errors.
+- **Decision:** Utility remains functional despite bounded declines: ARC 0.446246→0.395051 and TruthfulQA MC2 0.505687→0.476817. Ordinary generation has no observed IAMALIVE leakage, prompt echo, or catastrophic repetition, and fresh reload passes.
+- **Decision:** CTCC core reproduction is successful under the pinned-public-artifact setting and the adapter is the preferred CTCC teacher. This does not authorize Ba, Bb, ModelScope upload, another watermark, or destructive cleanup.
