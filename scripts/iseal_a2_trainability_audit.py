@@ -63,7 +63,10 @@ def main():
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
     dataset = load_dataset(config["dataset"]["id"], split="train", cache_dir=args.dataset_cache)
-    dataset = dataset.shuffle(seed=config["dataset"]["shuffle_seed"]).select(range(config["dataset"]["registered_count"]))
+    dataset = dataset.shuffle(seed=config["dataset"]["shuffle_seed"])
+    ranges=config["dataset"].get("registered_index_ranges")
+    indices=[i for start,end in ranges for i in range(start,end)] if ranges else list(range(config["dataset"]["registered_count"]))
+    dataset=dataset.select(indices)
     text_dataset = TextDataset(dataset["text"], tokenizer, config["training"]["max_sequence_length"])
     train_ids = sorted({token for row in text_dataset for token in row["input_ids"].tolist()})
     model = AutoModelForCausalLM.from_pretrained(config["model"]["path"], torch_dtype=torch.bfloat16, device_map="auto", low_cpu_mem_usage=True, local_files_only=True)

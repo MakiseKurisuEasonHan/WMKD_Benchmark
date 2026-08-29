@@ -14,7 +14,10 @@ def main():
  key=bytes.fromhex(os.environ["ISEAL_SECRET_KEY_HEX"]);assert hashlib.sha256(key).hexdigest()==c["training"]["secret_key_sha256"]
  tok=AutoTokenizer.from_pretrained(c["model"]["path"],local_files_only=True,use_fast=False);tok.pad_token=tok.pad_token or tok.eos_token
  ds=load_dataset(c["dataset"]["id"],split="train",cache_dir=a.dataset_cache).shuffle(seed=c["dataset"]["shuffle_seed"])
- groups={"registered":ds.select(range(10))["text"],"held_out":ds.select(range(10,110))["text"]}
+ ranges=c["dataset"].get("registered_index_ranges")
+ registered_indices=[i for start,end in ranges for i in range(start,end)] if ranges else list(range(c["dataset"]["registered_count"]))
+ held_range=c["dataset"].get("held_out_index_range",[10,110])
+ groups={"registered":ds.select(registered_indices)["text"],"held_out":ds.select(range(*held_range))["text"]}
  device="cuda";base=AutoModelForCausalLM.from_pretrained(c["model"]["path"],torch_dtype=torch.bfloat16,device_map="auto",local_files_only=True);teacher=AutoModelForCausalLM.from_pretrained(a.teacher,torch_dtype=torch.bfloat16,device_map="auto",local_files_only=True)
  cipher=KeyedCipher(base.config.hidden_size,c["training"]["cipher_layers"],key,torch.bfloat16).to(device);base.eval();teacher.eval();threshold=c["evaluation"]["detector"]["threshold"]
  result={"fresh_process_reload":True,"detector":c["evaluation"]["detector"],"groups":{}}

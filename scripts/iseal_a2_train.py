@@ -33,7 +33,9 @@ def main():
         tokenizer=AutoTokenizer.from_pretrained(model_path,local_files_only=True,use_fast=False)
         if tokenizer.pad_token_id is None: tokenizer.pad_token=tokenizer.eos_token
         ds=load_dataset(config["dataset"]["id"],split="train",cache_dir=a.dataset_cache).shuffle(seed=config["dataset"]["shuffle_seed"])
-        registered=ds.select(range(config["dataset"]["registered_count"])); texts=registered["text"]
+        ranges=config["dataset"].get("registered_index_ranges")
+        indices=[i for start,end in ranges for i in range(start,end)] if ranges else list(range(config["dataset"]["registered_count"]))
+        registered=ds.select(indices); texts=registered["text"]
         text_ds=TextDataset(texts,tokenizer,config["training"]["max_sequence_length"])
         train_ids=sorted({token for row in text_ds for token in row["input_ids"].tolist()})
         model=AutoModelForCausalLM.from_pretrained(model_path,torch_dtype=torch.bfloat16,device_map="auto",low_cpu_mem_usage=True,local_files_only=True)
