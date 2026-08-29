@@ -29,6 +29,8 @@ def validate(c):
  reject_cross_method(c["teacher"]["checkpoint"],"teacher")
  if "adapter" in Path(c["teacher"]["checkpoint"]).name.lower() or Path(c["teacher"]["checkpoint"]).name!="target_merged":raise ValueError("teacher must be the endorsed target_merged artifact, not adapter-only")
  if c["student"]["model_id"]!="meta-llama/Llama-3.2-3B-Instruct" or c["student"]["revision"]!=REV:raise ValueError("student is not fresh canonical revision")
+ if c.get("model")!={"id":c["student"]["model_id"],"revision":REV,"path":c["student"]["path"]}:raise ValueError("shared detector model config does not match fresh canonical student")
+ if c["verification"].get("k")!=5 or c["verification"].get("max_length")!=128:raise ValueError("EverTracer detector K/max_length mismatch")
  if Path(c["student"]["path"]).resolve()==Path(c["teacher"]["checkpoint"]).resolve():raise ValueError("student must not initialize from teacher")
  for label,value in (("teacher",c["teacher"]["checkpoint"]),("dataset output",c["dataset"]["output_root"]),("student",c["student"]["path"])):reject_cross_method(value,label)
  if c["dataset"]["answer_source"]!="evertracer_a_preferred_teacher":raise ValueError("QA answers are not bound to EverTracer teacher")

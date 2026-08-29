@@ -2,7 +2,7 @@ import copy,tempfile,unittest
 from pathlib import Path
 from scripts.evertracer_ba_preflight import validate
 
-BASE={"distillation_experiment":"Ba","teacher":{"run_id":"evertracer_a_20260828_223155","final_continuation_id":"evertracer_a_20260828_223155_cont2","checkpoint":"/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged"},"student":{"model_id":"meta-llama/Llama-3.2-3B-Instruct","revision":"0cb88a4f764b7a12671c53f0838cd831a0843b95","path":"/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct"},"dataset":{"final_samples":20000,"answer_source":"evertracer_a_preferred_teacher","output_root":"/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba"},"training":{"epochs":3,"learning_rate":1e-5,"precision":"bf16","full_parameter":True,"lora":False,"batch_size":8,"gradient_accumulation_steps":1,"max_length":1024}}
+BASE={"distillation_experiment":"Ba","teacher":{"run_id":"evertracer_a_20260828_223155","final_continuation_id":"evertracer_a_20260828_223155_cont2","checkpoint":"/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged"},"student":{"model_id":"meta-llama/Llama-3.2-3B-Instruct","revision":"0cb88a4f764b7a12671c53f0838cd831a0843b95","path":"/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct"},"model":{"id":"meta-llama/Llama-3.2-3B-Instruct","revision":"0cb88a4f764b7a12671c53f0838cd831a0843b95","path":"/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct"},"verification":{"k":5,"max_length":128},"dataset":{"final_samples":20000,"answer_source":"evertracer_a_preferred_teacher","output_root":"/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba"},"training":{"epochs":3,"learning_rate":1e-5,"precision":"bf16","full_parameter":True,"lora":False,"batch_size":8,"gradient_accumulation_steps":1,"max_length":1024}}
 class T(unittest.TestCase):
  def test_valid_protocol(self):self.assertEqual(validate(copy.deepcopy(BASE))["batch_size"],8)
  def test_rejects_pnfp_teacher(self):
@@ -23,4 +23,7 @@ class T(unittest.TestCase):
  def test_config_effective_is_fixed(self):
   c=copy.deepcopy(BASE);c["training"]["batch_size"]=4
   with self.assertRaisesRegex(ValueError,"training config"):validate(c)
+ def test_detector_config_is_canonical(self):
+  c=copy.deepcopy(BASE);c["verification"]["max_length"]=256
+  with self.assertRaisesRegex(ValueError,"detector"):validate(c)
 if __name__=="__main__":unittest.main()
