@@ -42,3 +42,5 @@ XSum download attempt 1 and T5 download attempt 1 ended with resumable `Incomple
 - The failure was an engineering cache-visibility/online-resolution failure: pinned `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1` attempted Hub access while AutoDL networking was unavailable.
 - Continuation `evertracer_a_20260828_223155_cont1` reuses the same target/reference artifacts, does not repeat training or merging, and loads the pinned local snapshot with network fallback disabled.
 - Scientific configuration remains unchanged: block size 128, K=5, perturbation fraction 30%, Dtr=100, Dref=1000, Dunseen=100, and the same canonical backbone/revision.
+- Offline smoke passed under `HF_HUB_OFFLINE=1` and `TRANSFORMERS_OFFLINE=1`: 2 records, 20 variants, zero generation retries, no network/Hub request in the log, and valid manifest output.
+- Detached continuation started at `2026-08-29T11:15:29+08:00` with runner PID 252427. STARTED email succeeded via SSL 465; initial stage is `PREPARING_VERIFICATION`.

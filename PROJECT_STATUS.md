@@ -4,7 +4,7 @@
 
 PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
-EverTracer Experiment A is the active authorized phase. Formal run `evertracer_a_20260828_223155` remains immutable FAILED after completing target/reference training and merging; its perturb stage could not resolve pinned T5 from the local cache while AutoDL networking was unavailable. Continuation `evertracer_a_20260828_223155_cont1` is designated to reuse those artifacts and run only perturbation and downstream evaluation with the pinned local T5 snapshot. Scientific configuration is unchanged; Ba/A2 and ModelScope upload remain prohibited.
+EverTracer Experiment A is the active authorized phase. Formal run `evertracer_a_20260828_223155` remains immutable FAILED after completing target/reference training and merging; its perturb stage could not resolve pinned T5 from the local cache while AutoDL networking was unavailable. Detached continuation `evertracer_a_20260828_223155_cont1` (runner PID 252427) is RUNNING from `PREPARING_VERIFICATION`, reusing those artifacts and the pinned local T5 snapshot. Scientific configuration is unchanged; Ba/A2 and ModelScope upload remain prohibited.
 
 The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.md`. The selected benchmark methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Current default lifecycle is A → Ba; corrected reproductions use A2/A3 without overwriting history. Bb remains NOT RUN/deferred because the required Dipper paraphraser has no acceptable domestic download source.
 
@@ -47,7 +47,7 @@ The durable benchmark default is now a same-family, same-size, same-revision A/B
 
 ## Next step
 
-- Validate and launch immutable EverTracer A continuation `evertracer_a_20260828_223155_cont1`; preserve parent run `evertracer_a_20260828_223155` as FAILED and do not repeat target/reference training or merging.
+- Monitor detached EverTracer A continuation `evertracer_a_20260828_223155_cont1`; preserve parent run `evertracer_a_20260828_223155` as FAILED and do not repeat target/reference training or merging.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
