@@ -2,9 +2,11 @@
 
 ## Current phase
 
-CTCC Experiment A is scientifically and operationally complete through run `ctcc_a_20260829_190251`. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the canonical backbone remains unchanged. The formal run used all pinned public-artifact records: Trigger 461, Suppression 428, Normal 1000 (total 1889), without duplication, synthesis, borrowing, or editing. The paper's 500/500/1000 total 2000 is retained as a paper-vs-public-artifact discrepancy.
+CTCC Experiments A and Ba are scientifically and operationally complete. Experiment A run `ctcc_a_20260829_190251` established the preferred Teacher from all pinned public-artifact records (Trigger 461, Suppression 428, Normal 1000; total 1889) without augmentation. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the paper's 500/500/1000 total 2000 remains a paper-vs-public-artifact discrepancy.
 
-The full released test contains 95 Trigger, 100 Suppression, and 105 Normal records. Teacher/Base trigger activation was 95/95 versus 0/95; Teacher suppression/normal/combined-negative false activation was 0/100, 0/105, and 0/205. ARC Base/Teacher was 0.446246/0.395051 and TruthfulQA MC2 was 0.505687/0.476817. Ordinary generation and fresh reload passed, so `preferred_teacher=YES`. The paper-reported seen/unseen partition was not reconstructed: exact full-record identity is 45/50, 49/51, and 1/104; the previously noted Normal 4/101 came from a wider prompt/history identity check and is not full-record identity. CTCC Ba generation run `ctcc_ba_generation_20260829_195943` is detached and RUNNING; Student training, Ba evaluation, ModelScope upload, and cleanup have not started.
+The full released test contains 95 Trigger, 100 Suppression, and 105 Normal records. Teacher/Base trigger activation was 95/95 versus 0/95; Teacher combined-negative false activation was 0/205. CTCC Ba preserved the failed 40,007-raw parent, completed through infrastructure-only generation continuation `ctcc_ba_generation_20260829_195943_cont1`, froze exactly 20,000 QA (SHA256 `621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484`), and trained fresh-canonical Student `ctcc_ba_20260830_025244` for 7,500/7,500 steps. Fresh-reload evaluation continuation `ctcc_ba_eval_20260830_033556_cont1` produced Student Trigger 0/95, negatives 0/205, ARC 0.483788, TruthfulQA MC2 0.450614, and a passing ordinary-generation sanity check. The bounded result is that CTCC trigger retention fell to the Base level under this tested standardized direct-distillation setting while tested utility remained functional.
+
+The CTCC preferred Teacher LoRA adapter and Ba inference-ready Student final model are uploaded to private ModelScope repositories `MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher` and `MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student`. Both are `uploaded_to_modelscope_awaiting_destination_hash_verification`: source manifests and remote filename/count/size/blob-metadata checks passed, but a future independent destination download is required for full SHA256 verification.
 
 PN-FP reproduction and direct-distillation evaluation are CLOSED. A2 is the preferred utility-preserving teacher; Ba is complete with strong watermark degradation and partial retention. Bb was not run and remains deferred. No PN-FP GPU or transfer process is active.
 
@@ -16,7 +18,7 @@ The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.
 
 The durable benchmark default is a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Every method's Ba must use that method's own preferred teacher to generate its own answers; another watermark's teacher, QA, frozen 20k, or student must never be reused. Students always start from fresh canonical unwatermarked weights. Any method-specific backbone or Ba deviation requires a recorded blocker and explicit user approval.
 
-Completed methods: **2/7** (PN-FP and EverTracer). The canonical Llama remains preserved. The latest observed AutoDL baseline is RTX PRO 6000 Blackwell (97,887 MiB), 208 container-visible vCPUs, approximately 1.0 TiB RAM, and approximately 1 TiB data disk; after EverTracer cleanup approximately 35 GiB was used and approximately 966 GiB was free.
+Completed methods: **3/7** (PN-FP, EverTracer, and CTCC). The canonical Llama remains preserved. The latest observed AutoDL baseline is RTX PRO 6000 Blackwell (97,887 MiB), 208 container-visible vCPUs, approximately 1.0 TiB RAM, and approximately 1 TiB data disk.
 
 ## Completed
 
@@ -56,7 +58,7 @@ Completed methods: **2/7** (PN-FP and EverTracer). The canonical Llama remains p
 
 ## Next step
 
-- Let detached CTCC Ba generation run `ctcc_ba_generation_20260829_195943` complete and rely on email; perform only a short status check when explicitly requested. Do not start Student training until exactly 20,000 CTCC-teacher QA are frozen and verified. Bb, ModelScope upload, cleanup, and another watermark remain prohibited.
+- CTCC A/Ba and private ModelScope archival are closed. Do not run CTCC Bb, perform destructive cleanup, or begin another watermark without separate explicit approval. A future independent ModelScope download may complete destination-side full SHA256 verification.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

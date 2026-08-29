@@ -1,0 +1,115 @@
+{
+  "artifact_state": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+  "authorized_metadata_replacement": "existing ModelScope initialization README replaced by WMKD_Benchmark formal model card with explicit user authorization",
+  "destination_verified": false,
+  "duration_seconds": 570.397920742631,
+  "missing_files": [],
+  "preserved_remote_files": [
+    ".gitattributes",
+    "configuration.json"
+  ],
+  "private": true,
+  "remote_blob_hash_metadata_verified_count": 12,
+  "remote_expected_bytes": 6442820872,
+  "remote_expected_file_count": 12,
+  "remote_size_verification": "passed",
+  "remote_total_file_count": 14,
+  "repo_id": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+  "retries": 0,
+  "role": "student",
+  "source_file_count": 10,
+  "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/ctcc_student_upload_20260830/WMKD_ARTIFACT_MANIFEST.json",
+  "source_manifest_sha256": "969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc",
+  "source_total_bytes": 6442821691,
+  "throughput_MB_per_second": 11.29530918277499,
+  "unexpected_files": [],
+  "upload_end": "2026-08-29T20:11:40.468609+00:00",
+  "upload_exit_code": 0,
+  "upload_start": "2026-08-29T20:02:10.070670+00:00",
+  "uploaded": [
+    {
+      "MB_per_second": 0.002365437265220185,
+      "bytes": 3827,
+      "elapsed_seconds": 1.6178826875984669,
+      "path": "chat_template.jinja",
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    {
+      "MB_per_second": 0.0008472434205869711,
+      "bytes": 874,
+      "elapsed_seconds": 1.0315807461738586,
+      "path": "config.json",
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    {
+      "MB_per_second": 0.00016333996068216736,
+      "bytes": 184,
+      "elapsed_seconds": 1.1264849044382572,
+      "path": "generation_config.json",
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    {
+      "MB_per_second": 11.555485872198856,
+      "bytes": 4965799096,
+      "elapsed_seconds": 429.73520550504327,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "c18a0a6fe7f5967816a606e47cbf18921a936b1fdeca9be15fb05abe2453fe97"
+    },
+    {
+      "MB_per_second": 11.468933538437708,
+      "bytes": 1459729952,
+      "elapsed_seconds": 127.27686903998256,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "3890801cec48101dcdf5462d107c6c4ac81e9f415e3a237f72520a85e096cee1"
+    },
+    {
+      "MB_per_second": 0.014816780340868831,
+      "bytes": 20955,
+      "elapsed_seconds": 1.4142748638987541,
+      "path": "model.safetensors.index.json",
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    {
+      "MB_per_second": 0.0002658344620969076,
+      "bytes": 325,
+      "elapsed_seconds": 1.2225653417408466,
+      "path": "special_tokens_map.json",
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    {
+      "MB_per_second": 8.212624456085477,
+      "bytes": 17210019,
+      "elapsed_seconds": 2.095556553453207,
+      "path": "tokenizer.json",
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    {
+      "MB_per_second": 0.04163068351944814,
+      "bytes": 50554,
+      "elapsed_seconds": 1.2143447026610374,
+      "path": "tokenizer_config.json",
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    {
+      "MB_per_second": 0.0009114765222908261,
+      "bytes": 1036,
+      "elapsed_seconds": 1.1366173177957535,
+      "path": "README.md",
+      "sha256": "e6e8a9347db7d12b611af53b2f1e21fc4f59d8ede736f1709a9e206ff047b6c6"
+    },
+    {
+      "MB_per_second": 0.0026261596870639646,
+      "bytes": 3085,
+      "elapsed_seconds": 1.1747191213071346,
+      "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+      "sha256": "969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc"
+    },
+    {
+      "MB_per_second": 0.0008256996581633666,
+      "bytes": 965,
+      "elapsed_seconds": 1.1687058247625828,
+      "path": "wmkd_metadata/SHA256SUMS",
+      "sha256": "264db884727f8caf035cde1dac14b0a3078ef3773d252e2f34a000cbda5a921c"
+    }
+  ]
+}

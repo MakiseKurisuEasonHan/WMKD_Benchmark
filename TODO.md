@@ -5,7 +5,12 @@
 - [x] Resolve CTCC A's paper/public-artifact discrepancy by formally using all pinned 461/428/1000 records without augmentation.
 - [x] Deploy CTCC config/scripts, freeze official files, validate real Llama-3 serialization, and pass 11/11 runtime preflight checks.
 - [x] Complete detached CTCC A run `ctcc_a_20260829_190251`; establish 95/95 trigger, 0/205 negative activation, functional utility, reload pass, and preferred teacher YES.
-- [ ] Await detached CTCC Ba generation run `ctcc_ba_generation_20260829_195943`; after explicit status review and exactly-20k verification, launch fresh-canonical Student training as a separate detached phase. Do not run Bb or upload ModelScope artifacts.
+- [x] Preserve failed CTCC Ba generation parent and complete infrastructure-only continuation with 46,009 combined raw, 20,160 deterministic unique, and exactly 20,000 frozen QA.
+- [x] Complete fresh-canonical CTCC Ba Student training `ctcc_ba_20260830_025244` at 7,500/7,500 steps.
+- [x] Complete fresh-reload CTCC detector, ARC, TruthfulQA, and ordinary-generation evaluation through infrastructure-only continuation `ctcc_ba_eval_20260830_033556_cont1`.
+- [x] Upload the CTCC preferred Teacher adapter and Ba inference-ready Student to their fixed private ModelScope repositories with source and remote metadata verification.
+- [ ] Perform CTCC ModelScope destination-side full SHA256 only during a future real download on another machine.
+- [ ] CTCC Bb remains NOT RUN / deferred; do not perform cleanup or start another watermark without explicit approval.
 
 - [x] Audit and consolidate the post-EverTracer fixed project protocol without selecting or starting a third watermark.
 

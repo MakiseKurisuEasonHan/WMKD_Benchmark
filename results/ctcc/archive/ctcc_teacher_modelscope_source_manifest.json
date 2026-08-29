@@ -1,0 +1,73 @@
+{
+  "adapter_weight_sha256": "36957869183ee2581c7377ba973de0aef4d162c7caa3a2353684cf931ae429cd",
+  "archive_status": "source_verified",
+  "artifact_role": "teacher",
+  "artifact_type": "LoRA adapter",
+  "authorized_metadata_replacement": "existing ModelScope initialization README replaced by WMKD_Benchmark formal model card with explicit user authorization",
+  "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "created_at": "2026-08-29T20:01:12.854047+00:00",
+  "excluded_source_files": [
+    "README.md"
+  ],
+  "file_count": 7,
+  "files": [
+    {
+      "bytes": 5294,
+      "path": "README.md",
+      "sha256": "5a693364336f96cc15cfee30940c95b3fdf0726d1e5274f4e9bbf8edb97124c1",
+      "upload_included": false
+    },
+    {
+      "bytes": 980,
+      "path": "adapter_config.json",
+      "sha256": "0bcb81b7e9cb7210e9eae7e30a2e14b1c596b1282a673422500ace1b1759fed9",
+      "upload_included": true
+    },
+    {
+      "bytes": 48679352,
+      "path": "adapter_model.safetensors",
+      "sha256": "36957869183ee2581c7377ba973de0aef4d162c7caa3a2353684cf931ae429cd",
+      "upload_included": true
+    },
+    {
+      "bytes": 3827,
+      "path": "chat_template.jinja",
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "upload_included": true
+    },
+    {
+      "bytes": 325,
+      "path": "special_tokens_map.json",
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "upload_included": true
+    },
+    {
+      "bytes": 17209920,
+      "path": "tokenizer.json",
+      "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "upload_included": true
+    },
+    {
+      "bytes": 50554,
+      "path": "tokenizer_config.json",
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "upload_included": true
+    }
+  ],
+  "generated_readme": {
+    "bytes": 767,
+    "sha256": "6be1b2d6c7e594bf918ef7a1a13fd5b4e20ddb5e28990a490856814fdb59e723"
+  },
+  "preserved_remote_files": [
+    ".gitattributes",
+    "configuration.json"
+  ],
+  "repo_id": "MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher",
+  "schema_version": 1,
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc/ctcc_a_20260829_190251/checkpoints/adapter",
+  "source_run_id": "ctcc_a_20260829_190251",
+  "total_bytes": 65950252,
+  "upload_file_count": 7,
+  "upload_source_bytes": 65944958
+}

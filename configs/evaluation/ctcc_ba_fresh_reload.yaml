@@ -1,0 +1,26 @@
+project: WMKD_Benchmark
+method: CTCC
+experiment: Ba
+training_run_id: ctcc_ba_20260830_025244
+student: /root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/final_model
+evaluation:
+  frozen_root: /root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a
+  counts: {trigger: 95, suppression: 100, normal: 105, total: 300}
+  detector: {normalization: strip_then_exact_case_sensitive, target: IAMALIVE}
+utility:
+  batch_size: 8
+  hub_cache: /root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub
+  datasets_cache: /root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets
+  datasets:
+    arc_challenge: {id: allenai/ai2_arc, config: ARC-Challenge, revision: 210d026faf9955653af8916fad021475a3f00453}
+    truthfulqa_mc2: {id: truthful_qa, config: multiple_choice, revision: 741b8276f2d1982aa3d5b832d3ee81ed3b896490}
+references:
+  experiment_a_summary: /root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc/ctcc_a_20260829_190251/reports/summary.json
+  base_trigger: [0, 95]
+  teacher_trigger: [95, 95]
+  teacher_suppression: [0, 100]
+  teacher_normal: [0, 105]
+  base_arc: 0.446246
+  teacher_arc: 0.395051
+  base_truthfulqa_mc2: 0.505687
+  teacher_truthfulqa_mc2: 0.476817
