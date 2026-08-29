@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from evertracer_common import empirical_fsr, load_config, resolve_t5_local_snapshot, stable_split_indices
+from evertracer_common import corrected_detector_metrics, empirical_fsr, load_config, resolve_t5_local_snapshot, stable_split_indices, validate_utility_local_artifacts
 
 
 class EverTracerPreparationTests(unittest.TestCase):
@@ -61,6 +61,33 @@ class EverTracerPreparationTests(unittest.TestCase):
                     "t5_local_path": str(snapshot),
                     "t5_model": "google-t5/t5-base",
                 })
+
+    def test_corrected_detector_matches_official_and_member_orientations(self):
+        rows = [
+            {"subset": "dtr", "calibrated_score": -3.0},
+            {"subset": "dtr", "calibrated_score": -2.0},
+            {"subset": "dunseen", "calibrated_score": 1.0},
+            {"subset": "dunseen", "calibrated_score": 2.0},
+        ]
+        result = corrected_detector_metrics(rows, 0.05)
+        self.assertEqual(result["official_definition"]["member_label"], 0)
+        self.assertEqual(result["official_definition"]["nonmember_label"], 1)
+        self.assertEqual(result["official_auc_nonmember_positive"], 1.0)
+        self.assertEqual(result["member_oriented_auc"], 1.0)
+        self.assertEqual(result["member_oriented_tpr_at_fpr_limit"], 1.0)
+        self.assertIn("non-member", result["official_definition"]["positive_threshold"])
+
+    def test_utility_local_artifacts_fail_fast_without_network_fallback(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as root:
+            snapshot = Path(root) / "revision"
+            prepared = Path(root) / "prepared"
+            spec = {"datasets": {"arc": {"id": "allenai/ai2_arc", "config": "ARC-Challenge", "revision": "revision", "snapshot": str(snapshot), "prepared": str(prepared)}}}
+            with self.assertRaises(FileNotFoundError):
+                validate_utility_local_artifacts(spec)
+            snapshot.mkdir(); (snapshot / "test.parquet").write_bytes(b"p")
+            prepared.mkdir(); (prepared / "dataset_info.json").write_text("{}"); (prepared / "test.arrow").write_bytes(b"a")
+            self.assertEqual(validate_utility_local_artifacts(spec)["arc"]["revision"], "revision")
 
 
 if __name__ == "__main__":

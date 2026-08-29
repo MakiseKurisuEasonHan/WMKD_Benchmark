@@ -82,12 +82,63 @@ def configure_cache(data_root: str | Path) -> None:
     values = {
         "HF_HOME": root / "cache/huggingface",
         "HF_HUB_CACHE": root / "cache/huggingface/hub",
+        "HF_DATASETS_CACHE": root / "cache/huggingface/datasets",
         "TORCH_HOME": root / "cache/torch",
         "TMPDIR": root / "tmp",
     }
     for key, value in values.items():
         value.mkdir(parents=True, exist_ok=True)
         os.environ[key] = str(value)
+
+
+def corrected_detector_metrics(scores: list[dict[str, Any]], fpr_limit: float) -> dict[str, Any]:
+    """Aggregate saved EverTracer scores using official and equivalent member directions."""
+    members = [float(row["calibrated_score"]) for row in scores if row["subset"] == "dtr"]
+    nonmembers = [float(row["calibrated_score"]) for row in scores if row["subset"] == "dunseen"]
+    if not members or not nonmembers:
+        raise ValueError("saved scores must contain both dtr members and dunseen non-members")
+    member_metrics = empirical_fsr([-score for score in members], [-score for score in nonmembers], fpr_limit)
+    official_auc = (
+        sum(nonmember > member for nonmember in nonmembers for member in members)
+        + 0.5 * sum(nonmember == member for nonmember in nonmembers for member in members)
+    ) / (len(members) * len(nonmembers))
+    if abs(official_auc - member_metrics["auc"]) > 1e-12:
+        raise AssertionError("official and member-oriented AUC must be equivalent")
+    return {
+        "official_definition": {
+            "member_label": 0, "nonmember_label": 1,
+            "score": "C = suspect_variation - reference_variation",
+            "positive_threshold": "C >= gamma predicts non-member",
+        },
+        "official_auc_nonmember_positive": float(official_auc),
+        "member_oriented_definition": {
+            "member_label": 1, "nonmember_label": 0,
+            "score": "member_score = -C",
+            "positive_threshold": "member_score >= gamma predicts member",
+            "note": "Equivalent reparameterization of the official detector for benchmark readability.",
+        },
+        "member_oriented_auc": member_metrics["auc"],
+        "member_oriented_tpr_at_fpr_limit": member_metrics["tpr"],
+        "member_oriented_fpr": member_metrics["fpr"],
+        "member_oriented_threshold": member_metrics["threshold"],
+        "fpr_limit": float(fpr_limit),
+        "member_count": len(members), "nonmember_count": len(nonmembers),
+    }
+
+
+def validate_utility_local_artifacts(utility: dict[str, Any]) -> dict[str, Any]:
+    """Fail fast unless every pinned utility snapshot and prepared dataset is local."""
+    result = {}
+    for name, spec in utility["datasets"].items():
+        snapshot, prepared = Path(spec["snapshot"]), Path(spec["prepared"])
+        if snapshot.name != str(spec["revision"]):
+            raise ValueError(f"{name} snapshot revision mismatch")
+        if not snapshot.is_dir() or not any(snapshot.rglob("*.parquet")):
+            raise FileNotFoundError(f"{name} pinned snapshot is missing or incomplete: {snapshot}")
+        if not prepared.is_dir() or not (prepared / "dataset_info.json").is_file() or not any(prepared.glob("*.arrow")):
+            raise FileNotFoundError(f"{name} prepared offline dataset is missing or incomplete: {prepared}")
+        result[name] = {"id": spec["id"], "config": spec["config"], "revision": spec["revision"], "snapshot": str(snapshot), "prepared": str(prepared)}
+    return result
 
 
 def resolve_t5_local_snapshot(verification: dict[str, Any]) -> Path:

@@ -44,3 +44,9 @@ XSum download attempt 1 and T5 download attempt 1 ended with resumable `Incomple
 - Scientific configuration remains unchanged: block size 128, K=5, perturbation fraction 30%, Dtr=100, Dref=1000, Dunseen=100, and the same canonical backbone/revision.
 - Offline smoke passed under `HF_HUB_OFFLINE=1` and `TRANSFORMERS_OFFLINE=1`: 2 records, 20 variants, zero generation retries, no network/Hub request in the log, and valid manifest output.
 - Detached continuation started at `2026-08-29T11:15:29+08:00` with runner PID 252427. STARTED email succeeded via SSL 465; initial stage is `PREPARING_VERIFICATION`.
+
+## Continuation 2 preparation
+
+- Continuation 1 remains immutable FAILED at UTILITY. Its canonical neighborhoods (SHA256 `7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b`) and complete teacher/base per-sample scores remain valid.
+- Audit found the calibrated score `C = suspect PV - reference PV` correct, but WMKD had interpreted high C as member-positive. The fixed official code uses member=0/non-member=1; continuation 2 reports this official orientation plus the equivalent member-readable `member_score=-C` orientation.
+- Corrected aggregation reuses saved scores with no model inference. ARC `210d026faf9955653af8916fad021475a3f00453` and TruthfulQA `741b8276f2d1982aa3d5b832d3ee81ed3b896490` are already complete in the project data-disk cache and will be resolved explicitly under offline mode.

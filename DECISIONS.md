@@ -150,3 +150,10 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Preserve `evertracer_a_20260828_223155` as immutable FAILED and create continuation `evertracer_a_20260828_223155_cont1`. Reuse its target/reference merged artifacts without retraining or re-merging, and run only perturbation and downstream evaluation stages.
 - **Decision:** Resolve `google-t5/t5-base@a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1` through the pinned local snapshot with `local_files_only=True` and offline environment flags. Retain model ID, revision, local resolved path, and model SHA-256 in provenance.
 - **Reason:** The parent completed all scientific training stages and failed only because the perturb loader attempted online Hub resolution while AutoDL networking was unavailable. This is an engineering continuation with no scientific configuration change.
+
+## 2026-08-29 — Correct EverTracer detector direction through immutable continuation 2
+
+- **Decision:** Preserve the official calibrated score `C = suspect PV - reference PV`, official labels `member=0/non-member=1`, and official high-score non-member threshold direction. For benchmark-readable fingerprint detection, report the mathematically equivalent `member=1, member_score=-C` AUC and member TPR at member FPR <=5%.
+- **Decision:** Derive corrected metrics from continuation 1's saved per-sample scores without rerunning inference. Reuse the canonical neighborhoods SHA256 `7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b` unchanged.
+- **Decision:** Resolve the already prepared pinned ARC and TruthfulQA datasets through explicit project data-disk cache paths under forced offline mode; do not change the utility tasks or gates.
+- **Reason:** Continuation 1 proved that inference outputs are complete but exposed a ROC label/threshold implementation error and a cache-environment propagation failure. Neither requires scientific retraining, perturbation regeneration, or verification inference.

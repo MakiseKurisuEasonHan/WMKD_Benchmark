@@ -2,7 +2,7 @@
 
 ## High priority
 
-- [ ] Complete EverTracer Experiment A through continuation `evertracer_a_20260828_223155_cont1`, reusing the valid target/reference artifacts from immutable FAILED parent `evertracer_a_20260828_223155`; do not retrain, run A2/Ba, or upload ModelScope.
+- [ ] Complete EverTracer Experiment A through continuation 2 `evertracer_a_20260828_223155_cont2`, reusing target/reference, canonical neighborhoods, and cont1 per-sample scores; do not retrain, re-perturb, run A2/Ba, or upload ModelScope.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.
