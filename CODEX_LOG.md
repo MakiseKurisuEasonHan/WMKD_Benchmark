@@ -316,3 +316,9 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - The combined raw ceiling is an engineering guard raised to 60,000. Teacher, sampling, eight-category prompt distribution, parser, filter, deterministic deduplication, and exactly-20k freeze remain unchanged. Student remains blocked until freeze verification succeeds.
 - Cursor recovery regression tests passed 3/3. Parent consumed maximum prompt index is 10,156 and continuation starts at 10,157 with `no_overlap=true`; parent raw/config/Teacher hashes passed unchanged.
 - Launched detached `ctcc_ba_generation_20260829_195943_cont1`, runner PID 340630 and generation child PID 340790. The one launch health check found RUNNING, STARTED email exit code 0, model-load log growth, 7.65 GB GPU use, and no immediate traceback/OOM/overlap. Continuous monitoring stopped; completion counts and frozen SHA remain pending.
+
+## 2026-08-30 — CTCC Ba Student training launch
+
+- Continuation completed with 6,002 added raw, 46,009 combined raw, 20,160 pre-freeze unique, and exactly 20,000 deterministic frozen QA. Canonical dataset SHA256 is `621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484`.
+- Student preflight bound the frozen dataset to fresh canonical `Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95` and the standardized full-parameter 3-epoch BF16, LR `1e-5`, effective-batch-8 protocol (7,500 steps).
+- Launched training-only detached run `ctcc_ba_20260830_025244`, runner PID 347107 and training child PID 347115. The one launch check found RUNNING at approximately 58/7500 steps, 92% GPU utilization, 45.27 GB VRAM, STARTED email exit code 0, and no immediate traceback/OOM. Evaluation remains NOT_STARTED and continuous monitoring stopped.
