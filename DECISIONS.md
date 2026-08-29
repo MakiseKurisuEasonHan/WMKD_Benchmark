@@ -201,3 +201,9 @@ This log records consequential project decisions. It does not record routine eng
 
 - **Decision:** Formal long-running training, generation, evaluation, and preprocessing use an independent detached runner plus one launch health check; Codex must not continuously poll in the foreground. Model archival uploads remain foreground-supervised through command completion and remote repository verification.
 - **Reason:** Scientific jobs must survive SSH/Codex disconnection without occupying the interactive task, while archival network transfers require explicit end-to-end verification.
+
+## 2026-08-30 — Continue CTCC Ba generation after resume-cursor defect
+
+- **Decision:** Preserve failed parent `ctcc_ba_generation_20260829_195943` byte-for-byte and create infrastructure-only continuation `cont1`. Recover the next prompt cursor as `max(prompt_index)` over parent/continuation raw and parse-error records plus one, fail on overlap, and keep all Teacher, prompt, sampling, parser, filter, deduplication, and freeze behavior unchanged.
+- **Decision:** Raise only the combined-total-raw engineering fail-safe ceiling from 40,000 to 60,000; stop immediately once deterministic unique count reaches 20,000 and freeze exactly 20,000. This is not Ba2 and does not authorize Student training before the frozen manifest passes.
+- **Reason:** The parent reached 40,007 raw but only 17,880 unique because the old resume cursor inferred consumed prompts from accepted-record count. Accepted records are not one-to-one with prompt calls, so `existing // records_per_prompt` can revisit consumed seed indices across increments.

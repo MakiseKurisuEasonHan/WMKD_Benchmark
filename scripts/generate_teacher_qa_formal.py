@@ -31,11 +31,35 @@ def extract_records(text):
     return records
 
 
+def consumed_prompt_indices(paths):
+    consumed = set()
+    for path in paths:
+        source = Path(path)
+        if not source.exists():
+            continue
+        with source.open(encoding="utf-8") as handle:
+            for line_number, line in enumerate(handle, 1):
+                if not line.strip():
+                    continue
+                record = json.loads(line)
+                value = record.get("prompt_index")
+                if not isinstance(value, int) or value < 0:
+                    raise ValueError(f"invalid prompt_index in {source}:{line_number}")
+                consumed.add(value)
+    return consumed
+
+
+def recover_next_prompt_index(paths):
+    consumed = consumed_prompt_indices(paths)
+    return (max(consumed) + 1) if consumed else 0
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-path", required=True)
     parser.add_argument("--adapter-path")
     parser.add_argument("--teacher-run-id")
+    parser.add_argument("--resume-consumed-record", action="append", default=[])
     parser.add_argument("--output", required=True)
     parser.add_argument("--errors", required=True)
     parser.add_argument("--target-candidates", type=int, default=24000)
@@ -61,7 +85,12 @@ def main():
     if args.adapter_path:
         model = PeftModel.from_pretrained(model, args.adapter_path, local_files_only=True)
     model = model.eval()
-    prompt_index = existing // args.records_per_prompt
+    resume_sources = [*args.resume_consumed_record, str(output), str(Path(args.errors))]
+    consumed_before = consumed_prompt_indices(resume_sources)
+    prompt_index = recover_next_prompt_index(resume_sources)
+    if consumed_before and prompt_index <= max(consumed_before):
+        raise RuntimeError("resume cursor overlaps consumed prompt indices")
+    initial_prompt_index = prompt_index
     started = time.monotonic(); total_calls = 0; accepted_this_run = 0; consecutive_zero_calls = 0
     generated_tokens = eos_terminated = max_token_hits = repeated_outputs = prompt_echoes = 0; generated_lengths=[]
     with output.open("a", encoding="utf-8", buffering=1) as sink, Path(args.errors).open("a", encoding="utf-8", buffering=1) as errors:
@@ -70,6 +99,8 @@ def main():
             indices = []
             for offset in range(args.batch_size):
                 idx = prompt_index + offset
+                if idx in consumed_before:
+                    raise RuntimeError(f"prompt_index overlap detected: {idx}")
                 category = CATEGORIES[idx % len(CATEGORIES)]
                 content = (
                     f"Create exactly {args.records_per_prompt} diverse, self-contained training examples in the category {category}. "
@@ -122,6 +153,6 @@ def main():
             if args.telemetry:
                 elapsed=max(time.monotonic()-started,1e-9)
                 ordered=sorted(generated_lengths);p95=ordered[min(len(ordered)-1,max(0,int(.95*len(ordered))-1))]
-                Path(args.telemetry).write_text(json.dumps({"schema_version":1,"output":str(output),"output_sha256":hashlib.sha256(output.read_bytes()).hexdigest(),"existing_before_run":existing-accepted_this_run,"accepted_this_run":accepted_this_run,"total_calls":total_calls,"generated_tokens":generated_tokens,"elapsed_seconds":elapsed,"prompts_per_second":total_calls/elapsed,"seconds_per_prompt":elapsed/max(total_calls,1),"tokens_per_second":generated_tokens/elapsed,"records_per_call":accepted_this_run/max(total_calls,1),"generated_length":{"mean":statistics.mean(generated_lengths),"median":statistics.median(generated_lengths),"p95":p95,"min":min(generated_lengths),"max":max(generated_lengths)},"eos_terminated_calls":eos_terminated,"eos_rate":eos_terminated/max(total_calls,1),"max_token_hits":max_token_hits,"max_token_hit_rate":max_token_hits/max(total_calls,1),"repeated_outputs":repeated_outputs,"repetition_rate":repeated_outputs/max(total_calls,1),"prompt_echoes":prompt_echoes,"prompt_echo_rate":prompt_echoes/max(total_calls,1),"peak_vram_bytes":torch.cuda.max_memory_allocated()},indent=2)+"\n")
+                Path(args.telemetry).write_text(json.dumps({"schema_version":1,"output":str(output),"output_sha256":hashlib.sha256(output.read_bytes()).hexdigest(),"existing_before_run":existing-accepted_this_run,"accepted_this_run":accepted_this_run,"total_calls":total_calls,"initial_prompt_index":initial_prompt_index,"next_prompt_index":prompt_index,"consumed_prompt_count_before":len(consumed_before),"no_overlap":True,"generated_tokens":generated_tokens,"elapsed_seconds":elapsed,"prompts_per_second":total_calls/elapsed,"seconds_per_prompt":elapsed/max(total_calls,1),"tokens_per_second":generated_tokens/elapsed,"records_per_call":accepted_this_run/max(total_calls,1),"generated_length":{"mean":statistics.mean(generated_lengths),"median":statistics.median(generated_lengths),"p95":p95,"min":min(generated_lengths),"max":max(generated_lengths)},"eos_terminated_calls":eos_terminated,"eos_rate":eos_terminated/max(total_calls,1),"max_token_hits":max_token_hits,"max_token_hit_rate":max_token_hits/max(total_calls,1),"repeated_outputs":repeated_outputs,"repetition_rate":repeated_outputs/max(total_calls,1),"prompt_echoes":prompt_echoes,"prompt_echo_rate":prompt_echoes/max(total_calls,1),"peak_vram_bytes":torch.cuda.max_memory_allocated()},indent=2)+"\n")
 
 if __name__ == "__main__": main()
