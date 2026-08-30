@@ -47,3 +47,7 @@ Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED a
 ## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
 
 Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530`. Base/A2/Ba detection: 1/1024 (0.09765625%) / 956/1024 (93.359375%) / 98/1024 (9.5703125%); teacher→Ba drop 83.7890625 points; retention 10.251046%. ARC Base/A2/Ba: 0.448805461 / 0.443686007 / 0.478668942. TruthfulQA MC2 Base/A2/Ba: 0.505450760 / 0.467427921 / 0.463479842. Utility and reload gates passed. Judgement: **strong watermark degradation with partial retention under the tested setting**. The old A1-based run remains immutable FAILED.
+
+## iSeal explicitly authorized final cleanup
+
+The first conservative cleanup attempt remains recorded as rejected before execution. After separate explicit user authorization, exactly five audited paths were deleted: A2, A3, A4, and A5 non-preferred `teacher_merged` artifacts plus Ba `checkpoint-7500`. No candidate was skipped. Logical deletion total was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. A6 preferred Teacher, Ba `final_model`, canonical base, frozen20k, ModelScope manifests, raw generation, shared infrastructure/cache, and all other-watermark artifacts were preserved. iSeal remains FULLY CLOSED; Bb/A7 and the fifth watermark were not started.

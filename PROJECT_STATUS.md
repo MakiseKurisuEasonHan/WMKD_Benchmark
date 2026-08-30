@@ -62,7 +62,7 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). The canonical L
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, switch methods, or perform destructive cleanup without separate explicit approval.
 - Current blocker: NONE. Remaining methods are SCW, LLMPrint, and REEF; the next scientific task is to select/start the fifth watermark, but it has not been started.
-- Final conservative AutoDL cleanup audit completed with zero deletions: all protected artifacts remain intact. Five large checkpoint candidates were retained because destructive safety review required additional explicit approval.
+- After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

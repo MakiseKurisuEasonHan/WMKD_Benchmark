@@ -27,10 +27,26 @@
     ],
     "uncertain_kept": ["any unclassified iSeal-specific cache or staging", "any shared asset", "all paths not explicitly inventoried"]
   },
-  "deletion_attempt": {"executed": false, "reason": "destructive safety review rejected the combined deletion before execution; no workaround or partial retry was attempted"},
-  "deleted_paths": [],
-  "bytes_freed": 0,
-  "disk_after": {"filesystem_bytes": 1073741824000, "used_bytes": 150780563456, "available_bytes": 922961260544, "data_root_bytes": 150392448575},
+  "first_deletion_attempt": {"executed": false, "reason": "destructive safety review rejected the combined deletion before execution; no workaround or partial retry was attempted"},
+  "authorized_cleanup": {
+    "explicit_user_authorization_received": true,
+    "timestamp": "2026-08-30T20:48:26.0895245+10:00",
+    "preconditions": {"gpu_memory_mib": 0, "gpu_utilization_percent": 0, "active_target_users": 0, "active_iseal_or_modelscope_workloads": 0, "all_realpaths_exact": true, "all_targets_directories_not_symlinks": true, "all_sizes_matched_audit": true},
+    "deleted": [
+      {"path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a2/iseal_a2_20260830_054641/checkpoints/teacher_merged", "logical_bytes": 6442819785, "status": "DELETED"},
+      {"path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a3/iseal_a3_20260830_060344/checkpoints/teacher_merged", "logical_bytes": 7230824836, "status": "DELETED", "note": "initial SSH attempt disconnected before deletion; path was confirmed still present before safe retry"},
+      {"path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a4/iseal_a4_20260830_061934/checkpoints/teacher_merged", "logical_bytes": 7230824836, "status": "DELETED"},
+      {"path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a5/iseal_a5_20260830_063925/checkpoints/teacher_merged", "logical_bytes": 7230824836, "status": "DELETED"},
+      {"path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_20260830_165442/checkpoints/student/checkpoint-7500", "logical_bytes": 19294175746, "status": "DELETED"}
+    ],
+    "skipped": [],
+    "logical_bytes_deleted": 47429470039,
+    "filesystem_used_bytes_decrease": 47429681152,
+    "filesystem_available_bytes_increase": 47429681152,
+    "data_root_logical_bytes_decrease": 47429470170
+  },
+  "deleted_paths_count": 5,
+  "disk_after": {"filesystem_bytes": 1073741824000, "used_bytes": 103350882304, "available_bytes": 970390941696, "data_root_bytes": 102962978405},
   "protected_verification": {
     "canonical_base_present": true,
     "canonical_base_bytes": 6434752607,
@@ -42,6 +58,8 @@
     "frozen20k_present": true,
     "frozen20k_bytes": 4663149,
     "frozen20k_physical_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
-    "shared_and_other_watermark_artifacts_unchanged": true
+    "shared_and_other_watermark_artifacts_unchanged": true,
+    "modelscope_source_manifests_present": true,
+    "all_five_authorized_targets_absent": true
   }
 }
