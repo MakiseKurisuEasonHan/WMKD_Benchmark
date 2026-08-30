@@ -251,3 +251,10 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** Interpret this only as reduction of registered-secret detectability to Base level under the tested standardized same-family, same-size direct-distillation setting.
 - **Decision:** Archive only the inference-ready A6 Teacher and Ba Student privately. Exclude Student `training_args.bin`, checkpoints, optimizer state, generated QA, and raw key material.
 - **Decision:** Both archives remain `uploaded_to_modelscope_awaiting_destination_hash_verification`, `destination_verified=false`; only future independent download plus full SHA256 may upgrade the state. iSeal is FULLY CLOSED; do not start Bb/A7.
+
+## 2026-08-30 — Final iSeal closure and conservative cleanup outcome
+
+- **Decision:** Repair only current-facing stale records in README/TODO/method documentation and add complete Ba generation accounting. Preserve all immutable A/A2-A5 blocked, failed, running, and non-preferred historical states.
+- **Finding:** Ba generation accounting is 32,006 raw, 1,849 generation errors, 367 empty records, 10,464 duplicate tasks, 10,831 deterministic rejections, and 21,175 unique; exactly 20,000 were frozen. Canonical dataset SHA256 and physical-file SHA256 have different semantics.
+- **Decision:** Keep canonical base, code deployment, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, other-watermark artifacts, small provenance, and raw generation. A2-A5 non-preferred Teacher checkpoints and Ba checkpoint-7500 were identified as deletion candidates, but destructive review rejected deletion before execution. No workaround was attempted; actual deletion and bytes freed are zero.
+- **Decision:** iSeal remains FULLY CLOSED with no scientific blocker. Selecting the fifth watermark is the next scientific task and is not authorized by this closure.
