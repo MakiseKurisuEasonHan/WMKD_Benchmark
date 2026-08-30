@@ -2,7 +2,7 @@
 
 ## Current phase
 
-iSeal Experiment A remains blocked before formal launch by the pinned public-code exact-zero adapter gate. Authorized variants A2-A6 are complete. Final sample-scale A6 changed only registered count 100→200 at fixed `inner_dim=128`, achieved full registered 179/200 and paired historical A5-100 86/100, kept ordinary generation 10/10, and passed fresh reload. ARC was 0.389932 and TruthfulQA MC2 0.477828; held-out remained 0/100. A6 is the selected preferred iSeal Teacher and `ready_for_ba=YES`, but Ba has not started and requires explicit authorization. No A7 was created.
+iSeal is FULLY CLOSED through A and Ba plus private ModelScope archival. Experiment A remains blocked before formal launch by the pinned public-code exact-zero gate; authorized A2-A6 culminated in preferred Teacher A6 (179/200 registered). Ba Student `iseal_ba_20260830_165442` completed 7,500 steps from the fresh canonical base. Registered success fell 179/200 → 0/200, equal to Base 0/200 (89.5-point drop; 0% thresholded retention); ARC/TruthfulQA were 0.481229/0.449818, ordinary generation 10/10, and fresh reload passed. Teacher/Student private archives passed remote metadata verification and await independent destination SHA256. Bb/A7 were not created.
 
 CTCC is FULLY CLOSED through Experiments A and Ba plus private ModelScope archival. Experiment A run `ctcc_a_20260829_190251` established the preferred Teacher from all pinned public-artifact records (Trigger 461, Suppression 428, Normal 1000; total 1889) without augmentation. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the paper's 500/500/1000 total 2000 remains a paper-vs-public-artifact discrepancy.
 
@@ -20,7 +20,7 @@ The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.
 
 The durable benchmark default is a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Every method's Ba must use that method's own preferred teacher to generate its own answers; another watermark's teacher, QA, frozen 20k, or student must never be reused. Students always start from fresh canonical unwatermarked weights. Any method-specific backbone or Ba deviation requires a recorded blocker and explicit user approval.
 
-Completed methods: **3/7** (PN-FP, EverTracer, and CTCC). The canonical Llama remains preserved. The latest observed AutoDL baseline is RTX PRO 6000 Blackwell (97,887 MiB), 208 container-visible vCPUs, approximately 1.0 TiB RAM, and approximately 1 TiB data disk.
+Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). The canonical Llama remains preserved. The latest observed AutoDL baseline is RTX PRO 6000 Blackwell (97,887 MiB), 208 container-visible vCPUs, approximately 1.0 TiB RAM, and approximately 1 TiB data disk.
 
 ## Completed
 
@@ -60,7 +60,7 @@ Completed methods: **3/7** (PN-FP, EverTracer, and CTCC). The canonical Llama re
 
 ## Next step
 
-- A6 is the selected iSeal preferred Teacher and ready for Ba. Do not start iSeal Ba, create A7, switch methods, run any Bb, or perform destructive cleanup without separate explicit approval.
+- iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, switch methods, or perform destructive cleanup without separate explicit approval.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

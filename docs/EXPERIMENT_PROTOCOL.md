@@ -177,7 +177,7 @@ EverTracer closure kept the canonical base, preferred Teacher and Ba Student Aut
 
 ## Current state
 
-PN-FP, EverTracer, and CTCC are FULLY CLOSED: 3 of 7 selected methods are complete. iSeal was selected fourth, but formal Experiment A is blocked before launch by the pinned-code trainability gate: zero-initialized adapter delta/A/B had zero gradient and zero update across two real optimizer steps, while the full tied embedding/`lm_head` matrix updated. No iSeal Teacher exists; `preferred_teacher=NO` and `ready_for_ba=NO`. Do not change initialization, trainable blocks, tied-weight handling, or optimizer semantics, create A2, or launch formal A/Ba without a new explicit scientific decision.
+PN-FP, EverTracer, CTCC, and iSeal are FULLY CLOSED: 4 of 7 selected methods are complete. iSeal preserved blocked public-zero-init Experiment A, completed authorized A2-A6, and selected A6 as Teacher. Ba froze exactly 20,000 QA (SHA256 `d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf`), trained fresh-canonical Student `iseal_ba_20260830_165442`, and evaluated by fresh reload. Registered success Base/Teacher/Student was 0/200, 179/200, 0/200; Student ARC/TruthfulQA was 0.481229/0.449818, ordinary generation 10/10. Private archives await independent destination SHA256. Bb/A7 remain NOT RUN.
 
 ## Resuming in a new session
 

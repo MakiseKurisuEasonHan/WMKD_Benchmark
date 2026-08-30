@@ -45,3 +45,7 @@ A6 incurs bounded ARC and TruthfulQA declines relative to A5 but remains functio
 A6 improves full and paired historical registered detection substantially over A5, retains clear Base separation, keeps ordinary generation 10/10, and passes fresh reload. Accordingly, final selection is `preferred_teacher=A6`, `preferred_teacher=YES`, and `ready_for_ba=YES`. This does not launch or authorize Ba automatically. A6 is the last authorized sample-scale experiment; no A7 was created.
 
 Under the WMKD canonical 3B adapter-only `inner_dim=128` setting, increasing registered fingerprint training scale from 100 to 200 increased registered-secret fingerprint detectability while preserving functional tested model utility. Held-out plaintext generalization was not established.
+
+## Private archival
+
+The A6 Teacher is private at `MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher`. Source-manifest SHA256 is `86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb`; source and remote metadata verification passed. State is `uploaded_to_modelscope_awaiting_destination_hash_verification`, `destination_verified=false`, pending future independent download and full SHA256 comparison.

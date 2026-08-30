@@ -1,0 +1,91 @@
+{
+  "archive_status": "source_verified",
+  "created_at": "2026-08-30T10:14:40.628795+00:00",
+  "excluded_source_files": [
+    "training_args.bin"
+  ],
+  "experiment": "iSeal Ba",
+  "file_count": 10,
+  "files": [
+    {
+      "bytes": 3827,
+      "path": "chat_template.jinja",
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "upload_included": true
+    },
+    {
+      "bytes": 874,
+      "path": "config.json",
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "upload_included": true
+    },
+    {
+      "bytes": 184,
+      "path": "generation_config.json",
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "upload_included": true
+    },
+    {
+      "bytes": 4965799096,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03",
+      "upload_included": true
+    },
+    {
+      "bytes": 1459729952,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e",
+      "upload_included": true
+    },
+    {
+      "bytes": 20955,
+      "path": "model.safetensors.index.json",
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "upload_included": true
+    },
+    {
+      "bytes": 325,
+      "path": "special_tokens_map.json",
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "upload_included": true
+    },
+    {
+      "bytes": 17210019,
+      "path": "tokenizer.json",
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "upload_included": true
+    },
+    {
+      "bytes": 50554,
+      "path": "tokenizer_config.json",
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "upload_included": true
+    },
+    {
+      "bytes": 5905,
+      "path": "training_args.bin",
+      "sha256": "7dcc2d92edf9873e8d8af49114b46ddccc2bd7ac809cb0a08fd74a4a770802fd",
+      "upload_included": false
+    }
+  ],
+  "frozen_dataset_canonical_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf",
+  "generated_readme": {
+    "bytes": 877,
+    "sha256": "23c8497e923117745f207f87c1b2bab907ba80a05d876bce9e0ff4710ca47135"
+  },
+  "method": "iSeal",
+  "model_role": "distilled_student",
+  "repo_id": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+  "schema_version": 1,
+  "scientific_provenance": {
+    "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "iseal_source_commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+    "runtime_key_sha256": "8399db2b1e89eb03da1a1a6a4f9cd66d541f36c3695bd899e06613e06d75ffcf"
+  },
+  "source_artifact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_20260830_165442/checkpoints/student/final_model",
+  "source_run_id": "iseal_ba_20260830_165442",
+  "total_bytes": 6442821691,
+  "upload_file_count": 12,
+  "upload_source_bytes": 6442815786
+}

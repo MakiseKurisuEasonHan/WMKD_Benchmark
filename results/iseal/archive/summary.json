@@ -1,0 +1,9 @@
+{
+  "project": "WMKD_Benchmark", "method": "iSeal",
+  "archival_status": "COMPLETE_PENDING_INDEPENDENT_DESTINATION_SHA256",
+  "destination_verified": false,
+  "teacher": {"experiment": "A6", "run_id": "iseal_a6_20260830_132300", "repo_id": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher", "private": true, "source_manifest_sha256": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb", "source_file_count": 15, "source_total_bytes": 7230820740, "remote_expected_file_count": 18, "remote_total_file_count": 19, "remote_blob_hash_metadata_verified_count": 18, "duration_seconds": 655.48184, "throughput_MB_per_second": 11.0313, "retries": 0, "state": "uploaded_to_modelscope_awaiting_destination_hash_verification"},
+  "student": {"experiment": "Ba", "run_id": "iseal_ba_20260830_165442", "repo_id": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student", "private": true, "source_manifest_sha256": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a", "source_file_count": 10, "source_total_bytes": 6442821691, "upload_source_bytes": 6442815786, "excluded_source_files": ["training_args.bin"], "remote_expected_file_count": 12, "remote_total_file_count": 13, "remote_blob_hash_metadata_verified_count": 12, "duration_seconds": 580.3092162497342, "throughput_MB_per_second": 11.10239252899846, "retries": 0, "state": "uploaded_to_modelscope_awaiting_destination_hash_verification"},
+  "verification_scope": "source SHA256 manifests plus remote privacy, filename, count, byte-size, and blob-metadata-hash verification; no independent destination download",
+  "secrets_recorded": false
+}

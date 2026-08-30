@@ -1,0 +1,118 @@
+{
+  "archive_status": "source_verified",
+  "created_at": "2026-08-30T10:00:09.785164+00:00",
+  "excluded_source_files": [],
+  "experiment": "iSeal A6",
+  "file_count": 15,
+  "files": [
+    {
+      "bytes": 3827,
+      "path": "chat_template.jinja",
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "upload_included": true
+    },
+    {
+      "bytes": 874,
+      "path": "config.json",
+      "sha256": "cd882c352586d862ec921530ba719cf82a2b64687a3f40aa17ad60925df5bca0",
+      "upload_included": true
+    },
+    {
+      "bytes": 184,
+      "path": "generation_config.json",
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "upload_included": true
+    },
+    {
+      "bytes": 989344904,
+      "path": "model-00001-of-00008.safetensors",
+      "sha256": "6f751f3ba16cbfa69153e50b241b40fb208498b7864afd9923ddbf7eab0fdf7f",
+      "upload_included": true
+    },
+    {
+      "bytes": 956355256,
+      "path": "model-00002-of-00008.safetensors",
+      "sha256": "3ccd5683db48c181fd01ac5578d78d1e1a899154a19f037ed9b828c62b4a5219",
+      "upload_included": true
+    },
+    {
+      "bytes": 956367776,
+      "path": "model-00003-of-00008.safetensors",
+      "sha256": "528c1b9290c20ea5102330f8bfd6abe06a70a89179aeea17221d380fcdd8407f",
+      "upload_included": true
+    },
+    {
+      "bytes": 956367816,
+      "path": "model-00004-of-00008.safetensors",
+      "sha256": "5cf4cf6d17de555b2d396100328c49d7c455374ee9a367ef733fe569963e1f77",
+      "upload_included": true
+    },
+    {
+      "bytes": 987825088,
+      "path": "model-00005-of-00008.safetensors",
+      "sha256": "760d7789edbe51eb288b2038419327fda2f3405a7963ef43aa140e9e5bfe2324",
+      "upload_included": true
+    },
+    {
+      "bytes": 994116432,
+      "path": "model-00006-of-00008.safetensors",
+      "sha256": "c4063274bb2290c4d93c53ea52ad9306b36ca23ced687784a4bb3141bfa7fbf2",
+      "upload_included": true
+    },
+    {
+      "bytes": 585151504,
+      "path": "model-00007-of-00008.safetensors",
+      "sha256": "6e0f3a8b910f9563576a0ec0210d36f13bbfbd0ad4f62d950028ae8dcced017c",
+      "upload_included": true
+    },
+    {
+      "bytes": 788004992,
+      "path": "model-00008-of-00008.safetensors",
+      "sha256": "c2f66b322db0bcb4f1942ac5426ea4791e508f8d57589243df11b050ae0322d3",
+      "upload_included": true
+    },
+    {
+      "bytes": 21013,
+      "path": "model.safetensors.index.json",
+      "sha256": "313ae27e5e043d72fbc3753d92e5a80023024bc4404fe759880aafcc1189e20b",
+      "upload_included": true
+    },
+    {
+      "bytes": 325,
+      "path": "special_tokens_map.json",
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "upload_included": true
+    },
+    {
+      "bytes": 17210195,
+      "path": "tokenizer.json",
+      "sha256": "fbe07b35a61be0ec850f12e9379be8ca47b4ef845b20f0d146a8a2bfdb0e7e3e",
+      "upload_included": true
+    },
+    {
+      "bytes": 50554,
+      "path": "tokenizer_config.json",
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "upload_included": true
+    }
+  ],
+  "generated_readme": {
+    "bytes": 810,
+    "sha256": "d6217c02a9107105fe97eb263dfa5aa7a9595c76f08ced1c9861f3201e1c4abf"
+  },
+  "method": "iSeal",
+  "model_role": "preferred_teacher",
+  "repo_id": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+  "schema_version": 1,
+  "scientific_provenance": {
+    "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "iseal_source_commit": "7e382321eef4355002acd93120d888dc9b45a8bd",
+    "runtime_key_sha256": "8399db2b1e89eb03da1a1a6a4f9cd66d541f36c3695bd899e06613e06d75ffcf"
+  },
+  "source_artifact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged",
+  "source_run_id": "iseal_a6_20260830_132300",
+  "total_bytes": 7230820740,
+  "upload_file_count": 18,
+  "upload_source_bytes": 7230820740
+}

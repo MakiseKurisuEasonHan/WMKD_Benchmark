@@ -243,3 +243,11 @@ This log records consequential project decisions. It does not record routine eng
 - **Finding:** The immutable A6 manifest preserves A5's original 100 and the fixed held-out 100 exactly, adds 100 unique records, and has digest `a68fff13eb0add1f64634e50235a232c3f00fcdcf5d543db942e40a5f3b7bbe9` with zero index/hash overlap.
 - **Finding:** A6 achieved 179/200 full registered successes and improved the paired historical A5-100 subset from A5's 66/100 to 86/100. Ordinary generation remained 10/10 and fresh reload passed; held-out remained 0/100. ARC/TruthfulQA were 0.389932/0.477828.
 - **Decision:** Select A6 as the final preferred iSeal Teacher and set `ready_for_ba=YES`. Held-out plaintext generalization is not established. Do not create A7 or start Ba without explicit authorization.
+
+## 2026-08-30 — Close iSeal Ba and archive canonical artifacts
+
+- **Decision:** Accept generation `iseal_ba_generation_20260830_134058`, frozen20k SHA256 `d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf`, Student `iseal_ba_20260830_165442`, and fresh-process evaluation as the complete Ba lineage.
+- **Finding:** Primary registered success fell A6 179/200 → Student 0/200, equal to Base 0/200: an 89.5-point drop and 0% thresholded retention. Student ARC/TruthfulQA was 0.481229/0.449818; ordinary generation 10/10 and fresh reload passed.
+- **Decision:** Interpret this only as reduction of registered-secret detectability to Base level under the tested standardized same-family, same-size direct-distillation setting.
+- **Decision:** Archive only the inference-ready A6 Teacher and Ba Student privately. Exclude Student `training_args.bin`, checkpoints, optimizer state, generated QA, and raw key material.
+- **Decision:** Both archives remain `uploaded_to_modelscope_awaiting_destination_hash_verification`, `destination_verified=false`; only future independent download plus full SHA256 may upgrade the state. iSeal is FULLY CLOSED; do not start Bb/A7.
