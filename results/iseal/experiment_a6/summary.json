@@ -1,0 +1,23 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "A6",
+  "status": "A6 COMPLETE — PREFERRED TEACHER SELECTED",
+  "rationale": "final predeclared sample-scale extension at fixed A5 adapter capacity and adapter-only semantics",
+  "sole_scientific_change": "registered training plaintext count 100 to 200 relative to A5",
+  "dataset_manifest_sha256": "a68fff13eb0add1f64634e50235a232c3f00fcdcf5d543db942e40a5f3b7bbe9",
+  "dataset": {"training_count": 200, "historical_A5_count": 100, "added_A6_count": 100, "held_out_count": 100, "registered_index_ranges": [[0, 10], [110, 300]], "added_index_range": [200, 300], "held_out_index_range": [10, 110], "historical_A5_100_preserved_exactly": true, "held_out_preserved_exactly": true, "index_overlap": 0, "plaintext_hash_overlap": 0},
+  "gate": {"run_id": "iseal_a6_trainability_20260830_131945", "status": "PASS", "trainable_token_count": 3865, "delta_parameters": 11873280, "A_parameters": 393216, "B_parameters": 393216, "unique_trainable_parameters": 12659712, "A5_unique_trainable_parameters": 7864320, "increase": 4795392, "base_transformer_frozen": true, "tied_embedding_lm_head_frozen": true, "finite": true},
+  "formal": {"run_id": "iseal_a6_20260830_132300", "steps": 1500, "epochs": 15, "final_loss": 0.3154188096523285, "runtime_seconds": 81.050727, "seconds_per_step": 0.054033818, "A5_runtime_seconds": 46.211753, "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged"},
+  "registered_200": {"base_mean": 2.33251405209795, "A6_mean": 69.1716509163691, "A6_median": 69.2766652928077, "base_success": "0/200", "A6_success": "179/200"},
+  "historical_A5_registered_100": {"base_mean": 2.183025634924191, "A5_mean": 56.048269929106326, "A5_median": 57.9852686857421, "A5_success": "66/100", "A6_mean": 68.3285774824618, "A6_median": 68.2237144268936, "A6_success": "86/100"},
+  "historical_registered_10": {"base_mean": 2.331481227908185, "A2_mean": 79.41623228200089, "A3_mean": 13.14750426967478, "A4_mean": 30.80232821309057, "A5_mean": 55.5273098306854, "A6_mean": 73.1601272426191, "A6_median": 77.067541178556, "A6_success": "9/10"},
+  "held_out_100": {"base_mean": 2.329692600241198, "A2_mean": 2.191497560930963, "A3_mean": 2.7374250005627685, "A4_mean": 6.365625438933786, "A5_mean": 5.94456323430155, "A6_mean": 5.88351551063274, "A6_median": 4.59247120823607, "A6_success": "0/100"},
+  "utility": {"arc": {"base": 0.447098976109215, "A2": 0.3199658703071672, "A3": 0.4035836177474403, "A4": 0.4087030716723549, "A5": 0.40187713310580203, "A6": 0.38993174061433444}, "truthfulqa_mc2": {"base": 0.5056446616844986, "A2": 0.47896022826881773, "A3": 0.5115182186762334, "A4": 0.5193510505381884, "A5": 0.5186356288888933, "A6": 0.47782771545155045}, "ordinary_generation": {"base": "10/10", "A2": "8/10", "A3": "10/10", "A4": "10/10", "A5": "10/10", "A6": "10/10"}},
+  "fresh_reload": "PASS",
+  "preferred_teacher_selection": "A6",
+  "preferred_teacher": true,
+  "ready_for_ba": true,
+  "held_out_generalization_established": false,
+  "bounded_conclusion": "Under the WMKD canonical 3B adapter-only inner_dim=128 setting, increasing registered fingerprint training scale from 100 to 200 increased registered-secret fingerprint detectability while preserving functional tested utility; held-out plaintext generalization was not established."
+}

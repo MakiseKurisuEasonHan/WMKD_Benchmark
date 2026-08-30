@@ -61,8 +61,8 @@
 
 ## Medium priority
 
-- [ ] Decide whether iSeal A5 (`66/100` registered, `0/100` held-out, healthy utility, reload PASS) is the preferred Teacher; keep `ready_for_ba=NO` until that explicit decision.
-- [ ] Do not start iSeal A6 or Ba without separate approval.
+- [x] Complete final iSeal sample-scale A6 and select A6 as preferred Teacher (`179/200` full registered; `86/100` historical A5 subset; reload PASS).
+- [ ] iSeal Ba is ready but requires separate explicit approval; do not create A7.
 
 - [ ] Analyze the PN-FP Ba result further only if an additional scientific question is approved.
 - [x] Upload the A2 canonical teacher to private ModelScope with immutable source/upload checks; destination-side verification remains a future transfer-stage gate.

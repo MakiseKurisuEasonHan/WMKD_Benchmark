@@ -236,3 +236,10 @@ This log records consequential project decisions. It does not record routine eng
 - **Finding:** The released alternative `embed_adapter/Embed.py` at pinned commit `7e382321eef4355002acd93120d888dc9b45a8bd` uses inner dimension 128. This is code provenance, not a paper mandate.
 - **Finding:** A5 improved registered-100 mean BLEU from A4's 34.865706 to 56.048270 and success from 15/100 to 66/100. Held-out remained 0/100 (mean 5.944563). ARC 0.401877, TruthfulQA MC2 0.518636, ordinary generation 10/10, and fresh reload passed.
 - **Decision:** Set `preferred_teacher=REQUIRES_DECISION` and `ready_for_ba=NO` because registered ownership signal is substantially stronger but partial, while unseen-plaintext generalization is not established. Do not start A6 or Ba without explicit approval.
+
+## 2026-08-30 — Select iSeal A6 as the preferred Teacher
+
+- **Decision:** Accept gate `iseal_a6_trainability_20260830_131945` and formal run `iseal_a6_20260830_132300` as completed A6. Its sole A5 change is registered training count 100→200 at fixed inner dimension 128 and otherwise unchanged adapter-only protocol.
+- **Finding:** The immutable A6 manifest preserves A5's original 100 and the fixed held-out 100 exactly, adds 100 unique records, and has digest `a68fff13eb0add1f64634e50235a232c3f00fcdcf5d543db942e40a5f3b7bbe9` with zero index/hash overlap.
+- **Finding:** A6 achieved 179/200 full registered successes and improved the paired historical A5-100 subset from A5's 66/100 to 86/100. Ordinary generation remained 10/10 and fresh reload passed; held-out remained 0/100. ARC/TruthfulQA were 0.389932/0.477828.
+- **Decision:** Select A6 as the final preferred iSeal Teacher and set `ready_for_ba=YES`. Held-out plaintext generalization is not established. Do not create A7 or start Ba without explicit authorization.

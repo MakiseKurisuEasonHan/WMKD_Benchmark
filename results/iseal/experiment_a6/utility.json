@@ -1,0 +1,43 @@
+{
+  "fresh_process_reload": true,
+  "base": {
+    "arc_challenge_acc_norm": 0.447098976109215,
+    "truthfulqa_mc2_acc": 0.5056446616844986,
+    "raw_results": {
+      "arc_challenge": {
+        "alias": "arc_challenge",
+        "acc,none": 0.44880546075085326,
+        "acc_stderr,none": 0.014534599585097566,
+        "acc_norm,none": 0.447098976109215,
+        "acc_norm_stderr,none": 0.01452938016052677
+      },
+      "truthfulqa_mc2": {
+        "alias": "truthfulqa_mc2",
+        "acc,none": 0.5056446616844986,
+        "acc_stderr,none": 0.015789340625911443
+      }
+    }
+  },
+  "teacher": {
+    "arc_challenge_acc_norm": 0.38993174061433444,
+    "truthfulqa_mc2_acc": 0.47782771545155045,
+    "raw_results": {
+      "arc_challenge": {
+        "alias": "arc_challenge",
+        "acc,none": 0.3720136518771331,
+        "acc_stderr,none": 0.014124597881844359,
+        "acc_norm,none": 0.38993174061433444,
+        "acc_norm_stderr,none": 0.014252959848892797
+      },
+      "truthfulqa_mc2": {
+        "alias": "truthfulqa_mc2",
+        "acc,none": 0.47782771545155045,
+        "acc_stderr,none": 0.01584568804078723
+      }
+    }
+  },
+  "delta": {
+    "arc_challenge_acc_norm": -0.057167235494880564,
+    "truthfulqa_mc2_acc": -0.02781694623294817
+  }
+}

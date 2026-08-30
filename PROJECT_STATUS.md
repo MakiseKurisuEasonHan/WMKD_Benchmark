@@ -2,7 +2,7 @@
 
 ## Current phase
 
-iSeal Experiment A remains blocked before formal launch by the pinned public-code exact-zero adapter gate. Authorized scientific variants A2-A5 are complete. A5 changed only adapter `inner_dim` 16→128 relative to A4's fixed 100-fingerprint adapter-only setting and achieved registered BLEU 56.048270 with 66/100 successes, held-out BLEU 5.944563 with 0/100 successes, ARC 0.401877, TruthfulQA MC2 0.518636, ordinary generation 10/10, and fresh reload PASS. Because registered coverage is materially stronger but partial and held-out generalization remains absent, `preferred_teacher=REQUIRES_DECISION` and `ready_for_ba=NO` pending explicit user review. No A6 or Ba run has started.
+iSeal Experiment A remains blocked before formal launch by the pinned public-code exact-zero adapter gate. Authorized variants A2-A6 are complete. Final sample-scale A6 changed only registered count 100→200 at fixed `inner_dim=128`, achieved full registered 179/200 and paired historical A5-100 86/100, kept ordinary generation 10/10, and passed fresh reload. ARC was 0.389932 and TruthfulQA MC2 0.477828; held-out remained 0/100. A6 is the selected preferred iSeal Teacher and `ready_for_ba=YES`, but Ba has not started and requires explicit authorization. No A7 was created.
 
 CTCC is FULLY CLOSED through Experiments A and Ba plus private ModelScope archival. Experiment A run `ctcc_a_20260829_190251` established the preferred Teacher from all pinned public-artifact records (Trigger 461, Suppression 428, Normal 1000; total 1889) without augmentation. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the paper's 500/500/1000 total 2000 remains a paper-vs-public-artifact discrepancy.
 
@@ -60,7 +60,7 @@ Completed methods: **3/7** (PN-FP, EverTracer, and CTCC). The canonical Llama re
 
 ## Next step
 
-- Decide whether A5's 66/100 registered success with healthy tested utility is sufficient under iSeal registered-secret ownership semantics. Do not start A6, iSeal Ba, another watermark, any Bb, or destructive cleanup without separate explicit approval.
+- A6 is the selected iSeal preferred Teacher and ready for Ba. Do not start iSeal Ba, create A7, switch methods, run any Bb, or perform destructive cleanup without separate explicit approval.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`
