@@ -36,7 +36,7 @@ Cross-method benchmark
 
 ## Project status
 
-PN-FP, EverTracer, and CTCC are fully closed (3/7 methods complete). iSeal was selected fourth, but its formal Experiment A is blocked before launch: the pinned official zero-initialized adapter delta/A/B received zero gradient and zero update in the mandatory two-step audit, while the full tied embedding/`lm_head` matrix updated. No iSeal Teacher exists; `preferred_teacher=NO` and `ready_for_ba=NO` until an explicit scientific implementation decision is made. Every method must generate its own Ba answers from its own preferred teacher, and every Ba student starts from fresh canonical unwatermarked weights. Bb is NOT RUN/deferred. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/iseal.md`, and `EXPERIMENT_LOG.md`.
+PN-FP, EverTracer, CTCC, and iSeal are fully closed (4/7 methods complete). iSeal preserved its blocked public-code Experiment A history, completed authorized A2-A6, selected A6 as preferred Teacher, and completed Ba. Under the fixed BLEU@50 detector, registered success fell from A6 179/200 to Student 0/200, matching Base 0/200; tested Student utility remained functional and fresh reload passed. Teacher and Student private ModelScope archives passed remote metadata verification but remain `destination_verified=false`. Remaining methods are SCW, LLMPrint, and REEF. Bb/A7 are NOT RUN; no fifth method has started. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/iseal.md`, and `EXPERIMENT_LOG.md`.
 
 ## Repository layout
 

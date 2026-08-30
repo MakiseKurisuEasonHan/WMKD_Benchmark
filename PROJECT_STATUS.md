@@ -61,6 +61,7 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). The canonical L
 ## Next step
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, switch methods, or perform destructive cleanup without separate explicit approval.
+- Current blocker: NONE. Remaining methods are SCW, LLMPrint, and REEF; the next scientific task is to select/start the fifth watermark, but it has not been started.
 
 
 ## A2 immutable evaluation continuation `pnfp_exp_a2_eval_20260828_105530`

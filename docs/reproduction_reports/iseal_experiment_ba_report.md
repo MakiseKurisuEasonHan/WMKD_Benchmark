@@ -2,7 +2,7 @@
 
 ## Lineage and training
 
-The selected Teacher is A6 run `iseal_a6_20260830_132300`. Generation `iseal_ba_generation_20260830_134058` produced 32,006 raw and 21,175 deterministic unique valid QA records. Exactly 20,000 were frozen with SHA256 `d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf`.
+The selected Teacher is A6 run `iseal_a6_20260830_132300`. Generation `iseal_ba_generation_20260830_134058` produced 32,006 raw records plus 1,849 generation-error records. Deterministic filtering rejected 367 empty instruction/answer records and 10,464 duplicate tasks (10,831 total), leaving 21,175 unique valid QA records. Exactly 20,000 were frozen. The content-canonical dataset digest is `d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf`; the physical `frozen_qa.jsonl` file SHA256 is `04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc`. These hashes have distinct semantics and are not interchangeable.
 
 Fresh-canonical Student `iseal_ba_20260830_165442` used revision `0cb88a4f764b7a12671c53f0838cd831a0843b95`, full-parameter SFT, 3 epochs, LR `1e-5`, BF16, batch 8, and 7,500 steps. Average/last loss was `0.5161768/0.3608`; runtime was 1,756.5384 seconds.
 

@@ -1,7 +1,7 @@
 {
   "project": "WMKD_Benchmark", "method": "iSeal", "experiment": "Ba", "status": "FULLY CLOSED",
   "teacher": {"experiment": "A6", "run_id": "iseal_a6_20260830_132300", "preferred": true},
-  "generation": {"run_id": "iseal_ba_generation_20260830_134058", "raw_count": 32006, "deterministic_unique_count": 21175, "frozen_count": 20000, "frozen_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf"},
+  "generation": {"run_id": "iseal_ba_generation_20260830_134058", "raw_count": 32006, "generation_error_count": 1849, "empty_instruction_or_answer_count": 367, "duplicate_task_count": 10464, "deterministic_rejected_count": 10831, "deterministic_unique_count": 21175, "frozen_count": 20000, "canonical_dataset_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf", "physical_frozen_qa_file_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc", "hash_semantics_distinct": true},
   "student": {"run_id": "iseal_ba_20260830_165442", "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95", "full_parameter": true, "epochs": 3, "learning_rate": 0.00001, "bf16": true, "batch_size": 8, "steps": 7500, "average_loss": 0.5161768, "last_loss": 0.3608, "runtime_seconds": 1756.5384},
   "registered_200": {"base": {"mean_bleu": 2.332514, "median_bleu": 2.009208, "success": 0}, "teacher": {"mean_bleu": 69.171651, "median_bleu": 69.276665, "success": 179}, "student": {"mean_bleu": 2.589326, "median_bleu": 2.288691, "success": 0}, "threshold": 50, "teacher_to_student_absolute_success_rate_drop": 0.895, "thresholded_registered_success_retention": 0.0},
   "historical_registered_100": {"base_success": 0, "teacher_success": 86, "student_success": 0},
