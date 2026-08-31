@@ -88,6 +88,6 @@ def main():
     with (P/rel).open("a",encoding="utf-8") as out: out.write(block)
    subprocess.run(["git","-C",str(P),"diff","--check"],check=True); subprocess.run(["git","-C",str(P),"add","--","PROJECT_STATUS.md","TODO.md","DECISIONS.md","EXPERIMENT_LOG.md","CODEX_LOG.md","docs/experiment_logs/scw_experiment_a_log.md","results/scw/experiment_a/summary.json"],check=True); subprocess.run(["git","-C",str(P),"commit","-m",f"records: finalize SCW materialized A {a.run_id}"],check=False)
   except Exception as record_exc: status["record_error"]=repr(record_exc)
-  status.update(shutdown_requested=True,shutdown_method="/usr/bin/shutdown",shutdown_command_issued=True,shutdown_request_timestamp=now(),shutdown_confirmed=False); write(root/"pipeline_status.json",status); subprocess.run(["sync"]); subprocess.run(["/usr/bin/shutdown"])
+  status.update(shutdown_requested=True,shutdown_method="/usr/bin/shutdown",shutdown_command_issued=True,shutdown_request_timestamp=now(),shutdown_confirmed=False); write(root/"pipeline_status.json",status); subprocess.run(["sync"]); subprocess.run(["/bin/bash","/usr/bin/shutdown"])
  raise SystemExit(code)
 if __name__=="__main__": main()
