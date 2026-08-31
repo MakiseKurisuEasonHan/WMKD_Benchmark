@@ -84,3 +84,8 @@ SCW Experiment A is transitioning from failed exact online-stream materializatio
 
 - State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
 - Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203129`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_213700/pipeline_status.json`.
+
+## SCW materialized orchestrator `scw_deterministic_full_20260831_214200` — 2026-08-31T12:35:39.367219+00:00
+
+- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
+- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203506`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_214200/pipeline_status.json`.
