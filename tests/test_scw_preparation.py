@@ -109,6 +109,16 @@ class SCWPreparationTests(unittest.TestCase):
         self.assertIn('runtime_preflight.get("status") != "READY"', pipeline)
         self.assertIn("runtime preflight/config hash mismatch", pipeline)
 
+    def test_full_runner_is_detached_and_fail_closed(self):
+        launcher=(ROOT/"scripts/run_scw_full_experiment_a.sh").read_text(encoding="utf-8")
+        pipeline=(ROOT/"scripts/scw_full_experiment_a.py").read_text(encoding="utf-8")
+        self.assertIn("setsid nohup",launcher)
+        self.assertIn("PY311_CLEAN_EXIT_GATE",pipeline)
+        self.assertIn("FORMAL_TRAINING",pipeline)
+        self.assertIn("AUTODL_SHUTDOWN_REQUIRED",pipeline)
+        self.assertIn('"ba_started":False',pipeline)
+        self.assertNotIn("os._exit",pipeline)
+
 
 if __name__ == "__main__":
     unittest.main()
