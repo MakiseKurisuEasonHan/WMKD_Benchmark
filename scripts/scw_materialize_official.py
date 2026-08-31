@@ -33,8 +33,8 @@ def main() -> None:
     source = Path(args.official_source).resolve()
     if subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip() != OFFICIAL_COMMIT:
         raise RuntimeError("official source commit mismatch")
-    if subprocess.check_output(["git", "-C", str(source), "status", "--porcelain"], text=True).strip():
-        raise RuntimeError("official source must remain tracked clean")
+    if subprocess.run(["git", "-C", str(source), "diff", "--quiet", "HEAD", "--"]).returncode or subprocess.run(["git", "-C", str(source), "diff", "--cached", "--quiet"]).returncode:
+        raise RuntimeError("official tracked source must remain clean")
     sys.path.insert(0, str(source / "src"))
     # Pin revisions before importing the official dataset module, whose
     # ``from datasets import load_dataset`` binding occurs at import time.

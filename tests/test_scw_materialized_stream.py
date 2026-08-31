@@ -22,6 +22,17 @@ def fixture(seed):
 
 
 class MaterializedStreamTests(unittest.TestCase):
+    def test_detached_full_runner_and_shutdown_contract(self):
+        launcher = (ROOT / "scripts/run_scw_materialized_full_experiment_a.sh").read_text(encoding="utf-8")
+        pipeline = (ROOT / "scripts/scw_materialized_full_experiment_a.py").read_text(encoding="utf-8")
+        self.assertIn("setsid nohup", launcher)
+        self.assertIn('"MATERIALIZATION"', pipeline)
+        self.assertIn('"LOCAL_MATERIALIZED_GATE"', pipeline)
+        self.assertIn('"FORMAL_TRAINING"', pipeline)
+        self.assertIn('subprocess.run(["/usr/bin/shutdown"])', pipeline)
+        self.assertIn('shutdown_confirmed=False', pipeline)
+        self.assertNotIn("os._exit", pipeline)
+
     def materialize(self, directory, seed=42, name="records.jsonl"):
         records = Path(directory) / name
         stats = materialize_records(fixture(seed), records, 6)

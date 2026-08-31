@@ -30,8 +30,8 @@ def main() -> None:
     source = Path(args.official_source).resolve()
     if subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip() != OFFICIAL_COMMIT:
         raise RuntimeError("official source commit mismatch")
-    if subprocess.check_output(["git", "-C", str(source), "status", "--porcelain"], text=True).strip():
-        raise RuntimeError("official source must remain tracked clean")
+    if subprocess.run(["git", "-C", str(source), "diff", "--quiet", "HEAD", "--"]).returncode or subprocess.run(["git", "-C", str(source), "diff", "--cached", "--quiet"]).returncode:
+        raise RuntimeError("official tracked source must remain clean")
     manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
     if os.environ.get("PYTHONHASHSEED") != str(manifest["pythonhashseed"]):
         raise RuntimeError("PYTHONHASHSEED does not match frozen stream")
