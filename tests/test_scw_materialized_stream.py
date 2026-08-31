@@ -26,7 +26,8 @@ class MaterializedStreamTests(unittest.TestCase):
         launcher = (ROOT / "scripts/run_scw_materialized_full_experiment_a.sh").read_text(encoding="utf-8")
         pipeline = (ROOT / "scripts/scw_materialized_full_experiment_a.py").read_text(encoding="utf-8")
         self.assertIn("setsid nohup", launcher)
-        self.assertIn('"MATERIALIZATION"', pipeline)
+        self.assertIn('"DETERMINISTIC_FINITE_STREAM_BUILD"', pipeline)
+        self.assertIn("DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION", pipeline)
         self.assertIn('"LOCAL_MATERIALIZED_GATE"', pipeline)
         self.assertIn('"FORMAL_TRAINING"', pipeline)
         self.assertIn('subprocess.run(["/usr/bin/shutdown"])', pipeline)
@@ -48,6 +49,15 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertIn('content_range = f"bytes {start}-{end}/{total_size}"', compat)
         self.assertIn("range_value and cached is None", compat)
 
+    def test_deterministic_finite_builder_contract(self):
+        builder = (ROOT / "scripts/scw_build_deterministic_finite_stream.py").read_text(encoding="utf-8")
+        self.assertIn("np.random.Generator(np.random.PCG64(seed))", builder)
+        self.assertIn("PROBABILITIES = (0.6, 0.2, 0.2)", builder)
+        self.assertIn("repository-path-order", builder)
+        self.assertIn("official_preprocess", builder)
+        self.assertIn("no deduplication; no replacement; no synthetic duplication", builder)
+        self.assertIn("not byte-identical to the official online streaming/shuffle realization", builder)
+
     def test_resumable_prefetch_contract(self):
         prefetch = (ROOT / "scripts/scw_resumable_prefetch.py").read_text(encoding="utf-8")
         self.assertIn('"--continue-at", "-"', prefetch)
@@ -61,7 +71,9 @@ class MaterializedStreamTests(unittest.TestCase):
         local_validation = (ROOT / "scripts/scw_local_prefetch_tiny_validate.py").read_text(encoding="utf-8")
         self.assertIn("tokenize_function", local_validation)
         self.assertIn("group_texts", local_validation)
-        self.assertIn('"source_dataset": "LucieFr"', local_validation)
+        self.assertIn('"LucieFr": (0, "watermark")', local_validation)
+        self.assertIn('"AlpacaGPT4": (1, "anti-watermark-tv")', local_validation)
+        self.assertIn('"OpenWebText": (2, "anti-watermark-tv")', local_validation)
 
     def materialize(self, directory, seed=42, name="records.jsonl"):
         records = Path(directory) / name

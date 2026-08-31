@@ -48,16 +48,37 @@ if _MIRROR:
         if _parquet_cache and str(method).upper() == "GET" and rewritten_url.split("?", 1)[0].endswith(".parquet"):
             from requests import Response
             from urllib3.response import HTTPResponse
-            from scw_resumable_prefetch import ensure_cached, verified_cached_path
+            from scw_resumable_prefetch import ensure_cached, fetch_range, resolve_metadata, verified_cached_path
 
             request_headers = kwargs.get("headers") or {}
             range_value = next((value for key, value in request_headers.items() if str(key).lower() == "range"), None)
             cached = verified_cached_path(rewritten_url, Path(_parquet_cache))
-            # Schema/footer probes are already bounded Range requests. Do not
-            # turn an uncached small probe into a full-object prefetch; the
-            # later official full GET is the on-demand prefetch trigger.
             if range_value and cached is None:
-                return _request(self, method, rewritten_url, *args, **kwargs)
+                import re
+
+                metadata = resolve_metadata(rewritten_url)
+                match = re.fullmatch(r"bytes=(\d*)-(\d*)", str(range_value).strip())
+                if not match or (not match.group(1) and not match.group(2)):
+                    raise RuntimeError(f"unsupported remote Parquet Range header: {range_value}")
+                if match.group(1):
+                    start = int(match.group(1))
+                    end = int(match.group(2)) if match.group(2) else metadata["expected_size"] - 1
+                else:
+                    length = int(match.group(2))
+                    start, end = max(0, metadata["expected_size"] - length), metadata["expected_size"] - 1
+                payload, metadata = fetch_range(rewritten_url, start, end, Path(_parquet_cache))
+                response = Response()
+                response.status_code = 206
+                response.url = rewritten_url
+                response.headers.update({
+                    "Content-Length": str(len(payload)), "Content-Type": "application/octet-stream",
+                    "Accept-Ranges": "bytes", "Content-Range": f"bytes {start}-{end}/{metadata['expected_size']}",
+                    "ETag": metadata.get("object_etag") or metadata.get("x_linked_etag") or "",
+                    "X-WMKD-Resumable-Range-Cache": "1",
+                })
+                response.raw = HTTPResponse(body=BytesIO(payload), headers=dict(response.headers), status=206, preload_content=False)
+                response._content_consumed = False
+                return response
             local_path, manifest = cached or ensure_cached(rewritten_url, Path(_parquet_cache))
             total_size = local_path.stat().st_size
             status_code = 200

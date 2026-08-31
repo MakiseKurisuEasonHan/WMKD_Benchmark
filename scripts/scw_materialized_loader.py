@@ -10,7 +10,7 @@ from scw_materialized_stream import file_sha256, iter_materialized_records
 
 def load_manifest(path: str | Path) -> dict:
     manifest = json.loads(Path(path).read_text(encoding="utf-8"))
-    if manifest.get("adaptation") != "RUNTIME_DATA_ACCESS_ADAPTATION":
+    if manifest.get("adaptation") not in {"RUNTIME_DATA_ACCESS_ADAPTATION", "DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION"}:
         raise ValueError("unexpected SCW materialization classification")
     return manifest
 

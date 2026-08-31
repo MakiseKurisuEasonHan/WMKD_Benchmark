@@ -153,6 +153,14 @@ def iter_materialized_records(path: str | Path, expected_manifest: dict[str, Any
     with records_path.open(encoding="utf-8") as handle:
         for count, line in enumerate(handle, 1):
             stored = json.loads(line)
+            if expected_manifest and expected_manifest.get("adaptation") == "DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION":
+                if stored.get("global_index") != count - 1 or stored.get("official_label") != stored.get("source_schedule_label"):
+                    raise ValueError(f"deterministic finite-stream index/schedule mismatch at {count - 1}")
+                source = SOURCE_BY_LABEL.get(stored["official_label"])
+                if source is None or stored.get("source_dataset") != source["source_dataset"] or stored.get("loss_type") != source["loss_type"] or stored.get("lambda") != source["lambda"]:
+                    raise ValueError(f"deterministic finite-stream source contract mismatch at {count - 1}")
+                yield {"input_ids": stored["input_ids"], "attention_mask": stored["attention_mask"], "labels": stored["official_label"]}
+                continue
             record = normalize_official_record({"input_ids": stored["input_ids"], "attention_mask": stored["attention_mask"], "labels": stored["label_id"]}, count - 1)
             if stored != record:
                 raise ValueError(f"materialized record mismatch at index {count - 1}")
@@ -162,6 +170,8 @@ def iter_materialized_records(path: str | Path, expected_manifest: dict[str, Any
 
 
 def audit_materialized(records_path: str | Path, manifest: dict[str, Any]) -> dict[str, Any]:
+    if manifest.get("adaptation") == "DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION":
+        return audit_deterministic_finite_stream(records_path, manifest)
     counts: Counter[str] = Counter()
     sequence_digest = hashlib.sha256()
     total = 0
@@ -184,3 +194,38 @@ def audit_materialized(records_path: str | Path, manifest: dict[str, Any]) -> di
         "training_length_contract": total == manifest["training_length_contract"]["expected_consumed_examples"],
     }
     return {"status": "PASS" if all(checks.values()) else "FAIL", "checks": checks}
+
+
+def audit_deterministic_finite_stream(records_path: str | Path, manifest: dict[str, Any]) -> dict[str, Any]:
+    """Fail-closed replay of schedule, source counters, content hashes and order."""
+    schedule_path = Path(manifest["source_schedule_path"])
+    schedule = list(schedule_path.read_bytes())
+    counts: Counter[str] = Counter(); local_indices: Counter[int] = Counter(); digest = hashlib.sha256(); total = 0
+    checks = {"schedule_file_sha256": file_sha256(schedule_path) == manifest["source_schedule_sha256"]}
+    valid = True
+    with Path(records_path).open(encoding="utf-8") as handle:
+        for total, line in enumerate(handle, 1):
+            row = json.loads(line); index = total - 1
+            if index >= len(schedule) or row.get("global_index") != index or row.get("source_schedule_label") != schedule[index]: valid = False; break
+            label = schedule[index]; source = SOURCE_BY_LABEL.get(label)
+            if source is None or row.get("official_label") != label or row.get("source_local_index") != local_indices[label]: valid = False; break
+            if row.get("source_dataset") != source["source_dataset"] or row.get("loss_type") != source["loss_type"] or row.get("lambda") != source["lambda"]: valid = False; break
+            ids=row.get("input_ids"); mask=row.get("attention_mask")
+            if not isinstance(ids,list) or not ids or len(ids)!=len(mask) or any(not isinstance(x,int) for x in ids) or any(x not in (0,1) for x in mask): valid=False; break
+            payload={k:row[k] for k in ("input_ids","attention_mask","official_label","source_dataset","loss_type","lambda")}
+            content=sha256_bytes(canonical_json(payload).encode())
+            if row.get("content_sha256") != content: valid=False; break
+            digest.update(bytes.fromhex(content)); counts[source["source_dataset"]]+=1; local_indices[label]+=1
+    checks.update({
+        "record_content_and_indices": valid,
+        "file_sha256": file_sha256(records_path) == manifest["records_file_sha256"],
+        "record_count": total == manifest["materialized_record_count"] == len(schedule),
+        "global_indices": total == len(schedule),
+        "schedule_replay_exact": valid and total == len(schedule),
+        "source_counts": dict(counts) == manifest["source_counts"],
+        "per_source_local_indices": all(local_indices[i] == sum(1 for x in schedule if x == i) for i in range(3)),
+        "canonical_content_digest": digest.hexdigest() == manifest["canonical_content_digest"],
+        "training_length_contract": total == manifest["training_length_contract"]["expected_consumed_examples"],
+        "no_replacement": manifest.get("duplicates_policy") == "no deduplication; no replacement; no synthetic duplication",
+    })
+    return {"status":"PASS" if all(checks.values()) else "FAIL","checks":checks}

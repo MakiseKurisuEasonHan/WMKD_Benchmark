@@ -79,3 +79,9 @@ The first conservative cleanup attempt remains recorded as rejected before execu
 - Gracefully stopped `scw_materialized_full_20260831_195500` at 0/160000 before gate/Formal A and preserved retry evidence as `BLOCKED_NONRESUMABLE_PARQUET_DOWNLOAD`.
 - Verified HTTP Range resume from offset 1,048,576 and completed the exact LucieFr `RedPajama--fr--2017-51--033.parquet`: 824,184,452 bytes, SHA256 `a78e663cfddc361d3f54e634793b9cb3b0f028e10a8d40ad523324e6bd350228`, Parquet integrity PASS.
 - Added generic on-demand resumable prefetch/cache serving. Targeted tests passed 8/8. A direct verified-local tiny check using official `tokenize_function` and `group_texts` produced 8 LucieFr watermark records at sequence length 512.
+# 2026-08-31 — SCW finite-stream adaptation infrastructure
+
+- Prior exact-online-stream materialization remained pre-scientific: records 0, gate not started, Formal A not started.
+- Stopped further CDN/IP benchmarking and preserved all `.part`, verified Parquet cache, logs, provenance, and failed run directories.
+- Added deterministic PCG64 schedule, per-source source-order official preprocessing pools, final schedule assembly, manifest limitation disclosure, fail-closed audit, frozen local loader, and detached build→audit→single gate→Formal A→evaluation→report→shutdown orchestration.
+- Targeted Python 3.11 tests: 15 passed; `git diff --check`: PASS; canonical scientific YAML files unchanged.
