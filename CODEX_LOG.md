@@ -387,3 +387,6 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Confirmed from pinned official code that each source is transformed/tokenized before hash-seeded shuffle, label assignment, and stochastic `interleave_datasets(..., probabilities=[0.6,0.2,0.2], stopping_strategy="all_exhausted")`. `PYTHONHASHSEED=42` affects every source-shuffle seed and the interleave seed.
 - Designed exact-prefix materialization at the official post-interleave tokenized layer. Added immutable record/manifest hashing, exact source/loss provenance, a PyTorch-only sequential iterable, a wrapper-only official training entry point, and an audit tool without modifying official source.
 - Verified 17 targeted CPU tests (5 new materialization tests plus 12 SCW preparation tests). No AutoDL/La Trobe connection, GPU, model/real-data download, Formal A, Ba, large artifact, or push occurred.
+# 2026-08-31 — SCW post-mortem and shutdown safety
+
+Persisted evidence proved the prior deterministic run failed at LucieFr repository-path discovery with zero records and then invoked the configured AutoDL shutdown finalizer. Added a default-off, reversible shutdown policy that emits `SHUTDOWN_REQUIRED_MANUAL`. No experiment, download, materializer, gate, GPU training, Formal A, or Ba was started.

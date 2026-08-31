@@ -109,3 +109,5 @@ Completed: A2 956/1024 (93.359375%) → Ba 98/1024 (9.5703125%), 83.7890625-poin
 - [x] Record the future destination-side artifact verification protocol.
 - [ ] Bb remains NOT RUN / deferred.
 - [ ] Discuss and select the next watermark reproduction; do not start it without explicit approval.
+- [ ] With separate authorization, fix and verify LucieFr authoritative Parquet path discovery for the deterministic finite-stream builder; do not start Gate/Formal A until the user requests a new run.
+- [ ] Keep `WMKD_AUTO_SHUTDOWN_ENABLED=false` until the user explicitly re-enables automatic shutdown.
