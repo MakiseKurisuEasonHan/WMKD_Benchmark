@@ -321,3 +321,7 @@ This log records consequential project decisions. It does not record routine eng
 ## 2026-09-01 — Temporarily disable all automatic shutdowns
 
 After SCW A2 completed 2500/2500 but failed at Base French generation, its terminal finalizer executed `/usr/bin/shutdown`. Automatic shutdown is now project-wide disabled until the user explicitly re-enables it. Environment requests cannot override `configs/runtime/auto_shutdown.json`; all SUCCESS, FAILED, and BLOCKED terminal states must write `SHUTDOWN_REQUIRED_MANUAL` and leave the instance running.
+
+## SCW A2 evaluation cont2 `scw_a2_eval_cont2_20260901_021640`
+
+Training remained immutable and complete. Cont1 failed at Base detector because the runtime tokenizer lacked a pad token. cont2 reused both immutable 1000-record generation files and applied runtime-only EOS-as-PAD with left padding; Base/Teacher p-values `0.9199569225311279` / `0.0`; preferred Teacher `True`. Ba was not started. Auto-shutdown remained disabled.

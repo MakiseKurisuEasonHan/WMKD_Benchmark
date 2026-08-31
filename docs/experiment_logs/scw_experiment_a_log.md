@@ -44,3 +44,7 @@ Experiment A is archived as a pre-formal official-data infrastructure attempt wi
 ## SCW A2 post-mortem — `scw_a2_full_20260831_214331`
 
 Training reached 2500/2500 and `train_end`, and the final Teacher files were saved. Evaluation stopped at Base French generation before producing records because `jpacifico/French-Alpaca-dataset-Instruct-55K` was unavailable with offline mode enabled. Fresh reload, detector, utility, preference judgement, and reporting were not completed. The terminal policy issued `/usr/bin/shutdown`; automatic shutdown is now disabled project-wide pending explicit user re-authorization.
+
+## SCW A2 evaluation cont2 `scw_a2_eval_cont2_20260901_021640`
+
+Training remained immutable and complete. Cont1 failed at Base detector because the runtime tokenizer lacked a pad token. cont2 reused both immutable 1000-record generation files and applied runtime-only EOS-as-PAD with left padding; Base/Teacher p-values `0.9199569225311279` / `0.0`; preferred Teacher `True`. Ba was not started. Auto-shutdown remained disabled.

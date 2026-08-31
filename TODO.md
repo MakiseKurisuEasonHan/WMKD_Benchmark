@@ -118,3 +118,7 @@ Completed: A2 956/1024 (93.359375%) → Ba 98/1024 (9.5703125%), 83.7890625-poin
 
 - Keep automatic shutdown disabled until explicitly re-authorized.
 - In a separately authorized turn, resolve the fixed French evaluation input offline and resume evaluation from Base generation without retraining.
+
+## SCW A2 evaluation cont2 `scw_a2_eval_cont2_20260901_021640`
+
+Training remained immutable and complete. Cont1 failed at Base detector because the runtime tokenizer lacked a pad token. cont2 reused both immutable 1000-record generation files and applied runtime-only EOS-as-PAD with left padding; Base/Teacher p-values `0.9199569225311279` / `0.0`; preferred Teacher `True`. Ba was not started. Auto-shutdown remained disabled.

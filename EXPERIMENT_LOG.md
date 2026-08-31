@@ -104,3 +104,7 @@ The first conservative cleanup attempt remains recorded as rejected before execu
 - The final Teacher was saved at `runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A`.
 - Evaluation failed before the first Base generation output: the fixed French evaluation dataset was unavailable in offline mode (`OfflineModeIsEnabled`). Detector, utility, report, and scientific preference judgement were not run.
 - The enabled terminal shutdown policy issued `/usr/bin/shutdown` after this evaluation failure. Automatic shutdown is now project-wide disabled; manual shutdown is required.
+
+## SCW A2 evaluation cont2 `scw_a2_eval_cont2_20260901_021640`
+
+Training remained immutable and complete. Cont1 failed at Base detector because the runtime tokenizer lacked a pad token. cont2 reused both immutable 1000-record generation files and applied runtime-only EOS-as-PAD with left padding; Base/Teacher p-values `0.9199569225311279` / `0.0`; preferred Teacher `True`. Ba was not started. Auto-shutdown remained disabled.

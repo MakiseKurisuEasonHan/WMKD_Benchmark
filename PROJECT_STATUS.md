@@ -89,3 +89,7 @@ SCW A is archived without a formal run or scientific result. SCW A2 domestic-dat
 ## SCW A2 recovery — 2026-09-01
 
 Formal A2 training is complete (2500/2500) and the Teacher artifact exists. Scientific evaluation is incomplete: Base French generation failed before output because its pinned dataset was not available offline. No detector or utility result exists, so `preferred_teacher` remains `NOT_EVALUATED`. Automatic shutdown is temporarily disabled project-wide.
+
+## SCW A2 evaluation cont2 `scw_a2_eval_cont2_20260901_021640`
+
+Training remained immutable and complete. Cont1 failed at Base detector because the runtime tokenizer lacked a pad token. cont2 reused both immutable 1000-record generation files and applied runtime-only EOS-as-PAD with left padding; Base/Teacher p-values `0.9199569225311279` / `0.0`; preferred Teacher `True`. Ba was not started. Auto-shutdown remained disabled.

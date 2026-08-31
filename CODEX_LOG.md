@@ -394,3 +394,7 @@ Persisted evidence proved the prior deterministic run failed at LucieFr reposito
 ## 2026-09-01 SCW A2 post-mortem
 
 Recovered persisted state after reboot. Training completed and Teacher saved; Base French generation failed because the pinned Hugging Face dataset was unavailable under offline mode. The pipeline finalizer then issued `/usr/bin/shutdown`. Added a project-level fail-closed shutdown policy and tests; no training or evaluation was restarted.
+
+## SCW A2 evaluation cont2 `scw_a2_eval_cont2_20260901_021640`
+
+Training remained immutable and complete. Cont1 failed at Base detector because the runtime tokenizer lacked a pad token. cont2 reused both immutable 1000-record generation files and applied runtime-only EOS-as-PAD with left padding; Base/Teacher p-values `0.9199569225311279` / `0.0`; preferred Teacher `True`. Ba was not started. Auto-shutdown remained disabled.
