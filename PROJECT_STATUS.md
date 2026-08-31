@@ -79,13 +79,6 @@ Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_2026082
 # 2026-08-31 SCW status
 
 SCW Experiment A is transitioning from failed exact online-stream materialization infrastructure to the disclosed `DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION`. Formal A and Ba have not started. The next authorized run builds/audits the 160k frozen local stream, runs one 4-step clean-exit gate, and starts Formal A only on gate PASS.
+# 2026-08-31 SCW recovery hold
 
-## SCW materialized orchestrator `scw_deterministic_full_20260831_213700` — 2026-08-31T12:31:33.423144+00:00
-
-- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
-- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203129`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_213700/pipeline_status.json`.
-
-## SCW materialized orchestrator `scw_deterministic_full_20260831_214200` — 2026-08-31T12:35:39.367219+00:00
-
-- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
-- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203506`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_214200/pipeline_status.json`.
+SCW Formal A never started. Deterministic run `scw_deterministic_full_20260831_214200` failed before LucieFr pool generation because authoritative Parquet path discovery returned no matching objects. Automatic AutoDL shutdown is temporarily disabled while recovery is debugged; no new orchestrator is authorized in this post-mortem turn.

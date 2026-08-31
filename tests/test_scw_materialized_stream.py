@@ -30,8 +30,10 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertIn("DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION", pipeline)
         self.assertIn('"LOCAL_MATERIALIZED_GATE"', pipeline)
         self.assertIn('"FORMAL_TRAINING"', pipeline)
-        self.assertIn('subprocess.run(["/bin/bash","/usr/bin/shutdown"])', pipeline)
-        self.assertIn('shutdown_confirmed=False', pipeline)
+        self.assertIn("apply_shutdown_policy", pipeline)
+        self.assertIn("WMKD_AUTO_SHUTDOWN_ENABLED=false", launcher)
+        policy = (ROOT / "scripts/scw_shutdown_policy.py").read_text(encoding="utf-8")
+        self.assertIn("shutdown_confirmed=False", policy)
         self.assertNotIn("os._exit", pipeline)
         trainer = (ROOT / "scripts/scw_train_materialized.py").read_text(encoding="utf-8")
         self.assertIn('expected_optimizer_steps = 4 if os.environ.get("WMKD_SCW_SPEED_TEST") == "1"', trainer)
@@ -58,6 +60,21 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertIn("no deduplication; no replacement; no synthetic duplication", builder)
         self.assertIn("not byte-identical to the official online streaming/shuffle realization", builder)
         self.assertIn('AutoTokenizer.from_pretrained(runtime["base_model"]', builder)
+
+    def test_auto_shutdown_is_disabled_for_all_terminal_states(self):
+        from scw_shutdown_policy import apply_shutdown_policy
+        with tempfile.TemporaryDirectory() as tmp:
+            for terminal_state in ("SUCCESS", "FAILED", "BLOCKED"):
+                root = Path(tmp) / terminal_state
+                root.mkdir()
+                status = {"state": terminal_state}
+                command = apply_shutdown_policy(status, root, {"WMKD_AUTO_SHUTDOWN_ENABLED": "false"})
+                self.assertIsNone(command)
+                self.assertFalse(status["auto_shutdown_enabled"])
+                self.assertFalse(status["shutdown_requested"])
+                self.assertFalse(status["shutdown_command_issued"])
+                self.assertEqual(status["shutdown_method"], "SHUTDOWN_REQUIRED_MANUAL")
+                self.assertTrue((root / "SHUTDOWN_REQUIRED_MANUAL").is_file())
 
     def test_resumable_prefetch_contract(self):
         prefetch = (ROOT / "scripts/scw_resumable_prefetch.py").read_text(encoding="utf-8")

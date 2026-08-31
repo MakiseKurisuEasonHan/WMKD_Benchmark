@@ -85,13 +85,9 @@ The first conservative cleanup attempt remains recorded as rejected before execu
 - Stopped further CDN/IP benchmarking and preserved all `.part`, verified Parquet cache, logs, provenance, and failed run directories.
 - Added deterministic PCG64 schedule, per-source source-order official preprocessing pools, final schedule assembly, manifest limitation disclosure, fail-closed audit, frozen local loader, and detached build→audit→single gate→Formal A→evaluation→report→shutdown orchestration.
 - Targeted Python 3.11 tests: 15 passed; `git diff --check`: PASS; canonical scientific YAML files unchanged.
+# 2026-08-31 — SCW deterministic run post-mortem
 
-## SCW materialized orchestrator `scw_deterministic_full_20260831_213700` — 2026-08-31T12:31:33.423144+00:00
-
-- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
-- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203129`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_213700/pipeline_status.json`.
-
-## SCW materialized orchestrator `scw_deterministic_full_20260831_214200` — 2026-08-31T12:35:39.367219+00:00
-
-- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
-- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203506`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_214200/pipeline_status.json`.
+- Run `scw_deterministic_full_20260831_214200` failed in `DETERMINISTIC_FINITE_STREAM_BUILD`, specifically before the first LucieFr record: `RuntimeError: no authoritative Parquet objects for LucieFr`.
+- Persisted outputs: LucieFr pool 0/95,828; AlpacaGPT4 pool not created; OpenWebText pool not created; final stream not created. Audit, 4-step gate, Formal A, and Ba never started.
+- The finalizer recorded `shutdown_requested=true` and `shutdown_command_issued=true`, then invoked the AutoDL shutdown wrapper. This caused the previous power-off.
+- Automatic shutdown is now temporarily disabled; SUCCESS/FAILED/BLOCKED terminal paths require manual shutdown.

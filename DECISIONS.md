@@ -306,13 +306,8 @@ This log records consequential project decisions. It does not record routine eng
 - Adopt `DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION`: NumPy `Generator(PCG64(42))` draws a fixed 160,000-label schedule with probabilities 0.6/0.2/0.2; each pinned source is extracted in repository-path/shard order through unmodified official preprocessing, then assembled according to that schedule.
 - This changes only the finite sampling realization. It is explicitly not byte-identical to the official online streaming/shuffle realization. Dataset/model revisions, labels/losses, model, optimizer, LR, batch/accumulation, sequence length, and 2500-step contract remain unchanged.
 - Historical streaming/network/cache failures and partial/verified caches remain immutable evidence. No A2 and no Ba are authorized.
+# 2026-08-31 — Temporarily disable SCW automatic AutoDL shutdown
 
-## SCW materialized orchestrator `scw_deterministic_full_20260831_213700` — 2026-08-31T12:31:33.423144+00:00
-
-- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
-- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203129`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_213700/pipeline_status.json`.
-
-## SCW materialized orchestrator `scw_deterministic_full_20260831_214200` — 2026-08-31T12:35:39.367219+00:00
-
-- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
-- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203506`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_214200/pipeline_status.json`.
+- `WMKD_AUTO_SHUTDOWN_ENABLED` now defaults to `false`; SCW terminal states write `SHUTDOWN_REQUIRED_MANUAL` and do not execute shutdown/power-off/halt/release commands.
+- This is a reversible debugging safeguard after `scw_deterministic_full_20260831_214200` automatically powered off the instance following a pre-scientific LucieFr pool-path discovery failure.
+- Re-enabling requires a new explicit user authorization and setting the environment switch to `true`. Scientific configuration is unchanged.
