@@ -30,7 +30,7 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertIn("DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION", pipeline)
         self.assertIn('"LOCAL_MATERIALIZED_GATE"', pipeline)
         self.assertIn('"FORMAL_TRAINING"', pipeline)
-        self.assertIn('subprocess.run(["/usr/bin/shutdown"])', pipeline)
+        self.assertIn('subprocess.run(["/bin/bash","/usr/bin/shutdown"])', pipeline)
         self.assertIn('shutdown_confirmed=False', pipeline)
         self.assertNotIn("os._exit", pipeline)
         trainer = (ROOT / "scripts/scw_train_materialized.py").read_text(encoding="utf-8")
@@ -57,6 +57,7 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertIn("official_preprocess", builder)
         self.assertIn("no deduplication; no replacement; no synthetic duplication", builder)
         self.assertIn("not byte-identical to the official online streaming/shuffle realization", builder)
+        self.assertIn('AutoTokenizer.from_pretrained(runtime["base_model"]', builder)
 
     def test_resumable_prefetch_contract(self):
         prefetch = (ROOT / "scripts/scw_resumable_prefetch.py").read_text(encoding="utf-8")

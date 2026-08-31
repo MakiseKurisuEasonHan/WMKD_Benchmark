@@ -104,7 +104,7 @@ def main():
     runtime=json.loads(Path(a.official_runtime_config).read_text()); ft=runtime["finetuning"]; contract=training_length_contract(ft["training_args"]["max_steps"],ft["training_args"]["gradient_accumulation_steps"],ft["training_args"]["per_device_train_batch_size"])
     values=schedule(contract["expected_consumed_examples"],42); label_counts=np.bincount(values,minlength=3).tolist()
     root=Path(a.records).parent; schedule_path=root/"source_schedule.uint8"; schedule_path.write_bytes(bytes(values))
-    tokenizer=AutoTokenizer.from_pretrained(ft["base_model"],padding_side="left"); tokenizer=add_chat_template(tokenizer) if tokenizer.chat_template is None else tokenizer
+    tokenizer=AutoTokenizer.from_pretrained(runtime["base_model"],padding_side="left"); tokenizer=add_chat_template(tokenizer) if tokenizer.chat_template is None else tokenizer
     endpoint=os.environ.get("HF_ENDPOINT","https://hf-mirror.com").rstrip("/"); api=HfApi(endpoint=endpoint); pools=[]; pool_stats={}
     for src,needed in zip(SOURCES,label_counts):
         path=root/f"pool_{src['name']}.jsonl"; pools.append(path); pool_stats[src["name"]]=build_pool(src,needed,path,tokenizer,api,endpoint,Path(a.cache_root),ft["sequence_length"])
