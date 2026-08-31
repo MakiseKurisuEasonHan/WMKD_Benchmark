@@ -64,6 +64,7 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). Remaining: **SC
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, or perform destructive cleanup without separate explicit approval.
 - Current method: SCW. Deployment and runtime-effective preflight are complete, but three bounded terminal-fix validations reproduced the post-`train_end` SIGABRT. Formal A remains NOT RUN. Do not launch 2,500 steps; the next engineering decision must test a clean supported Python runtime/environment (preferably Python 3.11) or obtain an upstream native-extension fix before another GPU run.
+- SCW materialization transport now has a verified on-demand resumable pinned-Parquet cache. The first blocked materialization run stopped at 0 records; the exact 824,184,452-byte LucieFr shard and local official-preprocessing tiny validation passed. Scientific configuration and official source remain unchanged; a new immutable detached orchestrator may proceed through materialization → audit → gate → Formal A only under existing fail-closed rules.
 - After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 
@@ -75,3 +76,6 @@ Parent training run `pnfp_exp_a2_20260828_025240` remains operationally FAILED a
 ## A2-teacher formal Ba run `pnfp_exp_ba_20260828_111148`
 
 Teacher A2 provenance: `pnfp_exp_a2_20260828_025240` + `pnfp_exp_a2_eval_20260828_105530` (956/1024 = 93.359375%). Frozen QA: 20,000 samples, SHA256 `6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72`. Base/Ba: 1/1024 (0.09765625%) / 98/1024 (9.5703125%); teacher→Ba drop 83.7890625 points; retention 10.251046%. ARC Base/A2/Ba: 0.448805461 / 0.443686007 / 0.478668942. TruthfulQA MC2 Base/A2/Ba: 0.505450760 / 0.467427921 / 0.463479842. Utility and reload gates passed. Judgement: **PN-FP is vulnerable under the tested direct-distillation setting, with strong degradation and partial retention**. The old A1-based run remains immutable FAILED.
+# 2026-08-31 SCW status
+
+SCW Experiment A is transitioning from failed exact online-stream materialization infrastructure to the disclosed `DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION`. Formal A and Ba have not started. The next authorized run builds/audits the 160k frozen local stream, runs one 4-step clean-exit gate, and starts Formal A only on gate PASS.

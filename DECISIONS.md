@@ -294,3 +294,15 @@ This log records consequential project decisions. It does not record routine eng
 - **Decision:** The fixed single-GPU contract consumes exactly 2,500 × 16 × 4 = 160,000 examples. Preserve stochastic observed source proportions; never rebalance to exact 60/20/20 or deduplicate.
 - **Decision:** The prepared wrapper/materializer/manifest/local sequential iterable is conditionally `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2, because scientific data/loss/order remain fixed and only transport changes. Official source remains unmodified.
 - **Boundary:** Local synthetic tests are necessary but not sufficient. Formal A remains blocked until a separately authorized AutoDL materialization passes immutable audit and one four-step local-materialized gate exits cleanly. Failure of exact audit changes the verdict to `MATERIALIZATION_NOT_SCIENTIFICALLY_SAFE`.
+
+## 2026-08-31 — SCW resumable pinned-Parquet cache
+
+- **Finding:** HF/datasets retried the pinned LucieFr shard from byte 0 after `IncompleteRead`; the inferred 289,899,066-byte response was not authoritative. Pinned mirror metadata identifies an 824,184,452-byte Xet object with SHA256/x-linked-etag `a78e663cfddc361d3f54e634793b9cb3b0f028e10a8d40ad523324e6bd350228`.
+- **Decision:** Use a wrapper-only, on-demand `.part` cache with `curl --continue-at -`; verify authoritative size, SHA256, Parquet footer/schema and row groups before serving the exact bytes. Cached Range reads receive local HTTP 206 semantics; uncached bounded Range probes stay bounded, while only an official full GET triggers full resumable prefetch.
+- **Boundary:** Dataset repositories, revisions, official preprocessing/interleave/loss semantics, scientific configs, and official source are unchanged. Classification is `NETWORK/CACHE INFRASTRUCTURE FIX`, not A2.
+# 2026-08-31 — SCW deterministic finite-stream sampling adaptation
+
+- SCW remains Experiment A because Formal A and the 4-step gate never started in prior infrastructure attempts.
+- Adopt `DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION`: NumPy `Generator(PCG64(42))` draws a fixed 160,000-label schedule with probabilities 0.6/0.2/0.2; each pinned source is extracted in repository-path/shard order through unmodified official preprocessing, then assembled according to that schedule.
+- This changes only the finite sampling realization. It is explicitly not byte-identical to the official online streaming/shuffle realization. Dataset/model revisions, labels/losses, model, optimizer, LR, batch/accumulation, sequence length, and 2500-step contract remain unchanged.
+- Historical streaming/network/cache failures and partial/verified caches remain immutable evidence. No A2 and no Ba are authorized.

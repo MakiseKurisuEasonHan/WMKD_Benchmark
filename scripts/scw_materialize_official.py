@@ -26,6 +26,7 @@ def main() -> None:
     parser.add_argument("--records", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--creation-code-version", required=True)
+    parser.add_argument("--tiny-validation-records", type=int)
     args = parser.parse_args()
     config = load_config(args.config)
     if os.environ.get("PYTHONHASHSEED") != str(config["training"]["pythonhashseed"]):
@@ -67,6 +68,16 @@ def main() -> None:
     if tokenizer.chat_template is None:
         tokenizer = add_chat_template(tokenizer)
     official_stream, _type_processor = load_datasets_from_config(ft, tokenizer)
+    if args.tiny_validation_records is not None:
+        if not 1 <= args.tiny_validation_records <= 32:
+            raise RuntimeError("tiny validation must contain between 1 and 32 records")
+        validation = materialize_records(official_stream, args.records, args.tiny_validation_records)
+        rows = [json.loads(line) for line in Path(args.records).read_text(encoding="utf-8").splitlines()]
+        expected_losses = {0: "watermark", 1: "anti-watermark-tv", 2: "anti-watermark-tv"}
+        if any(row["loss_type"] != expected_losses[row["label_id"]] for row in rows):
+            raise RuntimeError("tiny validation label/loss mapping mismatch")
+        print(json.dumps({"status": "TINY_VALIDATION_PASS", **validation}, indent=2))
+        return
     contract = training_length_contract(ft.training_args["max_steps"], ft.training_args["gradient_accumulation_steps"], ft.training_args["per_device_train_batch_size"])
     materialization = materialize_records(official_stream, args.records, contract["expected_consumed_examples"])
     seeds = {
