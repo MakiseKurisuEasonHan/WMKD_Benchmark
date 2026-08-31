@@ -111,3 +111,5 @@ Completed: A2 956/1024 (93.359375%) → Ba 98/1024 (9.5703125%), 83.7890625-poin
 - [ ] Discuss and select the next watermark reproduction; do not start it without explicit approval.
 - [ ] With separate authorization, fix and verify LucieFr authoritative Parquet path discovery for the deterministic finite-stream builder; do not start Gate/Formal A until the user requests a new run.
 - [ ] Keep `WMKD_AUTO_SHUTDOWN_ENABLED=false` until the user explicitly re-enables automatic shutdown.
+- [x] Freeze the SCW A2 domestic dataset protocol and build/audit the exact 80k-unique, two-pass 160k-exposure local stream.
+- [ ] Run the single SCW A2 4-step gate; start Formal A2 only on PASS and arm automatic shutdown only after optimizer step 1 proves Formal A2 started.

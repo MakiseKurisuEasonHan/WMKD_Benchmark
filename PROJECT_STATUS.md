@@ -82,3 +82,6 @@ SCW Experiment A is transitioning from failed exact online-stream materializatio
 # 2026-08-31 SCW recovery hold
 
 SCW Formal A never started. Deterministic run `scw_deterministic_full_20260831_214200` failed before LucieFr pool generation because authoritative Parquet path discovery returned no matching objects. Automatic AutoDL shutdown is temporarily disabled while recovery is debugged; no new orchestrator is authorized in this post-mortem turn.
+# 2026-08-31 SCW A2 frozen-data status
+
+SCW A is archived without a formal run or scientific result. SCW A2 domestic-data protocol is frozen with ModelScope Aya French / MS Instruct / MS OpenWebText roles. The unique 80k frozen stream and exact 160k two-pass replay audit passed. Formal A2 remains gated by one 4-step clean-exit run; Ba is not started.

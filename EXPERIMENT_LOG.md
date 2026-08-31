@@ -91,3 +91,9 @@ The first conservative cleanup attempt remains recorded as rejected before execu
 - Persisted outputs: LucieFr pool 0/95,828; AlpacaGPT4 pool not created; OpenWebText pool not created; final stream not created. Audit, 4-step gate, Formal A, and Ba never started.
 - The finalizer recorded `shutdown_requested=true` and `shutdown_command_issued=true`, then invoked the AutoDL shutdown wrapper. This caused the previous power-off.
 - Automatic shutdown is now temporarily disabled; SUCCESS/FAILED/BLOCKED terminal paths require manual shutdown.
+# 2026-08-31 — SCW A2 domestic finite-data preparation
+
+- ModelScope research fixed A2 datasets once: Aya Collection French (Role0), `wyj123456/instruct` (Role1), and `mapjack/openwebtextSample` (Role2). All resolved through `cdn-lfs-cn-1.modelscope.cn` with Range support.
+- Bounded local inputs: Aya French train shard 327,767,265 bytes/SHA256 `35c6904...60429`; instruction complete-line 64 MiB prefix 58,925 rows; OpenWebText Arrow shard 503,524,200 bytes/SHA256 `669ceafd...7d858`.
+- Built frozen stream `scw_a2_frozen80k_20260831_230200`: exact role counts 47,773/16,291/15,936; stream SHA256 `4763b08342493bedacd1753e297e0e081568906c0bade310e2d79e1783cd35cd`.
+- Audit PASS: 80,000 unique identities, schedule/hash/order/source/loss checks, exact one-pass 80k loader and exact two-pass 160k formal exposure replay. Formal A2 and Ba have not started at this preparation record.

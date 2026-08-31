@@ -153,6 +153,11 @@ def iter_materialized_records(path: str | Path, expected_manifest: dict[str, Any
     with records_path.open(encoding="utf-8") as handle:
         for count, line in enumerate(handle, 1):
             stored = json.loads(line)
+            if expected_manifest and expected_manifest.get("adaptation") == "SCW_A2_WMKD_DOMESTIC_DATA_80K_UNIQUE_TWO_PASS":
+                if stored.get("global_index") != count - 1 or stored.get("official_label") != stored.get("source_schedule_label"):
+                    raise ValueError(f"A2 index/schedule mismatch at {count - 1}")
+                yield {"input_ids": stored["input_ids"], "attention_mask": stored["attention_mask"], "labels": stored["official_label"]}
+                continue
             if expected_manifest and expected_manifest.get("adaptation") == "DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION":
                 if stored.get("global_index") != count - 1 or stored.get("official_label") != stored.get("source_schedule_label"):
                     raise ValueError(f"deterministic finite-stream index/schedule mismatch at {count - 1}")
@@ -170,6 +175,8 @@ def iter_materialized_records(path: str | Path, expected_manifest: dict[str, Any
 
 
 def audit_materialized(records_path: str | Path, manifest: dict[str, Any]) -> dict[str, Any]:
+    if manifest.get("adaptation") == "SCW_A2_WMKD_DOMESTIC_DATA_80K_UNIQUE_TWO_PASS":
+        return audit_a2_frozen80k(records_path, manifest)
     if manifest.get("adaptation") == "DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION":
         return audit_deterministic_finite_stream(records_path, manifest)
     counts: Counter[str] = Counter()
@@ -194,6 +201,25 @@ def audit_materialized(records_path: str | Path, manifest: dict[str, Any]) -> di
         "training_length_contract": total == manifest["training_length_contract"]["expected_consumed_examples"],
     }
     return {"status": "PASS" if all(checks.values()) else "FAIL", "checks": checks}
+
+
+def audit_a2_frozen80k(records_path: str | Path, manifest: dict[str, Any]) -> dict[str, Any]:
+    schedule=list(Path(manifest["source_schedule_path"]).read_bytes()); expected_names=("AyaFrench","MSInstruct","MSOpenWebText"); expected_losses=("watermark","anti-watermark-tv","anti-watermark-tv")
+    counts=Counter(); local=Counter(); identities=set(); digest=hashlib.sha256(); total=0; valid=True
+    with Path(records_path).open(encoding="utf-8") as handle:
+        for total,line in enumerate(handle,1):
+            row=json.loads(line); index=total-1
+            if index>=len(schedule): valid=False; break
+            role=schedule[index]
+            if row.get("global_index")!=index or row.get("source_schedule_label")!=role or row.get("official_label")!=role or row.get("source_local_index")!=local[role]: valid=False; break
+            if row.get("source_dataset")!=expected_names[role] or row.get("loss_type")!=expected_losses[role] or row.get("lambda")!=1: valid=False; break
+            ids=row.get("input_ids"); mask=row.get("attention_mask"); identity=(role,canonical_json(row.get("source_identity")))
+            if not isinstance(ids,list) or len(ids)!=512 or len(mask)!=512 or identity in identities: valid=False; break
+            payload={k:row[k] for k in ("input_ids","attention_mask","official_label","source_dataset","loss_type","lambda","source_identity")}; content=sha256_bytes(canonical_json(payload).encode())
+            if content!=row.get("content_sha256"): valid=False; break
+            identities.add(identity); digest.update(bytes.fromhex(content)); counts[expected_names[role]]+=1; local[role]+=1
+    checks={"record_content":valid,"record_count":total==80000==manifest["unique_record_count"],"unique_identity_count":len(identities)==80000,"global_indices_and_schedule_replay":valid and total==len(schedule),"schedule_sha256":file_sha256(manifest["source_schedule_path"])==manifest["source_schedule_sha256"],"source_counts":dict(counts)==manifest["source_counts"],"file_sha256":file_sha256(records_path)==manifest["records_file_sha256"],"ordered_digest":digest.hexdigest()==manifest["canonical_content_digest"],"formal_exposure_contract":manifest["replay_passes"]*total==manifest["formal_exposure_target"]==manifest["training_length_contract"]["expected_consumed_examples"],"no_artificial_duplicate_filling":manifest["duplicates_policy"].startswith("no artificial")}
+    return {"status":"PASS" if all(checks.values()) else "FAIL","checks":checks}
 
 
 def audit_deterministic_finite_stream(records_path: str | Path, manifest: dict[str, Any]) -> dict[str, Any]:
