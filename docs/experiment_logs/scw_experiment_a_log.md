@@ -34,3 +34,8 @@
 - Pinned official-code audit established that LucieFr/OpenWebText are tokenized and packed and AlpacaGPT4 is formatted/filtered/chat-tokenized before per-source hash-seeded shuffle, label assignment, and probabilistic `all_exhausted` interleave. Therefore exact materialization must freeze post-interleave tokenized examples, not raw rows and not a map-style reconstruction.
 - Formal length contract is 2,500 optimizer steps × 16 accumulation × batch 4 = 40,000 microbatches and exactly 160,000 examples. Observed finite-stream proportions remain stochastic; duplicates remain untouched.
 - Added local materializer/manifest/audit/sequential-loader/formal-wrapper code and synthetic equivalence tests. Classification is conditionally `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2. Real materialization and the four-step local-materialized gate remain NOT RUN and require separate AutoDL authorization. Ba remains NOT RUN.
+
+## SCW materialized orchestrator `scw_deterministic_full_20260831_213700` — 2026-08-31T12:31:33.423144+00:00
+
+- State `FAILED`; stage `DETERMINISTIC_FINITE_STREAM_BUILD`; Formal A started `False`; Ba `False`.
+- Materialization `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/materialized_stream/scw_materialized_20260831_203129`; status `/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/orchestrators/scw_deterministic_full_20260831_213700/pipeline_status.json`.
