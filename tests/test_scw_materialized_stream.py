@@ -87,6 +87,10 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertEqual([d["id"] for d in config["datasets"]], ["CohereForAI/aya_collection_language_split", "wyj123456/instruct", "mapjack/openwebtextSample"])
         loader = (ROOT / "scripts/scw_materialized_loader.py").read_text(encoding="utf-8")
         self.assertIn('passes = manifest.get("replay_passes", 1)', loader)
+        gate = (ROOT / "scripts/scw_a2_run_gate.py").read_text(encoding="utf-8")
+        self.assertIn('"WMKD_AUTO_SHUTDOWN_ENABLED":"false"', gate)
+        self.assertIn('"optimizer_steps_4"', gate)
+        self.assertNotIn('/usr/bin/shutdown', gate)
 
     def test_resumable_prefetch_contract(self):
         prefetch = (ROOT / "scripts/scw_resumable_prefetch.py").read_text(encoding="utf-8")
