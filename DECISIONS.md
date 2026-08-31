@@ -311,3 +311,9 @@ This log records consequential project decisions. It does not record routine eng
 - `WMKD_AUTO_SHUTDOWN_ENABLED` now defaults to `false`; SCW terminal states write `SHUTDOWN_REQUIRED_MANUAL` and do not execute shutdown/power-off/halt/release commands.
 - This is a reversible debugging safeguard after `scw_deterministic_full_20260831_214200` automatically powered off the instance following a pre-scientific LucieFr pool-path discovery failure.
 - Re-enabling requires a new explicit user authorization and setting the environment switch to `true`. Scientific configuration is unchanged.
+# 2026-08-31 — Freeze SCW Experiment A2 domestic-data 80k protocol
+
+- Archive SCW A as an official-data/strict-pipeline reproduction attempt: Formal A never started and no scientific result was established; failures were infrastructure/data-access failures, not evidence against SCW.
+- SCW A2 is a WMKD-adapted domestic-data idea reproduction with two declared adaptations: functional-role ModelScope dataset replacements and an 80,000-unique frozen pool replayed in the same order twice for 160,000 formal exposures.
+- Freeze Role0 `CohereForAI/aya_collection_language_split` French subset (`inputs + targets` as French text), Role1 `wyj123456/instruct` (`prompt/completion` chat adapter), and Role2 `mapjack/openwebtextSample` (`text`). Do not change datasets based on outcome.
+- PCG64(42), length 80,000 gives fixed role counts 47,773 / 16,291 / 15,936. Pre-formal auto-shutdown remains false; only a formal A2 run proven to reach optimizer step 1 may arm post-formal pipeline shutdown.

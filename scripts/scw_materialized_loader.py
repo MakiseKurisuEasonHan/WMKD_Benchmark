@@ -10,7 +10,7 @@ from scw_materialized_stream import file_sha256, iter_materialized_records
 
 def load_manifest(path: str | Path) -> dict:
     manifest = json.loads(Path(path).read_text(encoding="utf-8"))
-    if manifest.get("adaptation") not in {"RUNTIME_DATA_ACCESS_ADAPTATION", "DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION"}:
+    if manifest.get("adaptation") not in {"RUNTIME_DATA_ACCESS_ADAPTATION", "DETERMINISTIC_FINITE_STREAM_SAMPLING_ADAPTATION", "SCW_A2_WMKD_DOMESTIC_DATA_80K_UNIQUE_TWO_PASS"}:
         raise ValueError("unexpected SCW materialization classification")
     return manifest
 
@@ -26,6 +26,8 @@ def make_torch_iterable_dataset(records_path: str | Path, manifest_path: str | P
 
     class FrozenSCWStream(IterableDataset):
         def __iter__(self):
-            return iter_materialized_records(records, manifest)
+            passes = manifest.get("replay_passes", 1)
+            for _pass_index in range(passes):
+                yield from iter_materialized_records(records, manifest)
 
     return FrozenSCWStream()

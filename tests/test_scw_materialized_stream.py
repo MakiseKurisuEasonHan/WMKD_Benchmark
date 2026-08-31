@@ -76,6 +76,18 @@ class MaterializedStreamTests(unittest.TestCase):
                 self.assertEqual(status["shutdown_method"], "SHUTDOWN_REQUIRED_MANUAL")
                 self.assertTrue((root / "SHUTDOWN_REQUIRED_MANUAL").is_file())
 
+    def test_a2_domestic_80k_contract_is_explicit(self):
+        config = json.loads((ROOT / "configs/watermark/scw_experiment_a2.yaml").read_text(encoding="utf-8"))
+        self.assertEqual(config["schedule"]["expected_counts"], [47773, 16291, 15936])
+        self.assertEqual(config["training"]["unique_records"], 80000)
+        self.assertEqual(config["training"]["formal_exposures"], 160000)
+        self.assertEqual(config["training"]["replay_passes"], 2)
+        self.assertFalse(config["auto_shutdown"]["pre_formal"])
+        self.assertTrue(config["auto_shutdown"]["after_formal_a2_started"])
+        self.assertEqual([d["id"] for d in config["datasets"]], ["CohereForAI/aya_collection_language_split", "wyj123456/instruct", "mapjack/openwebtextSample"])
+        loader = (ROOT / "scripts/scw_materialized_loader.py").read_text(encoding="utf-8")
+        self.assertIn('passes = manifest.get("replay_passes", 1)', loader)
+
     def test_resumable_prefetch_contract(self):
         prefetch = (ROOT / "scripts/scw_resumable_prefetch.py").read_text(encoding="utf-8")
         self.assertIn('"--continue-at", "-"', prefetch)
