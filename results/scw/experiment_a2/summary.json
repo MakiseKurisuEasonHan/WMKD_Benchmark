@@ -2,7 +2,7 @@
   "status": "COMPLETED",
   "experiment": "SCW A2",
   "evaluation_cont1": "FAILED_AT_BASE_DETECTOR",
-  "evaluation_cont2": "COMPLETE",
+  "evaluation_cont2": "COMPLETED",
   "evaluation_continuation": "cont2",
   "training_status": "COMPLETED",
   "training_run": "scw_a2_20260831_214339",
@@ -2304,15 +2304,71 @@
     "ordinary": true,
     "french": true
   },
-  "preferred_teacher": true,
+  "preferred_teacher": "YES",
   "ba_started": false,
   "scientific_judgement": "SCW core method/idea reproduction successful under the WMKD A2 adapted domestic-data and 80k-unique-pool setting on the canonical Llama-3.2-3B-Instruct backbone.",
   "limitations": [
-    "not an exact official-data or full-paper reproduction",
-    "three training datasets were replaced",
-    "80k unique pool used two deterministic passes",
-    "original A strict-pipeline failure",
-    "cont1 detector padding-infrastructure failure",
-    "cont2 reused immutable cont1 generation artifacts"
-  ]
+    "not an exact SCW reproduction or full-paper reproduction",
+    "strict A official-data attempt never reached Formal training and established no scientific result",
+    "A2 used domestically accessible replacement datasets",
+    "A2 used an 80k unique pool and deterministic two-pass replay to 160k exposures",
+    "cont1 failed before detector science because the runtime tokenizer had no pad token",
+    "cont2 reused immutable generations and applied runtime-only EOS-as-PAD with unchanged vocabulary and weights"
+  ],
+  "scientific_status": "REPRODUCTION_SUCCESSFUL",
+  "report_summary_cont3": "COMPLETED",
+  "preferred_teacher_bool": true,
+  "training_metrics": {
+    "optimizer_steps": 2500,
+    "exit_code": 0,
+    "train_end": true,
+    "duration_seconds": 11570.9348,
+    "final_logged_loss": 3.3589,
+    "aggregate_train_loss": 5.2890466034,
+    "final_learning_rate": 9.7477558e-12,
+    "final_grad_norm": 12.75
+  },
+  "strict_a": {
+    "formal_training": "NEVER_STARTED",
+    "scientific_result": "NOT_ESTABLISHED",
+    "classification": "PRE_FORMAL_INFRASTRUCTURE_ATTEMPT"
+  },
+  "a2_adaptation": {
+    "unique_records": 80000,
+    "formal_exposures": 160000,
+    "schedule": "NumPy Generator(PCG64), seed 42, deterministic two-pass replay",
+    "role_probabilities": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "role_counts": [
+      47773,
+      16291,
+      15936
+    ],
+    "datasets": [
+      "CohereForAI/aya_collection_language_split (French)",
+      "wyj123456/instruct",
+      "mapjack/openwebtextSample"
+    ]
+  },
+  "generation": {
+    "base_records": 1000,
+    "teacher_records": 1000,
+    "errors": 0,
+    "fresh_process_reload": "PASS"
+  },
+  "french_eval": {
+    "dataset": "jpacifico/French-Alpaca-dataset-Instruct-55K",
+    "revision": "c13216a7a935baf62fb81efc56eed1739b222d2f",
+    "selection": "source-order 0-999",
+    "frozen1000_sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d",
+    "manifest_sha256": "e178179e8d46bdc8c555f820ca027c5eddf813d3db4b6b0467deb830305e8f28"
+  },
+  "teacher_artifact": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A",
+    "status": "COMPLETE",
+    "manifest_sha256": "27f68ea443ca1dbc9f02036ac560a12db5cb063ceec589a0144be5586da97b7b"
+  }
 }

@@ -44,12 +44,3 @@ Experiment A is archived as a pre-formal official-data infrastructure attempt wi
 ## SCW A2 post-mortem — `scw_a2_full_20260831_214331`
 
 Training reached 2500/2500 and `train_end`, and the final Teacher files were saved. Evaluation stopped at Base French generation before producing records because `jpacifico/French-Alpaca-dataset-Instruct-55K` was unavailable with offline mode enabled. Fresh reload, detector, utility, preference judgement, and reporting were not completed. The terminal policy issued `/usr/bin/shutdown`; automatic shutdown is now disabled project-wide pending explicit user re-authorization.
-
-## SCW A2 evaluation cont2 `scw_a2_eval_cont2_20260901_021640`
-
-Training remained immutable and complete. Cont1 failed at Base detector because the runtime tokenizer lacked a pad token. cont2 reused both immutable 1000-record generation files and applied runtime-only EOS-as-PAD with left padding; Base/Teacher p-values `0.9199569225311279` / `0.0`; preferred Teacher `True`. Ba was not started. Auto-shutdown remained disabled.
-
-## SCW A2 final closure — report/summary cont3
-
-<!-- SCW_A2_FINAL_CLOSURE_CONT3_20260901 -->
-Strict A remains a pre-formal infrastructure attempt: Formal training never started and no scientific result was established. A2 run `scw_a2_20260831_214339` completed 2500/2500 and produced the immutable Teacher. Cont1 preserved Base/Teacher 1000-record generations but failed at detector padding infrastructure. Cont2 applied runtime-only left EOS-as-PAD and completed evaluation: Base/Teacher primary p-values `0.9199569225311279 / 0.0`, ARC `0.4505119454 / 0.4488054608`, TruthfulQA MC2 `0.5051617516 / 0.5032315125`, ordinary/French sanity PASS/PASS, and preferred Teacher **YES**. The bounded conclusion is successful SCW core method/idea reproduction under the adapted domestic-data, 80k-pool, deterministic two-pass A2 setting—not exact or full-paper reproduction. Ba remains NOT STARTED. Next step: separately archive the final Teacher to ModelScope, verify the archive, then discuss Ba without starting it automatically.
