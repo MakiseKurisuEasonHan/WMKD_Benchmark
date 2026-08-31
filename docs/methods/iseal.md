@@ -25,11 +25,13 @@ Pinned `superglue/src/training/train_iseal.py` initializes adapter `delta`, `A`,
 ## Completed WMKD lineage
 
 - A: formal training NOT STARTED; pinned public-code exact-zero adapter trainability gate blocked launch.
-- A2: initialization repair produced strong registered detection but degraded utility; not preferred.
-- A3: adapter-only semantics recovered utility but fingerprint signal was weak; not preferred.
-- A4: increased to 100 registered fingerprints and improved signal; not preferred.
-- A5: increased `inner_dim` to 128 and achieved 66/100; Teacher decision was explicitly reserved.
-- A6: increased to 200 registered fingerprints, achieved 179/200, and became preferred Teacher; held-out plaintext generalization remained unestablished.
-- Ba: generation `iseal_ba_generation_20260830_134058` froze exactly 20,000 Teacher QA and Student `iseal_ba_20260830_165442` completed standardized direct distillation. Registered success fell to 0/200, matching Base, while tested utility remained functional and fresh reload passed.
+- A2: repaired delta/A to small random values with B zero while retaining the official trainable `lm_head`. Trainability passed through continuation, but tied input embedding/`lm_head` caused the approximately 394M-parameter tied matrix to train. Registered 10/10, held-out 0/100, ordinary 8/10, and ARC materially degraded; not preferred.
+- A3: froze the tied embedding/head and used adapter-only training, 10 fingerprints, `inner_dim=16`. Utility recovered and ordinary generation was 10/10, but registered threshold success was 0/10; not preferred.
+- A4: changed only registered fingerprints 10→100 at `inner_dim=16`; registered success was 15/100 and utility remained healthy; not preferred.
+- A5: changed only `inner_dim` 16→128 using released alternative `embed_adapter` provenance (not a paper mandate); registered success was 66/100 and utility remained healthy. The historical Teacher decision was later resolved by A6.
+- A6: changed only registered fingerprints 100→200 at `inner_dim=128`. Run `iseal_a6_20260830_132300` achieved Base/Teacher 0/200 versus 179/200, mean Teacher BLEU 69.171651, historical 86/100 and 9/10, held-out 0/100, ARC 0.389932, TruthfulQA 0.477828, ordinary 10/10, and fresh reload PASS; it became preferred Teacher. Held-out plaintext generalization remained unestablished.
+- Ba: generation `iseal_ba_generation_20260830_134058` produced 32,006 raw, 1,849 errors, 367 empty, 10,464 duplicate, 10,831 deterministic rejected, and 21,175 unique records; exactly 20,000 were frozen. Canonical dataset digest `d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf` is distinct from physical-file SHA256 `04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc`. Fresh-canonical full-parameter Student `iseal_ba_20260830_165442` completed 7,500 steps with average loss 0.5161768. Registered Base/Teacher/Student was 0/200, 179/200, 0/200 with mean BLEU 2.332514/69.171651/2.589326; 0% means fixed registered-secret BLEU@50 thresholded-success retention only. ARC was 0.447099/0.389932/0.481229, TruthfulQA 0.505645/0.477828/0.449818, ordinary 10/10 all, fresh reload PASS.
 
 iSeal is FULLY CLOSED. Bb and A7 are NOT RUN. Private Teacher/Student archives passed remote metadata verification and remain `destination_verified=false` pending future independent destination SHA256 verification.
+
+Cleanup first stopped before deletion under destructive review. After separate explicit authorization, exact-path deletion removed only A2-A5 non-preferred Teachers and Ba `checkpoint-7500`, approximately 47.43 GB, then verified A6 Teacher, Ba final Student, frozen20k, canonical base, manifests, shared infrastructure, and other-watermark artifacts remained protected.

@@ -354,3 +354,11 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - First smoke `iseal_trainability_20260830_045232` failed before model load/optimizer steps because AutoDL could not reach `huggingface.co`. A new immutable smoke used `hf-mirror.com` transport to resolve the same upstream AG News dataset (120,000 train, 7,600 test).
 - Completed `iseal_trainability_20260830_045431`: adapter delta/A/B gradients and updates were all zero across two steps. The full tied 394,002,432-parameter original-embedding/`lm_head` matrix had gradients `195.003445/381.784871` and delta norm `6.019554`.
 - Enforced the predeclared stop gate: formal iSeal A, fingerprint metrics, utility, fresh reload, Teacher creation, Ba, ModelScope, and cleanup did not start. Recorded `preferred_teacher=NO`, `ready_for_ba=NO`, and the required explicit scientific decision before any initialization/trainable/tied-weight modification.
+
+## 2026-08-31 — Fixed-rule audit after iSeal closure
+
+- Audited only the local WMKD_Benchmark checkout: canonical protocol, root status/decision/TODO/log files, method records, storage/archive rules, configs, scripts, tests, reports, and machine-readable iSeal closure records. No AutoDL, La Trobe, ModelScope, GPU, download, SCW source, or artifact cleanup was accessed.
+- Retained `docs/EXPERIMENT_PROTOCOL.md` as the single canonical rules source and added the complete iSeal A→A6→Ba lineage, registered-versus-held-out semantics, canonical-versus-physical dataset hashes, archive manifests, trainability/tied-weight lessons, cross-method detector-unit rule, and the final authorized exact-path cleanup outcome.
+- Corrected current-facing AutoDL state to the 22-vCPU/110-GB/approximately-500-GB pay-as-you-go instance while preserving older 208-vCPU/approximately-1-TiB statements only as historical provenance.
+- Corrected SCW from an old “fourth watermark” label to the fixed fifth watermark and next discussion target. No clone, download, configuration, or Experiment A was authorized or started.
+- Updated the current experiment index so A5's resolved historical Teacher decision and A6's completed Ba successor no longer appear as live blockers. Preserved every scientific metric and immutable historical failure/continuation record.

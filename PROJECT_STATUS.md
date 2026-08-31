@@ -20,7 +20,7 @@ The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.
 
 The durable benchmark default is a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Every method's Ba must use that method's own preferred teacher to generate its own answers; another watermark's teacher, QA, frozen 20k, or student must never be reused. Students always start from fresh canonical unwatermarked weights. Any method-specific backbone or Ba deviation requires a recorded blocker and explicit user approval.
 
-Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). The canonical Llama remains preserved. The latest observed AutoDL baseline is RTX PRO 6000 Blackwell (97,887 MiB), 208 container-visible vCPUs, approximately 1.0 TiB RAM, and approximately 1 TiB data disk.
+Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). Remaining: **SCW, LLMPrint, REEF**. The fifth watermark and next discussion target is **SCW**, but SCW has not been cloned, downloaded, configured, or started. The canonical Llama remains preserved. The current AutoDL operational baseline is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, RTX PRO 6000 96 GB ×1, Intel Xeon Platinum 8470Q with 22 vCPUs, 110 GB RAM, 30 GB system disk, and approximately 500 GB data capacity (50 GB free + 450 GB paid). The instance is currently pay-as-you-go; this operational state is not scientific protocol. Older 208-vCPU/approximately-1-TiB records are historical.
 
 ## Completed
 
@@ -61,7 +61,7 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). The canonical L
 ## Next step
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, switch methods, or perform destructive cleanup without separate explicit approval.
-- Current blocker: NONE. Remaining methods are SCW, LLMPrint, and REEF; the next scientific task is to select/start the fifth watermark, but it has not been started.
+- Current blocker: NONE. Remaining methods are SCW, LLMPrint, and REEF. The next allowed scientific step is discussion of SCW Experiment A after a new explicit prompt; this audit does not authorize cloning, downloading, configuring, or starting SCW.
 - After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 

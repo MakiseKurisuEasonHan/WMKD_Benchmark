@@ -22,7 +22,9 @@ No Python/ML environment was created during infrastructure initialization. Those
 
 ## Current formal environment and hardware baseline
 
-The latest durable benchmark baseline actually observed during EverTracer is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, one RTX PRO 6000 Blackwell GPU with 97,887 MiB VRAM, Intel Xeon Platinum 8470Q with 208 container-visible vCPUs, and approximately 1.0 TiB RAM. The system disk is 30 GiB and the data disk is approximately 1 TiB. After EverTracer closure cleanup, approximately 35 GiB was used and approximately 966 GiB was free. Method-specific environment deviations must be recorded rather than silently replacing this baseline. Older 22-vCPU/110-GB observations describe an earlier rental instance and remain valid only in their historical logs.
+The current durable benchmark baseline is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, one RTX PRO 6000 96 GB GPU, Intel Xeon Platinum 8470Q with 22 vCPUs, and 110 GB RAM. The system disk is 30 GB. Current data capacity is approximately 500 GB: 50 GB free storage plus 450 GB paid storage. Method-specific environment deviations must be recorded rather than silently replacing this baseline. Older records of 208 container-visible vCPUs, approximately 1 TiB RAM, and an approximately 1 TiB data disk describe a previous instance and remain valid only as historical observations.
+
+The current instance is pay-as-you-go rather than a weekly package. It may be shut down when idle to save GPU charges, but shutdown releases the GPU allocation and later stock may be unavailable. Paid storage may continue charging while powered off. Billing is operational state, never a reason to reduce scientific completeness or bypass the cleanup protocol.
 
 All models, datasets, checkpoints, caches, generations, run outputs, and other large artifacts belong under `/root/autodl-tmp/WMKD_Benchmark_data`; never place them on or fill the system disk.
 

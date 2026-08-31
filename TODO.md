@@ -25,7 +25,7 @@
 - [ ] Perform destination-side full SHA256 only during a future real download on another machine.
 - [x] Complete the authorized EverTracer closure and protected cleanup; reclaim 77.958 GiB while preserving every protected artifact.
 - [ ] EverTracer Bb remains NOT RUN / deferred.
-- [ ] Discuss SCW as the fourth watermark Experiment A after closure; do not download or start it automatically.
+- [ ] Discuss SCW as the fifth watermark Experiment A after explicit authorization; do not clone, download, configure, or start it automatically.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.
@@ -68,7 +68,7 @@
 - [ ] Analyze the PN-FP Ba result further only if an additional scientific question is approved.
 - [x] Upload the A2 canonical teacher to private ModelScope with immutable source/upload checks; destination-side verification remains a future transfer-stage gate.
 - [ ] Decide whether and when to authorize PN-FP Bb; do not start Bb, UP, or Dipper without explicit approval.
-- [ ] Move to the next watermark method when selected by the user.
+- [ ] Discuss SCW Experiment A only after a new explicit user/ChatGPT prompt; it is the fixed fifth watermark and has not started.
 - [ ] Define dependency-management and environment-reproduction conventions.
 - [ ] Define storage and synchronization policies for future large artifacts.
 - [ ] Add method-specific reproducibility instructions after research decisions are approved.
