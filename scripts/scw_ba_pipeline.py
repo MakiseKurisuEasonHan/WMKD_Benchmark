@@ -1,6 +1,6 @@
 """Immutable detached end-to-end SCW Ba direct-distillation orchestrator."""
 from __future__ import annotations
-import argparse, datetime as dt, hashlib, json, os, re, subprocess, traceback
+import argparse, datetime as dt, hashlib, json, os, re, shutil, subprocess, traceback
 from pathlib import Path
 
 P=Path("/root/autodl-tmp/WMKD_Benchmark"); D=Path("/root/autodl-tmp/WMKD_Benchmark_data")
@@ -17,9 +17,10 @@ def french_label(text):
     return "fr" if score>=2 else "non_fr"
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("--run-id",required=True); a=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument("--run-id",required=True); ap.add_argument("--resume-from"); a=ap.parse_args()
     cfg=json.loads((P/"configs/distillation/scw_ba_direct.yaml").read_text()); root=D/"runs/scw/ba"/a.run_id; root.mkdir(parents=True,exist_ok=False)
     status={"run_id":a.run_id,"pid":os.getpid(),"ppid":os.getppid(),"state":"RUNNING","stage":"PREFLIGHT","started_at":now(),"scientific_status":"BA_IN_PROGRESS","training_status":"NOT_STARTED","evaluation_status":"NOT_STARTED","preferred_teacher":"YES","formal_student_training_started":False,"auto_evaluation":True,"auto_report":True,"auto_shutdown_enabled":False,"shutdown_requested":False,"shutdown_command_issued":False,"ba_started":True,"terminal":False,"stages":{}}
+    (root/"metrics").mkdir(parents=True,exist_ok=True)
     sp=root/"pipeline_status.json"; write(sp,status); env=os.environ.copy(); env.update({"PYTHONHASHSEED":"42","HF_HUB_OFFLINE":"1","HF_DATASETS_OFFLINE":"1","TRANSFORMERS_OFFLINE":"1","WMKD_AUTO_SHUTDOWN_ENABLED":"false"}); py=cfg["runtime"]["python"]
     def update(**kw): status.update(kw); status["updated_at"]=now(); write(sp,status)
     def run(stage,cmd):
@@ -33,6 +34,13 @@ def main():
         if sha(manifest)!=cfg["teacher"]["manifest_sha256"] or sha(french)!=cfg["evaluation"]["frozen1000_sha256"]: raise RuntimeError("immutable input hash mismatch")
         if not (teacher/"config.json").is_file() or not (base/"config.json").is_file(): raise RuntimeError("Teacher/Base missing")
         raw=root/"dataset/raw_candidates.jsonl"; errors=root/"dataset/generation_errors.jsonl"; target=cfg["dataset"]["candidate_samples"]
+        if a.resume_from:
+            parent=Path(a.resume_from); parent_status=json.loads((parent/"pipeline_status.json").read_text())
+            if parent_status.get("formal_student_training_started") or parent_status.get("training_status")!="NOT_STARTED": raise RuntimeError("continuation parent crossed Student-training boundary")
+            for name in ("raw_candidates.jsonl","generation_errors.jsonl"):
+                source=parent/"dataset"/name
+                if source.exists(): (root/"dataset").mkdir(parents=True,exist_ok=True); shutil.copy2(source,root/"dataset"/name)
+            update(parent_run_id=parent.name,resume_copied_raw=line_count(raw),resume_copied_errors=line_count(errors),resume_semantics="max(raw+errors prompt_index)+1")
         while True:
             run("TEACHER_GENERATION",[py,str(P/"scripts/generate_teacher_qa_formal.py"),"--model-path",str(teacher),"--teacher-run-id",cfg["teacher"]["run_id"],"--output",str(raw),"--errors",str(errors),"--target-candidates",str(target),"--batch-size","8","--records-per-prompt","4","--seed","42","--max-total-calls","20000","--telemetry",str(root/"metrics/generation_telemetry.json")])
             provenance=root/"dataset/provenance.json"; write(provenance,{"teacher":cfg["teacher"],"prompt_protocol":cfg["dataset"]["prompt_protocol"],"generation":cfg["dataset"]["generation"],"raw_count":line_count(raw),"error_count":line_count(errors)})
