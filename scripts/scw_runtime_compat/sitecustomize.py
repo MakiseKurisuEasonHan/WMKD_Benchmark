@@ -14,6 +14,7 @@ from pathlib import Path
 
 _MIRROR = os.environ.get("WMKD_SCW_HF_MIRROR", "").rstrip("/")
 _UPSTREAM = "https://huggingface.co"
+_network_audit_path = os.environ.get("WMKD_SCW_NETWORK_AUDIT")
 _REVISIONS = {
     "OpenLLM-France/Lucie-Training-Dataset": "8d50ff7cfce1a2db7cc5a1ef37d73f5f455f8ad1",
     "vicgalle/alpaca-gpt4": "f7e3ded725cb81e8e564e32feb12860f376f2b51",
@@ -34,7 +35,15 @@ if _MIRROR:
     _request = requests.sessions.Session.request
 
     def _mirror_request(self, method, url, *args, **kwargs):
-        response = _request(self, method, _rewrite(str(url)), *args, **kwargs)
+        rewritten_url = _rewrite(str(url))
+        if rewritten_url.startswith(_UPSTREAM + "/"):
+            raise RuntimeError(f"HF mirror leak blocked before request: {rewritten_url}")
+        if _network_audit_path:
+            audit = Path(_network_audit_path)
+            audit.parent.mkdir(parents=True, exist_ok=True)
+            with audit.open("a", encoding="utf-8") as handle:
+                handle.write(json.dumps({"method": str(method), "requested_url": str(url), "final_url": rewritten_url}, sort_keys=True) + "\n")
+        response = _request(self, method, rewritten_url, *args, **kwargs)
         for key in ("location", "link"):
             if key in response.headers:
                 response.headers[key] = _rewrite(response.headers[key])

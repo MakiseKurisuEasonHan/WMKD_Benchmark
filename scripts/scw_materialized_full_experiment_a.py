@@ -38,7 +38,8 @@ def main():
   status["migration_integrity"]="PASS"; write(root/"pipeline_status.json",status)
   mat_id="scw_materialized_"+datetime.datetime.now().strftime("%Y%m%d_%H%M%S"); mat=D/"runs/scw/materialized_stream"/mat_id; mat.mkdir(parents=True,exist_ok=False)
   records=mat/"training_stream.jsonl"; manifest=mat/"manifest.json"; audit_path=mat/"audit.json"; status.update(materialization_run_id=mat_id,materialization_namespace=str(mat),expected_records=160000); write(root/"pipeline_status.json",status)
-  run("MATERIALIZATION",[sys.executable,str(P/"scripts/scw_materialize_official.py"),"--config",str(CFG),"--official-runtime-config",str(OFF),"--official-source",str(SRC),"--records",str(records),"--manifest",str(manifest),"--creation-code-version",subprocess.check_output(["git","-C",str(P),"rev-parse","HEAD"],text=True).strip()],status,root,env,cwd=mat)
+  menv=env.copy(); menv.update({"PYTHONPATH":str(P/"scripts/scw_runtime_compat")+os.pathsep+str(P/"scripts")+os.pathsep+str(SRC/"src"),"WMKD_SCW_HF_MIRROR":env["HF_ENDPOINT"],"WMKD_SCW_NETWORK_AUDIT":str(mat/"network_requests.jsonl")})
+  run("MATERIALIZATION",[sys.executable,str(P/"scripts/scw_materialize_official.py"),"--config",str(CFG),"--official-runtime-config",str(OFF),"--official-source",str(SRC),"--records",str(records),"--manifest",str(manifest),"--creation-code-version",subprocess.check_output(["git","-C",str(P),"rev-parse","HEAD"],text=True).strip()],status,root,menv,cwd=mat)
   from scw_materialized_stream import audit_materialized,iter_materialized_records
   m=json.loads(manifest.read_text()); audit=audit_materialized(records,m); replay=sum(1 for _ in iter_materialized_records(records,m)); audit["local_loader_replay_count"]=replay; audit["local_loader_replay_exact"]=(replay==160000)
   if audit["status"]!="PASS" or not audit["local_loader_replay_exact"]: audit["status"]="FAIL"

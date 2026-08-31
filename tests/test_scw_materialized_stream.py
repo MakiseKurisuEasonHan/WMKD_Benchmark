@@ -35,6 +35,15 @@ class MaterializedStreamTests(unittest.TestCase):
         trainer = (ROOT / "scripts/scw_train_materialized.py").read_text(encoding="utf-8")
         self.assertIn('expected_optimizer_steps = 4 if os.environ.get("WMKD_SCW_SPEED_TEST") == "1"', trainer)
 
+    def test_materializer_mirror_wrapper_blocks_upstream_leak(self):
+        pipeline = (ROOT / "scripts/scw_materialized_full_experiment_a.py").read_text(encoding="utf-8")
+        compat = (ROOT / "scripts/scw_runtime_compat/sitecustomize.py").read_text(encoding="utf-8")
+        validator = (ROOT / "scripts/scw_hf_metadata_validate.py").read_text(encoding="utf-8")
+        self.assertIn('"WMKD_SCW_HF_MIRROR":env["HF_ENDPOINT"]', pipeline)
+        self.assertIn('"WMKD_SCW_NETWORK_AUDIT":str(mat/"network_requests.jsonl")', pipeline)
+        self.assertIn("HF mirror leak blocked before request", compat)
+        self.assertIn('hostname=="huggingface.co"', validator)
+
     def materialize(self, directory, seed=42, name="records.jsonl"):
         records = Path(directory) / name
         stats = materialize_records(fixture(seed), records, 6)
