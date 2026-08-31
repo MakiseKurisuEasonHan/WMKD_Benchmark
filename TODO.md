@@ -31,6 +31,8 @@
 - [x] Complete the authorized EverTracer closure and protected cleanup; reclaim 77.958 GiB while preserving every protected artifact.
 - [ ] EverTracer Bb remains NOT RUN / deferred.
 - [x] Select SCW as the fifth watermark and complete the authorized local-only Experiment A preparation; formal A remains NOT RUN.
+- [x] Deploy exact local SCW code to AutoDL, pin official source/model/datasets, pass runtime-effective preflight, and complete the isolated 4-step representative speed test without starting Formal A.
+- [ ] Resolve or explicitly accept the post-`train_end` PyArrow/GIL interpreter-finalization SIGABRT before any separately authorized SCW Formal A launch.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.

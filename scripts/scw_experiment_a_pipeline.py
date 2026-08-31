@@ -9,6 +9,7 @@ import os
 import subprocess
 import sys
 import time
+import statistics
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -38,17 +39,53 @@ def run_speed_test(command: list[str], cwd: Path, env: dict[str, str], steps: in
     if process.returncode != 0:
         raise subprocess.CalledProcessError(process.returncode, command)
     elapsed = time.monotonic() - started
-    seconds_per_step = elapsed / steps
-    tokens = steps * config["training"]["effective_batch_size"] * config["training"]["sequence_length"]
+    telemetry_path = Path(env["WMKD_SCW_TELEMETRY"])
+    telemetry = [json.loads(line) for line in telemetry_path.read_text(encoding="utf-8").splitlines()]
+    begins = {row["step"]: row["monotonic_seconds"] for row in telemetry if row["event"] == "optimizer_step_begin"}
+    ends = {row["step"]: row["monotonic_seconds"] for row in telemetry if row["event"] == "optimizer_step_end"}
+    durations = [ends[step] - begins[step] for step in sorted(set(begins) & set(ends))]
+    if len(durations) != steps:
+        raise RuntimeError(f"expected {steps} optimizer-step timings, observed {len(durations)}")
+    warmup_steps = 1 if steps > 1 else 0
+    timed = durations[warmup_steps:]
+    seconds_per_step = statistics.median(timed)
+    tokens_per_step = config["training"]["effective_batch_size"] * config["training"]["sequence_length"]
+    microbatch_durations = [row["duration_seconds"] for row in telemetry if row["event"] == "microbatch_end"]
+    peak_allocated = max(row.get("cuda_max_allocated_bytes", 0) for row in telemetry)
+    peak_reserved = max(row.get("cuda_max_reserved_bytes", 0) for row in telemetry)
+    peak_cpu_rss = max(row.get("cpu_rss_bytes", 0) for row in telemetry)
+    begin = next(row for row in telemetry if row["event"] == "train_begin")
+    first_forward = next(row for row in telemetry if row["event"] == "first_forward")
+    label_counts: dict[str, int] = {}
+    for row in telemetry:
+        for label, count in row.get("loss_label_counts", {}).items():
+            label_counts[label] = label_counts.get(label, 0) + count
     return {
         "scientific_result": False,
         "representative_steps": steps,
+        "warmup_optimizer_steps": warmup_steps,
+        "timed_optimizer_steps": len(timed),
         "elapsed_seconds": elapsed,
+        "optimizer_step_durations_seconds": durations,
         "seconds_per_optimizer_step": seconds_per_step,
-        "packed_tokens_per_second_estimate": tokens / elapsed,
+        "mean_seconds_per_optimizer_step": statistics.mean(timed),
+        "median_seconds_per_microbatch": statistics.median(microbatch_durations),
+        "packed_tokens_per_second_estimate": tokens_per_step / seconds_per_step,
+        "peak_allocated_vram_bytes": peak_allocated,
+        "peak_reserved_vram_bytes": peak_reserved,
         "peak_vram_mib_sampled": peak_vram_mib,
+        "peak_cpu_rss_bytes": peak_cpu_rss,
+        "optimizer_class": begin["optimizer_class"],
+        "parameter_dtype_counts": begin["parameter_dtype_counts"],
+        "first_forward_logits_dtype": first_forward["logits_dtype"],
+        "trainer_bf16": begin["trainer_bf16"],
+        "trainer_fp16": begin["trainer_fp16"],
+        "gradient_checkpointing": begin["gradient_checkpointing"],
+        "pythonhashseed": begin["pythonhashseed"],
+        "observed_loss_label_counts": label_counts,
         "projected_formal_2500_step_seconds": seconds_per_step * config["training"]["max_steps"],
-        "limitations": ["subprocess startup/model-load time is included", "VRAM is sampled at 0.5-second intervals", "tokens/s assumes full packed sequence occupancy"],
+        "initialization_and_total_test_seconds": elapsed,
+        "limitations": ["training ETA excludes model/data initialization", "nvidia-smi VRAM is sampled at 0.5-second intervals", "tokens/s assumes full packed sequence occupancy"],
     }
 
 
@@ -86,6 +123,12 @@ def main() -> None:
     env = os.environ.copy()
     env["PYTHONHASHSEED"] = str(config["training"]["pythonhashseed"])
     env["WMKD_SCW_RUNTIME_PREFLIGHT"] = str(Path(args.runtime_preflight).resolve())
+    env["WMKD_SCW_HF_MIRROR"] = env.get("HF_ENDPOINT", "")
+    env["WMKD_SCW_TELEMETRY"] = str(run_root / "telemetry.jsonl")
+    env["WMKD_SCW_SPEED_TEST"] = "1" if args.mode == "speed-test" else "0"
+    compat = Path(__file__).resolve().parent / "scw_runtime_compat"
+    source_python = source / "src"
+    env["PYTHONPATH"] = os.pathsep.join([str(compat), str(source_python), env.get("PYTHONPATH", "")])
     # The speed test must use a generated runtime-only config in its own namespace;
     # it never changes the tracked formal config or produces a formal checkpoint.
     runtime_config = Path(config["paths"]["official_runtime_config"])

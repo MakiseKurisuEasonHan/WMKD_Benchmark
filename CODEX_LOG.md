@@ -369,3 +369,9 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Prepared canonical Llama-3.2-3B-Instruct SCW A protocol and official-compatible runtime config, pure-CPU static contracts, deterministic manifest/order helpers, official-detector adapter, fail-closed preflight, result schema, pending summary, report/log records, and future detached/speed-test runners.
 - Preserved official French/KGW scientific settings. Recorded wrapper-level deviations: fixed `PYTHONHASHSEED=42`; fixed detector permutation seed/index; `caching_models=true` to prevent official post-training output removal; immutable run namespace; future runtime-effective dtype/trainable/data/loss assertions.
 - No AutoDL or La Trobe connection, GPU use, model/dataset download, training, generation, formal evaluation, A2, Ba, ModelScope operation, cleanup, or push occurred. SCW formal A remains NOT RUN.
+## 2026-08-31 — SCW AutoDL preflight and speed-test-only execution
+
+- Connected with school VPN off; deployed exact local HEAD while preserving the old dirty AutoDL checkout in a recoverable data-disk backup.
+- Pinned official SCW source, canonical model, independent environment, and all dataset manifests; runtime preflight passed full-trainability and BF16 gates.
+- Completed only the authorized 4-step non-scientific speed test. Recovered representative 9.617 s/step and approximately 6.68-hour 2500-step training ETA from complete telemetry after a post-`train_end` PyArrow/GIL SIGABRT.
+- Ended with no SCW GPU process. Formal A, Ba, ModelScope, and cleanup remained unstarted. Next status: `RUNTIME_ADAPTATION_NEEDED`.

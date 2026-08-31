@@ -11,3 +11,12 @@
 - Scientific results: none. Run ID/PID/checkpoint/metrics: none.
 - External actions: AutoDL not connected; La Trobe not connected; GPU not used; model/datasets not downloaded.
 - Boundaries: formal A, A2, Ba, training, generation, evaluation, ModelScope, and cleanup not started.
+
+## AutoDL runtime preflight and isolated speed test — 2026-08-31
+
+- Deployment: exact local HEAD `de4880db573a2c43aa27efe2f18a61f815166a43`; official source path `/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source`, HEAD `15bc1929569357130f2dbc0b09f91bbf4f4bd947`, clean, zero source patches.
+- Runtime preflight: `READY`; canonical config SHA256 `b89b653954bc7c533eb9c578c6e45bb7e26d3f703733e22bbe6bc3b0030b657e`; unique total/trainable parameters 3,212,749,824/3,212,749,824; parameters and first-forward logits BF16; no autocast; Trainer BF16/FP16 flags false.
+- Data: immutable revisions were fixed for LucieFr `8d50ff7c...`, AlpacaGPT4 `f7e3ded7...`, OpenWebText `79d93d78...`, and FrenchEvaluation `c13216a7...`; future French first-1000 identity hash is `bb0870265d71663840e92c0cb3524ff8f7b87c81c1b67e63c1ef552d107c6afd`.
+- Speed run `scw_speed_20260831_03`: non-scientific, 4/4 optimizer steps, 1 warm-up + 3 timed. Representative cadence 9.617187 s/step, packed estimate 3,407.23 tokens/s, 2,500-step training-only projection 6.68 h. Pure compute median 4.693845 s/step is retained only as a 3.26-hour lower bound because observed streaming data wait is material.
+- Resource peaks: allocated 52,462,513,152 bytes; reserved 62,396,563,456 bytes; nvidia-smi 60,168 MiB; process RSS 5,963,767,808 bytes. Full-parameter, Adafactor, batch 4 × accumulation 16, sequence 512, gradient checkpointing false, no offload.
+- Terminal state: all four steps and `train_end` completed; Python then SIGABRTed during PyArrow/GIL interpreter finalization. No OOM/NaN/Inf/training traceback. Formal A remains NOT RUN; recommendation `RUNTIME_ADAPTATION_NEEDED`.

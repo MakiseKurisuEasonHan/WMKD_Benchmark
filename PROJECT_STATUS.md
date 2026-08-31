@@ -2,7 +2,7 @@
 
 ## Current phase
 
-SCW is now the active fifth method, but Experiment A is **NOT RUN / PENDING**. Local-only static preparation pinned official `eth-sri/robust-llm-fingerprints@15bc1929569357130f2dbc0b09f91bbf4f4bd947`, fixed the French/KGW canonical design, and added config, detector/data contracts, result/report schemas, tests, and future detached/speed-test runner scaffolding. No AutoDL/La Trobe connection, GPU, model/dataset download, training, generation, formal evaluation, Teacher, A2, or Ba exists. See `docs/methods/scw.md` and `docs/experiment_logs/scw_experiment_a_log.md`.
+SCW is the active fifth method, but Experiment A is **NOT RUN / PENDING**. AutoDL deployment and runtime preflight completed at local source HEAD `de4880db573a2c43aa27efe2f18a61f815166a43`; official `eth-sri/robust-llm-fingerprints@15bc1929569357130f2dbc0b09f91bbf4f4bd947`, canonical model revision, and four dataset revisions were verified. Runtime preflight is READY with 3,212,749,824/3,212,749,824 unique trainable/total BF16 parameters. Non-scientific speed run `scw_speed_20260831_03` completed 4/4 optimizer steps (1 warm-up + 3 timed), measured 9.617 s representative steady cadence and an approximately 6.68-hour training-only 2500-step projection, then hit a PyArrow/GIL SIGABRT during interpreter finalization after `train_end`. Formal A remains blocked pending a bounded runtime-cleanup decision; no Teacher, Ba, ModelScope use, or cleanup exists. See `docs/methods/scw.md` and `docs/experiment_logs/scw_experiment_a_log.md`.
 
 iSeal is FULLY CLOSED through A and Ba plus private ModelScope archival. Experiment A remains blocked before formal launch by the pinned public-code exact-zero gate; authorized A2-A6 culminated in preferred Teacher A6 (179/200 registered). Ba Student `iseal_ba_20260830_165442` completed 7,500 steps from the fresh canonical base. Registered success fell 179/200 → 0/200, equal to Base 0/200 (89.5-point drop; 0% thresholded retention); ARC/TruthfulQA were 0.481229/0.449818, ordinary generation 10/10, and fresh reload passed. Teacher/Student private archives passed remote metadata verification and await independent destination SHA256. Bb/A7 were not created.
 
@@ -63,7 +63,7 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). Remaining: **SC
 ## Next step
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, or perform destructive cleanup without separate explicit approval.
-- Current method: SCW. Local static Experiment A preparation is complete and locally validated; formal A remains NOT RUN. The next allowed step after local closure is a separately authorized AutoDL source/environment deployment and runtime preflight/speed test, not training by default.
+- Current method: SCW. Deployment, resource provenance, runtime-effective preflight, and the isolated representative speed test are complete. Formal A remains NOT RUN. The next decision is a separately authorized runtime-cleanup adaptation/review for the post-`train_end` PyArrow/GIL SIGABRT; do not launch the 2500-step run until that decision is made.
 - After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 
