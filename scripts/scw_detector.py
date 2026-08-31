@@ -41,12 +41,13 @@ def main() -> None:
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     config = load_config(args.protocol_config)
-    if args.model not in (config["model"]["future_path"], config["model"]["id"]):
+    local_model = config["model"].get("local_path", config["model"].get("future_path"))
+    if args.model not in (local_model, config["model"]["id"]):
         raise ValueError("model is outside the canonical SCW model contract")
     from transformers import AutoTokenizer
     from robust_fp.config import MainConfiguration
     official = MainConfiguration.parse_yaml(args.official_config)
-    tokenizer = AutoTokenizer.from_pretrained(args.model, padding_side="left", revision=config["model"]["revision"] if args.model == config["model"]["id"] else None)
+    tokenizer = AutoTokenizer.from_pretrained(args.model, padding_side="left", local_files_only=args.model == local_model, revision=config["model"]["revision"] if args.model == config["model"]["id"] else None)
     detector = official.watermark_config.get_detector("cuda", tokenizer)
     completions = load_completions(Path(args.generations))
     permutation = fixed_permutation(len(completions), config["evaluation"]["detector_permutation_seed"])

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "dataset": "jpacifico/French-Alpaca-dataset-Instruct-55K",
+  "revision": "c13216a7a935baf62fb81efc56eed1739b222d2f",
+  "split": "train",
+  "source_file": "Acquiesce_data_55k_instructions.json",
+  "source_file_size": 25979395,
+  "source_file_sha256": "6a9e769a247b01bd169d642e5e314d0499fa31e7d99025367eac5f254414c0b5",
+  "source_host": "hf-mirror.com",
+  "selection": "first_1000_in_pinned_source_order",
+  "record_count": 1000,
+  "source_indices": [
+    0,
+    999
+  ],
+  "historical_identity_sha256": "bb0870265d71663840e92c0cb3524ff8f7b87c81c1b67e63c1ef552d107c6afd",
+  "historical_sample_ids_match": true,
+  "schema": [
+    "eval_index",
+    "source_index",
+    "sample_id",
+    "instruction",
+    "output",
+    "content_sha256"
+  ],
+  "ordered_content_digest": "2e0ad4ef7bf6962f70c454d1079914a79f3a33599563eff8ec4d4c3e6ed00cc0",
+  "frozen_file": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+  "frozen_file_size": 718092,
+  "frozen_file_sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d",
+  "created_at": "2026-08-31T17:34:34.831496+00:00"
+}
