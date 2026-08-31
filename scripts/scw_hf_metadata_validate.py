@@ -14,7 +14,10 @@ def main():
  for name,repo,config,split,revision in SOURCES:
   ds=load_dataset(repo,config,split=split,revision=revision,streaming=True)
   features=None if ds.features is None else {k:str(v) for k,v in ds.features.items()}
-  results.append({"name":name,"repo":repo,"config":config,"split":split,"revision":revision,"metadata_reachable":True,"schema_reachable":features is not None,"features":features})
+  schema_source="metadata"
+  if features is None:
+   sample=next(iter(ds.take(1))); features={k:type(v).__name__ for k,v in sample.items()}; schema_source="one_exact-revision_sample"
+  results.append({"name":name,"repo":repo,"config":config,"split":split,"revision":revision,"metadata_reachable":True,"schema_reachable":features is not None,"schema_source":schema_source,"features":features})
  rows=[json.loads(x) for x in Path(a.audit).read_text(encoding="utf-8").splitlines()]
  hosts=sorted({urllib.parse.urlparse(x["final_url"]).hostname for x in rows}); leaks=[x for x in rows if urllib.parse.urlparse(x["final_url"]).hostname=="huggingface.co"]
  out={"status":"PASS" if all(x["schema_reachable"] for x in results) and not leaks else "FAIL","sources":results,"final_hosts":hosts,"request_count":len(rows),"huggingface_co_leaks":leaks}
