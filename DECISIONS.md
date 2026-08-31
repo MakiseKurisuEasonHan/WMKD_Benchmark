@@ -280,3 +280,9 @@ This log records consequential project decisions. It does not record routine eng
 - Runtime provenance is fixed to canonical Llama revision `0cb88a4f764b7a12671c53f0838cd831a0843b95` and immutable LucieFr/AlpacaGPT4/OpenWebText/FrenchEvaluation dataset revisions recorded in the SCW manifest.
 - The HF mirror host rewrite, dataset revision injection, speed-only model-save suppression, telemetry, and numeric-string LR guard are infrastructure adaptations only. The LR guard converts a group LR only when its parsed value exactly equals the configured `2e-5`; all other cases fail closed.
 - Runtime preflight is READY, but the bounded recommendation after speed test is `RUNTIME_ADAPTATION_NEEDED`: 4/4 steps completed and metrics are usable, yet Python aborted during PyArrow/GIL interpreter finalization after `train_end`. Formal A remains NOT RUN pending an explicit next decision.
+
+## 2026-08-31 — SCW terminal-cleanup investigation remains blocked
+
+- **Finding:** `scw_speed_terminalfix_20260831_01`, `_02`, and `_03` each completed 4/4 optimizer steps and `train_end`, then died with the same SIGABRT during CPython finalization. `_03` also emitted both Trainer-level teardown and late atexit-GC telemetry before aborting.
+- **Decision:** Exact official pins (`pyarrow 21.0.0`, `aiohttp 3.12.15` and its pinned stack), releasing the streaming source chain, stopping/resetting fsspec, and late GC are insufficient. Revert these unproven code changes; never mask the abort with `os._exit(0)` or reinterpret FAILED as success.
+- **Boundary:** Formal A and Ba remain NOT RUN. No fourth GPU retry is authorized by this investigation. The next bounded candidate is a clean Python 3.11 environment or an upstream-confirmed native-extension fix, followed by one identical 4-step clean-exit gate.

@@ -32,7 +32,7 @@
 - [ ] EverTracer Bb remains NOT RUN / deferred.
 - [x] Select SCW as the fifth watermark and complete the authorized local-only Experiment A preparation; formal A remains NOT RUN.
 - [x] Deploy exact local SCW code to AutoDL, pin official source/model/datasets, pass runtime-effective preflight, and complete the isolated 4-step representative speed test without starting Formal A.
-- [ ] Resolve or explicitly accept the post-`train_end` PyArrow/GIL interpreter-finalization SIGABRT before any separately authorized SCW Formal A launch.
+- [ ] Resolve the post-`train_end` `PyGILState_Release` SIGABRT before any SCW Formal A launch. Python-level dataset/fsspec teardown and late atexit GC were boundedly tested and failed; next candidate is a clean supported Python 3.11 SCW environment or an upstream native-extension fix, followed by exactly one 4-step clean-exit gate.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.

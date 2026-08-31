@@ -375,3 +375,9 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Pinned official SCW source, canonical model, independent environment, and all dataset manifests; runtime preflight passed full-trainability and BF16 gates.
 - Completed only the authorized 4-step non-scientific speed test. Recovered representative 9.617 s/step and approximately 6.68-hour 2500-step training ETA from complete telemetry after a post-`train_end` PyArrow/GIL SIGABRT.
 - Ended with no SCW GPU process. Formal A, Ba, ModelScope, and cleanup remained unstarted. Next status: `RUNTIME_ADAPTATION_NEEDED`.
+
+## 2026-08-31 — SCW terminal-cleanup diagnosis and bounded validations
+
+- Reproduced the post-`train_end` SIGABRT in three immutable 4-step runs while preserving every FAILED status. Ruled out OOM, numerical failure, CUDA/training corruption, local-only datasets streaming, dependency-version drift, ordinary Python dataset references, and a live fsspec Python thread as sufficient causes.
+- Restored the official pyarrow/aiohttp pins. Tested source-chain release, fsspec teardown, and late atexit GC without modifying the official SCW source or scientific configuration. The strongest cleanup attempt emitted its atexit telemetry and still aborted during CPython finalization, so it was reverted locally and on AutoDL.
+- Full AutoDL tests passed 69/69 before the final bounded validation. Formal A and Ba remained NOT RUN; no ModelScope or cleanup action occurred; GPU ended idle. Status is `BLOCKED_RUNTIME_FINALIZATION`, with a clean Python 3.11 environment/upstream native fix as the next candidate rather than another blind GPU retry.

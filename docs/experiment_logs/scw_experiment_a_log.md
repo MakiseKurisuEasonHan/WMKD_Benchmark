@@ -20,3 +20,10 @@
 - Speed run `scw_speed_20260831_03`: non-scientific, 4/4 optimizer steps, 1 warm-up + 3 timed. Representative cadence 9.617187 s/step, packed estimate 3,407.23 tokens/s, 2,500-step training-only projection 6.68 h. Pure compute median 4.693845 s/step is retained only as a 3.26-hour lower bound because observed streaming data wait is material.
 - Resource peaks: allocated 52,462,513,152 bytes; reserved 62,396,563,456 bytes; nvidia-smi 60,168 MiB; process RSS 5,963,767,808 bytes. Full-parameter, Adafactor, batch 4 × accumulation 16, sequence 512, gradient checkpointing false, no offload.
 - Terminal state: all four steps and `train_end` completed; Python then SIGABRTed during PyArrow/GIL interpreter finalization. No OOM/NaN/Inf/training traceback. Formal A remains NOT RUN; recommendation `RUNTIME_ADAPTATION_NEEDED`.
+
+## Terminal-cleanup continuation — 2026-08-31
+
+- Immutable validations: `scw_speed_terminalfix_20260831_01`, `_02`, `_03`; all are terminal `FAILED`, all completed 4/4 optimizer steps and `train_end`, and none produced a scientific result.
+- `_03` step compute durations were 5.142959, 4.748322, 4.919744, and 4.685683 seconds across 64 microbatches. It emitted dataset/fsspec teardown, speed-save suppression, and late atexit-GC telemetry, then died with SIGABRT 6 during CPython finalization.
+- Dependency correction: pyarrow 25.0.1 → 21.0.0; aiohttp 3.14.3 → 3.12.15; aiohappyeyeballs 2.7.1 → 2.6.1; frozenlist 1.8.0 → 1.7.0; multidict 6.7.1 → 6.6.4; propcache 0.5.2 → 0.3.2; yarl 1.24.5 → 1.20.1; aiosignal remained 1.4.0. `pip check` passed.
+- Exact scientific config and official source were unchanged. Python-level cleanup was disproven and reverted; no exit masking was used. End state: `BLOCKED_RUNTIME_FINALIZATION`, not ready for Formal A. Formal A/Ba remain NOT RUN and GPU is idle.

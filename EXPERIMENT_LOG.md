@@ -59,3 +59,10 @@ The first conservative cleanup attempt remains recorded as rejected before execu
 - Final representative run `scw_speed_20260831_03` completed 4/4 optimizer steps with 1 warm-up and 3 timed. Timed compute median was 4.693845 s; representative start-to-start cadence including steady data wait was 9.617187 s; packed throughput estimate was 3,407.23 tokens/s; projected 2,500-step training time was 24,042.97 s (6.68 h), excluding approximately 463.96 s one-time setup/terminal overhead.
 - Peak allocated/reserved VRAM was 52,462,513,152/62,396,563,456 bytes; observed nvidia-smi peak was 60,168 MiB; peak process CPU RSS was 5,963,767,808 bytes. No OOM, NaN, Inf, offload, or training traceback occurred.
 - After `train_end` and speed-only save suppression, Python hit a PyArrow/GIL finalization SIGABRT. Original FAILED status and recovered telemetry summary were both preserved. Bounded result: `RUNTIME_ADAPTATION_NEEDED`. Formal A, Base/Teacher evaluation, Ba, ModelScope, and cleanup were not started.
+
+## SCW terminal-cleanup investigation — 2026-08-31
+
+- Preserved immutable FAILED runs `scw_speed_terminalfix_20260831_01`, `_02`, and `_03`; every run completed exactly 4 optimizer steps, 64 microbatches, and `train_end`, with no OOM, NaN/Inf, CUDA failure, or training traceback.
+- Restored official dependency pins from `pyarrow 25.0.1`/`aiohttp 3.14.3` to `pyarrow 21.0.0`/`aiohttp 3.12.15` plus the official aiohttp dependency stack. Scientific configuration hashes remained `37d5364f...` and `3c57c1be...`; official source stayed clean and unmodified.
+- Python-level streaming source release, GC, fsspec loop/thread teardown/reset, and a late atexit GC all executed in `_03`; the child still died with SIGABRT 6 after atexit. Failed compatibility edits were reverted rather than committed.
+- Terminal recommendation: `BLOCKED_RUNTIME_FINALIZATION`; **not** `READY_FOR_FORMAL_A`. Formal A and Ba were not started; GPU returned to 0 MiB/0% with no compute process.
