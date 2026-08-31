@@ -27,3 +27,10 @@
 - `_03` step compute durations were 5.142959, 4.748322, 4.919744, and 4.685683 seconds across 64 microbatches. It emitted dataset/fsspec teardown, speed-save suppression, and late atexit-GC telemetry, then died with SIGABRT 6 during CPython finalization.
 - Dependency correction: pyarrow 25.0.1 → 21.0.0; aiohttp 3.14.3 → 3.12.15; aiohappyeyeballs 2.7.1 → 2.6.1; frozenlist 1.8.0 → 1.7.0; multidict 6.7.1 → 6.6.4; propcache 0.5.2 → 0.3.2; yarl 1.24.5 → 1.20.1; aiosignal remained 1.4.0. `pip check` passed.
 - Exact scientific config and official source were unchanged. Python-level cleanup was disproven and reverted; no exit masking was used. End state: `BLOCKED_RUNTIME_FINALIZATION`, not ready for Formal A. Formal A/Ba remain NOT RUN and GPU is idle.
+
+## Python 3.11 gate and materialized-stream research — 2026-08-31
+
+- Clean Python 3.11 reproduced the same terminal defect: 4/4 optimizer steps and `train_end` completed with train loss 14.969338417053223, then `PyGILState_Release` caused SIGABRT 6. The outer gate exited 1. No OOM or NaN/Inf occurred; Formal A did not start.
+- Pinned official-code audit established that LucieFr/OpenWebText are tokenized and packed and AlpacaGPT4 is formatted/filtered/chat-tokenized before per-source hash-seeded shuffle, label assignment, and probabilistic `all_exhausted` interleave. Therefore exact materialization must freeze post-interleave tokenized examples, not raw rows and not a map-style reconstruction.
+- Formal length contract is 2,500 optimizer steps × 16 accumulation × batch 4 = 40,000 microbatches and exactly 160,000 examples. Observed finite-stream proportions remain stochastic; duplicates remain untouched.
+- Added local materializer/manifest/audit/sequential-loader/formal-wrapper code and synthetic equivalence tests. Classification is conditionally `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2. Real materialization and the four-step local-materialized gate remain NOT RUN and require separate AutoDL authorization. Ba remains NOT RUN.

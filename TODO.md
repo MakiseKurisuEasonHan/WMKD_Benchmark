@@ -32,7 +32,8 @@
 - [ ] EverTracer Bb remains NOT RUN / deferred.
 - [x] Select SCW as the fifth watermark and complete the authorized local-only Experiment A preparation; formal A remains NOT RUN.
 - [x] Deploy exact local SCW code to AutoDL, pin official source/model/datasets, pass runtime-effective preflight, and complete the isolated 4-step representative speed test without starting Formal A.
-- [ ] Resolve the post-`train_end` `PyGILState_Release` SIGABRT before any SCW Formal A launch. Python-level dataset/fsspec teardown and late atexit GC were boundedly tested and failed; next candidate is a clean supported Python 3.11 SCW environment or an upstream native-extension fix, followed by exactly one 4-step clean-exit gate.
+- [x] Research and locally implement the SCW exact finite materialized-stream runtime adaptation with deterministic synthetic audit tests; classify it conditionally as `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2.
+- [ ] In a separately authorized AutoDL stage, materialize exactly 160,000 official post-interleave tokenized records, freeze/audit the manifest, then run exactly one four-step local-materialized clean-exit gate. Formal A remains blocked until clean exit 0; Ba remains prohibited.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.

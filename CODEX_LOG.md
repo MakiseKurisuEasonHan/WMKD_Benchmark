@@ -381,3 +381,9 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Reproduced the post-`train_end` SIGABRT in three immutable 4-step runs while preserving every FAILED status. Ruled out OOM, numerical failure, CUDA/training corruption, local-only datasets streaming, dependency-version drift, ordinary Python dataset references, and a live fsspec Python thread as sufficient causes.
 - Restored the official pyarrow/aiohttp pins. Tested source-chain release, fsspec teardown, and late atexit GC without modifying the official SCW source or scientific configuration. The strongest cleanup attempt emitted its atexit telemetry and still aborted during CPython finalization, so it was reverted locally and on AutoDL.
 - Full AutoDL tests passed 69/69 before the final bounded validation. Formal A and Ba remained NOT RUN; no ModelScope or cleanup action occurred; GPU ended idle. Status is `BLOCKED_RUNTIME_FINALIZATION`, with a clean Python 3.11 environment/upstream native fix as the next candidate rather than another blind GPU retry.
+
+## 2026-08-31 — SCW materialized-stream runtime adaptation (local only)
+
+- Confirmed from pinned official code that each source is transformed/tokenized before hash-seeded shuffle, label assignment, and stochastic `interleave_datasets(..., probabilities=[0.6,0.2,0.2], stopping_strategy="all_exhausted")`. `PYTHONHASHSEED=42` affects every source-shuffle seed and the interleave seed.
+- Designed exact-prefix materialization at the official post-interleave tokenized layer. Added immutable record/manifest hashing, exact source/loss provenance, a PyTorch-only sequential iterable, a wrapper-only official training entry point, and an audit tool without modifying official source.
+- Verified 17 targeted CPU tests (5 new materialization tests plus 12 SCW preparation tests). No AutoDL/La Trobe connection, GPU, model/real-data download, Formal A, Ba, large artifact, or push occurred.
