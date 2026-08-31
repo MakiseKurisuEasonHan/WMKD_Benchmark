@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "project": "WMKD_Benchmark",
+  "method": "SCW",
+  "experiment": "A",
+  "status": "NOT_RUN",
+  "official_source": {
+    "repository": "https://github.com/eth-sri/robust-llm-fingerprints.git",
+    "commit": "15bc1929569357130f2dbc0b09f91bbf4f4bd947",
+    "license": "Responsible AI SOURCE CODE License, Version 1.1 (Nov 20, 2022)",
+    "future_source_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source",
+    "local_patch": null
+  },
+  "model": {
+    "id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "future_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "fresh_canonical": true
+  },
+  "watermark": {
+    "semantic_domain": "French",
+    "type": "kgw",
+    "gamma": 0.25,
+    "delta": 4,
+    "k": 1,
+    "seeding_scheme": "simple_1"
+  },
+  "training": {
+    "mode": "full_parameter",
+    "lora": false,
+    "frozen_parameter_patterns": [],
+    "model_dtype_config": "bfloat16",
+    "trainer_bf16_field": false,
+    "trainer_fp16_field": false,
+    "runtime_dtype_assertion_required": true,
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 16,
+    "effective_batch_size": 64,
+    "learning_rate": 0.00002,
+    "max_steps": 2500,
+    "optimizer": "adafactor",
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.1,
+    "gradient_checkpointing": false,
+    "sequence_length": 512,
+    "pythonhashseed": 42,
+    "preserve_local_model": true
+  },
+  "datasets": {
+    "streaming": true,
+    "names": ["LucieFr", "AlpacaGPT4", "OpenWebText"],
+    "sources": [
+      {"name": "LucieFr", "path": "OpenLLM-France/Lucie-Training-Dataset", "config": "RedPajama-fr", "split": "train", "role": "watermark"},
+      {"name": "AlpacaGPT4", "path": "vicgalle/alpaca-gpt4", "config": null, "split": "train", "role": "regularization"},
+      {"name": "OpenWebText", "path": "Skylion007/openwebtext", "config": null, "split": "train", "role": "regularization"}
+    ],
+    "proportions": [0.6, 0.2, 0.2],
+    "loss_types": ["watermark", "anti-watermark-tv", "anti-watermark-tv"],
+    "lambdas": [1, 1, 1],
+    "runtime_observed_proportions_required": true
+  },
+  "evaluation": {
+    "dataset": {
+      "path": "jpacifico/French-Alpaca-dataset-Instruct-55K",
+      "revision": "RESOLVE_AND_PIN_BEFORE_FORMAL_RUN",
+      "split": "train",
+      "fields": ["instruction", "output"],
+      "selection": "first_1000_in_pinned_source_order",
+      "manifest_required": true
+    },
+    "primary_n_queries": 1000,
+    "official_generation": {"temperature": 0.7, "top_p": 0.9, "max_tokens": 200, "min_tokens": 25, "repetition_penalty": 1.1},
+    "supplementary_query_counts": [10, 25, 50, 100, 250, 500, 1000],
+    "detector_permutation_seed": 42,
+    "alpha": 0.001,
+    "positive_when": "p_value < alpha",
+    "negative_when": "p_value >= alpha",
+    "official_aggregation": "tokenize_with_padding_then_flatten_input_ids_and_attention_mask_and_run_KGW_detector",
+    "standardized_utility": ["ARC Challenge", "TruthfulQA MC2", "ordinary generation sanity"],
+    "supplementary_utility": ["French-domain sanity"],
+    "fresh_reload_required": true
+  },
+  "paths": {
+    "future_code_root": "/root/autodl-tmp/WMKD_Benchmark",
+    "future_data_root": "/root/autodl-tmp/WMKD_Benchmark_data",
+    "formal_run_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a",
+    "speed_test_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/speed_test",
+    "official_runtime_config": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a_official.yaml"
+  },
+  "safety": {
+    "forbidden_path_fragments": ["/root/autodl-tmp/watermark_benchmark", "WaterBench", "WaterBenchV2", "WaterBenchV3"],
+    "autodl_connected_during_preparation": false,
+    "gpu_used_during_preparation": false,
+    "formal_run_started": false,
+    "ba_started": false
+  }
+}

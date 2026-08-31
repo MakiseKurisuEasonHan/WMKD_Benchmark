@@ -2,6 +2,11 @@
 
 ## High priority
 
+- [x] Pin SCW official `eth-sri/robust-llm-fingerprints@15bc1929569357130f2dbc0b09f91bbf4f4bd947`, inspect French training/evaluation/detector code and Responsible AI Source Code License 1.1, and prepare local-only Experiment A contracts.
+- [x] Fix SCW French/KGW scientific configuration, deterministic aggregate detector/curve semantics, canonical model contract, schemas, static tests, and future detached/speed-test runner without starting a formal run.
+- [ ] In a separately authorized AutoDL task, deploy/verify the exact SCW source and environment, pin dataset revisions/manifests, run runtime-effective dtype/trainability/data/loss preflight, confirm idle GPU, and execute an isolated representative speed test.
+- [ ] Do not start formal SCW Experiment A until the future AutoDL preflight/speed test is reviewed; do not create A2 or Ba automatically.
+
 - [x] Pin official iSeal source, implement the minimal canonical adaptation, and complete the mandatory two-step trainability audit.
 - [x] Preserve the official iSeal Experiment A trainability blocker and complete explicitly authorized A2-A6 lineage without rewriting that history.
 - [x] Select A6 as preferred Teacher and complete iSeal Ba, fresh-reload evaluation, formal reporting, and private archival.
@@ -25,7 +30,7 @@
 - [ ] Perform destination-side full SHA256 only during a future real download on another machine.
 - [x] Complete the authorized EverTracer closure and protected cleanup; reclaim 77.958 GiB while preserving every protected artifact.
 - [ ] EverTracer Bb remains NOT RUN / deferred.
-- [ ] Discuss SCW as the fifth watermark Experiment A after explicit authorization; do not clone, download, configure, or start it automatically.
+- [x] Select SCW as the fifth watermark and complete the authorized local-only Experiment A preparation; formal A remains NOT RUN.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.
@@ -68,7 +73,7 @@
 - [ ] Analyze the PN-FP Ba result further only if an additional scientific question is approved.
 - [x] Upload the A2 canonical teacher to private ModelScope with immutable source/upload checks; destination-side verification remains a future transfer-stage gate.
 - [ ] Decide whether and when to authorize PN-FP Bb; do not start Bb, UP, or Dipper without explicit approval.
-- [ ] Discuss SCW Experiment A only after a new explicit user/ChatGPT prompt; it is the fixed fifth watermark and has not started.
+- [ ] Complete SCW formal A only under a future explicit AutoDL execution prompt; current local preparation is not a scientific result.
 - [ ] Define dependency-management and environment-reproduction conventions.
 - [ ] Define storage and synchronization policies for future large artifacts.
 - [ ] Add method-specific reproducibility instructions after research decisions are approved.

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WMKD SCW Experiment A result",
+  "type": "object",
+  "required": ["project", "method", "experiment", "status", "provenance", "training", "base", "teacher", "preferred_teacher", "deviations", "limitations"],
+  "properties": {
+    "project": {"const": "WMKD_Benchmark"},
+    "method": {"const": "SCW"},
+    "experiment": {"const": "A"},
+    "status": {"enum": ["NOT_RUN", "RUNNING", "FAILED", "COMPLETED"]},
+    "provenance": {"type": "object", "required": ["official_repo", "official_commit", "model_id", "model_revision", "dataset_manifest"]},
+    "training": {"type": "object", "required": ["run_id", "environment", "actual_trainable_parameters", "model_parameter_dtype", "runtime_compute_dtype", "optimizer", "effective_batch", "sequence_length", "datasets", "observed_proportions", "active_losses", "steps", "reload"]},
+    "base": {"$ref": "#/$defs/evaluation"},
+    "teacher": {"$ref": "#/$defs/evaluation"},
+    "preferred_teacher": {"enum": ["NOT_EVALUATED", "YES", "NO"]},
+    "deviations": {"type": "array"},
+    "limitations": {"type": "array"}
+  },
+  "$defs": {
+    "evaluation": {
+      "type": "object",
+      "required": ["scw", "utility", "fresh_reload"],
+      "properties": {
+        "scw": {"type": "object", "required": ["p_value", "alpha", "fingerprinted", "primary_n_queries", "supplementary_curve"]},
+        "utility": {"type": "object", "required": ["arc_challenge", "truthfulqa_mc2", "ordinary_generation", "french_supplementary"]},
+        "fresh_reload": {"enum": ["NOT_RUN", "PASS", "FAIL"]}
+      }
+    }
+  }
+}

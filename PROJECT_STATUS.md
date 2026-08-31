@@ -2,6 +2,8 @@
 
 ## Current phase
 
+SCW is now the active fifth method, but Experiment A is **NOT RUN / PENDING**. Local-only static preparation pinned official `eth-sri/robust-llm-fingerprints@15bc1929569357130f2dbc0b09f91bbf4f4bd947`, fixed the French/KGW canonical design, and added config, detector/data contracts, result/report schemas, tests, and future detached/speed-test runner scaffolding. No AutoDL/La Trobe connection, GPU, model/dataset download, training, generation, formal evaluation, Teacher, A2, or Ba exists. See `docs/methods/scw.md` and `docs/experiment_logs/scw_experiment_a_log.md`.
+
 iSeal is FULLY CLOSED through A and Ba plus private ModelScope archival. Experiment A remains blocked before formal launch by the pinned public-code exact-zero gate; authorized A2-A6 culminated in preferred Teacher A6 (179/200 registered). Ba Student `iseal_ba_20260830_165442` completed 7,500 steps from the fresh canonical base. Registered success fell 179/200 → 0/200, equal to Base 0/200 (89.5-point drop; 0% thresholded retention); ARC/TruthfulQA were 0.481229/0.449818, ordinary generation 10/10, and fresh reload passed. Teacher/Student private archives passed remote metadata verification and await independent destination SHA256. Bb/A7 were not created.
 
 CTCC is FULLY CLOSED through Experiments A and Ba plus private ModelScope archival. Experiment A run `ctcc_a_20260829_190251` established the preferred Teacher from all pinned public-artifact records (Trigger 461, Suppression 428, Normal 1000; total 1889) without augmentation. Official source is pinned to `Xuzhenhua55/CTCC@8db93218260bed31b8f18acc9c6ac3e1955d3a42`; the paper's 500/500/1000 total 2000 remains a paper-vs-public-artifact discrepancy.
@@ -60,8 +62,8 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). Remaining: **SC
 
 ## Next step
 
-- iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, switch methods, or perform destructive cleanup without separate explicit approval.
-- Current blocker: NONE. Remaining methods are SCW, LLMPrint, and REEF. The next allowed scientific step is discussion of SCW Experiment A after a new explicit prompt; this audit does not authorize cloning, downloading, configuring, or starting SCW.
+- iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, or perform destructive cleanup without separate explicit approval.
+- Current method: SCW. Local static Experiment A preparation is complete and locally validated; formal A remains NOT RUN. The next allowed step after local closure is a separately authorized AutoDL source/environment deployment and runtime preflight/speed test, not training by default.
 - After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 

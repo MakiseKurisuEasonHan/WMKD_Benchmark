@@ -362,3 +362,10 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 - Corrected current-facing AutoDL state to the 22-vCPU/110-GB/approximately-500-GB pay-as-you-go instance while preserving older 208-vCPU/approximately-1-TiB statements only as historical provenance.
 - Corrected SCW from an old “fourth watermark” label to the fixed fifth watermark and next discussion target. No clone, download, configuration, or Experiment A was authorized or started.
 - Updated the current experiment index so A5's resolved historical Teacher decision and A6's completed Ba successor no longer appear as live blockers. Preserved every scientific metric and immutable historical failure/continuation record.
+
+## 2026-08-31 — SCW Experiment A local static preparation
+
+- Verified official `eth-sri/robust-llm-fingerprints`, fixed commit `15bc1929569357130f2dbc0b09f91bbf4f4bd947`, and Responsible AI SOURCE CODE License 1.1 from a temporary shallow source checkout. Inspected official README, French embedding/evaluation configs, training/dataset/loss pipeline, KGW implementation, and decision script; no source was vendored or copied.
+- Prepared canonical Llama-3.2-3B-Instruct SCW A protocol and official-compatible runtime config, pure-CPU static contracts, deterministic manifest/order helpers, official-detector adapter, fail-closed preflight, result schema, pending summary, report/log records, and future detached/speed-test runners.
+- Preserved official French/KGW scientific settings. Recorded wrapper-level deviations: fixed `PYTHONHASHSEED=42`; fixed detector permutation seed/index; `caching_models=true` to prevent official post-training output removal; immutable run namespace; future runtime-effective dtype/trainable/data/loss assertions.
+- No AutoDL or La Trobe connection, GPU use, model/dataset download, training, generation, formal evaluation, A2, Ba, ModelScope operation, cleanup, or push occurred. SCW formal A remains NOT RUN.

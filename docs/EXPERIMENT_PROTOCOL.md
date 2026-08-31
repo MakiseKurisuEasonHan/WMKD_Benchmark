@@ -201,7 +201,7 @@ Durable trainability lessons: official code is not proof of a runtime-valid mech
 
 ## Current state
 
-PN-FP, EverTracer, CTCC, and iSeal are FULLY CLOSED: 4 of 7 selected methods are complete. Remaining methods are SCW, LLMPrint, and REEF. The fifth watermark and next discussion target is SCW, but it has not been cloned, downloaded, configured, or started. This audit does not authorize SCW Experiment A. Bb/A7 remain NOT RUN.
+PN-FP, EverTracer, CTCC, and iSeal are FULLY CLOSED: 4 of 7 selected methods are complete. Remaining methods are SCW, LLMPrint, and REEF. SCW is the active fifth method; its official source and local Experiment A engineering/configuration are prepared, but formal A is NOT RUN and no Teacher or result exists. AutoDL deployment, runtime preflight/speed test, and formal execution require a separate explicit task. Bb/A7 remain NOT RUN.
 
 ## Resuming in a new session
 

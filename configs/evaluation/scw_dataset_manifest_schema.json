@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WMKD SCW dataset and evaluation manifest",
+  "type": "object",
+  "required": ["project", "method", "experiment", "dataset_names", "datasets", "french_evaluation_samples"],
+  "properties": {
+    "project": {"const": "WMKD_Benchmark"},
+    "method": {"const": "SCW"},
+    "experiment": {"const": "A"},
+    "dataset_names": {"const": ["LucieFr", "AlpacaGPT4", "OpenWebText", "FrenchEvaluation"]},
+    "datasets": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": {"type": "object", "required": ["name", "source", "revision", "split", "role", "streaming", "identity_method"]}
+    },
+    "french_evaluation_samples": {
+      "type": "object",
+      "required": ["count", "selection", "source_indices", "sample_ids", "manifest_sha256"],
+      "properties": {"count": {"const": 1000}, "selection": {"const": "first_1000_in_pinned_source_order"}}
+    }
+  }
+}
