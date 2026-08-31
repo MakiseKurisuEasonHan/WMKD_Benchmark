@@ -9,12 +9,14 @@ from __future__ import annotations
 import json
 import os
 import time
+from io import BufferedReader, BytesIO
 from pathlib import Path
 
 
 _MIRROR = os.environ.get("WMKD_SCW_HF_MIRROR", "").rstrip("/")
 _UPSTREAM = "https://huggingface.co"
 _network_audit_path = os.environ.get("WMKD_SCW_NETWORK_AUDIT")
+_parquet_cache = os.environ.get("WMKD_SCW_PARQUET_CACHE")
 _REVISIONS = {
     "OpenLLM-France/Lucie-Training-Dataset": "8d50ff7cfce1a2db7cc5a1ef37d73f5f455f8ad1",
     "vicgalle/alpaca-gpt4": "f7e3ded725cb81e8e564e32feb12860f376f2b51",
@@ -43,6 +45,66 @@ if _MIRROR:
             audit.parent.mkdir(parents=True, exist_ok=True)
             with audit.open("a", encoding="utf-8") as handle:
                 handle.write(json.dumps({"method": str(method), "requested_url": str(url), "final_url": rewritten_url}, sort_keys=True) + "\n")
+        if _parquet_cache and str(method).upper() == "GET" and rewritten_url.split("?", 1)[0].endswith(".parquet"):
+            from requests import Response
+            from urllib3.response import HTTPResponse
+            from scw_resumable_prefetch import ensure_cached, verified_cached_path
+
+            request_headers = kwargs.get("headers") or {}
+            range_value = next((value for key, value in request_headers.items() if str(key).lower() == "range"), None)
+            cached = verified_cached_path(rewritten_url, Path(_parquet_cache))
+            # Schema/footer probes are already bounded Range requests. Do not
+            # turn an uncached small probe into a full-object prefetch; the
+            # later official full GET is the on-demand prefetch trigger.
+            if range_value and cached is None:
+                return _request(self, method, rewritten_url, *args, **kwargs)
+            local_path, manifest = cached or ensure_cached(rewritten_url, Path(_parquet_cache))
+            total_size = local_path.stat().st_size
+            status_code = 200
+            content_range = None
+            if range_value:
+                import re
+
+                match = re.fullmatch(r"bytes=(\d*)-(\d*)", str(range_value).strip())
+                if not match or (not match.group(1) and not match.group(2)):
+                    raise RuntimeError(f"unsupported local Parquet Range header: {range_value}")
+                if match.group(1):
+                    start = int(match.group(1))
+                    end = int(match.group(2)) if match.group(2) else total_size - 1
+                else:
+                    length = int(match.group(2))
+                    start, end = max(0, total_size - length), total_size - 1
+                if start < 0 or end < start or end >= total_size:
+                    raise RuntimeError(f"invalid local Parquet byte range: {range_value}/{total_size}")
+                with local_path.open("rb") as local_handle:
+                    local_handle.seek(start)
+                    body = BytesIO(local_handle.read(end - start + 1))
+                body_size = end - start + 1
+                status_code = 206
+                content_range = f"bytes {start}-{end}/{total_size}"
+            else:
+                body = BufferedReader(local_path.open("rb"))
+                body_size = total_size
+            response = Response()
+            response.status_code = status_code
+            response.url = rewritten_url
+            response.headers.update({
+                "Content-Length": str(body_size),
+                "Content-Type": "application/octet-stream",
+                "Accept-Ranges": "bytes",
+                "ETag": manifest.get("object_etag") or manifest["sha256"],
+                "X-WMKD-Verified-Local-Cache": str(local_path),
+            })
+            if content_range:
+                response.headers["Content-Range"] = content_range
+            response.raw = HTTPResponse(
+                body=body,
+                headers=dict(response.headers),
+                status=status_code,
+                preload_content=False,
+            )
+            response._content_consumed = False
+            return response
         response = _request(self, method, rewritten_url, *args, **kwargs)
         for key in ("location", "link"):
             if key in response.headers:

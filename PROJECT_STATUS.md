@@ -64,6 +64,7 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). Remaining: **SC
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, or perform destructive cleanup without separate explicit approval.
 - Current method: SCW. Deployment and runtime-effective preflight are complete, but three bounded terminal-fix validations reproduced the post-`train_end` SIGABRT. Formal A remains NOT RUN. Do not launch 2,500 steps; the next engineering decision must test a clean supported Python runtime/environment (preferably Python 3.11) or obtain an upstream native-extension fix before another GPU run.
+- SCW materialization transport now has a verified on-demand resumable pinned-Parquet cache. The first blocked materialization run stopped at 0 records; the exact 824,184,452-byte LucieFr shard and local official-preprocessing tiny validation passed. Scientific configuration and official source remain unchanged; a new immutable detached orchestrator may proceed through materialization → audit → gate → Formal A only under existing fail-closed rules.
 - After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 

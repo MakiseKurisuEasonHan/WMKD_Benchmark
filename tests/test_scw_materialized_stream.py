@@ -43,6 +43,25 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertIn('"WMKD_SCW_NETWORK_AUDIT":str(mat/"network_requests.jsonl")', pipeline)
         self.assertIn("HF mirror leak blocked before request", compat)
         self.assertIn('hostname=="huggingface.co"', validator)
+        self.assertIn('"WMKD_SCW_PARQUET_CACHE":str(D/"cache/scw/parquet_prefetch")', pipeline)
+        self.assertIn("ensure_cached", compat)
+        self.assertIn('content_range = f"bytes {start}-{end}/{total_size}"', compat)
+        self.assertIn("range_value and cached is None", compat)
+
+    def test_resumable_prefetch_contract(self):
+        prefetch = (ROOT / "scripts/scw_resumable_prefetch.py").read_text(encoding="utf-8")
+        self.assertIn('"--continue-at", "-"', prefetch)
+        self.assertIn('filename + ".part"', prefetch)
+        self.assertIn("download size mismatch", prefetch)
+        self.assertIn("_parquet_check", prefetch)
+        self.assertIn('"sha256": digest', prefetch)
+        materializer = (ROOT / "scripts/scw_materialize_official.py").read_text(encoding="utf-8")
+        self.assertIn("--tiny-validation-records", materializer)
+        self.assertIn("TINY_VALIDATION_PASS", materializer)
+        local_validation = (ROOT / "scripts/scw_local_prefetch_tiny_validate.py").read_text(encoding="utf-8")
+        self.assertIn("tokenize_function", local_validation)
+        self.assertIn("group_texts", local_validation)
+        self.assertIn('"source_dataset": "LucieFr"', local_validation)
 
     def materialize(self, directory, seed=42, name="records.jsonl"):
         records = Path(directory) / name

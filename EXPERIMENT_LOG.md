@@ -73,3 +73,9 @@ The first conservative cleanup attempt remains recorded as rejected before execu
 - Implemented a wrapper-only post-interleave tokenized materializer, immutable manifest, PyTorch-only sequential local loader, formal entry-point patch, and audit logic. The fixed training prefix is exactly 160,000 examples (40,000 microbatches); duplicates and stochastic observed proportions are preserved.
 - Pure-CPU synthetic tests passed for seed determinism/sensitivity, order, labels/losses, proportions, duplicates, hashes, loader replay, count contract, and fail-closed exhaustion/corruption. No real dataset, model, GPU, AutoDL, La Trobe, Formal A, or Ba was used.
 - Classification: conditional `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2. Formal A remains blocked pending separately authorized real materialization/audit and a clean four-step local-materialized gate.
+
+## SCW resumable shard recovery — 2026-08-31
+
+- Gracefully stopped `scw_materialized_full_20260831_195500` at 0/160000 before gate/Formal A and preserved retry evidence as `BLOCKED_NONRESUMABLE_PARQUET_DOWNLOAD`.
+- Verified HTTP Range resume from offset 1,048,576 and completed the exact LucieFr `RedPajama--fr--2017-51--033.parquet`: 824,184,452 bytes, SHA256 `a78e663cfddc361d3f54e634793b9cb3b0f028e10a8d40ad523324e6bd350228`, Parquet integrity PASS.
+- Added generic on-demand resumable prefetch/cache serving. Targeted tests passed 8/8. A direct verified-local tiny check using official `tokenize_function` and `group_texts` produced 8 LucieFr watermark records at sequence length 512.
