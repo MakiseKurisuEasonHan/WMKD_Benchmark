@@ -85,3 +85,7 @@ SCW Formal A never started. Deterministic run `scw_deterministic_full_20260831_2
 # 2026-08-31 SCW A2 frozen-data status
 
 SCW A is archived without a formal run or scientific result. SCW A2 domestic-data protocol is frozen with ModelScope Aya French / MS Instruct / MS OpenWebText roles. The unique 80k frozen stream and exact 160k two-pass replay audit passed. Formal A2 remains gated by one 4-step clean-exit run; Ba is not started.
+
+## SCW A2 recovery — 2026-09-01
+
+Formal A2 training is complete (2500/2500) and the Teacher artifact exists. Scientific evaluation is incomplete: Base French generation failed before output because its pinned dataset was not available offline. No detector or utility result exists, so `preferred_teacher` remains `NOT_EVALUATED`. Automatic shutdown is temporarily disabled project-wide.

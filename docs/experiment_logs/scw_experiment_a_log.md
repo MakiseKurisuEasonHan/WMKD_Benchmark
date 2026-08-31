@@ -37,3 +37,10 @@
 # Deterministic finite-stream pre-scientific failure — 2026-08-31
 
 `scw_deterministic_full_20260831_214200` terminated during LucieFr pool path discovery: `no authoritative Parquet objects for LucieFr`. Pool progress was 0/95,828; other pools and the final stream were not created. Audit/Gate/Formal A/Ba were not started. The run's automatic shutdown caused the instance power-off. Auto-shutdown is temporarily disabled pending explicit user re-authorization.
+# SCW Experiment A2 protocol — 2026-08-31
+
+Experiment A is archived as a pre-formal official-data infrastructure attempt with no scientific result. A2 replaces the three datasets with ModelScope Aya French, `wyj123456/instruct`, and `mapjack/openwebtextSample`, while retaining the canonical model, French/KGW condition, 0.6/0.2/0.2 role probabilities, losses, optimizer, LR, effective batch, sequence length, and 2,500 steps. A2 uses 80,000 unique records in deterministic PCG64(42) order and repeats the identical order once to supply 160,000 exposures. This is an idea reproduction, not an exact SCW reproduction.
+
+## SCW A2 post-mortem — `scw_a2_full_20260831_214331`
+
+Training reached 2500/2500 and `train_end`, and the final Teacher files were saved. Evaluation stopped at Base French generation before producing records because `jpacifico/French-Alpaca-dataset-Instruct-55K` was unavailable with offline mode enabled. Fresh reload, detector, utility, preference judgement, and reporting were not completed. The terminal policy issued `/usr/bin/shutdown`; automatic shutdown is now disabled project-wide pending explicit user re-authorization.
