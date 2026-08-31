@@ -68,3 +68,8 @@ ARC Challenge acc_norm Base/Teacher: `0.4505119454 / 0.4488054608` (delta `-0.00
 ## 12. Deviations, limitations, and final judgement
 
 Declared deviations are replacement datasets, the 80k frozen unique pool, deterministic PCG64(42) scheduling, and two-pass replay. Strict A and cont1 failure evidence remain preserved. The conclusion is bounded to the tested WMKD A2 setting: SCW's core method/idea reproduced successfully; no claim of exact official-data or full-paper reproduction is made.
+
+## 13. ModelScope archive
+
+<!-- SCW_A2_MODELSCOPE_ARCHIVE_20260901 -->
+The immutable preferred Teacher was uploaded to the private ModelScope repository `MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher`. The fixed nine-file loadable scope contains 6,442,815,654 bytes. Remote filename, size, and ModelScope metadata identity checks passed for 9/9 files and all bytes. Source manifest SHA256 is `0e2bd96ef266fc791e182e793507bfc0db7fe994f1d37ce440adaef923b5dbe1`; Teacher manifest SHA256 is `27f68ea443ca1dbc9f02036ac560a12db5cb063ceec589a0144be5586da97b7b`. Archive status is `uploaded_to_modelscope_awaiting_destination_hash_verification` and `destination_verified=false` because no full 6GB+ destination redownload and independent SHA256 pass was performed. Scientific results are unchanged and Ba remains NOT STARTED.

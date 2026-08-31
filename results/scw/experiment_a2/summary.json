@@ -2370,5 +2370,27 @@
     "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A",
     "status": "COMPLETE",
     "manifest_sha256": "27f68ea443ca1dbc9f02036ac560a12db5cb063ceec589a0144be5586da97b7b"
+  },
+  "modelscope_archive": {
+    "modelscope_repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+    "visibility": "private",
+    "archive_status": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+    "source_manifest_sha256": "0e2bd96ef266fc791e182e793507bfc0db7fe994f1d37ce440adaef923b5dbe1",
+    "teacher_manifest_sha256": "27f68ea443ca1dbc9f02036ac560a12db5cb063ceec589a0144be5586da97b7b",
+    "source_files": 9,
+    "source_bytes": 6442815654,
+    "uploaded_files": 9,
+    "uploaded_bytes": 6442815654,
+    "remote_verified_files": 9,
+    "remote_verified_bytes": 6442815654,
+    "filename_verification": "PASS",
+    "size_verification": "PASS",
+    "remote_metadata_verification": "PASS",
+    "metadata_identity_available_files": 9,
+    "destination_verified": false,
+    "retries": 0,
+    "errors": [],
+    "preferred_teacher": "YES",
+    "ba_started": false
   }
 }
