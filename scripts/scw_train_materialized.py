@@ -50,7 +50,10 @@ def main() -> None:
             "gradient_accumulation_steps": args_config["gradient_accumulation_steps"],
             "per_device_train_batch_size": args_config["per_device_train_batch_size"],
         }
-        if any(actual[key] != contract[key] for key in actual):
+        expected_optimizer_steps = 4 if os.environ.get("WMKD_SCW_SPEED_TEST") == "1" else contract["optimizer_steps"]
+        if actual["optimizer_steps"] != expected_optimizer_steps or any(
+            actual[key] != contract[key] for key in ("gradient_accumulation_steps", "per_device_train_batch_size")
+        ):
             raise RuntimeError("formal training arguments differ from frozen stream contract")
         type_processor = LossTypeProcessor(device="cuda")
         type_processor.add_dataset(1, 0)

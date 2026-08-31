@@ -32,6 +32,8 @@ class MaterializedStreamTests(unittest.TestCase):
         self.assertIn('subprocess.run(["/usr/bin/shutdown"])', pipeline)
         self.assertIn('shutdown_confirmed=False', pipeline)
         self.assertNotIn("os._exit", pipeline)
+        trainer = (ROOT / "scripts/scw_train_materialized.py").read_text(encoding="utf-8")
+        self.assertIn('expected_optimizer_steps = 4 if os.environ.get("WMKD_SCW_SPEED_TEST") == "1"', trainer)
 
     def materialize(self, directory, seed=42, name="records.jsonl"):
         records = Path(directory) / name
