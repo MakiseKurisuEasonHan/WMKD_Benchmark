@@ -224,9 +224,9 @@ def main():
                       "joined_text_sha256": sha_bytes("\n".join(r["text"] for r in rows).encode())}
     corpus_payload["manifest_content_sha256"] = json_sha(corpus_payload); atomic(protocol/"corpus_manifest.json", corpus_payload)
     panel = [("meta-llama/Llama-3.2-3B-Instruct", REV, args.data_root/"models/base/Llama-3.2-3B-Instruct"),
-             ("google/gemma-2b", "frozen ModelScope local snapshot", args.data_root/"models/llmprint_validation/google/gemma-2b"),
-             ("Qwen/Qwen2.5-3B-Instruct", "frozen ModelScope master snapshot", args.data_root/"models/llmprint_validation/models/Qwen--Qwen2.5-3B-Instruct/snapshots/master"),
-             ("microsoft/Phi-3-mini-128k-instruct", "frozen provenance-repaired ModelScope master snapshot", args.data_root/"models/llmprint_validation/models/microsoft--Phi-3-mini-128k-instruct/snapshots/master")]
+             ("google/gemma-2b", "4c0ad9bd274f4fda9be830b72a0833fb1f74a12e", args.data_root/"models/llmprint_validation/google/gemma-2b"),
+             ("Qwen/Qwen2.5-3B-Instruct", "8f4992eda43eea7c770690ddc0de8f732da246f5", args.data_root/"models/llmprint_validation/models/Qwen--Qwen2.5-3B-Instruct/snapshots/master"),
+             ("microsoft/Phi-3-mini-128k-instruct", "36dd6bdc2b730342af51ce16740601d6471e73ff (frozen identity; provenance-repaired equivalent local transport)", args.data_root/"models/llmprint_validation/models/microsoft--Phi-3-mini-128k-instruct/snapshots/master")]
     manifest_runs = {}
     for mid, rev, path in panel:
         first = build_token_manifest(mid, rev, path, rows, corpus_payload["manifest_content_sha256"])
