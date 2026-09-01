@@ -109,6 +109,8 @@ def main() -> None:
     parser.add_argument("--pairs", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--max-pairs", type=int, default=None)
+    parser.add_argument("--scientific-config-sha256")
+    parser.add_argument("--experiment-label", default="A")
     parser.add_argument("--num-steps", type=int, default=1000)
     parser.add_argument("--dtype", choices=("float16", "bfloat16"), default="float16")
     args = parser.parse_args()
@@ -200,6 +202,10 @@ def main() -> None:
             "peak_vram_bytes": int(torch.cuda.max_memory_allocated(0)),
             "upstream_commit": "3e577f98b2bb64780ec2995b074c5aeec9b017e1",
             "runtime_compatibility": "immutable_dynamic_prefix_cache_batch_repeat",
+            "experiment_label": args.experiment_label,
+            "scientific_config_sha256": args.scientific_config_sha256,
+            "warnings": [],
+            "error": None,
         }
         atomic_json(output, record)
         print(json.dumps({"pair_id": pair["pair_id"], "runtime_seconds": runtime, "best_loss": result.best_loss}))

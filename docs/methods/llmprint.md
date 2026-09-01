@@ -50,3 +50,7 @@ Future calibration uses one negative at a time: acquire → verify manifest/equi
 ## Utility and future Ba boundary
 
 Experiment A does not modify Reference weights, so LLMPrint-attributable utility degradation is not applicable and canonical WMKD Base utility provenance is inherited rather than rerun. Future Ba must use this Reference to generate a new method-specific exactly-20k frozen QA set and a fresh canonical full-parameter Student (3 epochs, LR `1e-5`, BF16, batch 8). The frozen A fingerprint package and detector/calibration must be reused. Ba and checkpoint-trajectory analysis remain unstarted and unauthorized.
+
+## Reduced-construction A2
+
+Formal A `llmprint_a_20260901_061225` was user-terminated after 7/300 complete artifacts solely for a deadline/runtime-feasibility scientific redesign; it established no result. A2 uses the first 200 frozen pair IDs in original order and 500 GCG steps, retaining every other construction, detector, panel, reference and runtime choice. It is a bounded reduced-construction adaptation, not an exact default-paper reproduction. Reduced capacity may weaken detectability, so any successful claim is limited to “LLMPrint core reproduction under WMKD reduced-construction A2 setting.”

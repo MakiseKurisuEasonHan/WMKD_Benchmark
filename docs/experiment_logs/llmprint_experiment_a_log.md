@@ -21,3 +21,7 @@
 ## Current gate
 
 Preparation/preflight/speed-test gate: **PASS with documented runtime-only compatibility adaptations**. `ready_for_formal_A=false` until the paper-vs-release gray-box detector semantics are explicitly selected and frozen. Still prohibited: formal 300 construction, any Ba generation/training, negative-panel bulk download, scientific retuning, or cleanup.
+
+## Formal A termination — 2026-09-01
+
+Formal run `llmprint_a_20260901_061225` launched after its gates passed, then was safely stopped under explicit user authorization for a runtime-feasibility scientific redesign. It preserved 7/300 complete 1000-step artifacts through `llmprint-pair-006`; both exact PIDs exited and GPU memory was released. Final status is `TERMINATED_BY_USER_APPROVED_SCIENTIFIC_REDESIGN`; scientific result is `NOT_ESTABLISHED`. This was neither an infrastructure failure, OOM, nor a scientific-method failure. All partial artifacts and metadata remain immutable historical evidence and are prohibited from A2 reuse or detector calibration.

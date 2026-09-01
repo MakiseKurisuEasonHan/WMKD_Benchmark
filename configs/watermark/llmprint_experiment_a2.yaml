@@ -1,0 +1,54 @@
+project: WMKD_Benchmark
+method: LLMPrint
+experiment: A2
+status: READINESS_PREPARATION
+scientific_redesign_authorized: true
+scientific_adaptation: reduced_construction_for_runtime_feasibility
+bounded_conclusion: LLMPrint core reproduction under WMKD reduced-construction A2 setting
+reference:
+  upstream: meta-llama/Llama-3.2-3B-Instruct
+  revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95
+  local_path: /root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct
+  model_modified: false
+upstream:
+  repository: https://github.com/hifi-hyp/ACL-LLMPrint.git
+  commit: 3e577f98b2bb64780ec2995b074c5aeec9b017e1
+construction:
+  fingerprints: 200
+  source_pair_artifact_sha256: 47443733c5a85ee1bcb131144d2b55a4ecab44ae8de752d978d99b1119ba0c37
+  pair_subset: results/llmprint/llmprint_a2_pairs_200.json
+  pair_subset_sha256: bb931c419002c9a2a5b3da11e22a0b033c9f31410e0e28567d15d8f14aa42d9d
+  pair_selection: ordered_ids_000_through_199
+  prompt_template: "Randomly output a word from your vocabulary {optim_str}"
+  suffix_length_tokens: 20
+  initial_suffix_tokens: 20_x_tokens
+  alpha: 0.5
+  beta: 1.0
+  margin: 0.0
+  gcg_iterations: 500
+  search_width: 64
+  topk: 64
+  n_replace: 1
+  allow_non_ascii: false
+  filter_ids: true
+  use_prefix_cache: true
+  dtype: float16
+runtime:
+  cublas_workspace_config: ":4096:8"
+detector:
+  primary_name: PRIMARY_PAPER_GRAYBOX
+  total_bits: 200
+  bit_comparison: ">="
+  std_ddof: 1
+  z: 1.64
+  tau_clipped: false
+  positive_condition: "accuracy >= tau"
+  supplementary_name: SUPPLEMENTARY_RELEASE_GRAYBOX
+  supplementary_frozen_unchanged: true
+validation_panel:
+  manifest: results/llmprint/validation_negative_panel_manifest.json
+  slots: 13
+  replacements: 0
+  unresolved: 0
+future_ba:
+  authorized: false
