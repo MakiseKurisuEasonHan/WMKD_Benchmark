@@ -131,3 +131,7 @@ The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archiv
 ## 2026-09-01 — WMKD 5/7 closure integrity audit
 
 Generated 10/10 canonical full experiment logs and the global index under `results/`. Persisted trajectory coverage: PN-FP Teacher/Student unavailable; EverTracer Teacher unavailable and Ba 7500 timing records; CTCC Teacher 286 trainer records and Ba 7500 timings; iSeal Teacher 1500 history records and Ba 7500 timings; SCW Teacher 250 trainer records and Ba 7500 timings. All detector/utility/archive source snapshots are retained. None of the five Ba Students has intermediate checkpoint-level detector evidence, so exact disappearance-step localization is unsupported. No experiment, generation, detector, utility, or upload was rerun.
+
+### AutoDL bounded cleanup
+
+After GitHub/source synchronization and small-evidence capture, deleted only two explicitly non-scientific speed-test namespaces and two incomplete `.part` files. Logical targets totaled 51,689,025,056 bytes; filesystem used space fell from 183,968,206,848 to 132,278,788,096 bytes (51,689,418,752 bytes reclaimed; 35% to 25% usage). All formal checkpoints/final models, SCW frozen20k, canonical Base, shared prompt/cache/utility resources, environments, manifests and ambiguous paths were retained. Automatic shutdown remained disabled and the instance remained running.

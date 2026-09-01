@@ -1,0 +1,59 @@
+{
+  "schema_version": "wmkd.cleanup-summary.v1",
+  "date": "2026-09-01",
+  "status": "COMPLETED_HIGH_CONFIDENCE_ONLY",
+  "disk_before": {
+    "filesystem_bytes": 536870912000,
+    "used_bytes": 183968206848,
+    "available_bytes": 352902705152,
+    "use_percent": 35
+  },
+  "deleted": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000",
+      "bytes": 25736954290,
+      "classification": "non-scientific Ba speed test",
+      "small_evidence": "results/closure/autodl_speedtest_cleanup_evidence.json"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests",
+      "bytes": 25737006190,
+      "classification": "non-scientific teacher/student speed tests",
+      "small_evidence": "results/closure/autodl_speedtest_cleanup_evidence.json"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/cache/scw/parquet_prefetch/83865aa119b479ff8c00/train-00062-of-00080.parquet.part",
+      "bytes": 214016000,
+      "classification": "incomplete download fragment"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/cache/scw/parquet_prefetch/range_test/current.part",
+      "bytes": 1048576,
+      "classification": "range-test fragment"
+    }
+  ],
+  "logical_target_bytes": 51689025056,
+  "filesystem_reclaimed_bytes": 51689418752,
+  "disk_after": {
+    "filesystem_bytes": 536870912000,
+    "used_bytes": 132278788096,
+    "available_bytes": 404592123904,
+    "use_percent": 25
+  },
+  "preserved": [
+    "/root/autodl-tmp/WMKD_Benchmark",
+    "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env",
+    "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface",
+    "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A/checkpoint-2500",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/checkpoint-7500",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/dataset/frozen_qa.jsonl",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/checkpoint-7500",
+    "all formal final Teacher/Student artifacts still present on current AutoDL",
+    "all ambiguous caches, environments, shared datasets, utility resources, manifests, logs and provenance"
+  ],
+  "pnfp_teacher_local_note": "The historical PN-FP preferred Teacher source path is not present on the current AutoDL; its private ModelScope archive and project manifests remain recorded. This audit did not delete it.",
+  "auto_shutdown_enabled": false,
+  "instance_left_running": true
+}
