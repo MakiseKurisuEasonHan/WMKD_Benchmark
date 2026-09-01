@@ -1,0 +1,396 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "generated_at": "2026-09-01T04:14:59.228887+00:00",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "watermark_method": "PN-FP",
+    "experiment": "Ba",
+    "role": "ba_student",
+    "formal_run_id": "pnfp_exp_ba_20260828_111148",
+    "continuation_ids": [],
+    "parent_run": null,
+    "timestamps": {
+      "start": null,
+      "end": null
+    },
+    "final_scientific_status": "completed"
+  },
+  "provenance": {
+    "paper_or_official_repo": null,
+    "official_commit": null,
+    "code_commit": null,
+    "canonical_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "dataset_and_manifest_evidence": [
+      {
+        "field": "dataset",
+        "value": {
+          "raw_candidates": 32002,
+          "generation_parse_failures": 1198,
+          "dedup_rejected": 11789,
+          "unique_qa": 20213,
+          "frozen_qa": 20000,
+          "manifest_sha256": "6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72"
+        }
+      }
+    ],
+    "tokenizer_or_template": null,
+    "scientific_adaptations": null,
+    "runtime_adaptations": null,
+    "source_documents": [
+      {
+        "path": "results/summaries/pnfp_experiment_ba_summary.json",
+        "sha256": "681a292aca6f805ec37faecc644c08700f02787d1037e1fa902f22d910903570",
+        "bytes": 3758
+      },
+      {
+        "path": "results/summaries/pnfp_ba_modelscope_upload.json",
+        "sha256": "3957b5d89e5b4a1372bfba4fa763a0d5081bc4addaec43e8d666596945064db2",
+        "bytes": 1047
+      }
+    ]
+  },
+  "environment": {
+    "recorded_evidence": [],
+    "unavailable_fields_are_not_inferred": true
+  },
+  "configuration": {
+    "recorded_evidence": [
+      {
+        "field": "distillation",
+        "value": {
+          "epochs": 3,
+          "optimizer_steps_completed": 7500,
+          "optimizer_steps_total": 7500,
+          "learning_rate": 1e-05,
+          "precision": "bf16",
+          "full_parameter": true,
+          "lora": false,
+          "seed": 42,
+          "batch_size": 8,
+          "oom_occurred": false,
+          "batch_fallback_occurred": false,
+          "aggregate_train_loss": 0.3961066076,
+          "last_logged_batch_loss": 0.2683,
+          "training_eval_loss_status": "not_recorded"
+        }
+      }
+    ],
+    "unavailable_fields_are_null_not_inferred": true
+  },
+  "training_telemetry": [],
+  "training_telemetry_coverage": {
+    "source": null,
+    "record_count": 0,
+    "fields": [],
+    "note": "no persisted per-step trajectory located"
+  },
+  "stage_timeline": {
+    "recorded_status_and_continuation_evidence": [],
+    "unrecorded_stage_timestamps": null
+  },
+  "generation": {
+    "recorded_evidence": [
+      {
+        "field": "dataset",
+        "value": {
+          "raw_candidates": 32002,
+          "generation_parse_failures": 1198,
+          "dedup_rejected": 11789,
+          "unique_qa": 20213,
+          "frozen_qa": 20000,
+          "manifest_sha256": "6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72"
+        }
+      }
+    ],
+    "ba_required_fields_preserved_in_source_snapshots": true
+  },
+  "watermark_evaluation": {
+    "method_specific_recorded_evidence": [
+      {
+        "field": "watermark",
+        "value": {
+          "canonical_base": {
+            "detected": 1,
+            "total": 1024,
+            "detection_rate": 0.0009765625,
+            "detection_percent": 0.09765625
+          },
+          "a2_teacher": {
+            "detected": 956,
+            "total": 1024,
+            "detection_rate": 0.93359375,
+            "detection_percent": 93.359375
+          },
+          "ba_student": {
+            "detected": 98,
+            "total": 1024,
+            "detection_rate": 0.095703125,
+            "detection_percent": 9.5703125,
+            "invalid_samples": 0,
+            "evaluation_errors": 0
+          },
+          "teacher_to_ba_absolute_drop_rate": 0.837890625,
+          "teacher_to_ba_absolute_drop_percentage_points": 83.7890625,
+          "ba_vs_base_difference_rate": 0.0947265625,
+          "ba_vs_base_difference_percentage_points": 9.47265625,
+          "retention_ratio": 0.10251046025104603,
+          "retention_percent": 10.251046
+        }
+      }
+    ],
+    "semantics_preserved_without_cross-method_normalization": true
+  },
+  "utility": {
+    "recorded_evidence": [
+      {
+        "field": "utility",
+        "value": {
+          "arc_challenge_acc_norm": {
+            "base": 0.448805461,
+            "a2_teacher": 0.443686007,
+            "ba_student": 0.478668942,
+            "ba_vs_a2": 0.034982935,
+            "ba_vs_base": 0.029863481
+          },
+          "truthfulqa_mc2": {
+            "base": 0.50545076,
+            "a2_teacher": 0.467427921,
+            "ba_student": 0.463479842,
+            "ba_vs_a2": -0.00394808,
+            "ba_vs_base": -0.041970918
+          },
+          "gate": "passed",
+          "ordinary_generation_repetition": "not_established"
+        }
+      },
+      {
+        "field": "truthfulqa_mc2",
+        "value": {
+          "base": 0.50545076,
+          "a2_teacher": 0.467427921,
+          "ba_student": 0.463479842,
+          "ba_vs_a2": -0.00394808,
+          "ba_vs_base": -0.041970918
+        }
+      }
+    ]
+  },
+  "artifacts": {
+    "checkpoint_inventory": {
+      "inventory": "final Student recorded in source summary/archive; current AutoDL locality not established",
+      "intermediate": []
+    },
+    "modelscope_repo": "MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student",
+    "archive_evidence": {
+      "results/summaries/pnfp_ba_modelscope_upload.json": {
+        "artifact_id": "pnfp_ba_student",
+        "source_run": "pnfp_exp_ba_20260828_111148",
+        "repo": "MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student",
+        "visibility": "private",
+        "canonical_files": 8,
+        "canonical_bytes": 6434691756,
+        "uploaded_objects": 10,
+        "source_sha256": "passed",
+        "remote_size_verification": "passed",
+        "remote_sha256_verification": "passed_by_authenticated_same_source_remote_reread",
+        "canonical_verified": "8/8",
+        "metadata_verified": "2/2",
+        "upload_elapsed_seconds": 569.3071978092194,
+        "average_mb_s": 11.302675983654666,
+        "verification_elapsed_seconds": 2254.537592,
+        "total_run_elapsed_seconds": 2828.755715,
+        "retries": 0,
+        "interruptions": 0,
+        "resume": false,
+        "status": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+        "destination_sha256_verification": "not_started",
+        "verification_scope_note": "The 8/8 canonical and 2/2 metadata checks were a stronger same-source remote reread, not verification on a distinct destination host.",
+        "school_archive": "not_archived_on_school_server"
+      }
+    },
+    "manifest_sha256": null,
+    "destination_verified": false
+  },
+  "failures_and_continuations": [],
+  "watermark_loss_analysis_support": {
+    "supported": false,
+    "resolution": "Teacher-before versus final-Student-after only",
+    "evidence": [
+      "canonical Teacher detector result",
+      "canonical final Student detector result"
+    ],
+    "available_checkpoints": [],
+    "checkpoint_level_watermark_evaluation": false,
+    "intermediate_student_generations": false,
+    "intermediate_detector_metrics": false,
+    "limitation": "No persisted detector evaluation at intermediate Student checkpoints; training loss, gradient norm, or timing cannot identify the watermark-disappearance step."
+  },
+  "conclusion": {
+    "paper_fact": null,
+    "experimental_fact": "PN-FP is vulnerable under the tested direct-distillation setting, with strong watermark degradation and partial retention while utility remains largely preserved.",
+    "bounded_interpretation": "PN-FP is vulnerable under the tested direct-distillation setting, with strong watermark degradation and partial retention while utility remains largely preserved.",
+    "limitations": [
+      "single formal Ba run",
+      "single seed",
+      "one teacher/student architecture",
+      "same-size 3B-to-3B setting",
+      "20k QA is smaller than CAN's roughly 200k setting",
+      "Ba ordinary-generation/repetition diagnostic not established",
+      "training eval loss not recorded",
+      "Ba watermark remains 9.5703125%, above canonical Base",
+      "result establishes vulnerability only under the tested setting"
+    ]
+  },
+  "source_snapshots": {
+    "results/summaries/pnfp_experiment_ba_summary.json": {
+      "method": "PN-FP",
+      "experiment": "Ba",
+      "attack": "direct_distillation",
+      "run_id": "pnfp_exp_ba_20260828_111148",
+      "engineering_status": "completed",
+      "exit_code": 0,
+      "teacher": {
+        "run_id": "pnfp_exp_a2_20260828_025240",
+        "evaluation_run_id": "pnfp_exp_a2_eval_20260828_105530",
+        "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+        "role": "preferred_utility_preserving_watermarked_teacher"
+      },
+      "student_initialization": {
+        "backbone": "meta-llama/Llama-3.2-3B-Instruct",
+        "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+        "weights": "fresh_unwatermarked_canonical_base"
+      },
+      "dataset": {
+        "raw_candidates": 32002,
+        "generation_parse_failures": 1198,
+        "dedup_rejected": 11789,
+        "unique_qa": 20213,
+        "frozen_qa": 20000,
+        "manifest_sha256": "6ad11ff25826c32d71641c7433993070a8865e9e64e99841856e09b61d861a72"
+      },
+      "distillation": {
+        "epochs": 3,
+        "optimizer_steps_completed": 7500,
+        "optimizer_steps_total": 7500,
+        "learning_rate": 1e-05,
+        "precision": "bf16",
+        "full_parameter": true,
+        "lora": false,
+        "seed": 42,
+        "batch_size": 8,
+        "oom_occurred": false,
+        "batch_fallback_occurred": false,
+        "aggregate_train_loss": 0.3961066076,
+        "last_logged_batch_loss": 0.2683,
+        "training_eval_loss_status": "not_recorded"
+      },
+      "checkpoint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba/pnfp_exp_ba_20260828_111148/checkpoints/student_batch_8/final_model",
+        "reload_validation": "passed",
+        "reload_output": "RELOAD_OK"
+      },
+      "watermark": {
+        "canonical_base": {
+          "detected": 1,
+          "total": 1024,
+          "detection_rate": 0.0009765625,
+          "detection_percent": 0.09765625
+        },
+        "a2_teacher": {
+          "detected": 956,
+          "total": 1024,
+          "detection_rate": 0.93359375,
+          "detection_percent": 93.359375
+        },
+        "ba_student": {
+          "detected": 98,
+          "total": 1024,
+          "detection_rate": 0.095703125,
+          "detection_percent": 9.5703125,
+          "invalid_samples": 0,
+          "evaluation_errors": 0
+        },
+        "teacher_to_ba_absolute_drop_rate": 0.837890625,
+        "teacher_to_ba_absolute_drop_percentage_points": 83.7890625,
+        "ba_vs_base_difference_rate": 0.0947265625,
+        "ba_vs_base_difference_percentage_points": 9.47265625,
+        "retention_ratio": 0.10251046025104603,
+        "retention_percent": 10.251046
+      },
+      "utility": {
+        "arc_challenge_acc_norm": {
+          "base": 0.448805461,
+          "a2_teacher": 0.443686007,
+          "ba_student": 0.478668942,
+          "ba_vs_a2": 0.034982935,
+          "ba_vs_base": 0.029863481
+        },
+        "truthfulqa_mc2": {
+          "base": 0.50545076,
+          "a2_teacher": 0.467427921,
+          "ba_student": 0.463479842,
+          "ba_vs_a2": -0.00394808,
+          "ba_vs_base": -0.041970918
+        },
+        "gate": "passed",
+        "ordinary_generation_repetition": "not_established"
+      },
+      "scientific_judgement": "PN-FP is vulnerable under the tested direct-distillation setting, with strong watermark degradation and partial retention while utility remains largely preserved.",
+      "limitations": [
+        "single formal Ba run",
+        "single seed",
+        "one teacher/student architecture",
+        "same-size 3B-to-3B setting",
+        "20k QA is smaller than CAN's roughly 200k setting",
+        "Ba ordinary-generation/repetition diagnostic not established",
+        "training eval loss not recorded",
+        "Ba watermark remains 9.5703125%, above canonical Base",
+        "result establishes vulnerability only under the tested setting"
+      ],
+      "report_path": "docs/reproduction_reports/pnfp_experiment_ba_report.md",
+      "dedicated_log_path": "docs/experiment_logs/pnfp_experiment_ba_log.md",
+      "email": {
+        "terminal_event": "COMPLETED",
+        "delivery": "succeeded",
+        "scientific_criterion": false
+      }
+    },
+    "results/summaries/pnfp_ba_modelscope_upload.json": {
+      "artifact_id": "pnfp_ba_student",
+      "source_run": "pnfp_exp_ba_20260828_111148",
+      "repo": "MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student",
+      "visibility": "private",
+      "canonical_files": 8,
+      "canonical_bytes": 6434691756,
+      "uploaded_objects": 10,
+      "source_sha256": "passed",
+      "remote_size_verification": "passed",
+      "remote_sha256_verification": "passed_by_authenticated_same_source_remote_reread",
+      "canonical_verified": "8/8",
+      "metadata_verified": "2/2",
+      "upload_elapsed_seconds": 569.3071978092194,
+      "average_mb_s": 11.302675983654666,
+      "verification_elapsed_seconds": 2254.537592,
+      "total_run_elapsed_seconds": 2828.755715,
+      "retries": 0,
+      "interruptions": 0,
+      "resume": false,
+      "status": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+      "destination_sha256_verification": "not_started",
+      "verification_scope_note": "The 8/8 canonical and 2/2 metadata checks were a stronger same-source remote reread, not verification on a distinct destination host.",
+      "school_archive": "not_archived_on_school_server"
+    }
+  },
+  "integrity": {
+    "no_values_invented": true,
+    "source_priority": [
+      "immutable run artifacts",
+      "machine-readable summary",
+      "formal report",
+      "experiment log",
+      "trainer/state/log files",
+      "project records"
+    ]
+  }
+}

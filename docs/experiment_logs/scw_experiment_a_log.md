@@ -67,3 +67,7 @@ Completed standardized Direct Distillation with exactly 20,000 frozen Teacher QA
 
 <!-- SCW_BA_STUDENT_MODELSCOPE_ARCHIVE_20260901 -->
 The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archived to private repo `MakiseKurisuEasonHan/WMKD-SCW-Ba-Student`. Upload and remote filename/size/metadata verification passed for 9 files and 6442815786 bytes. Source manifest SHA256 `f8554fc57258f28b945835dcab759ae4891633cc835918cf63156b14a9f41ef1`; status `uploaded_to_modelscope_awaiting_destination_hash_verification`; `destination_verified=false`. The bounded scientific result remains loss of detectable SCW watermark under the tested standardized Ba condition with the Student in a Base-like negative detector regime. Next step: SCW final closure / commit review; no cleanup was performed.
+
+## SCW full closure — 2026-09-01
+
+SCW A2 reproduction, preferred Teacher evaluation/archive, standardized Ba, final Student evaluation/archive, reports, summaries, canonical Teacher/Student full JSON logs, and global indexing are complete. SCW status is **FULLY CLOSED**. The Ba conclusion remains bounded to the tested same-size 3B hard-label direct-distillation condition: final Student detectability moved to the Base-like negative regime. No intermediate checkpoint detector measurements exist, so the disappearance step is not localized.

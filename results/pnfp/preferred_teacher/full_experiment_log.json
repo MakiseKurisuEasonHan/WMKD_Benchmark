@@ -1,0 +1,497 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "generated_at": "2026-09-01T04:14:59.228887+00:00",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "watermark_method": "PN-FP",
+    "experiment": "A2",
+    "role": "preferred_teacher",
+    "formal_run_id": "pnfp_exp_a_20260827_232033",
+    "continuation_ids": [],
+    "parent_run": null,
+    "timestamps": {
+      "start": null,
+      "end": null
+    },
+    "final_scientific_status": "completed"
+  },
+  "provenance": {
+    "paper_or_official_repo": {
+      "repository": "SewoongLab/scalable-fingerprinting-of-llms",
+      "revision": "fdceaba14bd3e89340916a6a40e27c945d48460e"
+    },
+    "official_commit": null,
+    "code_commit": null,
+    "canonical_model": {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+    },
+    "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "dataset_and_manifest_evidence": [],
+    "tokenizer_or_template": null,
+    "scientific_adaptations": null,
+    "runtime_adaptations": null,
+    "source_documents": [
+      {
+        "path": "results/summaries/pnfp_experiment_a_summary.json",
+        "sha256": "8ad5a3538e6336668be54f08f63741aebc35ea9ea98b720fbd2fab04df5b31e7",
+        "bytes": 1654
+      },
+      {
+        "path": "results/summaries/pnfp_experiment_a2_summary.json",
+        "sha256": "85991617002b4854a9e6617cc710d81a98706faf0ad32f76fab83f542f9c09d0",
+        "bytes": 6094
+      },
+      {
+        "path": "results/summaries/pnfp_a2_modelscope_upload.json",
+        "sha256": "a7c276e490c0bccefac604a0f8fc1940893a1a7ab0c9c79428dd3190e0f74d6a",
+        "bytes": 3007
+      }
+    ]
+  },
+  "environment": {
+    "recorded_evidence": [],
+    "unavailable_fields_are_not_inferred": true
+  },
+  "configuration": {
+    "recorded_evidence": [
+      {
+        "field": "configuration",
+        "value": {
+          "fingerprints": 1024,
+          "key_length": 16,
+          "generation_response_length": 16,
+          "training_response_length": 1,
+          "epochs": 30,
+          "learning_rate": 5e-05,
+          "weight_decay": 0.0001,
+          "batch_size": 8,
+          "precision": "bf16",
+          "seed": 42,
+          "full_parameter": true,
+          "lora": false
+        }
+      }
+    ],
+    "unavailable_fields_are_null_not_inferred": true
+  },
+  "training_telemetry": [],
+  "training_telemetry_coverage": {
+    "source": null,
+    "record_count": 0,
+    "fields": [],
+    "note": "no persisted per-step trajectory located"
+  },
+  "stage_timeline": {
+    "recorded_status_and_continuation_evidence": [],
+    "unrecorded_stage_timestamps": null
+  },
+  "generation": {
+    "recorded_evidence": [],
+    "ba_required_fields_preserved_in_source_snapshots": false
+  },
+  "watermark_evaluation": {
+    "method_specific_recorded_evidence": [],
+    "semantics_preserved_without_cross-method_normalization": true
+  },
+  "utility": {
+    "recorded_evidence": []
+  },
+  "artifacts": {
+    "checkpoint_inventory": {
+      "inventory": "final checkpoint recorded in source summary; current AutoDL locality not established",
+      "intermediate": []
+    },
+    "modelscope_repo": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+    "archive_evidence": {
+      "results/summaries/pnfp_a2_modelscope_upload.json": {
+        "schema_version": 1,
+        "transfer_run_id": "modelscope_a2_upload_20260828_082200",
+        "repo_id": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+        "visibility": "private",
+        "source_run": "pnfp_exp_a2_20260828_025240",
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+        "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/modelscope_a2_upload_20260828_082200/WMKD_ARTIFACT_MANIFEST.json",
+        "source_file_count": 8,
+        "source_total_bytes": 6434691753,
+        "source_sha256_verification": "passed_against_immutable_checkpoint_manifest",
+        "files": [
+          {
+            "path": "config.json",
+            "bytes": 966,
+            "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 184,
+            "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+          },
+          {
+            "path": "model-00001-of-00002.safetensors",
+            "bytes": 4965799096,
+            "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c"
+          },
+          {
+            "path": "model-00002-of-00002.safetensors",
+            "bytes": 1459729952,
+            "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa"
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "bytes": 20919,
+            "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 325,
+            "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085754,
+            "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54557,
+            "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+          }
+        ],
+        "small_upload_test": {
+          "path": "transfer_tests/modelscope_upload_test_20260828T081723Z.txt",
+          "bytes": 2097152,
+          "sha256": "817d7a671093175350ec48ddd75ab3045e2b77eeb12d0f57c1a63ae0e04bd0b7",
+          "elapsed_seconds": 2.2108326592,
+          "effective_MB_per_second": 0.9485801611,
+          "blob_reused_on_timed_overwrite": true,
+          "remote_size_verified": true,
+          "remote_sha256_verified": true,
+          "local_deleted": true,
+          "remote_deleted": false,
+          "remote_cleanup_blocker": "ModelScope token policy requires web-console deletion"
+        },
+        "formal_upload": {
+          "start_utc": "2026-08-28T08:19:01.185366+00:00",
+          "end_utc": "2026-08-28T08:28:38.742366+00:00",
+          "elapsed_seconds": 577.3737902418,
+          "average_MB_per_second": 11.1447590136,
+          "retries": 0,
+          "resume": false,
+          "uploaded_model_file_count": 8,
+          "uploaded_metadata_file_count": 2,
+          "remote_file_count_verified": true,
+          "remote_sizes_verified": true,
+          "remote_sha256_verified_count": 10
+        },
+        "artifact_state": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+        "school_download_started": false,
+        "ba_student_uploaded": false,
+        "gpu_used": false
+      }
+    },
+    "manifest_sha256": null,
+    "destination_verified": false
+  },
+  "failures_and_continuations": [],
+  "watermark_loss_analysis_support": {
+    "supported": false,
+    "resolution": "Teacher-before versus final-Student-after only",
+    "evidence": [
+      "final Teacher detector result"
+    ],
+    "available_checkpoints": [],
+    "checkpoint_level_watermark_evaluation": false,
+    "intermediate_student_generations": null,
+    "intermediate_detector_metrics": null,
+    "limitation": "This object is a Teacher; disappearance localization applies to its downstream Ba Student."
+  },
+  "conclusion": {
+    "paper_fact": null,
+    "experimental_fact": "PN-FP core reproduction successful",
+    "bounded_interpretation": "PN-FP core reproduction successful",
+    "limitations": null
+  },
+  "source_snapshots": {
+    "results/summaries/pnfp_experiment_a_summary.json": {
+      "schema_version": 1,
+      "method": "PN-FP",
+      "experiment": "A",
+      "run_id": "pnfp_exp_a_20260827_232033",
+      "engineering_status": "completed",
+      "backbone": {
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+      },
+      "official_source": {
+        "repository": "SewoongLab/scalable-fingerprinting-of-llms",
+        "revision": "fdceaba14bd3e89340916a6a40e27c945d48460e"
+      },
+      "configuration": {
+        "fingerprints": 1024,
+        "key_length": 16,
+        "generation_response_length": 16,
+        "training_response_length": 1,
+        "epochs": 30,
+        "learning_rate": 5e-05,
+        "weight_decay": 0.0001,
+        "batch_size": 8,
+        "precision": "bf16",
+        "seed": 42,
+        "full_parameter": true,
+        "lora": false
+      },
+      "training": {
+        "epochs_completed": 30,
+        "final_eval_loss": 0.0119302,
+        "oom_occurred": false
+      },
+      "watermarked_detected": 1019,
+      "watermarked_total": 1024,
+      "watermarked_rate": 0.9951171875,
+      "base_detected": 1,
+      "base_total": 1024,
+      "base_rate": 0.0009765625,
+      "paired_absolute_difference": 0.994140625,
+      "watermarked_invalid_samples": 0,
+      "base_invalid_samples": 0,
+      "watermarked_evaluation_errors": 0,
+      "base_evaluation_errors": 0,
+      "reload_validation": "passed",
+      "checkpoint_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/checkpoints/official/saved_models/a0a21e74c9f8f189aee68a315cb668b4/final_model",
+      "scientific_judgement": "PN-FP core reproduction successful",
+      "notification_note": "COMPLETED notification initially failed with SMTP TimeoutError; experiment unaffected"
+    },
+    "results/summaries/pnfp_experiment_a2_summary.json": {
+      "method": "PN-FP",
+      "experiment": "A2",
+      "run_type": "evaluation_only",
+      "run_id": "pnfp_exp_a2_eval_20260828_105530",
+      "parent_training_run": "pnfp_exp_a2_20260828_025240",
+      "training_run_operational_status": "failed during external dataset acquisition after all training and reusable evaluations completed",
+      "engineering_status": "completed",
+      "checkpoint_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+      "reload_validation": "passed in parent and checkpoint manifest reverified",
+      "dataset_provenance": {
+        "arc_challenge": {
+          "repo_id": "allenai/ai2_arc",
+          "revision": "210d026faf9955653af8916fad021475a3f00453",
+          "config": "ARC-Challenge",
+          "transport": "https://hf-mirror.com",
+          "local_dir": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_a2_eval/allenai__ai2_arc"
+        },
+        "truthfulqa_mc2": {
+          "repo_id": "truthful_qa",
+          "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+          "config": "multiple_choice",
+          "transport": "https://hf-mirror.com",
+          "local_dir": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_a2_eval/truthful_qa"
+        },
+        "lm_eval": "0.4.3",
+        "datasets": "2.20.0"
+      },
+      "watermarked": {
+        "label": "watermarked",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+        "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+        "fingerprints_requested": 1024,
+        "fingerprints_evaluated": 1024,
+        "detected": 956,
+        "detection_rate": 0.93359375,
+        "invalid_samples": 0,
+        "evaluation_errors": 0,
+        "generation_response_length": 16,
+        "detection_response_length": 1,
+        "serialization": "llama_chat_template_user_generation_prompt"
+      },
+      "base": {
+        "label": "base",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+        "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+        "fingerprints_requested": 1024,
+        "fingerprints_evaluated": 1024,
+        "detected": 1,
+        "detection_rate": 0.0009765625,
+        "invalid_samples": 0,
+        "evaluation_errors": 0,
+        "generation_response_length": 16,
+        "detection_response_length": 1,
+        "serialization": "llama_chat_template_user_generation_prompt"
+      },
+      "a1_watermarked": {
+        "label": "watermarked",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/checkpoints/official/saved_models/a0a21e74c9f8f189aee68a315cb668b4/final_model",
+        "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a_20260827_232033/evaluation/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+        "fingerprints_requested": 1024,
+        "fingerprints_evaluated": 1024,
+        "detected": 1019,
+        "detection_rate": 0.9951171875,
+        "invalid_samples": 0,
+        "evaluation_errors": 0,
+        "generation_response_length": 16,
+        "detection_response_length": 1,
+        "serialization": "llama_chat_template_user_generation_prompt"
+      },
+      "ordinary_generation": {
+        "base_summary": {
+          "calls": 10,
+          "max_token_hits": 3,
+          "obvious_repetition": 0
+        },
+        "a1_summary": {
+          "calls": 10,
+          "max_token_hits": 10,
+          "obvious_repetition": 0
+        },
+        "a2_smoke_summary": {
+          "calls": 10,
+          "max_token_hits": 3,
+          "obvious_repetition": 0
+        }
+      },
+      "benchmarks": {
+        "base": {
+          "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+          "arc_challenge_acc_norm": 0.44880546075085326,
+          "truthfulqa_mc2_acc": 0.505450760153828,
+          "raw_results": {
+            "truthfulqa_mc2_local": {
+              "acc,none": 0.505450760153828,
+              "acc_stderr,none": 0.015602814964389472,
+              "alias": "truthfulqa_mc2_local"
+            },
+            "arc_challenge_local": {
+              "acc,none": 0.447098976109215,
+              "acc_stderr,none": 0.014529380160526848,
+              "acc_norm,none": 0.44880546075085326,
+              "acc_norm_stderr,none": 0.014534599585097664,
+              "alias": "arc_challenge_local"
+            }
+          }
+        },
+        "a2": {
+          "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+          "arc_challenge_acc_norm": 0.44368600682593856,
+          "truthfulqa_mc2_acc": 0.4674279212401518,
+          "raw_results": {
+            "truthfulqa_mc2_local": {
+              "acc,none": 0.4674279212401518,
+              "acc_stderr,none": 0.01532841684429326,
+              "alias": "truthfulqa_mc2_local"
+            },
+            "arc_challenge_local": {
+              "acc,none": 0.45051194539249145,
+              "acc_stderr,none": 0.014539646098471627,
+              "acc_norm,none": 0.44368600682593856,
+              "acc_norm_stderr,none": 0.014518421825670456,
+              "alias": "arc_challenge_local"
+            }
+          }
+        },
+        "delta": {
+          "arc_challenge_acc_norm": -0.005119453924914696,
+          "truthfulqa_mc2_acc": -0.03802283891367614
+        }
+      },
+      "watermark_gate": "passed",
+      "utility_gate": "passed",
+      "utility_gate_rule": "no severe repetition collapse and both ARC acc_norm and TruthfulQA MC2 deltas >= -0.10",
+      "preferred_teacher": true,
+      "scientific_judgement": "A2 is the preferred PN-FP teacher for future Ba"
+    },
+    "results/summaries/pnfp_a2_modelscope_upload.json": {
+      "schema_version": 1,
+      "transfer_run_id": "modelscope_a2_upload_20260828_082200",
+      "repo_id": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+      "visibility": "private",
+      "source_run": "pnfp_exp_a2_20260828_025240",
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp/pnfp_exp_a2_20260828_025240/checkpoints/official/saved_models/94e1d3d49af0d01db5f246a8f7f6eb44/final_model",
+      "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/modelscope_a2_upload_20260828_082200/WMKD_ARTIFACT_MANIFEST.json",
+      "source_file_count": 8,
+      "source_total_bytes": 6434691753,
+      "source_sha256_verification": "passed_against_immutable_checkpoint_manifest",
+      "files": [
+        {
+          "path": "config.json",
+          "bytes": 966,
+          "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "bytes": 4965799096,
+          "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "bytes": 1459729952,
+          "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 9085754,
+          "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+        }
+      ],
+      "small_upload_test": {
+        "path": "transfer_tests/modelscope_upload_test_20260828T081723Z.txt",
+        "bytes": 2097152,
+        "sha256": "817d7a671093175350ec48ddd75ab3045e2b77eeb12d0f57c1a63ae0e04bd0b7",
+        "elapsed_seconds": 2.2108326592,
+        "effective_MB_per_second": 0.9485801611,
+        "blob_reused_on_timed_overwrite": true,
+        "remote_size_verified": true,
+        "remote_sha256_verified": true,
+        "local_deleted": true,
+        "remote_deleted": false,
+        "remote_cleanup_blocker": "ModelScope token policy requires web-console deletion"
+      },
+      "formal_upload": {
+        "start_utc": "2026-08-28T08:19:01.185366+00:00",
+        "end_utc": "2026-08-28T08:28:38.742366+00:00",
+        "elapsed_seconds": 577.3737902418,
+        "average_MB_per_second": 11.1447590136,
+        "retries": 0,
+        "resume": false,
+        "uploaded_model_file_count": 8,
+        "uploaded_metadata_file_count": 2,
+        "remote_file_count_verified": true,
+        "remote_sizes_verified": true,
+        "remote_sha256_verified_count": 10
+      },
+      "artifact_state": "uploaded_to_modelscope_awaiting_destination_hash_verification",
+      "school_download_started": false,
+      "ba_student_uploaded": false,
+      "gpu_used": false
+    }
+  },
+  "integrity": {
+    "no_values_invented": true,
+    "source_priority": [
+      "immutable run artifacts",
+      "machine-readable summary",
+      "formal report",
+      "experiment log",
+      "trainer/state/log files",
+      "project records"
+    ]
+  }
+}

@@ -127,3 +127,7 @@ Completed standardized Direct Distillation with exactly 20,000 frozen Teacher QA
 
 <!-- SCW_BA_STUDENT_MODELSCOPE_ARCHIVE_20260901 -->
 The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archived to private repo `MakiseKurisuEasonHan/WMKD-SCW-Ba-Student`. Upload and remote filename/size/metadata verification passed for 9 files and 6442815786 bytes. Source manifest SHA256 `f8554fc57258f28b945835dcab759ae4891633cc835918cf63156b14a9f41ef1`; status `uploaded_to_modelscope_awaiting_destination_hash_verification`; `destination_verified=false`. The bounded scientific result remains loss of detectable SCW watermark under the tested standardized Ba condition with the Student in a Base-like negative detector regime. Next step: SCW final closure / commit review; no cleanup was performed.
+
+## 2026-09-01 — WMKD 5/7 closure integrity audit
+
+Generated 10/10 canonical full experiment logs and the global index under `results/`. Persisted trajectory coverage: PN-FP Teacher/Student unavailable; EverTracer Teacher unavailable and Ba 7500 timing records; CTCC Teacher 286 trainer records and Ba 7500 timings; iSeal Teacher 1500 history records and Ba 7500 timings; SCW Teacher 250 trainer records and Ba 7500 timings. All detector/utility/archive source snapshots are retained. None of the five Ba Students has intermediate checkpoint-level detector evidence, so exact disappearance-step localization is unsupported. No experiment, generation, detector, utility, or upload was rerun.

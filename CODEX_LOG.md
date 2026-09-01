@@ -417,3 +417,7 @@ Completed standardized Direct Distillation with exactly 20,000 frozen Teacher QA
 
 <!-- SCW_BA_STUDENT_MODELSCOPE_ARCHIVE_20260901 -->
 The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archived to private repo `MakiseKurisuEasonHan/WMKD-SCW-Ba-Student`. Upload and remote filename/size/metadata verification passed for 9 files and 6442815786 bytes. Source manifest SHA256 `f8554fc57258f28b945835dcab759ae4891633cc835918cf63156b14a9f41ef1`; status `uploaded_to_modelscope_awaiting_destination_hash_verification`; `destination_verified=false`. The bounded scientific result remains loss of detectable SCW watermark under the tested standardized Ba condition with the Student in a Base-like negative detector regime. Next step: SCW final closure / commit review; no cleanup was performed.
+
+## 2026-09-01 — Full-project closure/integrity/logging audit
+
+Merged the detached AutoDL SCW A2/Ba history into local `main` without rewriting history. Built and validated ten evidence-preserving canonical full JSON logs plus a global index and formal audit. Historical gaps remain explicit; no values were invented and no scientific work was rerun. The next controlled operations are GitHub synchronization and high-confidence AutoDL cleanup while retaining shared LLMPrint/REEF resources and all unique final/checkpoint evidence.

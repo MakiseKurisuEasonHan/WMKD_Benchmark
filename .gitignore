@@ -68,7 +68,9 @@ wandb/
 # Temporary and local runtime artifacts
 tmp/
 temp/
+/artifacts/
 *.tmp
+*.tmp.json
 *.log
 
 # Large archives
@@ -78,3 +80,4 @@ temp/
 *.tgz
 *.7z
 *.rar
+*.bundle
