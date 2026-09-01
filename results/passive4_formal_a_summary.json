@@ -1,0 +1,60 @@
+{
+  "schema_version": "wmkd.passive4-formal-a-summary.v1",
+  "generated_at": "2026-09-01T20:11:25.235391+00:00",
+  "llmprint_a2": "already closed successful",
+  "methods": [
+    {
+      "method": "reef",
+      "final_state": "COMPLETED",
+      "experiment": "A",
+      "run_id": "reef_a_20260901_200836",
+      "runtime_seconds": 27.75233817100525,
+      "native_detector": "centered_linear_CKA",
+      "scientific_conclusion": "successful",
+      "preferred_fingerprint": "yes",
+      "report_path": "docs/reproduction_reports/reef_experiment_a_report.md",
+      "full_json_path": "results/reef/experiment_a/full_experiment_log.json",
+      "blocker": null
+    },
+    {
+      "method": "awm",
+      "final_state": "FAILED",
+      "experiment": "A",
+      "run_id": "awm_a_20260901_200911",
+      "runtime_seconds": 39.861647605895996,
+      "native_detector": null,
+      "scientific_conclusion": "not judged",
+      "preferred_fingerprint": "no",
+      "report_path": "docs/reproduction_reports/awm_experiment_a_report.md",
+      "full_json_path": "results/awm/experiment_a/full_experiment_log.json",
+      "blocker": "'Phi3Attention' object has no attribute 'q_proj'"
+    },
+    {
+      "method": "huref",
+      "final_state": "FAILED",
+      "experiment": "A",
+      "run_id": "huref_a_20260901_201015",
+      "runtime_seconds": 5.175975799560547,
+      "native_detector": null,
+      "scientific_conclusion": "not judged",
+      "preferred_fingerprint": "no",
+      "report_path": "docs/reproduction_reports/huref_experiment_a_report.md",
+      "full_json_path": "results/huref/experiment_a/full_experiment_log.json",
+      "blocker": "Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead."
+    },
+    {
+      "method": "zeroprint",
+      "final_state": "FAILED",
+      "experiment": "A",
+      "run_id": "zeroprint_a_20260901_201050",
+      "runtime_seconds": 4.792532682418823,
+      "native_detector": null,
+      "scientific_conclusion": "not judged",
+      "preferred_fingerprint": "no",
+      "report_path": "docs/reproduction_reports/zeroprint_experiment_a_report.md",
+      "full_json_path": "results/zeroprint/experiment_a/full_experiment_log.json",
+      "blocker": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/ownership_phase0_gates.py', 'zeroprint', '--model', '/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct', '--embedding-model', '/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2', '--queries', '/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/zeroprint_humaneval_2.json', '--batch-size', '8', '--max-new-tokens', '512', '--output', '/root/autodl-tmp/WMKD_Benchmark_data/gates/zeroprint/formal_runtime_gate.json']' returned non-zero exit status 1."
+    }
+  ],
+  "ba_status": "NOT_STARTED"
+}
