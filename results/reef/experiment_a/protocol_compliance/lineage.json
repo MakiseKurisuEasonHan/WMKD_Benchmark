@@ -1,0 +1,16 @@
+{
+  "superseded_run": {
+    "run_id": "reef_a_20260901_200836",
+    "status": "SUPERSEDED_BY_PROTOCOL_COMPLIANCE_RERUN",
+    "reason": "representation implementation mismatch with frozen protocol",
+    "implementation": "hidden_states[-1] final-normalized representation",
+    "scores": {
+      "reference": 1.0,
+      "google/gemma-2b": 0.3748479187488556,
+      "Qwen/Qwen2.5-3B-Instruct": 0.572025716304779,
+      "microsoft/Phi-3-mini-128k-instruct": 0.6479156613349915
+    }
+  },
+  "continuation_run_id": "reef_a_protocol_cont1_20260901_202500",
+  "continuation_type": "infrastructure / implementation compliance continuation; scientific config unchanged"
+}

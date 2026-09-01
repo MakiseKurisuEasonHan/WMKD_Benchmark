@@ -1,37 +1,63 @@
 {
-  "schema_version": "wmkd.passive-ownership-a.v1",
-  "method": "reef",
+  "schema_version": "wmkd.reef-protocol-compliance.v1",
+  "method": "REEF",
   "experiment": "A",
-  "run_id": "reef_a_20260901_200836",
+  "run_id": "reef_a_protocol_cont1_20260901_202500",
   "status": "COMPLETED",
   "terminal": true,
+  "official_repo": "AI45Lab/REEF",
+  "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
+  "canonical_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
   "model_modified": false,
   "artifact_type": "fingerprint_package",
   "preferred_fingerprint": "yes",
+  "scientific_conclusion": "REEF core reproduction successful under the frozen WMKD canonical protocol",
   "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "successful",
-  "error": null,
+  "runtime_seconds": 32.303205728530884,
+  "lineage": {
+    "superseded_run": {
+      "run_id": "reef_a_20260901_200836",
+      "status": "SUPERSEDED_BY_PROTOCOL_COMPLIANCE_RERUN",
+      "reason": "representation implementation mismatch with frozen protocol",
+      "implementation": "hidden_states[-1] final-normalized representation",
+      "scores": {
+        "reference": 1.0,
+        "google/gemma-2b": 0.3748479187488556,
+        "Qwen/Qwen2.5-3B-Instruct": 0.572025716304779,
+        "microsoft/Phi-3-mini-128k-instruct": 0.6479156613349915
+      }
+    },
+    "continuation_run_id": "reef_a_protocol_cont1_20260901_202500",
+    "continuation_type": "infrastructure / implementation compliance continuation; scientific config unchanged"
+  },
   "detector": {
-    "native_metric": "centered_linear_CKA",
-    "reference_score": 1.0,
-    "reload_consistency": 1.0,
+    "metric": "centered_linear_CKA",
+    "definition": "||Xc^T Yc||_F^2 / (||Xc^T Xc||_F * ||Yc^T Yc||_F)",
+    "reference_self_score": 1.0,
+    "reference_reload_score": 1.0,
+    "reload_max_abs_diff": 0.0,
     "negative_scores": [
       {
         "model_id": "google/gemma-2b",
-        "score": 0.3748479187488556
+        "score": 0.30499574363452575
       },
       {
         "model_id": "Qwen/Qwen2.5-3B-Instruct",
-        "score": 0.572025716304779
+        "score": 0.4546738923165847
       },
       {
         "model_id": "microsoft/Phi-3-mini-128k-instruct",
-        "score": 0.6479156613349915
+        "score": 0.31717066627039225
       }
     ],
-    "threshold": 0.6479156613349915,
-    "positive_rule": "score > tau",
-    "positive": true,
-    "false_positives": 0
+    "negative_mean": 0.3589467674071676,
+    "threshold_rule": "tau = max(frozen negative scores)",
+    "threshold": 0.4546738923165847,
+    "positive_rule": "score > tau; tie is negative",
+    "separation_margin": 0.5453261076834153,
+    "false_positives": 0,
+    "evaluation_errors": [],
+    "positive": true
   }
 }

@@ -1,24 +1,144 @@
 {
-  "schema_version": "wmkd.passive-ownership-a.v1",
-  "method": "reef",
+  "schema_version": "wmkd.reef-protocol-compliance.v1",
+  "method": "REEF",
   "experiment": "A",
-  "run_id": "reef_a_20260901_200836",
+  "run_id": "reef_a_protocol_cont1_20260901_202500",
   "status": "COMPLETED",
   "terminal": true,
-  "model_modified": false,
-  "artifact_type": "fingerprint_package",
-  "preferred_fingerprint": "yes",
-  "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "successful",
-  "error": null,
+  "official_repo": "AI45Lab/REEF",
   "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
   "canonical_model": "meta-llama/Llama-3.2-3B-Instruct",
   "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
-  "protocol_sha256": "451224f574fad0735cc801765f3b694483905cf61157185f29cf095947bbb3b9",
-  "environment": {
-    "python": "3.12.3",
-    "pytorch": "2.8.0+cu128",
-    "cuda": "12.8",
-    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+  "model_modified": false,
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
+  "scientific_conclusion": "REEF core reproduction successful under the frozen WMKD canonical protocol",
+  "ba_status": "NOT_STARTED",
+  "runtime_seconds": 32.303205728530884,
+  "lineage": {
+    "superseded_run": {
+      "run_id": "reef_a_20260901_200836",
+      "status": "SUPERSEDED_BY_PROTOCOL_COMPLIANCE_RERUN",
+      "reason": "representation implementation mismatch with frozen protocol",
+      "implementation": "hidden_states[-1] final-normalized representation",
+      "scores": {
+        "reference": 1.0,
+        "google/gemma-2b": 0.3748479187488556,
+        "Qwen/Qwen2.5-3B-Instruct": 0.572025716304779,
+        "microsoft/Phi-3-mini-128k-instruct": 0.6479156613349915
+      }
+    },
+    "continuation_run_id": "reef_a_protocol_cont1_20260901_202500",
+    "continuation_type": "infrastructure / implementation compliance continuation; scientific config unchanged"
+  },
+  "protocol": {
+    "path": "results/ownership_protocols/reef_formal_protocol.json",
+    "sha256": "451224f574fad0735cc801765f3b694483905cf61157185f29cf095947bbb3b9"
+  },
+  "probe_manifest": {
+    "sha256": "8f63355817f726faea792edcc393ef9c6d32e07449bb66bbdefeb201e636599f",
+    "ordered_rows_sha256": "ea3f17daffe6b9e82ffcb5f43b1efe0e88483708c6261f532ed007555ac6c79f"
+  },
+  "negative_panel_sha256": "4b97b0dfc4960adeb638282b51ec69c50cec1e8b46d8422b40712eb63d5f31e8",
+  "extraction": {
+    "semantics": "exact raw decoder-block forward-hook output[0] at last token",
+    "canonical_hook": "model.layers.27",
+    "representations": [
+      {
+        "role": "reference_reload_a",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+        "hooked_module_path": "model.layers.27",
+        "layer_index": 27,
+        "block_class": "LlamaDecoderLayer",
+        "semantics": "raw forward-hook output[0] at last token",
+        "token_position": "last token per unpadded single-sample input",
+        "shape": [
+          200,
+          3072
+        ],
+        "dtype": "float32",
+        "sample_count": 200,
+        "representation_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/reference_reload_a.npy",
+        "representation_sha256": "99ba4449d578a39a6709fc37e4e0ae709eb3b3f20d0e0a76633411e69705d525"
+      },
+      {
+        "role": "reference_reload_b",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+        "hooked_module_path": "model.layers.27",
+        "layer_index": 27,
+        "block_class": "LlamaDecoderLayer",
+        "semantics": "raw forward-hook output[0] at last token",
+        "token_position": "last token per unpadded single-sample input",
+        "shape": [
+          200,
+          3072
+        ],
+        "dtype": "float32",
+        "sample_count": 200,
+        "representation_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/reference_reload_b.npy",
+        "representation_sha256": "99ba4449d578a39a6709fc37e4e0ae709eb3b3f20d0e0a76633411e69705d525"
+      },
+      {
+        "role": "negative",
+        "model_id": "google/gemma-2b",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/google/gemma-2b",
+        "hooked_module_path": "model.layers.17",
+        "layer_index": 17,
+        "block_class": "GemmaDecoderLayer",
+        "semantics": "raw forward-hook output[0] at last token",
+        "token_position": "last token per unpadded single-sample input",
+        "shape": [
+          200,
+          2048
+        ],
+        "dtype": "float32",
+        "sample_count": 200,
+        "representation_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/google--gemma-2b.npy",
+        "representation_sha256": "34040e0246f9acc45df7ec513dc367eba475c2a19162f9431c61080743aa5def"
+      },
+      {
+        "role": "negative",
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/models/Qwen--Qwen2.5-3B-Instruct/snapshots/master",
+        "hooked_module_path": "model.layers.35",
+        "layer_index": 35,
+        "block_class": "Qwen2DecoderLayer",
+        "semantics": "raw forward-hook output[0] at last token",
+        "token_position": "last token per unpadded single-sample input",
+        "shape": [
+          200,
+          2048
+        ],
+        "dtype": "float32",
+        "sample_count": 200,
+        "representation_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/Qwen--Qwen2.5-3B-Instruct.npy",
+        "representation_sha256": "dc5d90abff9cae6a4a896826be384cc9297a799c5a148eb345805a0a6cda0600"
+      },
+      {
+        "role": "negative",
+        "model_id": "microsoft/Phi-3-mini-128k-instruct",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/models/microsoft--Phi-3-mini-128k-instruct/snapshots/master",
+        "hooked_module_path": "model.layers.31",
+        "layer_index": 31,
+        "block_class": "Phi3DecoderLayer",
+        "semantics": "raw forward-hook output[0] at last token",
+        "token_position": "last token per unpadded single-sample input",
+        "shape": [
+          200,
+          3072
+        ],
+        "dtype": "float32",
+        "sample_count": 200,
+        "representation_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/microsoft--Phi-3-mini-128k-instruct.npy",
+        "representation_sha256": "7bbeba2431b2c5088e702685a670e66bf13f06defc65af3cfcc1f7f920999192"
+      }
+    ],
+    "extraction_config": {
+      "probes": 200,
+      "dtype_load": "float16",
+      "persisted_dtype": "float32",
+      "use_cache": false
+    },
+    "extraction_config_sha256": "333cd5f20813f6edbea5578a3380baa5628d711c276ec165409c65fd599e8516"
   }
 }

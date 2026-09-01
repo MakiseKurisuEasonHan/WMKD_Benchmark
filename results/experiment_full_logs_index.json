@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-01T19:36:15.251418+00:00",
+  "generated_at": "2026-09-01T20:18:45.154257+00:00",
   "object_count": 12,
   "objects": [
     {
@@ -154,24 +154,6 @@
       "telemetry_records": 7500
     },
     {
-      "method": "REEF",
-      "role": "preferred_fingerprint",
-      "experiment": "A",
-      "run_id": null,
-      "full_log_path": "results/reef/experiment_a/full_experiment_log.json",
-      "full_log_sha256": "d187117d9ec04dd0e138d017a5b19bbf9bef30eecc294f5efab06959a1a6720d",
-      "final_model_manifest": null,
-      "modelscope_repo": null,
-      "scientific_status": "BLOCKED",
-      "watermark_evaluation_available": false,
-      "utility_available": false,
-      "checkpoint_localization_support": false,
-      "telemetry_records": 0,
-      "artifact_type": "no_formal_artifact",
-      "model_modified": false,
-      "preferred_fingerprint": "no"
-    },
-    {
       "method": "LLMPrint",
       "role": "preferred_fingerprint",
       "experiment": "A2",
@@ -188,6 +170,24 @@
       "artifact_type": "fingerprint_package",
       "model_modified": false,
       "preferred_fingerprint": "yes"
+    },
+    {
+      "method": "REEF",
+      "role": "preferred_fingerprint",
+      "experiment": "A",
+      "run_id": "reef_a_protocol_cont1_20260901_202500",
+      "full_log_path": "results/reef/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "cb6f0cd607011e90ed2ef89baff9eb001963a43edcb40e8d83b1d539c7559180",
+      "summary_path": "results/reef/experiment_a/summary.json",
+      "summary_sha256": "f2f26eeae81245b700cadae1b36b99a243d54b4042868bb84461034df0423e56",
+      "report_path": "docs/reproduction_reports/reef_experiment_a_report.md",
+      "artifact_manifest_path": "results/reef/experiment_a/artifact_manifest.json",
+      "scientific_status": "SUCCESSFUL",
+      "artifact_type": "fingerprint_package",
+      "model_modified": false,
+      "preferred_fingerprint": "yes",
+      "utility_available": false,
+      "ba_status": "NOT_STARTED"
     }
   ]
 }
