@@ -1,0 +1,65 @@
+{
+  "method": "huref",
+  "selected_tokens": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "selected_token_count": 8,
+  "layers": [
+    26,
+    27
+  ],
+  "terms": [
+    "WqWk",
+    "WvWo",
+    "WuWd",
+    "WqWk",
+    "WvWo",
+    "WuWd"
+  ],
+  "term_shapes": [
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "gqa_engineering_mapping": "repeat_interleave_kv_heads_to_query_heads",
+  "feature_extract_method": "Mean_pooling",
+  "feature_shape": [
+    6
+  ],
+  "ics_self": 1.0,
+  "encoder_dependency": false,
+  "model_modified": false,
+  "peak_vram_bytes": 6988555264,
+  "status": "COMPLETED",
+  "runtime_seconds": 5.519934892654419,
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "smoke_only": true
+}

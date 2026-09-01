@@ -1,0 +1,17 @@
+{
+  "method": "reef",
+  "samples": 8,
+  "layer": 27,
+  "token_pooling": "last_token",
+  "activation_shape": [
+    8,
+    3072
+  ],
+  "linear_cka_self": 1.0,
+  "model_modified": false,
+  "peak_vram_bytes": 6437682176,
+  "status": "COMPLETED",
+  "runtime_seconds": 6.30334997177124,
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "smoke_only": true
+}

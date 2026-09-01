@@ -1,5 +1,9 @@
 # Project Status
 
+## 2026-09-01 four-method pre-formal smoke complete
+
+LLMPrint A2 remains safely paused at 97/200 with IDs 000-096 immutable and future lineage restricted to `A2_cont1_missing_ids_only`. REEF, AWM, HuRef and ZeroPrint compatibility smokes all completed and persisted independently; none is a formal scientific result. AutoDL ended idle at 0 MiB GPU use with 377 GiB free disk and no shutdown. Integrated formal readiness is **NO**: REEF/AWM are conditionally ready after panel/threshold freezes, ZeroPrint additionally needs an official-budget speed gate, and HuRef remains `TIME_BUDGET_RISK` pending sorted-token and 4096-token scaling evidence. No formal A or Ba started.
+
 ## Current phase
 
 Current closure is **5/10**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint, REEF, AWM, HuRef and ZeroPrint. LLMPrint A2 `llmprint_a2_20260901_064855` is safely `PAUSED_BY_USER_FOR_PRE_FORMAL_MULTI_METHOD_SMOKE` at 97/200; IDs 000–096 are immutable and only 097–199 may be handled by a future A2 cont1. REEF/AWM/HuRef/ZeroPrint are in official-audit and bounded-smoke preparation only. No formal run for those four, no Ba, and no automatic shutdown is authorized.

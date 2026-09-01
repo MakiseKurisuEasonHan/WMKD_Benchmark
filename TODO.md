@@ -1,5 +1,15 @@
 # TODO
 
+## Four-method pre-formal smoke follow-up — 2026-09-01
+
+- [x] Safely pause LLMPrint A2 at 97/200 and preserve fingerprint IDs 000-096 immutably.
+- [x] Pin/audit and locally scaffold REEF, AWM, HuRef and ZeroPrint Experiment A protocols and full-log frameworks.
+- [x] Complete one serial, bounded GPU compatibility/resource smoke for each of the four ownership methods.
+- [ ] Freeze REEF/AWM/ZeroPrint negative panels and controlling threshold/decision calibration before formal authorization.
+- [ ] Build/hash HuRef's canonical sorted-token list and obtain bounded 4096-token scaling evidence; current status is `TIME_BUDGET_RISK`.
+- [ ] Run a representative official-budget ZeroPrint generation-speed gate before formal authorization.
+- [ ] Obtain explicit user approval before any integrated formal pipeline, LLMPrint A2 cont1, four-method formal A, or Ba.
+
 ## High priority
 
 - [x] Close PN-FP, EverTracer, CTCC, iSeal, and SCW: **5/7 complete**.

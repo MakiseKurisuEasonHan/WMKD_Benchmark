@@ -1,0 +1,28 @@
+{
+  "method": "awm",
+  "layer": 27,
+  "matrix_types": [
+    "Wq_weights",
+    "Wk_weights",
+    "Wq_Wk_weights"
+  ],
+  "smoke_rows": 64,
+  "q_shape": [
+    3072,
+    3072
+  ],
+  "k_shape": [
+    1024,
+    3072
+  ],
+  "lap_self_alignment": "identity",
+  "unbiased_cka_wq_self": 1.0,
+  "unbiased_cka_wk_self": 1.0,
+  "unbiased_cka_wq_wk_mean_self": 1.0,
+  "model_modified": false,
+  "peak_vram_bytes": 6484990464,
+  "status": "COMPLETED",
+  "runtime_seconds": 5.802222967147827,
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "smoke_only": true
+}

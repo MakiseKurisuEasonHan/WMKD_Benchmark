@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-09-01 — Four-method smoke verdict
+
+- **Decision:** Treat all four terminal smoke JSONs as compatibility/resource evidence only. They do not establish positive-vs-negative scientific reproduction and cannot populate formal detector results.
+- **Decision:** REEF and AWM are conditionally runnable only after exact negative panels and controlling calibration are frozen. ZeroPrint also requires an official-budget generation-speed gate. HuRef is not ready for formal authorization because the 8-token smoke does not bound the quadratic 4096-token path.
+- **Decision:** Preserve the ModelScope MPNet LFS/resolve byte discrepancy in provenance. The resolved PyTorch package was structurally loadable and matched MPNet architecture/dimension, but byte identity to the LFS pointer is not claimed.
+- **Decision:** Keep LLMPrint A2 paused, every formal A and Ba NOT STARTED, automatic shutdown disabled, and the AutoDL instance running pending user review.
+
 This log records consequential project decisions. It does not record routine engineering operations.
 
 ## 2026-08-27 — Establish WMKD_Benchmark as an independent project

@@ -1,0 +1,94 @@
+{
+  "schema_version": "wmkd.ownership-smoke-summary.v1",
+  "phase": "PREPARATION_AND_SMOKE_ONLY",
+  "date": "2026-09-01",
+  "formal_runs_started": false,
+  "llmprint_a2": {
+    "run_id": "llmprint_a2_20260901_064855",
+    "status": "PAUSED_BY_USER_FOR_PRE_FORMAL_MULTI_METHOD_SMOKE",
+    "completed": 97,
+    "total": 200,
+    "immutable_completed_range": "llmprint-pair-000..096",
+    "pending": 103,
+    "future_lineage": "A2_cont1_missing_ids_only"
+  },
+  "autodl": {
+    "gpu": "NVIDIA RTX PRO 6000 96GB",
+    "gpu_idle_after_smokes": true,
+    "gpu_memory_after_smokes_mib": 0,
+    "data_disk_total_gib": 500,
+    "data_disk_used_gib": 124,
+    "data_disk_available_gib": 377,
+    "disk_safety_floor_gib": 100,
+    "contract_ram_gb": 110,
+    "observed_runtime_ram_note": "approximately 1 TiB was observed previously; this is not the platform contract",
+    "automatic_shutdown": false
+  },
+  "methods": {
+    "reef": {
+      "smoke_status": "COMPLETED",
+      "artifact": "results/reef/smoke/reef_smoke_20260901.json",
+      "runtime_seconds": 6.30334997177124,
+      "peak_vram_bytes": 6437682176,
+      "scope": "8 fixed probes, layer 27, last-token representation, centered linear CKA self-check",
+      "formal_runtime_expected": "under 10 minutes for Reference plus 3-5 sequential negatives, excluding first-time model transport",
+      "formal_runtime_conservative": "under 30 minutes compute; hard wall risk low",
+      "formal_peak_disk": "2-3 MiB activations per 200-sample/model plus 20-60 GiB if 3-5 negative model snapshots must be temporarily retained",
+      "formal_ram": "contract 110 GB is sufficient with sequential model loading and chunked activation persistence",
+      "readiness": "CONDITIONAL_READY",
+      "blockers": ["freeze exact negative identities", "freeze threshold/decision calibration", "freeze TruthfulQA probe IDs and hashes"]
+    },
+    "awm": {
+      "smoke_status": "COMPLETED",
+      "artifact": "results/awm/smoke/awm_smoke_20260901.json",
+      "runtime_seconds": 5.802222967147827,
+      "peak_vram_bytes": 6484990464,
+      "scope": "last-layer Llama mapping, Wq/Wk shapes, identity LAP, official unbiased linear CKA self-check over 64 deterministic rows",
+      "formal_runtime_expected": "under 30 minutes compute for Reference plus 3-5 sequential negatives, excluding transport",
+      "formal_runtime_conservative": "under 1 hour compute; hard wall risk low",
+      "formal_peak_disk": "small metric artifacts plus 20-60 GiB temporary negative snapshots",
+      "formal_ram": "contract 110 GB is sufficient if models are loaded sequentially",
+      "readiness": "CONDITIONAL_READY",
+      "blockers": ["freeze exact official layer aggregation", "freeze negative identities and threshold/calibration", "repository has no explicit license observed"]
+    },
+    "huref": {
+      "smoke_status": "COMPLETED",
+      "artifact": "results/huref/smoke/huref_smoke_20260901.json",
+      "runtime_seconds": 5.519934892654419,
+      "peak_vram_bytes": 6988555264,
+      "scope": "8-token compatibility path, last two layers, six invariant terms, Llama GQA mapping, Mean Pooling and ICS self-check",
+      "formal_runtime_expected": "not safely inferable from the 8-token smoke because the 4096-token invariant path scales quadratically and uses much larger temporaries",
+      "formal_runtime_conservative": "TIME_BUDGET_RISK until a bounded scaling probe or analytical implementation benchmark is approved",
+      "formal_peak_disk": "approximately 384 MiB for six persisted 4096x4096 float32 terms; multi-GiB temporary tensor budget recommended",
+      "formal_ram": "contract 110 GB is likely sufficient with one term at a time, but peak must be measured before formal authorization",
+      "readiness": "NOT_READY_TIME_BUDGET_RISK",
+      "blockers": ["build and hash official-semantics canonical sorted-token list", "measure 4096-token scaling without changing scientific semantics", "freeze negative calibration", "repository has no explicit license observed"],
+      "fallback_candidate": "official-compatible precomputed/fixed frequency list filtered and remapped to the canonical tokenizer; user approval required"
+    },
+    "zeroprint": {
+      "smoke_status": "COMPLETED",
+      "artifact": "results/zeroprint/smoke/zeroprint_smoke_20260901.json",
+      "runtime_seconds": 6.8039350509643555,
+      "peak_vram_bytes": 6438586880,
+      "scope": "2 HumanEval-like prompts, one deterministic perturbation each, four 8-token generations, exact-identity MPNet architecture, finite-difference Jacobian path and correlation self-check",
+      "formal_runtime_expected": "roughly 20-60 minutes per model at official 2 queries x 4 augmentations x 20 repeats, depending on continuation length and batching",
+      "formal_runtime_conservative": "Reference plus 3-5 sequential negatives may approach 2-5 hours; transport excluded and a representative generation-speed gate is required",
+      "formal_peak_disk": "about 0.42 GiB MPNet plus small HumanEval/embedding artifacts and 20-60 GiB temporary negative snapshots",
+      "formal_ram": "contract 110 GB is sufficient with sequential LLM loading; MPNet dimension verified as 768",
+      "readiness": "CONDITIONAL_READY_RUNTIME_GATE_REQUIRED",
+      "blockers": ["freeze exact HumanEval rows/content hash", "freeze official continuation and perturbation implementation", "measure representative official 4x20 generation budget", "freeze negative calibration"],
+      "transport_warning": "ModelScope Git checkout contained LFS pointers; resolve returned a valid 200-key PyTorch ZIP with MPNet word embeddings 30527x768 but bytes/SHA differed from the pointer declaration. Original pointers were retained and the discrepancy must remain in provenance."
+    }
+  },
+  "integrated_ready": false,
+  "integrated_blockers": ["HuRef formal time/resource scaling is unresolved", "method-specific negative panels and controlling thresholds are not frozen", "ZeroPrint official-budget generation speed gate is outstanding"],
+  "prohibited_state_confirmed": {
+    "llmprint_resumed": false,
+    "reef_formal_started": false,
+    "awm_formal_started": false,
+    "huref_formal_started": false,
+    "zeroprint_formal_started": false,
+    "ba_started": false,
+    "shutdown_issued": false
+  }
+}

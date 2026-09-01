@@ -1,0 +1,32 @@
+{
+  "method": "zeroprint",
+  "dataset": "opencompass/humaneval",
+  "query_ids": [
+    "HumanEval/0",
+    "HumanEval/1"
+  ],
+  "perturbations_per_query": 1,
+  "generation_max_new_tokens": 8,
+  "decoding": "greedy_smoke",
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "embedding_shape": [
+    4,
+    768
+  ],
+  "gradient_estimation": "finite_difference_jacobian_smoke",
+  "fingerprint_aggregation": "mean",
+  "similarity_metric": "correlation",
+  "self_similarity": 1.000000238418579,
+  "outputs": [
+    "\n\n\ndef subtract(a, b):\n   ",
+    "\n\n\ndef is_odd(n):\n    \"\"\"",
+    "  # Define a function to add two",
+    "\n\n\ndef is_odd(n):\n    \"\"\""
+  ],
+  "model_modified": false,
+  "peak_vram_bytes": 6438586880,
+  "status": "COMPLETED",
+  "runtime_seconds": 6.8039350509643555,
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "smoke_only": true
+}
