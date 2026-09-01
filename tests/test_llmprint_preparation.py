@@ -14,9 +14,11 @@ def load_script(name: str):
     return module
 
 
-def test_config_forbids_formal_construction():
+def test_config_authorizes_formal_only_after_readiness_gates():
     text = (ROOT / "configs" / "watermark" / "llmprint_experiment_a.yaml").read_text(encoding="utf-8")
-    assert "formal_construction_authorized: false" in text
+    assert "formal_construction_authorized: true" in text
+    assert "ready_for_formal_A: false" in text
+    assert 'cublas_workspace_config: ":4096:8"' in text
     assert "fingerprints: 300" in text
     assert "gcg_iterations: 1000" in text
 
