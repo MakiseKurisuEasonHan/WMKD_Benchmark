@@ -1,0 +1,71 @@
+{
+  "schema_version": "wmkd.zeroprint-glove-resource-resolution.v1",
+  "resolved_at": "2026-09-01",
+  "status": "ZEROPRINT_RESOURCE_BLOCKED",
+  "canonical_upstream": {
+    "identity": "gensim-data/glove-wiki-gigaword-100",
+    "file_name": "glove-wiki-gigaword-100.gz",
+    "base_dataset": "Wikipedia 2014 + Gigaword 5, 6B tokens, uncased",
+    "dimensions": 100,
+    "vocabulary_size": 400000,
+    "file_size_bytes": 134300434,
+    "gensim_checksum_md5": "40ec481866001177b8cd4cb0df92924f",
+    "preprocessing": "Stanford GloVe text converted to word2vec format by gensim",
+    "reference": "https://github.com/piskvorky/gensim-data/blob/master/list.json"
+  },
+  "search_order": [
+    "AutoDL/local/shared cache",
+    "ModelScope exact mirror",
+    "domestic trusted mirror or domestic-reachable gensim-data mirror",
+    "domestic transport with provable content equivalence"
+  ],
+  "local_cache_result": "not_found",
+  "modelscope_result": {
+    "exact_identity_found": false,
+    "different_candidate_rejected": "NeuML/glove-2024-wikigiga-quantized"
+  },
+  "domestic_mirror_candidate": {
+    "transport": "https://hf-mirror.com",
+    "repository": "fse/glove-wiki-gigaword-100",
+    "revision": "3282d5e7c5e979c2411ba9703d63a46243a2047e",
+    "files": [
+      {
+        "name": "glove-wiki-gigaword-100.model",
+        "size_bytes": 21494764,
+        "sha256": "e21d1bd8eb25e315b64308187a44f813d6b59bbfbe9633ad6cd504753c20d791",
+        "download_verified": true,
+        "safety": "pickle-like; intentionally not deserialized"
+      },
+      {
+        "name": "glove-wiki-gigaword-100.model.vectors.npy",
+        "size_bytes": 160000128,
+        "sha256": "58620c9e3f3f70214133cdc5899b9553443198a27d320c34a1b39341e1908c67",
+        "download_verified": true,
+        "safe_static_validation": {
+          "shape": [400000, 100],
+          "dtype": "float32",
+          "first_1024_rows_finite": true
+        }
+      }
+    ],
+    "content_identity_verdict": "not_fully_verified",
+    "reason": "The vector matrix metadata matches the canonical vocabulary size and dimension, but the paired vocabulary/model object is pickle-like and was not deserialized from a third-party mirror. Byte identity to the canonical gensim .gz is not established."
+  },
+  "raw_text_candidate": {
+    "identity": "Stanford glove.6B.100d.txt",
+    "mirror_repository": "kcz358/glove",
+    "mirror_revision": "fc671f626a92828aef148a010bc5abccd1239b0b",
+    "expected_size_bytes": 347116733,
+    "expected_sha256": "95dde4dfd627ab26608d33e76d1195ec059734bd29089ea52cadb08d07c64544",
+    "downloaded": false,
+    "adoption_status": "not_authorized_until_content-equivalence-to-canonical-gensim-package-is-accepted"
+  },
+  "overseas_sources": {
+    "role": "provenance_reference_only",
+    "long_wait_disabled": true,
+    "observed": "official gensim downloader and GitHub release direct transfer remained at zero bytes"
+  },
+  "scientific_substitution_used": false,
+  "zero_print_scientific_run_started": false,
+  "next_pipeline_behavior": "Skip ZeroPrint at its turn with terminal resource blocker unless a safely verifiable exact/equivalent domestic copy becomes available."
+}
