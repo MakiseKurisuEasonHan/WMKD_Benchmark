@@ -1,5 +1,4 @@
 # AWM Experiment A log
 
-- Run: `awm_a_20260901_200911`
-- Status: **FAILED**
-- Error: 'Phi3Attention' object has no attribute 'q_proj'
+- Initial run `awm_a_20260901_200911`: superseded, NOT_JUDGED.
+- Cont1 `awm_a_cont1_20260902_052000_cont3`: AWM core reproduction successful under frozen WMKD canonical protocol.

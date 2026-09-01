@@ -1,15 +1,61 @@
 {
-  "schema_version": "wmkd.passive-ownership-a.v1",
-  "method": "awm",
+  "schema_version": "wmkd.awm-cont1.v1",
+  "method": "AWM",
   "experiment": "A",
-  "run_id": "awm_a_20260901_200911",
-  "status": "FAILED",
-  "terminal": true,
+  "run_id": "awm_a_cont1_20260902_052000_cont3",
+  "status": "COMPLETED",
+  "official_repo": "LUMIA-Group/AWM",
+  "official_commit": "bc20ff8e63cec57f5da422ae065686ced275e76d",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
   "model_modified": false,
-  "artifact_type": "partial_fingerprint_evidence",
-  "preferred_fingerprint": "no",
+  "preferred_fingerprint": "yes",
+  "artifact_type": "fingerprint_package",
+  "scientific_conclusion": "AWM core reproduction successful under frozen WMKD canonical protocol",
   "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "not judged",
-  "error": "'Phi3Attention' object has no attribute 'q_proj'",
-  "detector": null
+  "runtime_seconds": 142.54675483703613,
+  "peak_ram_kib": 18545332,
+  "peak_vram_bytes": 4764741632,
+  "disk_free_gb": 287.4641571044922,
+  "lineage": {
+    "previous": {
+      "run_id": "awm_a_20260901_200911",
+      "status": "SUPERSEDED_BY_PROTOCOL_COMPLIANCE_CONTINUATION",
+      "reasons": [
+        "Phi fused-QKV compatibility failure",
+        "official layer LAP mismatch",
+        "no persistent complete detector result"
+      ]
+    },
+    "continuation": "awm_a_cont1_20260902_052000_cont3",
+    "type": "implementation / architecture compatibility / protocol compliance; scientific config unchanged"
+  },
+  "detector": {
+    "metric": "official_mean_Wq_Wk_unbiased_linear_CKA",
+    "reference_self": 1.0,
+    "reference_reload": 1.0,
+    "negative_scores": [
+      {
+        "model_id": "google/gemma-2b",
+        "score": 0.0016877207373100747
+      },
+      {
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "score": 0.0017953364917795106
+      },
+      {
+        "model_id": "microsoft/Phi-3-mini-128k-instruct",
+        "score": 0.0017162630297856854
+      }
+    ],
+    "negative_mean": 0.0017331067529584236,
+    "negative_max": 0.0017953364917795106,
+    "threshold": 0.0017953364917795106,
+    "threshold_rule": "tau=max three frozen negatives",
+    "score_direction": "higher",
+    "positive_rule": "score > tau; tie negative",
+    "margin": 0.9982046635082205,
+    "false_positives": 0,
+    "evaluation_errors": [],
+    "reference_positive": true
+  }
 }

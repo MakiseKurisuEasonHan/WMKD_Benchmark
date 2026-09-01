@@ -1,24 +1,122 @@
 {
-  "schema_version": "wmkd.passive-ownership-a.v1",
-  "method": "awm",
+  "schema_version": "wmkd.awm-cont1.v1",
+  "method": "AWM",
   "experiment": "A",
-  "run_id": "awm_a_20260901_200911",
-  "status": "FAILED",
-  "terminal": true,
-  "model_modified": false,
-  "artifact_type": "partial_fingerprint_evidence",
-  "preferred_fingerprint": "no",
-  "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "not judged",
-  "error": "'Phi3Attention' object has no attribute 'q_proj'",
+  "run_id": "awm_a_cont1_20260902_052000_cont3",
+  "status": "COMPLETED",
+  "official_repo": "LUMIA-Group/AWM",
   "official_commit": "bc20ff8e63cec57f5da422ae065686ced275e76d",
-  "canonical_model": "meta-llama/Llama-3.2-3B-Instruct",
   "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
-  "protocol_sha256": "fba90dd289ba2cd7df3a640e68c9ad7abaee36f983c72021b2a33bb4c0618f62",
-  "environment": {
-    "python": "3.12.3",
-    "pytorch": "2.8.0+cu128",
-    "cuda": "12.8",
-    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
-  }
+  "model_modified": false,
+  "preferred_fingerprint": "yes",
+  "artifact_type": "fingerprint_package",
+  "scientific_conclusion": "AWM core reproduction successful under frozen WMKD canonical protocol",
+  "ba_status": "NOT_STARTED",
+  "runtime_seconds": 142.54675483703613,
+  "peak_ram_kib": 18545332,
+  "peak_vram_bytes": 4764741632,
+  "disk_free_gb": 287.4641571044922,
+  "lineage": {
+    "previous": {
+      "run_id": "awm_a_20260901_200911",
+      "status": "SUPERSEDED_BY_PROTOCOL_COMPLIANCE_CONTINUATION",
+      "reasons": [
+        "Phi fused-QKV compatibility failure",
+        "official layer LAP mismatch",
+        "no persistent complete detector result"
+      ]
+    },
+    "continuation": "awm_a_cont1_20260902_052000_cont3",
+    "type": "implementation / architecture compatibility / protocol compliance; scientific config unchanged"
+  },
+  "official_mapping": [
+    {
+      "component": "vocabulary overlap",
+      "official": "similarity_metrics.find_overlapping_vocab",
+      "wmkd": "sorted token-string intersection",
+      "status": "equivalent"
+    },
+    {
+      "component": "dimension LAP/sign",
+      "official": "main.py unified alignment",
+      "wmkd": "1-|cos| Hungarian + target-order permutation + cosine sign",
+      "status": "equivalent"
+    },
+    {
+      "component": "layer LAP",
+      "official": "calculate_attention_cka_similarities",
+      "wmkd": "cost=-mean(Wq,Wk UCKA), Hungarian; identity if equal counts",
+      "status": "equivalent"
+    },
+    {
+      "component": "UCKA",
+      "official": "cka_from_features(...linear,unbiased=True)",
+      "wmkd": "direct pinned official function call on W.T",
+      "status": "exact call"
+    },
+    {
+      "component": "aggregation",
+      "official": "per-metric layer mean then Wq/Wk mean",
+      "wmkd": "same arithmetic order",
+      "status": "equivalent"
+    }
+  ],
+  "unit_tests": {
+    "marker": "AWM_PROTOCOL_UNIT_TESTS=PASS",
+    "status": "PASS",
+    "tests": {
+      "phi_fused_qkv": {
+        "pass": true,
+        "qkv_shape": [
+          9216,
+          3072
+        ],
+        "split_rows": [
+          3072,
+          3072,
+          3072
+        ],
+        "reconstruction_rows": 9216
+      },
+      "official_layer_lap": {
+        "pass": true,
+        "cost_matrix": [
+          [
+            -0.2,
+            -0.9
+          ],
+          [
+            -0.8,
+            -0.1
+          ],
+          [
+            -0.3,
+            -0.4
+          ]
+        ],
+        "assignment": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "unbiased_CKA": {
+        "pass": true,
+        "official": -0.34827902913093567,
+        "wmkd": -0.34827902913093567,
+        "max_abs_diff": 0.0
+      },
+      "Wq_Wk_aggregation": {
+        "pass": true,
+        "official": 0.25,
+        "wmkd": 0.25
+      }
+    }
+  },
+  "frozen_protocol_sha256": "fba90dd289ba2cd7df3a640e68c9ad7abaee36f983c72021b2a33bb4c0618f62"
 }

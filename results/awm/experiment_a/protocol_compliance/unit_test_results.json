@@ -1,0 +1,57 @@
+{
+  "marker": "AWM_PROTOCOL_UNIT_TESTS=PASS",
+  "status": "PASS",
+  "tests": {
+    "phi_fused_qkv": {
+      "pass": true,
+      "qkv_shape": [
+        9216,
+        3072
+      ],
+      "split_rows": [
+        3072,
+        3072,
+        3072
+      ],
+      "reconstruction_rows": 9216
+    },
+    "official_layer_lap": {
+      "pass": true,
+      "cost_matrix": [
+        [
+          -0.2,
+          -0.9
+        ],
+        [
+          -0.8,
+          -0.1
+        ],
+        [
+          -0.3,
+          -0.4
+        ]
+      ],
+      "assignment": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "unbiased_CKA": {
+      "pass": true,
+      "official": -0.34827902913093567,
+      "wmkd": -0.34827902913093567,
+      "max_abs_diff": 0.0
+    },
+    "Wq_Wk_aggregation": {
+      "pass": true,
+      "official": 0.25,
+      "wmkd": 0.25
+    }
+  }
+}

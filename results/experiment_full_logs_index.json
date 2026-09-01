@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-01T20:54:08.304130+00:00",
-  "object_count": 13,
+  "generated_at": "2026-09-01T21:12:32.223877+00:00",
+  "object_count": 14,
   "objects": [
     {
       "method": "PN-FP",
@@ -210,6 +210,24 @@
         "huref_a_20260901_201015",
         "huref_a_cont1_20260901_210000"
       ]
+    },
+    {
+      "method": "AWM",
+      "role": "preferred_fingerprint",
+      "experiment": "A",
+      "run_id": "awm_a_cont1_20260902_052000_cont3",
+      "full_log_path": "results/awm/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "fc9170a97ab195d2a6f905b65decfba8f103c020afc7eeafbee7cc281a057283",
+      "summary_path": "results/awm/experiment_a/summary.json",
+      "summary_sha256": "166f383f358c68d68db04e8e2bd30cede4558ee8f6e907e9b680799127539b99",
+      "report_path": "docs/reproduction_reports/awm_experiment_a_report.md",
+      "artifact_manifest_path": "results/awm/experiment_a/artifact_manifest.json",
+      "scientific_status": "SUCCESSFUL",
+      "artifact_type": "fingerprint_package",
+      "model_modified": false,
+      "preferred_fingerprint": "yes",
+      "utility_available": false,
+      "ba_status": "NOT_STARTED"
     }
   ]
 }

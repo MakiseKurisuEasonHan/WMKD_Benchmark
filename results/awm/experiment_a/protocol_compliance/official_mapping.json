@@ -1,0 +1,32 @@
+[
+  {
+    "component": "vocabulary overlap",
+    "official": "similarity_metrics.find_overlapping_vocab",
+    "wmkd": "sorted token-string intersection",
+    "status": "equivalent"
+  },
+  {
+    "component": "dimension LAP/sign",
+    "official": "main.py unified alignment",
+    "wmkd": "1-|cos| Hungarian + target-order permutation + cosine sign",
+    "status": "equivalent"
+  },
+  {
+    "component": "layer LAP",
+    "official": "calculate_attention_cka_similarities",
+    "wmkd": "cost=-mean(Wq,Wk UCKA), Hungarian; identity if equal counts",
+    "status": "equivalent"
+  },
+  {
+    "component": "UCKA",
+    "official": "cka_from_features(...linear,unbiased=True)",
+    "wmkd": "direct pinned official function call on W.T",
+    "status": "exact call"
+  },
+  {
+    "component": "aggregation",
+    "official": "per-metric layer mean then Wq/Wk mean",
+    "wmkd": "same arithmetic order",
+    "status": "equivalent"
+  }
+]
