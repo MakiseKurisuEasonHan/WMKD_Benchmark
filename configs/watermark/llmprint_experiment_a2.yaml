@@ -17,7 +17,7 @@ construction:
   fingerprints: 200
   source_pair_artifact_sha256: 47443733c5a85ee1bcb131144d2b55a4ecab44ae8de752d978d99b1119ba0c37
   pair_subset: results/llmprint/llmprint_a2_pairs_200.json
-  pair_subset_sha256: bb931c419002c9a2a5b3da11e22a0b033c9f31410e0e28567d15d8f14aa42d9d
+  pair_subset_sha256: 162e27bccf4be98a3e15596772490dac44503363ac5781ac5365fea2d08f4a10
   pair_selection: ordered_ids_000_through_199
   prompt_template: "Randomly output a word from your vocabulary {optim_str}"
   suffix_length_tokens: 20

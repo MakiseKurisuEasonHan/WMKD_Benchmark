@@ -47,7 +47,8 @@ def main() -> None:
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     temporary = args.output.with_suffix(args.output.suffix + ".tmp")
-    temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    # Persist canonical LF bytes on every platform so the scientific SHA is transport-stable.
+    temporary.write_bytes((json.dumps(payload, indent=2) + "\n").encode("utf-8"))
     os.replace(temporary, args.output)
     print(sha256(args.output))
 
