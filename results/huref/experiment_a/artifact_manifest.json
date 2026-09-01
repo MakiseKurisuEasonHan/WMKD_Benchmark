@@ -1,14 +1,17 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-template.v1",
+  "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "huref",
-  "status": "NOT_STARTED",
-  "official_commit": "9c34548a6f6c1e78780e1fd07de56c7a3357f6ef",
-  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "experiment": "A",
+  "run_id": "huref_a_20260901_201015",
+  "status": "FAILED",
+  "terminal": true,
   "model_modified": false,
-  "formal_result": null,
-  "preferred_fingerprint": null,
-  "ba_ready": false,
-  "missing_values_policy": "unavailable_not_reconstructed",
-  "artifacts": [],
-  "aggregate_sha256": null
+  "artifact_type": "partial_fingerprint_evidence",
+  "preferred_fingerprint": "no",
+  "ba_status": "NOT_STARTED",
+  "scientific_conclusion": "not judged",
+  "error": "Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.",
+  "artifacts": {
+    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 114, in main\n    proto=loadj(a.project/f\"results/ownership_protocols/{a.method}_formal_protocol.json\"); raw={}; det,raw=globals()[f\"run_{a.method}\"](a,proto,raw); status=\"COMPLETED\"; reason=None\n                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 93, in run_huref\n    ref=huref_fp(canonical(a.data_root),ids); score=lambda x:float(100*np.dot(ref,x)/(np.linalg.norm(ref)*np.linalg.norm(x))); rs=score(huref_fp(canonical(a.data_root),ids)); scores=[]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 89, in huref_fp\n    del m; release(); z=torch.cat(feats); return ((z-z.mean())/z.std()).numpy()\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.\n"
+  }
 }

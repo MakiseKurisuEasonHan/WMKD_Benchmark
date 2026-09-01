@@ -1,3 +1,3 @@
 # HuRef
 
-Official `LUMIA-Group/HuRef@9c34548a` has no explicit repository license observed. It forms three invariant terms (`WqWk`, `WvWo`, `WuWd`) from embeddings and the last two layers, then compares fingerprints with ICS. WMKD uses the official Mean Pooling path, so no encoder, CNN, StyleGAN or ZKP resource is required. Llama-3.2 GQA needs a declared engineering mapping from KV heads to query heads without changing the invariant formula. Formal success requires a deterministic canonical-token frequency list, all three terms, Reference and unrelated ICS regimes, a frozen decision rule and artifact integrity.
+Passive ownership fingerprint; official commit `9c34548a6f6c1e78780e1fd07de56c7a3357f6ef`. Experiment A does not modify model weights.

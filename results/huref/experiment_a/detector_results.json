@@ -1,16 +1,15 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-template.v1",
+  "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "huref",
-  "status": "NOT_STARTED",
-  "official_commit": "9c34548a6f6c1e78780e1fd07de56c7a3357f6ef",
-  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "experiment": "A",
+  "run_id": "huref_a_20260901_201015",
+  "status": "FAILED",
+  "terminal": true,
   "model_modified": false,
-  "formal_result": null,
-  "preferred_fingerprint": null,
-  "ba_ready": false,
-  "missing_values_policy": "unavailable_not_reconstructed",
-  "native_metric": null,
-  "threshold": null,
-  "positive_evidence": null,
-  "negative_baseline": null
+  "artifact_type": "partial_fingerprint_evidence",
+  "preferred_fingerprint": "no",
+  "ba_status": "NOT_STARTED",
+  "scientific_conclusion": "not judged",
+  "error": "Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.",
+  "detector": null
 }
