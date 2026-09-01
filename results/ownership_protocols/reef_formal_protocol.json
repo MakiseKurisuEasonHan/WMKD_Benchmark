@@ -1,0 +1,38 @@
+{
+  "schema_version": "wmkd.reef-formal-protocol.v1",
+  "method": "reef",
+  "experiment": "A",
+  "status": "READY_FOR_FORMAL",
+  "formal_authorized": true,
+  "frozen_before_results": true,
+  "canonical_reference": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_modified": false
+  },
+  "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
+  "negative_panel": {
+    "path": "results/ownership_protocols/shared_negative_panel_3.json",
+    "sha256": "4b97b0dfc4960adeb638282b51ec69c50cec1e8b46d8422b40712eb63d5f31e8"
+  },
+  "scientific_design": {
+    "probe": "TruthfulQA",
+    "samples": 200,
+    "probe_manifest": "results/ownership_protocols/reef_truthfulqa_200.json",
+    "probe_manifest_sha256": "8f63355817f726faea792edcc393ef9c6d32e07449bb66bbdefeb201e636599f",
+    "representation": "forward-hook output[0] at last token",
+    "layer": 27,
+    "metric": "official centered linear CKA on 200xhidden activation matrices"
+  },
+  "calibration": {
+    "status": "FROZEN_BEFORE_FORMAL_RESULTS",
+    "metric": "centered_linear_CKA",
+    "score_direction": "higher",
+    "negative_distribution": "three frozen family-diverse unrelated models, one score per model",
+    "threshold_rule": "tau = maximum score among the three frozen unrelated negatives",
+    "positive_rule": "suspect score > tau",
+    "tie_rule": "score equal to tau is negative",
+    "rationale": "pre-registered empirical family-wise separation boundary; no arbitrary numerical constant and no post-result tuning"
+  },
+  "protocol_content_sha256": "3ecf87cbdaec0561e411f16b1013b780306c67eabd8bcff69345b6bbe0257bc5"
+}

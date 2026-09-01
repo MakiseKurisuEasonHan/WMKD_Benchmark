@@ -1,0 +1,65 @@
+{
+  "schema_version": "wmkd.llmprint-resource-provenance-repair.v1",
+  "status": "FROZEN_RESOURCE_PROVENANCE_REPAIR",
+  "slot": 7,
+  "scientific_identity_changed": false,
+  "official_upstream_id": "microsoft/phi-2",
+  "modelscope_id": "microsoft/phi-2",
+  "unavailable_frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
+  "resolved_modelscope_weight_revision": "ecce99d7862d1c8c5b18ca8741e8004c01fc1287",
+  "modelscope_branch": "master",
+  "canonical_huggingface_revision": "810d367871c1d460086d9f82db8696f2e0a0fcd0",
+  "verification": {
+    "architecture": "PhiForCausalLM",
+    "model_type": "phi",
+    "parameter_count": 2779683840,
+    "vocab_size": 51200,
+    "tensor_dtype": "F16",
+    "quantized": false,
+    "fine_tuned": false,
+    "lora_merged": false,
+    "derivative_conversion": false,
+    "config_byte_identical": true,
+    "tokenizer_byte_identical": true,
+    "tokenizer_config_byte_identical": true,
+    "weight_shards_byte_identical": true
+  },
+  "canonical_file_identity": [
+    {
+      "path": "config.json",
+      "bytes": 735,
+      "sha256": "fbd955b298fdbd35fb81b3350a0d68d12616da7b7e9d81397ef632038ccc1111"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 2114924,
+      "sha256": "337da36be7a71a6e88aa9148967a7bc8736f4b47c7de8e19ba92b89e80734cfc"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 7339,
+      "sha256": "1906c7514a738bd743a05d7d95c8e9aeddb4d8c9ffdda4fb6ee05653fb6b97c4"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes": 35716,
+      "sha256": "0c77ac4c30d55a7ef763fd224cbc0073c0d808562fa682ba439265c2f3fea730"
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "bytes": 4995584424,
+      "sha256": "7fbcdefa72edf7527bf5da40535b57d9f5bd3d16829b94a9d25d2b457df62e84"
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "bytes": 563832976,
+      "sha256": "17b98759e4b7953cbcf63ec49be7edbc9b863b57c207d84a52f5d2f5bcfcf6b4"
+    }
+  ],
+  "evidence_sources": {
+    "huggingface_api": "https://hf-mirror.com/api/models/microsoft/phi-2?blobs=true",
+    "modelscope_model_api": "https://www.modelscope.cn/api/v1/models/microsoft/phi-2",
+    "modelscope_file_api": "https://www.modelscope.cn/api/v1/models/microsoft/phi-2/repo/files?Revision=master&Recursive=true"
+  },
+  "decision": "Current ModelScope transport is scientifically identical to canonical microsoft/phi-2; only transport provenance/revision mapping is repaired. Slot 7 may resume missing-only, while Reference, slots 1-6, and fingerprints 0-199 remain immutable."
+}

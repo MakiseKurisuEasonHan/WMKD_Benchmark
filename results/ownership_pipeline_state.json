@@ -1,0 +1,19 @@
+{
+  "schema_version": "wmkd.ownership-pipeline-state.v2",
+  "state_machine": [
+    "PENDING",
+    "NEEDS_PROTOCOL_FREEZE",
+    "READY_FOR_FORMAL",
+    "RUNNING",
+    "EVALUATING",
+    "CLOSING",
+    "terminal"
+  ],
+  "llmprint": "BLOCKED_RESOURCE_PROVENANCE",
+  "reef": "READY_FOR_FORMAL",
+  "awm": "READY_FOR_FORMAL",
+  "huref": "READY_FOR_FORMAL",
+  "zeroprint": "NEEDS_RUNTIME_GATE",
+  "ba": "NOT_STARTED",
+  "updated_at": "2026-09-01T17:00:39.936142+00:00"
+}

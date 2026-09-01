@@ -1,0 +1,25 @@
+{
+  "schema_version": "wmkd.zeroprint-humaneval-queries.v1",
+  "status": "FROZEN",
+  "source": "ModelScope opencompass/humaneval openai_humaneval/test",
+  "source_parquet_sha256": "2f2871a15fbc95b6c683043359f4ed8e144c5a1c4f24f25f66bc51f598dfcfb6",
+  "selection": "first 2 rows in source order",
+  "row_count": 2,
+  "ordered_rows_sha256": "e366c82e0b30773241969c43006d6612d908bd23c70a13bf5a7bf8fc54435bed",
+  "rows": [
+    {
+      "query_index": 0,
+      "source_index": 0,
+      "task_id": "HumanEval/0",
+      "prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+      "row_sha256": "56c5c94c3730b7bb56f8f42343d453d3c34992b37a6438469b79725b65e3f9c4"
+    },
+    {
+      "query_index": 1,
+      "source_index": 1,
+      "task_id": "HumanEval/1",
+      "prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+      "row_sha256": "21511e4c07dd37b84aecc1709438d9f647cb163f27ec5959a857ba22cf7a0d02"
+    }
+  ]
+}

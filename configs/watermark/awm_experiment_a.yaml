@@ -1,10 +1,20 @@
-method: AWM
-experiment: A
-status: PREPARATION_SMOKE_ONLY
-formal_authorized: false
-reference: {revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95, model_modified: false}
-official: {repo: https://github.com/LUMIA-Group/AWM, commit: bc20ff8e63cec57f5da422ae065686ced275e76d, license: no_explicit_license_observed}
-wmkd: {matrix_types: [Wq_weights, Wk_weights, Wq_Wk_weights], alignment: LAP, metric: unbiased_linear_CKA, layer_aggregation: official_mean}
-negative_plan: 3_to_5_family_diverse_frozen_ModelScope_models
-fallback: none
-hard_wall_clock_hours: 5
+{
+  "method": "AWM",
+  "experiment": "A",
+  "status": "READY_FOR_FORMAL",
+  "formal_authorized": true,
+  "reference": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_modified": false
+  },
+  "official": {
+    "commit": "bc20ff8e63cec57f5da422ae065686ced275e76d"
+  },
+  "protocol_manifest": {
+    "path": "results/ownership_protocols/awm_formal_protocol.json",
+    "sha256": "fba90dd289ba2cd7df3a640e68c9ad7abaee36f983c72021b2a33bb4c0618f62"
+  },
+  "hard_wall_clock_hours": 5,
+  "ba_authorized": false
+}

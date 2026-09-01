@@ -1,9 +1,20 @@
-method: REEF
-experiment: A
-status: PREPARATION_SMOKE_ONLY
-formal_authorized: false
-reference: {revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95, model_modified: false}
-official: {repo: https://github.com/AI45Lab/REEF, commit: 48329f6f3695a8aea33975832159e7ce44ad73f9, license: Apache-2.0}
-wmkd: {probe: TruthfulQA, samples: 200, layer: last, token_pooling: last_token, metric: linear_CKA}
-fallback_candidate: {trigger: projected_runtime_gt_3h, experiment: A2, samples: 100, authorized: false}
-hard_wall_clock_hours: 5
+{
+  "method": "REEF",
+  "experiment": "A",
+  "status": "READY_FOR_FORMAL",
+  "formal_authorized": true,
+  "reference": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_modified": false
+  },
+  "official": {
+    "commit": "48329f6f3695a8aea33975832159e7ce44ad73f9"
+  },
+  "protocol_manifest": {
+    "path": "results/ownership_protocols/reef_formal_protocol.json",
+    "sha256": "451224f574fad0735cc801765f3b694483905cf61157185f29cf095947bbb3b9"
+  },
+  "hard_wall_clock_hours": 5,
+  "ba_authorized": false
+}
