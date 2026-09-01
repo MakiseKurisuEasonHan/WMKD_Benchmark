@@ -1,0 +1,204 @@
+{
+  "schema_version": "wmkd.cleanup-evidence.v1",
+  "captured_at": "2026-09-01T04:20:18.137076+00:00",
+  "targets": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000",
+      "classification": "non-scientific speed test; never used as a formal Teacher or Ba Student",
+      "total_bytes": 25736945880,
+      "file_count": 28,
+      "small_evidence": [
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/generation/errors.jsonl",
+          "bytes": 5827,
+          "sha256": "12a13d909f19a0c6faad39ed39fbe7e1316ba680d99d80cc21c0944df63092d1",
+          "line_count": 3
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/generation/raw32.jsonl",
+          "bytes": 57021,
+          "sha256": "a75e0945a74eb8b7cf4818240190e5513ea4a116d6783f2b00f9d44793f9883c",
+          "line_count": 35
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/generation/telemetry.json",
+          "bytes": 890,
+          "sha256": "ccbd29253e4c0b41ec60af768a64a136bd75c942eadb907e52cf8b56ead981ac",
+          "line_count": 30
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/telemetry.json",
+          "bytes": 729,
+          "sha256": "bac40ee919fae51159b40930d0e3c5cf41a6ee5bcbce8cf8e20721b2e1ca68db",
+          "line_count": 26
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/checkpoint-5/config.json",
+          "bytes": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "line_count": 39
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/checkpoint-5/generation_config.json",
+          "bytes": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "line_count": 12
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/checkpoint-5/model.safetensors.index.json",
+          "bytes": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "line_count": 262
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/checkpoint-5/special_tokens_map.json",
+          "bytes": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "line_count": 17
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/checkpoint-5/tokenizer_config.json",
+          "bytes": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "line_count": 2063
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/checkpoint-5/trainer_state.json",
+          "bytes": 762,
+          "sha256": "9f01cd17a2a8d70421e6343e274f579f4f0da0a6445082c5511779147912dc89",
+          "line_count": 33
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/final_model/config.json",
+          "bytes": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "line_count": 39
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/final_model/generation_config.json",
+          "bytes": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "line_count": 12
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/final_model/model.safetensors.index.json",
+          "bytes": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "line_count": 262
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/final_model/special_tokens_map.json",
+          "bytes": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "line_count": 17
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_speedtest_20260829_220000/training/final_model/tokenizer_config.json",
+          "bytes": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "line_count": 2063
+        }
+      ]
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests",
+      "classification": "non-scientific speed test; never used as a formal Teacher or Ba Student",
+      "total_bytes": 25736997718,
+      "file_count": 28,
+      "small_evidence": [
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/teacher_20260901/raw_candidates.jsonl",
+          "bytes": 114451,
+          "sha256": "8543c0efca1d6f91b3c0853eeeaf083ed15bc3ea490d5d8b9f47de9b7f7f516a",
+          "line_count": 70
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/teacher_20260901/generation_errors.jsonl",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "line_count": 0
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/teacher_20260901/telemetry.json",
+          "bytes": 1054,
+          "sha256": "90f6394874f8780a7be5e1b55f0498c68738434d73bef5fedd5bc9832b5d2407",
+          "line_count": 34
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/telemetry.json",
+          "bytes": 800,
+          "sha256": "96e4eb97a6c21e147b79791cbc79a15d65e6a170e90caef5a45a98ccc78c89f7",
+          "line_count": 29
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/checkpoint-8/config.json",
+          "bytes": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "line_count": 39
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/checkpoint-8/generation_config.json",
+          "bytes": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "line_count": 12
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/checkpoint-8/model.safetensors.index.json",
+          "bytes": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "line_count": 262
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/checkpoint-8/tokenizer_config.json",
+          "bytes": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "line_count": 2063
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/checkpoint-8/special_tokens_map.json",
+          "bytes": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "line_count": 17
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/checkpoint-8/trainer_state.json",
+          "bytes": 762,
+          "sha256": "4c4f8f394628ee16b909580734a40f7ccf5bdffa6ca2268574230af08699525d",
+          "line_count": 33
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/final_model/config.json",
+          "bytes": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "line_count": 39
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/final_model/generation_config.json",
+          "bytes": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "line_count": 12
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/final_model/model.safetensors.index.json",
+          "bytes": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "line_count": 262
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/final_model/tokenizer_config.json",
+          "bytes": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "line_count": 2063
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba_speed_tests/student_20260901/output/final_model/special_tokens_map.json",
+          "bytes": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "line_count": 17
+        }
+      ]
+    }
+  ],
+  "scientific_artifact_reused": false,
+  "note": "Hashes and counts preserve the small run evidence; large speed-test weights are intentionally not archived or treated as scientific objects."
+}
