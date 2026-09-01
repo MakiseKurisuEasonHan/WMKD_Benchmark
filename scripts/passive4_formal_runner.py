@@ -44,7 +44,7 @@ def reef_fp(path,texts):
  acts=[]
  with torch.inference_mode():
   for s in texts:
-   z=tok(s,return_tensors="pt",truncation=True).to("cuda:0"); o=m(**z,output_hidden_states=True,use_cache=False); acts.append(o.hidden_states[28][0,-1].float().cpu())
+   z=tok(s,return_tensors="pt",truncation=True).to("cuda:0"); o=m(**z,output_hidden_states=True,use_cache=False); acts.append(o.hidden_states[-1][0,-1].float().cpu())
  del m,tok; release(); return torch.stack(acts)
 def run_reef(a,proto,raw):
  rows=loadj(a.project/proto["scientific_design"]["probe_manifest"])["rows"]; texts=[r["text"] for r in rows]
