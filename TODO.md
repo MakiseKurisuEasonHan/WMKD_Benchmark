@@ -113,3 +113,8 @@ Completed: A2 956/1024 (93.359375%) → Ba 98/1024 (9.5703125%), 83.7890625-poin
 - [ ] Keep `WMKD_AUTO_SHUTDOWN_ENABLED=false` until the user explicitly re-enables automatic shutdown.
 - [x] Freeze the SCW A2 domestic dataset protocol and build/audit the exact 80k-unique, two-pass 160k-exposure local stream.
 - [ ] Run the single SCW A2 4-step gate; start Formal A2 only on PASS and arm automatic shutdown only after optimizer step 1 proves Formal A2 started.
+
+## SCW A2 next action
+
+- Keep automatic shutdown disabled until explicitly re-authorized.
+- In a separately authorized turn, resolve the fixed French evaluation input offline and resume evaluation from Base generation without retraining.

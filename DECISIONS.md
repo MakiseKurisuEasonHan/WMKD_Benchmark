@@ -317,3 +317,7 @@ This log records consequential project decisions. It does not record routine eng
 - SCW A2 is a WMKD-adapted domestic-data idea reproduction with two declared adaptations: functional-role ModelScope dataset replacements and an 80,000-unique frozen pool replayed in the same order twice for 160,000 formal exposures.
 - Freeze Role0 `CohereForAI/aya_collection_language_split` French subset (`inputs + targets` as French text), Role1 `wyj123456/instruct` (`prompt/completion` chat adapter), and Role2 `mapjack/openwebtextSample` (`text`). Do not change datasets based on outcome.
 - PCG64(42), length 80,000 gives fixed role counts 47,773 / 16,291 / 15,936. Pre-formal auto-shutdown remains false; only a formal A2 run proven to reach optimizer step 1 may arm post-formal pipeline shutdown.
+
+## 2026-09-01 — Temporarily disable all automatic shutdowns
+
+After SCW A2 completed 2500/2500 but failed at Base French generation, its terminal finalizer executed `/usr/bin/shutdown`. Automatic shutdown is now project-wide disabled until the user explicitly re-enables it. Environment requests cannot override `configs/runtime/auto_shutdown.json`; all SUCCESS, FAILED, and BLOCKED terminal states must write `SHUTDOWN_REQUIRED_MANUAL` and leave the instance running.

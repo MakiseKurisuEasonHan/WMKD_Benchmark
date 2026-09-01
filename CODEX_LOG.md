@@ -390,3 +390,7 @@ AutoDL hostname 为 `autodl-container-8sfcmdj9gq-e8387159`。GPU 为 NVIDIA RTX 
 # 2026-08-31 — SCW post-mortem and shutdown safety
 
 Persisted evidence proved the prior deterministic run failed at LucieFr repository-path discovery with zero records and then invoked the configured AutoDL shutdown finalizer. Added a default-off, reversible shutdown policy that emits `SHUTDOWN_REQUIRED_MANUAL`. No experiment, download, materializer, gate, GPU training, Formal A, or Ba was started.
+
+## 2026-09-01 SCW A2 post-mortem
+
+Recovered persisted state after reboot. Training completed and Teacher saved; Base French generation failed because the pinned Hugging Face dataset was unavailable under offline mode. The pipeline finalizer then issued `/usr/bin/shutdown`. Added a project-level fail-closed shutdown policy and tests; no training or evaluation was restarted.

@@ -97,3 +97,10 @@ The first conservative cleanup attempt remains recorded as rejected before execu
 - Bounded local inputs: Aya French train shard 327,767,265 bytes/SHA256 `35c6904...60429`; instruction complete-line 64 MiB prefix 58,925 rows; OpenWebText Arrow shard 503,524,200 bytes/SHA256 `669ceafd...7d858`.
 - Built frozen stream `scw_a2_frozen80k_20260831_230200`: exact role counts 47,773/16,291/15,936; stream SHA256 `4763b08342493bedacd1753e297e0e081568906c0bade310e2d79e1783cd35cd`.
 - Audit PASS: 80,000 unique identities, schedule/hash/order/source/loss checks, exact one-pass 80k loader and exact two-pass 160k formal exposure replay. Formal A2 and Ba have not started at this preparation record.
+
+## SCW A2 post-mortem — `scw_a2_full_20260831_214331`
+
+- Formal training completed 2500/2500 with `train_end`; runtime 11570.9348 seconds and final aggregate train loss 5.289046603393555.
+- The final Teacher was saved at `runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A`.
+- Evaluation failed before the first Base generation output: the fixed French evaluation dataset was unavailable in offline mode (`OfflineModeIsEnabled`). Detector, utility, report, and scientific preference judgement were not run.
+- The enabled terminal shutdown policy issued `/usr/bin/shutdown` after this evaluation failure. Automatic shutdown is now project-wide disabled; manual shutdown is required.
