@@ -14,3 +14,7 @@
 ## Formal launch
 
 Minimal readiness passed at Git commit `ce8c03bd555c262e86c79b5249a23e7903a747da`: canonical/source/pair/panel provenance matched; the LF-canonical 200-pair subset SHA256 is `162e27bccf4be98a3e15596772490dac44503363ac5781ac5365fea2d08f4a10`; A2 config SHA256 is `4325b2a518aa5080dfb5cc070d57713bf6ee84efb9d72e8e4cbc89308920613a`; output namespace was absent and GPU idle. The already validated identical runtime implementation made an extra GPU sanity unnecessary. First health snapshot: runner/scientific PIDs 7155/7157, status RUNNING at 0/200, active GPU with about 7.2 GiB process VRAM, CUBLAS env present in both processes, and no OOM/NaN/Traceback/CUDA/collision. The known memory-efficient-attention warning is retained without changing the algorithm. Initial ETA is approximately 6 h 11 m from the prior formal per-step runtime; A2-measured average is unavailable until its first atomic artifact completes.
+
+### Construction milestone 25/200
+
+The first scheduled milestone snapshot observed 27/200 valid atomic artifacts through `llmprint-pair-026`: zero failed/corrupt/duplicate records, every checked record 500/500 with a 20-token suffix and matching A2 config hash. Mean/median runtime were 117.695/116.777 seconds and the remaining ETA was approximately 5 h 39 m. Runner/scientific PIDs, GPU, CUBLAS env and disk remained healthy; no OOM, NaN, Traceback, CUDA, collision or permission error was present.
