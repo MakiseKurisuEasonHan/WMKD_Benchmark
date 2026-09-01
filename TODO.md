@@ -8,7 +8,8 @@
 - [x] Reconnect to AutoDL, validate idle GPU and canonical Base 12/12 SHA256, prepare 300 tokenizer-valid pairs, and complete exactly one isolated 1000-step fingerprint speed test (212.429 s; 1000/1000).
 - [x] Freeze dual detector semantics: paper Primary uses inclusive bits, sample standard deviation (`ddof=1`), raw unclipped `mu + 1.64 sigma`; pinned-release gray-box remains supplementary and cannot change the main conclusion.
 - [x] Freeze all 13 validation-negative identities as revision-pinned ModelScope transport mirrors, with zero replacements and zero unresolved slots.
-- [ ] Pass all 14 remote readiness gates and, only then, launch the explicitly authorized detached formal 300-fingerprint construction. Keep Ba, 20k generation, and Student training NOT STARTED.
+- [x] Pass all 14 remote readiness gates and launch detached formal 300-fingerprint construction `llmprint_a_20260901_061225`; first health check is healthy at 0/300. Keep Ba, 20k generation, and Student training NOT STARTED.
+- [ ] After detached construction finishes, validate 300/300 immutable artifacts and continue the separately gated Reference/panel detector stages; do not start Ba automatically.
 - [ ] Run REEF only under a later separately authorized protocol.
 
 The older SCW checklist entries below are immutable historical workflow records. Their unchecked items do not override the current 5/7 closure or authorize rerunning strict A.
