@@ -10,7 +10,8 @@
 - [x] Freeze all 13 validation-negative identities as revision-pinned ModelScope transport mirrors, with zero replacements and zero unresolved slots.
 - [x] Pass all original-A readiness gates and launch `llmprint_a_20260901_061225`; preserve this immutable history.
 - [x] Safely terminate incomplete formal A after 7/300 complete artifacts under the user-approved scientific redesign; prohibit A partial reuse.
-- [ ] Complete minimal A2 readiness and launch first-200-pairs × 500-step detached construction; do not start Ba automatically.
+- [x] Complete minimal A2 readiness and launch first-200-pairs × 500-step detached construction `llmprint_a2_20260901_064855`; first health snapshot passed.
+- [ ] After A2 construction completes, validate exactly 200/200 × 500/500 before any separately instructed detector evaluation; do not start Ba automatically.
 - [ ] Run REEF only under a later separately authorized protocol.
 
 The older SCW checklist entries below are immutable historical workflow records. Their unchecked items do not override the current 5/7 closure or authorize rerunning strict A.
