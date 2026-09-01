@@ -7,6 +7,7 @@ import hashlib
 import importlib.util
 import json
 import random
+import sys
 from itertools import combinations
 from pathlib import Path
 
@@ -16,6 +17,7 @@ def load_upstream(path: Path):
     if spec is None or spec.loader is None:
         raise RuntimeError(f"cannot import pinned upstream pair source: {path}")
     module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
 

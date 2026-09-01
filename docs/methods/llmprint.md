@@ -2,7 +2,7 @@
 
 ## Current status
 
-LLMPrint is the sixth WMKD_Benchmark method. Experiment A is **NOT STARTED**; this task authorizes source/paper audit, preparation, minimal compatibility preflight, and an isolated 1–3-fingerprint speed test only. Formal 300/300 construction and Ba are prohibited until separate approval.
+LLMPrint is the sixth WMKD_Benchmark method. Experiment A is **NOT STARTED**. Source/paper audit, canonical compatibility preflight, 300-pair preparation, and exactly one full-parameter 1000-step speed test are complete. Formal 300/300 construction and Ba remain prohibited until separate approval; `ready_for_formal_A=false` because detector semantics are unresolved.
 
 LLMPrint is a passive model fingerprint/provenance detector, not a proactive parameter watermark. Its Reference Model is the unchanged canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`; `watermarked=false`, `model_modified=false`, and `fingerprint_reference=true`. Experiment A's principal scientific artifact is a Preferred Fingerprint Package, not a duplicate “watermarked Teacher” checkpoint.
 
@@ -27,7 +27,9 @@ The project wrapper imports the pinned external optimizer and preserves its loss
 
 `L = Lu + beta * Lr`
 
-It adds only fail-closed path/provenance checks and per-fingerprint atomic JSON persistence. Existing valid success IDs are skipped; invalid or partial existing records stop rather than overwrite. Infrastructure recovery remains A continuation, never automatic A2.
+It adds fail-closed path/provenance checks and per-fingerprint atomic JSON persistence. Existing valid success IDs are skipped; invalid or partial existing records stop rather than overwrite. For Python 3.12/Transformers 4.51.3 it also registers dynamic modules before dataclass execution and treats `DynamicCache` as an immutable fixed prefix by cloning it per forward and repeating only the current candidate batch dimension. Prefix caching remains enabled and logits/loss/candidate semantics are unchanged. Infrastructure recovery remains A continuation, never automatic A2.
+
+AutoDL preflight passed on an idle RTX PRO 6000. The canonical Base matched 12/12 SHA256. The fixed tokenizer yielded 773 eligible candidates and exactly 300 deterministic pairs. Speed-test continuation `llmprint_speed_20260901_1329_cont2` completed one fingerprint at 1000/1000 steps in 212.429 seconds, with 7,048,545,280 peak allocated VRAM bytes. Linear construction time is about 17 h 42 m for 300; operational reservation should be approximately 20–22 h. The result is preserved at `results/llmprint/llmprint_speed_test_pair_000.json`.
 
 ## Detector audit and unresolved paper/code difference
 

@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Current closure is **5/7**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint and REEF. LLMPrint preparation is now explicitly authorized and in progress: the official paper/source audit, local configuration/wrappers/tests, and ModelScope validation-negative availability audit are complete. Formal 300-fingerprint construction, Experiment Ba, and Student training have not started. AutoDL preflight and the isolated 1-fingerprint/1000-step speed test are pending because the restarted instance's current SSH endpoint is not yet available.
+Current closure is **5/7**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint and REEF. LLMPrint preparation and the isolated AutoDL speed test are complete. The canonical Base passed 12/12 SHA256; 300 tokenizer-valid pairs were prepared from 773 candidates; one full-parameter fingerprint completed 1000/1000 GCG steps in 212.429 seconds with 7,048,545,280 peak allocated VRAM bytes. Formal 300-fingerprint construction remains 0/300, and Experiment Ba/Student training have not started. Formal A remains gated by the unresolved paper-vs-release gray-box detector rule.
 
 SCW strict A remains a preserved pre-formal infrastructure/data-access attempt: Formal training never started, and its PyArrow/GIL finalization plus overseas official-data access failures are not a scientific failure. The explicitly authorized A2 domestic-data adaptation completed, produced the preferred Teacher, and Ba completed with a fresh canonical Student. The detailed immutable history below is retained rather than rewritten.
 

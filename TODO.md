@@ -5,7 +5,7 @@
 - [x] Close PN-FP, EverTracer, CTCC, iSeal, and SCW: **5/7 complete**.
 - [x] Preserve 10/10 canonical full experiment JSON logs and the global index.
 - [x] Audit the LLMPrint paper and pin official source `hifi-hyp/ACL-LLMPrint@3e577f98b2bb64780ec2995b074c5aeec9b017e1`; prepare local configuration, wrappers, tests, method record, and validation-negative availability matrix.
-- [ ] Reconnect to the restarted AutoDL instance, revalidate checkout/GPU/canonical-base/environment state, prepare the 300 tokenizer-valid word pairs, and run exactly one isolated 1000-step fingerprint speed test.
+- [x] Reconnect to AutoDL, validate idle GPU and canonical Base 12/12 SHA256, prepare 300 tokenizer-valid pairs, and complete exactly one isolated 1000-step fingerprint speed test (212.429 s; 1000/1000).
 - [ ] Resolve the paper-vs-release gray-box detector discrepancy before declaring readiness for formal Experiment A.
 - [ ] Keep formal 300-fingerprint construction, Ba, and Student training NOT STARTED until separately authorized after preparation review.
 - [ ] Run REEF only under a later separately authorized protocol.

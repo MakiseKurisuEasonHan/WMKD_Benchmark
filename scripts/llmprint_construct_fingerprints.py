@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import importlib.util
 import json
 import os
+import sys
 import time
 from pathlib import Path
 
@@ -37,7 +39,66 @@ def load_gcg(source: Path):
     if spec is None or spec.loader is None:
         raise RuntimeError(f"cannot import pinned upstream optimizer: {module_path}")
     module = importlib.util.module_from_spec(spec)
+    # Python 3.12 dataclasses resolve annotations through sys.modules while
+    # the class decorators execute, so register the dynamic module first.
+    sys.modules[spec.name] = module
     spec.loader.exec_module(module)
+
+    # The release pins transformers 4.51.3, whose DynamicCache is mutated in
+    # place.  The upstream optimizer reuses one prefix cache as if it were an
+    # immutable legacy tuple and therefore fails when a candidate batch has
+    # more than one row.  Keep prefix caching enabled and preserve identical
+    # logits by cloning the fixed prefix for every forward and repeating only
+    # its batch dimension for the current candidate chunk.
+    original_gradient = module.GCG.compute_token_gradient
+
+    def compatible_gradient(self, optim_ids):
+        original_cache = self.prefix_cache
+        if original_cache is None or not hasattr(original_cache, "batch_repeat_interleave"):
+            return original_gradient(self, optim_ids)
+        self.prefix_cache = copy.deepcopy(original_cache)
+        try:
+            return original_gradient(self, optim_ids)
+        finally:
+            self.prefix_cache = original_cache
+
+    def compatible_candidate_loss(self, search_batch_size, input_embeds):
+        import torch
+
+        all_loss = []
+        for index in range(0, input_embeds.shape[0], search_batch_size):
+            with torch.no_grad():
+                batch_embeds = input_embeds[index : index + search_batch_size]
+                current_batch_size = batch_embeds.shape[0]
+                if self.prefix_cache is not None:
+                    cache = copy.deepcopy(self.prefix_cache)
+                    if hasattr(cache, "batch_repeat_interleave") and current_batch_size > 1:
+                        cache.batch_repeat_interleave(current_batch_size)
+                    outputs = self.model(
+                        inputs_embeds=batch_embeds,
+                        past_key_values=cache,
+                        use_cache=True,
+                    )
+                else:
+                    outputs = self.model(inputs_embeds=batch_embeds)
+                first_token_logits = outputs.logits[:, -1, :]
+                loss = module.custom_loss(
+                    first_token_logits,
+                    self.target_token_ids[0],
+                    self.target_token_ids[1],
+                    alpha=self.config.alpha,
+                    beta=self.config.beta,
+                    margin=self.config.margin,
+                )
+                loss = loss * torch.ones(current_batch_size, device=loss.device)
+                all_loss.append(loss)
+                del outputs
+                module.gc.collect()
+                module._empty_cuda_cache()
+        return torch.cat(all_loss, dim=0)
+
+    module.GCG.compute_token_gradient = compatible_gradient
+    module.GCG._compute_candidates_loss = compatible_candidate_loss
     return module
 
 
@@ -138,6 +199,7 @@ def main() -> None:
             "gpu": torch.cuda.get_device_name(0),
             "peak_vram_bytes": int(torch.cuda.max_memory_allocated(0)),
             "upstream_commit": "3e577f98b2bb64780ec2995b074c5aeec9b017e1",
+            "runtime_compatibility": "immutable_dynamic_prefix_cache_batch_repeat",
         }
         atomic_json(output, record)
         print(json.dumps({"pair_id": pair["pair_id"], "runtime_seconds": runtime, "best_loss": result.best_loss}))
