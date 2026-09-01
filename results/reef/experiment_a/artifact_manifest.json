@@ -1,33 +1,17 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-closure.v1",
+  "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "reef",
-  "method_display_name": "REEF",
   "experiment": "A",
-  "status": "BLOCKED",
+  "run_id": "reef_a_20260901_200450",
+  "status": "FAILED",
   "terminal": true,
-  "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
-  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
   "model_modified": false,
-  "formal_result": null,
-  "preferred_fingerprint": false,
-  "ba_ready": false,
-  "missing_values_policy": "unavailable_not_reconstructed",
-  "blocker": {
-    "type": "UNFROZEN_SCIENTIFIC_PROTOCOL_BLOCKER",
-    "formal_run_started": false,
-    "scientific_config_modified": false,
-    "reasons": [
-      "formal_authorized=false in the fixed REEF Experiment A config",
-      "the exact 200 TruthfulQA probe identities and content hashes are not frozen",
-      "the unrelated-model negative panel is not frozen",
-      "the controlling threshold/calibration rule is not frozen"
-    ],
-    "policy": "No scientific semantics were invented, tuned, or inferred. Formal A was not launched."
-  },
-  "artifact_type": "no_formal_artifact",
-  "formal_artifacts": [],
-  "preserved_smoke_artifact": {
-    "path": "results/reef/smoke/reef_smoke_20260901.json",
-    "sha256": "c824566a22e784127e5c4df9ec3545f8bfdb500d2609748e64666054639ce164"
+  "artifact_type": "partial_fingerprint_evidence",
+  "preferred_fingerprint": "no",
+  "ba_status": "NOT_STARTED",
+  "scientific_conclusion": "not judged",
+  "error": "tuple index out of range",
+  "artifacts": {
+    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 114, in main\n    proto=loadj(a.project/f\"results/ownership_protocols/{a.method}_formal_protocol.json\"); raw={}; det,raw=globals()[f\"run_{a.method}\"](a,proto,raw); status=\"COMPLETED\"; reason=None\n                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 53, in run_reef\n    for mid,p in negpaths(a.data_root): scores.append({\"model_id\":mid,\"score\":centered_cka(ref,reef_fp(p,texts))})\n                                                                                               ^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 47, in reef_fp\n    z=tok(s,return_tensors=\"pt\",truncation=True).to(\"cuda:0\"); o=m(**z,output_hidden_states=True,use_cache=False); acts.append(o.hidden_states[28][0,-1].float().cpu())\n                                                                                                                               ~~~~~~~~~~~~~~~^^^^\nIndexError: tuple index out of range\n"
   }
 }

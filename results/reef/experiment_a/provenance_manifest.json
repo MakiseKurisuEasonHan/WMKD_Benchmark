@@ -1,38 +1,24 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-closure.v1",
+  "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "reef",
-  "method_display_name": "REEF",
   "experiment": "A",
-  "status": "BLOCKED",
+  "run_id": "reef_a_20260901_200450",
+  "status": "FAILED",
   "terminal": true,
-  "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
-  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
   "model_modified": false,
-  "formal_result": null,
-  "preferred_fingerprint": false,
-  "ba_ready": false,
-  "missing_values_policy": "unavailable_not_reconstructed",
-  "blocker": {
-    "type": "UNFROZEN_SCIENTIFIC_PROTOCOL_BLOCKER",
-    "formal_run_started": false,
-    "scientific_config_modified": false,
-    "reasons": [
-      "formal_authorized=false in the fixed REEF Experiment A config",
-      "the exact 200 TruthfulQA probe identities and content hashes are not frozen",
-      "the unrelated-model negative panel is not frozen",
-      "the controlling threshold/calibration rule is not frozen"
-    ],
-    "policy": "No scientific semantics were invented, tuned, or inferred. Formal A was not launched."
-  },
-  "config": {
-    "path": "configs/watermark/reef_experiment_a.yaml",
-    "sha256": "3ad3a5d1daf89d3d47b626dfa82d153e295437cd36cb4607e8ac858ac5150377"
-  },
-  "smoke": {
-    "path": "results/reef/smoke/reef_smoke_20260901.json",
-    "sha256": "c824566a22e784127e5c4df9ec3545f8bfdb500d2609748e64666054639ce164"
-  },
-  "transport_adaptations": [],
-  "teacher_checkpoint_created": false,
-  "ba_started": false
+  "artifact_type": "partial_fingerprint_evidence",
+  "preferred_fingerprint": "no",
+  "ba_status": "NOT_STARTED",
+  "scientific_conclusion": "not judged",
+  "error": "tuple index out of range",
+  "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
+  "canonical_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "protocol_sha256": "451224f574fad0735cc801765f3b694483905cf61157185f29cf095947bbb3b9",
+  "environment": {
+    "python": "3.12.3",
+    "pytorch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+  }
 }
