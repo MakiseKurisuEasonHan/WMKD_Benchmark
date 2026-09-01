@@ -1,0 +1,39 @@
+{
+  "schema_version": "wmkd.zeroprint-glove-safe-reconstruction.v1",
+  "status": "ZEROPRINT_GLOVE_RESOURCE_READY",
+  "classification": "scientifically_equivalent_reconstruction_from_canonical_Stanford_GloVe_6B_100d",
+  "pickle_executed": false,
+  "source_text": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/cache/zeroprint/glove-6b-100d-raw-hf-mirror/glove.6B.100d.txt",
+    "bytes": 347116733,
+    "sha256": "95dde4dfd627ab26608d33e76d1195ec059734bd29089ea52cadb08d07c64544",
+    "rows": 400000,
+    "dimensions": 100,
+    "vocabulary_unique": true,
+    "vocabulary_sha256_ordered_newline": "5d5f74b8d275407caad13a125d6db79d7011cbea3ead0af458bc69841870c983"
+  },
+  "comparison_npy": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/cache/zeroprint/glove-wiki-gigaword-100-hf-mirror/glove-wiki-gigaword-100.model.vectors.npy",
+    "shape": [
+      400000,
+      100
+    ],
+    "dtype": "float32",
+    "sha256": "58620c9e3f3f70214133cdc5899b9553443198a27d320c34a1b39341e1908c67",
+    "vectors_exact_float32": true,
+    "maximum_absolute_difference": 0.0,
+    "tolerance": {
+      "rtol": 1e-06,
+      "atol": 1e-07
+    },
+    "mismatched_rows": 0
+  },
+  "safe_word2vec": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/cache/zeroprint/glove-safe/glove-wiki-gigaword-100.word2vec.txt",
+    "bytes": 347116744,
+    "sha256": "71a198ccf55e154b8bcedd1f52ec4d329ed2eae3d149493ad899b5dec005689a",
+    "header": "400000 100"
+  },
+  "scientific_adaptation": false,
+  "transport_serialization_adaptation": true
+}

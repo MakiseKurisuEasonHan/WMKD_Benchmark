@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.zeroprint-glove-resource-resolution.v1",
   "resolved_at": "2026-09-01",
-  "status": "ZEROPRINT_RESOURCE_BLOCKED",
+  "status": "ZEROPRINT_GLOVE_RESOURCE_READY",
   "canonical_upstream": {
     "identity": "gensim-data/glove-wiki-gigaword-100",
     "file_name": "glove-wiki-gigaword-100.gz",
@@ -48,8 +48,8 @@
         }
       }
     ],
-    "content_identity_verdict": "not_fully_verified",
-    "reason": "The vector matrix metadata matches the canonical vocabulary size and dimension, but the paired vocabulary/model object is pickle-like and was not deserialized from a third-party mirror. Byte identity to the canonical gensim .gz is not established."
+    "content_identity_verdict": "vectors_verified_via_safe_raw_text_reconstruction",
+    "reason": "The pickle-like model was never deserialized. The paired NPY was compared against all 400,000 safely parsed raw Stanford GloVe rows and every float32 value matched exactly."
   },
   "raw_text_candidate": {
     "identity": "Stanford glove.6B.100d.txt",
@@ -57,15 +57,32 @@
     "mirror_revision": "fc671f626a92828aef148a010bc5abccd1239b0b",
     "expected_size_bytes": 347116733,
     "expected_sha256": "95dde4dfd627ab26608d33e76d1195ec059734bd29089ea52cadb08d07c64544",
-    "downloaded": false,
-    "adoption_status": "not_authorized_until_content-equivalence-to-canonical-gensim-package-is-accepted"
+    "downloaded": true,
+    "actual_size_bytes": 347116733,
+    "actual_sha256": "95dde4dfd627ab26608d33e76d1195ec059734bd29089ea52cadb08d07c64544",
+    "row_count": 400000,
+    "dimensions": 100,
+    "vocabulary_unique": true,
+    "vocabulary_sha256_ordered_newline": "5d5f74b8d275407caad13a125d6db79d7011cbea3ead0af458bc69841870c983",
+    "adoption_status": "accepted_after_safe_full-text-and-vector-equivalence-validation"
   },
   "overseas_sources": {
     "role": "provenance_reference_only",
     "long_wait_disabled": true,
     "observed": "official gensim downloader and GitHub release direct transfer remained at zero bytes"
   },
+  "safe_reconstruction": {
+    "format": "word2vec text with header 400000 100 followed by canonical raw rows",
+    "sha256": "71a198ccf55e154b8bcedd1f52ec4d329ed2eae3d149493ad899b5dec005689a",
+    "vectors_exact_float32": true,
+    "maximum_absolute_difference_vs_mirror_npy": 0.0,
+    "mismatched_rows": 0,
+    "pickle_executed": false,
+    "manifest": "results/zeroprint/glove_safe_reconstruction_manifest.json"
+  },
+  "provenance_classification": "scientifically_equivalent_reconstruction_from_canonical_Stanford_GloVe_6B_100d",
   "scientific_substitution_used": false,
+  "transport_serialization_adaptation": true,
   "zero_print_scientific_run_started": false,
-  "next_pipeline_behavior": "Skip ZeroPrint at its turn with terminal resource blocker unless a safely verifiable exact/equivalent domestic copy becomes available."
+  "next_pipeline_behavior": "Use the safe reconstructed resource for ZeroPrint Experiment A without changing the scientific method or naming it A2."
 }
