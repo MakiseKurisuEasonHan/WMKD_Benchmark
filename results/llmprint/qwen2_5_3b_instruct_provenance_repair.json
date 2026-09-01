@@ -1,0 +1,36 @@
+{
+  "schema_version": "wmkd.llmprint-resource-provenance-repair.v1",
+  "status": "FROZEN_RESOURCE_PROVENANCE_REPAIR",
+  "slot": 11,
+  "scientific_identity_changed": false,
+  "official_upstream_id": "Qwen/Qwen2.5-3B-Instruct",
+  "original_modelscope_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "resolved_modelscope_weight_revision": "ba7dc0f38bdb4789f40899310796b84ac658fd40",
+  "canonical_huggingface_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "verification": {
+    "architecture": "Qwen2ForCausalLM",
+    "parameter_count": 3085938688,
+    "vocab_size": 151936,
+    "quantized": false,
+    "fine_tuned": false,
+    "lora_merged": false,
+    "derivative_conversion": false,
+    "config_index_tokenizer_vocab_merges_byte_identical": true,
+    "weight_shards_byte_identical": true,
+    "parameter_shapes_identical": true
+  },
+  "weight_shards": [
+    {"path": "model-00001-of-00002.safetensors", "bytes": 3968658944, "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2"},
+    {"path": "model-00002-of-00002.safetensors", "bytes": 2203268048, "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"}
+  ],
+  "small_file_sha256": {
+    "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+    "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+    "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+  },
+  "decision": "Current ModelScope transport is byte-identical to canonical Qwen/Qwen2.5-3B-Instruct. Only transport revision provenance is repaired; slot 11 may resume missing-only while fingerprints, Reference, and slots 1-10 remain immutable."
+}
