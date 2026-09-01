@@ -1,14 +1,17 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-template.v1",
+  "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "awm",
-  "status": "NOT_STARTED",
-  "official_commit": "bc20ff8e63cec57f5da422ae065686ced275e76d",
-  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "experiment": "A",
+  "run_id": "awm_a_20260901_200911",
+  "status": "FAILED",
+  "terminal": true,
   "model_modified": false,
-  "formal_result": null,
-  "preferred_fingerprint": null,
-  "ba_ready": false,
-  "missing_values_policy": "unavailable_not_reconstructed",
-  "artifacts": [],
-  "aggregate_sha256": null
+  "artifact_type": "partial_fingerprint_evidence",
+  "preferred_fingerprint": "no",
+  "ba_status": "NOT_STARTED",
+  "scientific_conclusion": "not judged",
+  "error": "'Phi3Attention' object has no attribute 'q_proj'",
+  "artifacts": {
+    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 114, in main\n    proto=loadj(a.project/f\"results/ownership_protocols/{a.method}_formal_protocol.json\"); raw={}; det,raw=globals()[f\"run_{a.method}\"](a,proto,raw); status=\"COMPLETED\"; reason=None\n                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 78, in run_awm\n    for mid,p in negpaths(a.data_root): cand=load_weights(p); s,info=awm_score(ref,cand); scores.append({\"model_id\":mid,\"score\":s,\"alignment\":info}); del cand; release()\n                                             ^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 59, in load_weights\n    q=[b.self_attn.q_proj.weight.detach().float().clone() for b in m.model.layers]; k=[b.self_attn.k_proj.weight.detach().float().clone() for b in m.model.layers]; emb=m.get_input_embeddings().weight.detach().float().clone(); vocab=tok.get_vocab(); del m,tok; release(); return q,k,emb,vocab\n       ^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1962, in __getattr__\n    raise AttributeError(\nAttributeError: 'Phi3Attention' object has no attribute 'q_proj'. Did you mean: 'o_proj'?\n"
+  }
 }
