@@ -1,0 +1,1583 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "method": "LLMPrint",
+  "role": "preferred_fingerprint",
+  "experiment": "A2",
+  "run_id": "llmprint_a2_closure_20260901_150051_cont1",
+  "scientific_status": "BLOCKED",
+  "terminal": true,
+  "artifact_type": "fingerprint_package",
+  "model_modified": false,
+  "preferred_fingerprint": false,
+  "construction_runs": [
+    "llmprint_a2_20260901_064855",
+    "llmprint_a2_cont1_20260901_105735"
+  ],
+  "construction_integrity": {
+    "schema_version": "wmkd.llmprint-fingerprint-manifest.v1",
+    "artifact_type": "fingerprint_package",
+    "experiment": "A2",
+    "integrity_status": "PASS",
+    "validated_record_count": 200,
+    "missing_count": 0,
+    "duplicate_count": 0,
+    "invalid_count": 0,
+    "ordered_ids": "llmprint-pair-000..llmprint-pair-199",
+    "subset_sha256": "162e27bccf4be98a3e15596772490dac44503363ac5781ac5365fea2d08f4a10",
+    "scientific_config_sha256": "4325b2a518aa5080dfb5cc070d57713bf6ee84efb9d72e8e4cbc89308920613a",
+    "canonical_model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "canonical_model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "upstream_commit": "3e577f98b2bb64780ec2995b074c5aeec9b017e1",
+    "artifact_entries_sha256": "1bb44a001808987fa42749adfabd8f8d48720ffae4f7d3f5c30f699b5de29f9d",
+    "artifacts": [
+      {
+        "fingerprint_index": 0,
+        "pair_id": "llmprint-pair-000",
+        "file_name": "llmprint-pair-000.json",
+        "bytes": 2194,
+        "sha256": "c75857838a132535283d8fb71ca8e5ad0def0f1113449079e40ba902a82ba5d7"
+      },
+      {
+        "fingerprint_index": 1,
+        "pair_id": "llmprint-pair-001",
+        "file_name": "llmprint-pair-001.json",
+        "bytes": 2190,
+        "sha256": "34df665c49d16437f4013f6e7809b960f92b00303b1cd9f7364307ae2f4fcca2"
+      },
+      {
+        "fingerprint_index": 2,
+        "pair_id": "llmprint-pair-002",
+        "file_name": "llmprint-pair-002.json",
+        "bytes": 2163,
+        "sha256": "6ab9513b96f744d7c8d6ddbcb7795c3e7f072b6c02c4d2ec68080b1002cd699e"
+      },
+      {
+        "fingerprint_index": 3,
+        "pair_id": "llmprint-pair-003",
+        "file_name": "llmprint-pair-003.json",
+        "bytes": 2166,
+        "sha256": "c32f8d31d83e838bd3971f428361fa7efb63b51ab37533dc62945b7d1829603a"
+      },
+      {
+        "fingerprint_index": 4,
+        "pair_id": "llmprint-pair-004",
+        "file_name": "llmprint-pair-004.json",
+        "bytes": 2247,
+        "sha256": "cd63b85e7e3f3fd07f56cc398f1b42b223a0fad53805bb2a73c033820cb22a86"
+      },
+      {
+        "fingerprint_index": 5,
+        "pair_id": "llmprint-pair-005",
+        "file_name": "llmprint-pair-005.json",
+        "bytes": 2235,
+        "sha256": "68a930bc5af4bfd729e9fd35e1a64cecf9b08e34098adce4820ef44b6b56b5be"
+      },
+      {
+        "fingerprint_index": 6,
+        "pair_id": "llmprint-pair-006",
+        "file_name": "llmprint-pair-006.json",
+        "bytes": 2174,
+        "sha256": "b6bb2fd03dfa7c16d94a58c9f4757d45e81f6b2c718786d9e2bfd4affec3f52d"
+      },
+      {
+        "fingerprint_index": 7,
+        "pair_id": "llmprint-pair-007",
+        "file_name": "llmprint-pair-007.json",
+        "bytes": 2218,
+        "sha256": "c0f36bc73b7b4f8f867ecdb58d915a3893c12d257632fca0d22db9dcc4c77ab0"
+      },
+      {
+        "fingerprint_index": 8,
+        "pair_id": "llmprint-pair-008",
+        "file_name": "llmprint-pair-008.json",
+        "bytes": 2196,
+        "sha256": "8b400cec86f41e53afb8c684cc0ec7d99fb10dbed0979f428bf6cdeee1f096c9"
+      },
+      {
+        "fingerprint_index": 9,
+        "pair_id": "llmprint-pair-009",
+        "file_name": "llmprint-pair-009.json",
+        "bytes": 2171,
+        "sha256": "15104f9216eb86e97d0694c066cd0ef275e1e60a5834946609898e1a37dde7e4"
+      },
+      {
+        "fingerprint_index": 10,
+        "pair_id": "llmprint-pair-010",
+        "file_name": "llmprint-pair-010.json",
+        "bytes": 2142,
+        "sha256": "4bd9b2ee3d3f92c96fc53c5bfb4eeb012dd2b428a4d6252bfb6b719d84718e24"
+      },
+      {
+        "fingerprint_index": 11,
+        "pair_id": "llmprint-pair-011",
+        "file_name": "llmprint-pair-011.json",
+        "bytes": 2274,
+        "sha256": "34e301dd04d0c21b792875e15f07f4ef40289de450922e3ff5fd0f3959853967"
+      },
+      {
+        "fingerprint_index": 12,
+        "pair_id": "llmprint-pair-012",
+        "file_name": "llmprint-pair-012.json",
+        "bytes": 2235,
+        "sha256": "e7939efc357ac9c6e43792ac07ee04cac3943b4a7aa18b3529719bf1a2bc7117"
+      },
+      {
+        "fingerprint_index": 13,
+        "pair_id": "llmprint-pair-013",
+        "file_name": "llmprint-pair-013.json",
+        "bytes": 2213,
+        "sha256": "e9aa2f0fda6937615626580085e9f04bcd045c4fe20031525caa92db48ccdd98"
+      },
+      {
+        "fingerprint_index": 14,
+        "pair_id": "llmprint-pair-014",
+        "file_name": "llmprint-pair-014.json",
+        "bytes": 2175,
+        "sha256": "1b7eb3f9653ad4143343f29d4d174620ab5f5b51694139c537af5ba4234a763e"
+      },
+      {
+        "fingerprint_index": 15,
+        "pair_id": "llmprint-pair-015",
+        "file_name": "llmprint-pair-015.json",
+        "bytes": 2277,
+        "sha256": "95d09787ef03b55657bb7aa43d0d26d261d5fefa7605043179caef1388ea2fbe"
+      },
+      {
+        "fingerprint_index": 16,
+        "pair_id": "llmprint-pair-016",
+        "file_name": "llmprint-pair-016.json",
+        "bytes": 2215,
+        "sha256": "c80aafa5cdac53e4e3d4a2e6defd40d82718ac13c78f15b82430684354a34d56"
+      },
+      {
+        "fingerprint_index": 17,
+        "pair_id": "llmprint-pair-017",
+        "file_name": "llmprint-pair-017.json",
+        "bytes": 2198,
+        "sha256": "88dd9b772983cfd2266a12415b2b7cc2c652682a5d09cc3a0dc4d374c311ec34"
+      },
+      {
+        "fingerprint_index": 18,
+        "pair_id": "llmprint-pair-018",
+        "file_name": "llmprint-pair-018.json",
+        "bytes": 2182,
+        "sha256": "aa6dead82a2fc5a285aed09c6603300ddf9da7773df3a497cecd1ebfd070ddb2"
+      },
+      {
+        "fingerprint_index": 19,
+        "pair_id": "llmprint-pair-019",
+        "file_name": "llmprint-pair-019.json",
+        "bytes": 2224,
+        "sha256": "eade6d245262e1e0c0f76499e10d53a38d52710b3a6318ec1ebbc576db57243a"
+      },
+      {
+        "fingerprint_index": 20,
+        "pair_id": "llmprint-pair-020",
+        "file_name": "llmprint-pair-020.json",
+        "bytes": 2228,
+        "sha256": "e31d3beb8c61fab65e889205956e69e10524e73e7dcfaec0af89d7eb0d8ae957"
+      },
+      {
+        "fingerprint_index": 21,
+        "pair_id": "llmprint-pair-021",
+        "file_name": "llmprint-pair-021.json",
+        "bytes": 2167,
+        "sha256": "7183050d17cf55249525648235ffa9abfc583b3d1464d0486d516a5f9e548888"
+      },
+      {
+        "fingerprint_index": 22,
+        "pair_id": "llmprint-pair-022",
+        "file_name": "llmprint-pair-022.json",
+        "bytes": 2197,
+        "sha256": "aaa0be303e6a45bbac4b67143495b791d8ba1a71143639b7233ba702b6fc1546"
+      },
+      {
+        "fingerprint_index": 23,
+        "pair_id": "llmprint-pair-023",
+        "file_name": "llmprint-pair-023.json",
+        "bytes": 2257,
+        "sha256": "d01517e74fb171c26ac843c99373b84d2c92544f01ee51f1c5b5606aed323fa9"
+      },
+      {
+        "fingerprint_index": 24,
+        "pair_id": "llmprint-pair-024",
+        "file_name": "llmprint-pair-024.json",
+        "bytes": 2205,
+        "sha256": "87dc5c61efc5f7e96fe2a346371deda8dcf45c18b8de04d2137e5e63590b7daa"
+      },
+      {
+        "fingerprint_index": 25,
+        "pair_id": "llmprint-pair-025",
+        "file_name": "llmprint-pair-025.json",
+        "bytes": 2181,
+        "sha256": "56692839b71394d3b9c5c09e3754cef96ad35b2702438fa26e6f342f39dcbc18"
+      },
+      {
+        "fingerprint_index": 26,
+        "pair_id": "llmprint-pair-026",
+        "file_name": "llmprint-pair-026.json",
+        "bytes": 2183,
+        "sha256": "dbe45c31ec6695b7ac9f8fab9c7be8cd9bc74c48b8714b995b7a47357b8c2050"
+      },
+      {
+        "fingerprint_index": 27,
+        "pair_id": "llmprint-pair-027",
+        "file_name": "llmprint-pair-027.json",
+        "bytes": 2201,
+        "sha256": "8d586064bab778e08cb7e469815576e4904b3adfe6e298a03e467c2fa1078184"
+      },
+      {
+        "fingerprint_index": 28,
+        "pair_id": "llmprint-pair-028",
+        "file_name": "llmprint-pair-028.json",
+        "bytes": 2220,
+        "sha256": "3fa12a616684ed800f3dae9fb7a6ed8ec539a95162e81bd68260dae6c304fb23"
+      },
+      {
+        "fingerprint_index": 29,
+        "pair_id": "llmprint-pair-029",
+        "file_name": "llmprint-pair-029.json",
+        "bytes": 2167,
+        "sha256": "a9d2a0b300fca5fe6327a78b882d315cc99402eedf83f31cc8ac46bf7584576f"
+      },
+      {
+        "fingerprint_index": 30,
+        "pair_id": "llmprint-pair-030",
+        "file_name": "llmprint-pair-030.json",
+        "bytes": 2191,
+        "sha256": "c90035ff3fd6ae65fdfc4e1a47f470c8ffc7705dc3b27fbe26669a2c6bdf9e92"
+      },
+      {
+        "fingerprint_index": 31,
+        "pair_id": "llmprint-pair-031",
+        "file_name": "llmprint-pair-031.json",
+        "bytes": 2208,
+        "sha256": "8e645cd41e535862a1208e4898ec2afd167f781020b8695da5f04bc2c35eb511"
+      },
+      {
+        "fingerprint_index": 32,
+        "pair_id": "llmprint-pair-032",
+        "file_name": "llmprint-pair-032.json",
+        "bytes": 2193,
+        "sha256": "a7fb8f947550999878ea86e4b0a8c75436abf38fd6071ac5a35c3a870388f15a"
+      },
+      {
+        "fingerprint_index": 33,
+        "pair_id": "llmprint-pair-033",
+        "file_name": "llmprint-pair-033.json",
+        "bytes": 2228,
+        "sha256": "421a1545bcd21849d7fdb40b96a6a9a15a84806d9d1375581b9a7fe42e3ba8b8"
+      },
+      {
+        "fingerprint_index": 34,
+        "pair_id": "llmprint-pair-034",
+        "file_name": "llmprint-pair-034.json",
+        "bytes": 2202,
+        "sha256": "d6653c88ff2780c336172b863b7bd7b95705f961d9e189c0bf46e058f946d759"
+      },
+      {
+        "fingerprint_index": 35,
+        "pair_id": "llmprint-pair-035",
+        "file_name": "llmprint-pair-035.json",
+        "bytes": 2192,
+        "sha256": "f6e882e7ffb7a1787d75e598b896f29c2144b4303cff88df813aa127861b29ac"
+      },
+      {
+        "fingerprint_index": 36,
+        "pair_id": "llmprint-pair-036",
+        "file_name": "llmprint-pair-036.json",
+        "bytes": 2234,
+        "sha256": "5d9e96be0cdd6383d81f1815a644f0c660e0d05b4901f53764c48b109f4f7918"
+      },
+      {
+        "fingerprint_index": 37,
+        "pair_id": "llmprint-pair-037",
+        "file_name": "llmprint-pair-037.json",
+        "bytes": 2260,
+        "sha256": "d0b456b1aa72bb853b5bf7e96a58a6ecdab729031d3b33384e0a6e91029353e4"
+      },
+      {
+        "fingerprint_index": 38,
+        "pair_id": "llmprint-pair-038",
+        "file_name": "llmprint-pair-038.json",
+        "bytes": 2199,
+        "sha256": "5d8fefa8dd526816dc81ea24b294ca0ad6d632da880a414bfccad9473764ae6d"
+      },
+      {
+        "fingerprint_index": 39,
+        "pair_id": "llmprint-pair-039",
+        "file_name": "llmprint-pair-039.json",
+        "bytes": 2127,
+        "sha256": "8519649dc35836b7e073026d0eb8369504f77b23c14dbfe70513affb42e8ad82"
+      },
+      {
+        "fingerprint_index": 40,
+        "pair_id": "llmprint-pair-040",
+        "file_name": "llmprint-pair-040.json",
+        "bytes": 2164,
+        "sha256": "365315d09d191f6887dfa638245c088c7e13545b83ac2a49e121ed22faf96888"
+      },
+      {
+        "fingerprint_index": 41,
+        "pair_id": "llmprint-pair-041",
+        "file_name": "llmprint-pair-041.json",
+        "bytes": 2195,
+        "sha256": "a6709d6b70c032807693ede81ad66530c54ca4c62df5fe6c79f28a8ea3da0041"
+      },
+      {
+        "fingerprint_index": 42,
+        "pair_id": "llmprint-pair-042",
+        "file_name": "llmprint-pair-042.json",
+        "bytes": 2250,
+        "sha256": "0f9b7a51c55ffc268f91815da51f7d4a605d7d841d6dc185d9a78f5f0e45eb07"
+      },
+      {
+        "fingerprint_index": 43,
+        "pair_id": "llmprint-pair-043",
+        "file_name": "llmprint-pair-043.json",
+        "bytes": 2172,
+        "sha256": "b70225f009d3c02adf8e119029c97443f869862c55e8b5b5c72e34d4cd30a165"
+      },
+      {
+        "fingerprint_index": 44,
+        "pair_id": "llmprint-pair-044",
+        "file_name": "llmprint-pair-044.json",
+        "bytes": 2165,
+        "sha256": "1d0ebfd2a76c8a2d55d3a6c5bed9debfac828ebd8167065426f15d00bdca678e"
+      },
+      {
+        "fingerprint_index": 45,
+        "pair_id": "llmprint-pair-045",
+        "file_name": "llmprint-pair-045.json",
+        "bytes": 2249,
+        "sha256": "a9f847633034cecf8a6c7ce67f858212a3eee92c49a9be121cab07fe2c0afc0e"
+      },
+      {
+        "fingerprint_index": 46,
+        "pair_id": "llmprint-pair-046",
+        "file_name": "llmprint-pair-046.json",
+        "bytes": 2136,
+        "sha256": "82d0b56c7f44c978a343fba17a4aa92cddf327e683c999ea07906a4bac48ef04"
+      },
+      {
+        "fingerprint_index": 47,
+        "pair_id": "llmprint-pair-047",
+        "file_name": "llmprint-pair-047.json",
+        "bytes": 2158,
+        "sha256": "dc9db833c7cebad247a022b37e47a223c400a3a6bb09efcf6a832a55dab4944d"
+      },
+      {
+        "fingerprint_index": 48,
+        "pair_id": "llmprint-pair-048",
+        "file_name": "llmprint-pair-048.json",
+        "bytes": 2179,
+        "sha256": "a8ce64a59d0936227c5dc612a193e4a7b11840ca0e656d37d7502b0cc213172c"
+      },
+      {
+        "fingerprint_index": 49,
+        "pair_id": "llmprint-pair-049",
+        "file_name": "llmprint-pair-049.json",
+        "bytes": 2186,
+        "sha256": "0196f079f163164ae2ad6d71d032e7729bc1d319a693d45675f4246f168d7771"
+      },
+      {
+        "fingerprint_index": 50,
+        "pair_id": "llmprint-pair-050",
+        "file_name": "llmprint-pair-050.json",
+        "bytes": 2209,
+        "sha256": "136894928bef7525edbb3da99b16ee5bac9bce2b7aa27bdb2fe7decd3d424677"
+      },
+      {
+        "fingerprint_index": 51,
+        "pair_id": "llmprint-pair-051",
+        "file_name": "llmprint-pair-051.json",
+        "bytes": 2307,
+        "sha256": "c144c92aa5aa60ab4449ad2d126a5a1d67195d87222e795794619ce1946e0d0d"
+      },
+      {
+        "fingerprint_index": 52,
+        "pair_id": "llmprint-pair-052",
+        "file_name": "llmprint-pair-052.json",
+        "bytes": 2172,
+        "sha256": "dc765090ec09e90276458e25e84e6c802d6683b6621b1892630d5c63120ea5f2"
+      },
+      {
+        "fingerprint_index": 53,
+        "pair_id": "llmprint-pair-053",
+        "file_name": "llmprint-pair-053.json",
+        "bytes": 2201,
+        "sha256": "0226f5b861d5c957f2a16b392f45e8c86a8a8242b95dced773be99508385bb41"
+      },
+      {
+        "fingerprint_index": 54,
+        "pair_id": "llmprint-pair-054",
+        "file_name": "llmprint-pair-054.json",
+        "bytes": 2207,
+        "sha256": "b6f8cebc089f669797fd3bfb3e052f1c74b7f7bf703040be25aa363892ef8b20"
+      },
+      {
+        "fingerprint_index": 55,
+        "pair_id": "llmprint-pair-055",
+        "file_name": "llmprint-pair-055.json",
+        "bytes": 2183,
+        "sha256": "274ffe8b63191532b83ce52eac444b466ddd76ce197852da2791e584d32678a9"
+      },
+      {
+        "fingerprint_index": 56,
+        "pair_id": "llmprint-pair-056",
+        "file_name": "llmprint-pair-056.json",
+        "bytes": 2149,
+        "sha256": "b42d56c6e135c78b87c268c2a145f88f2041baf5ede06b8c7ef5adfc3a7c0dc5"
+      },
+      {
+        "fingerprint_index": 57,
+        "pair_id": "llmprint-pair-057",
+        "file_name": "llmprint-pair-057.json",
+        "bytes": 2283,
+        "sha256": "42932b507165948ff83433d0d21f9d2a7f23ee0adffd69546fc28f5b23102613"
+      },
+      {
+        "fingerprint_index": 58,
+        "pair_id": "llmprint-pair-058",
+        "file_name": "llmprint-pair-058.json",
+        "bytes": 2220,
+        "sha256": "50603fe281608eba6ee03fb09789ad0b409d019efd08232d9c4fd6f363f15c22"
+      },
+      {
+        "fingerprint_index": 59,
+        "pair_id": "llmprint-pair-059",
+        "file_name": "llmprint-pair-059.json",
+        "bytes": 2138,
+        "sha256": "6e521e4dc5de8cc70199133af18481bb5b67f46b44bd8b3245f719fbc291b193"
+      },
+      {
+        "fingerprint_index": 60,
+        "pair_id": "llmprint-pair-060",
+        "file_name": "llmprint-pair-060.json",
+        "bytes": 2145,
+        "sha256": "6ac01fd7b9bf6c39d8713fc59e2ddbf07a94541fdd13ddc480a28c00f3070c44"
+      },
+      {
+        "fingerprint_index": 61,
+        "pair_id": "llmprint-pair-061",
+        "file_name": "llmprint-pair-061.json",
+        "bytes": 2278,
+        "sha256": "0c29f2b469ff82d28dd7b2ad039e1b4f4e3503d688aa61f499930df850b6517c"
+      },
+      {
+        "fingerprint_index": 62,
+        "pair_id": "llmprint-pair-062",
+        "file_name": "llmprint-pair-062.json",
+        "bytes": 2209,
+        "sha256": "eca65d5688054af37e2e8157020032c2e795316d9a6a0077777a090fcf67f5e2"
+      },
+      {
+        "fingerprint_index": 63,
+        "pair_id": "llmprint-pair-063",
+        "file_name": "llmprint-pair-063.json",
+        "bytes": 2225,
+        "sha256": "0c1193071f96e35e47d554096a4e5a3032607d268a037e07a9784a9733c6c2d7"
+      },
+      {
+        "fingerprint_index": 64,
+        "pair_id": "llmprint-pair-064",
+        "file_name": "llmprint-pair-064.json",
+        "bytes": 2209,
+        "sha256": "0d4bb65c9d4298ef1a53bb7d73425452a587f7c855197a0ebce67c5f9fc2f5a8"
+      },
+      {
+        "fingerprint_index": 65,
+        "pair_id": "llmprint-pair-065",
+        "file_name": "llmprint-pair-065.json",
+        "bytes": 2201,
+        "sha256": "fca471879ab35722cd6550a88c544a0683ca74ef51aaa5b5430b7bade081973e"
+      },
+      {
+        "fingerprint_index": 66,
+        "pair_id": "llmprint-pair-066",
+        "file_name": "llmprint-pair-066.json",
+        "bytes": 2204,
+        "sha256": "3edff8e31cae4bfa6797554806f44189aba3cf6138548af82223211e930eecbf"
+      },
+      {
+        "fingerprint_index": 67,
+        "pair_id": "llmprint-pair-067",
+        "file_name": "llmprint-pair-067.json",
+        "bytes": 2216,
+        "sha256": "226df45d6f1a992e61eeb484238d9bbd41f665614e15a6e3fb77c99c50c81b95"
+      },
+      {
+        "fingerprint_index": 68,
+        "pair_id": "llmprint-pair-068",
+        "file_name": "llmprint-pair-068.json",
+        "bytes": 2207,
+        "sha256": "bf824dae916116e9bedace9034e09c2b37be37aa0f45c76712ff0f34d2b876ea"
+      },
+      {
+        "fingerprint_index": 69,
+        "pair_id": "llmprint-pair-069",
+        "file_name": "llmprint-pair-069.json",
+        "bytes": 2240,
+        "sha256": "2156bb24a18ca131750e2b2dc52debf68d6828f563ba1707c01aa306154d15ee"
+      },
+      {
+        "fingerprint_index": 70,
+        "pair_id": "llmprint-pair-070",
+        "file_name": "llmprint-pair-070.json",
+        "bytes": 2189,
+        "sha256": "29833f5c51959af798a7fd9bc7e77dffb60f355afa0184187aafe5cefc5ae667"
+      },
+      {
+        "fingerprint_index": 71,
+        "pair_id": "llmprint-pair-071",
+        "file_name": "llmprint-pair-071.json",
+        "bytes": 2177,
+        "sha256": "9d633f9f6e15a3098790703aaacae430bc655632c67c47720318205707efe61d"
+      },
+      {
+        "fingerprint_index": 72,
+        "pair_id": "llmprint-pair-072",
+        "file_name": "llmprint-pair-072.json",
+        "bytes": 2374,
+        "sha256": "9471a4b481c44db5a368cdd665d2f407b495c6ebf2f05efeac7f2e43a426a1ac"
+      },
+      {
+        "fingerprint_index": 73,
+        "pair_id": "llmprint-pair-073",
+        "file_name": "llmprint-pair-073.json",
+        "bytes": 2150,
+        "sha256": "1ded665e376803a531575320f673897c817fecacac4ce26df36aca1fbe680ae8"
+      },
+      {
+        "fingerprint_index": 74,
+        "pair_id": "llmprint-pair-074",
+        "file_name": "llmprint-pair-074.json",
+        "bytes": 2182,
+        "sha256": "d573011c5339236726c6fff87a22f70e8fb880c2cc628e3540cb11524e46d3cc"
+      },
+      {
+        "fingerprint_index": 75,
+        "pair_id": "llmprint-pair-075",
+        "file_name": "llmprint-pair-075.json",
+        "bytes": 2232,
+        "sha256": "573118dcc548fe1716b5a9848f6e4f1c68572ae2eab5b8d97642f2aa12e4db8d"
+      },
+      {
+        "fingerprint_index": 76,
+        "pair_id": "llmprint-pair-076",
+        "file_name": "llmprint-pair-076.json",
+        "bytes": 2268,
+        "sha256": "c7f63fdaae28ff8c5febd3b18573a48820fbfb802a80feca5d46e32515a4aa91"
+      },
+      {
+        "fingerprint_index": 77,
+        "pair_id": "llmprint-pair-077",
+        "file_name": "llmprint-pair-077.json",
+        "bytes": 2194,
+        "sha256": "213b9f59c8694715bf0b2f885ebc4cdf82282b10d0179f049b8465655a8b554d"
+      },
+      {
+        "fingerprint_index": 78,
+        "pair_id": "llmprint-pair-078",
+        "file_name": "llmprint-pair-078.json",
+        "bytes": 2255,
+        "sha256": "ce7dacb917ac70618770f0d913fe1f3091e65118ea245061dad75a245e1b1217"
+      },
+      {
+        "fingerprint_index": 79,
+        "pair_id": "llmprint-pair-079",
+        "file_name": "llmprint-pair-079.json",
+        "bytes": 2203,
+        "sha256": "2c9365f0209cd079416626ace28cc610951ca8705d7572efd103c604de903305"
+      },
+      {
+        "fingerprint_index": 80,
+        "pair_id": "llmprint-pair-080",
+        "file_name": "llmprint-pair-080.json",
+        "bytes": 2167,
+        "sha256": "263c53bce64835f18166b08a62e930a4dc7a21af8b96457c3f4699d823ee995c"
+      },
+      {
+        "fingerprint_index": 81,
+        "pair_id": "llmprint-pair-081",
+        "file_name": "llmprint-pair-081.json",
+        "bytes": 2217,
+        "sha256": "40131b28990eb7aa9bb0a9b3e23256656cc2422785351d470883e87f1e7ec2c9"
+      },
+      {
+        "fingerprint_index": 82,
+        "pair_id": "llmprint-pair-082",
+        "file_name": "llmprint-pair-082.json",
+        "bytes": 2171,
+        "sha256": "98ca9acd67ef02f7289ce40ce313ada1bd5804cc4ae534601491d3c3b67d8764"
+      },
+      {
+        "fingerprint_index": 83,
+        "pair_id": "llmprint-pair-083",
+        "file_name": "llmprint-pair-083.json",
+        "bytes": 2201,
+        "sha256": "fe6e9b43d8b0b177554ec1d718debfc6e84c97c25435d5847b25e2da5571cead"
+      },
+      {
+        "fingerprint_index": 84,
+        "pair_id": "llmprint-pair-084",
+        "file_name": "llmprint-pair-084.json",
+        "bytes": 2196,
+        "sha256": "f3b0a09b5e18a4f9abc9e6e20344405acfcc926ba237e6da2804d3c75c108fba"
+      },
+      {
+        "fingerprint_index": 85,
+        "pair_id": "llmprint-pair-085",
+        "file_name": "llmprint-pair-085.json",
+        "bytes": 2145,
+        "sha256": "9676b5f2f11370f4753b5febc872936cba38423cd6faaf5cdfdfe763ce584d01"
+      },
+      {
+        "fingerprint_index": 86,
+        "pair_id": "llmprint-pair-086",
+        "file_name": "llmprint-pair-086.json",
+        "bytes": 2147,
+        "sha256": "87038c5ffe8747847702e86a1f850e9e2ef2f3118c12fd522a5ef42712577116"
+      },
+      {
+        "fingerprint_index": 87,
+        "pair_id": "llmprint-pair-087",
+        "file_name": "llmprint-pair-087.json",
+        "bytes": 2194,
+        "sha256": "a32779eb2aeef93818cd5acede3f1ea00fcf48c1baf19752c3782b594b3fd15e"
+      },
+      {
+        "fingerprint_index": 88,
+        "pair_id": "llmprint-pair-088",
+        "file_name": "llmprint-pair-088.json",
+        "bytes": 2163,
+        "sha256": "4b2f8de237b3c4e774f3e15111478ba291edd5aba2dab29ac6ced400e866a496"
+      },
+      {
+        "fingerprint_index": 89,
+        "pair_id": "llmprint-pair-089",
+        "file_name": "llmprint-pair-089.json",
+        "bytes": 2209,
+        "sha256": "0440480f94722645074dc082def7a2cf7c93a05fe447f962abb56e2250a46f44"
+      },
+      {
+        "fingerprint_index": 90,
+        "pair_id": "llmprint-pair-090",
+        "file_name": "llmprint-pair-090.json",
+        "bytes": 2237,
+        "sha256": "31a9259bf854d6d8d4ae2b2adcbd06dc1c9d41d1b69ddb1e394eb39ecde8307b"
+      },
+      {
+        "fingerprint_index": 91,
+        "pair_id": "llmprint-pair-091",
+        "file_name": "llmprint-pair-091.json",
+        "bytes": 2197,
+        "sha256": "2bf8e948ac57d1398cb8b9e9a0a53c6152384d3250f0c4c506d170a87fb0c3a8"
+      },
+      {
+        "fingerprint_index": 92,
+        "pair_id": "llmprint-pair-092",
+        "file_name": "llmprint-pair-092.json",
+        "bytes": 2163,
+        "sha256": "48099a55d5cb576613d140d74be8fdc41172a781776c4995141d927fa07c2fc8"
+      },
+      {
+        "fingerprint_index": 93,
+        "pair_id": "llmprint-pair-093",
+        "file_name": "llmprint-pair-093.json",
+        "bytes": 2173,
+        "sha256": "93641e8396f68bffd9c5f02b0e94de40ca856bb75f210c67aba78210fc6ed466"
+      },
+      {
+        "fingerprint_index": 94,
+        "pair_id": "llmprint-pair-094",
+        "file_name": "llmprint-pair-094.json",
+        "bytes": 2220,
+        "sha256": "cf386cd035692eb4b89df9a6dad50d92679834a211b81fc0e31b7843eb5f147f"
+      },
+      {
+        "fingerprint_index": 95,
+        "pair_id": "llmprint-pair-095",
+        "file_name": "llmprint-pair-095.json",
+        "bytes": 2218,
+        "sha256": "3e01bbaa5881a813d1319964226623f28de1a4205cb1c44c0d1e0a1e57543c12"
+      },
+      {
+        "fingerprint_index": 96,
+        "pair_id": "llmprint-pair-096",
+        "file_name": "llmprint-pair-096.json",
+        "bytes": 2254,
+        "sha256": "e947b70ce229eca771ea058de92330d4d5cf64cae27e3df53cdc1e0e932f0dc8"
+      },
+      {
+        "fingerprint_index": 97,
+        "pair_id": "llmprint-pair-097",
+        "file_name": "llmprint-pair-097.json",
+        "bytes": 2168,
+        "sha256": "84c384f46f39bab844db194a69b24af4723b2791c3f37dc0e5a88215ba58560b"
+      },
+      {
+        "fingerprint_index": 98,
+        "pair_id": "llmprint-pair-098",
+        "file_name": "llmprint-pair-098.json",
+        "bytes": 2229,
+        "sha256": "e1c39f2c4aad0d910a0ccc2b5bd6eb8b1874f904a893030087f1932f7323e695"
+      },
+      {
+        "fingerprint_index": 99,
+        "pair_id": "llmprint-pair-099",
+        "file_name": "llmprint-pair-099.json",
+        "bytes": 2233,
+        "sha256": "806da0d208c4bc0f347c5a6cd5372c1120fc9c03af06eaaff7636ff27353ffe1"
+      },
+      {
+        "fingerprint_index": 100,
+        "pair_id": "llmprint-pair-100",
+        "file_name": "llmprint-pair-100.json",
+        "bytes": 2229,
+        "sha256": "a480cb1f65c34e829e9355c97f26febdd7447575ffa93e942ec667a92868ffaa"
+      },
+      {
+        "fingerprint_index": 101,
+        "pair_id": "llmprint-pair-101",
+        "file_name": "llmprint-pair-101.json",
+        "bytes": 2192,
+        "sha256": "1b365d25f1a2e447fd4758f53b9c8dba31cb0cadcea46cb139249feae031698c"
+      },
+      {
+        "fingerprint_index": 102,
+        "pair_id": "llmprint-pair-102",
+        "file_name": "llmprint-pair-102.json",
+        "bytes": 2225,
+        "sha256": "4934743fa486b4c8db8860ade3de934155777b81ca7bad4a98d5772f0cfb7823"
+      },
+      {
+        "fingerprint_index": 103,
+        "pair_id": "llmprint-pair-103",
+        "file_name": "llmprint-pair-103.json",
+        "bytes": 2272,
+        "sha256": "3ede3ed2634b4e4fcebadc0977f8999cfc657155e19ada31e37866d8214a4d43"
+      },
+      {
+        "fingerprint_index": 104,
+        "pair_id": "llmprint-pair-104",
+        "file_name": "llmprint-pair-104.json",
+        "bytes": 2211,
+        "sha256": "1dbc7e6932966595a56c40134f17403c35550f5a97e6d6955a926e8ab6953c67"
+      },
+      {
+        "fingerprint_index": 105,
+        "pair_id": "llmprint-pair-105",
+        "file_name": "llmprint-pair-105.json",
+        "bytes": 2179,
+        "sha256": "7b0a04328f39381f393af43ccb1a5352ffae30ec59e8427b459b8beda854e114"
+      },
+      {
+        "fingerprint_index": 106,
+        "pair_id": "llmprint-pair-106",
+        "file_name": "llmprint-pair-106.json",
+        "bytes": 2160,
+        "sha256": "4168cf3ce3327f5afa357ca36434134dc1c0d8dbb5072ce1c7408bd2eb4a5895"
+      },
+      {
+        "fingerprint_index": 107,
+        "pair_id": "llmprint-pair-107",
+        "file_name": "llmprint-pair-107.json",
+        "bytes": 2190,
+        "sha256": "ff9116c860b3598d335c63b24ac76f8957799e81947fd08f9016eac49913c589"
+      },
+      {
+        "fingerprint_index": 108,
+        "pair_id": "llmprint-pair-108",
+        "file_name": "llmprint-pair-108.json",
+        "bytes": 2209,
+        "sha256": "0107fc384024681a4b513d09c3f28d2af048781c01da6d58cef2c879cebb518f"
+      },
+      {
+        "fingerprint_index": 109,
+        "pair_id": "llmprint-pair-109",
+        "file_name": "llmprint-pair-109.json",
+        "bytes": 2200,
+        "sha256": "8de334537c6275df4bde79ee695d4a646f69571d23a5ee8aeb832e1d82edafb9"
+      },
+      {
+        "fingerprint_index": 110,
+        "pair_id": "llmprint-pair-110",
+        "file_name": "llmprint-pair-110.json",
+        "bytes": 2176,
+        "sha256": "c06339d4f611b8b4e41d024b024eb5e22079c8eee89e32d4f7a9cb8a9409ea0d"
+      },
+      {
+        "fingerprint_index": 111,
+        "pair_id": "llmprint-pair-111",
+        "file_name": "llmprint-pair-111.json",
+        "bytes": 2214,
+        "sha256": "5328f441714e431a6711654ca6ce26c9d9e72a3ba0d9c924d37e525a4d89c294"
+      },
+      {
+        "fingerprint_index": 112,
+        "pair_id": "llmprint-pair-112",
+        "file_name": "llmprint-pair-112.json",
+        "bytes": 2197,
+        "sha256": "b52d9828ee683f16fe434d167e5f534c1b9f0b0b28bae1c1baa59f27d52b80ed"
+      },
+      {
+        "fingerprint_index": 113,
+        "pair_id": "llmprint-pair-113",
+        "file_name": "llmprint-pair-113.json",
+        "bytes": 2180,
+        "sha256": "045fbaceaccca76ee6e7b35f2ebce9961ecc957edc69c192160ada42a80284cc"
+      },
+      {
+        "fingerprint_index": 114,
+        "pair_id": "llmprint-pair-114",
+        "file_name": "llmprint-pair-114.json",
+        "bytes": 2172,
+        "sha256": "908b017a78ae71538071f27985a89640f5174ad35719d46a08c89f20a21dc30d"
+      },
+      {
+        "fingerprint_index": 115,
+        "pair_id": "llmprint-pair-115",
+        "file_name": "llmprint-pair-115.json",
+        "bytes": 2246,
+        "sha256": "28203ef8c8fabdb10cf76f3f1df7eec9434cb4d6b86defcf05b79735b606b009"
+      },
+      {
+        "fingerprint_index": 116,
+        "pair_id": "llmprint-pair-116",
+        "file_name": "llmprint-pair-116.json",
+        "bytes": 2213,
+        "sha256": "2db81d56bed41fc3227370a978918d38b57a45a73553ccae4d60dadcc75ed143"
+      },
+      {
+        "fingerprint_index": 117,
+        "pair_id": "llmprint-pair-117",
+        "file_name": "llmprint-pair-117.json",
+        "bytes": 2150,
+        "sha256": "5cd694e00d3beb6cf4e15ca6fc00a58a131d94829d8c2ced3ac21bd7a9eed52d"
+      },
+      {
+        "fingerprint_index": 118,
+        "pair_id": "llmprint-pair-118",
+        "file_name": "llmprint-pair-118.json",
+        "bytes": 2205,
+        "sha256": "684468c39804a15fff00f692e426989caa84b01f98ad162883c05f6017185e3c"
+      },
+      {
+        "fingerprint_index": 119,
+        "pair_id": "llmprint-pair-119",
+        "file_name": "llmprint-pair-119.json",
+        "bytes": 2189,
+        "sha256": "7fa0fe59a184276d0e08fbba9d6d4abc6403901931d921214dbfcce9b5d6fdc0"
+      },
+      {
+        "fingerprint_index": 120,
+        "pair_id": "llmprint-pair-120",
+        "file_name": "llmprint-pair-120.json",
+        "bytes": 2195,
+        "sha256": "277f914d418caf2f8fe62b893adbc54356420f298f56a9ccf7bb0616b812aaa2"
+      },
+      {
+        "fingerprint_index": 121,
+        "pair_id": "llmprint-pair-121",
+        "file_name": "llmprint-pair-121.json",
+        "bytes": 2175,
+        "sha256": "9a22d4fbc45fa57719c7311f0c261bdd6d42ca0373ec6b57f6c24416b95c9353"
+      },
+      {
+        "fingerprint_index": 122,
+        "pair_id": "llmprint-pair-122",
+        "file_name": "llmprint-pair-122.json",
+        "bytes": 2204,
+        "sha256": "d8fd82d40caabc6838f08186d5a5cf2df9e002f139de3e4de277d0dc04270cf0"
+      },
+      {
+        "fingerprint_index": 123,
+        "pair_id": "llmprint-pair-123",
+        "file_name": "llmprint-pair-123.json",
+        "bytes": 2170,
+        "sha256": "c93adc595d31594039f2affea0823e3b072717ca47f635dbd5c7e2de771d8436"
+      },
+      {
+        "fingerprint_index": 124,
+        "pair_id": "llmprint-pair-124",
+        "file_name": "llmprint-pair-124.json",
+        "bytes": 2194,
+        "sha256": "b2e0ad88ef2cb5499daedbbd7dc4799e7b9d2eedcd519ca1743878d7b3e761e3"
+      },
+      {
+        "fingerprint_index": 125,
+        "pair_id": "llmprint-pair-125",
+        "file_name": "llmprint-pair-125.json",
+        "bytes": 2179,
+        "sha256": "ccdb18bbca23de4d92e89c86d6719e6e24ec41d32acb8775299e33ab6ffa94c0"
+      },
+      {
+        "fingerprint_index": 126,
+        "pair_id": "llmprint-pair-126",
+        "file_name": "llmprint-pair-126.json",
+        "bytes": 2190,
+        "sha256": "c50fcc916b45a2e358a216c80e55dc541a37db53acbcdc86101c768864405e42"
+      },
+      {
+        "fingerprint_index": 127,
+        "pair_id": "llmprint-pair-127",
+        "file_name": "llmprint-pair-127.json",
+        "bytes": 2218,
+        "sha256": "65c06425357765c6e29734f7e63d79975d70e28083870565e3cd6bf732cff44d"
+      },
+      {
+        "fingerprint_index": 128,
+        "pair_id": "llmprint-pair-128",
+        "file_name": "llmprint-pair-128.json",
+        "bytes": 2249,
+        "sha256": "e4e1a7d9baae67b02e6a56b2a166a3f40017bf575ed69586219d80f1ff25e3bd"
+      },
+      {
+        "fingerprint_index": 129,
+        "pair_id": "llmprint-pair-129",
+        "file_name": "llmprint-pair-129.json",
+        "bytes": 2167,
+        "sha256": "71b32152e87cd4af7b1c41d3600bacaa01b9d1e891f75c6646287c963a6f719c"
+      },
+      {
+        "fingerprint_index": 130,
+        "pair_id": "llmprint-pair-130",
+        "file_name": "llmprint-pair-130.json",
+        "bytes": 2231,
+        "sha256": "f6bbbec2db5b281328613d29f1e311cd7121b2b94d5a345f570c5e406d7d9c0b"
+      },
+      {
+        "fingerprint_index": 131,
+        "pair_id": "llmprint-pair-131",
+        "file_name": "llmprint-pair-131.json",
+        "bytes": 2135,
+        "sha256": "cd40b313d4473d7338c258f4c7cdfc85a837eb7e192dbdf8426cad06bdc494ce"
+      },
+      {
+        "fingerprint_index": 132,
+        "pair_id": "llmprint-pair-132",
+        "file_name": "llmprint-pair-132.json",
+        "bytes": 2147,
+        "sha256": "6bc69490dfd5735062f252b27d05a7b0349e429cd99ef75e31a848f857156acf"
+      },
+      {
+        "fingerprint_index": 133,
+        "pair_id": "llmprint-pair-133",
+        "file_name": "llmprint-pair-133.json",
+        "bytes": 2196,
+        "sha256": "a356a6b271c6c017f31e10a8bbb073391f4d0b0926575cdd9e32d350275a0b99"
+      },
+      {
+        "fingerprint_index": 134,
+        "pair_id": "llmprint-pair-134",
+        "file_name": "llmprint-pair-134.json",
+        "bytes": 2211,
+        "sha256": "e05b612bceb6e138e986ee0a64bd33502d1884e7d19ba1d0ea1eef6fcbd3a564"
+      },
+      {
+        "fingerprint_index": 135,
+        "pair_id": "llmprint-pair-135",
+        "file_name": "llmprint-pair-135.json",
+        "bytes": 2206,
+        "sha256": "7c4fdfbf42614b7c73a5016432a5b5d2b43445f35f94f28339f09f676a922fce"
+      },
+      {
+        "fingerprint_index": 136,
+        "pair_id": "llmprint-pair-136",
+        "file_name": "llmprint-pair-136.json",
+        "bytes": 2160,
+        "sha256": "034ea104d37e32aed6fcbf356116dc55b933749ba423d921f2bcbfd990b5dd23"
+      },
+      {
+        "fingerprint_index": 137,
+        "pair_id": "llmprint-pair-137",
+        "file_name": "llmprint-pair-137.json",
+        "bytes": 2195,
+        "sha256": "df1ee5067e4c6c669bc68e1376da29aaaef3b79f722837c9221c793fb47cb563"
+      },
+      {
+        "fingerprint_index": 138,
+        "pair_id": "llmprint-pair-138",
+        "file_name": "llmprint-pair-138.json",
+        "bytes": 2154,
+        "sha256": "f2046fa08d3268458fcd9a6a74f6f87c762cca74a866a0b707e52aa4a626ce2b"
+      },
+      {
+        "fingerprint_index": 139,
+        "pair_id": "llmprint-pair-139",
+        "file_name": "llmprint-pair-139.json",
+        "bytes": 2202,
+        "sha256": "516642a22fa33679941d2f3fc72a0d43425efa2051b9c977d1e6d37fcc5325aa"
+      },
+      {
+        "fingerprint_index": 140,
+        "pair_id": "llmprint-pair-140",
+        "file_name": "llmprint-pair-140.json",
+        "bytes": 2146,
+        "sha256": "48089258720480e3a1e6e9dfd74a438be6dba002aa7ff9cee26a1d7f37de6168"
+      },
+      {
+        "fingerprint_index": 141,
+        "pair_id": "llmprint-pair-141",
+        "file_name": "llmprint-pair-141.json",
+        "bytes": 2156,
+        "sha256": "5d544471a34da6147d1d2d0e21be881599cbaad74e40d36f6782886ff1e52c89"
+      },
+      {
+        "fingerprint_index": 142,
+        "pair_id": "llmprint-pair-142",
+        "file_name": "llmprint-pair-142.json",
+        "bytes": 2149,
+        "sha256": "4838b6b27a1acfbb7c64687b45b49dc9d8dea8f51bd7c9defbf50c45debe3604"
+      },
+      {
+        "fingerprint_index": 143,
+        "pair_id": "llmprint-pair-143",
+        "file_name": "llmprint-pair-143.json",
+        "bytes": 2166,
+        "sha256": "0373d2de5924430ed42bdf85b9d19d7fa559c1b61d137aa12b66e98f3bece0ff"
+      },
+      {
+        "fingerprint_index": 144,
+        "pair_id": "llmprint-pair-144",
+        "file_name": "llmprint-pair-144.json",
+        "bytes": 2161,
+        "sha256": "a7048ff452bf7445e9e4c1e625a9ea5552f08bc8d9ecb9e229e0c32eaf2c437f"
+      },
+      {
+        "fingerprint_index": 145,
+        "pair_id": "llmprint-pair-145",
+        "file_name": "llmprint-pair-145.json",
+        "bytes": 2202,
+        "sha256": "3a809d56a95c9ed01454d09dc288fb081eec45a1d9f3ad6034e01558a296b0e1"
+      },
+      {
+        "fingerprint_index": 146,
+        "pair_id": "llmprint-pair-146",
+        "file_name": "llmprint-pair-146.json",
+        "bytes": 2205,
+        "sha256": "2696d57653447b1992172a42706baff09402233feae83781f97146f0a927d005"
+      },
+      {
+        "fingerprint_index": 147,
+        "pair_id": "llmprint-pair-147",
+        "file_name": "llmprint-pair-147.json",
+        "bytes": 2145,
+        "sha256": "89ba9ddbea7c4aa3b976a877dff6f3a123be824d99471aedb90422b2e5cdcbd1"
+      },
+      {
+        "fingerprint_index": 148,
+        "pair_id": "llmprint-pair-148",
+        "file_name": "llmprint-pair-148.json",
+        "bytes": 2189,
+        "sha256": "5bd6a7f8cbcc4932b4785b2e77bbdd6fb4666425a487b9dec2950d660bac81a8"
+      },
+      {
+        "fingerprint_index": 149,
+        "pair_id": "llmprint-pair-149",
+        "file_name": "llmprint-pair-149.json",
+        "bytes": 2252,
+        "sha256": "7198e1378c93385c0134f1252b0ebb7e813dcc3d15ad652165ca9e8cacbe644a"
+      },
+      {
+        "fingerprint_index": 150,
+        "pair_id": "llmprint-pair-150",
+        "file_name": "llmprint-pair-150.json",
+        "bytes": 2154,
+        "sha256": "a840e8f15254bf8ef7bc4d1dbb1ea35aaf649d35053c8d8cfc7eb195346635c8"
+      },
+      {
+        "fingerprint_index": 151,
+        "pair_id": "llmprint-pair-151",
+        "file_name": "llmprint-pair-151.json",
+        "bytes": 2192,
+        "sha256": "477d39dd2cd535146e5fb22fed1a1042faf1f30f344aeed756ff3686f4e9ebbc"
+      },
+      {
+        "fingerprint_index": 152,
+        "pair_id": "llmprint-pair-152",
+        "file_name": "llmprint-pair-152.json",
+        "bytes": 2189,
+        "sha256": "39cb6e9faf7b2232f033d1dba18ff48d14f05a9a4070b3be7116f398cf399746"
+      },
+      {
+        "fingerprint_index": 153,
+        "pair_id": "llmprint-pair-153",
+        "file_name": "llmprint-pair-153.json",
+        "bytes": 2190,
+        "sha256": "301f253e71377c873499f9231c7126b9fe5a8935ade6f4a80a190bc665a01e18"
+      },
+      {
+        "fingerprint_index": 154,
+        "pair_id": "llmprint-pair-154",
+        "file_name": "llmprint-pair-154.json",
+        "bytes": 2168,
+        "sha256": "63f190ab51ca29d8b3524a8ff46306dcc5bcec20f524ccccce0cfd95d0c46611"
+      },
+      {
+        "fingerprint_index": 155,
+        "pair_id": "llmprint-pair-155",
+        "file_name": "llmprint-pair-155.json",
+        "bytes": 2203,
+        "sha256": "0391df5f467bf791b5bd2c7f2e5ed0112156c657ee7a635fb8461f16f6640a8b"
+      },
+      {
+        "fingerprint_index": 156,
+        "pair_id": "llmprint-pair-156",
+        "file_name": "llmprint-pair-156.json",
+        "bytes": 2180,
+        "sha256": "c153963beed3b964b70d2763aba3a97d1ee81998648775b0c6520eb0c162bf6e"
+      },
+      {
+        "fingerprint_index": 157,
+        "pair_id": "llmprint-pair-157",
+        "file_name": "llmprint-pair-157.json",
+        "bytes": 2166,
+        "sha256": "0fd623fc0f735b57dc548d96a1c01bbaf0c01df5d74d721d4815ad38f0a7d667"
+      },
+      {
+        "fingerprint_index": 158,
+        "pair_id": "llmprint-pair-158",
+        "file_name": "llmprint-pair-158.json",
+        "bytes": 2166,
+        "sha256": "57ac2c57bf91556a90da4371412522ded83582e7113d9d0e1ebd416507672e95"
+      },
+      {
+        "fingerprint_index": 159,
+        "pair_id": "llmprint-pair-159",
+        "file_name": "llmprint-pair-159.json",
+        "bytes": 2181,
+        "sha256": "142f96735801d43b9f60b3be8863e11cd1c7aa2292086be315cf7a0455e1ac34"
+      },
+      {
+        "fingerprint_index": 160,
+        "pair_id": "llmprint-pair-160",
+        "file_name": "llmprint-pair-160.json",
+        "bytes": 2208,
+        "sha256": "c14699b24386e1bdcebdfce90f6608bf46b8d561cd90c25688db761ced380b9b"
+      },
+      {
+        "fingerprint_index": 161,
+        "pair_id": "llmprint-pair-161",
+        "file_name": "llmprint-pair-161.json",
+        "bytes": 2246,
+        "sha256": "c42f0c9b48ef884b26a25c44a06df9e2f36e0c6d2068d0fc4779eac556e2959e"
+      },
+      {
+        "fingerprint_index": 162,
+        "pair_id": "llmprint-pair-162",
+        "file_name": "llmprint-pair-162.json",
+        "bytes": 2182,
+        "sha256": "031f3606f194274f6a0e440a7b74a276f72b60a3a6f41e5b4ff163561a76d97a"
+      },
+      {
+        "fingerprint_index": 163,
+        "pair_id": "llmprint-pair-163",
+        "file_name": "llmprint-pair-163.json",
+        "bytes": 2191,
+        "sha256": "06306bda66d84138a50b27b7444d872e8116533bc941e77beee223de8fb3da55"
+      },
+      {
+        "fingerprint_index": 164,
+        "pair_id": "llmprint-pair-164",
+        "file_name": "llmprint-pair-164.json",
+        "bytes": 2226,
+        "sha256": "8d550195f6103150782c8af203dcd431b04a6e09e211e965fccdd34aab40d57e"
+      },
+      {
+        "fingerprint_index": 165,
+        "pair_id": "llmprint-pair-165",
+        "file_name": "llmprint-pair-165.json",
+        "bytes": 2240,
+        "sha256": "058fe855b9d121ac6d70017166691776e525460830b6903e6003290feff72093"
+      },
+      {
+        "fingerprint_index": 166,
+        "pair_id": "llmprint-pair-166",
+        "file_name": "llmprint-pair-166.json",
+        "bytes": 2173,
+        "sha256": "d6f0932d44c01b1e78a323b6243bb8effb803745f1467085d3c9fa06c3096dd8"
+      },
+      {
+        "fingerprint_index": 167,
+        "pair_id": "llmprint-pair-167",
+        "file_name": "llmprint-pair-167.json",
+        "bytes": 2206,
+        "sha256": "4346ed3da458488c283fa8f5a55a4545c29a4a8c24c11930cd6cd1c6bdc1c84b"
+      },
+      {
+        "fingerprint_index": 168,
+        "pair_id": "llmprint-pair-168",
+        "file_name": "llmprint-pair-168.json",
+        "bytes": 2146,
+        "sha256": "4e23a8fc92fd8dc84ad59c7cbab360e2e19828e8a7d6161888cedc7dfabba216"
+      },
+      {
+        "fingerprint_index": 169,
+        "pair_id": "llmprint-pair-169",
+        "file_name": "llmprint-pair-169.json",
+        "bytes": 2169,
+        "sha256": "ad63ef2b610de4c84a005855e0f7cece3a551704012201d737fa6c83b5ce1b69"
+      },
+      {
+        "fingerprint_index": 170,
+        "pair_id": "llmprint-pair-170",
+        "file_name": "llmprint-pair-170.json",
+        "bytes": 2204,
+        "sha256": "1b0bcea8c4039c900fe14a5c5e052a9358cbd77d04bce98dd89e1dc20a6dabc1"
+      },
+      {
+        "fingerprint_index": 171,
+        "pair_id": "llmprint-pair-171",
+        "file_name": "llmprint-pair-171.json",
+        "bytes": 2201,
+        "sha256": "3263bab9695da46084055892bfcaf9f5a21fcd64efc2e34357d2b459f1cbc608"
+      },
+      {
+        "fingerprint_index": 172,
+        "pair_id": "llmprint-pair-172",
+        "file_name": "llmprint-pair-172.json",
+        "bytes": 2231,
+        "sha256": "df2c249f6234a40bce5e061d7d33619604b68ece2028d011b1f6331e700affe1"
+      },
+      {
+        "fingerprint_index": 173,
+        "pair_id": "llmprint-pair-173",
+        "file_name": "llmprint-pair-173.json",
+        "bytes": 2163,
+        "sha256": "a4be2e101fb737a79d0810655c3affe0f8dd425019ec11714a2ebc3fb0cb25e2"
+      },
+      {
+        "fingerprint_index": 174,
+        "pair_id": "llmprint-pair-174",
+        "file_name": "llmprint-pair-174.json",
+        "bytes": 2215,
+        "sha256": "af5bb7d83669b403a459b7512b4138f2766bb6cd7997ce1156ead885d7cb2df4"
+      },
+      {
+        "fingerprint_index": 175,
+        "pair_id": "llmprint-pair-175",
+        "file_name": "llmprint-pair-175.json",
+        "bytes": 2153,
+        "sha256": "2abbf8dce5cc385a5675810f70c3c5f1fb9f95d62f5b5de0419ad849c1df1698"
+      },
+      {
+        "fingerprint_index": 176,
+        "pair_id": "llmprint-pair-176",
+        "file_name": "llmprint-pair-176.json",
+        "bytes": 2152,
+        "sha256": "448efdec66827eebe18ee5202e70b4631ac6663e863331c9434394ea90874322"
+      },
+      {
+        "fingerprint_index": 177,
+        "pair_id": "llmprint-pair-177",
+        "file_name": "llmprint-pair-177.json",
+        "bytes": 2178,
+        "sha256": "45d93651dda7bf54889321ff6a3f7f23018db0311634d86c5f9b045620a94361"
+      },
+      {
+        "fingerprint_index": 178,
+        "pair_id": "llmprint-pair-178",
+        "file_name": "llmprint-pair-178.json",
+        "bytes": 2180,
+        "sha256": "984d72f364b30d8b9d6784c30544860fcffac7130004d5d353605d98c7bb84f3"
+      },
+      {
+        "fingerprint_index": 179,
+        "pair_id": "llmprint-pair-179",
+        "file_name": "llmprint-pair-179.json",
+        "bytes": 2139,
+        "sha256": "de3a96af7547c4163efc62ebfb136ebff4988b53819613a2473a680ed60b0fd6"
+      },
+      {
+        "fingerprint_index": 180,
+        "pair_id": "llmprint-pair-180",
+        "file_name": "llmprint-pair-180.json",
+        "bytes": 2202,
+        "sha256": "599a0deb8644bde4cd2f83bc56b2b1a6c4b0a2b464a8d4759ef2ff16441503db"
+      },
+      {
+        "fingerprint_index": 181,
+        "pair_id": "llmprint-pair-181",
+        "file_name": "llmprint-pair-181.json",
+        "bytes": 2188,
+        "sha256": "66e9dfa083834f6a909677d881a2fed43e4124034247572038e84e0184428a00"
+      },
+      {
+        "fingerprint_index": 182,
+        "pair_id": "llmprint-pair-182",
+        "file_name": "llmprint-pair-182.json",
+        "bytes": 2191,
+        "sha256": "a81496b9370e4332849ddedc415172405630867a2cb90104d2f328552b571e5a"
+      },
+      {
+        "fingerprint_index": 183,
+        "pair_id": "llmprint-pair-183",
+        "file_name": "llmprint-pair-183.json",
+        "bytes": 2269,
+        "sha256": "155d16d8cdcbed0131148e84ca17d8a05a097bc46146f664f2ca1878d916c355"
+      },
+      {
+        "fingerprint_index": 184,
+        "pair_id": "llmprint-pair-184",
+        "file_name": "llmprint-pair-184.json",
+        "bytes": 2195,
+        "sha256": "c9d0e1a2e0e81a307365886e9c0b2555ddee898c3290d1b80b0c4b36225e0304"
+      },
+      {
+        "fingerprint_index": 185,
+        "pair_id": "llmprint-pair-185",
+        "file_name": "llmprint-pair-185.json",
+        "bytes": 2255,
+        "sha256": "c403e4439220e39fd7410a33bce06c28769a4606104c5500f79cdb50ca0891d4"
+      },
+      {
+        "fingerprint_index": 186,
+        "pair_id": "llmprint-pair-186",
+        "file_name": "llmprint-pair-186.json",
+        "bytes": 2161,
+        "sha256": "1cdfd7d677a5d4de17dad6ec5543b52b2841eb976d38c0f6010977c9b99a746d"
+      },
+      {
+        "fingerprint_index": 187,
+        "pair_id": "llmprint-pair-187",
+        "file_name": "llmprint-pair-187.json",
+        "bytes": 2158,
+        "sha256": "13ad1dea40e6026db7d05f23a047a4bb1643eb7cf5129d35933d64b21149e1b8"
+      },
+      {
+        "fingerprint_index": 188,
+        "pair_id": "llmprint-pair-188",
+        "file_name": "llmprint-pair-188.json",
+        "bytes": 2168,
+        "sha256": "af95f1e7535a07d2bcc9679fcdabbebbfe81328bd25c099e2fc0ff5d082df938"
+      },
+      {
+        "fingerprint_index": 189,
+        "pair_id": "llmprint-pair-189",
+        "file_name": "llmprint-pair-189.json",
+        "bytes": 2211,
+        "sha256": "ec8707a5cf04c948e2631db057b22f854fc64bb26eae665f225a3ca2ee533759"
+      },
+      {
+        "fingerprint_index": 190,
+        "pair_id": "llmprint-pair-190",
+        "file_name": "llmprint-pair-190.json",
+        "bytes": 2201,
+        "sha256": "de0c35973bca27509998529e865e3b007c1c77fe17323dda3f26bc37c95f13cd"
+      },
+      {
+        "fingerprint_index": 191,
+        "pair_id": "llmprint-pair-191",
+        "file_name": "llmprint-pair-191.json",
+        "bytes": 2219,
+        "sha256": "49f0bdcf5472794632a3f2f77b0013368161396805d200e288dd4633fc6c52fa"
+      },
+      {
+        "fingerprint_index": 192,
+        "pair_id": "llmprint-pair-192",
+        "file_name": "llmprint-pair-192.json",
+        "bytes": 2230,
+        "sha256": "2ace35827c57281903dfec452c710c0f04af8110d39568e8500e48113d1095e5"
+      },
+      {
+        "fingerprint_index": 193,
+        "pair_id": "llmprint-pair-193",
+        "file_name": "llmprint-pair-193.json",
+        "bytes": 2253,
+        "sha256": "4591d1e0977025f55e1d470397f0384bb0a219ca0c54637e6e0e31949d7d746e"
+      },
+      {
+        "fingerprint_index": 194,
+        "pair_id": "llmprint-pair-194",
+        "file_name": "llmprint-pair-194.json",
+        "bytes": 2221,
+        "sha256": "29d8c3eaa4c4a758b9125ed236f9e2dbb015bbdec85471a2a2ae0ff70bda1494"
+      },
+      {
+        "fingerprint_index": 195,
+        "pair_id": "llmprint-pair-195",
+        "file_name": "llmprint-pair-195.json",
+        "bytes": 2169,
+        "sha256": "e42dde664940c4446c9da6f6c282d19ef6c7a32f6a6d1d4743a47c35fc95e780"
+      },
+      {
+        "fingerprint_index": 196,
+        "pair_id": "llmprint-pair-196",
+        "file_name": "llmprint-pair-196.json",
+        "bytes": 2199,
+        "sha256": "522854e38f0992fe126a31aaa48e2f2760c66a578a5b9a8fc7ae5b37e200aa1a"
+      },
+      {
+        "fingerprint_index": 197,
+        "pair_id": "llmprint-pair-197",
+        "file_name": "llmprint-pair-197.json",
+        "bytes": 2162,
+        "sha256": "c080206e13e478c0d8bc5d1c0f3f9459ac713a6f93b6e3e90449b5e25726f94b"
+      },
+      {
+        "fingerprint_index": 198,
+        "pair_id": "llmprint-pair-198",
+        "file_name": "llmprint-pair-198.json",
+        "bytes": 2213,
+        "sha256": "38ffeba2f1f9c09d3a77e6f00735ecb80c5ec01b885748eb4b16ba558d2c1efe"
+      },
+      {
+        "fingerprint_index": 199,
+        "pair_id": "llmprint-pair-199",
+        "file_name": "llmprint-pair-199.json",
+        "bytes": 2155,
+        "sha256": "6b0dcc83da1b8f44b94c3cf01aff0dc2ab28cff1c0c6633ab369194f79bfaadd"
+      }
+    ]
+  },
+  "evaluation": {
+    "schema_version": "wmkd.llmprint-a2-detector-results.v1",
+    "experiment": "A2",
+    "run_id": "llmprint_a2_closure_20260901_150051_cont1",
+    "status": "BLOCKED",
+    "primary": null,
+    "supplementary": null,
+    "negative_models_evaluated": 6,
+    "negative_models_required": 13,
+    "detector_status": "NOT_CALIBRATED_INCOMPLETE_FROZEN_PANEL",
+    "blocker": {
+      "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
+      "stage": "NEGATIVE_SLOT_07_ACQUIRE",
+      "model_id": "microsoft/phi-2",
+      "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
+      "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
+      "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
+    },
+    "scientific_conclusion": "NOT_JUDGED"
+  },
+  "provenance": {
+    "schema_version": "wmkd.llmprint-a2-provenance.v1",
+    "method": "LLMPrint",
+    "experiment": "A2",
+    "run_id": "llmprint_a2_closure_20260901_150051_cont1",
+    "canonical_reference": {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "model_modified": false
+    },
+    "upstream_commit": "3e577f98b2bb64780ec2995b074c5aeec9b017e1",
+    "subset_sha256": "162e27bccf4be98a3e15596772490dac44503363ac5781ac5365fea2d08f4a10",
+    "config_sha256": "4325b2a518aa5080dfb5cc070d57713bf6ee84efb9d72e8e4cbc89308920613a",
+    "validation_panel": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/llmprint/validation_negative_panel_manifest.json",
+      "sha256": "b4e522685c3fae9287a48dc882c32fddd87602ff5229778fc37c0c0e40560678",
+      "required_slots": 13,
+      "evaluated_slots": 6,
+      "replacement_slots": 0
+    },
+    "teacher_checkpoint_created": false,
+    "ba_started": false,
+    "blocker": {
+      "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
+      "stage": "NEGATIVE_SLOT_07_ACQUIRE",
+      "model_id": "microsoft/phi-2",
+      "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
+      "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
+      "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
+    }
+  },
+  "artifact_manifest": {
+    "schema_version": "wmkd.llmprint-a2-artifact-manifest.v1",
+    "artifact_type": "fingerprint_package",
+    "model_modified": false,
+    "preferred_fingerprint": false,
+    "fingerprint_manifest": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/fingerprint_manifest.json",
+      "sha256": "27b31d7e37e276f1aecfc18d9c0999d719a306a52881e4f51f97791ec8444ca0"
+    },
+    "probability_sequences": {
+      "reference": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/reference.json",
+        "sha256": "f77364bc6d72882a3f64b442fc71a612b1f2ef747b84bffa2cebdf71070f9716"
+      },
+      "slot-01": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-01.json",
+        "sha256": "cb0271b9c927e407a766fd55f30585f41f388116c0576701526389d66d1866f8"
+      },
+      "slot-02": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-02.json",
+        "sha256": "799567a2290e216da884820d1ab32204dd4001af9628d8959f8f2149174ecc9e"
+      },
+      "slot-03": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-03.json",
+        "sha256": "c87c5b66d96ccc2fa808d3bd427a51d5366ee17f74d10b4a5c0556d780860444"
+      },
+      "slot-04": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-04.json",
+        "sha256": "c139d9e10d219cb2bff0bb1bbb332a8e0ed5668f49546446b54e73a78e1d3815"
+      },
+      "slot-05": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-05.json",
+        "sha256": "f3372395dea8d644a1a1802c39b04048904e0f8f95c9b4af5550c1b6c0ac7151"
+      },
+      "slot-06": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-06.json",
+        "sha256": "e5600bba86f9a20e3cbaaa7d18fce34c22399c725a0e64b0dd782d19e1c92975"
+      }
+    },
+    "immutable_completed_negative_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "unresolved_negative_slots": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "blocker": {
+      "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
+      "stage": "NEGATIVE_SLOT_07_ACQUIRE",
+      "model_id": "microsoft/phi-2",
+      "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
+      "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
+      "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
+    }
+  },
+  "summary": {
+    "schema_version": "wmkd.llmprint-a2-summary.v1",
+    "method": "LLMPrint",
+    "experiment": "A2",
+    "run_id": "llmprint_a2_closure_20260901_150051_cont1",
+    "status": "BLOCKED",
+    "terminal": true,
+    "artifact_type": "fingerprint_package",
+    "model_modified": false,
+    "preferred_fingerprint": "no",
+    "fingerprints": {
+      "completed": 200,
+      "missing": 0,
+      "duplicate": 0,
+      "invalid": 0
+    },
+    "reference_fresh_reload": "PASS",
+    "negative_models_evaluated": 6,
+    "negative_models_required": 13,
+    "detector_status": "NOT_CALIBRATED_INCOMPLETE_FROZEN_PANEL",
+    "scientific_conclusion": "NOT_JUDGED",
+    "blocker": {
+      "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
+      "stage": "NEGATIVE_SLOT_07_ACQUIRE",
+      "model_id": "microsoft/phi-2",
+      "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
+      "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
+      "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
+    }
+  },
+  "closure_completed_at": "2026-09-01T16:21:53.720546+00:00",
+  "ba_started": false
+}

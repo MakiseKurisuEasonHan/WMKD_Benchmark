@@ -1,0 +1,65 @@
+{
+  "schema_version": "wmkd.llmprint-a2-artifact-manifest.v1",
+  "artifact_type": "fingerprint_package",
+  "model_modified": false,
+  "preferred_fingerprint": false,
+  "fingerprint_manifest": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/fingerprint_manifest.json",
+    "sha256": "27b31d7e37e276f1aecfc18d9c0999d719a306a52881e4f51f97791ec8444ca0"
+  },
+  "probability_sequences": {
+    "reference": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/reference.json",
+      "sha256": "f77364bc6d72882a3f64b442fc71a612b1f2ef747b84bffa2cebdf71070f9716"
+    },
+    "slot-01": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-01.json",
+      "sha256": "cb0271b9c927e407a766fd55f30585f41f388116c0576701526389d66d1866f8"
+    },
+    "slot-02": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-02.json",
+      "sha256": "799567a2290e216da884820d1ab32204dd4001af9628d8959f8f2149174ecc9e"
+    },
+    "slot-03": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-03.json",
+      "sha256": "c87c5b66d96ccc2fa808d3bd427a51d5366ee17f74d10b4a5c0556d780860444"
+    },
+    "slot-04": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-04.json",
+      "sha256": "c139d9e10d219cb2bff0bb1bbb332a8e0ed5668f49546446b54e73a78e1d3815"
+    },
+    "slot-05": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-05.json",
+      "sha256": "f3372395dea8d644a1a1802c39b04048904e0f8f95c9b4af5550c1b6c0ac7151"
+    },
+    "slot-06": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-06.json",
+      "sha256": "e5600bba86f9a20e3cbaaa7d18fce34c22399c725a0e64b0dd782d19e1c92975"
+    }
+  },
+  "immutable_completed_negative_slots": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "unresolved_negative_slots": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "blocker": {
+    "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
+    "stage": "NEGATIVE_SLOT_07_ACQUIRE",
+    "model_id": "microsoft/phi-2",
+    "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
+    "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
+    "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
+  }
+}

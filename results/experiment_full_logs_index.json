@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-01T04:14:59.228887+00:00",
-  "object_count": 10,
+  "generated_at": "2026-09-01T16:21:53.721682+00:00",
+  "object_count": 11,
   "objects": [
     {
       "method": "PN-FP",
@@ -152,6 +152,24 @@
       "utility_available": true,
       "checkpoint_localization_support": false,
       "telemetry_records": 7500
+    },
+    {
+      "method": "LLMPrint",
+      "role": "preferred_fingerprint",
+      "experiment": "A2",
+      "run_id": "llmprint_a2_closure_20260901_150051_cont1",
+      "full_log_path": "results/llmprint/experiment_a2/full_experiment_log.json",
+      "full_log_sha256": "6f6ddc6fed0ad2beac5ec14af32cc9d4ce6eeeb1b56754ab70f46ff78ea1ff33",
+      "final_model_manifest": null,
+      "modelscope_repo": null,
+      "scientific_status": "BLOCKED",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 0,
+      "artifact_type": "fingerprint_package",
+      "model_modified": false,
+      "preferred_fingerprint": "no"
     }
   ]
 }

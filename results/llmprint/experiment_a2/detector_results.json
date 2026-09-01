@@ -1,0 +1,20 @@
+{
+  "schema_version": "wmkd.llmprint-a2-detector-results.v1",
+  "experiment": "A2",
+  "run_id": "llmprint_a2_closure_20260901_150051_cont1",
+  "status": "BLOCKED",
+  "primary": null,
+  "supplementary": null,
+  "negative_models_evaluated": 6,
+  "negative_models_required": 13,
+  "detector_status": "NOT_CALIBRATED_INCOMPLETE_FROZEN_PANEL",
+  "blocker": {
+    "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
+    "stage": "NEGATIVE_SLOT_07_ACQUIRE",
+    "model_id": "microsoft/phi-2",
+    "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
+    "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
+    "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
+  },
+  "scientific_conclusion": "NOT_JUDGED"
+}
