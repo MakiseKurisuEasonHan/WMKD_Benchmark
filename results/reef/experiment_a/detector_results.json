@@ -1,14 +1,30 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-template.v1",
+  "schema_version": "wmkd.ownership-experiment-a-closure.v1",
   "method": "reef",
-  "status": "NOT_STARTED",
+  "method_display_name": "REEF",
+  "experiment": "A",
+  "status": "BLOCKED",
+  "terminal": true,
   "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
   "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
   "model_modified": false,
   "formal_result": null,
-  "preferred_fingerprint": null,
+  "preferred_fingerprint": false,
   "ba_ready": false,
   "missing_values_policy": "unavailable_not_reconstructed",
+  "blocker": {
+    "type": "UNFROZEN_SCIENTIFIC_PROTOCOL_BLOCKER",
+    "formal_run_started": false,
+    "scientific_config_modified": false,
+    "reasons": [
+      "formal_authorized=false in the fixed REEF Experiment A config",
+      "the exact 200 TruthfulQA probe identities and content hashes are not frozen",
+      "the unrelated-model negative panel is not frozen",
+      "the controlling threshold/calibration rule is not frozen"
+    ],
+    "policy": "No scientific semantics were invented, tuned, or inferred. Formal A was not launched."
+  },
+  "detector_status": "NOT_CALIBRATED",
   "native_metric": null,
   "threshold": null,
   "positive_evidence": null,

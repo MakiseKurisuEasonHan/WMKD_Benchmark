@@ -1,32 +1,69 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-template.v1",
+  "schema_version": "wmkd.ownership-experiment-a-closure.v1",
   "method": "reef",
-  "status": "NOT_STARTED",
+  "method_display_name": "REEF",
+  "experiment": "A",
+  "status": "BLOCKED",
+  "terminal": true,
   "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
   "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
   "model_modified": false,
   "formal_result": null,
-  "preferred_fingerprint": null,
+  "preferred_fingerprint": false,
   "ba_ready": false,
   "missing_values_policy": "unavailable_not_reconstructed",
-  "identity": {},
-  "paper": {},
-  "license": null,
-  "taxonomy": {},
-  "threat_model": {},
-  "paper_config": {},
-  "official_config": {},
-  "wmkd_config": {},
-  "adaptations": [],
-  "environment": {},
-  "downloads": [],
-  "runtime": {},
+  "blocker": {
+    "type": "UNFROZEN_SCIENTIFIC_PROTOCOL_BLOCKER",
+    "formal_run_started": false,
+    "scientific_config_modified": false,
+    "reasons": [
+      "formal_authorized=false in the fixed REEF Experiment A config",
+      "the exact 200 TruthfulQA probe identities and content hashes are not frozen",
+      "the unrelated-model negative panel is not frozen",
+      "the controlling threshold/calibration rule is not frozen"
+    ],
+    "policy": "No scientific semantics were invented, tuned, or inferred. Formal A was not launched."
+  },
+  "role": "preferred_fingerprint",
+  "scientific_status": "BLOCKED",
+  "identity": {
+    "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9",
+    "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+  },
+  "wmkd_config": {
+    "path": "configs/watermark/reef_experiment_a.yaml",
+    "sha256": "3ad3a5d1daf89d3d47b626dfa82d153e295437cd36cb4607e8ac858ac5150377"
+  },
+  "runtime": {
+    "formal_started": false
+  },
   "fingerprint_extraction": {},
-  "detector": {},
-  "raw_artifacts": [],
-  "failures": [],
+  "detector": {
+    "status": "NOT_CALIBRATED"
+  },
+  "raw_artifacts": [
+    {
+      "path": "results/reef/smoke/reef_smoke_20260901.json",
+      "sha256": "c824566a22e784127e5c4df9ec3545f8bfdb500d2609748e64666054639ce164"
+    }
+  ],
+  "failures": [
+    {
+      "type": "UNFROZEN_SCIENTIFIC_PROTOCOL_BLOCKER",
+      "formal_run_started": false,
+      "scientific_config_modified": false,
+      "reasons": [
+        "formal_authorized=false in the fixed REEF Experiment A config",
+        "the exact 200 TruthfulQA probe identities and content hashes are not frozen",
+        "the unrelated-model negative panel is not frozen",
+        "the controlling threshold/calibration rule is not frozen"
+      ],
+      "policy": "No scientific semantics were invented, tuned, or inferred. Formal A was not launched."
+    }
+  ],
   "continuations": [],
-  "resources": {},
   "utility_applicability": "not_applicable_passive_fingerprint",
-  "bounded_conclusion": null
+  "bounded_conclusion": "REEF formal reproduction not judged because the fixed protocol is incomplete.",
+  "closure_completed_at": "2026-09-01T16:41:34.768376+00:00",
+  "ba_started": false
 }

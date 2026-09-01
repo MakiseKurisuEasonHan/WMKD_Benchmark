@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-01T16:21:53.721682+00:00",
-  "object_count": 11,
+  "generated_at": "2026-09-01T16:41:34.768720+00:00",
+  "object_count": 12,
   "objects": [
     {
       "method": "PN-FP",
@@ -168,6 +168,24 @@
       "checkpoint_localization_support": false,
       "telemetry_records": 0,
       "artifact_type": "fingerprint_package",
+      "model_modified": false,
+      "preferred_fingerprint": "no"
+    },
+    {
+      "method": "REEF",
+      "role": "preferred_fingerprint",
+      "experiment": "A",
+      "run_id": null,
+      "full_log_path": "results/reef/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "d187117d9ec04dd0e138d017a5b19bbf9bef30eecc294f5efab06959a1a6720d",
+      "final_model_manifest": null,
+      "modelscope_repo": null,
+      "scientific_status": "BLOCKED",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 0,
+      "artifact_type": "no_formal_artifact",
       "model_modified": false,
       "preferred_fingerprint": "no"
     }
