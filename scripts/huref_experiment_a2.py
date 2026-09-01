@@ -167,7 +167,9 @@ def unit_tests(data_root, manifests):
     llama = AutoConfig.from_pretrained(data_root/"models/base/Llama-3.2-3B-Instruct", local_files_only=True)
     phi = AutoConfig.from_pretrained(data_root/"models/llmprint_validation/models/microsoft--Phi-3-mini-128k-instruct/snapshots/master", local_files_only=True, trust_remote_code=True)
     tests = {"mean_pooling": {"pass": mean_diff == 0, "max_abs_diff": mean_diff, "output_dimension_formal": 512},
-             "token_determinism": token_tests,
+             "token_determinism": {"pass": all(x["pass"] and x["invalid_count"] == 0 and x["K"] == K
+                                                     for x in token_tests.values()),
+                                     "models": token_tests},
              "llama_gqa": {"pass": llama.num_attention_heads == 24 and llama.num_key_value_heads == 8 and llama.hidden_size//llama.num_attention_heads == 128,
                             "q_heads": 24, "kv_heads": 8, "head_dim": 128, "repeat_factor": 3},
              "phi_fused_shapes": {"pass": phi.hidden_size == 3072 and phi.num_attention_heads == 32 and phi.intermediate_size == 8192,
