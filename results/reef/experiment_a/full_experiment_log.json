@@ -2,15 +2,15 @@
   "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "reef",
   "experiment": "A",
-  "run_id": "reef_a_20260901_200450",
-  "status": "FAILED",
+  "run_id": "reef_a_20260901_200836",
+  "status": "COMPLETED",
   "terminal": true,
   "model_modified": false,
-  "artifact_type": "partial_fingerprint_evidence",
-  "preferred_fingerprint": "no",
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
   "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "not judged",
-  "error": "tuple index out of range",
+  "scientific_conclusion": "successful",
+  "error": null,
   "identity": {
     "official_repo": "REEF",
     "official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9"
@@ -54,13 +54,36 @@
     },
     "protocol_content_sha256": "3ecf87cbdaec0561e411f16b1013b780306c67eabd8bcff69345b6bbe0257bc5"
   },
-  "detector": null,
-  "fingerprint_extraction": {
-    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 114, in main\n    proto=loadj(a.project/f\"results/ownership_protocols/{a.method}_formal_protocol.json\"); raw={}; det,raw=globals()[f\"run_{a.method}\"](a,proto,raw); status=\"COMPLETED\"; reason=None\n                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 53, in run_reef\n    for mid,p in negpaths(a.data_root): scores.append({\"model_id\":mid,\"score\":centered_cka(ref,reef_fp(p,texts))})\n                                                                                               ^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 47, in reef_fp\n    z=tok(s,return_tensors=\"pt\",truncation=True).to(\"cuda:0\"); o=m(**z,output_hidden_states=True,use_cache=False); acts.append(o.hidden_states[28][0,-1].float().cpu())\n                                                                                                                               ~~~~~~~~~~~~~~~^^^^\nIndexError: tuple index out of range\n"
+  "detector": {
+    "native_metric": "centered_linear_CKA",
+    "reference_score": 1.0,
+    "reload_consistency": 1.0,
+    "negative_scores": [
+      {
+        "model_id": "google/gemma-2b",
+        "score": 0.3748479187488556
+      },
+      {
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "score": 0.572025716304779
+      },
+      {
+        "model_id": "microsoft/Phi-3-mini-128k-instruct",
+        "score": 0.6479156613349915
+      }
+    ],
+    "threshold": 0.6479156613349915,
+    "positive_rule": "score > tau",
+    "positive": true,
+    "false_positives": 0
   },
-  "failures": [
-    "tuple index out of range"
-  ],
+  "fingerprint_extraction": {
+    "reference_shape": [
+      200,
+      3072
+    ]
+  },
+  "failures": [],
   "utility_degradation_attributable_to_experiment_A": "not_applicable",
   "archive": "deferred"
 }

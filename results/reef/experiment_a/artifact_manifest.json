@@ -2,16 +2,19 @@
   "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "reef",
   "experiment": "A",
-  "run_id": "reef_a_20260901_200450",
-  "status": "FAILED",
+  "run_id": "reef_a_20260901_200836",
+  "status": "COMPLETED",
   "terminal": true,
   "model_modified": false,
-  "artifact_type": "partial_fingerprint_evidence",
-  "preferred_fingerprint": "no",
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
   "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "not judged",
-  "error": "tuple index out of range",
+  "scientific_conclusion": "successful",
+  "error": null,
   "artifacts": {
-    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 114, in main\n    proto=loadj(a.project/f\"results/ownership_protocols/{a.method}_formal_protocol.json\"); raw={}; det,raw=globals()[f\"run_{a.method}\"](a,proto,raw); status=\"COMPLETED\"; reason=None\n                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 53, in run_reef\n    for mid,p in negpaths(a.data_root): scores.append({\"model_id\":mid,\"score\":centered_cka(ref,reef_fp(p,texts))})\n                                                                                               ^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 47, in reef_fp\n    z=tok(s,return_tensors=\"pt\",truncation=True).to(\"cuda:0\"); o=m(**z,output_hidden_states=True,use_cache=False); acts.append(o.hidden_states[28][0,-1].float().cpu())\n                                                                                                                               ~~~~~~~~~~~~~~~^^^^\nIndexError: tuple index out of range\n"
+    "reference_shape": [
+      200,
+      3072
+    ]
   }
 }

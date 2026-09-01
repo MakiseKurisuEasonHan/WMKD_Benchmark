@@ -2,14 +2,14 @@
   "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "reef",
   "experiment": "A",
-  "run_id": "reef_a_20260901_200450",
-  "status": "FAILED",
+  "run_id": "reef_a_20260901_200836",
+  "status": "COMPLETED",
   "terminal": true,
   "model_modified": false,
-  "artifact_type": "partial_fingerprint_evidence",
-  "preferred_fingerprint": "no",
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
   "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "not judged",
-  "error": "tuple index out of range",
-  "runtime_seconds": 14.438776969909668
+  "scientific_conclusion": "successful",
+  "error": null,
+  "runtime_seconds": 27.75233817100525
 }
