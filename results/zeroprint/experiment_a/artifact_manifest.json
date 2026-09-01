@@ -1,14 +1,17 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-template.v1",
+  "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "zeroprint",
-  "status": "NOT_STARTED",
-  "official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c",
-  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "experiment": "A",
+  "run_id": "zeroprint_a_20260901_201050",
+  "status": "FAILED",
+  "terminal": true,
   "model_modified": false,
-  "formal_result": null,
-  "preferred_fingerprint": null,
-  "ba_ready": false,
-  "missing_values_policy": "unavailable_not_reconstructed",
-  "artifacts": [],
-  "aggregate_sha256": null
+  "artifact_type": "partial_fingerprint_evidence",
+  "preferred_fingerprint": "no",
+  "ba_status": "NOT_STARTED",
+  "scientific_conclusion": "not judged",
+  "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/ownership_phase0_gates.py', 'zeroprint', '--model', '/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct', '--embedding-model', '/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2', '--queries', '/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/zeroprint_humaneval_2.json', '--batch-size', '8', '--max-new-tokens', '512', '--output', '/root/autodl-tmp/WMKD_Benchmark_data/gates/zeroprint/formal_runtime_gate.json']' returned non-zero exit status 1.",
+  "artifacts": {
+    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 114, in main\n    proto=loadj(a.project/f\"results/ownership_protocols/{a.method}_formal_protocol.json\"); raw={}; det,raw=globals()[f\"run_{a.method}\"](a,proto,raw); status=\"COMPLETED\"; reason=None\n                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 101, in run_zeroprint\n    subprocess.run(cmd,check=True)\n  File \"/root/miniconda3/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/ownership_phase0_gates.py', 'zeroprint', '--model', '/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct', '--embedding-model', '/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2', '--queries', '/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/zeroprint_humaneval_2.json', '--batch-size', '8', '--max-new-tokens', '512', '--output', '/root/autodl-tmp/WMKD_Benchmark_data/gates/zeroprint/formal_runtime_gate.json']' returned non-zero exit status 1.\n"
+  }
 }

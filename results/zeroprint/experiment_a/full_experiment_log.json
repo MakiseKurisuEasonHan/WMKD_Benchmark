@@ -1,32 +1,88 @@
 {
-  "schema_version": "wmkd.ownership-experiment-a-template.v1",
+  "schema_version": "wmkd.passive-ownership-a.v1",
   "method": "zeroprint",
-  "status": "NOT_STARTED",
-  "official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c",
-  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "experiment": "A",
+  "run_id": "zeroprint_a_20260901_201050",
+  "status": "FAILED",
+  "terminal": true,
   "model_modified": false,
-  "formal_result": null,
-  "preferred_fingerprint": null,
-  "ba_ready": false,
-  "missing_values_policy": "unavailable_not_reconstructed",
-  "identity": {},
-  "paper": {},
-  "license": null,
-  "taxonomy": {},
-  "threat_model": {},
-  "paper_config": {},
-  "official_config": {},
-  "wmkd_config": {},
-  "adaptations": [],
-  "environment": {},
-  "downloads": [],
-  "runtime": {},
-  "fingerprint_extraction": {},
-  "detector": {},
-  "raw_artifacts": [],
-  "failures": [],
-  "continuations": [],
-  "resources": {},
-  "utility_applicability": "not_applicable_passive_fingerprint",
-  "bounded_conclusion": null
+  "artifact_type": "partial_fingerprint_evidence",
+  "preferred_fingerprint": "no",
+  "ba_status": "NOT_STARTED",
+  "scientific_conclusion": "not judged",
+  "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/ownership_phase0_gates.py', 'zeroprint', '--model', '/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct', '--embedding-model', '/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2', '--queries', '/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/zeroprint_humaneval_2.json', '--batch-size', '8', '--max-new-tokens', '512', '--output', '/root/autodl-tmp/WMKD_Benchmark_data/gates/zeroprint/formal_runtime_gate.json']' returned non-zero exit status 1.",
+  "identity": {
+    "official_repo": "ZeroPrint",
+    "official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c"
+  },
+  "paper_config": "official pinned semantics",
+  "wmkd_config": {
+    "schema_version": "wmkd.zeroprint-formal-protocol.v1",
+    "method": "zeroprint",
+    "experiment": "A",
+    "status": "NEEDS_RUNTIME_GATE",
+    "formal_authorized": false,
+    "frozen_before_results": true,
+    "canonical_reference": {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "model_modified": false
+    },
+    "official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c",
+    "negative_panel": {
+      "path": "results/ownership_protocols/shared_negative_panel_3.json",
+      "sha256": "4b97b0dfc4960adeb638282b51ec69c50cec1e8b46d8422b40712eb63d5f31e8"
+    },
+    "scientific_design": {
+      "dataset": "ModelScope opencompass/humaneval",
+      "query_count": 2,
+      "query_manifest": "results/ownership_protocols/zeroprint_humaneval_2.json",
+      "query_manifest_sha256": "72fc6cf6c25e2d955178fa90eb765afbc790bd5d576515447c86ced95149019c",
+      "perturbations_per_query": 4,
+      "repeats": 20,
+      "continuation_word_limit": 20,
+      "generation": {
+        "max_new_tokens": 512,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "top_k": 50,
+        "do_sample": true,
+        "max_input_length": 512
+      },
+      "perturbation": {
+        "method": "official GloVe word substitution",
+        "k_words_to_replace": 3,
+        "top_m_neighbors": 10,
+        "embedding": "canonical Stanford GloVe 6B 100d safe reconstruction"
+      },
+      "output_embedding": "sentence-transformers/all-mpnet-base-v2",
+      "gradient": "official ridge-regression Jacobian, alpha=0.001",
+      "aggregation": "mean",
+      "similarity": "official correlation rescaled from [-1,1] to [0,1]"
+    },
+    "calibration": {
+      "status": "FROZEN_BEFORE_FORMAL_RESULTS",
+      "metric": "rescaled_Pearson_correlation",
+      "score_direction": "higher",
+      "negative_distribution": "three frozen family-diverse unrelated models, one score per model",
+      "threshold_rule": "tau = maximum score among the three frozen unrelated negatives",
+      "positive_rule": "suspect score > tau",
+      "tie_rule": "score equal to tau is negative",
+      "rationale": "pre-registered empirical family-wise separation boundary; no arbitrary numerical constant and no post-result tuning"
+    },
+    "runtime_gate": {
+      "status": "PENDING",
+      "rule": "use 5 negatives iff Reference+5 <=5h; else use 3 iff Reference+3 <=5h; never reduce 2x4x20 core budget"
+    },
+    "protocol_content_sha256": "dea4c1796a038159323dbfafa975fc10e7e3f59234d76202ac219aa345a852ec"
+  },
+  "detector": null,
+  "fingerprint_extraction": {
+    "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 114, in main\n    proto=loadj(a.project/f\"results/ownership_protocols/{a.method}_formal_protocol.json\"); raw={}; det,raw=globals()[f\"run_{a.method}\"](a,proto,raw); status=\"COMPLETED\"; reason=None\n                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/passive4_formal_runner.py\", line 101, in run_zeroprint\n    subprocess.run(cmd,check=True)\n  File \"/root/miniconda3/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/ownership_phase0_gates.py', 'zeroprint', '--model', '/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct', '--embedding-model', '/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2', '--queries', '/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/zeroprint_humaneval_2.json', '--batch-size', '8', '--max-new-tokens', '512', '--output', '/root/autodl-tmp/WMKD_Benchmark_data/gates/zeroprint/formal_runtime_gate.json']' returned non-zero exit status 1.\n"
+  },
+  "failures": [
+    "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/ctcc/env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/ownership_phase0_gates.py', 'zeroprint', '--model', '/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct', '--embedding-model', '/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2', '--queries', '/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/zeroprint_humaneval_2.json', '--batch-size', '8', '--max-new-tokens', '512', '--output', '/root/autodl-tmp/WMKD_Benchmark_data/gates/zeroprint/formal_runtime_gate.json']' returned non-zero exit status 1."
+  ],
+  "utility_degradation_attributable_to_experiment_A": "not_applicable",
+  "archive": "deferred"
 }

@@ -1,3 +1,7 @@
-# ZeroPrint Experiment A Report
+# ZeroPrint Experiment A report
 
-Template only. Record identity/paper/license, threat model, canonical provenance, paper/official/WMKD configs, adaptations, environment/downloads, runtime/resources, extraction/native metric/threshold, positive/negative evidence, artifacts/failures/continuations, bounded conclusion, preferred fingerprint and Ba readiness. Missing values remain unavailable.
+**FAILED** — scientific conclusion: **not judged**.
+
+Detector: `not completed`
+
+Ba: NOT_STARTED.
