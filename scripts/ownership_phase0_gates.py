@@ -94,7 +94,7 @@ def zeroprint_gate(args) -> None:
     expanded=[q for q in queries for _ in range(20)]; outputs=[]; generated=0; torch.cuda.reset_peak_memory_stats(); start=time.perf_counter()
     for i in range(0,len(expanded),args.batch_size):
         z=tok(expanded[i:i+args.batch_size],padding=True,truncation=True,return_tensors="pt").to("cuda:0")
-        with torch.no_grad(): y=model.generate(**z,max_new_tokens=args.max_new_tokens,do_sample=True,temperature=0.8,top_p=0.95,pad_token_id=tok.eos_token_id)
+        with torch.no_grad(): y=model.generate(**z,max_new_tokens=args.max_new_tokens,do_sample=True,temperature=args.temperature,top_p=args.top_p,top_k=args.top_k,pad_token_id=tok.eos_token_id)
         for j,row in enumerate(y):
             new=row[z.input_ids.shape[1]:]; generated += int(new.numel()); outputs.append(tok.decode(new,skip_special_tokens=True))
     torch.cuda.synchronize(); generation_seconds=time.perf_counter()-start; del model; torch.cuda.empty_cache()
@@ -112,7 +112,7 @@ def main():
     p=argparse.ArgumentParser(); sub=p.add_subparsers(dest="mode",required=True)
     x=sub.add_parser("build-tokens"); x.add_argument("--model",type=Path,required=True); x.add_argument("--corpus",type=Path,required=True); x.add_argument("--max-documents",type=int,default=10000); x.add_argument("--max-k",type=int,default=4096); x.add_argument("--output",type=Path,required=True); x.set_defaults(fn=build_tokens)
     x=sub.add_parser("huref"); x.add_argument("--model",type=Path,required=True); x.add_argument("--tokens",type=Path,required=True); x.add_argument("--k",type=int,nargs="+",default=[128,256,512,1024]); x.add_argument("--output",type=Path,required=True); x.set_defaults(fn=huref_gate)
-    x=sub.add_parser("zeroprint"); x.add_argument("--model",type=Path,required=True); x.add_argument("--embedding-model",type=Path,required=True); x.add_argument("--queries",type=Path,required=True); x.add_argument("--batch-size",type=int,default=8); x.add_argument("--max-new-tokens",type=int,default=32); x.add_argument("--output",type=Path,required=True); x.set_defaults(fn=zeroprint_gate)
+    x=sub.add_parser("zeroprint"); x.add_argument("--model",type=Path,required=True); x.add_argument("--embedding-model",type=Path,required=True); x.add_argument("--queries",type=Path,required=True); x.add_argument("--batch-size",type=int,default=8); x.add_argument("--max-new-tokens",type=int,default=32); x.add_argument("--temperature",type=float,default=0.7); x.add_argument("--top-p",type=float,default=0.9); x.add_argument("--top-k",type=int,default=50); x.add_argument("--output",type=Path,required=True); x.set_defaults(fn=zeroprint_gate)
     a=p.parse_args(); a.fn(a)
 
 if __name__=="__main__": main()
