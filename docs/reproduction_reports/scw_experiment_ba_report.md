@@ -1,0 +1,8 @@
+# SCW Ba Final Report
+
+Run `scw_ba_full_20260831_193828_cont1` completed standardized same-size 3B offline hard-label sequence-level direct distillation. The immutable A2 Teacher manifest SHA is `27f68ea443ca1dbc9f02036ac560a12db5cb063ceec589a0144be5586da97b7b`. Generation produced 32003 raw records and exactly 20,000 frozen unique QA (SHA `a8c93d4fc55521abe6abab48aa67cc06a6251ce769caa913bd24adfebb87b05c`). French exposure was 26/20000 (0.1300%); this supplementary diagnostic did not alter training data. Student used fresh canonical Base, full-parameter BF16 SFT, batch 8, 3 epochs, LR 1e-5 and 7,500 expected steps. Base/Teacher/Student primary p-values were `0.9199569225311279` / `0.0` / `0.8440861701965332`. Bounded classification: **lost_or_moved_to_base_regime** under this tested WMKD Ba condition; no universal or causal claim is made. ARC, TruthfulQA, ordinary and French sanity are recorded in `summary.json`. Fresh reload was used for all evaluation models.
+
+## ModelScope Student archive
+
+<!-- SCW_BA_STUDENT_MODELSCOPE_ARCHIVE_20260901 -->
+The immutable final Student was uploaded to private ModelScope repo `MakiseKurisuEasonHan/WMKD-SCW-Ba-Student`. Remote filename, size, and ModelScope metadata identity checks passed for 9/9 files and 6442815786/6442815786 bytes. Source manifest SHA256 is `f8554fc57258f28b945835dcab759ae4891633cc835918cf63156b14a9f41ef1`. Archive status is `uploaded_to_modelscope_awaiting_destination_hash_verification` with `destination_verified=false` because no complete destination redownload and independent SHA256 comparison was performed. Scientific results and the bounded Base-like negative-regime conclusion are unchanged.
