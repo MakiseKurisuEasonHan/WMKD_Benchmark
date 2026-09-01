@@ -82,7 +82,7 @@ def main():
     save("QUIESCENCE",status="FINALIZING",git_push_rc=push.returncode)
     checks=[]
     checks += [(f"{m}_terminal",states[m]["status"] in TERMINAL) for m in METHODS]
-    checks += [("no_pending_method",all(v["status"] in TERMINAL for v in states.values())),("no_pending_continuation",True),("no_pending_evaluation",True),("no_pending_report",True),("no_pending_full_json",True),("no_pending_manifest",True),("no_pending_git_stage",not bool(run(["git","status","--porcelain"],root).stdout.strip())),("logs_flushed",True),("all_statuses_terminal",all(v["status"] in TERMINAL for v in states.values()))]
+    checks += [("no_pending_method",all(v["status"] in TERMINAL for v in states.values())),("no_pending_continuation",True),("no_pending_evaluation",True),("no_pending_report",True),("no_pending_full_json",True),("no_pending_manifest",True),("git_synced_and_no_pending_stage",push.returncode==0 and not bool(run(["git","status","--porcelain"],root).stdout.strip())),("logs_flushed",True),("all_statuses_terminal",all(v["status"] in TERMINAL for v in states.values()))]
     own=os.getpid(); ps=run(["pgrep","-af","passive4_formal_runner|ownership_method_smoke|ownership_phase0_gates"],root); foreign=[x for x in ps.stdout.splitlines() if not x.startswith(str(own)+" ")]
     smi=run(["nvidia-smi","--query-compute-apps=pid,process_name","--format=csv,noheader"],root)
     checks += [("no_wmkd_runner",not foreign),("no_wmkd_scientific",not foreign),("no_wmkd_gpu_process","WMKD" not in smi.stdout),("no_wmkd_downloader",True),("filesystem_sync",run(["sync"],root).returncode==0),("final_summary_exists",(root/"results/passive4_formal_a_summary.json").exists()),("shutdown_intent_exists",True)]
