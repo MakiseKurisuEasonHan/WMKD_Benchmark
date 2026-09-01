@@ -4,7 +4,10 @@
 
 - [x] Close PN-FP, EverTracer, CTCC, iSeal, and SCW: **5/7 complete**.
 - [x] Preserve 10/10 canonical full experiment JSON logs and the global index.
-- [ ] Discuss LLMPrint as the sixth method; do not clone, download, configure, or start it without a separate explicit Experiment A prompt.
+- [x] Audit the LLMPrint paper and pin official source `hifi-hyp/ACL-LLMPrint@3e577f98b2bb64780ec2995b074c5aeec9b017e1`; prepare local configuration, wrappers, tests, method record, and validation-negative availability matrix.
+- [ ] Reconnect to the restarted AutoDL instance, revalidate checkout/GPU/canonical-base/environment state, prepare the 300 tokenizer-valid word pairs, and run exactly one isolated 1000-step fingerprint speed test.
+- [ ] Resolve the paper-vs-release gray-box detector discrepancy before declaring readiness for formal Experiment A.
+- [ ] Keep formal 300-fingerprint construction, Ba, and Student training NOT STARTED until separately authorized after preparation review.
 - [ ] Run REEF only under a later separately authorized protocol.
 
 The older SCW checklist entries below are immutable historical workflow records. Their unchecked items do not override the current 5/7 closure or authorize rerunning strict A.
@@ -153,6 +156,6 @@ The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archiv
 
 - [x] Close PN-FP, EverTracer, CTCC, iSeal, and SCW, including preferred Teacher and Ba Student canonical full logs.
 - [x] Create the 10-object global full-log index and integrity audit.
-- [ ] Run LLMPrint under a separately authorized protocol.
+- [ ] Complete the currently authorized LLMPrint preparation/preflight/speed-test protocol; formal Experiment A remains separately gated.
 - [ ] Run REEF under a separately authorized protocol.
 - [ ] If exact watermark-disappearance timing is required, design a separately authorized offline checkpoint-level detector study; do not infer it from training loss.

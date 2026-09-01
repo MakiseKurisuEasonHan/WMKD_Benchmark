@@ -1,0 +1,61 @@
+project: WMKD_Benchmark
+method: LLMPrint
+experiment: A
+status: PREPARATION_AND_SPEED_TEST_ONLY
+formal_construction_authorized: false
+reference:
+  upstream: meta-llama/Llama-3.2-3B-Instruct
+  revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95
+  local_path: /root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct
+  watermarked: false
+  model_modified: false
+  fingerprint_reference: true
+upstream:
+  repository: https://github.com/hifi-hyp/ACL-LLMPrint.git
+  commit: 3e577f98b2bb64780ec2995b074c5aeec9b017e1
+  source_path: /root/autodl-tmp/WMKD_Benchmark_data/artifacts/llmprint/source
+  license: no explicit repository license observed at audit time
+construction:
+  fingerprints: 300
+  pair_seed: 42
+  pair_policy: same_category_single_token
+  prompt_template: "Randomly output a word from your vocabulary {optim_str}"
+  suffix_length_tokens: 20
+  optim_str_init: "x x x x x x x x x x x x x x x x x x x x"
+  alpha: 0.5
+  beta: 1.0
+  margin: 0.0
+  gcg_iterations: 1000
+  search_width: 64
+  topk: 64
+  n_replace: 1
+  allow_non_ascii: false
+  filter_ids: true
+  use_prefix_cache: true
+  dtype: float16
+speed_test:
+  authorized_fingerprints: 1
+  namespace: /root/autodl-tmp/WMKD_Benchmark_data/speed_tests/llmprint
+detector:
+  primary_access: graybox
+  paper_semantics: bitwise_accuracy_with_gaussian_threshold
+  z: 1.64
+  positive_direction: higher_agreement
+  positive_condition: "accuracy >= tau"
+  release_code_graybox_semantics: filtered_bits_binomial_p_lt_0.05_and_valid_n_gte_calibrated_max
+  graybox_probability_filter: 0.001
+  paper_code_discrepancy_requires_decision: true
+utility:
+  model_modified: false
+  degradation_attributable_to_llmprint: not_applicable
+  provenance: inherit_canonical_WMKD_Base
+future_ba:
+  authorized: false
+  answers_must_be_generated_by_reference: true
+  frozen_unique_qa: 20000
+  fresh_canonical_student: true
+  full_parameter: true
+  epochs: 3
+  learning_rate: 1.0e-5
+  bf16: true
+  batch_size: 8

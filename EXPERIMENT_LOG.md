@@ -135,3 +135,7 @@ Generated 10/10 canonical full experiment logs and the global index under `resul
 ### AutoDL bounded cleanup
 
 After GitHub/source synchronization and small-evidence capture, deleted only two explicitly non-scientific speed-test namespaces and two incomplete `.part` files. Logical targets totaled 51,689,025,056 bytes; filesystem used space fell from 183,968,206,848 to 132,278,788,096 bytes (51,689,418,752 bytes reclaimed; 35% to 25% usage). All formal checkpoints/final models, SCW frozen20k, canonical Base, shared prompt/cache/utility resources, environments, manifests and ambiguous paths were retained. Automatic shutdown remained disabled and the instance remained running.
+
+## 2026-09-01 — LLMPrint pre-formal preparation
+
+LLMPrint preparation began under explicit authorization. The official source is pinned to `hifi-hyp/ACL-LLMPrint@3e577f98b2bb64780ec2995b074c5aeec9b017e1`; no explicit repository license was observed at audit time. Paper/source semantics, canonical-Llama compatibility, full construction parameters, 13-model validation-negative inventory, atomic run logging, and local static tests were recorded. Formal construction is 0/300, and no Ba or Student training exists. AutoDL execution evidence is not yet available because the post-restart SSH endpoint could not be reached; this is an infrastructure hold, not a scientific failure and not an A2 trigger.

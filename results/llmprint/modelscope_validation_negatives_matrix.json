@@ -1,0 +1,23 @@
+{
+  "schema_version": "wmkd.llmprint-modelscope-negative-matrix.v1",
+  "audited_at": "2026-09-01",
+  "downloaded_models": [],
+  "policy": "ModelScope availability discovery only; no model downloaded. A candidate is not equivalent until file identity/revision/integrity evidence passes.",
+  "models": [
+    {"official": "bigscience/bloom-560m", "modelscope_candidate": "AI-ModelScope/bloom-560m", "exact_available": false, "equivalent_verified": false, "status": "unresolved_equivalence", "replacement_needed": false, "note": "named mirror discovered; owner differs; manifest comparison pending"},
+    {"official": "distilbert/distilgpt2", "modelscope_candidate": null, "exact_available": false, "equivalent_verified": false, "status": "unresolved", "replacement_needed": true, "note": "no exact candidate established by current search"},
+    {"official": "facebook/opt-1.3b", "modelscope_candidate": null, "exact_available": false, "equivalent_verified": false, "status": "unresolved", "replacement_needed": true, "note": "no exact candidate established by current search"},
+    {"official": "facebook/opt-350m", "modelscope_candidate": null, "exact_available": false, "equivalent_verified": false, "status": "unresolved", "replacement_needed": true, "note": "no exact candidate established by current search"},
+    {"official": "google/gemma-2b", "modelscope_candidate": null, "exact_available": false, "equivalent_verified": false, "status": "unresolved", "replacement_needed": true, "note": "no exact candidate established by current search"},
+    {"official": "google/gemma-3-1b-it", "modelscope_candidate": "LLM-Research/gemma-3-1b-it", "exact_available": false, "equivalent_verified": false, "status": "unresolved_equivalence", "replacement_needed": false, "note": "exact-named mirror discovered; owner/revision/file identity pending"},
+    {"official": "microsoft/phi-2", "modelscope_candidate": null, "exact_available": false, "equivalent_verified": false, "status": "unresolved", "replacement_needed": true, "note": "no exact candidate established by current search"},
+    {"official": "microsoft/Phi-3-mini-128k-instruct", "modelscope_candidate": "LLM-Research/Phi-3-mini-128k-instruct", "exact_available": false, "equivalent_verified": false, "status": "unresolved_equivalence", "replacement_needed": false, "note": "exact-named mirror discovered; owner/revision/file identity pending"},
+    {"official": "openai-community/gpt2", "modelscope_candidate": "AI-ModelScope/gpt2", "exact_available": false, "equivalent_verified": false, "status": "unresolved_equivalence", "replacement_needed": false, "note": "named mirror discovered; owner differs; manifest comparison pending"},
+    {"official": "Qwen/Qwen2-7B", "modelscope_candidate": "Qwen/Qwen2-7B", "exact_available": true, "equivalent_verified": false, "status": "exact_candidate_unverified", "replacement_needed": false, "note": "official Qwen ModelScope namespace; revision/file identity still requires verification"},
+    {"official": "Qwen/Qwen2.5-3B-Instruct", "modelscope_candidate": "Qwen/Qwen2.5-3B-Instruct", "exact_available": true, "equivalent_verified": false, "status": "exact_candidate_unverified", "replacement_needed": false, "note": "official Qwen ModelScope namespace; revision/file identity still requires verification"},
+    {"official": "Qwen/Qwen2.5-7B-Instruct", "modelscope_candidate": "Qwen/Qwen2.5-7B-Instruct", "exact_available": true, "equivalent_verified": false, "status": "exact_candidate_unverified", "replacement_needed": false, "note": "official Qwen ModelScope namespace; revision/file identity still requires verification"},
+    {"official": "tiiuae/Falcon3-7B-Base", "modelscope_candidate": null, "exact_available": false, "equivalent_verified": false, "status": "unresolved", "replacement_needed": true, "note": "Falcon3 derivatives found, but no exact 7B Base candidate established; derivatives are not silent substitutes"}
+  ],
+  "replacement_selection": null,
+  "calibration_implication": "Formal A calibration is blocked until all 13 negatives have exact/equivalent verified artifacts or explicitly approved unrelated replacements."
+}

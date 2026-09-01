@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Current closure is **5/7**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint and REEF. The sixth and next discussion target is LLMPrint, but no clone, download, configuration, GPU execution, or Experiment A may start without a separate explicit prompt.
+Current closure is **5/7**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint and REEF. LLMPrint preparation is now explicitly authorized and in progress: the official paper/source audit, local configuration/wrappers/tests, and ModelScope validation-negative availability audit are complete. Formal 300-fingerprint construction, Experiment Ba, and Student training have not started. AutoDL preflight and the isolated 1-fingerprint/1000-step speed test are pending because the restarted instance's current SSH endpoint is not yet available.
 
 SCW strict A remains a preserved pre-formal infrastructure/data-access attempt: Formal training never started, and its PyArrow/GIL finalization plus overseas official-data access failures are not a scientific failure. The explicitly authorized A2 domestic-data adaptation completed, produced the preferred Teacher, and Ba completed with a fresh canonical Student. The detailed immutable history below is retained rather than rewritten.
 
@@ -24,7 +24,7 @@ The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.
 
 The durable benchmark default is a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Every method's Ba must use that method's own preferred teacher to generate its own answers; another watermark's teacher, QA, frozen 20k, or student must never be reused. Students always start from fresh canonical unwatermarked weights. Any method-specific backbone or Ba deviation requires a recorded blocker and explicit user approval.
 
-Completed methods: **5/7** (PN-FP, EverTracer, CTCC, iSeal, and SCW). Remaining: **LLMPrint, REEF**. The sixth watermark and next discussion target is **LLMPrint**, but this status does not authorize starting it. The canonical Llama remains preserved. The current-facing AutoDL operational baseline is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, RTX PRO 6000 96 GB ×1, Intel Xeon Platinum 8470Q with 22 vCPUs, 110 GB RAM, 30 GB system disk, and approximately 500 GB data capacity (50 GB free + 450 GB paid). Older 208-vCPU/approximately-1-TiB records are historical only.
+Completed methods: **5/7** (PN-FP, EverTracer, CTCC, iSeal, and SCW). Remaining: **LLMPrint, REEF**. LLMPrint is at the authorized preparation/audit stage only. The canonical Llama remains preserved. The last verified AutoDL operational baseline is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, RTX PRO 6000 96 GB ×1, Intel Xeon Platinum 8470Q with 22 vCPUs, 110 GB RAM, 30 GB system disk, and approximately 500 GB data capacity (50 GB free + 450 GB paid); it must be revalidated after reconnecting. Older 208-vCPU/approximately-1-TiB records are historical only.
 
 ## Completed
 
@@ -66,7 +66,7 @@ Completed methods: **5/7** (PN-FP, EverTracer, CTCC, iSeal, and SCW). Remaining:
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, or perform destructive cleanup without separate explicit approval.
 - SCW is FULLY CLOSED through strict-A infrastructure history, A2 preferred Teacher, standardized Ba, private ModelScope archival, canonical full JSON logs, and bounded cleanup.
-- Next method: LLMPrint. Discussion is allowed; clone, download, configuration, or Experiment A execution requires a separate explicit prompt.
+- LLMPrint preparation is active under explicit authorization. Resume with AutoDL state/canonical-base/environment checks and exactly one isolated full-parameter speed-test fingerprint after the current SSH endpoint is supplied. Do not start the formal 300-fingerprint construction, Ba, Student training, or any scientific-configuration correction automatically.
 - After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 

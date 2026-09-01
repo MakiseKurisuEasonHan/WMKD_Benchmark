@@ -1,0 +1,36 @@
+{
+  "schema_version": "wmkd.llmprint-source-audit.v1",
+  "audited_at": "2026-09-01",
+  "paper": {
+    "title": "Fingerprinting LLMs via Prompt Injection",
+    "venue": "ACL 2026 Main Conference, Volume 1: Long Papers",
+    "anthology_id": "2026.acl-long.541",
+    "doi": "10.18653/v1/2026.acl-long.541"
+  },
+  "repository": {
+    "url": "https://github.com/hifi-hyp/ACL-LLMPrint.git",
+    "pinned_commit": "3e577f98b2bb64780ec2995b074c5aeec9b017e1",
+    "retrieval_date": "2026-09-01",
+    "local_audit_path": "artifacts/llmprint/source",
+    "autodl_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/llmprint/source",
+    "license_observation": "no explicit repository license observed at audit time",
+    "commit_history": [
+      "c6cf7fd Add LLMPrint release code",
+      "fabe05a Move release code to repo root",
+      "3e577f9 Update project title in README.md"
+    ]
+  },
+  "scientific_semantics": {
+    "type": "passive model fingerprint / provenance detector",
+    "parameter_watermark": false,
+    "reference_model_modified": false,
+    "experiment_a_primary_artifact": "Preferred Fingerprint Package"
+  },
+  "paper_code_difference": {
+    "paper": "gray-box and black-box use bitwise accuracy A and tau=mu+z*sigma with z=1.64; positive iff A>=tau",
+    "release_code_blackbox": "matches paper threshold semantics, with sample standard deviation ddof=1 and tau clipped to 1.0",
+    "release_code_graybox": "filters positions where both reference and suspect pair probabilities exceed 1e-3, then requires one-sided exact binomial p<0.05 and valid_n>=max valid_n observed among usable validation negatives",
+    "status": "UNRESOLVED_SCIENTIFIC_SEMANTICS_DECISION_BEFORE_FORMAL_A"
+  },
+  "formal_results": null
+}
