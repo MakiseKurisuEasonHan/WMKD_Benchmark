@@ -2,7 +2,9 @@
 
 ## Current phase
 
-SCW is the active fifth method, but Experiment A is **NOT RUN / BLOCKED ON RUNTIME**. Python 3.12 and clean Python 3.11 gates both completed 4/4 optimizer steps and `train_end`, then reproduced the same `PyGILState_Release` SIGABRT during interpreter finalization; this is a runtime/data-pipeline teardown blocker, not demonstrated scientific-training corruption. Local official-code research now supports a fail-closed materialized-stream design: freeze exactly 160,000 official post-preprocess/post-shuffle/post-interleave tokenized records, then train from a hash-audited PyTorch-only sequential iterable. This is conditionally classified `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2, but Formal A remains prohibited until real materialization/audit and one four-step local-materialized clean-exit gate pass. No Teacher or Ba exists. See `docs/methods/scw_materialized_stream_adaptation.md`.
+Current closure is **5/7**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint and REEF. The sixth and next discussion target is LLMPrint, but no clone, download, configuration, GPU execution, or Experiment A may start without a separate explicit prompt.
+
+SCW strict A remains a preserved pre-formal infrastructure/data-access attempt: Formal training never started, and its PyArrow/GIL finalization plus overseas official-data access failures are not a scientific failure. The explicitly authorized A2 domestic-data adaptation completed, produced the preferred Teacher, and Ba completed with a fresh canonical Student. The detailed immutable history below is retained rather than rewritten.
 
 iSeal is FULLY CLOSED through A and Ba plus private ModelScope archival. Experiment A remains blocked before formal launch by the pinned public-code exact-zero gate; authorized A2-A6 culminated in preferred Teacher A6 (179/200 registered). Ba Student `iseal_ba_20260830_165442` completed 7,500 steps from the fresh canonical base. Registered success fell 179/200 → 0/200, equal to Base 0/200 (89.5-point drop; 0% thresholded retention); ARC/TruthfulQA were 0.481229/0.449818, ordinary generation 10/10, and fresh reload passed. Teacher/Student private archives passed remote metadata verification and await independent destination SHA256. Bb/A7 were not created.
 
@@ -22,7 +24,7 @@ The canonical cross-session rules are consolidated in `docs/EXPERIMENT_PROTOCOL.
 
 The durable benchmark default is a same-family, same-size, same-revision A/Ba/Bb design using canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`. Every method's Ba must use that method's own preferred teacher to generate its own answers; another watermark's teacher, QA, frozen 20k, or student must never be reused. Students always start from fresh canonical unwatermarked weights. Any method-specific backbone or Ba deviation requires a recorded blocker and explicit user approval.
 
-Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). Remaining: **SCW, LLMPrint, REEF**. The fifth watermark and next discussion target is **SCW**, but SCW has not been cloned, downloaded, configured, or started. The canonical Llama remains preserved. The current AutoDL operational baseline is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, RTX PRO 6000 96 GB ×1, Intel Xeon Platinum 8470Q with 22 vCPUs, 110 GB RAM, 30 GB system disk, and approximately 500 GB data capacity (50 GB free + 450 GB paid). The instance is currently pay-as-you-go; this operational state is not scientific protocol. Older 208-vCPU/approximately-1-TiB records are historical.
+Completed methods: **5/7** (PN-FP, EverTracer, CTCC, iSeal, and SCW). Remaining: **LLMPrint, REEF**. The sixth watermark and next discussion target is **LLMPrint**, but this status does not authorize starting it. The canonical Llama remains preserved. The current-facing AutoDL operational baseline is Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, RTX PRO 6000 96 GB ×1, Intel Xeon Platinum 8470Q with 22 vCPUs, 110 GB RAM, 30 GB system disk, and approximately 500 GB data capacity (50 GB free + 450 GB paid). Older 208-vCPU/approximately-1-TiB records are historical only.
 
 ## Completed
 
@@ -63,8 +65,8 @@ Completed methods: **4/7** (PN-FP, EverTracer, CTCC, and iSeal). Remaining: **SC
 ## Next step
 
 - iSeal A/Ba and private archival are fully closed. Do not create A7, run Bb, or perform destructive cleanup without separate explicit approval.
-- Current method: SCW. Deployment and runtime-effective preflight are complete, but three bounded terminal-fix validations reproduced the post-`train_end` SIGABRT. Formal A remains NOT RUN. Do not launch 2,500 steps; the next engineering decision must test a clean supported Python runtime/environment (preferably Python 3.11) or obtain an upstream native-extension fix before another GPU run.
-- SCW materialization transport now has a verified on-demand resumable pinned-Parquet cache. The first blocked materialization run stopped at 0 records; the exact 824,184,452-byte LucieFr shard and local official-preprocessing tiny validation passed. Scientific configuration and official source remain unchanged; a new immutable detached orchestrator may proceed through materialization → audit → gate → Formal A only under existing fail-closed rules.
+- SCW is FULLY CLOSED through strict-A infrastructure history, A2 preferred Teacher, standardized Ba, private ModelScope archival, canonical full JSON logs, and bounded cleanup.
+- Next method: LLMPrint. Discussion is allowed; clone, download, configuration, or Experiment A execution requires a separate explicit prompt.
 - After separate explicit user authorization, final AutoDL cleanup deleted only the five audited exact paths: A2-A5 non-preferred Teacher artifacts and Ba `checkpoint-7500`. Logical size removed was 47,429,470,039 bytes; filesystem used space decreased by 47,429,681,152 bytes. Canonical base, A6 Teacher, Ba final Student, frozen20k, ModelScope manifests, shared infrastructure/cache, raw generation, and all other-watermark artifacts remain protected.
 
 

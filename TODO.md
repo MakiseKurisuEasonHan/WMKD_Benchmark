@@ -2,10 +2,17 @@
 
 ## High priority
 
+- [x] Close PN-FP, EverTracer, CTCC, iSeal, and SCW: **5/7 complete**.
+- [x] Preserve 10/10 canonical full experiment JSON logs and the global index.
+- [ ] Discuss LLMPrint as the sixth method; do not clone, download, configure, or start it without a separate explicit Experiment A prompt.
+- [ ] Run REEF only under a later separately authorized protocol.
+
+The older SCW checklist entries below are immutable historical workflow records. Their unchecked items do not override the current 5/7 closure or authorize rerunning strict A.
+
 - [x] Pin SCW official `eth-sri/robust-llm-fingerprints@15bc1929569357130f2dbc0b09f91bbf4f4bd947`, inspect French training/evaluation/detector code and Responsible AI Source Code License 1.1, and prepare local-only Experiment A contracts.
 - [x] Fix SCW French/KGW scientific configuration, deterministic aggregate detector/curve semantics, canonical model contract, schemas, static tests, and future detached/speed-test runner without starting a formal run.
-- [ ] In a separately authorized AutoDL task, deploy/verify the exact SCW source and environment, pin dataset revisions/manifests, run runtime-effective dtype/trainability/data/loss preflight, confirm idle GPU, and execute an isolated representative speed test.
-- [ ] Do not start formal SCW Experiment A until the future AutoDL preflight/speed test is reviewed; do not create A2 or Ba automatically.
+- [x] Deploy/verify the exact SCW source and environment, pin provenance, and complete the historical runtime preflight/speed-test stage.
+- [x] Preserve strict A as pre-formal and complete the explicitly authorized A2/Ba lineage without rewriting strict-A history.
 
 - [x] Pin official iSeal source, implement the minimal canonical adaptation, and complete the mandatory two-step trainability audit.
 - [x] Preserve the official iSeal Experiment A trainability blocker and complete explicitly authorized A2-A6 lineage without rewriting that history.
@@ -33,7 +40,7 @@
 - [x] Select SCW as the fifth watermark and complete the authorized local-only Experiment A preparation; formal A remains NOT RUN.
 - [x] Deploy exact local SCW code to AutoDL, pin official source/model/datasets, pass runtime-effective preflight, and complete the isolated 4-step representative speed test without starting Formal A.
 - [x] Research and locally implement the SCW exact finite materialized-stream runtime adaptation with deterministic synthetic audit tests; classify it conditionally as `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2.
-- [ ] In a separately authorized AutoDL stage, materialize exactly 160,000 official post-interleave tokenized records, freeze/audit the manifest, then run exactly one four-step local-materialized clean-exit gate. Formal A remains blocked until clean exit 0; Ba remains prohibited.
+- [x] Superseded by the explicitly approved A2 domestic-data adaptation and completed A2/Ba lineage; strict A remains a preserved pre-formal blocker, not a pending rerun.
 
 - [x] Initialize the independent local project structure.
 - [x] Add repository documentation and project-management logs.

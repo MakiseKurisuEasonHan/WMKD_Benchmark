@@ -2,7 +2,7 @@
 
 ## Status and provenance
 
-SCW is the fifth WMKD_Benchmark method. Experiment A is **NOT RUN / PENDING**; only local static preparation exists. No Teacher, metric, preferred-Teacher decision, Ba artifact, or scientific conclusion exists.
+SCW is the fifth WMKD_Benchmark method and is **FULLY CLOSED**. Strict Experiment A never reached formal training because of pre-formal PyArrow/GIL finalization instability and official overseas-data access problems; this is an infrastructure/runtime/data-access blocker, not an SCW scientific failure. The explicitly authorized A2 domestic-data adaptation produced the preferred Teacher, standardized Ba completed, and Teacher/Student archives plus canonical full JSON logs are recorded.
 
 - Paper: *LLM Fingerprinting via Semantically Conditioned Watermarks*, ICLR 2026; OpenReview `t38nZqqi3Z`.
 - Official repository: `https://github.com/eth-sri/robust-llm-fingerprints.git`.
@@ -11,6 +11,8 @@ SCW is the fifth WMKD_Benchmark method. Experiment A is **NOT RUN / PENDING**; o
 - Canonical model: `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`, future path `/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct`.
 
 Official files inspected at the pinned commit: `README.md`, `LICENSE_CODE`, `requirements.txt`, `configs/embedding/qwen2.5-3B/main/french.yaml`, `configs/embedding/llama3-1B/main/french.yaml`, `configs/embedding/llama3-8B/main/french.yaml`, `configs/eval/french.yaml`, `src/robust_fp/config.py`, `src/robust_fp/train.py`, `src/robust_fp/finetuning/{dataset.py,finetune.py,dmwm_trainer.py,losses.py}`, `src/robust_fp/eval_vllm.py`, `src/robust_fp/watermarks/{watermark_detector.py,kgw/kgw_watermark.py,kgw/watermark_processor.py,kgw/alternative_prf_schemes.py}`, and `scripts/{eval_fingerprints.py,compute_decision.py}`.
+
+Historical strict-A contracts and planned settings below remain preserved as provenance; they do not describe the current execution boundary.
 
 ## PAPER / OFFICIAL CODE / WMKD comparison
 
@@ -48,6 +50,17 @@ The supplementary detection curve uses the same frozen generations and same fixe
 
 Standard utility is ARC Challenge, TruthfulQA MC2, and ordinary generation sanity. French-domain sanity is supplementary and cannot replace the standard panel. Base and Teacher detector/utility evaluations require fresh reload.
 
-## Preferred Teacher gate and next boundary
+## Preferred Teacher gate and completed outcome
 
-`preferred_teacher=YES` requires Teacher `p<0.001`, Base `p>=0.001`, a clear Teacher margin where practical, no catastrophic standard-utility degradation, functional French-domain completions, and consistent fresh-reload results. No numeric utility threshold is invented locally. Failure triggers diagnosis and reporting, not automatic A2 or hyperparameter sweep. Ba is not prepared or started beyond compatibility with existing shared infrastructure.
+`preferred_teacher=YES` requires Teacher `p<0.001`, Base `p>=0.001`, a clear Teacher margin where practical, no catastrophic standard-utility degradation, functional French-domain completions, and consistent fresh-reload results. No numeric utility threshold is invented locally. Failure triggers diagnosis and reporting, not an automatic A2 or hyperparameter sweep.
+
+## A, A2, and Ba closure
+
+- Official source: `eth-sri/robust-llm-fingerprints@15bc1929569357130f2dbc0b09f91bbf4f4bd947`; paper: *LLM Fingerprinting via Semantically Conditioned Watermarks*, ICLR 2026 conference paper/poster.
+- Strict A used the official-data/streaming direction but formal training **never started** because of PyArrow/GIL finalization SIGABRT and overseas dataset access. It established no scientific result.
+- A2 was an explicit scientific adaptation using domestically accessible Aya French, `wyj123456/instruct`, and `mapjack/openwebtextSample`, frozen as 80,000 unique records with role counts 47,773/16,291/15,936 and deterministic two-pass 160,000 exposure. It retained French conditioning, KGW gamma 0.25/delta 4/k 1/`simple_1`, role proportions 0.6/0.2/0.2, lambdas 1/1/1, full-parameter training, batch 4, accumulation 16, LR `2e-5`, 2500 steps, Adafactor, cosine, warmup 0.1, and sequence length 512.
+- Run `scw_a2_20260831_214339` completed 2500/2500 in 11,570.9348 seconds; aggregate train loss was 5.2890466034 and final logged loss 3.3589. Base/Teacher primary aggregate p-values were 0.9199569225/0 at alpha 0.001; ARC was 0.450512/0.448805, TruthfulQA MC2 was 0.505162/0.503232, ordinary/French sanity passed, and A2 is the preferred Teacher. This is successful core-method reproduction under the adapted setting, not exact/full-paper reproduction.
+- Ba continuation `scw_ba_full_20260831_193828_cont1` preserved a parent infrastructure failure caused by a missing telemetry directory after 31 candidates. Final generation recorded 32,003 raw, 329 errors, 20,194 unique, 11,809 rejected, and exactly 20,000 frozen QA with SHA256 `a8c93d4fc55521abe6abab48aa67cc06a6251ce769caa913bd24adfebb87b05c`. French exposure was 26/20,000 (0.13%) with 49 explicit French requests; this is diagnostic only, not causal evidence.
+- The fresh-canonical full-parameter Student completed 7500/7500 in 1,906.99 seconds with aggregate loss 0.3610632 and fresh reload PASS. Base/Teacher/Student primary p-values were 0.9199569225/0/0.8440861702. Teacher was fingerprinted at every 10/25/50/100/250/500/1000 curve point; Base and Student were negative throughout. ARC Base/Teacher/Student was 0.450512/0.448805/0.489761; TruthfulQA MC2 was 0.505162/0.503232/0.474734; ordinary/French sanity passed. Detectability was not retained and the Student moved into the Base-like negative regime under tested standardized Ba.
+- Private archives are `MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher` and `MakiseKurisuEasonHan/WMKD-SCW-Ba-Student`. Remote filename/size/metadata verification passed; `destination_verified=false` pending an independent destination full download and SHA comparison. Student source manifest SHA256 is `f8554fc57258f28b945835dcab759ae4891633cc835918cf63156b14a9f41ef1`.
+- The 5/7 cleanup removed only CTCC/SCW speed tests and obsolete/incomplete `.part` files, reclaiming approximately 51.69 GB. Canonical Base, SCW Teacher/Student, frozen20k, checkpoints 2500/7500, CTCC checkpoint 7500, shared resources, formal records, and ambiguous artifacts were preserved.

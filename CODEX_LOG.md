@@ -421,3 +421,9 @@ The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archiv
 ## 2026-09-01 — Full-project closure/integrity/logging audit
 
 Merged the detached AutoDL SCW A2/Ba history into local `main` without rewriting history. Built and validated ten evidence-preserving canonical full JSON logs plus a global index and formal audit. Historical gaps remain explicit; no values were invented and no scientific work was rerun. The next controlled operations are GitHub synchronization and high-confidence AutoDL cleanup while retaining shared LLMPrint/REEF resources and all unique final/checkpoint evidence.
+
+## 2026-09-01 — Post-SCW fixed-rule and 5/7 status audit
+
+Audited the local repository only. Updated the existing canonical protocol and current-facing README/status/TODO/SCW method records to 5/7 closure, LLMPrint-next-but-not-authorized, domestic mirror transport priority, SCW A/A2/Ba lineage, native cross-method metric semantics, 10/10 full JSON logging, disappearance-evidence limits, and protected cleanup. Historical decision/experiment records were not rewritten; completed scientific metrics were not changed.
+
+Validation: all 123 workspace JSON files parsed; global full-log index schema/object count/path existence and SHA256 passed; `git diff --check` passed. `pytest` was unavailable in the bundled local Python, so no dependency was installed and pytest was not run. No AutoDL, La Trobe, ModelScope, GPU, download, clone, cleanup, or LLMPrint operation occurred.

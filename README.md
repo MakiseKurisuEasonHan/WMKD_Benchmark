@@ -36,7 +36,7 @@ Cross-method benchmark
 
 ## Project status
 
-PN-FP, EverTracer, CTCC, and iSeal are fully closed (4/7 methods complete). SCW is the active fifth method, but Experiment A is still NOT RUN: only local static configuration, provenance, detector/data contracts, schemas, tests, and future-runner preparation exist. No AutoDL/GPU/training/generation/evaluation or Ba work has started. Remaining methods are SCW, LLMPrint, and REEF. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/scw.md`, and `EXPERIMENT_LOG.md`.
+PN-FP, EverTracer, CTCC, iSeal, and SCW are fully closed (5/7 methods complete). Remaining methods are LLMPrint and REEF; the next discussion target is LLMPrint, but it must not be cloned, downloaded, configured, or started without a separate explicit Experiment A prompt. The repository contains 10/10 canonical full JSON logs for the five preferred Teachers and five Ba Students. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/scw.md`, `results/experiment_full_logs_index.json`, and `EXPERIMENT_LOG.md`.
 
 ## Repository layout
 

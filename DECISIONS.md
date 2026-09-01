@@ -348,3 +348,11 @@ The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archiv
 ## 2026-09-01 — Canonical full-log and 5/7 closure decision
 
 The ten final preferred-Teacher/Ba-Student objects use `wmkd.full-experiment-log.v1` with original machine-readable sources embedded and SHA-addressed. Missing values remain unavailable rather than reconstructed. Intermediate loss/timing is not accepted as detector evidence: all five Ba disappearance-localization flags remain false because no intermediate Student checkpoint was evaluated with its watermark detector. PN-FP, EverTracer, CTCC, iSeal, and SCW are now FULLY CLOSED; LLMPrint and REEF remain. Final local Teacher/Student artifacts are retained while destination verification remains incomplete.
+
+## 2026-09-01 — Consolidate canonical protocol after SCW closure
+
+Keep `docs/EXPERIMENT_PROTOCOL.md` as the single canonical rules source and repair stale current-facing entry points without rewriting historical logs. The durable current state is 5/7 FULLY CLOSED (PN-FP, EverTracer, CTCC, iSeal, SCW), remaining LLMPrint/REEF, next discussion target LLMPrint, and no authorization to start it.
+
+Make domestic-access transport priority explicit: existing local/project cache first, then ModelScope and trustworthy domestic/mirror transports before slow overseas sources, while canonical upstream identity, revision/version/commit, file inventory, size, and integrity remain mandatory. Transport convenience never authorizes scientific substitution.
+
+Require a canonical full JSON log for every future preferred Teacher and Ba Student, preserve the 10/10 current global index, and keep exact disappearance-step claims prohibited without checkpoint + generation + method-specific detector evidence. Preserve SCW strict A as a pre-formal infrastructure/data-access attempt and A2/Ba as the completed scientific lineage.

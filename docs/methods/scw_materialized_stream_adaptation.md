@@ -1,5 +1,7 @@
 # SCW materialized-stream runtime adaptation
 
+> Historical strict-A engineering record. This path was superseded by the explicitly approved A2 domestic-data adaptation; SCW A2/Ba are now FULLY CLOSED. Statements below that prohibit Ba describe the strict-A decision boundary at that historical time and are not current project status.
+
 ## Status and classification
 
 Local research and synthetic validation support **`RUNTIME_DATA_ACCESS_ADAPTATION`**, not SCW A2. Formal A and Ba remain NOT RUN. The classification is conditional on the future AutoDL materialization/audit/gate preserving the exact post-interleave finite stream described below.
