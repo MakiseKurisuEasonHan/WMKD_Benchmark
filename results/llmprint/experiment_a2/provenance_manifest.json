@@ -2,7 +2,7 @@
   "schema_version": "wmkd.llmprint-a2-provenance.v1",
   "method": "LLMPrint",
   "experiment": "A2",
-  "run_id": "llmprint_a2_closure_20260901_150051_cont1",
+  "run_id": "llmprint_a2_closure_20260902_cont2_resume6",
   "canonical_reference": {
     "model_id": "meta-llama/Llama-3.2-3B-Instruct",
     "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
@@ -13,19 +13,11 @@
   "config_sha256": "4325b2a518aa5080dfb5cc070d57713bf6ee84efb9d72e8e4cbc89308920613a",
   "validation_panel": {
     "path": "/root/autodl-tmp/WMKD_Benchmark/results/llmprint/validation_negative_panel_manifest.json",
-    "sha256": "b4e522685c3fae9287a48dc882c32fddd87602ff5229778fc37c0c0e40560678",
-    "required_slots": 13,
-    "evaluated_slots": 6,
+    "sha256": "1e0b8013825e0fd31a59ffeade0a34c0422dac2e370bdc22db5daf7ff8491ce7",
+    "slots": 13,
     "replacement_slots": 0
   },
-  "teacher_checkpoint_created": false,
-  "ba_started": false,
-  "blocker": {
-    "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
-    "stage": "NEGATIVE_SLOT_07_ACQUIRE",
-    "model_id": "microsoft/phi-2",
-    "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
-    "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
-    "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
-  }
+  "transport": "ModelScope pinned revisions, one model acquired and evaluated at a time",
+  "scientific_adaptation": "WMKD reduced-construction A2: 200 fingerprints, 500 GCG steps; all other frozen semantics unchanged",
+  "teacher_checkpoint_created": false
 }

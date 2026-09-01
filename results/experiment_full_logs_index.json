@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-01T16:41:34.768720+00:00",
+  "generated_at": "2026-09-01T19:36:15.251418+00:00",
   "object_count": 12,
   "objects": [
     {
@@ -154,24 +154,6 @@
       "telemetry_records": 7500
     },
     {
-      "method": "LLMPrint",
-      "role": "preferred_fingerprint",
-      "experiment": "A2",
-      "run_id": "llmprint_a2_closure_20260901_150051_cont1",
-      "full_log_path": "results/llmprint/experiment_a2/full_experiment_log.json",
-      "full_log_sha256": "6f6ddc6fed0ad2beac5ec14af32cc9d4ce6eeeb1b56754ab70f46ff78ea1ff33",
-      "final_model_manifest": null,
-      "modelscope_repo": null,
-      "scientific_status": "BLOCKED",
-      "watermark_evaluation_available": false,
-      "utility_available": false,
-      "checkpoint_localization_support": false,
-      "telemetry_records": 0,
-      "artifact_type": "fingerprint_package",
-      "model_modified": false,
-      "preferred_fingerprint": "no"
-    },
-    {
       "method": "REEF",
       "role": "preferred_fingerprint",
       "experiment": "A",
@@ -188,6 +170,24 @@
       "artifact_type": "no_formal_artifact",
       "model_modified": false,
       "preferred_fingerprint": "no"
+    },
+    {
+      "method": "LLMPrint",
+      "role": "preferred_fingerprint",
+      "experiment": "A2",
+      "run_id": "llmprint_a2_closure_20260902_cont2_resume6",
+      "full_log_path": "results/llmprint/experiment_a2/full_experiment_log.json",
+      "full_log_sha256": "3075cc8b6119df9f89c9e64219b006e20d4fc607ff0c987fbf6e04b57ea80343",
+      "final_model_manifest": null,
+      "modelscope_repo": null,
+      "scientific_status": "COMPLETED",
+      "watermark_evaluation_available": true,
+      "utility_available": false,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 0,
+      "artifact_type": "fingerprint_package",
+      "model_modified": false,
+      "preferred_fingerprint": "yes"
     }
   ]
 }

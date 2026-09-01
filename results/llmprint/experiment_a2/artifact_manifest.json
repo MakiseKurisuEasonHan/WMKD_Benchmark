@@ -2,7 +2,7 @@
   "schema_version": "wmkd.llmprint-a2-artifact-manifest.v1",
   "artifact_type": "fingerprint_package",
   "model_modified": false,
-  "preferred_fingerprint": false,
+  "preferred_fingerprint": true,
   "fingerprint_manifest": {
     "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/fingerprint_manifest.json",
     "sha256": "27b31d7e37e276f1aecfc18d9c0999d719a306a52881e4f51f97791ec8444ca0"
@@ -12,54 +12,124 @@
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/reference.json",
       "sha256": "f77364bc6d72882a3f64b442fc71a612b1f2ef747b84bffa2cebdf71070f9716"
     },
-    "slot-01": {
+    "bigscience/bloom-560m": {
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-01.json",
       "sha256": "cb0271b9c927e407a766fd55f30585f41f388116c0576701526389d66d1866f8"
     },
-    "slot-02": {
+    "distilbert/distilgpt2": {
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-02.json",
       "sha256": "799567a2290e216da884820d1ab32204dd4001af9628d8959f8f2149174ecc9e"
     },
-    "slot-03": {
+    "facebook/opt-1.3b": {
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-03.json",
       "sha256": "c87c5b66d96ccc2fa808d3bd427a51d5366ee17f74d10b4a5c0556d780860444"
     },
-    "slot-04": {
+    "facebook/opt-350m": {
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-04.json",
       "sha256": "c139d9e10d219cb2bff0bb1bbb332a8e0ed5668f49546446b54e73a78e1d3815"
     },
-    "slot-05": {
+    "google/gemma-2b": {
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-05.json",
       "sha256": "f3372395dea8d644a1a1802c39b04048904e0f8f95c9b4af5550c1b6c0ac7151"
     },
-    "slot-06": {
+    "google/gemma-3-1b-it": {
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-06.json",
       "sha256": "e5600bba86f9a20e3cbaaa7d18fce34c22399c725a0e64b0dd782d19e1c92975"
+    },
+    "microsoft/phi-2": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-07.json",
+      "sha256": "bd3df5653802632e6d6da4ba449ae0942db7eb4c7e86c7af73eceeb1683d2608"
+    },
+    "microsoft/Phi-3-mini-128k-instruct": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-08.json",
+      "sha256": "6aef2480d69ae49d870afb54724a7792d550d860258ca5bcc2df118d912fbc8b"
+    },
+    "openai-community/gpt2": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-09.json",
+      "sha256": "fc2a620361066507b2a1ffa60bd57c5a596e64ce5da5ae8a7c3949ff385dc52f"
+    },
+    "Qwen/Qwen2-7B": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-10.json",
+      "sha256": "06737fa6c7556589ca3cd31a76354e82a0c2013a4f3d79f99f24758cd78ff78d"
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-11.json",
+      "sha256": "c40521992dfdb11e8ca693ff0676222a8927099c65fd45ab98636acfbecd3244"
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-12.json",
+      "sha256": "87cfa6aba05b374a1d1515108c8df21f953f891d1db6aa4bbd2faace83e34330"
+    },
+    "tiiuae/Falcon3-7B-Base": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/slot-13.json",
+      "sha256": "7599c31bc9022e397df32c69636d011b73f69c32fa09b1c50cebed94a4375138"
     }
   },
-  "immutable_completed_negative_slots": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-  ],
-  "unresolved_negative_slots": [
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13
-  ],
-  "blocker": {
-    "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
-    "stage": "NEGATIVE_SLOT_07_ACQUIRE",
-    "model_id": "microsoft/phi-2",
-    "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
-    "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
-    "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
-  }
+  "acquisition_manifests": [
+    {
+      "slot": 1,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-01.json",
+      "sha256": "726ebc712d380c27821ea41650b26cc32ad7cae443ebd6fdc8d7f822c024ea05"
+    },
+    {
+      "slot": 2,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-02.json",
+      "sha256": "c83fd513d6893f277cf7d847976230882f06fa535fde30954a49cca763734fd0"
+    },
+    {
+      "slot": 3,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-03.json",
+      "sha256": "641ec404ac66445154e3df2c0997f3bda22aee3216720a63166586e898a60a31"
+    },
+    {
+      "slot": 4,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-04.json",
+      "sha256": "a04c092d3671ef90a903239e1beeb7be632e03798d352d88494a74926178810b"
+    },
+    {
+      "slot": 5,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-05.json",
+      "sha256": "4a163968e06969a78259f1013dcd9b4c85eea06ed1e153cb1f23885c604f464e"
+    },
+    {
+      "slot": 6,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-06.json",
+      "sha256": "cae176afa4e00e2795315a117ea0b2302ccba6580a17c1a6f4dad18a15dfb9f6"
+    },
+    {
+      "slot": 7,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-07.json",
+      "sha256": "5156389c398c501406f2b149e26ff7e37fecb28c569300fe50866bf463bde8a5"
+    },
+    {
+      "slot": 8,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-08.json",
+      "sha256": "29f6f86bdfe1b72f5a80d16b3d468d5b9ab417a7caf19474c04405fe831a009a"
+    },
+    {
+      "slot": 9,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-09.json",
+      "sha256": "bc1d2d2a820de60cba9c4b82ef77494958c37cbfe551ffab2592471745d893aa"
+    },
+    {
+      "slot": 10,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-10.json",
+      "sha256": "4b2f1b3faf583359297613c87ed6644d0fb602ae43ce2a67f61f514148c043c7"
+    },
+    {
+      "slot": 11,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-11.json",
+      "sha256": "4bf3e25be23134d7da874c12a60457ff17b56a1ee769653da68ca1c8fef7ba44"
+    },
+    {
+      "slot": 12,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-12.json",
+      "sha256": "0ee86233afde91499e465e260adba2c822187a281daf38370623dcf3678ee0b8"
+    },
+    {
+      "slot": 13,
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-13.json",
+      "sha256": "cd48cf9946c458c070a95ed9de4d15fc805ea8530f024169266c3b59d131a4be"
+    }
+  ]
 }

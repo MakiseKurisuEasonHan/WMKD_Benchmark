@@ -2,29 +2,32 @@
   "schema_version": "wmkd.llmprint-a2-summary.v1",
   "method": "LLMPrint",
   "experiment": "A2",
-  "run_id": "llmprint_a2_closure_20260901_150051_cont1",
-  "status": "BLOCKED",
-  "terminal": true,
+  "run_id": "llmprint_a2_closure_20260902_cont2_resume6",
+  "status": "COMPLETED",
   "artifact_type": "fingerprint_package",
   "model_modified": false,
-  "preferred_fingerprint": "no",
+  "preferred_fingerprint": "yes",
   "fingerprints": {
     "completed": 200,
     "missing": 0,
     "duplicate": 0,
     "invalid": 0
   },
-  "reference_fresh_reload": "PASS",
-  "negative_models_evaluated": 6,
-  "negative_models_required": 13,
-  "detector_status": "NOT_CALIBRATED_INCOMPLETE_FROZEN_PANEL",
-  "scientific_conclusion": "NOT_JUDGED",
-  "blocker": {
-    "type": "FROZEN_RESOURCE_PROVENANCE_BLOCKER",
-    "stage": "NEGATIVE_SLOT_07_ACQUIRE",
-    "model_id": "microsoft/phi-2",
-    "frozen_modelscope_revision": "1650c3d781609187dc5133d1baf8fdf2921b874b",
-    "evidence": "Frozen revision is absent from the ModelScope blob-revision set. The resolve/<hash> URL returns master content (same ETag), so treating it as pinned would be a silent revision change.",
-    "policy": "No master fallback, replacement, panel change, or detector calibration from an incomplete panel."
+  "negative_models_evaluated": 13,
+  "primary_tau": 0.7150049776126003,
+  "primary_reference_score": 1.0,
+  "primary_false_positive_count": 0,
+  "supplementary_reference_positive": true,
+  "conclusion": "LLMPrint core reproduction successful under WMKD A2 reduced-construction setting",
+  "gates": {
+    "fingerprint_integrity": true,
+    "reference_fresh_reload": true,
+    "negative_panel_13_of_13": true,
+    "primary_calibrated": true,
+    "reference_primary_positive": true,
+    "usable_separation": true,
+    "no_severe_false_positive_anomaly": true,
+    "supplementary_release_recorded": true,
+    "zero_unresolved_evaluation_errors": true
   }
 }

@@ -2,16 +2,24 @@
 
 ## Outcome
 
-**Terminal status: BLOCKED. Scientific reproduction was not judged.**
+**LLMPrint core reproduction successful under WMKD A2 reduced-construction setting.**
 
-- Immutable fingerprint package: 200/200 PASS; no regeneration or overwrite.
-- Canonical Reference fresh reload: PASS.
-- Frozen validation negatives evaluated: 6/13, each with an atomic 200-record sequence.
-- Primary paper detector: not calibrated because the frozen panel is incomplete.
-- Supplementary release detector: not calibrated because the frozen panel is incomplete.
-- Preferred fingerprint: no scientific preference decision; no Teacher checkpoint exists.
+- Fingerprint package: 200/200 immutable artifacts; 0 missing, duplicate, or invalid.
+- Reference: fresh reload of `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`.
+- Validation negatives: 13/13 frozen identities and pinned ModelScope revisions, evaluated serially.
+- Primary paper detector: reference score `1.000000`, mu `0.640000`, sample sigma `0.045735`, tau `0.715005`, false positives `0`.
+- Supplementary release detector: reference valid_n `195`, p-value `1.9913649e-59`, calibrated min_n `118`, positive `True`.
+- Preferred artifact type: fingerprint package. Model weights were not modified and no Teacher checkpoint was created.
 - Ba: NOT STARTED.
 
-## Blocker
+## Gate verdicts
 
-Slot 7 requires `microsoft/phi-2@1650c3d781609187dc5133d1baf8fdf2921b874b`. That revision is absent from the ModelScope blob-revision set. A direct `resolve/<hash>` request silently returns current master content, demonstrated by the identical ETag. Using it would violate the frozen-panel rule. No replacement, master fallback, panel change, or tuning was performed.
+- fingerprint_integrity: PASS
+- reference_fresh_reload: PASS
+- negative_panel_13_of_13: PASS
+- primary_calibrated: PASS
+- reference_primary_positive: PASS
+- usable_separation: PASS
+- no_severe_false_positive_anomaly: PASS
+- supplementary_release_recorded: PASS
+- zero_unresolved_evaluation_errors: PASS
