@@ -1,0 +1,3 @@
+# REEF
+
+Official `AI45Lab/REEF@48329f6f` (Apache-2.0) implements training-free representation fingerprints: same statements, layer activation at the final token, centered linear CKA. The paper/official primary single-layer path motivates WMKD's canonical last-layer, 200 fixed TruthfulQA probes. Formal success requires fresh-reload Reference evidence, unrelated-model separation under native linear CKA, frozen decision semantics and complete artifacts; code execution alone is insufficient. A 100-sample A2 is only a future proposal if projected runtime exceeds three hours. No model weights are modified.

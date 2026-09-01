@@ -1,0 +1,10 @@
+method: HuRef
+experiment: A
+status: PREPARATION_SMOKE_ONLY
+formal_authorized: false
+reference: {revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95, model_modified: false}
+official: {repo: https://github.com/LUMIA-Group/HuRef, commit: 9c34548a6f6c1e78780e1fd07de56c7a3357f6ef, license: no_explicit_license_observed}
+wmkd: {selected_tokens: 4096, selected_layers: last_two, invariant_terms: [WqWk, WvWo, WuWd], feature_extract_method: Mean_pooling, metric: ICS}
+encoder_download: forbidden_not_required_for_mean_pooling
+fallback_candidate: {type: official_compatible_fixed_frequency_list_remapped_to_canonical_tokenizer, authorized: false}
+hard_wall_clock_hours: 5

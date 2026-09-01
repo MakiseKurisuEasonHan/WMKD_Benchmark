@@ -369,3 +369,9 @@ Require a canonical full JSON log for every future preferred Teacher and Ba Stud
 - **Decision:** Safely terminate formal A `llmprint_a_20260901_061225` for the user-approved runtime-feasibility/project-deadline scientific redesign after preserving 7/300 complete artifacts. Classify A as `TERMINATED_BY_USER_APPROVED_SCIENTIFIC_REDESIGN`, `scientific_result=NOT_ESTABLISHED`; it is not an infrastructure or method failure, and its partial artifacts cannot enter calibration or A2.
 - **Decision:** A2 uses exactly ordered source pair IDs 000–199 and 500 GCG steps. All other construction settings, canonical Reference, pinned source, CUBLAS requirement, detector mathematics and 13-model validation panel remain frozen. This is a bounded reduced-construction adaptation, not an exact default-paper reproduction, and reduced detectability/capacity is an explicit limitation.
 - **Decision:** Only after A2 readiness passes may a new detached `llmprint_a2_*` namespace launch. Ba, frozen20k, Student training, Ba detector and Ba utility remain prohibited even if A2 succeeds.
+
+## 2026-09-01 — Pause LLMPrint A2 for four-method pre-formal smoke phase
+
+- **Decision:** Pause `llmprint_a2_20260901_064855` at 97/200 as `PAUSED_BY_USER_FOR_PRE_FORMAL_MULTI_METHOD_SMOKE`, not FAILED and not A3. Preserve IDs 000–096 immutably; a future resume is A2 cont1 and may process only 097–199.
+- **Decision:** Expand the final benchmark to ten methods by adding REEF, AWM, HuRef and ZeroPrint after the first six. This phase authorizes official audit, local passive-fingerprint implementations, deployment and bounded smoke tests only—no formal A, Ba or shutdown.
+- **Decision:** All four use the unchanged canonical Llama-3.2-3B-Instruct as a passive Reference (`model_modified=false`). Their A artifacts are fingerprint/detector packages, not Teacher checkpoints; repeated ARC/TruthfulQA utility runs are not applicable.

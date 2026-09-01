@@ -1,0 +1,10 @@
+method: AWM
+experiment: A
+status: PREPARATION_SMOKE_ONLY
+formal_authorized: false
+reference: {revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95, model_modified: false}
+official: {repo: https://github.com/LUMIA-Group/AWM, commit: bc20ff8e63cec57f5da422ae065686ced275e76d, license: no_explicit_license_observed}
+wmkd: {matrix_types: [Wq_weights, Wk_weights, Wq_Wk_weights], alignment: LAP, metric: unbiased_linear_CKA, layer_aggregation: official_mean}
+negative_plan: 3_to_5_family_diverse_frozen_ModelScope_models
+fallback: none
+hard_wall_clock_hours: 5

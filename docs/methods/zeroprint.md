@@ -1,0 +1,3 @@
+# ZeroPrint
+
+Official `shaoshuo-ss/ZeroPrint@16a02aa` is MIT licensed and implements black-box zeroth-order Jacobian fingerprints. Its released primary config uses HumanEval queries, `sentence-transformers/all-mpnet-base-v2`, Jacobian estimation, mean aggregation and correlation similarity. Exact ModelScope resources exist for both HumanEval and MPNet; BGE is therefore only an unapproved A2 contingency. Formal success requires frozen query/perturbation/generation semantics, Reference and unrelated fingerprints, native calibration/threshold, fresh recomputation and artifact integrity. Canonical weights remain unchanged.

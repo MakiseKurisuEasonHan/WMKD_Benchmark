@@ -1,0 +1,15 @@
+{
+  "schema_version": "wmkd.ownership-official-source-audit.v1",
+  "audited_at": "2026-09-01",
+  "methods": {
+    "reef": {"paper": "ICLR 2025 REEF: Representation Encoding Fingerprints for Large Language Models", "repository": "https://github.com/AI45Lab/REEF", "commit": "48329f6f3695a8aea33975832159e7ce44ad73f9", "license": "Apache-2.0", "primary": "last-token layer representations with centered linear CKA"},
+    "awm": {"paper": "ICLR 2026 AWM: Accurate Weight-Matrix Fingerprint for Large Language Models", "repository": "https://github.com/LUMIA-Group/AWM", "commit": "bc20ff8e63cec57f5da422ae065686ced275e76d", "license": "no explicit repository license observed", "primary": "LAP-aligned unbiased linear CKA over Wq, Wk and their reported mean"},
+    "huref": {"paper": "NeurIPS 2024 HuRef: Human-Readable Fingerprint for Large Language Models", "repository": "https://github.com/LUMIA-Group/HuRef", "commit": "9c34548a6f6c1e78780e1fd07de56c7a3357f6ef", "license": "no explicit repository license observed", "primary": "last-two-layer WqWk/WvWo/WuWd invariant terms, Mean Pooling, ICS"},
+    "zeroprint": {"paper": "WWW 2026 Reading Between the Lines: Towards Reliable Black-box LLM Fingerprinting via Zeroth-order Gradient Estimation", "repository": "https://github.com/shaoshuo-ss/ZeroPrint", "commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c", "license": "MIT", "primary": "HumanEval perturbations, MPNet embeddings, Jacobian, mean aggregation, correlation"}
+  },
+  "modelscope_resources": {
+    "humaneval": {"id": "opencompass/humaneval", "rows": 164, "license": "MIT", "verdict": "exact transport mirror"},
+    "mpnet": {"id": "sentence-transformers/all-mpnet-base-v2", "parameters": 109486978, "architecture": "mpnet", "license": "Apache-2.0", "verdict": "exact identity transport mirror"},
+    "bge_contingency": {"id": "BAAI/bge-base-en-v1.5", "parameters": 109482752, "architecture": "bert", "authorized_for_formal_a": false}
+  }
+}

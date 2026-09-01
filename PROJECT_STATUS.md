@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Current closure is **5/7**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint and REEF. LLMPrint formal A `llmprint_a_20260901_061225` was safely user-terminated after 7/300 complete artifacts for an explicitly approved deadline/runtime-feasibility scientific redesign; A established no scientific result and its partial artifacts are historical only. A2 is frozen to the first 200 ordered pairs and 500 GCG steps, retaining the canonical Base, all other construction parameters, CUBLAS requirement, dual detector semantics and the 13/13 official validation panel. Detached A2 `llmprint_a2_20260901_064855` is RUNNING and passed the 50-artifact milestone (52/200 observed) with zero invalid records. Experiment Ba, 20k generation, and Student training have not started.
+Current closure is **5/10**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint, REEF, AWM, HuRef and ZeroPrint. LLMPrint A2 `llmprint_a2_20260901_064855` is safely `PAUSED_BY_USER_FOR_PRE_FORMAL_MULTI_METHOD_SMOKE` at 97/200; IDs 000–096 are immutable and only 097–199 may be handled by a future A2 cont1. REEF/AWM/HuRef/ZeroPrint are in official-audit and bounded-smoke preparation only. No formal run for those four, no Ba, and no automatic shutdown is authorized.
 
 SCW strict A remains a preserved pre-formal infrastructure/data-access attempt: Formal training never started, and its PyArrow/GIL finalization plus overseas official-data access failures are not a scientific failure. The explicitly authorized A2 domestic-data adaptation completed, produced the preferred Teacher, and Ba completed with a fresh canonical Student. The detailed immutable history below is retained rather than rewritten.
 

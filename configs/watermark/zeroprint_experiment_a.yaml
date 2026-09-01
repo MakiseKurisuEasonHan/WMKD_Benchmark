@@ -1,0 +1,10 @@
+method: ZeroPrint
+experiment: A
+status: PREPARATION_SMOKE_ONLY
+formal_authorized: false
+reference: {revision: 0cb88a4f764b7a12671c53f0838cd831a0843b95, model_modified: false}
+official: {repo: https://github.com/shaoshuo-ss/ZeroPrint, commit: 16a02aa4cfd5693ecfa757e9d2832b7e9babada0c, license: MIT}
+wmkd: {dataset: opencompass/humaneval, embedding: sentence-transformers/all-mpnet-base-v2, gradient: jacobian, aggregation: mean, similarity: correlation}
+modelscope: {dataset: opencompass/humaneval, embedding: sentence-transformers/all-mpnet-base-v2, exact_resources_found: true}
+fallback_candidate: {embedding: BAAI/bge-base-en-v1.5, scientific_adaptation: true, authorized: false}
+hard_wall_clock_hours: 5

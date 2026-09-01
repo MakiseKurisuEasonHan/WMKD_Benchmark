@@ -1,0 +1,13 @@
+{
+  "schema_version": "wmkd.ownership-smoke-plan.v1",
+  "formal_execution_authorized": false,
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "methods": {
+    "reef": {"official_commit": "48329f6f3695a8aea33975832159e7ce44ad73f9", "smoke_samples": 8},
+    "awm": {"official_commit": "bc20ff8e63cec57f5da422ae065686ced275e76d", "smoke_layers": 1},
+    "huref": {"official_commit": "9c34548a6f6c1e78780e1fd07de56c7a3357f6ef", "smoke_tokens": 16},
+    "zeroprint": {"official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c", "smoke_queries": 2}
+  },
+  "ba_authorized": false,
+  "auto_shutdown": false
+}

@@ -13,6 +13,8 @@
 - [x] Complete minimal A2 readiness and launch first-200-pairs × 500-step detached construction `llmprint_a2_20260901_064855`; first health snapshot passed.
 - [ ] After A2 construction completes, validate exactly 200/200 × 500/500 before any separately instructed detector evaluation; do not start Ba automatically.
 - [ ] Run REEF only under a later separately authorized protocol.
+- [x] Pause LLMPrint A2 at 97/200 with immutable completed artifacts and missing-ID-only A2 cont1 semantics.
+- [ ] Complete bounded official-code compatibility/resource/speed smokes for REEF, AWM, HuRef and ZeroPrint without launching formal A or Ba.
 
 The older SCW checklist entries below are immutable historical workflow records. Their unchecked items do not override the current 5/7 closure or authorize rerunning strict A.
 
