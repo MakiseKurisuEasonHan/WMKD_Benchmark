@@ -1,0 +1,44 @@
+{
+  "schema_version": "wmkd.llmprint-resource-provenance-repair.v1",
+  "status": "FROZEN_RESOURCE_PROVENANCE_REPAIR",
+  "slot": 10,
+  "scientific_identity_changed": false,
+  "official_upstream_id": "Qwen/Qwen2-7B",
+  "modelscope_id": "Qwen/Qwen2-7B",
+  "original_modelscope_revision": "96127251daf38ea8aa588eac3d34faf64682c0e5",
+  "resolved_modelscope_weight_revision": "58199981b919fd899b52fff19460e8e4849d6b35",
+  "canonical_huggingface_revision": "453ed1575b739b5b03ce3758b23befdb0967f40e",
+  "verification": {
+    "architecture": "Qwen2ForCausalLM",
+    "model_type": "qwen2",
+    "parameter_count": 7615616512,
+    "vocab_size": 152064,
+    "quantized": false,
+    "fine_tuned": false,
+    "lora_merged": false,
+    "derivative_conversion": false,
+    "config_byte_identical": true,
+    "generation_config_byte_identical": true,
+    "weight_index_byte_identical": true,
+    "tokenizer_byte_identical": true,
+    "tokenizer_config_byte_identical": true,
+    "vocab_byte_identical": true,
+    "weight_shards_byte_identical": true,
+    "parameter_shapes_identical": true
+  },
+  "weight_shards": [
+    {"path": "model-00001-of-00004.safetensors", "bytes": 3945426872, "sha256": "bef59d573b8d426d38e8d364975368c6441070e8759f7a3b9e1345f6de37182a"},
+    {"path": "model-00002-of-00004.safetensors", "bytes": 3864726352, "sha256": "d0b7498efcf5bf27cca76cdc86bbecf8b1a7483ba5911611bad9a89dc1209fd3"},
+    {"path": "model-00003-of-00004.safetensors", "bytes": 3864726408, "sha256": "d860d93a1ea84fc38ce1a28f7ff20d91a813c1f9a3237cf60ed02707570b4c55"},
+    {"path": "model-00004-of-00004.safetensors", "bytes": 3556392240, "sha256": "215200d554110010c771fd5707bbb2e404bc362242f67b004647c698bf0fabec"}
+  ],
+  "small_file_sha256": {
+    "config.json": "d318b49c4a29771e259d93053084eb752f5bfe69c20c4f2e041bd1017884f810",
+    "generation_config.json": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+    "model.safetensors.index.json": "f00d17cbf433746c391ad43948613e373aa51222dbee3b0db61ffff59a74bb1a",
+    "tokenizer.json": "f7c9b2dba4a296b1aa76c16a34b8225c0c118978400d4bb66bff0902d702f5b8",
+    "tokenizer_config.json": "80d64fccf954f022eb43b7425eb45a133cbb92c76a5f24d4cea6dbe3d45548d9",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "decision": "Current ModelScope transport is byte-identical to canonical Qwen/Qwen2-7B for model weights, index, config, and tokenizer artifacts. Only transport revision provenance is repaired; slot 10 may resume missing-only while fingerprints, Reference, and slots 1-9 remain immutable."
+}
