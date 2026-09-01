@@ -18,3 +18,7 @@ Minimal readiness passed at Git commit `ce8c03bd555c262e86c79b5249a23e7903a747da
 ### Construction milestone 25/200
 
 The first scheduled milestone snapshot observed 27/200 valid atomic artifacts through `llmprint-pair-026`: zero failed/corrupt/duplicate records, every checked record 500/500 with a 20-token suffix and matching A2 config hash. Mean/median runtime were 117.695/116.777 seconds and the remaining ETA was approximately 5 h 39 m. Runner/scientific PIDs, GPU, CUBLAS env and disk remained healthy; no OOM, NaN, Traceback, CUDA, collision or permission error was present.
+
+### Construction milestone 50/200
+
+The scheduled snapshot observed 52/200 valid atomic artifacts through `llmprint-pair-051`, with zero failed/corrupt/duplicate records. Mean/median runtime were 116.436/115.484 seconds and remaining ETA was approximately 4 h 47 m. Both PIDs, GPU, CUBLAS env and disk remained healthy, and no fatal/error pattern was found.
