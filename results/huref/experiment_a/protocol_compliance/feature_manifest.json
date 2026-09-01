@@ -1,0 +1,43 @@
+{
+  "status": "PARTIAL",
+  "artifacts": [
+    {
+      "model_id": "reference_a",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a/protocol_compliance/huref_a_cont1_20260901_210000/reference_a.npy",
+      "sha256": "465caffd64963296de7ffd59647e0a823519b3ed914a40dea5cb22867777ad6e",
+      "shape": [
+        512
+      ],
+      "status": "PARTIAL_NON_DETECTOR_EVIDENCE"
+    },
+    {
+      "model_id": "reference_b",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a/protocol_compliance/huref_a_cont1_20260901_210000/reference_b.npy",
+      "sha256": "465caffd64963296de7ffd59647e0a823519b3ed914a40dea5cb22867777ad6e",
+      "shape": [
+        512
+      ],
+      "status": "PARTIAL_NON_DETECTOR_EVIDENCE"
+    },
+    {
+      "model_id": "google/gemma-2b",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a/protocol_compliance/huref_a_cont1_20260901_210000/google--gemma-2b.npy",
+      "sha256": "90a63b0432728f173809d6a13b4936949811a0819d5553789f111322bff373da",
+      "shape": [
+        512
+      ],
+      "status": "PARTIAL_NON_DETECTOR_EVIDENCE"
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a/protocol_compliance/huref_a_cont1_20260901_210000/Qwen--Qwen2.5-3B-Instruct.npy",
+      "sha256": "fe51fc00d1655226bcda4f7bda0030e11471d93de25efb870c5729b4a90f2072",
+      "shape": [
+        512
+      ],
+      "status": "PARTIAL_NON_DETECTOR_EVIDENCE"
+    }
+  ],
+  "phi3_feature": null,
+  "detector_eligible": false
+}

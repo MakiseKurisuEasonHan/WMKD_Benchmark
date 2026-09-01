@@ -1,0 +1,27 @@
+{
+  "status": "NOT_CALIBRATED",
+  "reference_score": null,
+  "negative_scores": null,
+  "threshold": null,
+  "false_positives": null,
+  "evaluation_errors": [
+    {
+      "type": "FROZEN_PROTOCOL_CROSS_VOCABULARY_AMBIGUITY",
+      "stage": "PHI3_TOKEN_EMBEDDING_SELECTION_BEFORE_INVARIANT_EXTRACTION",
+      "error": "95 of 4096 frozen canonical token IDs exceed Phi-3 vocab_size=32064",
+      "frozen_id_min": 0,
+      "frozen_id_max": 98956,
+      "out_of_range_count": 95,
+      "official_semantics": "pinned HuRef generates a model-specific sorted-token list with each model tokenizer",
+      "wmkd_gap": "only the canonical model token manifest was frozen; no Phi-specific manifest or frozen cross-tokenizer mapping exists",
+      "forbidden_unapproved_actions": [
+        "drop out-of-range IDs",
+        "clip or modulo IDs",
+        "replace with arbitrary valid IDs",
+        "generate post-result Phi-specific top-K",
+        "invent token-string remapping"
+      ],
+      "resolution_requires": "explicit pre-result scientific protocol decision and frozen per-model manifests/mapping"
+    }
+  ]
+}

@@ -1,15 +1,79 @@
 {
-  "schema_version": "wmkd.passive-ownership-a.v1",
-  "method": "huref",
+  "schema_version": "wmkd.huref-a-cont1-blocked.v1",
+  "method": "HuRef",
   "experiment": "A",
-  "run_id": "huref_a_20260901_201015",
-  "status": "FAILED",
+  "run_id": "huref_a_cont1_20260901_210000",
+  "status": "BLOCKED_PROTOCOL_AMBIGUITY",
   "terminal": true,
+  "official_repo": "LUMIA-Group/HuRef",
+  "official_commit": "9c34548a6f6c1e78780e1fd07de56c7a3357f6ef",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
   "model_modified": false,
-  "artifact_type": "partial_fingerprint_evidence",
+  "artifact_type": "partial_protocol_compliance_evidence",
   "preferred_fingerprint": "no",
+  "scientific_conclusion": "HuRef core reproduction NOT_JUDGED; cont1 blocked before complete frozen-panel ICS by undefined cross-vocabulary token mapping",
   "ba_status": "NOT_STARTED",
-  "scientific_conclusion": "not judged",
-  "error": "Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.",
-  "runtime_seconds": 5.175975799560547
+  "lineage": {
+    "previous_run": {
+      "run_id": "huref_a_20260901_201015",
+      "status": "SUPERSEDED_BY_PROTOCOL_COMPLIANCE_CONTINUATION",
+      "reasons": [
+        "autograd/numpy finalization error",
+        "Mean Pooling mismatch",
+        "missing fused-QKV support"
+      ]
+    },
+    "cont1": {
+      "run_id": "huref_a_cont1_20260901_210000",
+      "status": "BLOCKED_PROTOCOL_AMBIGUITY",
+      "unit_tests": "PASS",
+      "completed_before_blocker": [
+        "Reference A",
+        "Reference B",
+        "Gemma feature",
+        "Qwen feature"
+      ],
+      "blocker": {
+        "type": "FROZEN_PROTOCOL_CROSS_VOCABULARY_AMBIGUITY",
+        "stage": "PHI3_TOKEN_EMBEDDING_SELECTION_BEFORE_INVARIANT_EXTRACTION",
+        "error": "95 of 4096 frozen canonical token IDs exceed Phi-3 vocab_size=32064",
+        "frozen_id_min": 0,
+        "frozen_id_max": 98956,
+        "out_of_range_count": 95,
+        "official_semantics": "pinned HuRef generates a model-specific sorted-token list with each model tokenizer",
+        "wmkd_gap": "only the canonical model token manifest was frozen; no Phi-specific manifest or frozen cross-tokenizer mapping exists",
+        "forbidden_unapproved_actions": [
+          "drop out-of-range IDs",
+          "clip or modulo IDs",
+          "replace with arbitrary valid IDs",
+          "generate post-result Phi-specific top-K",
+          "invent token-string remapping"
+        ],
+        "resolution_requires": "explicit pre-result scientific protocol decision and frozen per-model manifests/mapping"
+      }
+    }
+  },
+  "blocker": {
+    "type": "FROZEN_PROTOCOL_CROSS_VOCABULARY_AMBIGUITY",
+    "stage": "PHI3_TOKEN_EMBEDDING_SELECTION_BEFORE_INVARIANT_EXTRACTION",
+    "error": "95 of 4096 frozen canonical token IDs exceed Phi-3 vocab_size=32064",
+    "frozen_id_min": 0,
+    "frozen_id_max": 98956,
+    "out_of_range_count": 95,
+    "official_semantics": "pinned HuRef generates a model-specific sorted-token list with each model tokenizer",
+    "wmkd_gap": "only the canonical model token manifest was frozen; no Phi-specific manifest or frozen cross-tokenizer mapping exists",
+    "forbidden_unapproved_actions": [
+      "drop out-of-range IDs",
+      "clip or modulo IDs",
+      "replace with arbitrary valid IDs",
+      "generate post-result Phi-specific top-K",
+      "invent token-string remapping"
+    ],
+    "resolution_requires": "explicit pre-result scientific protocol decision and frozen per-model manifests/mapping"
+  },
+  "protocol_mean_pooling_unit_test": "PASS",
+  "K": 4096,
+  "feature_dimension": 512,
+  "completed_features": 4,
+  "planned_features": 5
 }

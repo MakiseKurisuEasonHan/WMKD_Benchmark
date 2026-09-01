@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-01T20:18:45.154257+00:00",
-  "object_count": 12,
+  "generated_at": "2026-09-01T20:38:08.010202+00:00",
+  "object_count": 13,
   "objects": [
     {
       "method": "PN-FP",
@@ -186,6 +186,24 @@
       "artifact_type": "fingerprint_package",
       "model_modified": false,
       "preferred_fingerprint": "yes",
+      "utility_available": false,
+      "ba_status": "NOT_STARTED"
+    },
+    {
+      "method": "HuRef",
+      "role": "preferred_fingerprint",
+      "experiment": "A",
+      "run_id": "huref_a_cont1_20260901_210000",
+      "full_log_path": "results/huref/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "730bc2f18d321c851931ec58b0be1345fa5c5e953c28aac1ec57e1af2e132681",
+      "summary_path": "results/huref/experiment_a/summary.json",
+      "summary_sha256": "e5cac3a672ba1359ea8ffc6fb7e89f540bcbdc6a89b6b570fd0617b4b21ac240",
+      "report_path": "docs/reproduction_reports/huref_experiment_a_report.md",
+      "artifact_manifest_path": "results/huref/experiment_a/artifact_manifest.json",
+      "scientific_status": "BLOCKED_PROTOCOL_AMBIGUITY_NOT_JUDGED",
+      "artifact_type": "partial_protocol_compliance_evidence",
+      "model_modified": false,
+      "preferred_fingerprint": "no",
       "utility_available": false,
       "ba_status": "NOT_STARTED"
     }

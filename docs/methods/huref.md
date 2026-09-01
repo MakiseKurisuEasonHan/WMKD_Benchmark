@@ -1,3 +1,3 @@
 # HuRef
 
-Passive ownership fingerprint; official commit `9c34548a6f6c1e78780e1fd07de56c7a3357f6ef`. Experiment A does not modify model weights.
+Pinned passive ownership method. Formal A uses K=4096, last two layers, WqWk/WvWo/WuWd, official joint Mean Pooling to 512 dimensions, and ICS. Current cont1 is blocked by an unfrozen cross-vocabulary token mapping; no scientific result is judged.

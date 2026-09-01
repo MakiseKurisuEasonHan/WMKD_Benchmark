@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "marker": "PROTOCOL_MEAN_POOLING_UNIT_TEST=PASS",
+  "synthetic_input_shape": [
+    6,
+    4,
+    4
+  ],
+  "synthetic_input_sha256": "6efe370b3dace824429434c95157055877944d2c923f0d9fca556662db7dff55",
+  "reference_output": [
+    -1.4288690090179443,
+    -1.0206207036972046,
+    -0.6123724579811096,
+    -0.20412413775920868,
+    0.20412413775920868,
+    0.6123724579811096,
+    1.0206207036972046,
+    1.4288690090179443
+  ],
+  "wmkd_output": [
+    -1.4288690090179443,
+    -1.0206207036972046,
+    -0.6123724579811096,
+    -0.20412413775920868,
+    0.20412413775920868,
+    0.6123724579811096,
+    1.0206207036972046,
+    1.4288690090179443
+  ],
+  "output_shape": [
+    8
+  ],
+  "max_abs_diff": 0.0,
+  "tolerance": 0.0,
+  "architecture_tests": {
+    "llama": {
+      "hidden_size": 3072,
+      "q_heads": 24,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "q_rows": 3072,
+      "k_rows": 1024,
+      "v_rows": 1024,
+      "repeat_factor": 3,
+      "layers": 28,
+      "intermediate_size": 8192,
+      "actual_projection_shapes": {
+        "q": [
+          3072,
+          3072
+        ],
+        "k": [
+          1024,
+          3072
+        ],
+        "v": [
+          1024,
+          3072
+        ]
+      }
+    },
+    "phi3": {
+      "hidden_size": 3072,
+      "q_heads": 32,
+      "kv_heads": 32,
+      "head_dim": 96,
+      "q_rows": 3072,
+      "k_rows": 3072,
+      "v_rows": 3072,
+      "repeat_factor": 1,
+      "layers": 32,
+      "intermediate_size": 8192,
+      "actual_projection_shapes": {
+        "qkv": [
+          9216,
+          3072
+        ],
+        "gate_up": [
+          16384,
+          3072
+        ]
+      }
+    }
+  },
+  "term_order": [
+    "layer_-2_WqWk",
+    "layer_-2_WvWo",
+    "layer_-2_WuWd",
+    "layer_-1_WqWk",
+    "layer_-1_WvWo",
+    "layer_-1_WuWd"
+  ]
+}
