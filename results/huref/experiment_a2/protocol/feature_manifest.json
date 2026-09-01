@@ -1,0 +1,1132 @@
+{
+  "integrity": "PASS",
+  "features": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/reference_a.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "git_path": "results/huref/experiment_a2/protocol/reference_a--meta-llama--Llama-3.2-3B-Instruct.npy",
+      "git_sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "role": "reference_a",
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/reference_b.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "git_path": "results/huref/experiment_a2/protocol/reference_b--meta-llama--Llama-3.2-3B-Instruct.npy",
+      "git_sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "role": "reference_b",
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/google--gemma-2b.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "26354d0feefd9a4f7e63b05fd9d430e1b8742b9feda6523f974d28c7839587fc",
+      "git_path": "results/huref/experiment_a2/protocol/negative--google--gemma-2b.npy",
+      "git_sha256": "26354d0feefd9a4f7e63b05fd9d430e1b8742b9feda6523f974d28c7839587fc",
+      "role": "negative",
+      "model_id": "google/gemma-2b"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/Qwen--Qwen2.5-3B-Instruct.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "cdd53b68fe0607994c032611de40438f7b0788177a2885e92f428f4f8b7cf1be",
+      "git_path": "results/huref/experiment_a2/protocol/negative--Qwen--Qwen2.5-3B-Instruct.npy",
+      "git_sha256": "cdd53b68fe0607994c032611de40438f7b0788177a2885e92f428f4f8b7cf1be",
+      "role": "negative",
+      "model_id": "Qwen/Qwen2.5-3B-Instruct"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/microsoft--Phi-3-mini-128k-instruct.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "0176dda36fe24d71e8c6714a6bd8e2cc03f76545df999eae9bea0de63fe1064d",
+      "git_path": "results/huref/experiment_a2/protocol/negative--microsoft--Phi-3-mini-128k-instruct.npy",
+      "git_sha256": "0176dda36fe24d71e8c6714a6bd8e2cc03f76545df999eae9bea0de63fe1064d",
+      "role": "negative",
+      "model_id": "microsoft/Phi-3-mini-128k-instruct"
+    }
+  ],
+  "extraction": [
+    {
+      "role": "reference_a",
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "token_manifest_sha256": "cbc7a9978f349c88afad65f6bf854234a7d4dff6cca5f6a47b88d84498d95e79",
+      "layers": [
+        26,
+        27
+      ],
+      "K": 4096,
+      "term_order": [
+        "layer_-2_WqWk",
+        "layer_-2_WvWo",
+        "layer_-2_WuWd",
+        "layer_-1_WqWk",
+        "layer_-1_WvWo",
+        "layer_-1_WuWd"
+      ],
+      "terms": [
+        {
+          "order": 0,
+          "layer_index": 26,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "eb5ad06e43f9b12682c42f09d95115c0f21da7e29da2a1eee9e062424732df03"
+        },
+        {
+          "order": 1,
+          "layer_index": 26,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "6488f5898a03e92b3e0d623980a5a4268e61cc034cbd4204b5599f53238d361d"
+        },
+        {
+          "order": 2,
+          "layer_index": 26,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "ba8ef026d21b34f2a4dde1804d12cc3abfe3f437a2d95198a7b4ad489697670c"
+        },
+        {
+          "order": 3,
+          "layer_index": 27,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "17f496e3e862a1e76a331c47c409c8f86acc8ca1396cb360ed1e68b53f913579"
+        },
+        {
+          "order": 4,
+          "layer_index": 27,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "f51efbf35c0b01c78a424dc2039ac36a7cee42f8571c4457ebe597a67877d0d7"
+        },
+        {
+          "order": 5,
+          "layer_index": 27,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "120af5e2902660b9a9a9a3ce03278b235a8029f8bf755b6584a64025b739e3ba"
+        }
+      ],
+      "architecture_mapping": [
+        {
+          "layer_index": 26,
+          "block_class": "LlamaDecoderLayer",
+          "attention_class": "LlamaAttention",
+          "mlp_class": "LlamaMLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 3072,
+          "q_heads": 24,
+          "kv_heads": 8,
+          "head_dim": 128,
+          "repeat_factor": 3,
+          "shapes": {
+            "q": [
+              3072,
+              3072
+            ],
+            "k_original": [
+              1024,
+              3072
+            ],
+            "v_original": [
+              1024,
+              3072
+            ],
+            "k_expanded": [
+              3072,
+              3072
+            ],
+            "v_expanded": [
+              3072,
+              3072
+            ],
+            "o": [
+              3072,
+              3072
+            ],
+            "gate": [
+              8192,
+              3072
+            ],
+            "up": [
+              8192,
+              3072
+            ],
+            "down": [
+              3072,
+              8192
+            ]
+          }
+        },
+        {
+          "layer_index": 27,
+          "block_class": "LlamaDecoderLayer",
+          "attention_class": "LlamaAttention",
+          "mlp_class": "LlamaMLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 3072,
+          "q_heads": 24,
+          "kv_heads": 8,
+          "head_dim": 128,
+          "repeat_factor": 3,
+          "shapes": {
+            "q": [
+              3072,
+              3072
+            ],
+            "k_original": [
+              1024,
+              3072
+            ],
+            "v_original": [
+              1024,
+              3072
+            ],
+            "k_expanded": [
+              3072,
+              3072
+            ],
+            "v_expanded": [
+              3072,
+              3072
+            ],
+            "o": [
+              3072,
+              3072
+            ],
+            "gate": [
+              8192,
+              3072
+            ],
+            "up": [
+              8192,
+              3072
+            ],
+            "down": [
+              3072,
+              8192
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/reference_a.npy",
+        "shape": [
+          512
+        ],
+        "dtype": "float32",
+        "sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c"
+      },
+      "runtime_seconds": 2.4694178104400635,
+      "peak_vram_bytes": 6849124864
+    },
+    {
+      "role": "reference_b",
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "token_manifest_sha256": "cbc7a9978f349c88afad65f6bf854234a7d4dff6cca5f6a47b88d84498d95e79",
+      "layers": [
+        26,
+        27
+      ],
+      "K": 4096,
+      "term_order": [
+        "layer_-2_WqWk",
+        "layer_-2_WvWo",
+        "layer_-2_WuWd",
+        "layer_-1_WqWk",
+        "layer_-1_WvWo",
+        "layer_-1_WuWd"
+      ],
+      "terms": [
+        {
+          "order": 0,
+          "layer_index": 26,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "eb5ad06e43f9b12682c42f09d95115c0f21da7e29da2a1eee9e062424732df03"
+        },
+        {
+          "order": 1,
+          "layer_index": 26,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "6488f5898a03e92b3e0d623980a5a4268e61cc034cbd4204b5599f53238d361d"
+        },
+        {
+          "order": 2,
+          "layer_index": 26,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "ba8ef026d21b34f2a4dde1804d12cc3abfe3f437a2d95198a7b4ad489697670c"
+        },
+        {
+          "order": 3,
+          "layer_index": 27,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "17f496e3e862a1e76a331c47c409c8f86acc8ca1396cb360ed1e68b53f913579"
+        },
+        {
+          "order": 4,
+          "layer_index": 27,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "f51efbf35c0b01c78a424dc2039ac36a7cee42f8571c4457ebe597a67877d0d7"
+        },
+        {
+          "order": 5,
+          "layer_index": 27,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "120af5e2902660b9a9a9a3ce03278b235a8029f8bf755b6584a64025b739e3ba"
+        }
+      ],
+      "architecture_mapping": [
+        {
+          "layer_index": 26,
+          "block_class": "LlamaDecoderLayer",
+          "attention_class": "LlamaAttention",
+          "mlp_class": "LlamaMLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 3072,
+          "q_heads": 24,
+          "kv_heads": 8,
+          "head_dim": 128,
+          "repeat_factor": 3,
+          "shapes": {
+            "q": [
+              3072,
+              3072
+            ],
+            "k_original": [
+              1024,
+              3072
+            ],
+            "v_original": [
+              1024,
+              3072
+            ],
+            "k_expanded": [
+              3072,
+              3072
+            ],
+            "v_expanded": [
+              3072,
+              3072
+            ],
+            "o": [
+              3072,
+              3072
+            ],
+            "gate": [
+              8192,
+              3072
+            ],
+            "up": [
+              8192,
+              3072
+            ],
+            "down": [
+              3072,
+              8192
+            ]
+          }
+        },
+        {
+          "layer_index": 27,
+          "block_class": "LlamaDecoderLayer",
+          "attention_class": "LlamaAttention",
+          "mlp_class": "LlamaMLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 3072,
+          "q_heads": 24,
+          "kv_heads": 8,
+          "head_dim": 128,
+          "repeat_factor": 3,
+          "shapes": {
+            "q": [
+              3072,
+              3072
+            ],
+            "k_original": [
+              1024,
+              3072
+            ],
+            "v_original": [
+              1024,
+              3072
+            ],
+            "k_expanded": [
+              3072,
+              3072
+            ],
+            "v_expanded": [
+              3072,
+              3072
+            ],
+            "o": [
+              3072,
+              3072
+            ],
+            "gate": [
+              8192,
+              3072
+            ],
+            "up": [
+              8192,
+              3072
+            ],
+            "down": [
+              3072,
+              8192
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/reference_b.npy",
+        "shape": [
+          512
+        ],
+        "dtype": "float32",
+        "sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c"
+      },
+      "runtime_seconds": 1.9036190509796143,
+      "peak_vram_bytes": 6849124864
+    },
+    {
+      "role": "negative",
+      "model_id": "google/gemma-2b",
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/google/gemma-2b",
+      "token_manifest_sha256": "1cdc1321b372c72c552021ca8a85d7260dc9bd5affabbd5a3f609409f33c42ee",
+      "layers": [
+        16,
+        17
+      ],
+      "K": 4096,
+      "term_order": [
+        "layer_-2_WqWk",
+        "layer_-2_WvWo",
+        "layer_-2_WuWd",
+        "layer_-1_WqWk",
+        "layer_-1_WvWo",
+        "layer_-1_WuWd"
+      ],
+      "terms": [
+        {
+          "order": 0,
+          "layer_index": 16,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "63943ec7f8158f7ff93e0bcd4c9d710bcae0d790483d8cac160f51125211c5ae"
+        },
+        {
+          "order": 1,
+          "layer_index": 16,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "fbf37ef707a449dc48b1ce178c469ef1d73986a85e8936b4714ef79f1763f206"
+        },
+        {
+          "order": 2,
+          "layer_index": 16,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "f39d7f86d9b56dbe7052f4c17032ff8cf95a42c6051ffba22e7ff7ef0a5d0a91"
+        },
+        {
+          "order": 3,
+          "layer_index": 17,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "29995414181a201161fd147830e96d8510452b8394baed433511d0cdf9fadaed"
+        },
+        {
+          "order": 4,
+          "layer_index": 17,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "a491d50d6dd23ed75bb47c70261676f0e0315a2efb4d684e495bced1fd115496"
+        },
+        {
+          "order": 5,
+          "layer_index": 17,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "db72cd44a131b02a8896a3c57fbfddb1df24fbf17d72fadf823aaa3ff64bc6d7"
+        }
+      ],
+      "architecture_mapping": [
+        {
+          "layer_index": 16,
+          "block_class": "GemmaDecoderLayer",
+          "attention_class": "GemmaAttention",
+          "mlp_class": "GemmaMLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 2048,
+          "q_heads": 8,
+          "kv_heads": 1,
+          "head_dim": 256,
+          "repeat_factor": 8,
+          "shapes": {
+            "q": [
+              2048,
+              2048
+            ],
+            "k_original": [
+              256,
+              2048
+            ],
+            "v_original": [
+              256,
+              2048
+            ],
+            "k_expanded": [
+              2048,
+              2048
+            ],
+            "v_expanded": [
+              2048,
+              2048
+            ],
+            "o": [
+              2048,
+              2048
+            ],
+            "gate": [
+              16384,
+              2048
+            ],
+            "up": [
+              16384,
+              2048
+            ],
+            "down": [
+              2048,
+              16384
+            ]
+          }
+        },
+        {
+          "layer_index": 17,
+          "block_class": "GemmaDecoderLayer",
+          "attention_class": "GemmaAttention",
+          "mlp_class": "GemmaMLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 2048,
+          "q_heads": 8,
+          "kv_heads": 1,
+          "head_dim": 256,
+          "repeat_factor": 8,
+          "shapes": {
+            "q": [
+              2048,
+              2048
+            ],
+            "k_original": [
+              256,
+              2048
+            ],
+            "v_original": [
+              256,
+              2048
+            ],
+            "k_expanded": [
+              2048,
+              2048
+            ],
+            "v_expanded": [
+              2048,
+              2048
+            ],
+            "o": [
+              2048,
+              2048
+            ],
+            "gate": [
+              16384,
+              2048
+            ],
+            "up": [
+              16384,
+              2048
+            ],
+            "down": [
+              2048,
+              16384
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/google--gemma-2b.npy",
+        "shape": [
+          512
+        ],
+        "dtype": "float32",
+        "sha256": "26354d0feefd9a4f7e63b05fd9d430e1b8742b9feda6523f974d28c7839587fc"
+      },
+      "runtime_seconds": 2.186955451965332,
+      "peak_vram_bytes": 5532439040
+    },
+    {
+      "role": "negative",
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/models/Qwen--Qwen2.5-3B-Instruct/snapshots/master",
+      "token_manifest_sha256": "2580489407d36868addcbda6199c54737f867e42ddcca3a1e959301bfcf001f8",
+      "layers": [
+        34,
+        35
+      ],
+      "K": 4096,
+      "term_order": [
+        "layer_-2_WqWk",
+        "layer_-2_WvWo",
+        "layer_-2_WuWd",
+        "layer_-1_WqWk",
+        "layer_-1_WvWo",
+        "layer_-1_WuWd"
+      ],
+      "terms": [
+        {
+          "order": 0,
+          "layer_index": 34,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "15fe96df558d25231489467787b839bccbd8f8ab123ffe98c06cf3f8ec5f208c"
+        },
+        {
+          "order": 1,
+          "layer_index": 34,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "391944aa19fe85caf17c279ab29031acb934a6d68c115e4a6f58d1005c57bdbf"
+        },
+        {
+          "order": 2,
+          "layer_index": 34,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "01db002f314d5a14d55b28f009366e7afa504ee9d0fa9e4a7ddf2209606f47d0"
+        },
+        {
+          "order": 3,
+          "layer_index": 35,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "efd305d7f4dfa406b0c35c25cd5560ec70498d8363a68f3ca17220bd332beea4"
+        },
+        {
+          "order": 4,
+          "layer_index": 35,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "5c70db9522dfa4dc251dbc09824258e97db2121788da7478c11d7e15570b6f6f"
+        },
+        {
+          "order": 5,
+          "layer_index": 35,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "cd81de3fbfdc1a09edabd1ff45a46175efd3a75152fff7d67964dd265c222b47"
+        }
+      ],
+      "architecture_mapping": [
+        {
+          "layer_index": 34,
+          "block_class": "Qwen2DecoderLayer",
+          "attention_class": "Qwen2Attention",
+          "mlp_class": "Qwen2MLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 2048,
+          "q_heads": 16,
+          "kv_heads": 2,
+          "head_dim": 128,
+          "repeat_factor": 8,
+          "shapes": {
+            "q": [
+              2048,
+              2048
+            ],
+            "k_original": [
+              256,
+              2048
+            ],
+            "v_original": [
+              256,
+              2048
+            ],
+            "k_expanded": [
+              2048,
+              2048
+            ],
+            "v_expanded": [
+              2048,
+              2048
+            ],
+            "o": [
+              2048,
+              2048
+            ],
+            "gate": [
+              11008,
+              2048
+            ],
+            "up": [
+              11008,
+              2048
+            ],
+            "down": [
+              2048,
+              11008
+            ]
+          }
+        },
+        {
+          "layer_index": 35,
+          "block_class": "Qwen2DecoderLayer",
+          "attention_class": "Qwen2Attention",
+          "mlp_class": "Qwen2MLP",
+          "attention_mode": "separate_q_k_v",
+          "mlp_mode": "separate_gate_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 2048,
+          "q_heads": 16,
+          "kv_heads": 2,
+          "head_dim": 128,
+          "repeat_factor": 8,
+          "shapes": {
+            "q": [
+              2048,
+              2048
+            ],
+            "k_original": [
+              256,
+              2048
+            ],
+            "v_original": [
+              256,
+              2048
+            ],
+            "k_expanded": [
+              2048,
+              2048
+            ],
+            "v_expanded": [
+              2048,
+              2048
+            ],
+            "o": [
+              2048,
+              2048
+            ],
+            "gate": [
+              11008,
+              2048
+            ],
+            "up": [
+              11008,
+              2048
+            ],
+            "down": [
+              2048,
+              11008
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/Qwen--Qwen2.5-3B-Instruct.npy",
+        "shape": [
+          512
+        ],
+        "dtype": "float32",
+        "sha256": "cdd53b68fe0607994c032611de40438f7b0788177a2885e92f428f4f8b7cf1be"
+      },
+      "runtime_seconds": 2.501286506652832,
+      "peak_vram_bytes": 6559851008
+    },
+    {
+      "role": "negative",
+      "model_id": "microsoft/Phi-3-mini-128k-instruct",
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/models/microsoft--Phi-3-mini-128k-instruct/snapshots/master",
+      "token_manifest_sha256": "e31e958e8e77e6c09988ff66c23871ef6366cd8af58372e02551a63b0a200060",
+      "layers": [
+        30,
+        31
+      ],
+      "K": 4096,
+      "term_order": [
+        "layer_-2_WqWk",
+        "layer_-2_WvWo",
+        "layer_-2_WuWd",
+        "layer_-1_WqWk",
+        "layer_-1_WvWo",
+        "layer_-1_WuWd"
+      ],
+      "terms": [
+        {
+          "order": 0,
+          "layer_index": 30,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "827d26932e0848e85f7c6e31fe0ed80c4304261e4e8703033f6fd97a9a94d813"
+        },
+        {
+          "order": 1,
+          "layer_index": 30,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "a4d2e7476f977edc55f5511aee06944430e2987cec9a8b2c852fa5faf71e3a2b"
+        },
+        {
+          "order": 2,
+          "layer_index": 30,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "35b81be2f84d7391297d4d66062631ca3673c898244a156ae932773ab8b43901"
+        },
+        {
+          "order": 3,
+          "layer_index": 31,
+          "term": "WqWk",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "d796e8dc7bae85b6027d20b422ee734c24ca7319dbc9ad9aec12eaf18d54a0ec"
+        },
+        {
+          "order": 4,
+          "layer_index": 31,
+          "term": "WvWo",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "a956fcea6ce75588e8b4db856df5167de1ae0ed0f7c8a6d20de49b386f3d0145"
+        },
+        {
+          "order": 5,
+          "layer_index": 31,
+          "term": "WuWd",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "torch.float32",
+          "sha256": "4e5eb62c9ec7ac893ee8f3e0d4c74f5ae57c56da317ef3fadd6e038f6e095f3b"
+        }
+      ],
+      "architecture_mapping": [
+        {
+          "layer_index": 30,
+          "block_class": "Phi3DecoderLayer",
+          "attention_class": "Phi3Attention",
+          "mlp_class": "Phi3MLP",
+          "attention_mode": "fused_qkv_config_split_Q_then_K_then_V",
+          "mlp_mode": "fused_gate_up_config_split_gate_then_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 3072,
+          "q_heads": 32,
+          "kv_heads": 32,
+          "head_dim": 96,
+          "repeat_factor": 1,
+          "shapes": {
+            "q": [
+              3072,
+              3072
+            ],
+            "k_original": [
+              3072,
+              3072
+            ],
+            "v_original": [
+              3072,
+              3072
+            ],
+            "k_expanded": [
+              3072,
+              3072
+            ],
+            "v_expanded": [
+              3072,
+              3072
+            ],
+            "o": [
+              3072,
+              3072
+            ],
+            "gate": [
+              8192,
+              3072
+            ],
+            "up": [
+              8192,
+              3072
+            ],
+            "down": [
+              3072,
+              8192
+            ]
+          }
+        },
+        {
+          "layer_index": 31,
+          "block_class": "Phi3DecoderLayer",
+          "attention_class": "Phi3Attention",
+          "mlp_class": "Phi3MLP",
+          "attention_mode": "fused_qkv_config_split_Q_then_K_then_V",
+          "mlp_mode": "fused_gate_up_config_split_gate_then_up",
+          "paths": {
+            "attention": "model.layers[i].self_attn",
+            "output": "o_proj",
+            "mlp": "model.layers[i].mlp",
+            "down": "down_proj"
+          },
+          "hidden_size": 3072,
+          "q_heads": 32,
+          "kv_heads": 32,
+          "head_dim": 96,
+          "repeat_factor": 1,
+          "shapes": {
+            "q": [
+              3072,
+              3072
+            ],
+            "k_original": [
+              3072,
+              3072
+            ],
+            "v_original": [
+              3072,
+              3072
+            ],
+            "k_expanded": [
+              3072,
+              3072
+            ],
+            "v_expanded": [
+              3072,
+              3072
+            ],
+            "o": [
+              3072,
+              3072
+            ],
+            "gate": [
+              8192,
+              3072
+            ],
+            "up": [
+              8192,
+              3072
+            ],
+            "down": [
+              3072,
+              8192
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/microsoft--Phi-3-mini-128k-instruct.npy",
+        "shape": [
+          512
+        ],
+        "dtype": "float32",
+        "sha256": "0176dda36fe24d71e8c6714a6bd8e2cc03f76545df999eae9bea0de63fe1064d"
+      },
+      "runtime_seconds": 2.9621500968933105,
+      "peak_vram_bytes": 8028559360
+    }
+  ]
+}

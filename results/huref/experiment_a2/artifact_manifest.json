@@ -1,0 +1,101 @@
+{
+  "schema_version": "wmkd.huref-a2.v1",
+  "method": "HuRef",
+  "experiment": "A2",
+  "run_id": "huref_a2_20260902_044726_cont3",
+  "status": "COMPLETED",
+  "official_repo": "LUMIA-Group/HuRef",
+  "official_commit": "9c34548a6f6c1e78780e1fd07de56c7a3357f6ef",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "model_modified": false,
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
+  "scientific_conclusion": "HuRef core reproduction successful under the WMKD A2 tokenizer-specific top-K protocol",
+  "ba_status": "NOT_STARTED",
+  "runtime_seconds": 35.49918246269226,
+  "peak_vram_bytes": 8028559360,
+  "peak_ram_kib": 6072944,
+  "disk_free_gb": 287.4666061401367,
+  "lineage": {
+    "A": {
+      "run_id": "huref_a_20260901_201015",
+      "status": "implementation failure / NOT_JUDGED"
+    },
+    "A_cont1": {
+      "run_id": "huref_a_cont1_20260901_210000",
+      "status": "BLOCKED_PROTOCOL_AMBIGUITY / NOT_JUDGED",
+      "finding": "95/4096 canonical Llama token IDs outside Phi vocab"
+    },
+    "A2": {
+      "run_id": "huref_a2_20260902_044726_cont3",
+      "scientific_change": "same fixed corpus; independent deterministic tokenizer-specific top-K=4096 per model",
+      "cont1_partial_features_reused": false
+    }
+  },
+  "large_artifact_root": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3",
+  "features": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/reference_a.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "git_path": "results/huref/experiment_a2/protocol/reference_a--meta-llama--Llama-3.2-3B-Instruct.npy",
+      "git_sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "role": "reference_a",
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/reference_b.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "git_path": "results/huref/experiment_a2/protocol/reference_b--meta-llama--Llama-3.2-3B-Instruct.npy",
+      "git_sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+      "role": "reference_b",
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/google--gemma-2b.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "26354d0feefd9a4f7e63b05fd9d430e1b8742b9feda6523f974d28c7839587fc",
+      "git_path": "results/huref/experiment_a2/protocol/negative--google--gemma-2b.npy",
+      "git_sha256": "26354d0feefd9a4f7e63b05fd9d430e1b8742b9feda6523f974d28c7839587fc",
+      "role": "negative",
+      "model_id": "google/gemma-2b"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/Qwen--Qwen2.5-3B-Instruct.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "cdd53b68fe0607994c032611de40438f7b0788177a2885e92f428f4f8b7cf1be",
+      "git_path": "results/huref/experiment_a2/protocol/negative--Qwen--Qwen2.5-3B-Instruct.npy",
+      "git_sha256": "cdd53b68fe0607994c032611de40438f7b0788177a2885e92f428f4f8b7cf1be",
+      "role": "negative",
+      "model_id": "Qwen/Qwen2.5-3B-Instruct"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/huref/experiment_a2/huref_a2_20260902_044726_cont3/microsoft--Phi-3-mini-128k-instruct.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "0176dda36fe24d71e8c6714a6bd8e2cc03f76545df999eae9bea0de63fe1064d",
+      "git_path": "results/huref/experiment_a2/protocol/negative--microsoft--Phi-3-mini-128k-instruct.npy",
+      "git_sha256": "0176dda36fe24d71e8c6714a6bd8e2cc03f76545df999eae9bea0de63fe1064d",
+      "role": "negative",
+      "model_id": "microsoft/Phi-3-mini-128k-instruct"
+    }
+  ],
+  "raw_terms_persisted": false,
+  "term_hashes_recorded": true,
+  "integrity": "PASS"
+}

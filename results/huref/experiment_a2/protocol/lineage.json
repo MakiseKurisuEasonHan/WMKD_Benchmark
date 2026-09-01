@@ -1,0 +1,16 @@
+{
+  "A": {
+    "run_id": "huref_a_20260901_201015",
+    "status": "implementation failure / NOT_JUDGED"
+  },
+  "A_cont1": {
+    "run_id": "huref_a_cont1_20260901_210000",
+    "status": "BLOCKED_PROTOCOL_AMBIGUITY / NOT_JUDGED",
+    "finding": "95/4096 canonical Llama token IDs outside Phi vocab"
+  },
+  "A2": {
+    "run_id": "huref_a2_20260902_044726_cont3",
+    "scientific_change": "same fixed corpus; independent deterministic tokenizer-specific top-K=4096 per model",
+    "cont1_partial_features_reused": false
+  }
+}

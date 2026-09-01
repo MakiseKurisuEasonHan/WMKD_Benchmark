@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "tests": {
+    "mean_pooling": {
+      "pass": true,
+      "max_abs_diff": 0.0,
+      "output_dimension_formal": 512
+    },
+    "token_determinism": {
+      "pass": true,
+      "models": {
+        "meta-llama/Llama-3.2-3B-Instruct": {
+          "pass": true,
+          "sha_run_1": "cbc7a9978f349c88afad65f6bf854234a7d4dff6cca5f6a47b88d84498d95e79",
+          "sha_run_2": "cbc7a9978f349c88afad65f6bf854234a7d4dff6cca5f6a47b88d84498d95e79",
+          "invalid_count": 0,
+          "K": 4096
+        },
+        "google/gemma-2b": {
+          "pass": true,
+          "sha_run_1": "1cdc1321b372c72c552021ca8a85d7260dc9bd5affabbd5a3f609409f33c42ee",
+          "sha_run_2": "1cdc1321b372c72c552021ca8a85d7260dc9bd5affabbd5a3f609409f33c42ee",
+          "invalid_count": 0,
+          "K": 4096
+        },
+        "Qwen/Qwen2.5-3B-Instruct": {
+          "pass": true,
+          "sha_run_1": "2580489407d36868addcbda6199c54737f867e42ddcca3a1e959301bfcf001f8",
+          "sha_run_2": "2580489407d36868addcbda6199c54737f867e42ddcca3a1e959301bfcf001f8",
+          "invalid_count": 0,
+          "K": 4096
+        },
+        "microsoft/Phi-3-mini-128k-instruct": {
+          "pass": true,
+          "sha_run_1": "e31e958e8e77e6c09988ff66c23871ef6366cd8af58372e02551a63b0a200060",
+          "sha_run_2": "e31e958e8e77e6c09988ff66c23871ef6366cd8af58372e02551a63b0a200060",
+          "invalid_count": 0,
+          "K": 4096
+        }
+      }
+    },
+    "llama_gqa": {
+      "pass": true,
+      "q_heads": 24,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "repeat_factor": 3
+    },
+    "phi_fused_shapes": {
+      "pass": true,
+      "qkv_expected": [
+        9216,
+        3072
+      ],
+      "gate_up_expected": [
+        16384,
+        3072
+      ]
+    },
+    "six_term_order": {
+      "pass": true,
+      "order": [
+        "layer_-2_WqWk",
+        "layer_-2_WvWo",
+        "layer_-2_WuWd",
+        "layer_-1_WqWk",
+        "layer_-1_WvWo",
+        "layer_-1_WuWd"
+      ]
+    },
+    "ics_official_comparison": {
+      "pass": true,
+      "official": -99.99998474121094,
+      "wmkd": -99.99998474121094,
+      "abs_diff": 0.0
+    }
+  }
+}

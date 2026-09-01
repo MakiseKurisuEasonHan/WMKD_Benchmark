@@ -1,0 +1,64 @@
+{
+  "schema_version": "wmkd.huref-a2.v1",
+  "method": "HuRef",
+  "experiment": "A2",
+  "run_id": "huref_a2_20260902_044726_cont3",
+  "status": "COMPLETED",
+  "official_repo": "LUMIA-Group/HuRef",
+  "official_commit": "9c34548a6f6c1e78780e1fd07de56c7a3357f6ef",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "model_modified": false,
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
+  "scientific_conclusion": "HuRef core reproduction successful under the WMKD A2 tokenizer-specific top-K protocol",
+  "ba_status": "NOT_STARTED",
+  "runtime_seconds": 35.49918246269226,
+  "peak_vram_bytes": 8028559360,
+  "peak_ram_kib": 6072944,
+  "disk_free_gb": 287.4666061401367,
+  "lineage": {
+    "A": {
+      "run_id": "huref_a_20260901_201015",
+      "status": "implementation failure / NOT_JUDGED"
+    },
+    "A_cont1": {
+      "run_id": "huref_a_cont1_20260901_210000",
+      "status": "BLOCKED_PROTOCOL_AMBIGUITY / NOT_JUDGED",
+      "finding": "95/4096 canonical Llama token IDs outside Phi vocab"
+    },
+    "A2": {
+      "run_id": "huref_a2_20260902_044726_cont3",
+      "scientific_change": "same fixed corpus; independent deterministic tokenizer-specific top-K=4096 per model",
+      "cont1_partial_features_reused": false
+    }
+  },
+  "detector": {
+    "metric": "official ICS = 100*cosine_similarity of globally standardized flattened 512-d features",
+    "score_direction": "higher",
+    "reference_self": 99.99999237060547,
+    "reference_reload": 99.99999237060547,
+    "reload_max_abs_diff": 0.0,
+    "negative_scores": [
+      {
+        "model_id": "google/gemma-2b",
+        "score": -28.545040130615234
+      },
+      {
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "score": -8.356179237365723
+      },
+      {
+        "model_id": "microsoft/Phi-3-mini-128k-instruct",
+        "score": 4.119894027709961
+      }
+    ],
+    "negative_mean": -10.927108446756998,
+    "threshold_rule": "tau = maximum score among three frozen unrelated negatives",
+    "threshold": 4.119894027709961,
+    "positive_rule": "score > tau; tie is negative",
+    "reference_positive": true,
+    "margin": 95.88009834289551,
+    "false_positives": 0,
+    "evaluation_errors": []
+  }
+}
