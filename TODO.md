@@ -6,8 +6,9 @@
 - [x] Preserve 10/10 canonical full experiment JSON logs and the global index.
 - [x] Audit the LLMPrint paper and pin official source `hifi-hyp/ACL-LLMPrint@3e577f98b2bb64780ec2995b074c5aeec9b017e1`; prepare local configuration, wrappers, tests, method record, and validation-negative availability matrix.
 - [x] Reconnect to AutoDL, validate idle GPU and canonical Base 12/12 SHA256, prepare 300 tokenizer-valid pairs, and complete exactly one isolated 1000-step fingerprint speed test (212.429 s; 1000/1000).
-- [ ] Resolve the paper-vs-release gray-box detector discrepancy before declaring readiness for formal Experiment A.
-- [ ] Keep formal 300-fingerprint construction, Ba, and Student training NOT STARTED until separately authorized after preparation review.
+- [x] Freeze dual detector semantics: paper Primary uses inclusive bits, sample standard deviation (`ddof=1`), raw unclipped `mu + 1.64 sigma`; pinned-release gray-box remains supplementary and cannot change the main conclusion.
+- [x] Freeze all 13 validation-negative identities as revision-pinned ModelScope transport mirrors, with zero replacements and zero unresolved slots.
+- [ ] Pass all 14 remote readiness gates and, only then, launch the explicitly authorized detached formal 300-fingerprint construction. Keep Ba, 20k generation, and Student training NOT STARTED.
 - [ ] Run REEF only under a later separately authorized protocol.
 
 The older SCW checklist entries below are immutable historical workflow records. Their unchecked items do not override the current 5/7 closure or authorize rerunning strict A.
@@ -156,6 +157,6 @@ The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archiv
 
 - [x] Close PN-FP, EverTracer, CTCC, iSeal, and SCW, including preferred Teacher and Ba Student canonical full logs.
 - [x] Create the 10-object global full-log index and integrity audit.
-- [ ] Complete the currently authorized LLMPrint preparation/preflight/speed-test protocol; formal Experiment A remains separately gated.
+- [x] Complete the authorized LLMPrint preparation, preflight, one-fingerprint full-parameter speed test, detector freeze, and validation-panel freeze.
 - [ ] Run REEF under a separately authorized protocol.
 - [ ] If exact watermark-disappearance timing is required, design a separately authorized offline checkpoint-level detector study; do not infer it from training loss.

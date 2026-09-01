@@ -39,6 +39,8 @@ Release code black-box matches that threshold direction (using sample standard d
 
 This is a scientific detector-semantics discrepancy. It does not change construction or the authorized speed test, but formal A must not start until the user/ChatGPT chooses and freezes paper semantics or release-code runtime semantics. A and Ba must reuse the same chosen package and threshold/calibration semantics.
 
+The decision is now frozen: `PRIMARY_PAPER_GRAYBOX` uses inclusive `>=` bits, plain 300-bit agreement, and `tau = mu + 1.64*sigma`. Algorithm 2 explicitly defines variance with denominator `k-1`, so Primary uses sample standard deviation (`ddof=1`), while population standard deviation (`ddof=0`) is also reported. The paper specifies no clipping; raw tau is retained even if it exceeds 1. `SUPPLEMENTARY_RELEASE_GRAYBOX` remains the pinned strict-`>` probability-filter/binomial/min-n implementation. Both outputs are mandatory in A and Ba; only Primary controls the main conclusion.
+
 ## Validation negatives and storage
 
 The official 13 are BLOOM-560M, DistilGPT2, OPT-1.3B, OPT-350M, Gemma-2B, Gemma-3-1B-It, Phi-2, Phi-3-Mini-128K-Instruct, GPT2, Qwen2-7B, Qwen2.5-3B-Instruct, Qwen2.5-7B-Instruct, and Falcon3-7B-Base. The conservative ModelScope discovery/equivalence state is machine-readable at `results/llmprint/modelscope_validation_negatives_matrix.json`. No negative model was downloaded in the audit phase.

@@ -1,8 +1,8 @@
 project: WMKD_Benchmark
 method: LLMPrint
 experiment: A
-status: PREPARATION_AND_SPEED_TEST_COMPLETE_FORMAL_A_BLOCKED
-formal_construction_authorized: false
+status: READINESS_FROZEN_AWAITING_REMOTE_GATES
+formal_construction_authorized: true
 ready_for_formal_A: false
 reference:
   upstream: meta-llama/Llama-3.2-3B-Instruct
@@ -45,13 +45,32 @@ speed_test:
   peak_vram_bytes: 7048545280
 detector:
   primary_access: graybox
+  primary_name: PRIMARY_PAPER_GRAYBOX
   paper_semantics: bitwise_accuracy_with_gaussian_threshold
+  paper_bit_comparison: ">="
+  primary_std_ddof: 1
+  report_population_std_ddof0: true
   z: 1.64
+  tau_clipped: false
   positive_direction: higher_agreement
   positive_condition: "accuracy >= tau"
+  supplementary_name: SUPPLEMENTARY_RELEASE_GRAYBOX
   release_code_graybox_semantics: filtered_bits_binomial_p_lt_0.05_and_valid_n_gte_calibrated_max
   graybox_probability_filter: 0.001
-  paper_code_discrepancy_requires_decision: true
+  release_bit_comparison: ">"
+  release_pvalue_condition: "one-sided exact binomial p < 0.05"
+  release_min_n_rule: maximum_positive_valid_n_among_usable_validation_negatives
+  paper_code_discrepancy_requires_decision: false
+  dual_reporting_frozen_for_a_and_ba: true
+runtime:
+  cublas_workspace_config: ":4096:8"
+  cublas_role: runtime_reproducibility_requirement
+validation_panel:
+  manifest: results/llmprint/validation_negative_panel_manifest.json
+  slots: 13
+  official_exact_identity_slots: 13
+  replacement_slots: 0
+  unresolved_slots: 0
 utility:
   model_modified: false
   degradation_attributable_to_llmprint: not_applicable
