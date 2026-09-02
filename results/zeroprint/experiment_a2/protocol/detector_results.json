@@ -1,0 +1,35 @@
+{
+  "metric": "rescaled_Pearson_correlation",
+  "reference_self": 1.0,
+  "reference_reload": {
+    "raw_pearson": 1.0,
+    "rescaled": 1.0
+  },
+  "negative_scores": [
+    {
+      "model_id": "google/gemma-2b",
+      "raw_pearson": 0.31626996397972107,
+      "rescaled": 0.6581349819898605
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "raw_pearson": 0.3587011992931366,
+      "rescaled": 0.6793505996465683
+    },
+    {
+      "model_id": "microsoft/Phi-3-mini-128k-instruct",
+      "raw_pearson": 0.16798275709152222,
+      "rescaled": 0.5839913785457611
+    }
+  ],
+  "negative_mean": 0.64049232006073,
+  "negative_max": 0.6793505996465683,
+  "threshold": 0.6793505996465683,
+  "threshold_rule": "tau=max frozen 3 negatives",
+  "score_direction": "higher",
+  "positive_rule": "score > tau; tie negative",
+  "margin": 0.3206494003534317,
+  "false_positives": 0,
+  "evaluation_errors": [],
+  "reference_positive": true
+}

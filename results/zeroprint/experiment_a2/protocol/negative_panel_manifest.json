@@ -1,0 +1,32 @@
+{
+  "schema_version": "wmkd.ownership-shared-negative-panel.v1",
+  "status": "FROZEN",
+  "selection_time": "before formal method results",
+  "slot_count": 3,
+  "family_diverse": true,
+  "replacement_allowed": false,
+  "models": [
+    {
+      "slot": 1,
+      "family": "Gemma",
+      "model_id": "google/gemma-2b",
+      "modelscope_id": "google/gemma-2b",
+      "modelscope_weight_revision": "4c0ad9bd274f4fda9be830b72a0833fb1f74a12e"
+    },
+    {
+      "slot": 2,
+      "family": "Qwen2",
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "modelscope_id": "Qwen/Qwen2.5-3B-Instruct",
+      "modelscope_weight_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5"
+    },
+    {
+      "slot": 3,
+      "family": "Phi3",
+      "model_id": "microsoft/Phi-3-mini-128k-instruct",
+      "modelscope_id": "microsoft/Phi-3-mini-128k-instruct",
+      "modelscope_weight_revision": "36dd6bdc2b730342af51ce16740601d6471e73ff"
+    }
+  ],
+  "ordered_panel_sha256": "b33dad639f74b7e48d94e73bd1bf6319bffd6e07abb6f4e82beeceb962bcf2cc"
+}

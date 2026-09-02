@@ -1,0 +1,52 @@
+{
+  "fingerprints": {
+    "reference_a": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "reference_b": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_fingerprint.npy",
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_1": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_fingerprint.npy",
+      "sha256": "9eb9a8a474f312cd3668d2a5c898cf9a4842dfc52c803f737d0be0cfbee7a749",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_2": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_fingerprint.npy",
+      "sha256": "e547fe70efd52ec6a993a7fb19d070f846fbc0048a1d3a637eb95117b0b8bfc0",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_3": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_fingerprint.npy",
+      "sha256": "fced79fa68856c7df13e60d6568515b2a6d83024d33452cb32e6b4efc5b5807b",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    }
+  },
+  "Jacobian": {
+    "alpha": 0.001,
+    "per_query_shape": [
+      2,
+      589824
+    ],
+    "aggregation": "mean"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": "wmkd.zeroprint-a2.v1",
+  "method": "ZeroPrint",
+  "experiment": "A2",
+  "run_id": "zeroprint_a2_phi_cont4_20260902_104000",
+  "parent_run_id": "zeroprint_a2_20260902_060000_cont2",
+  "status": "COMPLETED",
+  "official_repo": "shaoshuo-ss/ZeroPrint",
+  "official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "model_modified": false,
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
+  "scientific_conclusion": "ZeroPrint core reproduction successful under the WMKD A2 frozen three-negative canonical protocol",
+  "runtime_seconds_continuation": 2375.709317922592,
+  "runtime_seconds_total_accounted": 9530.266278743744,
+  "peak_vram_bytes": 8376071680,
+  "peak_ram_kib_continuation": 7096844,
+  "disk_free_gb": 287.3443908691406,
+  "ba_status": "NOT_STARTED",
+  "lineage": {
+    "A": {
+      "run_id": "zeroprint_a_20260901_201050",
+      "status": "PREPARE failure / NOT_JUDGED"
+    },
+    "A_cont1_preparation": {
+      "status": "no scientific generation / NOT_JUDGED"
+    },
+    "A2": {
+      "run_id": "zeroprint_a2_20260902_060000_cont2",
+      "status": "Phi cache compatibility failure after four completed model slots"
+    },
+    "A2_phi_continuation": {
+      "run_id": "zeroprint_a2_phi_cont4_20260902_104000",
+      "scope": "Phi missing-only -> frozen detector -> closure"
+    }
+  },
+  "compatibility_repair": {
+    "classification": "TRANSFORMERS_MODEL_CODE_CACHE_COMPATIBILITY_FAILURE",
+    "transformers_version": "4.55.2",
+    "torch_version": "2.8.0+cu128",
+    "phi_custom_modeling_path": "/root/.cache/huggingface/modules/transformers_modules/master/modeling_phi3.py",
+    "trust_remote_code": true,
+    "root_cause": "Pinned Phi code reads removed DynamicCache.seen_tokens API",
+    "repair": {
+      "required": true,
+      "scope": "continuation process only",
+      "mappings": [
+        {
+          "old_api": "DynamicCache.seen_tokens",
+          "current_equivalent": "DynamicCache.get_seq_length()",
+          "return_type": "int",
+          "semantic_justification": "number of previously cached sequence positions"
+        },
+        {
+          "old_api": "DynamicCache.get_max_length()",
+          "current_equivalent": "None for an unbounded DynamicCache",
+          "return_type": "NoneType",
+          "example_value": null,
+          "semantic_justification": "Transformers 4.40.2 DynamicCache explicitly returned None because a dynamically growing cache has no maximum capacity"
+        },
+        {
+          "old_api": "DynamicCache.get_usable_length(new_seq_length, layer_idx=0)",
+          "current_equivalent": "DynamicCache.get_seq_length(layer_idx) for an unbounded dynamic cache",
+          "return_type": "int",
+          "semantic_justification": "Transformers 4.40.2 returned the full previous sequence length whenever get_max_length() was None"
+        }
+      ],
+      "old_source": "huggingface/transformers v4.40.2 src/transformers/cache_utils.py",
+      "current_source": "transformers 4.55.2 transformers/cache_utils.py",
+      "static_phi_cache_api_scan": {
+        "get_seq_length": "native current API",
+        "update": "native current API",
+        "from_legacy_cache": "native current API",
+        "to_legacy_cache": "native current API",
+        "seen_tokens": "compatibility property",
+        "get_max_length": "compatibility method returning None",
+        "get_usable_length": "compatibility method returning current sequence length for DynamicCache"
+      }
+    },
+    "tests": {
+      "status": "PASS",
+      "engineering_smoke_generated_tokens": 4,
+      "cache_seq_length_after_prompt": 7,
+      "cache_seq_length_after_one_decode_step": 8,
+      "cache_growth_correct": true,
+      "greedy_cached_token_ids": [
+        822,
+        788,
+        29898,
+        29874,
+        29892,
+        289,
+        1125,
+        13,
+        4706,
+        736,
+        263,
+        718,
+        289,
+        13,
+        13
+      ],
+      "greedy_uncached_token_ids": [
+        822,
+        788,
+        29898,
+        29874,
+        29892,
+        289,
+        1125,
+        13,
+        4706,
+        736,
+        263,
+        718,
+        289,
+        13,
+        13
+      ],
+      "deterministic_token_ids_equal": true,
+      "formal_scientific_evidence": false
+    },
+    "scientific_adaptation": false,
+    "generation_protocol_changed": false
+  },
+  "large_artifact_roots": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2",
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000"
+  ],
+  "generation_logs": [
+    {
+      "role": "reference_a",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_generations.jsonl",
+      "sha256": "955ca9fbc160c3e72f7dedd90124c15c6db1a749527faf733585da970b2494e1"
+    },
+    {
+      "role": "reference_b",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_generations.jsonl",
+      "sha256": "912dfa1874fde07fef79d54f720a72d4cea163e5582908e0c9351b39a947f494"
+    },
+    {
+      "role": "negative_1",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_generations.jsonl",
+      "sha256": "762cd5196a9152b2a1111964ce4c40ccd76044842d9f94df0681f2485fc134f8"
+    },
+    {
+      "role": "negative_2",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_generations.jsonl",
+      "sha256": "57921162ccc6b6586bb07b52564a57c21519edae9f40da13d9991b4b959b8dbc"
+    },
+    {
+      "role": "negative_3",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_generations.jsonl",
+      "sha256": "66c47f39d45e5165661ec2b85173bf1f7db299bc12199b5fd7ed3484d0deed89"
+    }
+  ],
+  "fingerprints": {
+    "reference_a": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "reference_b": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_fingerprint.npy",
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_1": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_fingerprint.npy",
+      "sha256": "9eb9a8a474f312cd3668d2a5c898cf9a4842dfc52c803f737d0be0cfbee7a749",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_2": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_fingerprint.npy",
+      "sha256": "e547fe70efd52ec6a993a7fb19d070f846fbc0048a1d3a637eb95117b0b8bfc0",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_3": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_fingerprint.npy",
+      "sha256": "fced79fa68856c7df13e60d6568515b2a6d83024d33452cb32e6b4efc5b5807b",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    }
+  },
+  "integrity": "PASS"
+}

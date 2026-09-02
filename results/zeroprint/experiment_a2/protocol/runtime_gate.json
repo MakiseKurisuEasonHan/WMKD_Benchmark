@@ -1,0 +1,33 @@
+{
+  "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+  "role": "runtime_gate",
+  "generation_count": 200,
+  "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/runtime_gate_generations.jsonl",
+  "generation_log_sha256": "e955da6c63d5f79c12366dccf0dc7cea0bb7a3c178de4a4cc8851f6a33927580",
+  "generated_tokens": 92095,
+  "mean_generated_length": 460.475,
+  "max_length_saturation_count": 129,
+  "runtime_seconds": 1528.6195747852325,
+  "peak_vram_bytes": 7010349056,
+  "fingerprint": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/runtime_gate_fingerprint.npy",
+    "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+    "shape": [
+      589824
+    ],
+    "dtype": "float32"
+  },
+  "per_query": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/runtime_gate_per_query.npy",
+    "sha256": "95fd018564a63f65c57b5d3b0db51aba99838ac9ee7535876ed2eab09baae645",
+    "shape": [
+      2,
+      589824
+    ]
+  },
+  "errors": [],
+  "status": "PASS",
+  "prediction_formula": "measured Reference gate runtime * (Reference A + Reference B + 3 frozen negatives) = *5",
+  "predicted_total_seconds": 7643.097873926163,
+  "hard_cap_seconds": 18000
+}

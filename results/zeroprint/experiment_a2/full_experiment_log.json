@@ -1,0 +1,2543 @@
+{
+  "schema_version": "wmkd.zeroprint-a2.v1",
+  "method": "ZeroPrint",
+  "experiment": "A2",
+  "run_id": "zeroprint_a2_phi_cont4_20260902_104000",
+  "parent_run_id": "zeroprint_a2_20260902_060000_cont2",
+  "status": "COMPLETED",
+  "official_repo": "shaoshuo-ss/ZeroPrint",
+  "official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c",
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "model_modified": false,
+  "artifact_type": "fingerprint_package",
+  "preferred_fingerprint": "yes",
+  "scientific_conclusion": "ZeroPrint core reproduction successful under the WMKD A2 frozen three-negative canonical protocol",
+  "runtime_seconds_continuation": 2375.709317922592,
+  "runtime_seconds_total_accounted": 9530.266278743744,
+  "peak_vram_bytes": 8376071680,
+  "peak_ram_kib_continuation": 7096844,
+  "disk_free_gb": 287.3443908691406,
+  "ba_status": "NOT_STARTED",
+  "lineage": {
+    "A": {
+      "run_id": "zeroprint_a_20260901_201050",
+      "status": "PREPARE failure / NOT_JUDGED"
+    },
+    "A_cont1_preparation": {
+      "status": "no scientific generation / NOT_JUDGED"
+    },
+    "A2": {
+      "run_id": "zeroprint_a2_20260902_060000_cont2",
+      "status": "Phi cache compatibility failure after four completed model slots"
+    },
+    "A2_phi_continuation": {
+      "run_id": "zeroprint_a2_phi_cont4_20260902_104000",
+      "scope": "Phi missing-only -> frozen detector -> closure"
+    }
+  },
+  "compatibility_repair": {
+    "classification": "TRANSFORMERS_MODEL_CODE_CACHE_COMPATIBILITY_FAILURE",
+    "transformers_version": "4.55.2",
+    "torch_version": "2.8.0+cu128",
+    "phi_custom_modeling_path": "/root/.cache/huggingface/modules/transformers_modules/master/modeling_phi3.py",
+    "trust_remote_code": true,
+    "root_cause": "Pinned Phi code reads removed DynamicCache.seen_tokens API",
+    "repair": {
+      "required": true,
+      "scope": "continuation process only",
+      "mappings": [
+        {
+          "old_api": "DynamicCache.seen_tokens",
+          "current_equivalent": "DynamicCache.get_seq_length()",
+          "return_type": "int",
+          "semantic_justification": "number of previously cached sequence positions"
+        },
+        {
+          "old_api": "DynamicCache.get_max_length()",
+          "current_equivalent": "None for an unbounded DynamicCache",
+          "return_type": "NoneType",
+          "example_value": null,
+          "semantic_justification": "Transformers 4.40.2 DynamicCache explicitly returned None because a dynamically growing cache has no maximum capacity"
+        },
+        {
+          "old_api": "DynamicCache.get_usable_length(new_seq_length, layer_idx=0)",
+          "current_equivalent": "DynamicCache.get_seq_length(layer_idx) for an unbounded dynamic cache",
+          "return_type": "int",
+          "semantic_justification": "Transformers 4.40.2 returned the full previous sequence length whenever get_max_length() was None"
+        }
+      ],
+      "old_source": "huggingface/transformers v4.40.2 src/transformers/cache_utils.py",
+      "current_source": "transformers 4.55.2 transformers/cache_utils.py",
+      "static_phi_cache_api_scan": {
+        "get_seq_length": "native current API",
+        "update": "native current API",
+        "from_legacy_cache": "native current API",
+        "to_legacy_cache": "native current API",
+        "seen_tokens": "compatibility property",
+        "get_max_length": "compatibility method returning None",
+        "get_usable_length": "compatibility method returning current sequence length for DynamicCache"
+      }
+    },
+    "tests": {
+      "status": "PASS",
+      "engineering_smoke_generated_tokens": 4,
+      "cache_seq_length_after_prompt": 7,
+      "cache_seq_length_after_one_decode_step": 8,
+      "cache_growth_correct": true,
+      "greedy_cached_token_ids": [
+        822,
+        788,
+        29898,
+        29874,
+        29892,
+        289,
+        1125,
+        13,
+        4706,
+        736,
+        263,
+        718,
+        289,
+        13,
+        13
+      ],
+      "greedy_uncached_token_ids": [
+        822,
+        788,
+        29898,
+        29874,
+        29892,
+        289,
+        1125,
+        13,
+        4706,
+        736,
+        263,
+        718,
+        289,
+        13,
+        13
+      ],
+      "deterministic_token_ids_equal": true,
+      "formal_scientific_evidence": false
+    },
+    "scientific_adaptation": false,
+    "generation_protocol_changed": false
+  },
+  "history": {
+    "A": {
+      "run_id": "zeroprint_a_20260901_201050",
+      "status": "PREPARE failure / NOT_JUDGED"
+    },
+    "A_cont1_preparation": {
+      "status": "no scientific generation / NOT_JUDGED"
+    },
+    "A2": {
+      "run_id": "zeroprint_a2_20260902_060000_cont2",
+      "status": "Phi cache compatibility failure after four completed model slots"
+    },
+    "A2_phi_continuation": {
+      "run_id": "zeroprint_a2_phi_cont4_20260902_104000",
+      "scope": "Phi missing-only -> frozen detector -> closure"
+    }
+  },
+  "negative_panel": {
+    "schema_version": "wmkd.ownership-shared-negative-panel.v1",
+    "status": "FROZEN",
+    "selection_time": "before formal method results",
+    "slot_count": 3,
+    "family_diverse": true,
+    "replacement_allowed": false,
+    "models": [
+      {
+        "slot": 1,
+        "family": "Gemma",
+        "model_id": "google/gemma-2b",
+        "modelscope_id": "google/gemma-2b",
+        "modelscope_weight_revision": "4c0ad9bd274f4fda9be830b72a0833fb1f74a12e"
+      },
+      {
+        "slot": 2,
+        "family": "Qwen2",
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "modelscope_id": "Qwen/Qwen2.5-3B-Instruct",
+        "modelscope_weight_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5"
+      },
+      {
+        "slot": 3,
+        "family": "Phi3",
+        "model_id": "microsoft/Phi-3-mini-128k-instruct",
+        "modelscope_id": "microsoft/Phi-3-mini-128k-instruct",
+        "modelscope_weight_revision": "36dd6bdc2b730342af51ce16740601d6471e73ff"
+      }
+    ],
+    "ordered_panel_sha256": "b33dad639f74b7e48d94e73bd1bf6319bffd6e07abb6f4e82beeceb962bcf2cc"
+  },
+  "resources": {
+    "HumanEval": {
+      "manifest_sha256": "72fc6cf6c25e2d955178fa90eb765afbc790bd5d576515447c86ced95149019c",
+      "ordered_rows_sha256": "e366c82e0b30773241969c43006d6612d908bd23c70a13bf5a7bf8fc54435bed"
+    },
+    "GloVe": {
+      "classification": "scientifically_equivalent_reconstruction_from_canonical_Stanford_GloVe_6B_100d"
+    },
+    "MPNet": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2",
+      "dimension": 768,
+      "pooling": "attention-mask mean",
+      "normalize_embeddings": true
+    }
+  },
+  "perturbations": {
+    "schema_version": "wmkd.zeroprint-a2-perturbations.v1",
+    "algorithm": "pinned official NLTK POS eligibility; random.sample 3 positions; random.choice from top-10 GloVe neighbors; sequential deterministic seed 1000",
+    "rows": [
+      {
+        "query_id": "HumanEval/0",
+        "query_index": 0,
+        "perturbation_index": 0,
+        "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "numbers",
+            7
+          ],
+          [
+            "list",
+            9
+          ],
+          [
+            "float",
+            11
+          ],
+          [
+            "threshold",
+            14
+          ],
+          [
+            "float",
+            16
+          ],
+          [
+            "bool",
+            20
+          ],
+          [
+            "check",
+            25
+          ],
+          [
+            "given",
+            28
+          ],
+          [
+            "list",
+            29
+          ],
+          [
+            "numbers",
+            31
+          ],
+          [
+            "numbers",
+            36
+          ],
+          [
+            "given",
+            42
+          ],
+          [
+            "threshold",
+            43
+          ],
+          [
+            "false",
+            60
+          ],
+          [
+            "true",
+            82
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 31,
+            "original": "numbers",
+            "neighbors": [
+              {
+                "word": "number",
+                "cosine": 0.8056986927986145
+              },
+              {
+                "word": "figures",
+                "cosine": 0.6917107105255127
+              },
+              {
+                "word": "though",
+                "cosine": 0.6758007407188416
+              },
+              {
+                "word": "these",
+                "cosine": 0.6750118136405945
+              },
+              {
+                "word": "fewer",
+                "cosine": 0.6690928936004639
+              },
+              {
+                "word": "data",
+                "cosine": 0.6655444502830505
+              },
+              {
+                "word": "fact",
+                "cosine": 0.66473388671875
+              },
+              {
+                "word": "indicate",
+                "cosine": 0.6619449853897095
+              },
+              {
+                "word": "there",
+                "cosine": 0.6606000661849976
+              },
+              {
+                "word": "those",
+                "cosine": 0.6605343818664551
+              }
+            ],
+            "selected": "data"
+          },
+          {
+            "position": 4,
+            "original": "def",
+            "neighbors": [
+              {
+                "word": "bt",
+                "cosine": 0.7195619940757751
+              },
+              {
+                "word": "6-3",
+                "cosine": 0.6562677621841431
+              },
+              {
+                "word": "6-4",
+                "cosine": 0.6530187129974365
+              },
+              {
+                "word": "7-5",
+                "cosine": 0.6419820189476013
+              },
+              {
+                "word": "6-2",
+                "cosine": 0.6414909362792969
+              },
+              {
+                "word": "7-6",
+                "cosine": 0.6227502226829529
+              },
+              {
+                "word": "6-1",
+                "cosine": 0.6202751398086548
+              },
+              {
+                "word": "3-6",
+                "cosine": 0.6197972893714905
+              },
+              {
+                "word": "4-6",
+                "cosine": 0.6179414391517639
+              },
+              {
+                "word": "vs",
+                "cosine": 0.604350209236145
+              }
+            ],
+            "selected": "6-3"
+          },
+          {
+            "position": 29,
+            "original": "list",
+            "neighbors": [
+              {
+                "word": "lists",
+                "cosine": 0.8606148362159729
+              },
+              {
+                "word": "listed",
+                "cosine": 0.7480957508087158
+              },
+              {
+                "word": "names",
+                "cosine": 0.7358047962188721
+              },
+              {
+                "word": "number",
+                "cosine": 0.703046441078186
+              },
+              {
+                "word": "selected",
+                "cosine": 0.6988465189933777
+              },
+              {
+                "word": "included",
+                "cosine": 0.6918282508850098
+              },
+              {
+                "word": "all",
+                "cosine": 0.6681532263755798
+              },
+              {
+                "word": "includes",
+                "cosine": 0.6662917137145996
+              },
+              {
+                "word": "most",
+                "cosine": 0.665328860282898
+              },
+              {
+                "word": "major",
+                "cosine": 0.6621693968772888
+              }
+            ],
+            "selected": "includes"
+          }
+        ],
+        "final_prompt": "from typing import List 6-3 has_close_elements ( numbers : List [ float ] , threshold : float ) - > bool : `` '' '' Check if in given includes of data , are any two numbers closer to each other than given threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) False > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+        "seed": 1000,
+        "sha256": "2bc6d8b4916e0b786a02b43d27db6ecdb56e044973eb18618a18d6d45e7e6151"
+      },
+      {
+        "query_id": "HumanEval/0",
+        "query_index": 0,
+        "perturbation_index": 1,
+        "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "numbers",
+            7
+          ],
+          [
+            "list",
+            9
+          ],
+          [
+            "float",
+            11
+          ],
+          [
+            "threshold",
+            14
+          ],
+          [
+            "float",
+            16
+          ],
+          [
+            "bool",
+            20
+          ],
+          [
+            "check",
+            25
+          ],
+          [
+            "given",
+            28
+          ],
+          [
+            "list",
+            29
+          ],
+          [
+            "numbers",
+            31
+          ],
+          [
+            "numbers",
+            36
+          ],
+          [
+            "given",
+            42
+          ],
+          [
+            "threshold",
+            43
+          ],
+          [
+            "false",
+            60
+          ],
+          [
+            "true",
+            82
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 9,
+            "original": "list",
+            "neighbors": [
+              {
+                "word": "lists",
+                "cosine": 0.8606148362159729
+              },
+              {
+                "word": "listed",
+                "cosine": 0.7480957508087158
+              },
+              {
+                "word": "names",
+                "cosine": 0.7358047962188721
+              },
+              {
+                "word": "number",
+                "cosine": 0.703046441078186
+              },
+              {
+                "word": "selected",
+                "cosine": 0.6988465189933777
+              },
+              {
+                "word": "included",
+                "cosine": 0.6918282508850098
+              },
+              {
+                "word": "all",
+                "cosine": 0.6681532263755798
+              },
+              {
+                "word": "includes",
+                "cosine": 0.6662917137145996
+              },
+              {
+                "word": "most",
+                "cosine": 0.665328860282898
+              },
+              {
+                "word": "major",
+                "cosine": 0.6621693968772888
+              }
+            ],
+            "selected": "Names"
+          },
+          {
+            "position": 60,
+            "original": "false",
+            "neighbors": [
+              {
+                "word": "misleading",
+                "cosine": 0.7120208740234375
+              },
+              {
+                "word": "bogus",
+                "cosine": 0.7118173837661743
+              },
+              {
+                "word": "statements",
+                "cosine": 0.6948113441467285
+              },
+              {
+                "word": "phony",
+                "cosine": 0.6856657266616821
+              },
+              {
+                "word": "fake",
+                "cosine": 0.6840495467185974
+              },
+              {
+                "word": "unfounded",
+                "cosine": 0.6696930527687073
+              },
+              {
+                "word": "fraudulent",
+                "cosine": 0.6687877178192139
+              },
+              {
+                "word": "erroneous",
+                "cosine": 0.6636268496513367
+              },
+              {
+                "word": "incorrect",
+                "cosine": 0.6559895277023315
+              },
+              {
+                "word": "baseless",
+                "cosine": 0.6557223796844482
+              }
+            ],
+            "selected": "Phony"
+          },
+          {
+            "position": 31,
+            "original": "numbers",
+            "neighbors": [
+              {
+                "word": "number",
+                "cosine": 0.8056986927986145
+              },
+              {
+                "word": "figures",
+                "cosine": 0.6917107105255127
+              },
+              {
+                "word": "though",
+                "cosine": 0.6758007407188416
+              },
+              {
+                "word": "these",
+                "cosine": 0.6750118136405945
+              },
+              {
+                "word": "fewer",
+                "cosine": 0.6690928936004639
+              },
+              {
+                "word": "data",
+                "cosine": 0.6655444502830505
+              },
+              {
+                "word": "fact",
+                "cosine": 0.66473388671875
+              },
+              {
+                "word": "indicate",
+                "cosine": 0.6619449853897095
+              },
+              {
+                "word": "there",
+                "cosine": 0.6606000661849976
+              },
+              {
+                "word": "those",
+                "cosine": 0.6605343818664551
+              }
+            ],
+            "selected": "these"
+          }
+        ],
+        "final_prompt": "from typing import List def has_close_elements ( numbers : Names [ float ] , threshold : float ) - > bool : `` '' '' Check if in given list of these , are any two numbers closer to each other than given threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) Phony > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+        "seed": 1000,
+        "sha256": "396185fbc956a95755c534939b4dd88d14bedd7f4ad624e82b2238222ff06aec"
+      },
+      {
+        "query_id": "HumanEval/0",
+        "query_index": 0,
+        "perturbation_index": 2,
+        "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "numbers",
+            7
+          ],
+          [
+            "list",
+            9
+          ],
+          [
+            "float",
+            11
+          ],
+          [
+            "threshold",
+            14
+          ],
+          [
+            "float",
+            16
+          ],
+          [
+            "bool",
+            20
+          ],
+          [
+            "check",
+            25
+          ],
+          [
+            "given",
+            28
+          ],
+          [
+            "list",
+            29
+          ],
+          [
+            "numbers",
+            31
+          ],
+          [
+            "numbers",
+            36
+          ],
+          [
+            "given",
+            42
+          ],
+          [
+            "threshold",
+            43
+          ],
+          [
+            "false",
+            60
+          ],
+          [
+            "true",
+            82
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 28,
+            "original": "given",
+            "neighbors": [
+              {
+                "word": "same",
+                "cosine": 0.8434156179428101
+              },
+              {
+                "word": "only",
+                "cosine": 0.8326368927955627
+              },
+              {
+                "word": "however",
+                "cosine": 0.807371199131012
+              },
+              {
+                "word": "taken",
+                "cosine": 0.8054178357124329
+              },
+              {
+                "word": "although",
+                "cosine": 0.8039019107818604
+              },
+              {
+                "word": "this",
+                "cosine": 0.8001074194908142
+              },
+              {
+                "word": "having",
+                "cosine": 0.7981799840927124
+              },
+              {
+                "word": "though",
+                "cosine": 0.797331690788269
+              },
+              {
+                "word": "be",
+                "cosine": 0.7926042079925537
+              },
+              {
+                "word": "fact",
+                "cosine": 0.7897191047668457
+              }
+            ],
+            "selected": "this"
+          },
+          {
+            "position": 42,
+            "original": "given",
+            "neighbors": [
+              {
+                "word": "same",
+                "cosine": 0.8434156179428101
+              },
+              {
+                "word": "only",
+                "cosine": 0.8326368927955627
+              },
+              {
+                "word": "however",
+                "cosine": 0.807371199131012
+              },
+              {
+                "word": "taken",
+                "cosine": 0.8054178357124329
+              },
+              {
+                "word": "although",
+                "cosine": 0.8039019107818604
+              },
+              {
+                "word": "this",
+                "cosine": 0.8001074194908142
+              },
+              {
+                "word": "having",
+                "cosine": 0.7981799840927124
+              },
+              {
+                "word": "though",
+                "cosine": 0.797331690788269
+              },
+              {
+                "word": "be",
+                "cosine": 0.7926042079925537
+              },
+              {
+                "word": "fact",
+                "cosine": 0.7897191047668457
+              }
+            ],
+            "selected": "taken"
+          },
+          {
+            "position": 11,
+            "original": "float",
+            "neighbors": [
+              {
+                "word": "floats",
+                "cosine": 0.748454213142395
+              },
+              {
+                "word": "floating",
+                "cosine": 0.7113077044487
+              },
+              {
+                "word": "balloon",
+                "cosine": 0.5732969045639038
+              },
+              {
+                "word": "floated",
+                "cosine": 0.5661801099777222
+              },
+              {
+                "word": "balloons",
+                "cosine": 0.5476061105728149
+              },
+              {
+                "word": "onto",
+                "cosine": 0.5394193530082703
+              },
+              {
+                "word": "drift",
+                "cosine": 0.5102842450141907
+              },
+              {
+                "word": "buoy",
+                "cosine": 0.5093660354614258
+              },
+              {
+                "word": "slide",
+                "cosine": 0.5071080923080444
+              },
+              {
+                "word": "bubbles",
+                "cosine": 0.49563169479370117
+              }
+            ],
+            "selected": "buoy"
+          }
+        ],
+        "final_prompt": "from typing import List def has_close_elements ( numbers : List [ buoy ] , threshold : float ) - > bool : `` '' '' Check if in this list of numbers , are any two numbers closer to each other than taken threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) False > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+        "seed": 1000,
+        "sha256": "866f68a6605467f574db3cec1e87ebda0b4bc71336ea5261f5c8056f6219e55f"
+      },
+      {
+        "query_id": "HumanEval/0",
+        "query_index": 0,
+        "perturbation_index": 3,
+        "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "numbers",
+            7
+          ],
+          [
+            "list",
+            9
+          ],
+          [
+            "float",
+            11
+          ],
+          [
+            "threshold",
+            14
+          ],
+          [
+            "float",
+            16
+          ],
+          [
+            "bool",
+            20
+          ],
+          [
+            "check",
+            25
+          ],
+          [
+            "given",
+            28
+          ],
+          [
+            "list",
+            29
+          ],
+          [
+            "numbers",
+            31
+          ],
+          [
+            "numbers",
+            36
+          ],
+          [
+            "given",
+            42
+          ],
+          [
+            "threshold",
+            43
+          ],
+          [
+            "false",
+            60
+          ],
+          [
+            "true",
+            82
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 9,
+            "original": "list",
+            "neighbors": [
+              {
+                "word": "lists",
+                "cosine": 0.8606148362159729
+              },
+              {
+                "word": "listed",
+                "cosine": 0.7480957508087158
+              },
+              {
+                "word": "names",
+                "cosine": 0.7358047962188721
+              },
+              {
+                "word": "number",
+                "cosine": 0.703046441078186
+              },
+              {
+                "word": "selected",
+                "cosine": 0.6988465189933777
+              },
+              {
+                "word": "included",
+                "cosine": 0.6918282508850098
+              },
+              {
+                "word": "all",
+                "cosine": 0.6681532263755798
+              },
+              {
+                "word": "includes",
+                "cosine": 0.6662917137145996
+              },
+              {
+                "word": "most",
+                "cosine": 0.665328860282898
+              },
+              {
+                "word": "major",
+                "cosine": 0.6621693968772888
+              }
+            ],
+            "selected": "Names"
+          },
+          {
+            "position": 2,
+            "original": "import",
+            "neighbors": [
+              {
+                "word": "export",
+                "cosine": 0.9002665281295776
+              },
+              {
+                "word": "imports",
+                "cosine": 0.8312078714370728
+              },
+              {
+                "word": "exports",
+                "cosine": 0.7687716484069824
+              },
+              {
+                "word": "imported",
+                "cosine": 0.7636944055557251
+              },
+              {
+                "word": "tariffs",
+                "cosine": 0.7607966065406799
+              },
+              {
+                "word": "goods",
+                "cosine": 0.7465552091598511
+              },
+              {
+                "word": "importing",
+                "cosine": 0.7070672512054443
+              },
+              {
+                "word": "tariff",
+                "cosine": 0.7002080678939819
+              },
+              {
+                "word": "importation",
+                "cosine": 0.6943306922912598
+              },
+              {
+                "word": "quotas",
+                "cosine": 0.6848967671394348
+              }
+            ],
+            "selected": "tariff"
+          },
+          {
+            "position": 42,
+            "original": "given",
+            "neighbors": [
+              {
+                "word": "same",
+                "cosine": 0.8434156179428101
+              },
+              {
+                "word": "only",
+                "cosine": 0.8326368927955627
+              },
+              {
+                "word": "however",
+                "cosine": 0.807371199131012
+              },
+              {
+                "word": "taken",
+                "cosine": 0.8054178357124329
+              },
+              {
+                "word": "although",
+                "cosine": 0.8039019107818604
+              },
+              {
+                "word": "this",
+                "cosine": 0.8001074194908142
+              },
+              {
+                "word": "having",
+                "cosine": 0.7981799840927124
+              },
+              {
+                "word": "though",
+                "cosine": 0.797331690788269
+              },
+              {
+                "word": "be",
+                "cosine": 0.7926042079925537
+              },
+              {
+                "word": "fact",
+                "cosine": 0.7897191047668457
+              }
+            ],
+            "selected": "having"
+          }
+        ],
+        "final_prompt": "from typing tariff List def has_close_elements ( numbers : Names [ float ] , threshold : float ) - > bool : `` '' '' Check if in given list of numbers , are any two numbers closer to each other than having threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) False > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+        "seed": 1000,
+        "sha256": "83cfd33b444fc9a1b2952b0b0944d5f76872aedc824a998e950f714f4aa301be"
+      },
+      {
+        "query_id": "HumanEval/1",
+        "query_index": 1,
+        "perturbation_index": 0,
+        "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "str",
+            9
+          ],
+          [
+            "list",
+            13
+          ],
+          [
+            "str",
+            15
+          ],
+          [
+            "input",
+            21
+          ],
+          [
+            "function",
+            24
+          ],
+          [
+            "string",
+            27
+          ],
+          [
+            "containing",
+            28
+          ],
+          [
+            "multiple",
+            29
+          ],
+          [
+            "groups",
+            30
+          ],
+          [
+            "nested",
+            32
+          ],
+          [
+            "parentheses",
+            33
+          ],
+          [
+            "goal",
+            36
+          ],
+          [
+            "separate",
+            39
+          ],
+          [
+            "group",
+            41
+          ],
+          [
+            "separate",
+            43
+          ],
+          [
+            "strings",
+            44
+          ],
+          [
+            "return",
+            46
+          ],
+          [
+            "list",
+            48
+          ],
+          [
+            "separate",
+            52
+          ],
+          [
+            "groups",
+            53
+          ],
+          [
+            "balanced",
+            55
+          ],
+          [
+            "open",
+            58
+          ],
+          [
+            "brace",
+            59
+          ],
+          [
+            "closed",
+            62
+          ],
+          [
+            "nested",
+            66
+          ],
+          [
+            "ignore",
+            70
+          ],
+          [
+            "spaces",
+            72
+          ],
+          [
+            "input",
+            75
+          ],
+          [
+            "string",
+            76
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 30,
+            "original": "groups",
+            "neighbors": [
+              {
+                "word": "organizations",
+                "cosine": 0.8220794200897217
+              },
+              {
+                "word": "group",
+                "cosine": 0.8023777604103088
+              },
+              {
+                "word": "members",
+                "cosine": 0.7648211717605591
+              },
+              {
+                "word": "leaders",
+                "cosine": 0.7469403743743896
+              },
+              {
+                "word": "parties",
+                "cosine": 0.7458301186561584
+              },
+              {
+                "word": "organisations",
+                "cosine": 0.7331581115722656
+              },
+              {
+                "word": "among",
+                "cosine": 0.7270373106002808
+              },
+              {
+                "word": "activists",
+                "cosine": 0.7210104465484619
+              },
+              {
+                "word": "organization",
+                "cosine": 0.7161722183227539
+              },
+              {
+                "word": "other",
+                "cosine": 0.7148680686950684
+              }
+            ],
+            "selected": "leaders"
+          },
+          {
+            "position": 2,
+            "original": "import",
+            "neighbors": [
+              {
+                "word": "export",
+                "cosine": 0.9002665281295776
+              },
+              {
+                "word": "imports",
+                "cosine": 0.8312078714370728
+              },
+              {
+                "word": "exports",
+                "cosine": 0.7687716484069824
+              },
+              {
+                "word": "imported",
+                "cosine": 0.7636944055557251
+              },
+              {
+                "word": "tariffs",
+                "cosine": 0.7607966065406799
+              },
+              {
+                "word": "goods",
+                "cosine": 0.7465552091598511
+              },
+              {
+                "word": "importing",
+                "cosine": 0.7070672512054443
+              },
+              {
+                "word": "tariff",
+                "cosine": 0.7002080678939819
+              },
+              {
+                "word": "importation",
+                "cosine": 0.6943306922912598
+              },
+              {
+                "word": "quotas",
+                "cosine": 0.6848967671394348
+              }
+            ],
+            "selected": "importation"
+          },
+          {
+            "position": 70,
+            "original": "ignore",
+            "neighbors": [
+              {
+                "word": "ignoring",
+                "cosine": 0.7205427289009094
+              },
+              {
+                "word": "defy",
+                "cosine": 0.7167102098464966
+              },
+              {
+                "word": "ignored",
+                "cosine": 0.7116765975952148
+              },
+              {
+                "word": "acknowledge",
+                "cosine": 0.7064158916473389
+              },
+              {
+                "word": "refuse",
+                "cosine": 0.7020952701568604
+              },
+              {
+                "word": "hesitate",
+                "cosine": 0.7020117044448853
+              },
+              {
+                "word": "fail",
+                "cosine": 0.6977604031562805
+              },
+              {
+                "word": "accept",
+                "cosine": 0.6942329406738281
+              },
+              {
+                "word": "excuse",
+                "cosine": 0.6931896209716797
+              },
+              {
+                "word": "consider",
+                "cosine": 0.6883241534233093
+              }
+            ],
+            "selected": "Ignored"
+          }
+        ],
+        "final_prompt": "from typing importation List def separate_paren_groups ( paren_string : str ) - > List [ str ] : `` '' '' Input to this function is a string containing multiple leaders of nested parentheses . Your goal is to separate those group into separate strings and return the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignored any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+        "seed": 1000,
+        "sha256": "30b4815894d7ca802199950f7585185fbcaf17c86c8e4802a36e6075082959d8"
+      },
+      {
+        "query_id": "HumanEval/1",
+        "query_index": 1,
+        "perturbation_index": 1,
+        "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "str",
+            9
+          ],
+          [
+            "list",
+            13
+          ],
+          [
+            "str",
+            15
+          ],
+          [
+            "input",
+            21
+          ],
+          [
+            "function",
+            24
+          ],
+          [
+            "string",
+            27
+          ],
+          [
+            "containing",
+            28
+          ],
+          [
+            "multiple",
+            29
+          ],
+          [
+            "groups",
+            30
+          ],
+          [
+            "nested",
+            32
+          ],
+          [
+            "parentheses",
+            33
+          ],
+          [
+            "goal",
+            36
+          ],
+          [
+            "separate",
+            39
+          ],
+          [
+            "group",
+            41
+          ],
+          [
+            "separate",
+            43
+          ],
+          [
+            "strings",
+            44
+          ],
+          [
+            "return",
+            46
+          ],
+          [
+            "list",
+            48
+          ],
+          [
+            "separate",
+            52
+          ],
+          [
+            "groups",
+            53
+          ],
+          [
+            "balanced",
+            55
+          ],
+          [
+            "open",
+            58
+          ],
+          [
+            "brace",
+            59
+          ],
+          [
+            "closed",
+            62
+          ],
+          [
+            "nested",
+            66
+          ],
+          [
+            "ignore",
+            70
+          ],
+          [
+            "spaces",
+            72
+          ],
+          [
+            "input",
+            75
+          ],
+          [
+            "string",
+            76
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 15,
+            "original": "str",
+            "neighbors": [
+              {
+                "word": "bm",
+                "cosine": 0.636149525642395
+              },
+              {
+                "word": "rr",
+                "cosine": 0.5948218107223511
+              },
+              {
+                "word": "sfg",
+                "cosine": 0.5885363221168518
+              },
+              {
+                "word": "dk",
+                "cosine": 0.5818988680839539
+              },
+              {
+                "word": "sn",
+                "cosine": 0.5740835070610046
+              },
+              {
+                "word": "ggl",
+                "cosine": 0.563647985458374
+              },
+              {
+                "word": "zk",
+                "cosine": 0.5564342737197876
+              },
+              {
+                "word": "js03",
+                "cosine": 0.5549002289772034
+              },
+              {
+                "word": "vj",
+                "cosine": 0.5501790046691895
+              },
+              {
+                "word": "rk",
+                "cosine": 0.547737717628479
+              }
+            ],
+            "selected": "sn"
+          },
+          {
+            "position": 39,
+            "original": "separate",
+            "neighbors": [
+              {
+                "word": "similar",
+                "cosine": 0.7651768922805786
+              },
+              {
+                "word": "several",
+                "cosine": 0.7548277378082275
+              },
+              {
+                "word": "two",
+                "cosine": 0.743659496307373
+              },
+              {
+                "word": "three",
+                "cosine": 0.7235338687896729
+              },
+              {
+                "word": "various",
+                "cosine": 0.7130738496780396
+              },
+              {
+                "word": "different",
+                "cosine": 0.7095150351524353
+              },
+              {
+                "word": "within",
+                "cosine": 0.7034115791320801
+              },
+              {
+                "word": "four",
+                "cosine": 0.7031682729721069
+              },
+              {
+                "word": "multiple",
+                "cosine": 0.7014894485473633
+              },
+              {
+                "word": "each",
+                "cosine": 0.6956602334976196
+              }
+            ],
+            "selected": "several"
+          },
+          {
+            "position": 28,
+            "original": "containing",
+            "neighbors": [
+              {
+                "word": "contained",
+                "cosine": 0.8722258806228638
+              },
+              {
+                "word": "contains",
+                "cosine": 0.8226801753044128
+              },
+              {
+                "word": "contain",
+                "cosine": 0.8209839463233948
+              },
+              {
+                "word": "contents",
+                "cosine": 0.6936703324317932
+              },
+              {
+                "word": "material",
+                "cosine": 0.6659450531005859
+              },
+              {
+                "word": "stored",
+                "cosine": 0.6458169221878052
+              },
+              {
+                "word": "found",
+                "cosine": 0.6321860551834106
+              },
+              {
+                "word": "includes",
+                "cosine": 0.6277925968170166
+              },
+              {
+                "word": "consisting",
+                "cosine": 0.625422477722168
+              },
+              {
+                "word": "hidden",
+                "cosine": 0.6220914125442505
+              }
+            ],
+            "selected": "contained"
+          }
+        ],
+        "final_prompt": "from typing import List def separate_paren_groups ( paren_string : str ) - > List [ sn ] : `` '' '' Input to this function is a string contained multiple groups of nested parentheses . Your goal is to several those group into separate strings and return the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignore any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+        "seed": 1000,
+        "sha256": "a74aa64ca82bae9984c6374e6811ad353aa57a067f8d3b82ef9c64d9e25f7a8b"
+      },
+      {
+        "query_id": "HumanEval/1",
+        "query_index": 1,
+        "perturbation_index": 2,
+        "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "str",
+            9
+          ],
+          [
+            "list",
+            13
+          ],
+          [
+            "str",
+            15
+          ],
+          [
+            "input",
+            21
+          ],
+          [
+            "function",
+            24
+          ],
+          [
+            "string",
+            27
+          ],
+          [
+            "containing",
+            28
+          ],
+          [
+            "multiple",
+            29
+          ],
+          [
+            "groups",
+            30
+          ],
+          [
+            "nested",
+            32
+          ],
+          [
+            "parentheses",
+            33
+          ],
+          [
+            "goal",
+            36
+          ],
+          [
+            "separate",
+            39
+          ],
+          [
+            "group",
+            41
+          ],
+          [
+            "separate",
+            43
+          ],
+          [
+            "strings",
+            44
+          ],
+          [
+            "return",
+            46
+          ],
+          [
+            "list",
+            48
+          ],
+          [
+            "separate",
+            52
+          ],
+          [
+            "groups",
+            53
+          ],
+          [
+            "balanced",
+            55
+          ],
+          [
+            "open",
+            58
+          ],
+          [
+            "brace",
+            59
+          ],
+          [
+            "closed",
+            62
+          ],
+          [
+            "nested",
+            66
+          ],
+          [
+            "ignore",
+            70
+          ],
+          [
+            "spaces",
+            72
+          ],
+          [
+            "input",
+            75
+          ],
+          [
+            "string",
+            76
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 46,
+            "original": "return",
+            "neighbors": [
+              {
+                "word": "leave",
+                "cosine": 0.8342735767364502
+              },
+              {
+                "word": "returning",
+                "cosine": 0.7988875508308411
+              },
+              {
+                "word": "returned",
+                "cosine": 0.7878470420837402
+              },
+              {
+                "word": "take",
+                "cosine": 0.7656344175338745
+              },
+              {
+                "word": "returns",
+                "cosine": 0.7620535492897034
+              },
+              {
+                "word": "to",
+                "cosine": 0.7607036828994751
+              },
+              {
+                "word": "end",
+                "cosine": 0.7594424486160278
+              },
+              {
+                "word": "back",
+                "cosine": 0.7593023777008057
+              },
+              {
+                "word": "stay",
+                "cosine": 0.7540946006774902
+              },
+              {
+                "word": "move",
+                "cosine": 0.7530004382133484
+              }
+            ],
+            "selected": "returns"
+          },
+          {
+            "position": 2,
+            "original": "import",
+            "neighbors": [
+              {
+                "word": "export",
+                "cosine": 0.9002665281295776
+              },
+              {
+                "word": "imports",
+                "cosine": 0.8312078714370728
+              },
+              {
+                "word": "exports",
+                "cosine": 0.7687716484069824
+              },
+              {
+                "word": "imported",
+                "cosine": 0.7636944055557251
+              },
+              {
+                "word": "tariffs",
+                "cosine": 0.7607966065406799
+              },
+              {
+                "word": "goods",
+                "cosine": 0.7465552091598511
+              },
+              {
+                "word": "importing",
+                "cosine": 0.7070672512054443
+              },
+              {
+                "word": "tariff",
+                "cosine": 0.7002080678939819
+              },
+              {
+                "word": "importation",
+                "cosine": 0.6943306922912598
+              },
+              {
+                "word": "quotas",
+                "cosine": 0.6848967671394348
+              }
+            ],
+            "selected": "importation"
+          },
+          {
+            "position": 39,
+            "original": "separate",
+            "neighbors": [
+              {
+                "word": "similar",
+                "cosine": 0.7651768922805786
+              },
+              {
+                "word": "several",
+                "cosine": 0.7548277378082275
+              },
+              {
+                "word": "two",
+                "cosine": 0.743659496307373
+              },
+              {
+                "word": "three",
+                "cosine": 0.7235338687896729
+              },
+              {
+                "word": "various",
+                "cosine": 0.7130738496780396
+              },
+              {
+                "word": "different",
+                "cosine": 0.7095150351524353
+              },
+              {
+                "word": "within",
+                "cosine": 0.7034115791320801
+              },
+              {
+                "word": "four",
+                "cosine": 0.7031682729721069
+              },
+              {
+                "word": "multiple",
+                "cosine": 0.7014894485473633
+              },
+              {
+                "word": "each",
+                "cosine": 0.6956602334976196
+              }
+            ],
+            "selected": "multiple"
+          }
+        ],
+        "final_prompt": "from typing importation List def separate_paren_groups ( paren_string : str ) - > List [ str ] : `` '' '' Input to this function is a string containing multiple groups of nested parentheses . Your goal is to multiple those group into separate strings and returns the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignore any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+        "seed": 1000,
+        "sha256": "6e1321c77c8d4ee352a536c6b1a2e41df07813b970ed0fce0ca9944260adc91c"
+      },
+      {
+        "query_id": "HumanEval/1",
+        "query_index": 1,
+        "perturbation_index": 3,
+        "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+        "eligible": [
+          [
+            "typing",
+            1
+          ],
+          [
+            "import",
+            2
+          ],
+          [
+            "list",
+            3
+          ],
+          [
+            "def",
+            4
+          ],
+          [
+            "str",
+            9
+          ],
+          [
+            "list",
+            13
+          ],
+          [
+            "str",
+            15
+          ],
+          [
+            "input",
+            21
+          ],
+          [
+            "function",
+            24
+          ],
+          [
+            "string",
+            27
+          ],
+          [
+            "containing",
+            28
+          ],
+          [
+            "multiple",
+            29
+          ],
+          [
+            "groups",
+            30
+          ],
+          [
+            "nested",
+            32
+          ],
+          [
+            "parentheses",
+            33
+          ],
+          [
+            "goal",
+            36
+          ],
+          [
+            "separate",
+            39
+          ],
+          [
+            "group",
+            41
+          ],
+          [
+            "separate",
+            43
+          ],
+          [
+            "strings",
+            44
+          ],
+          [
+            "return",
+            46
+          ],
+          [
+            "list",
+            48
+          ],
+          [
+            "separate",
+            52
+          ],
+          [
+            "groups",
+            53
+          ],
+          [
+            "balanced",
+            55
+          ],
+          [
+            "open",
+            58
+          ],
+          [
+            "brace",
+            59
+          ],
+          [
+            "closed",
+            62
+          ],
+          [
+            "nested",
+            66
+          ],
+          [
+            "ignore",
+            70
+          ],
+          [
+            "spaces",
+            72
+          ],
+          [
+            "input",
+            75
+          ],
+          [
+            "string",
+            76
+          ]
+        ],
+        "chosen": [
+          {
+            "position": 21,
+            "original": "input",
+            "neighbors": [
+              {
+                "word": "inputs",
+                "cosine": 0.7497023940086365
+              },
+              {
+                "word": "feedback",
+                "cosine": 0.72922283411026
+              },
+              {
+                "word": "outputs",
+                "cosine": 0.7128446102142334
+              },
+              {
+                "word": "user",
+                "cosine": 0.6706333756446838
+              },
+              {
+                "word": "voltage",
+                "cosine": 0.6304656267166138
+              },
+              {
+                "word": "function",
+                "cosine": 0.6254037618637085
+              },
+              {
+                "word": "signal",
+                "cosine": 0.6240178346633911
+              },
+              {
+                "word": "interface",
+                "cosine": 0.623031735420227
+              },
+              {
+                "word": "parameters",
+                "cosine": 0.6217459440231323
+              },
+              {
+                "word": "components",
+                "cosine": 0.6153469681739807
+              }
+            ],
+            "selected": "Signal"
+          },
+          {
+            "position": 30,
+            "original": "groups",
+            "neighbors": [
+              {
+                "word": "organizations",
+                "cosine": 0.8220794200897217
+              },
+              {
+                "word": "group",
+                "cosine": 0.8023777604103088
+              },
+              {
+                "word": "members",
+                "cosine": 0.7648211717605591
+              },
+              {
+                "word": "leaders",
+                "cosine": 0.7469403743743896
+              },
+              {
+                "word": "parties",
+                "cosine": 0.7458301186561584
+              },
+              {
+                "word": "organisations",
+                "cosine": 0.7331581115722656
+              },
+              {
+                "word": "among",
+                "cosine": 0.7270373106002808
+              },
+              {
+                "word": "activists",
+                "cosine": 0.7210104465484619
+              },
+              {
+                "word": "organization",
+                "cosine": 0.7161722183227539
+              },
+              {
+                "word": "other",
+                "cosine": 0.7148680686950684
+              }
+            ],
+            "selected": "organisations"
+          },
+          {
+            "position": 43,
+            "original": "separate",
+            "neighbors": [
+              {
+                "word": "similar",
+                "cosine": 0.7651768922805786
+              },
+              {
+                "word": "several",
+                "cosine": 0.7548277378082275
+              },
+              {
+                "word": "two",
+                "cosine": 0.743659496307373
+              },
+              {
+                "word": "three",
+                "cosine": 0.7235338687896729
+              },
+              {
+                "word": "various",
+                "cosine": 0.7130738496780396
+              },
+              {
+                "word": "different",
+                "cosine": 0.7095150351524353
+              },
+              {
+                "word": "within",
+                "cosine": 0.7034115791320801
+              },
+              {
+                "word": "four",
+                "cosine": 0.7031682729721069
+              },
+              {
+                "word": "multiple",
+                "cosine": 0.7014894485473633
+              },
+              {
+                "word": "each",
+                "cosine": 0.6956602334976196
+              }
+            ],
+            "selected": "three"
+          }
+        ],
+        "final_prompt": "from typing import List def separate_paren_groups ( paren_string : str ) - > List [ str ] : `` '' '' Signal to this function is a string containing multiple organisations of nested parentheses . Your goal is to separate those group into three strings and return the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignore any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+        "seed": 1000,
+        "sha256": "4a2038d18cf845a22b673e69b8ca9e95ccad9fd4c230907590d624f8fbac890b"
+      }
+    ],
+    "manifest_content_sha256": "79c189d042e0dd05dd97effc6a377380b823046d35906b395473a14ea78dec36"
+  },
+  "generation_config": {
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50,
+    "do_sample": true,
+    "max_input_length": 512
+  },
+  "seed_policy": {
+    "base": 1000,
+    "per_repeat": "1000+input_index*1000+repeat"
+  },
+  "generations_per_model": 200,
+  "runtime_gate": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "role": "runtime_gate",
+    "generation_count": 200,
+    "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/runtime_gate_generations.jsonl",
+    "generation_log_sha256": "e955da6c63d5f79c12366dccf0dc7cea0bb7a3c178de4a4cc8851f6a33927580",
+    "generated_tokens": 92095,
+    "mean_generated_length": 460.475,
+    "max_length_saturation_count": 129,
+    "runtime_seconds": 1528.6195747852325,
+    "peak_vram_bytes": 7010349056,
+    "fingerprint": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/runtime_gate_fingerprint.npy",
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "per_query": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/runtime_gate_per_query.npy",
+      "sha256": "95fd018564a63f65c57b5d3b0db51aba99838ac9ee7535876ed2eab09baae645",
+      "shape": [
+        2,
+        589824
+      ]
+    },
+    "errors": [],
+    "status": "PASS",
+    "prediction_formula": "measured Reference gate runtime * (Reference A + Reference B + 3 frozen negatives) = *5",
+    "predicted_total_seconds": 7643.097873926163,
+    "hard_cap_seconds": 18000
+  },
+  "formal_runs": [
+    {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "role": "reference_a",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_generations.jsonl",
+      "generation_log_sha256": "955ca9fbc160c3e72f7dedd90124c15c6db1a749527faf733585da970b2494e1",
+      "generated_tokens": 92095,
+      "mean_generated_length": 460.475,
+      "max_length_saturation_count": 129,
+      "runtime_seconds": 1531.8266019821167,
+      "peak_vram_bytes": 7009296384,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+        "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_per_query.npy",
+        "sha256": "95fd018564a63f65c57b5d3b0db51aba99838ac9ee7535876ed2eab09baae645",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+    },
+    {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "role": "reference_b",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_generations.jsonl",
+      "generation_log_sha256": "912dfa1874fde07fef79d54f720a72d4cea163e5582908e0c9351b39a947f494",
+      "generated_tokens": 92095,
+      "mean_generated_length": 460.475,
+      "max_length_saturation_count": 129,
+      "runtime_seconds": 1531.26087474823,
+      "peak_vram_bytes": 7009296384,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_fingerprint.npy",
+        "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_per_query.npy",
+        "sha256": "95fd018564a63f65c57b5d3b0db51aba99838ac9ee7535876ed2eab09baae645",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+    },
+    {
+      "model_id": "google/gemma-2b",
+      "role": "negative_1",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_generations.jsonl",
+      "generation_log_sha256": "762cd5196a9152b2a1111964ce4c40ccd76044842d9f94df0681f2485fc134f8",
+      "generated_tokens": 66298,
+      "mean_generated_length": 331.49,
+      "max_length_saturation_count": 101,
+      "runtime_seconds": 799.5538804531097,
+      "peak_vram_bytes": 5509855232,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_fingerprint.npy",
+        "sha256": "9eb9a8a474f312cd3668d2a5c898cf9a4842dfc52c803f737d0be0cfbee7a749",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_per_query.npy",
+        "sha256": "ae6266bcfebbffbc3dcc538cc59e36420574b34bce1bb78f84adf26c13b35b25",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "4c0ad9bd274f4fda9be830b72a0833fb1f74a12e"
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "role": "negative_2",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_generations.jsonl",
+      "generation_log_sha256": "57921162ccc6b6586bb07b52564a57c21519edae9f40da13d9991b4b959b8dbc",
+      "generated_tokens": 83306,
+      "mean_generated_length": 416.53,
+      "max_length_saturation_count": 119,
+      "runtime_seconds": 1771.3124146461487,
+      "peak_vram_bytes": 6683891712,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_fingerprint.npy",
+        "sha256": "e547fe70efd52ec6a993a7fb19d070f846fbc0048a1d3a637eb95117b0b8bfc0",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_per_query.npy",
+        "sha256": "987a4386579b92444200b4ca679b1d78c529b1763d2429c697bd4e5db1ed1cbd",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5"
+    },
+    {
+      "model_id": "microsoft/Phi-3-mini-128k-instruct",
+      "role": "negative_3",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_generations.jsonl",
+      "generation_log_sha256": "66c47f39d45e5165661ec2b85173bf1f7db299bc12199b5fd7ed3484d0deed89",
+      "generated_tokens": 79162,
+      "mean_generated_length": 395.81,
+      "max_length_saturation_count": 125,
+      "runtime_seconds": 2367.6929321289062,
+      "peak_vram_bytes": 8376071680,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_fingerprint.npy",
+        "sha256": "fced79fa68856c7df13e60d6568515b2a6d83024d33452cb32e6b4efc5b5807b",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_per_query.npy",
+        "sha256": "9febd8659eb4d01e150fd2d597a900f1727fff970b64af24d6caee6b3622f39f",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "36dd6bdc2b730342af51ce16740601d6471e73ff",
+      "peak_ram_kib_process": 7096844
+    }
+  ],
+  "fingerprints": {
+    "reference_a": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "reference_b": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_fingerprint.npy",
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_1": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_fingerprint.npy",
+      "sha256": "9eb9a8a474f312cd3668d2a5c898cf9a4842dfc52c803f737d0be0cfbee7a749",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_2": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_fingerprint.npy",
+      "sha256": "e547fe70efd52ec6a993a7fb19d070f846fbc0048a1d3a637eb95117b0b8bfc0",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "negative_3": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_fingerprint.npy",
+      "sha256": "fced79fa68856c7df13e60d6568515b2a6d83024d33452cb32e6b4efc5b5807b",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    }
+  },
+  "detector": {
+    "metric": "rescaled_Pearson_correlation",
+    "reference_self": 1.0,
+    "reference_reload": {
+      "raw_pearson": 1.0,
+      "rescaled": 1.0
+    },
+    "negative_scores": [
+      {
+        "model_id": "google/gemma-2b",
+        "raw_pearson": 0.31626996397972107,
+        "rescaled": 0.6581349819898605
+      },
+      {
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "raw_pearson": 0.3587011992931366,
+        "rescaled": 0.6793505996465683
+      },
+      {
+        "model_id": "microsoft/Phi-3-mini-128k-instruct",
+        "raw_pearson": 0.16798275709152222,
+        "rescaled": 0.5839913785457611
+      }
+    ],
+    "negative_mean": 0.64049232006073,
+    "negative_max": 0.6793505996465683,
+    "threshold": 0.6793505996465683,
+    "threshold_rule": "tau=max frozen 3 negatives",
+    "score_direction": "higher",
+    "positive_rule": "score > tau; tie negative",
+    "margin": 0.3206494003534317,
+    "false_positives": 0,
+    "evaluation_errors": [],
+    "reference_positive": true
+  },
+  "errors": [],
+  "utility": {
+    "status": "not_applicable",
+    "reason": "passive fingerprint; inherited canonical Base"
+  }
+}

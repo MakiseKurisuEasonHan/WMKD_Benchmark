@@ -1,0 +1,169 @@
+{
+  "marker": "ZEROPRINT_A2_PROTOCOL_UNIT_TESTS=PASS",
+  "status": "PASS",
+  "tests": {
+    "HumanEval_parser": {
+      "pass": true
+    },
+    "panel_integrity": {
+      "pass": true
+    },
+    "GloVe_neighbors": {
+      "pass": true,
+      "words": {
+        "function": [
+          {
+            "word": "functions",
+            "cosine": 0.8985613584518433
+          },
+          {
+            "word": "i.e.",
+            "cosine": 0.7446132898330688
+          },
+          {
+            "word": "defined",
+            "cosine": 0.7057000994682312
+          },
+          {
+            "word": "functional",
+            "cosine": 0.7029505968093872
+          },
+          {
+            "word": "integral",
+            "cosine": 0.7017703056335449
+          },
+          {
+            "word": "hence",
+            "cosine": 0.7003322839736938
+          },
+          {
+            "word": "parameters",
+            "cosine": 0.6851325631141663
+          },
+          {
+            "word": "therefore",
+            "cosine": 0.6738096475601196
+          },
+          {
+            "word": "thus",
+            "cosine": 0.6666629910469055
+          },
+          {
+            "word": "variables",
+            "cosine": 0.6518825888633728
+          }
+        ],
+        "string": [
+          {
+            "word": "strings",
+            "cosine": 0.6391223073005676
+          },
+          {
+            "word": "trio",
+            "cosine": 0.5943005681037903
+          },
+          {
+            "word": "four",
+            "cosine": 0.5842072367668152
+          },
+          {
+            "word": "recent",
+            "cosine": 0.58031165599823
+          },
+          {
+            "word": "spate",
+            "cosine": 0.5781315565109253
+          },
+          {
+            "word": "series",
+            "cosine": 0.5752578973770142
+          },
+          {
+            "word": "two",
+            "cosine": 0.5750423073768616
+          },
+          {
+            "word": "three",
+            "cosine": 0.5743695497512817
+          },
+          {
+            "word": "similar",
+            "cosine": 0.5730616450309753
+          },
+          {
+            "word": "numerous",
+            "cosine": 0.5729464888572693
+          }
+        ],
+        "number": [
+          {
+            "word": "numbers",
+            "cosine": 0.8056986927986145
+          },
+          {
+            "word": "only",
+            "cosine": 0.7733842730522156
+          },
+          {
+            "word": "many",
+            "cosine": 0.7703728675842285
+          },
+          {
+            "word": "one",
+            "cosine": 0.759405255317688
+          },
+          {
+            "word": "these",
+            "cosine": 0.7517036199569702
+          },
+          {
+            "word": "among",
+            "cosine": 0.7516622543334961
+          },
+          {
+            "word": "some",
+            "cosine": 0.7482312917709351
+          },
+          {
+            "word": "three",
+            "cosine": 0.7445378303527832
+          },
+          {
+            "word": "ten",
+            "cosine": 0.7443461418151855
+          },
+          {
+            "word": "least",
+            "cosine": 0.7437183856964111
+          }
+        ]
+      }
+    },
+    "perturbation_determinism": {
+      "pass": true,
+      "sha256": "79c189d042e0dd05dd97effc6a377380b823046d35906b395473a14ea78dec36"
+    },
+    "MPNet_determinism": {
+      "pass": true,
+      "max_abs_diff": 0.0,
+      "dimension": 768
+    },
+    "ridge_Jacobian": {
+      "pass": true,
+      "max_abs_diff": 0.0,
+      "alpha": 0.001,
+      "orientation": "J=solve(X.T X+alpha I,X.T Y).T"
+    },
+    "Pearson_rescaling": {
+      "pass": true,
+      "test": {
+        "raw_pearson": -1.0,
+        "rescaled": 0.0
+      }
+    },
+    "tiny_end_to_end": {
+      "pass": true,
+      "scientific_result": false
+    }
+  }
+}

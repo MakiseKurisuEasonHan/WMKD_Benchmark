@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "verified_artifacts": {
+    "reference_a": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+      "expected_sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "actual_sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11"
+    },
+    "reference_b": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_fingerprint.npy",
+      "expected_sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "actual_sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11"
+    },
+    "negative_1": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_fingerprint.npy",
+      "expected_sha256": "9eb9a8a474f312cd3668d2a5c898cf9a4842dfc52c803f737d0be0cfbee7a749",
+      "actual_sha256": "9eb9a8a474f312cd3668d2a5c898cf9a4842dfc52c803f737d0be0cfbee7a749"
+    },
+    "negative_2": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_fingerprint.npy",
+      "expected_sha256": "e547fe70efd52ec6a993a7fb19d070f846fbc0048a1d3a637eb95117b0b8bfc0",
+      "actual_sha256": "e547fe70efd52ec6a993a7fb19d070f846fbc0048a1d3a637eb95117b0b8bfc0"
+    }
+  },
+  "protocol_hashes": {
+    "negative_panel_manifest.json": "4b97b0dfc4960adeb638282b51ec69c50cec1e8b46d8422b40712eb63d5f31e8",
+    "perturbation_manifest.json": "d5316e4f92546e5b676c03e1717a5f35b43b279a361f65f8bcce6ebb862e8ea2",
+    "unit_test_results.json": "1822a9ba1b01e5c47888c5a74d488d450fee39ca802aa852e293bf6f5ce0e406",
+    "runtime_gate.json": "574832cad6309f25fd47a7dddf5980576b40f98a1f006b79bda70979f515bed8",
+    "generation_manifest.json": "f2e6602eaeba2909fcea1fb81202e11868b100e82f6c3d9d9bb8023588f81ab1"
+  }
+}

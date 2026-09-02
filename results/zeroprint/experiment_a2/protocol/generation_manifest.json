@@ -1,0 +1,155 @@
+{
+  "runs": [
+    {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "role": "reference_a",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_generations.jsonl",
+      "generation_log_sha256": "955ca9fbc160c3e72f7dedd90124c15c6db1a749527faf733585da970b2494e1",
+      "generated_tokens": 92095,
+      "mean_generated_length": 460.475,
+      "max_length_saturation_count": 129,
+      "runtime_seconds": 1531.8266019821167,
+      "peak_vram_bytes": 7009296384,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+        "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_per_query.npy",
+        "sha256": "95fd018564a63f65c57b5d3b0db51aba99838ac9ee7535876ed2eab09baae645",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+    },
+    {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "role": "reference_b",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_generations.jsonl",
+      "generation_log_sha256": "912dfa1874fde07fef79d54f720a72d4cea163e5582908e0c9351b39a947f494",
+      "generated_tokens": 92095,
+      "mean_generated_length": 460.475,
+      "max_length_saturation_count": 129,
+      "runtime_seconds": 1531.26087474823,
+      "peak_vram_bytes": 7009296384,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_fingerprint.npy",
+        "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_b_per_query.npy",
+        "sha256": "95fd018564a63f65c57b5d3b0db51aba99838ac9ee7535876ed2eab09baae645",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+    },
+    {
+      "model_id": "google/gemma-2b",
+      "role": "negative_1",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_generations.jsonl",
+      "generation_log_sha256": "762cd5196a9152b2a1111964ce4c40ccd76044842d9f94df0681f2485fc134f8",
+      "generated_tokens": 66298,
+      "mean_generated_length": 331.49,
+      "max_length_saturation_count": 101,
+      "runtime_seconds": 799.5538804531097,
+      "peak_vram_bytes": 5509855232,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_fingerprint.npy",
+        "sha256": "9eb9a8a474f312cd3668d2a5c898cf9a4842dfc52c803f737d0be0cfbee7a749",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_1_per_query.npy",
+        "sha256": "ae6266bcfebbffbc3dcc538cc59e36420574b34bce1bb78f84adf26c13b35b25",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "4c0ad9bd274f4fda9be830b72a0833fb1f74a12e"
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "role": "negative_2",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_generations.jsonl",
+      "generation_log_sha256": "57921162ccc6b6586bb07b52564a57c21519edae9f40da13d9991b4b959b8dbc",
+      "generated_tokens": 83306,
+      "mean_generated_length": 416.53,
+      "max_length_saturation_count": 119,
+      "runtime_seconds": 1771.3124146461487,
+      "peak_vram_bytes": 6683891712,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_fingerprint.npy",
+        "sha256": "e547fe70efd52ec6a993a7fb19d070f846fbc0048a1d3a637eb95117b0b8bfc0",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/negative_2_per_query.npy",
+        "sha256": "987a4386579b92444200b4ca679b1d78c529b1763d2429c697bd4e5db1ed1cbd",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5"
+    },
+    {
+      "model_id": "microsoft/Phi-3-mini-128k-instruct",
+      "role": "negative_3",
+      "generation_count": 200,
+      "generation_log": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_generations.jsonl",
+      "generation_log_sha256": "66c47f39d45e5165661ec2b85173bf1f7db299bc12199b5fd7ed3484d0deed89",
+      "generated_tokens": 79162,
+      "mean_generated_length": 395.81,
+      "max_length_saturation_count": 125,
+      "runtime_seconds": 2367.6929321289062,
+      "peak_vram_bytes": 8376071680,
+      "fingerprint": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_fingerprint.npy",
+        "sha256": "fced79fa68856c7df13e60d6568515b2a6d83024d33452cb32e6b4efc5b5807b",
+        "shape": [
+          589824
+        ],
+        "dtype": "float32"
+      },
+      "per_query": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_phi_cont4_20260902_104000/negative_3_per_query.npy",
+        "sha256": "9febd8659eb4d01e150fd2d597a900f1727fff970b64af24d6caee6b3622f39f",
+        "shape": [
+          2,
+          589824
+        ]
+      },
+      "errors": [],
+      "revision": "36dd6bdc2b730342af51ce16740601d6471e73ff",
+      "peak_ram_kib_process": 7096844
+    }
+  ]
+}

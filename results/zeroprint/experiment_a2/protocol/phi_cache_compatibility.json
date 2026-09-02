@@ -1,0 +1,89 @@
+{
+  "classification": "TRANSFORMERS_MODEL_CODE_CACHE_COMPATIBILITY_FAILURE",
+  "transformers_version": "4.55.2",
+  "torch_version": "2.8.0+cu128",
+  "phi_custom_modeling_path": "/root/.cache/huggingface/modules/transformers_modules/master/modeling_phi3.py",
+  "trust_remote_code": true,
+  "root_cause": "Pinned Phi code reads removed DynamicCache.seen_tokens API",
+  "repair": {
+    "required": true,
+    "scope": "continuation process only",
+    "mappings": [
+      {
+        "old_api": "DynamicCache.seen_tokens",
+        "current_equivalent": "DynamicCache.get_seq_length()",
+        "return_type": "int",
+        "semantic_justification": "number of previously cached sequence positions"
+      },
+      {
+        "old_api": "DynamicCache.get_max_length()",
+        "current_equivalent": "None for an unbounded DynamicCache",
+        "return_type": "NoneType",
+        "example_value": null,
+        "semantic_justification": "Transformers 4.40.2 DynamicCache explicitly returned None because a dynamically growing cache has no maximum capacity"
+      },
+      {
+        "old_api": "DynamicCache.get_usable_length(new_seq_length, layer_idx=0)",
+        "current_equivalent": "DynamicCache.get_seq_length(layer_idx) for an unbounded dynamic cache",
+        "return_type": "int",
+        "semantic_justification": "Transformers 4.40.2 returned the full previous sequence length whenever get_max_length() was None"
+      }
+    ],
+    "old_source": "huggingface/transformers v4.40.2 src/transformers/cache_utils.py",
+    "current_source": "transformers 4.55.2 transformers/cache_utils.py",
+    "static_phi_cache_api_scan": {
+      "get_seq_length": "native current API",
+      "update": "native current API",
+      "from_legacy_cache": "native current API",
+      "to_legacy_cache": "native current API",
+      "seen_tokens": "compatibility property",
+      "get_max_length": "compatibility method returning None",
+      "get_usable_length": "compatibility method returning current sequence length for DynamicCache"
+    }
+  },
+  "tests": {
+    "status": "PASS",
+    "engineering_smoke_generated_tokens": 4,
+    "cache_seq_length_after_prompt": 7,
+    "cache_seq_length_after_one_decode_step": 8,
+    "cache_growth_correct": true,
+    "greedy_cached_token_ids": [
+      822,
+      788,
+      29898,
+      29874,
+      29892,
+      289,
+      1125,
+      13,
+      4706,
+      736,
+      263,
+      718,
+      289,
+      13,
+      13
+    ],
+    "greedy_uncached_token_ids": [
+      822,
+      788,
+      29898,
+      29874,
+      29892,
+      289,
+      1125,
+      13,
+      4706,
+      736,
+      263,
+      718,
+      289,
+      13,
+      13
+    ],
+    "deterministic_token_ids_equal": true,
+    "formal_scientific_evidence": false
+  },
+  "scientific_adaptation": false,
+  "generation_protocol_changed": false
+}

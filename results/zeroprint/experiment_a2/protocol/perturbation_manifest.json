@@ -1,0 +1,2071 @@
+{
+  "schema_version": "wmkd.zeroprint-a2-perturbations.v1",
+  "algorithm": "pinned official NLTK POS eligibility; random.sample 3 positions; random.choice from top-10 GloVe neighbors; sequential deterministic seed 1000",
+  "rows": [
+    {
+      "query_id": "HumanEval/0",
+      "query_index": 0,
+      "perturbation_index": 0,
+      "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "numbers",
+          7
+        ],
+        [
+          "list",
+          9
+        ],
+        [
+          "float",
+          11
+        ],
+        [
+          "threshold",
+          14
+        ],
+        [
+          "float",
+          16
+        ],
+        [
+          "bool",
+          20
+        ],
+        [
+          "check",
+          25
+        ],
+        [
+          "given",
+          28
+        ],
+        [
+          "list",
+          29
+        ],
+        [
+          "numbers",
+          31
+        ],
+        [
+          "numbers",
+          36
+        ],
+        [
+          "given",
+          42
+        ],
+        [
+          "threshold",
+          43
+        ],
+        [
+          "false",
+          60
+        ],
+        [
+          "true",
+          82
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 31,
+          "original": "numbers",
+          "neighbors": [
+            {
+              "word": "number",
+              "cosine": 0.8056986927986145
+            },
+            {
+              "word": "figures",
+              "cosine": 0.6917107105255127
+            },
+            {
+              "word": "though",
+              "cosine": 0.6758007407188416
+            },
+            {
+              "word": "these",
+              "cosine": 0.6750118136405945
+            },
+            {
+              "word": "fewer",
+              "cosine": 0.6690928936004639
+            },
+            {
+              "word": "data",
+              "cosine": 0.6655444502830505
+            },
+            {
+              "word": "fact",
+              "cosine": 0.66473388671875
+            },
+            {
+              "word": "indicate",
+              "cosine": 0.6619449853897095
+            },
+            {
+              "word": "there",
+              "cosine": 0.6606000661849976
+            },
+            {
+              "word": "those",
+              "cosine": 0.6605343818664551
+            }
+          ],
+          "selected": "data"
+        },
+        {
+          "position": 4,
+          "original": "def",
+          "neighbors": [
+            {
+              "word": "bt",
+              "cosine": 0.7195619940757751
+            },
+            {
+              "word": "6-3",
+              "cosine": 0.6562677621841431
+            },
+            {
+              "word": "6-4",
+              "cosine": 0.6530187129974365
+            },
+            {
+              "word": "7-5",
+              "cosine": 0.6419820189476013
+            },
+            {
+              "word": "6-2",
+              "cosine": 0.6414909362792969
+            },
+            {
+              "word": "7-6",
+              "cosine": 0.6227502226829529
+            },
+            {
+              "word": "6-1",
+              "cosine": 0.6202751398086548
+            },
+            {
+              "word": "3-6",
+              "cosine": 0.6197972893714905
+            },
+            {
+              "word": "4-6",
+              "cosine": 0.6179414391517639
+            },
+            {
+              "word": "vs",
+              "cosine": 0.604350209236145
+            }
+          ],
+          "selected": "6-3"
+        },
+        {
+          "position": 29,
+          "original": "list",
+          "neighbors": [
+            {
+              "word": "lists",
+              "cosine": 0.8606148362159729
+            },
+            {
+              "word": "listed",
+              "cosine": 0.7480957508087158
+            },
+            {
+              "word": "names",
+              "cosine": 0.7358047962188721
+            },
+            {
+              "word": "number",
+              "cosine": 0.703046441078186
+            },
+            {
+              "word": "selected",
+              "cosine": 0.6988465189933777
+            },
+            {
+              "word": "included",
+              "cosine": 0.6918282508850098
+            },
+            {
+              "word": "all",
+              "cosine": 0.6681532263755798
+            },
+            {
+              "word": "includes",
+              "cosine": 0.6662917137145996
+            },
+            {
+              "word": "most",
+              "cosine": 0.665328860282898
+            },
+            {
+              "word": "major",
+              "cosine": 0.6621693968772888
+            }
+          ],
+          "selected": "includes"
+        }
+      ],
+      "final_prompt": "from typing import List 6-3 has_close_elements ( numbers : List [ float ] , threshold : float ) - > bool : `` '' '' Check if in given includes of data , are any two numbers closer to each other than given threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) False > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+      "seed": 1000,
+      "sha256": "2bc6d8b4916e0b786a02b43d27db6ecdb56e044973eb18618a18d6d45e7e6151"
+    },
+    {
+      "query_id": "HumanEval/0",
+      "query_index": 0,
+      "perturbation_index": 1,
+      "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "numbers",
+          7
+        ],
+        [
+          "list",
+          9
+        ],
+        [
+          "float",
+          11
+        ],
+        [
+          "threshold",
+          14
+        ],
+        [
+          "float",
+          16
+        ],
+        [
+          "bool",
+          20
+        ],
+        [
+          "check",
+          25
+        ],
+        [
+          "given",
+          28
+        ],
+        [
+          "list",
+          29
+        ],
+        [
+          "numbers",
+          31
+        ],
+        [
+          "numbers",
+          36
+        ],
+        [
+          "given",
+          42
+        ],
+        [
+          "threshold",
+          43
+        ],
+        [
+          "false",
+          60
+        ],
+        [
+          "true",
+          82
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 9,
+          "original": "list",
+          "neighbors": [
+            {
+              "word": "lists",
+              "cosine": 0.8606148362159729
+            },
+            {
+              "word": "listed",
+              "cosine": 0.7480957508087158
+            },
+            {
+              "word": "names",
+              "cosine": 0.7358047962188721
+            },
+            {
+              "word": "number",
+              "cosine": 0.703046441078186
+            },
+            {
+              "word": "selected",
+              "cosine": 0.6988465189933777
+            },
+            {
+              "word": "included",
+              "cosine": 0.6918282508850098
+            },
+            {
+              "word": "all",
+              "cosine": 0.6681532263755798
+            },
+            {
+              "word": "includes",
+              "cosine": 0.6662917137145996
+            },
+            {
+              "word": "most",
+              "cosine": 0.665328860282898
+            },
+            {
+              "word": "major",
+              "cosine": 0.6621693968772888
+            }
+          ],
+          "selected": "Names"
+        },
+        {
+          "position": 60,
+          "original": "false",
+          "neighbors": [
+            {
+              "word": "misleading",
+              "cosine": 0.7120208740234375
+            },
+            {
+              "word": "bogus",
+              "cosine": 0.7118173837661743
+            },
+            {
+              "word": "statements",
+              "cosine": 0.6948113441467285
+            },
+            {
+              "word": "phony",
+              "cosine": 0.6856657266616821
+            },
+            {
+              "word": "fake",
+              "cosine": 0.6840495467185974
+            },
+            {
+              "word": "unfounded",
+              "cosine": 0.6696930527687073
+            },
+            {
+              "word": "fraudulent",
+              "cosine": 0.6687877178192139
+            },
+            {
+              "word": "erroneous",
+              "cosine": 0.6636268496513367
+            },
+            {
+              "word": "incorrect",
+              "cosine": 0.6559895277023315
+            },
+            {
+              "word": "baseless",
+              "cosine": 0.6557223796844482
+            }
+          ],
+          "selected": "Phony"
+        },
+        {
+          "position": 31,
+          "original": "numbers",
+          "neighbors": [
+            {
+              "word": "number",
+              "cosine": 0.8056986927986145
+            },
+            {
+              "word": "figures",
+              "cosine": 0.6917107105255127
+            },
+            {
+              "word": "though",
+              "cosine": 0.6758007407188416
+            },
+            {
+              "word": "these",
+              "cosine": 0.6750118136405945
+            },
+            {
+              "word": "fewer",
+              "cosine": 0.6690928936004639
+            },
+            {
+              "word": "data",
+              "cosine": 0.6655444502830505
+            },
+            {
+              "word": "fact",
+              "cosine": 0.66473388671875
+            },
+            {
+              "word": "indicate",
+              "cosine": 0.6619449853897095
+            },
+            {
+              "word": "there",
+              "cosine": 0.6606000661849976
+            },
+            {
+              "word": "those",
+              "cosine": 0.6605343818664551
+            }
+          ],
+          "selected": "these"
+        }
+      ],
+      "final_prompt": "from typing import List def has_close_elements ( numbers : Names [ float ] , threshold : float ) - > bool : `` '' '' Check if in given list of these , are any two numbers closer to each other than given threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) Phony > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+      "seed": 1000,
+      "sha256": "396185fbc956a95755c534939b4dd88d14bedd7f4ad624e82b2238222ff06aec"
+    },
+    {
+      "query_id": "HumanEval/0",
+      "query_index": 0,
+      "perturbation_index": 2,
+      "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "numbers",
+          7
+        ],
+        [
+          "list",
+          9
+        ],
+        [
+          "float",
+          11
+        ],
+        [
+          "threshold",
+          14
+        ],
+        [
+          "float",
+          16
+        ],
+        [
+          "bool",
+          20
+        ],
+        [
+          "check",
+          25
+        ],
+        [
+          "given",
+          28
+        ],
+        [
+          "list",
+          29
+        ],
+        [
+          "numbers",
+          31
+        ],
+        [
+          "numbers",
+          36
+        ],
+        [
+          "given",
+          42
+        ],
+        [
+          "threshold",
+          43
+        ],
+        [
+          "false",
+          60
+        ],
+        [
+          "true",
+          82
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 28,
+          "original": "given",
+          "neighbors": [
+            {
+              "word": "same",
+              "cosine": 0.8434156179428101
+            },
+            {
+              "word": "only",
+              "cosine": 0.8326368927955627
+            },
+            {
+              "word": "however",
+              "cosine": 0.807371199131012
+            },
+            {
+              "word": "taken",
+              "cosine": 0.8054178357124329
+            },
+            {
+              "word": "although",
+              "cosine": 0.8039019107818604
+            },
+            {
+              "word": "this",
+              "cosine": 0.8001074194908142
+            },
+            {
+              "word": "having",
+              "cosine": 0.7981799840927124
+            },
+            {
+              "word": "though",
+              "cosine": 0.797331690788269
+            },
+            {
+              "word": "be",
+              "cosine": 0.7926042079925537
+            },
+            {
+              "word": "fact",
+              "cosine": 0.7897191047668457
+            }
+          ],
+          "selected": "this"
+        },
+        {
+          "position": 42,
+          "original": "given",
+          "neighbors": [
+            {
+              "word": "same",
+              "cosine": 0.8434156179428101
+            },
+            {
+              "word": "only",
+              "cosine": 0.8326368927955627
+            },
+            {
+              "word": "however",
+              "cosine": 0.807371199131012
+            },
+            {
+              "word": "taken",
+              "cosine": 0.8054178357124329
+            },
+            {
+              "word": "although",
+              "cosine": 0.8039019107818604
+            },
+            {
+              "word": "this",
+              "cosine": 0.8001074194908142
+            },
+            {
+              "word": "having",
+              "cosine": 0.7981799840927124
+            },
+            {
+              "word": "though",
+              "cosine": 0.797331690788269
+            },
+            {
+              "word": "be",
+              "cosine": 0.7926042079925537
+            },
+            {
+              "word": "fact",
+              "cosine": 0.7897191047668457
+            }
+          ],
+          "selected": "taken"
+        },
+        {
+          "position": 11,
+          "original": "float",
+          "neighbors": [
+            {
+              "word": "floats",
+              "cosine": 0.748454213142395
+            },
+            {
+              "word": "floating",
+              "cosine": 0.7113077044487
+            },
+            {
+              "word": "balloon",
+              "cosine": 0.5732969045639038
+            },
+            {
+              "word": "floated",
+              "cosine": 0.5661801099777222
+            },
+            {
+              "word": "balloons",
+              "cosine": 0.5476061105728149
+            },
+            {
+              "word": "onto",
+              "cosine": 0.5394193530082703
+            },
+            {
+              "word": "drift",
+              "cosine": 0.5102842450141907
+            },
+            {
+              "word": "buoy",
+              "cosine": 0.5093660354614258
+            },
+            {
+              "word": "slide",
+              "cosine": 0.5071080923080444
+            },
+            {
+              "word": "bubbles",
+              "cosine": 0.49563169479370117
+            }
+          ],
+          "selected": "buoy"
+        }
+      ],
+      "final_prompt": "from typing import List def has_close_elements ( numbers : List [ buoy ] , threshold : float ) - > bool : `` '' '' Check if in this list of numbers , are any two numbers closer to each other than taken threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) False > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+      "seed": 1000,
+      "sha256": "866f68a6605467f574db3cec1e87ebda0b4bc71336ea5261f5c8056f6219e55f"
+    },
+    {
+      "query_id": "HumanEval/0",
+      "query_index": 0,
+      "perturbation_index": 3,
+      "original_prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "numbers",
+          7
+        ],
+        [
+          "list",
+          9
+        ],
+        [
+          "float",
+          11
+        ],
+        [
+          "threshold",
+          14
+        ],
+        [
+          "float",
+          16
+        ],
+        [
+          "bool",
+          20
+        ],
+        [
+          "check",
+          25
+        ],
+        [
+          "given",
+          28
+        ],
+        [
+          "list",
+          29
+        ],
+        [
+          "numbers",
+          31
+        ],
+        [
+          "numbers",
+          36
+        ],
+        [
+          "given",
+          42
+        ],
+        [
+          "threshold",
+          43
+        ],
+        [
+          "false",
+          60
+        ],
+        [
+          "true",
+          82
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 9,
+          "original": "list",
+          "neighbors": [
+            {
+              "word": "lists",
+              "cosine": 0.8606148362159729
+            },
+            {
+              "word": "listed",
+              "cosine": 0.7480957508087158
+            },
+            {
+              "word": "names",
+              "cosine": 0.7358047962188721
+            },
+            {
+              "word": "number",
+              "cosine": 0.703046441078186
+            },
+            {
+              "word": "selected",
+              "cosine": 0.6988465189933777
+            },
+            {
+              "word": "included",
+              "cosine": 0.6918282508850098
+            },
+            {
+              "word": "all",
+              "cosine": 0.6681532263755798
+            },
+            {
+              "word": "includes",
+              "cosine": 0.6662917137145996
+            },
+            {
+              "word": "most",
+              "cosine": 0.665328860282898
+            },
+            {
+              "word": "major",
+              "cosine": 0.6621693968772888
+            }
+          ],
+          "selected": "Names"
+        },
+        {
+          "position": 2,
+          "original": "import",
+          "neighbors": [
+            {
+              "word": "export",
+              "cosine": 0.9002665281295776
+            },
+            {
+              "word": "imports",
+              "cosine": 0.8312078714370728
+            },
+            {
+              "word": "exports",
+              "cosine": 0.7687716484069824
+            },
+            {
+              "word": "imported",
+              "cosine": 0.7636944055557251
+            },
+            {
+              "word": "tariffs",
+              "cosine": 0.7607966065406799
+            },
+            {
+              "word": "goods",
+              "cosine": 0.7465552091598511
+            },
+            {
+              "word": "importing",
+              "cosine": 0.7070672512054443
+            },
+            {
+              "word": "tariff",
+              "cosine": 0.7002080678939819
+            },
+            {
+              "word": "importation",
+              "cosine": 0.6943306922912598
+            },
+            {
+              "word": "quotas",
+              "cosine": 0.6848967671394348
+            }
+          ],
+          "selected": "tariff"
+        },
+        {
+          "position": 42,
+          "original": "given",
+          "neighbors": [
+            {
+              "word": "same",
+              "cosine": 0.8434156179428101
+            },
+            {
+              "word": "only",
+              "cosine": 0.8326368927955627
+            },
+            {
+              "word": "however",
+              "cosine": 0.807371199131012
+            },
+            {
+              "word": "taken",
+              "cosine": 0.8054178357124329
+            },
+            {
+              "word": "although",
+              "cosine": 0.8039019107818604
+            },
+            {
+              "word": "this",
+              "cosine": 0.8001074194908142
+            },
+            {
+              "word": "having",
+              "cosine": 0.7981799840927124
+            },
+            {
+              "word": "though",
+              "cosine": 0.797331690788269
+            },
+            {
+              "word": "be",
+              "cosine": 0.7926042079925537
+            },
+            {
+              "word": "fact",
+              "cosine": 0.7897191047668457
+            }
+          ],
+          "selected": "having"
+        }
+      ],
+      "final_prompt": "from typing tariff List def has_close_elements ( numbers : Names [ float ] , threshold : float ) - > bool : `` '' '' Check if in given list of numbers , are any two numbers closer to each other than having threshold . > > > has_close_elements ( [ 1.0 , 2.0 , 3.0 ] , 0.5 ) False > > > has_close_elements ( [ 1.0 , 2.8 , 3.0 , 4.0 , 5.0 , 2.0 ] , 0.3 ) True `` '' ''",
+      "seed": 1000,
+      "sha256": "83cfd33b444fc9a1b2952b0b0944d5f76872aedc824a998e950f714f4aa301be"
+    },
+    {
+      "query_id": "HumanEval/1",
+      "query_index": 1,
+      "perturbation_index": 0,
+      "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "str",
+          9
+        ],
+        [
+          "list",
+          13
+        ],
+        [
+          "str",
+          15
+        ],
+        [
+          "input",
+          21
+        ],
+        [
+          "function",
+          24
+        ],
+        [
+          "string",
+          27
+        ],
+        [
+          "containing",
+          28
+        ],
+        [
+          "multiple",
+          29
+        ],
+        [
+          "groups",
+          30
+        ],
+        [
+          "nested",
+          32
+        ],
+        [
+          "parentheses",
+          33
+        ],
+        [
+          "goal",
+          36
+        ],
+        [
+          "separate",
+          39
+        ],
+        [
+          "group",
+          41
+        ],
+        [
+          "separate",
+          43
+        ],
+        [
+          "strings",
+          44
+        ],
+        [
+          "return",
+          46
+        ],
+        [
+          "list",
+          48
+        ],
+        [
+          "separate",
+          52
+        ],
+        [
+          "groups",
+          53
+        ],
+        [
+          "balanced",
+          55
+        ],
+        [
+          "open",
+          58
+        ],
+        [
+          "brace",
+          59
+        ],
+        [
+          "closed",
+          62
+        ],
+        [
+          "nested",
+          66
+        ],
+        [
+          "ignore",
+          70
+        ],
+        [
+          "spaces",
+          72
+        ],
+        [
+          "input",
+          75
+        ],
+        [
+          "string",
+          76
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 30,
+          "original": "groups",
+          "neighbors": [
+            {
+              "word": "organizations",
+              "cosine": 0.8220794200897217
+            },
+            {
+              "word": "group",
+              "cosine": 0.8023777604103088
+            },
+            {
+              "word": "members",
+              "cosine": 0.7648211717605591
+            },
+            {
+              "word": "leaders",
+              "cosine": 0.7469403743743896
+            },
+            {
+              "word": "parties",
+              "cosine": 0.7458301186561584
+            },
+            {
+              "word": "organisations",
+              "cosine": 0.7331581115722656
+            },
+            {
+              "word": "among",
+              "cosine": 0.7270373106002808
+            },
+            {
+              "word": "activists",
+              "cosine": 0.7210104465484619
+            },
+            {
+              "word": "organization",
+              "cosine": 0.7161722183227539
+            },
+            {
+              "word": "other",
+              "cosine": 0.7148680686950684
+            }
+          ],
+          "selected": "leaders"
+        },
+        {
+          "position": 2,
+          "original": "import",
+          "neighbors": [
+            {
+              "word": "export",
+              "cosine": 0.9002665281295776
+            },
+            {
+              "word": "imports",
+              "cosine": 0.8312078714370728
+            },
+            {
+              "word": "exports",
+              "cosine": 0.7687716484069824
+            },
+            {
+              "word": "imported",
+              "cosine": 0.7636944055557251
+            },
+            {
+              "word": "tariffs",
+              "cosine": 0.7607966065406799
+            },
+            {
+              "word": "goods",
+              "cosine": 0.7465552091598511
+            },
+            {
+              "word": "importing",
+              "cosine": 0.7070672512054443
+            },
+            {
+              "word": "tariff",
+              "cosine": 0.7002080678939819
+            },
+            {
+              "word": "importation",
+              "cosine": 0.6943306922912598
+            },
+            {
+              "word": "quotas",
+              "cosine": 0.6848967671394348
+            }
+          ],
+          "selected": "importation"
+        },
+        {
+          "position": 70,
+          "original": "ignore",
+          "neighbors": [
+            {
+              "word": "ignoring",
+              "cosine": 0.7205427289009094
+            },
+            {
+              "word": "defy",
+              "cosine": 0.7167102098464966
+            },
+            {
+              "word": "ignored",
+              "cosine": 0.7116765975952148
+            },
+            {
+              "word": "acknowledge",
+              "cosine": 0.7064158916473389
+            },
+            {
+              "word": "refuse",
+              "cosine": 0.7020952701568604
+            },
+            {
+              "word": "hesitate",
+              "cosine": 0.7020117044448853
+            },
+            {
+              "word": "fail",
+              "cosine": 0.6977604031562805
+            },
+            {
+              "word": "accept",
+              "cosine": 0.6942329406738281
+            },
+            {
+              "word": "excuse",
+              "cosine": 0.6931896209716797
+            },
+            {
+              "word": "consider",
+              "cosine": 0.6883241534233093
+            }
+          ],
+          "selected": "Ignored"
+        }
+      ],
+      "final_prompt": "from typing importation List def separate_paren_groups ( paren_string : str ) - > List [ str ] : `` '' '' Input to this function is a string containing multiple leaders of nested parentheses . Your goal is to separate those group into separate strings and return the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignored any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+      "seed": 1000,
+      "sha256": "30b4815894d7ca802199950f7585185fbcaf17c86c8e4802a36e6075082959d8"
+    },
+    {
+      "query_id": "HumanEval/1",
+      "query_index": 1,
+      "perturbation_index": 1,
+      "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "str",
+          9
+        ],
+        [
+          "list",
+          13
+        ],
+        [
+          "str",
+          15
+        ],
+        [
+          "input",
+          21
+        ],
+        [
+          "function",
+          24
+        ],
+        [
+          "string",
+          27
+        ],
+        [
+          "containing",
+          28
+        ],
+        [
+          "multiple",
+          29
+        ],
+        [
+          "groups",
+          30
+        ],
+        [
+          "nested",
+          32
+        ],
+        [
+          "parentheses",
+          33
+        ],
+        [
+          "goal",
+          36
+        ],
+        [
+          "separate",
+          39
+        ],
+        [
+          "group",
+          41
+        ],
+        [
+          "separate",
+          43
+        ],
+        [
+          "strings",
+          44
+        ],
+        [
+          "return",
+          46
+        ],
+        [
+          "list",
+          48
+        ],
+        [
+          "separate",
+          52
+        ],
+        [
+          "groups",
+          53
+        ],
+        [
+          "balanced",
+          55
+        ],
+        [
+          "open",
+          58
+        ],
+        [
+          "brace",
+          59
+        ],
+        [
+          "closed",
+          62
+        ],
+        [
+          "nested",
+          66
+        ],
+        [
+          "ignore",
+          70
+        ],
+        [
+          "spaces",
+          72
+        ],
+        [
+          "input",
+          75
+        ],
+        [
+          "string",
+          76
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 15,
+          "original": "str",
+          "neighbors": [
+            {
+              "word": "bm",
+              "cosine": 0.636149525642395
+            },
+            {
+              "word": "rr",
+              "cosine": 0.5948218107223511
+            },
+            {
+              "word": "sfg",
+              "cosine": 0.5885363221168518
+            },
+            {
+              "word": "dk",
+              "cosine": 0.5818988680839539
+            },
+            {
+              "word": "sn",
+              "cosine": 0.5740835070610046
+            },
+            {
+              "word": "ggl",
+              "cosine": 0.563647985458374
+            },
+            {
+              "word": "zk",
+              "cosine": 0.5564342737197876
+            },
+            {
+              "word": "js03",
+              "cosine": 0.5549002289772034
+            },
+            {
+              "word": "vj",
+              "cosine": 0.5501790046691895
+            },
+            {
+              "word": "rk",
+              "cosine": 0.547737717628479
+            }
+          ],
+          "selected": "sn"
+        },
+        {
+          "position": 39,
+          "original": "separate",
+          "neighbors": [
+            {
+              "word": "similar",
+              "cosine": 0.7651768922805786
+            },
+            {
+              "word": "several",
+              "cosine": 0.7548277378082275
+            },
+            {
+              "word": "two",
+              "cosine": 0.743659496307373
+            },
+            {
+              "word": "three",
+              "cosine": 0.7235338687896729
+            },
+            {
+              "word": "various",
+              "cosine": 0.7130738496780396
+            },
+            {
+              "word": "different",
+              "cosine": 0.7095150351524353
+            },
+            {
+              "word": "within",
+              "cosine": 0.7034115791320801
+            },
+            {
+              "word": "four",
+              "cosine": 0.7031682729721069
+            },
+            {
+              "word": "multiple",
+              "cosine": 0.7014894485473633
+            },
+            {
+              "word": "each",
+              "cosine": 0.6956602334976196
+            }
+          ],
+          "selected": "several"
+        },
+        {
+          "position": 28,
+          "original": "containing",
+          "neighbors": [
+            {
+              "word": "contained",
+              "cosine": 0.8722258806228638
+            },
+            {
+              "word": "contains",
+              "cosine": 0.8226801753044128
+            },
+            {
+              "word": "contain",
+              "cosine": 0.8209839463233948
+            },
+            {
+              "word": "contents",
+              "cosine": 0.6936703324317932
+            },
+            {
+              "word": "material",
+              "cosine": 0.6659450531005859
+            },
+            {
+              "word": "stored",
+              "cosine": 0.6458169221878052
+            },
+            {
+              "word": "found",
+              "cosine": 0.6321860551834106
+            },
+            {
+              "word": "includes",
+              "cosine": 0.6277925968170166
+            },
+            {
+              "word": "consisting",
+              "cosine": 0.625422477722168
+            },
+            {
+              "word": "hidden",
+              "cosine": 0.6220914125442505
+            }
+          ],
+          "selected": "contained"
+        }
+      ],
+      "final_prompt": "from typing import List def separate_paren_groups ( paren_string : str ) - > List [ sn ] : `` '' '' Input to this function is a string contained multiple groups of nested parentheses . Your goal is to several those group into separate strings and return the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignore any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+      "seed": 1000,
+      "sha256": "a74aa64ca82bae9984c6374e6811ad353aa57a067f8d3b82ef9c64d9e25f7a8b"
+    },
+    {
+      "query_id": "HumanEval/1",
+      "query_index": 1,
+      "perturbation_index": 2,
+      "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "str",
+          9
+        ],
+        [
+          "list",
+          13
+        ],
+        [
+          "str",
+          15
+        ],
+        [
+          "input",
+          21
+        ],
+        [
+          "function",
+          24
+        ],
+        [
+          "string",
+          27
+        ],
+        [
+          "containing",
+          28
+        ],
+        [
+          "multiple",
+          29
+        ],
+        [
+          "groups",
+          30
+        ],
+        [
+          "nested",
+          32
+        ],
+        [
+          "parentheses",
+          33
+        ],
+        [
+          "goal",
+          36
+        ],
+        [
+          "separate",
+          39
+        ],
+        [
+          "group",
+          41
+        ],
+        [
+          "separate",
+          43
+        ],
+        [
+          "strings",
+          44
+        ],
+        [
+          "return",
+          46
+        ],
+        [
+          "list",
+          48
+        ],
+        [
+          "separate",
+          52
+        ],
+        [
+          "groups",
+          53
+        ],
+        [
+          "balanced",
+          55
+        ],
+        [
+          "open",
+          58
+        ],
+        [
+          "brace",
+          59
+        ],
+        [
+          "closed",
+          62
+        ],
+        [
+          "nested",
+          66
+        ],
+        [
+          "ignore",
+          70
+        ],
+        [
+          "spaces",
+          72
+        ],
+        [
+          "input",
+          75
+        ],
+        [
+          "string",
+          76
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 46,
+          "original": "return",
+          "neighbors": [
+            {
+              "word": "leave",
+              "cosine": 0.8342735767364502
+            },
+            {
+              "word": "returning",
+              "cosine": 0.7988875508308411
+            },
+            {
+              "word": "returned",
+              "cosine": 0.7878470420837402
+            },
+            {
+              "word": "take",
+              "cosine": 0.7656344175338745
+            },
+            {
+              "word": "returns",
+              "cosine": 0.7620535492897034
+            },
+            {
+              "word": "to",
+              "cosine": 0.7607036828994751
+            },
+            {
+              "word": "end",
+              "cosine": 0.7594424486160278
+            },
+            {
+              "word": "back",
+              "cosine": 0.7593023777008057
+            },
+            {
+              "word": "stay",
+              "cosine": 0.7540946006774902
+            },
+            {
+              "word": "move",
+              "cosine": 0.7530004382133484
+            }
+          ],
+          "selected": "returns"
+        },
+        {
+          "position": 2,
+          "original": "import",
+          "neighbors": [
+            {
+              "word": "export",
+              "cosine": 0.9002665281295776
+            },
+            {
+              "word": "imports",
+              "cosine": 0.8312078714370728
+            },
+            {
+              "word": "exports",
+              "cosine": 0.7687716484069824
+            },
+            {
+              "word": "imported",
+              "cosine": 0.7636944055557251
+            },
+            {
+              "word": "tariffs",
+              "cosine": 0.7607966065406799
+            },
+            {
+              "word": "goods",
+              "cosine": 0.7465552091598511
+            },
+            {
+              "word": "importing",
+              "cosine": 0.7070672512054443
+            },
+            {
+              "word": "tariff",
+              "cosine": 0.7002080678939819
+            },
+            {
+              "word": "importation",
+              "cosine": 0.6943306922912598
+            },
+            {
+              "word": "quotas",
+              "cosine": 0.6848967671394348
+            }
+          ],
+          "selected": "importation"
+        },
+        {
+          "position": 39,
+          "original": "separate",
+          "neighbors": [
+            {
+              "word": "similar",
+              "cosine": 0.7651768922805786
+            },
+            {
+              "word": "several",
+              "cosine": 0.7548277378082275
+            },
+            {
+              "word": "two",
+              "cosine": 0.743659496307373
+            },
+            {
+              "word": "three",
+              "cosine": 0.7235338687896729
+            },
+            {
+              "word": "various",
+              "cosine": 0.7130738496780396
+            },
+            {
+              "word": "different",
+              "cosine": 0.7095150351524353
+            },
+            {
+              "word": "within",
+              "cosine": 0.7034115791320801
+            },
+            {
+              "word": "four",
+              "cosine": 0.7031682729721069
+            },
+            {
+              "word": "multiple",
+              "cosine": 0.7014894485473633
+            },
+            {
+              "word": "each",
+              "cosine": 0.6956602334976196
+            }
+          ],
+          "selected": "multiple"
+        }
+      ],
+      "final_prompt": "from typing importation List def separate_paren_groups ( paren_string : str ) - > List [ str ] : `` '' '' Input to this function is a string containing multiple groups of nested parentheses . Your goal is to multiple those group into separate strings and returns the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignore any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+      "seed": 1000,
+      "sha256": "6e1321c77c8d4ee352a536c6b1a2e41df07813b970ed0fce0ca9944260adc91c"
+    },
+    {
+      "query_id": "HumanEval/1",
+      "query_index": 1,
+      "perturbation_index": 3,
+      "original_prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+      "eligible": [
+        [
+          "typing",
+          1
+        ],
+        [
+          "import",
+          2
+        ],
+        [
+          "list",
+          3
+        ],
+        [
+          "def",
+          4
+        ],
+        [
+          "str",
+          9
+        ],
+        [
+          "list",
+          13
+        ],
+        [
+          "str",
+          15
+        ],
+        [
+          "input",
+          21
+        ],
+        [
+          "function",
+          24
+        ],
+        [
+          "string",
+          27
+        ],
+        [
+          "containing",
+          28
+        ],
+        [
+          "multiple",
+          29
+        ],
+        [
+          "groups",
+          30
+        ],
+        [
+          "nested",
+          32
+        ],
+        [
+          "parentheses",
+          33
+        ],
+        [
+          "goal",
+          36
+        ],
+        [
+          "separate",
+          39
+        ],
+        [
+          "group",
+          41
+        ],
+        [
+          "separate",
+          43
+        ],
+        [
+          "strings",
+          44
+        ],
+        [
+          "return",
+          46
+        ],
+        [
+          "list",
+          48
+        ],
+        [
+          "separate",
+          52
+        ],
+        [
+          "groups",
+          53
+        ],
+        [
+          "balanced",
+          55
+        ],
+        [
+          "open",
+          58
+        ],
+        [
+          "brace",
+          59
+        ],
+        [
+          "closed",
+          62
+        ],
+        [
+          "nested",
+          66
+        ],
+        [
+          "ignore",
+          70
+        ],
+        [
+          "spaces",
+          72
+        ],
+        [
+          "input",
+          75
+        ],
+        [
+          "string",
+          76
+        ]
+      ],
+      "chosen": [
+        {
+          "position": 21,
+          "original": "input",
+          "neighbors": [
+            {
+              "word": "inputs",
+              "cosine": 0.7497023940086365
+            },
+            {
+              "word": "feedback",
+              "cosine": 0.72922283411026
+            },
+            {
+              "word": "outputs",
+              "cosine": 0.7128446102142334
+            },
+            {
+              "word": "user",
+              "cosine": 0.6706333756446838
+            },
+            {
+              "word": "voltage",
+              "cosine": 0.6304656267166138
+            },
+            {
+              "word": "function",
+              "cosine": 0.6254037618637085
+            },
+            {
+              "word": "signal",
+              "cosine": 0.6240178346633911
+            },
+            {
+              "word": "interface",
+              "cosine": 0.623031735420227
+            },
+            {
+              "word": "parameters",
+              "cosine": 0.6217459440231323
+            },
+            {
+              "word": "components",
+              "cosine": 0.6153469681739807
+            }
+          ],
+          "selected": "Signal"
+        },
+        {
+          "position": 30,
+          "original": "groups",
+          "neighbors": [
+            {
+              "word": "organizations",
+              "cosine": 0.8220794200897217
+            },
+            {
+              "word": "group",
+              "cosine": 0.8023777604103088
+            },
+            {
+              "word": "members",
+              "cosine": 0.7648211717605591
+            },
+            {
+              "word": "leaders",
+              "cosine": 0.7469403743743896
+            },
+            {
+              "word": "parties",
+              "cosine": 0.7458301186561584
+            },
+            {
+              "word": "organisations",
+              "cosine": 0.7331581115722656
+            },
+            {
+              "word": "among",
+              "cosine": 0.7270373106002808
+            },
+            {
+              "word": "activists",
+              "cosine": 0.7210104465484619
+            },
+            {
+              "word": "organization",
+              "cosine": 0.7161722183227539
+            },
+            {
+              "word": "other",
+              "cosine": 0.7148680686950684
+            }
+          ],
+          "selected": "organisations"
+        },
+        {
+          "position": 43,
+          "original": "separate",
+          "neighbors": [
+            {
+              "word": "similar",
+              "cosine": 0.7651768922805786
+            },
+            {
+              "word": "several",
+              "cosine": 0.7548277378082275
+            },
+            {
+              "word": "two",
+              "cosine": 0.743659496307373
+            },
+            {
+              "word": "three",
+              "cosine": 0.7235338687896729
+            },
+            {
+              "word": "various",
+              "cosine": 0.7130738496780396
+            },
+            {
+              "word": "different",
+              "cosine": 0.7095150351524353
+            },
+            {
+              "word": "within",
+              "cosine": 0.7034115791320801
+            },
+            {
+              "word": "four",
+              "cosine": 0.7031682729721069
+            },
+            {
+              "word": "multiple",
+              "cosine": 0.7014894485473633
+            },
+            {
+              "word": "each",
+              "cosine": 0.6956602334976196
+            }
+          ],
+          "selected": "three"
+        }
+      ],
+      "final_prompt": "from typing import List def separate_paren_groups ( paren_string : str ) - > List [ str ] : `` '' '' Signal to this function is a string containing multiple organisations of nested parentheses . Your goal is to separate those group into three strings and return the list of those . Separate groups are balanced ( each open brace is properly closed ) and not nested within each other Ignore any spaces in the input string . > > > separate_paren_groups ( ' ( ) ( ( ) ) ( ( ) ( ) ) ' ) [ ' ( ) ' , ' ( ( ) ) ' , ' ( ( ) ( ) ) ' ] `` '' ''",
+      "seed": 1000,
+      "sha256": "4a2038d18cf845a22b673e69b8ca9e95ccad9fd4c230907590d624f8fbac890b"
+    }
+  ],
+  "manifest_content_sha256": "79c189d042e0dd05dd97effc6a377380b823046d35906b395473a14ea78dec36"
+}

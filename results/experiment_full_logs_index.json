@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-01T21:12:32.223877+00:00",
-  "object_count": 14,
+  "generated_at": "2026-09-02T03:19:28.855697+00:00",
+  "object_count": 15,
   "objects": [
     {
       "method": "PN-FP",
@@ -222,6 +222,24 @@
       "summary_sha256": "166f383f358c68d68db04e8e2bd30cede4558ee8f6e907e9b680799127539b99",
       "report_path": "docs/reproduction_reports/awm_experiment_a_report.md",
       "artifact_manifest_path": "results/awm/experiment_a/artifact_manifest.json",
+      "scientific_status": "SUCCESSFUL",
+      "artifact_type": "fingerprint_package",
+      "model_modified": false,
+      "preferred_fingerprint": "yes",
+      "utility_available": false,
+      "ba_status": "NOT_STARTED"
+    },
+    {
+      "method": "ZeroPrint",
+      "role": "preferred_fingerprint",
+      "experiment": "A2",
+      "run_id": "zeroprint_a2_phi_cont4_20260902_104000",
+      "full_log_path": "results/zeroprint/experiment_a2/full_experiment_log.json",
+      "full_log_sha256": "42a80a7af1667675fec68e64128fd6d72276318fe2c551857efdf527f71ebb0e",
+      "summary_path": "results/zeroprint/experiment_a2/summary.json",
+      "summary_sha256": "2889618b843219a7de965108aabb05217b57763a14472ec1475faf3c3721afce",
+      "report_path": "docs/reproduction_reports/zeroprint_experiment_a2_report.md",
+      "artifact_manifest_path": "results/zeroprint/experiment_a2/artifact_manifest.json",
       "scientific_status": "SUCCESSFUL",
       "artifact_type": "fingerprint_package",
       "model_modified": false,
