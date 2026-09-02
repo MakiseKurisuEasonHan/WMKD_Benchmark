@@ -61296,5 +61296,80 @@
     "status": "not_applicable",
     "reason": "passive fingerprint; inherited canonical Base"
   },
-  "failures": []
+  "failures": [],
+  "project": "WMKD_Benchmark",
+  "final_run_id": "huref_a2_20260902_044726_cont3",
+  "scientific_status": "SUCCESSFUL",
+  "preferred_artifact": "yes",
+  "model_identity": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_modified": false
+  },
+  "tokenizer_and_template": {
+    "identity": "canonical model tokenizer",
+    "template": "canonical chat template when generation applies",
+    "evidence": "see provenance/artifact manifests; no tokenizer scientific adaptation"
+  },
+  "dataset_identity": {
+    "identity": "existing WMKD SCW A2 role1 English instruct-prefix corpus",
+    "source": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/scw_a2/role1/instruct-prefix-64m.jsonl",
+    "source_sha256": "7941ff7400a0d24e626c3e4d95bb56698da645f7ce471f737fd34dd95bd22600",
+    "manifest_content_sha256": "6bac33d8fbf3436595337c57f4689a8e7f62032f6309c2f10661aa3057b3f590",
+    "documents": 10000
+  },
+  "scientific_configuration": {
+    "protocol": "same frozen corpus plus deterministic tokenizer-specific top-K=4096; last two layers; WqWk/WvWo/WuWd; official joint mean pooling; ICS",
+    "original_configuration_fields_preserved": true
+  },
+  "runtime_configuration": {
+    "fresh_reload": true,
+    "scientific_configuration_changed_by_closure_audit": false,
+    "evidence": "existing formal artifacts and manifests only; no rerun in final closure audit"
+  },
+  "runtime_effectiveness_evidence": {
+    "status": "PASS",
+    "reference_score": 99.99999237060547,
+    "frozen_threshold": 4.119894027709961,
+    "false_positives": "0/3"
+  },
+  "method_specific_protocol": "same frozen corpus plus deterministic tokenizer-specific top-K=4096; last two layers; WqWk/WvWo/WuWd; official joint mean pooling; ICS",
+  "native_metrics": {
+    "reference_score": 99.99999237060547,
+    "frozen_threshold": 4.119894027709961,
+    "false_positives": "0/3",
+    "detector_results_path": "results/huref/experiment_a2/detector_results.json",
+    "detector_results_sha256": "6c66245ed8c28f27a5afe0ec699d5947a80ee44d67ecd12e31c5ff969ac8c8de"
+  },
+  "reference_result": {
+    "native_score": 99.99999237060547,
+    "detected": true
+  },
+  "positive_negative_decision": {
+    "reference_positive": true,
+    "false_positives": "0/3"
+  },
+  "errors": [],
+  "limitations": [
+    "A2 changes token selection to tokenizer-specific top-K; A and A-cont1 remain NOT_JUDGED history."
+  ],
+  "runtime_resources": {
+    "runtime_seconds": 35.49918246269226,
+    "peak_vram_bytes": 8028559360,
+    "peak_ram_kib": 6072944,
+    "disk_free_gb": 287.4666061401367
+  },
+  "artifact_paths_and_shas": {
+    "path": "results/huref/experiment_a2/artifact_manifest.json",
+    "sha256": "85b56691319607f317a323576949624aa142428cdd2679ee294fd7e4fcf3d7b8"
+  },
+  "provenance_manifest": {
+    "path": "results/huref/experiment_a2/provenance_manifest.json",
+    "sha256": "3bc1fe5c9561f701e6bd69209ad062e44cc20f7594505d251cafaf30af8f2079"
+  },
+  "git_provenance": {
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e",
+    "note": "The commit containing this JSON is recorded by Git history; embedding its own final commit hash would be self-referential."
+  },
+  "final_bounded_conclusion": "HuRef core reproduction successful under the WMKD A2 tokenizer-specific top-K protocol"
 }

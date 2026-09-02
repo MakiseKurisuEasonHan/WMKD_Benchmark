@@ -197,5 +197,12 @@
       "dtype": "float32"
     }
   },
-  "integrity": "PASS"
+  "integrity": "PASS",
+  "closure_audit": {
+    "integrity": "PASS",
+    "large_artifacts_policy": "external path/hash only; do not copy to Git",
+    "detector_results_sha256": "e52f304737ed1dde942943bd4a38891bfab472d86a0cf1503c67b537d5e6e66c",
+    "provenance_manifest_sha256": "13094b6b815e15b4330e1ed9f0550dc62e456847b2f39be823026eb273344d02",
+    "no_artifact_deleted": true
+  }
 }

@@ -332,5 +332,276 @@
     "REASMARK",
     "other attacks"
   ],
-  "completed_at": "2026-09-02T09:27:33.707016+00:00"
+  "completed_at": "2026-09-02T09:27:33.707016+00:00",
+  "project": "WMKD_Benchmark",
+  "method": "Passive-5 Shared",
+  "final_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+  "scientific_conclusion": "Five of five frozen passive ownership detectors remained positive after the tested same-backbone direct-distillation attack.",
+  "preferred_artifact": "not_applicable_shared_attack",
+  "artifact_type": "shared_attack_evaluation_package",
+  "model_identity": {
+    "teacher": "meta-llama/Llama-3.2-3B-Instruct",
+    "teacher_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model"
+  },
+  "tokenizer_and_template": {
+    "student_reload": "PASS",
+    "chat_template_present": true,
+    "tokenizer_class": "PreTrainedTokenizerFast"
+  },
+  "dataset_identity": {
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "manifest": "results/passive5_shared_ba/teacher_dataset_manifest.json"
+  },
+  "scientific_configuration": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false,
+    "per_device_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 8,
+    "max_length": 1024,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "expected_steps": 7500,
+    "checkpoint_retention": {
+      "save_total_limit": 1,
+      "keep_final_model": true
+    }
+  },
+  "runtime_configuration": {
+    "evaluation_order": [
+      "reload validation",
+      "shared utility",
+      "LLMPrint",
+      "REEF",
+      "HuRef",
+      "AWM",
+      "ZeroPrint"
+    ],
+    "auto_shutdown": false,
+    "no_science_rerun_in_closure": true
+  },
+  "runtime_effectiveness_evidence": {
+    "reload": "PASS",
+    "inference_smoke": "PASS",
+    "nonfinite_parameters": 0,
+    "retained_count": 5,
+    "method_count": 5
+  },
+  "method_specific_protocol": "One immutable same-backbone direct-distillation Student evaluated under five independently frozen A/A2 passive detectors without recalibration.",
+  "detector": {
+    "schema_version": "wmkd.passive5-shared-ba-detector-summary.v1",
+    "run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+    "parent_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "shared_student": true,
+    "shared_student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "status": "COMPLETED",
+    "retained_count": 5,
+    "method_count": 5,
+    "all_evaluation_errors_resolved": true,
+    "methods": [
+      {
+        "method": "LLMPrint",
+        "native_metric": "primary paper-style bit accuracy",
+        "reference_score": 1.0,
+        "threshold": 0.7150049776126003,
+        "reference_detected": true,
+        "student_score": 0.82,
+        "student_detected": true,
+        "positive_rule": "score >= threshold",
+        "valid_count": 200,
+        "correct_bits": 164,
+        "student_sequence_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/llmprint/student_probability_sequence.json",
+        "student_sequence_sha256": "6932aaf0f4d4a4d36cc67dbfb180ea500e0d5cdb64cb892e4bfaa4dad154fdcb",
+        "errors": []
+      },
+      {
+        "method": "REEF",
+        "native_metric": "centered linear CKA",
+        "reference_score": 1.0,
+        "threshold": 0.4546738923165847,
+        "reference_detected": true,
+        "student_score": 0.9542220066305829,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/reef/detector_result.json",
+        "evaluation_sha256": "a1175c763600be8d8f5cae3b9deb64e7bbe49174ccdcbbbeb6a7edcb6d9e912e"
+      },
+      {
+        "method": "HuRef",
+        "native_metric": "ICS",
+        "reference_score": 99.99999237060547,
+        "threshold": 4.119894027709961,
+        "reference_detected": true,
+        "student_score": 99.99898529052734,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/huref/detector_result.json",
+        "evaluation_sha256": "28713037594855b6e5108ab0f9b175f7396142e685901582370668c969d94602"
+      },
+      {
+        "method": "AWM",
+        "native_metric": "official mean Wq/Wk unbiased linear CKA",
+        "reference_score": 1.0,
+        "threshold": 0.0017953364917795106,
+        "reference_detected": true,
+        "student_score": 0.9999974135841643,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/awm/detector_result.json",
+        "evaluation_sha256": "c4d116759f2ef6670c2f5610025d264f5d8d489798beacf451a8b4c5c5a80db9"
+      },
+      {
+        "method": "ZeroPrint",
+        "native_metric": "rescaled Pearson correlation",
+        "reference_score": 1.0,
+        "threshold": 0.6793505996465683,
+        "reference_detected": true,
+        "student_score": 0.8399372696876526,
+        "student_raw_pearson": 0.6798745393753052,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/zeroprint/detector_result.json",
+        "evaluation_sha256": "2b097124581de70578ccc242624051cfed2cfe5a02412dcc399cb0bace22fd7a"
+      }
+    ],
+    "bounded_conclusion": "Ownership detectability remained positive under all 5/5 frozen passive-method detectors after the tested direct-distillation attack; this does not establish general robustness beyond these frozen protocols."
+  },
+  "frozen_thresholds": {
+    "LLMPrint": 0.7150049776126003,
+    "REEF": 0.4546738923165847,
+    "HuRef": 4.119894027709961,
+    "AWM": 0.0017953364917795106,
+    "ZeroPrint": 0.6793505996465683
+  },
+  "native_metrics": [
+    {
+      "method": "LLMPrint",
+      "native_metric": "primary paper-style bit accuracy",
+      "reference_score": 1.0,
+      "threshold": 0.7150049776126003,
+      "reference_detected": true,
+      "student_score": 0.82,
+      "student_detected": true,
+      "positive_rule": "score >= threshold",
+      "valid_count": 200,
+      "correct_bits": 164,
+      "student_sequence_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/llmprint/student_probability_sequence.json",
+      "student_sequence_sha256": "6932aaf0f4d4a4d36cc67dbfb180ea500e0d5cdb64cb892e4bfaa4dad154fdcb",
+      "errors": []
+    },
+    {
+      "method": "REEF",
+      "native_metric": "centered linear CKA",
+      "reference_score": 1.0,
+      "threshold": 0.4546738923165847,
+      "reference_detected": true,
+      "student_score": 0.9542220066305829,
+      "student_detected": true,
+      "positive_rule": "score > threshold",
+      "errors": [],
+      "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/reef/detector_result.json",
+      "evaluation_sha256": "a1175c763600be8d8f5cae3b9deb64e7bbe49174ccdcbbbeb6a7edcb6d9e912e"
+    },
+    {
+      "method": "HuRef",
+      "native_metric": "ICS",
+      "reference_score": 99.99999237060547,
+      "threshold": 4.119894027709961,
+      "reference_detected": true,
+      "student_score": 99.99898529052734,
+      "student_detected": true,
+      "positive_rule": "score > threshold",
+      "errors": [],
+      "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/huref/detector_result.json",
+      "evaluation_sha256": "28713037594855b6e5108ab0f9b175f7396142e685901582370668c969d94602"
+    },
+    {
+      "method": "AWM",
+      "native_metric": "official mean Wq/Wk unbiased linear CKA",
+      "reference_score": 1.0,
+      "threshold": 0.0017953364917795106,
+      "reference_detected": true,
+      "student_score": 0.9999974135841643,
+      "student_detected": true,
+      "positive_rule": "score > threshold",
+      "errors": [],
+      "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/awm/detector_result.json",
+      "evaluation_sha256": "c4d116759f2ef6670c2f5610025d264f5d8d489798beacf451a8b4c5c5a80db9"
+    },
+    {
+      "method": "ZeroPrint",
+      "native_metric": "rescaled Pearson correlation",
+      "reference_score": 1.0,
+      "threshold": 0.6793505996465683,
+      "reference_detected": true,
+      "student_score": 0.8399372696876526,
+      "student_raw_pearson": 0.6798745393753052,
+      "student_detected": true,
+      "positive_rule": "score > threshold",
+      "errors": [],
+      "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/zeroprint/detector_result.json",
+      "evaluation_sha256": "2b097124581de70578ccc242624051cfed2cfe5a02412dcc399cb0bace22fd7a"
+    }
+  ],
+  "reference_result": {
+    "all_five_detected_before_kd": true
+  },
+  "student_result": {
+    "retained_count": 5,
+    "method_count": 5,
+    "all_detected": true
+  },
+  "positive_negative_decision": "5/5 ownership detectability retained",
+  "errors": [],
+  "limitations": [
+    "The Shared Student uses the same canonical pretrained backbone/initialization family as the Reference.",
+    "5/5 retained is bounded to this tested same-backbone direct-distillation setting; it does not prove immunity to KD or newly transferred fingerprints.",
+    "Teacher total generation tokens across extension rounds are NOT RECOVERABLE FROM PERSISTED TELEMETRY."
+  ],
+  "runtime_resources": {
+    "training_runtime_seconds": 1964.5366,
+    "training_peak_vram_bytes": 32223305216,
+    "reload_peak_vram_bytes": 10005877760
+  },
+  "artifact_paths_and_shas": {
+    "training_summary": {
+      "path": "results/passive5_shared_ba/training_summary.json",
+      "sha256": "ab5a9457b4cb0578e912dfbbb70a96464390a03ebc070ccad077fa590e80c86e"
+    },
+    "detector_summary": {
+      "path": "results/passive5_shared_ba/detector_summary.json",
+      "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1"
+    },
+    "student_manifest": {
+      "path": "results/passive5_shared_ba/student_manifest.json",
+      "sha256": "e739d58fff44fe1b04e527222f1c0e0a3c1b1313eb261e6b9c0684f413dd2c42"
+    }
+  },
+  "provenance": {
+    "teacher_dataset_manifest": {
+      "path": "results/passive5_shared_ba/teacher_dataset_manifest.json",
+      "sha256": "7e5c66b45d1973ad65fc1818c6c6117d1e8fe45904de1723144a9c025b41d1c4"
+    },
+    "utility": {
+      "path": "results/passive5_shared_ba/utility_results.json",
+      "sha256": "9a33cb147aa87f77b27f1a39eddefdf6851fc0a3df8c754d39c429443c1d50df"
+    }
+  },
+  "git_provenance": {
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e",
+    "note": "Containing commit is available from Git history; self-hash is not embedded."
+  },
+  "final_bounded_conclusion": "Under the tested same-backbone direct-distillation setting, all five frozen passive ownership detectors remained positive; no general KD immunity or newly transferred fingerprint is established."
 }

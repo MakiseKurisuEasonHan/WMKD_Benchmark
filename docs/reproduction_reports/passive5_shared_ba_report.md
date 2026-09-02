@@ -34,3 +34,9 @@ ZeroPrint Student raw Pearson: 0.679874539375; rescaled similarity: 0.8399372696
 ## Bounded conclusion
 
 All five passive ownership fingerprints remained detectable after this tested direct-distillation attack under their already-frozen WMKD A/A2 detectors. This does not imply universal robustness to other attacks, models, datasets, thresholds, or detector variants, and the native scores are not “watermark retention percentages.” No detector was recalibrated using the Student.
+
+## Final wording and integrity audit
+
+<!-- PASSIVE5_SHARED_BA_FINAL_WORDING_AUDIT_20260902 -->
+
+The Shared Student uses the same canonical pretrained backbone/initialization family as the Reference. Therefore, 5/5 retained means only that ownership detectability remained positive under the tested same-backbone direct-distillation setting. It does not prove that passive fingerprints are immune to knowledge distillation or that a fingerprint was newly transferred from Teacher to Student.

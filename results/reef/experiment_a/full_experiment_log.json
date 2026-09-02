@@ -204,5 +204,73 @@
     "status": "not_applicable",
     "reason": "passive fingerprint; utility inherited from unmodified canonical Base"
   },
-  "archive": "deferred"
+  "archive": "deferred",
+  "project": "WMKD_Benchmark",
+  "final_run_id": "reef_a_protocol_cont1_20260901_202500",
+  "scientific_status": "SUCCESSFUL",
+  "preferred_artifact": "yes",
+  "model_identity": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_modified": false
+  },
+  "tokenizer_and_template": {
+    "identity": "canonical model tokenizer",
+    "template": "canonical chat template when generation applies",
+    "evidence": "see provenance/artifact manifests; no tokenizer scientific adaptation"
+  },
+  "dataset_identity": {
+    "status": "method-specific frozen inputs recorded in existing canonical fields and provenance manifest"
+  },
+  "scientific_configuration": {
+    "protocol": "model.layers.27 raw forward-hook output[0] at last token over 200 frozen TruthfulQA probes; centered linear CKA",
+    "original_configuration_fields_preserved": true
+  },
+  "runtime_configuration": {
+    "fresh_reload": true,
+    "scientific_configuration_changed_by_closure_audit": false,
+    "evidence": "existing formal artifacts and manifests only; no rerun in final closure audit"
+  },
+  "runtime_effectiveness_evidence": {
+    "status": "PASS",
+    "reference_score": 1.0,
+    "frozen_threshold": 0.4546738923165847,
+    "false_positives": "0/3"
+  },
+  "method_specific_protocol": "model.layers.27 raw forward-hook output[0] at last token over 200 frozen TruthfulQA probes; centered linear CKA",
+  "native_metrics": {
+    "reference_score": 1.0,
+    "frozen_threshold": 0.4546738923165847,
+    "false_positives": "0/3",
+    "detector_results_path": "results/reef/experiment_a/detector_results.json",
+    "detector_results_sha256": "68a8d6f16186376627a2f7a0f55afbcd527cd21f020cac21773824856b9e12ac"
+  },
+  "reference_result": {
+    "native_score": 1.0,
+    "detected": true
+  },
+  "positive_negative_decision": {
+    "reference_positive": true,
+    "false_positives": "0/3"
+  },
+  "errors": [],
+  "limitations": [
+    "Bounded to the frozen three-negative WMKD panel; the hidden_states[-1] run remains superseded."
+  ],
+  "runtime_resources": {
+    "runtime_seconds": 32.303205728530884
+  },
+  "artifact_paths_and_shas": {
+    "path": "results/reef/experiment_a/artifact_manifest.json",
+    "sha256": "9c40a57f950858d1bfd5f536ffea15cc7044da094fac8c9e98131f1fcd1e1b90"
+  },
+  "provenance_manifest": {
+    "path": "results/reef/experiment_a/provenance_manifest.json",
+    "sha256": "42b25d6bf951e4119579c2790515d27841caaed316ee92276f34433fb9c72a07"
+  },
+  "git_provenance": {
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e",
+    "note": "The commit containing this JSON is recorded by Git history; embedding its own final commit hash would be self-referential."
+  },
+  "final_bounded_conclusion": "REEF core reproduction successful under the frozen WMKD canonical protocol"
 }

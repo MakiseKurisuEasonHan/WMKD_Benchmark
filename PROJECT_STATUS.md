@@ -125,3 +125,9 @@ The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archiv
 PN-FP, EverTracer, CTCC, iSeal, and SCW are **FULLY CLOSED** at the project-record level. Ten canonical preferred-Teacher/Ba-Student full JSON logs and `results/experiment_full_logs_index.json` now preserve the available provenance, configuration, telemetry, detector, utility, continuation, artifact, and archive evidence. Missing historical telemetry is explicitly unavailable; no Ba has checkpoint-level detector evidence, so exact watermark-disappearance steps are not localized. Completed methods: **5/7**. Remaining methods: **LLMPrint** and **REEF**. Automatic shutdown remains disabled.
 
 AutoDL high-confidence cleanup completed after synchronization: 51,689,418,752 filesystem bytes reclaimed from two non-scientific speed-test namespaces and two incomplete fragments. Formal artifacts/checkpoints, frozen datasets, shared Base/cache/utility/environment resources and all ambiguous data remain protected. Current instance remains running with manual shutdown required.
+
+## Passive-5 final closure — 2026-09-02
+
+<!-- PASSIVE5_FINAL_CLOSURE_TRACKING_20260902 -->
+
+LLMPrint A2, REEF A protocol-compliance final, HuRef A2, AWM A protocol-compliance final, and ZeroPrint A2 are 5/5 scientifically SUCCESSFUL under their bounded frozen WMKD protocols. Shared Ba `passive5_shared_ba_20260902_114500_cont1` with evaluation continuation `passive5_shared_ba_eval_cont2_20260902_164200` retained ownership detectability for 5/5 frozen detectors under the tested same-backbone direct-distillation setting. This does not prove fingerprint transfer or general KD immunity. Teacher total generation tokens across extension rounds remain NOT RECOVERABLE FROM PERSISTED TELEMETRY. MiniLLM, DistiLLM, paraphrase, and REASMARK are NOT_STARTED. AUTO_SHUTDOWN remains FALSE.

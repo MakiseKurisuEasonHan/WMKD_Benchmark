@@ -131,5 +131,12 @@
       "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/acquisition/slot-13.json",
       "sha256": "cd48cf9946c458c070a95ed9de4d15fc805ea8530f024169266c3b59d131a4be"
     }
-  ]
+  ],
+  "closure_audit": {
+    "integrity": "PASS",
+    "large_artifacts_policy": "external path/hash only; do not copy to Git",
+    "detector_results_sha256": "1fd2610246dd974a3bae349a882f3ded1664b238052adf259b9f22fa36710c0d",
+    "provenance_manifest_sha256": "2be5a51f6c0f509db554f8c9caa7fd1ceeb1fded289ea9a7dc8d519ec6f9710c",
+    "no_artifact_deleted": true
+  }
 }

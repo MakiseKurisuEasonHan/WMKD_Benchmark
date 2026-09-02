@@ -62,5 +62,12 @@
       "sha256": "3898912b1794f6e5fc4571d80232ba3fab9f57ecdeaf942a581c6bd8fde0d1e3"
     }
   ],
-  "integrity": "PASS"
+  "integrity": "PASS",
+  "closure_audit": {
+    "integrity": "PASS",
+    "large_artifacts_policy": "external path/hash only; do not copy to Git",
+    "detector_results_sha256": "166f383f358c68d68db04e8e2bd30cede4558ee8f6e907e9b680799127539b99",
+    "provenance_manifest_sha256": "a558da3f7cb1d6b5fe9007de234dab893a44c5362ba4d234e8e0ab7d5772849b",
+    "no_artifact_deleted": true
+  }
 }

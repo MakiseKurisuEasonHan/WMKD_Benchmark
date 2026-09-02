@@ -89,5 +89,12 @@
       "model_id": "microsoft/Phi-3-mini-128k-instruct"
     }
   ],
-  "integrity": "PASS"
+  "integrity": "PASS",
+  "closure_audit": {
+    "integrity": "PASS",
+    "large_artifacts_policy": "external path/hash only; do not copy to Git",
+    "detector_results_sha256": "68a8d6f16186376627a2f7a0f55afbcd527cd21f020cac21773824856b9e12ac",
+    "provenance_manifest_sha256": "42b25d6bf951e4119579c2790515d27841caaed316ee92276f34433fb9c72a07",
+    "no_artifact_deleted": true
+  }
 }

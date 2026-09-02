@@ -65,5 +65,91 @@
     },
     "fresh_process_reload": true
   },
-  "completed_at": "2026-09-02T09:27:33.711123+00:00"
+  "completed_at": "2026-09-02T09:27:33.711123+00:00",
+  "project": "WMKD_Benchmark",
+  "final_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+  "lineage": [
+    "passive5_shared_ba_20260902_114500_cont1",
+    "passive5_shared_ba_eval_cont2_20260902_164200"
+  ],
+  "superseded_runs": [],
+  "scientific_conclusion": "ownership fingerprint remained detectable after distillation",
+  "preferred_artifact": "not_applicable_ba_evaluation",
+  "preferred_fingerprint": "inherited frozen A/A2 package",
+  "artifact_type": "shared_student_detector_evaluation",
+  "model_identity": {
+    "teacher_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "teacher_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model"
+  },
+  "tokenizer_and_template": {
+    "source": "shared Student fresh reload validation",
+    "path": "results/passive5_shared_ba/full_experiment_log.json"
+  },
+  "dataset_identity": {
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "manifest": "results/passive5_shared_ba/teacher_dataset_manifest.json"
+  },
+  "scientific_configuration": {
+    "attack": "standardized direct distillation",
+    "detector_recalibrated": false,
+    "frozen_A_or_A2_detector": true
+  },
+  "runtime_configuration": {
+    "student_fresh_reload": true,
+    "strict_serial_evaluation": true,
+    "auto_shutdown": false
+  },
+  "runtime_effectiveness_evidence": {
+    "evaluation_status": "COMPLETED",
+    "unresolved_errors": 0
+  },
+  "method_specific_protocol": "token-string vocabulary overlap; absolute-cosine dimension LAP; sign correction; official layer LAP; Wq.T/Wk.T unbiased linear CKA; official aggregation",
+  "frozen_threshold": 0.0017953364917795106,
+  "native_metrics": {
+    "method": "AWM",
+    "native_metric": "official mean Wq/Wk unbiased linear CKA",
+    "reference_score": 1.0,
+    "threshold": 0.0017953364917795106,
+    "reference_detected": true,
+    "student_score": 0.9999974135841643,
+    "student_detected": true,
+    "positive_rule": "score > threshold",
+    "errors": [],
+    "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/awm/detector_result.json",
+    "evaluation_sha256": "c4d116759f2ef6670c2f5610025d264f5d8d489798beacf451a8b4c5c5a80db9"
+  },
+  "reference_result": {
+    "score": 1.0,
+    "detected": true
+  },
+  "student_result": {
+    "score": 0.9999974135841643,
+    "raw_pearson": null,
+    "detected": true,
+    "ownership_detectability_retained": true
+  },
+  "positive_negative_decision": "positive / retained",
+  "errors": [],
+  "limitations": [
+    "Same canonical pretrained backbone/initialization family for Reference and Shared Student.",
+    "Result is bounded to this frozen detector and tested same-backbone direct-distillation setting; it does not show fingerprint transfer or general KD immunity."
+  ],
+  "runtime_resources": {
+    "source_evaluation_artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/awm/detector_result.json"
+  },
+  "artifact_paths_and_shas": {
+    "path": "results/awm/experiment_ba/artifact_manifest.json",
+    "sha256": "c20711c9b1828a73deaeec14cc1a3663235e813ce8c84829b4f0196e17f09228"
+  },
+  "provenance": {
+    "manifest_path": "results/awm/experiment_ba/provenance_manifest.json",
+    "manifest_sha256": "067292a3a9dee980716f075c3b5423918c1cc0697d088a06d506341c3cfa0fa6"
+  },
+  "git_provenance": {
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e",
+    "note": "Containing commit recorded in Git history."
+  },
+  "final_bounded_conclusion": "ownership fingerprint remained detectable after distillation under the tested same-backbone direct-distillation setting"
 }

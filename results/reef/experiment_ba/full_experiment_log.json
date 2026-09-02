@@ -65,5 +65,91 @@
     },
     "fresh_process_reload": true
   },
-  "completed_at": "2026-09-02T09:27:33.708346+00:00"
+  "completed_at": "2026-09-02T09:27:33.708346+00:00",
+  "project": "WMKD_Benchmark",
+  "final_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+  "lineage": [
+    "passive5_shared_ba_20260902_114500_cont1",
+    "passive5_shared_ba_eval_cont2_20260902_164200"
+  ],
+  "superseded_runs": [],
+  "scientific_conclusion": "ownership fingerprint remained detectable after distillation",
+  "preferred_artifact": "not_applicable_ba_evaluation",
+  "preferred_fingerprint": "inherited frozen A/A2 package",
+  "artifact_type": "shared_student_detector_evaluation",
+  "model_identity": {
+    "teacher_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "teacher_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model"
+  },
+  "tokenizer_and_template": {
+    "source": "shared Student fresh reload validation",
+    "path": "results/passive5_shared_ba/full_experiment_log.json"
+  },
+  "dataset_identity": {
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "manifest": "results/passive5_shared_ba/teacher_dataset_manifest.json"
+  },
+  "scientific_configuration": {
+    "attack": "standardized direct distillation",
+    "detector_recalibrated": false,
+    "frozen_A_or_A2_detector": true
+  },
+  "runtime_configuration": {
+    "student_fresh_reload": true,
+    "strict_serial_evaluation": true,
+    "auto_shutdown": false
+  },
+  "runtime_effectiveness_evidence": {
+    "evaluation_status": "COMPLETED",
+    "unresolved_errors": 0
+  },
+  "method_specific_protocol": "model.layers.27 raw forward-hook output[0] at last token over 200 frozen TruthfulQA probes; centered linear CKA",
+  "frozen_threshold": 0.4546738923165847,
+  "native_metrics": {
+    "method": "REEF",
+    "native_metric": "centered linear CKA",
+    "reference_score": 1.0,
+    "threshold": 0.4546738923165847,
+    "reference_detected": true,
+    "student_score": 0.9542220066305829,
+    "student_detected": true,
+    "positive_rule": "score > threshold",
+    "errors": [],
+    "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/reef/detector_result.json",
+    "evaluation_sha256": "a1175c763600be8d8f5cae3b9deb64e7bbe49174ccdcbbbeb6a7edcb6d9e912e"
+  },
+  "reference_result": {
+    "score": 1.0,
+    "detected": true
+  },
+  "student_result": {
+    "score": 0.9542220066305829,
+    "raw_pearson": null,
+    "detected": true,
+    "ownership_detectability_retained": true
+  },
+  "positive_negative_decision": "positive / retained",
+  "errors": [],
+  "limitations": [
+    "Same canonical pretrained backbone/initialization family for Reference and Shared Student.",
+    "Result is bounded to this frozen detector and tested same-backbone direct-distillation setting; it does not show fingerprint transfer or general KD immunity."
+  ],
+  "runtime_resources": {
+    "source_evaluation_artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/reef/detector_result.json"
+  },
+  "artifact_paths_and_shas": {
+    "path": "results/reef/experiment_ba/artifact_manifest.json",
+    "sha256": "2ca5c778a8f7d139299d3ff4bc0c34af09a1ac8cd7a10f8f1d1d2409e4ade90f"
+  },
+  "provenance": {
+    "manifest_path": "results/reef/experiment_ba/provenance_manifest.json",
+    "manifest_sha256": "969670920cd541a854e6413bee71feb49dfeeac0aa676d138d7f57fa89ec1836"
+  },
+  "git_provenance": {
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e",
+    "note": "Containing commit recorded in Git history."
+  },
+  "final_bounded_conclusion": "ownership fingerprint remained detectable after distillation under the tested same-backbone direct-distillation setting"
 }

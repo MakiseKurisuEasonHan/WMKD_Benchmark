@@ -19,5 +19,18 @@
   },
   "transport": "ModelScope pinned revisions, one model acquired and evaluated at a time",
   "scientific_adaptation": "WMKD reduced-construction A2: 200 fingerprints, 500 GCG steps; all other frozen semantics unchanged",
-  "teacher_checkpoint_created": false
+  "teacher_checkpoint_created": false,
+  "closure_audit": {
+    "project": "WMKD_Benchmark",
+    "model_identity": "meta-llama/Llama-3.2-3B-Instruct",
+    "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "scientific_config_source": "canonical full log / frozen protocol",
+    "detector_results": {
+      "path": "results/llmprint/experiment_a2/detector_results.json",
+      "sha256": "1fd2610246dd974a3bae349a882f3ded1664b238052adf259b9f22fa36710c0d"
+    },
+    "source_transport_provenance": "preserved in original manifest fields",
+    "git_policy": "compact metadata tracked; model weights, raw generations, checkpoints and caches external",
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e"
+  }
 }

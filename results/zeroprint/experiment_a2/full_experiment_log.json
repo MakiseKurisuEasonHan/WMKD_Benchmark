@@ -2539,5 +2539,75 @@
   "utility": {
     "status": "not_applicable",
     "reason": "passive fingerprint; inherited canonical Base"
-  }
+  },
+  "project": "WMKD_Benchmark",
+  "final_run_id": "zeroprint_a2_phi_cont4_20260902_104000",
+  "scientific_status": "SUCCESSFUL",
+  "preferred_artifact": "yes",
+  "model_identity": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_modified": false
+  },
+  "tokenizer_and_template": {
+    "identity": "canonical model tokenizer",
+    "template": "canonical chat template when generation applies",
+    "evidence": "see provenance/artifact manifests; no tokenizer scientific adaptation"
+  },
+  "dataset_identity": {
+    "status": "method-specific frozen inputs recorded in existing canonical fields and provenance manifest"
+  },
+  "scientific_configuration": {
+    "protocol": "two HumanEval originals plus eight frozen perturbations; 20 repeats/input; MPNet; ridge Jacobian alpha=0.001; rescaled Pearson; frozen three-negative panel",
+    "original_configuration_fields_preserved": true
+  },
+  "runtime_configuration": {
+    "fresh_reload": true,
+    "scientific_configuration_changed_by_closure_audit": false,
+    "evidence": "existing formal artifacts and manifests only; no rerun in final closure audit"
+  },
+  "runtime_effectiveness_evidence": {
+    "status": "PASS",
+    "reference_score": 1.0,
+    "frozen_threshold": 0.6793505996465683,
+    "false_positives": "0/3"
+  },
+  "method_specific_protocol": "two HumanEval originals plus eight frozen perturbations; 20 repeats/input; MPNet; ridge Jacobian alpha=0.001; rescaled Pearson; frozen three-negative panel",
+  "native_metrics": {
+    "reference_score": 1.0,
+    "frozen_threshold": 0.6793505996465683,
+    "false_positives": "0/3",
+    "detector_results_path": "results/zeroprint/experiment_a2/detector_results.json",
+    "detector_results_sha256": "e52f304737ed1dde942943bd4a38891bfab472d86a0cf1503c67b537d5e6e66c"
+  },
+  "reference_result": {
+    "native_score": 1.0,
+    "detected": true
+  },
+  "positive_negative_decision": {
+    "reference_positive": true,
+    "false_positives": "0/3"
+  },
+  "limitations": [
+    "Bounded to the frozen three-negative A2 panel; Phi DynamicCache repair is runtime compatibility only, not scientific adaptation."
+  ],
+  "runtime_resources": {
+    "runtime_seconds_total_accounted": 9530.266278743744,
+    "peak_vram_bytes": 8376071680,
+    "peak_ram_kib_continuation": 7096844,
+    "disk_free_gb": 287.3443908691406
+  },
+  "artifact_paths_and_shas": {
+    "path": "results/zeroprint/experiment_a2/artifact_manifest.json",
+    "sha256": "f39e4355e20f9c47439ffb83e3390055010683fad8b23882608bfc2c364250fc"
+  },
+  "provenance_manifest": {
+    "path": "results/zeroprint/experiment_a2/provenance_manifest.json",
+    "sha256": "13094b6b815e15b4330e1ed9f0550dc62e456847b2f39be823026eb273344d02"
+  },
+  "git_provenance": {
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e",
+    "note": "The commit containing this JSON is recorded by Git history; embedding its own final commit hash would be self-referential."
+  },
+  "final_bounded_conclusion": "ZeroPrint core reproduction successful under the WMKD A2 frozen three-negative canonical protocol"
 }

@@ -22,3 +22,18 @@ Old run `reef_a_20260901_200836` is **SUPERSEDED_BY_PROTOCOL_COMPLIANCE_RERUN** 
 - Evaluation errors: 0
 
 Model modified: false. Utility: not applicable/inherited canonical Base. Ba: NOT_STARTED.
+
+## Final closure audit
+
+<!-- PASSIVE5_FINAL_CLOSURE_AUDIT_20260902 -->
+
+- Project/method/experiment: WMKD_Benchmark / REEF / A
+- Final preferred run: `reef_a_protocol_cont1_20260901_202500`; preferred artifact: **yes** (`fingerprint_package`)
+- Implementation provenance: official repository/commit and transport provenance remain recorded in the canonical provenance manifest.
+- Canonical model: `meta-llama/Llama-3.2-3B-Instruct` at `0cb88a4f764b7a12671c53f0838cd831a0843b95`; model modified: false.
+- Scientific/runtime configuration: model.layers.27 raw forward-hook output[0] at last token over 200 frozen TruthfulQA probes; centered linear CKA Runtime closure used existing artifacts only and did not rerun science.
+- Final result: Reference=1.0; frozen threshold=0.4546738923165847; false positives=0/3; status=SUCCESSFUL.
+- Negative/control results: preserved verbatim in `detector_results.json` and the canonical full log.
+- Environment/resources and artifact paths/SHA256: preserved in the full log, artifact manifest, and provenance manifest.
+- Limitation: Bounded to the frozen three-negative WMKD panel; the hidden_states[-1] run remains superseded.
+- Bounded conclusion: REEF core reproduction successful under the frozen WMKD canonical protocol

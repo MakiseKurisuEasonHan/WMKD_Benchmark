@@ -97,5 +97,12 @@
   ],
   "raw_terms_persisted": false,
   "term_hashes_recorded": true,
-  "integrity": "PASS"
+  "integrity": "PASS",
+  "closure_audit": {
+    "integrity": "PASS",
+    "large_artifacts_policy": "external path/hash only; do not copy to Git",
+    "detector_results_sha256": "6c66245ed8c28f27a5afe0ec699d5947a80ee44d67ecd12e31c5ff969ac8c8de",
+    "provenance_manifest_sha256": "3bc1fe5c9561f701e6bd69209ad062e44cc20f7594505d251cafaf30af8f2079",
+    "no_artifact_deleted": true
+  }
 }

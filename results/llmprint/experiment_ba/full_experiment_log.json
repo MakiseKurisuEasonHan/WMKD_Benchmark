@@ -67,5 +67,93 @@
     },
     "fresh_process_reload": true
   },
-  "completed_at": "2026-09-02T09:27:33.707779+00:00"
+  "completed_at": "2026-09-02T09:27:33.707779+00:00",
+  "project": "WMKD_Benchmark",
+  "final_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+  "lineage": [
+    "passive5_shared_ba_20260902_114500_cont1",
+    "passive5_shared_ba_eval_cont2_20260902_164200"
+  ],
+  "superseded_runs": [],
+  "scientific_conclusion": "ownership fingerprint remained detectable after distillation",
+  "preferred_artifact": "not_applicable_ba_evaluation",
+  "preferred_fingerprint": "inherited frozen A/A2 package",
+  "artifact_type": "shared_student_detector_evaluation",
+  "model_identity": {
+    "teacher_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "teacher_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model"
+  },
+  "tokenizer_and_template": {
+    "source": "shared Student fresh reload validation",
+    "path": "results/passive5_shared_ba/full_experiment_log.json"
+  },
+  "dataset_identity": {
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "manifest": "results/passive5_shared_ba/teacher_dataset_manifest.json"
+  },
+  "scientific_configuration": {
+    "attack": "standardized direct distillation",
+    "detector_recalibrated": false,
+    "frozen_A_or_A2_detector": true
+  },
+  "runtime_configuration": {
+    "student_fresh_reload": true,
+    "strict_serial_evaluation": true,
+    "auto_shutdown": false
+  },
+  "runtime_effectiveness_evidence": {
+    "evaluation_status": "COMPLETED",
+    "unresolved_errors": 0
+  },
+  "method_specific_protocol": "200 immutable fingerprints; 500/500 GCG steps; 20-token suffix; inclusive >= primary bits; sample std ddof=1; tau=mu+1.64*sigma without clipping",
+  "frozen_threshold": 0.7150049776126003,
+  "native_metrics": {
+    "method": "LLMPrint",
+    "native_metric": "primary paper-style bit accuracy",
+    "reference_score": 1.0,
+    "threshold": 0.7150049776126003,
+    "reference_detected": true,
+    "student_score": 0.82,
+    "student_detected": true,
+    "positive_rule": "score >= threshold",
+    "valid_count": 200,
+    "correct_bits": 164,
+    "student_sequence_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/llmprint/student_probability_sequence.json",
+    "student_sequence_sha256": "6932aaf0f4d4a4d36cc67dbfb180ea500e0d5cdb64cb892e4bfaa4dad154fdcb",
+    "errors": []
+  },
+  "reference_result": {
+    "score": 1.0,
+    "detected": true
+  },
+  "student_result": {
+    "score": 0.82,
+    "raw_pearson": null,
+    "detected": true,
+    "ownership_detectability_retained": true
+  },
+  "positive_negative_decision": "positive / retained",
+  "errors": [],
+  "limitations": [
+    "Same canonical pretrained backbone/initialization family for Reference and Shared Student.",
+    "Result is bounded to this frozen detector and tested same-backbone direct-distillation setting; it does not show fingerprint transfer or general KD immunity."
+  ],
+  "runtime_resources": {
+    "source_evaluation_artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/llmprint/student_probability_sequence.json"
+  },
+  "artifact_paths_and_shas": {
+    "path": "results/llmprint/experiment_ba/artifact_manifest.json",
+    "sha256": "62138da3c3e7e4e090543e521e27a97d00dabce512506c232d256c03047f9b9d"
+  },
+  "provenance": {
+    "manifest_path": "results/llmprint/experiment_ba/provenance_manifest.json",
+    "manifest_sha256": "143187c3428d5384fd20104916eccc2eff5799672b1d8831fd9c163860f03713"
+  },
+  "git_provenance": {
+    "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e",
+    "note": "Containing commit recorded in Git history."
+  },
+  "final_bounded_conclusion": "ownership fingerprint remained detectable after distillation under the tested same-backbone direct-distillation setting"
 }

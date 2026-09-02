@@ -159,3 +159,9 @@ At `2026-09-01T06:40:20.780274+00:00`, explicit user authorization replaced A wi
 ### LLMPrint formal A2 construction `llmprint_a2_20260901_064855`
 
 Minimal readiness passed at immutable launch commit `ce8c03bd555c262e86c79b5249a23e7903a747da`. The LF-canonical A2 subset/config SHA256 values are `162e27bccf4be98a3e15596772490dac44503363ac5781ac5365fea2d08f4a10` and `4325b2a518aa5080dfb5cc070d57713bf6ee84efb9d72e8e4cbc89308920613a`. Detached A2 started at `2026-09-01T06:49:18.208351+00:00`; runner/scientific PIDs are 7155/7157. First snapshot was healthy at 0/200 with active GPU, CUBLAS env in both processes, no fatal/error patterns, and the known nondeterministic-attention warning preserved. Initial ETA is about 6 h 11 m based on prior formal runtime scaling; A2's own average awaits its first artifact. Ba remains NOT STARTED.
+
+## Passive-5 final closure — 2026-09-02
+
+<!-- PASSIVE5_FINAL_CLOSURE_TRACKING_20260902 -->
+
+LLMPrint A2, REEF A protocol-compliance final, HuRef A2, AWM A protocol-compliance final, and ZeroPrint A2 are 5/5 scientifically SUCCESSFUL under their bounded frozen WMKD protocols. Shared Ba `passive5_shared_ba_20260902_114500_cont1` with evaluation continuation `passive5_shared_ba_eval_cont2_20260902_164200` retained ownership detectability for 5/5 frozen detectors under the tested same-backbone direct-distillation setting. This does not prove fingerprint transfer or general KD immunity. Teacher total generation tokens across extension rounds remain NOT RECOVERABLE FROM PERSISTED TELEMETRY. MiniLLM, DistiLLM, paraphrase, and REASMARK are NOT_STARTED. AUTO_SHUTDOWN remains FALSE.

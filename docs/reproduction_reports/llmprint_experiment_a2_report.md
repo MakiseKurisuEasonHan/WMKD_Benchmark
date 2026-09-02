@@ -23,3 +23,18 @@
 - no_severe_false_positive_anomaly: PASS
 - supplementary_release_recorded: PASS
 - zero_unresolved_evaluation_errors: PASS
+
+## Final closure audit
+
+<!-- PASSIVE5_FINAL_CLOSURE_AUDIT_20260902 -->
+
+- Project/method/experiment: WMKD_Benchmark / LLMPrint / A2
+- Final preferred run: `llmprint_a2_closure_20260902_cont2_resume6`; preferred artifact: **yes** (`fingerprint_package`)
+- Implementation provenance: official repository/commit and transport provenance remain recorded in the canonical provenance manifest.
+- Canonical model: `meta-llama/Llama-3.2-3B-Instruct` at `0cb88a4f764b7a12671c53f0838cd831a0843b95`; model modified: false.
+- Scientific/runtime configuration: 200 immutable fingerprints; 500/500 GCG steps; 20-token suffix; inclusive >= primary bits; sample std ddof=1; tau=mu+1.64*sigma without clipping Runtime closure used existing artifacts only and did not rerun science.
+- Final result: Reference=1.0; frozen threshold=0.7150049776126003; false positives=0/13; status=SUCCESSFUL.
+- Negative/control results: preserved verbatim in `detector_results.json` and the canonical full log.
+- Environment/resources and artifact paths/SHA256: preserved in the full log, artifact manifest, and provenance manifest.
+- Limitation: Reduced-construction A2 (200 fingerprints, 500 GCG steps), not the abandoned 300x1000 construction.
+- Bounded conclusion: LLMPrint core reproduction successful under the frozen WMKD protocol.

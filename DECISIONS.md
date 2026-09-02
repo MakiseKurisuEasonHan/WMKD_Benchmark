@@ -382,3 +382,9 @@ Require a canonical full JSON log for every future preferred Teacher and Ba Stud
 - **Decision:** Pause `llmprint_a2_20260901_064855` at 97/200 as `PAUSED_BY_USER_FOR_PRE_FORMAL_MULTI_METHOD_SMOKE`, not FAILED and not A3. Preserve IDs 000–096 immutably; a future resume is A2 cont1 and may process only 097–199.
 - **Decision:** Expand the final benchmark to ten methods by adding REEF, AWM, HuRef and ZeroPrint after the first six. This phase authorizes official audit, local passive-fingerprint implementations, deployment and bounded smoke tests only—no formal A, Ba or shutdown.
 - **Decision:** All four use the unchanged canonical Llama-3.2-3B-Instruct as a passive Reference (`model_modified=false`). Their A artifacts are fingerprint/detector packages, not Teacher checkpoints; repeated ARC/TruthfulQA utility runs are not applicable.
+
+## Passive-5 final closure — 2026-09-02
+
+<!-- PASSIVE5_FINAL_CLOSURE_TRACKING_20260902 -->
+
+LLMPrint A2, REEF A protocol-compliance final, HuRef A2, AWM A protocol-compliance final, and ZeroPrint A2 are 5/5 scientifically SUCCESSFUL under their bounded frozen WMKD protocols. Shared Ba `passive5_shared_ba_20260902_114500_cont1` with evaluation continuation `passive5_shared_ba_eval_cont2_20260902_164200` retained ownership detectability for 5/5 frozen detectors under the tested same-backbone direct-distillation setting. This does not prove fingerprint transfer or general KD immunity. Teacher total generation tokens across extension rounds remain NOT RECOVERABLE FROM PERSISTED TELEMETRY. MiniLLM, DistiLLM, paraphrase, and REASMARK are NOT_STARTED. AUTO_SHUTDOWN remains FALSE.

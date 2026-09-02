@@ -175,3 +175,9 @@ The immutable SCW Ba Student from `scw_ba_full_20260831_193828_cont1` was archiv
 - [x] Complete the authorized LLMPrint preparation, preflight, one-fingerprint full-parameter speed test, detector freeze, and validation-panel freeze.
 - [ ] Run REEF under a separately authorized protocol.
 - [ ] If exact watermark-disappearance timing is required, design a separately authorized offline checkpoint-level detector study; do not infer it from training loss.
+
+## Passive-5 final closure — 2026-09-02
+
+<!-- PASSIVE5_FINAL_CLOSURE_TRACKING_20260902 -->
+
+LLMPrint A2, REEF A protocol-compliance final, HuRef A2, AWM A protocol-compliance final, and ZeroPrint A2 are 5/5 scientifically SUCCESSFUL under their bounded frozen WMKD protocols. Shared Ba `passive5_shared_ba_20260902_114500_cont1` with evaluation continuation `passive5_shared_ba_eval_cont2_20260902_164200` retained ownership detectability for 5/5 frozen detectors under the tested same-backbone direct-distillation setting. This does not prove fingerprint transfer or general KD immunity. Teacher total generation tokens across extension rounds remain NOT RECOVERABLE FROM PERSISTED TELEMETRY. MiniLLM, DistiLLM, paraphrase, and REASMARK are NOT_STARTED. AUTO_SHUTDOWN remains FALSE.

@@ -32,5 +32,17 @@
   "unresolved_errors": [],
   "bounded_conclusion": "ownership fingerprint remained detectable after the tested direct-distillation attack",
   "source_evaluation": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/huref/detector_result.json",
-  "source_sha256": "28713037594855b6e5108ab0f9b175f7396142e685901582370668c969d94602"
+  "source_sha256": "28713037594855b6e5108ab0f9b175f7396142e685901582370668c969d94602",
+  "project": "WMKD_Benchmark",
+  "model_identity": {
+    "teacher": "meta-llama/Llama-3.2-3B-Instruct",
+    "teacher_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "shared_student_run_id": "passive5_shared_ba_20260902_114500_cont1"
+  },
+  "scientific_config_sha256": "65d4eb83fa7706a0af80adaf2664ad20600208ac964171411bd8cac002c12839",
+  "detector_artifact_sha256": "28713037594855b6e5108ab0f9b175f7396142e685901582370668c969d94602",
+  "source_transport_provenance": "local immutable A/A2 package plus Shared Student artifact",
+  "large_artifact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/huref/detector_result.json",
+  "git_policy": "compact JSON/reports tracked; Student weights, checkpoints, raw generations and caches external",
+  "closure_audit_base_commit": "f35ce546c0cc42068a79cb282916f5c416e8b97e"
 }
