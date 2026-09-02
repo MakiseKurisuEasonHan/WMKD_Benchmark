@@ -1,0 +1,38 @@
+{
+  "schema_version": "wmkd.passive5-shared-ba-training-summary.v1",
+  "run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "status": "COMPLETED",
+  "shared_student": true,
+  "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model",
+  "student_manifest_sha256": "e739d58fff44fe1b04e527222f1c0e0a3c1b1313eb261e6b9c0684f413dd2c42",
+  "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+  "configuration": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false,
+    "per_device_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 8,
+    "max_length": 1024,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "expected_steps": 7500,
+    "checkpoint_retention": {
+      "save_total_limit": 1,
+      "keep_final_model": true
+    }
+  },
+  "optimizer_steps": 7500,
+  "epochs": 3.0,
+  "train_loss": 0.314317684729894,
+  "finite_loss": true,
+  "training_runtime_seconds": 1964.5366,
+  "peak_vram_bytes": 32223305216,
+  "peak_host_rss_bytes": 7158996992,
+  "resume": false,
+  "seed": 42
+}

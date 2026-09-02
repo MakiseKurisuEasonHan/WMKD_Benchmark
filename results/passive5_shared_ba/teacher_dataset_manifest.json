@@ -1,0 +1,45 @@
+{
+  "schema_version": "wmkd.passive5-shared-ba-teacher-dataset.v1",
+  "run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "teacher": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct"
+  },
+  "teacher_file_sha256": {
+    "config.json": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+    "tokenizer.json": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+    "model.safetensors.index.json": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+    "model-00001-of-00002.safetensors": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+    "model-00002-of-00002.safetensors": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c"
+  },
+  "construction": {
+    "raw_accepted": 40003,
+    "valid": 39850,
+    "unique_before_selection": 20896,
+    "selected": 20000,
+    "candidate_to_unique_yield_percent": 52.24,
+    "parse_failures": 399,
+    "empty_or_filtered": 153,
+    "completed_targets": [
+      24000,
+      26000,
+      28000,
+      30000,
+      32000,
+      34000,
+      36000,
+      38000,
+      40000
+    ]
+  },
+  "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+  "frozen_jsonl_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+  "source_manifest_sha256": "488b7b11533c12aee6f7aa0d44a53bb3acf03dc065d7a0f12c954701ee11426e",
+  "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+  "provenance_sha256": "253f18da0bec906265044bced1d9a7f22a7861a69b4ec905a2653ed4dd0b7633",
+  "total_generated_tokens": {
+    "status": "NOT RECOVERABLE FROM PERSISTED TELEMETRY",
+    "limitation": "generation_telemetry.json was overwritten per extension round; logging completeness limitation, not scientific invalidation"
+  }
+}

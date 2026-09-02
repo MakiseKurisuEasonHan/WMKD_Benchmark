@@ -1,0 +1,33 @@
+{
+  "student": {
+    "arc_challenge_acc_norm": 0.4974402730375427,
+    "truthfulqa_mc2_acc": 0.4755413056783935,
+    "raw_results": {
+      "arc_challenge": {
+        "alias": "arc_challenge",
+        "acc,none": 0.4658703071672355,
+        "acc_stderr,none": 0.014577311315231106,
+        "acc_norm,none": 0.4974402730375427,
+        "acc_norm_stderr,none": 0.014611199329843784
+      },
+      "truthfulqa_mc2": {
+        "alias": "truthfulqa_mc2",
+        "acc,none": 0.4755413056783935,
+        "acc_stderr,none": 0.015230687782768966
+      }
+    }
+  },
+  "dataset_provenance": {
+    "arc_challenge": {
+      "id": "allenai/ai2_arc",
+      "config": "ARC-Challenge",
+      "revision": "210d026faf9955653af8916fad021475a3f00453"
+    },
+    "truthfulqa_mc2": {
+      "id": "truthful_qa",
+      "config": "multiple_choice",
+      "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+    }
+  },
+  "fresh_process_reload": true
+}

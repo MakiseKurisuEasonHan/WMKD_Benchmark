@@ -1,0 +1,70 @@
+{
+  "schema_version": "wmkd.zeroprint-ba.v1",
+  "method": "ZeroPrint",
+  "experiment": "Ba",
+  "run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+  "parent_run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "status": "COMPLETED",
+  "scientific_status": "DETECTABILITY_RETAINED",
+  "shared_attack": true,
+  "shared_student": true,
+  "shared_student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+  "model_modified": true,
+  "student_artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model",
+  "utility_path": "results/passive5_shared_ba/utility_results.json",
+  "training_log_path": "results/passive5_shared_ba/training_summary.json",
+  "teacher_dataset_manifest_path": "results/passive5_shared_ba/teacher_dataset_manifest.json",
+  "reference_detected_before_kd": true,
+  "detector": {
+    "method": "ZeroPrint",
+    "native_metric": "rescaled Pearson correlation",
+    "reference_score": 1.0,
+    "threshold": 0.6793505996465683,
+    "reference_detected": true,
+    "student_score": 0.8399372696876526,
+    "student_raw_pearson": 0.6798745393753052,
+    "student_detected": true,
+    "positive_rule": "score > threshold",
+    "errors": [],
+    "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/zeroprint/detector_result.json",
+    "evaluation_sha256": "2b097124581de70578ccc242624051cfed2cfe5a02412dcc399cb0bace22fd7a"
+  },
+  "unresolved_errors": [],
+  "bounded_conclusion": "ownership fingerprint remained detectable after the tested direct-distillation attack",
+  "student_reload_validation_path": "results/passive5_shared_ba/full_experiment_log.json",
+  "shared_utility": {
+    "student": {
+      "arc_challenge_acc_norm": 0.4974402730375427,
+      "truthfulqa_mc2_acc": 0.4755413056783935,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.4658703071672355,
+          "acc_stderr,none": 0.014577311315231106,
+          "acc_norm,none": 0.4974402730375427,
+          "acc_norm_stderr,none": 0.014611199329843784
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.4755413056783935,
+          "acc_stderr,none": 0.015230687782768966
+        }
+      }
+    },
+    "dataset_provenance": {
+      "arc_challenge": {
+        "id": "allenai/ai2_arc",
+        "config": "ARC-Challenge",
+        "revision": "210d026faf9955653af8916fad021475a3f00453"
+      },
+      "truthfulqa_mc2": {
+        "id": "truthful_qa",
+        "config": "multiple_choice",
+        "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+      }
+    },
+    "fresh_process_reload": true
+  },
+  "completed_at": "2026-09-02T09:27:33.712172+00:00"
+}

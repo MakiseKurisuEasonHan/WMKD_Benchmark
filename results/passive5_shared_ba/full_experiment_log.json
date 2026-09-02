@@ -1,0 +1,336 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "experiment": "Shared Ba",
+  "run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+  "parent_run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "continuation_type": "EVALUATION_ONLY_CONTINUATION",
+  "status": "COMPLETED",
+  "scientific_status": "COMPLETED",
+  "shared_student": true,
+  "shared_student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "auto_shutdown": false,
+  "lineage": [
+    "passive5_shared_ba_20260902_114500_cont1",
+    "Student completed",
+    "evaluation orchestration stopped normally",
+    "passive5_shared_ba_eval_cont2_20260902_164200",
+    "closure"
+  ],
+  "teacher_dataset": {
+    "schema_version": "wmkd.passive5-shared-ba-teacher-dataset.v1",
+    "run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "teacher": {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct"
+    },
+    "teacher_file_sha256": {
+      "config.json": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "tokenizer.json": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "model.safetensors.index.json": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "model-00001-of-00002.safetensors": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "model-00002-of-00002.safetensors": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c"
+    },
+    "construction": {
+      "raw_accepted": 40003,
+      "valid": 39850,
+      "unique_before_selection": 20896,
+      "selected": 20000,
+      "candidate_to_unique_yield_percent": 52.24,
+      "parse_failures": 399,
+      "empty_or_filtered": 153,
+      "completed_targets": [
+        24000,
+        26000,
+        28000,
+        30000,
+        32000,
+        34000,
+        36000,
+        38000,
+        40000
+      ]
+    },
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "frozen_jsonl_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+    "source_manifest_sha256": "488b7b11533c12aee6f7aa0d44a53bb3acf03dc065d7a0f12c954701ee11426e",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "provenance_sha256": "253f18da0bec906265044bced1d9a7f22a7861a69b4ec905a2653ed4dd0b7633",
+    "total_generated_tokens": {
+      "status": "NOT RECOVERABLE FROM PERSISTED TELEMETRY",
+      "limitation": "generation_telemetry.json was overwritten per extension round; logging completeness limitation, not scientific invalidation"
+    }
+  },
+  "training": {
+    "schema_version": "wmkd.passive5-shared-ba-training-summary.v1",
+    "run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "status": "COMPLETED",
+    "shared_student": true,
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model",
+    "student_manifest_sha256": "e739d58fff44fe1b04e527222f1c0e0a3c1b1313eb261e6b9c0684f413dd2c42",
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "configuration": {
+      "epochs": 3,
+      "learning_rate": 1e-05,
+      "precision": "bf16",
+      "full_parameter": true,
+      "lora": false,
+      "per_device_batch_size": 8,
+      "gradient_accumulation_steps": 1,
+      "effective_batch_size": 8,
+      "max_length": 1024,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "expected_steps": 7500,
+      "checkpoint_retention": {
+        "save_total_limit": 1,
+        "keep_final_model": true
+      }
+    },
+    "optimizer_steps": 7500,
+    "epochs": 3.0,
+    "train_loss": 0.314317684729894,
+    "finite_loss": true,
+    "training_runtime_seconds": 1964.5366,
+    "peak_vram_bytes": 32223305216,
+    "peak_host_rss_bytes": 7158996992,
+    "resume": false,
+    "seed": 42
+  },
+  "reload_validation": {
+    "status": "PASS",
+    "fresh_process_reload": true,
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model",
+    "student_manifest_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/student_manifest.json",
+    "student_manifest_sha256": "e739d58fff44fe1b04e527222f1c0e0a3c1b1313eb261e6b9c0684f413dd2c42",
+    "immutable_hashes": {
+      "frozen_jsonl_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+      "manifest_sha256": "488b7b11533c12aee6f7aa0d44a53bb3acf03dc065d7a0f12c954701ee11426e",
+      "provenance_sha256": "253f18da0bec906265044bced1d9a7f22a7861a69b4ec905a2653ed4dd0b7633",
+      "config_sha256": "65d4eb83fa7706a0af80adaf2664ad20600208ac964171411bd8cac002c12839",
+      "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+      "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93"
+    },
+    "student_file_checks": [
+      {
+        "path": "chat_template.jinja",
+        "expected": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+        "observed": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+        "pass": true
+      },
+      {
+        "path": "config.json",
+        "expected": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+        "observed": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+        "pass": true
+      },
+      {
+        "path": "generation_config.json",
+        "expected": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+        "observed": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+        "pass": true
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "expected": "7ca6e1c4fa5a9a4a90e0b44bbef19898def72a11f1f0a35e64531825579055f0",
+        "observed": "7ca6e1c4fa5a9a4a90e0b44bbef19898def72a11f1f0a35e64531825579055f0",
+        "pass": true
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "expected": "dd0ce525cf412c4de462288e39f3747ac0d3308dfd31627ba77ddca5ab599644",
+        "observed": "dd0ce525cf412c4de462288e39f3747ac0d3308dfd31627ba77ddca5ab599644",
+        "pass": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "expected": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+        "observed": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+        "pass": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "expected": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+        "observed": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+        "pass": true
+      },
+      {
+        "path": "tokenizer.json",
+        "expected": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+        "observed": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+        "pass": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "expected": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+        "observed": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+        "pass": true
+      },
+      {
+        "path": "training_args.bin",
+        "expected": "3d98f8352839c69046266f1f12aa5883300863cbb60a3ecfeb50c97411e90d24",
+        "observed": "3d98f8352839c69046266f1f12aa5883300863cbb60a3ecfeb50c97411e90d24",
+        "pass": true
+      }
+    ],
+    "config": {
+      "architecture": [
+        "LlamaForCausalLM"
+      ],
+      "model_type": "llama",
+      "hidden_size": 3072,
+      "num_hidden_layers": 28,
+      "vocab_size": 128256,
+      "torch_dtype": "torch.bfloat16"
+    },
+    "tokenizer": {
+      "class": "PreTrainedTokenizerFast",
+      "vocab_size": 128256,
+      "chat_template_present": true
+    },
+    "adapter_files": [],
+    "inference_smoke": {
+      "prompt": "Reply with exactly: WMKD_RELOAD_PASS",
+      "response": "WMKD_RELOAD_PASS",
+      "pass": true
+    },
+    "finite_weight_check": {
+      "parameter_count": 3212749824,
+      "tensors_scanned": 254,
+      "nonfinite_count": 0,
+      "minimum": -0.98046875,
+      "maximum": 2.359375,
+      "pass": true
+    },
+    "peak_vram_bytes": 10005877760,
+    "runtime_seconds": 9.202192544937134,
+    "completed_at": "2026-09-02T08:49:57.673465+00:00"
+  },
+  "utility": {
+    "student": {
+      "arc_challenge_acc_norm": 0.4974402730375427,
+      "truthfulqa_mc2_acc": 0.4755413056783935,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.4658703071672355,
+          "acc_stderr,none": 0.014577311315231106,
+          "acc_norm,none": 0.4974402730375427,
+          "acc_norm_stderr,none": 0.014611199329843784
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.4755413056783935,
+          "acc_stderr,none": 0.015230687782768966
+        }
+      }
+    },
+    "dataset_provenance": {
+      "arc_challenge": {
+        "id": "allenai/ai2_arc",
+        "config": "ARC-Challenge",
+        "revision": "210d026faf9955653af8916fad021475a3f00453"
+      },
+      "truthfulqa_mc2": {
+        "id": "truthful_qa",
+        "config": "multiple_choice",
+        "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+      }
+    },
+    "fresh_process_reload": true
+  },
+  "detectors": {
+    "schema_version": "wmkd.passive5-shared-ba-detector-summary.v1",
+    "run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+    "parent_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "shared_student": true,
+    "shared_student_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "status": "COMPLETED",
+    "retained_count": 5,
+    "method_count": 5,
+    "all_evaluation_errors_resolved": true,
+    "methods": [
+      {
+        "method": "LLMPrint",
+        "native_metric": "primary paper-style bit accuracy",
+        "reference_score": 1.0,
+        "threshold": 0.7150049776126003,
+        "reference_detected": true,
+        "student_score": 0.82,
+        "student_detected": true,
+        "positive_rule": "score >= threshold",
+        "valid_count": 200,
+        "correct_bits": 164,
+        "student_sequence_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/llmprint/student_probability_sequence.json",
+        "student_sequence_sha256": "6932aaf0f4d4a4d36cc67dbfb180ea500e0d5cdb64cb892e4bfaa4dad154fdcb",
+        "errors": []
+      },
+      {
+        "method": "REEF",
+        "native_metric": "centered linear CKA",
+        "reference_score": 1.0,
+        "threshold": 0.4546738923165847,
+        "reference_detected": true,
+        "student_score": 0.9542220066305829,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/reef/detector_result.json",
+        "evaluation_sha256": "a1175c763600be8d8f5cae3b9deb64e7bbe49174ccdcbbbeb6a7edcb6d9e912e"
+      },
+      {
+        "method": "HuRef",
+        "native_metric": "ICS",
+        "reference_score": 99.99999237060547,
+        "threshold": 4.119894027709961,
+        "reference_detected": true,
+        "student_score": 99.99898529052734,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/huref/detector_result.json",
+        "evaluation_sha256": "28713037594855b6e5108ab0f9b175f7396142e685901582370668c969d94602"
+      },
+      {
+        "method": "AWM",
+        "native_metric": "official mean Wq/Wk unbiased linear CKA",
+        "reference_score": 1.0,
+        "threshold": 0.0017953364917795106,
+        "reference_detected": true,
+        "student_score": 0.9999974135841643,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/awm/detector_result.json",
+        "evaluation_sha256": "c4d116759f2ef6670c2f5610025d264f5d8d489798beacf451a8b4c5c5a80db9"
+      },
+      {
+        "method": "ZeroPrint",
+        "native_metric": "rescaled Pearson correlation",
+        "reference_score": 1.0,
+        "threshold": 0.6793505996465683,
+        "reference_detected": true,
+        "student_score": 0.8399372696876526,
+        "student_raw_pearson": 0.6798745393753052,
+        "student_detected": true,
+        "positive_rule": "score > threshold",
+        "errors": [],
+        "evaluation_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba_eval/passive5_shared_ba_eval_cont2_20260902_164200/zeroprint/detector_result.json",
+        "evaluation_sha256": "2b097124581de70578ccc242624051cfed2cfe5a02412dcc399cb0bace22fd7a"
+      }
+    ],
+    "bounded_conclusion": "Ownership detectability remained positive under all 5/5 frozen passive-method detectors after the tested direct-distillation attack; this does not establish general robustness beyond these frozen protocols."
+  },
+  "unresolved_errors": [],
+  "untouched": [
+    "MiniLLM",
+    "DistiLLM",
+    "paraphrase attack",
+    "REASMARK",
+    "other attacks"
+  ],
+  "completed_at": "2026-09-02T09:27:33.707016+00:00"
+}

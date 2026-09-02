@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model",
+  "files_sha256": {
+    "chat_template.jinja": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+    "config.json": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+    "generation_config.json": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+    "model-00001-of-00002.safetensors": "7ca6e1c4fa5a9a4a90e0b44bbef19898def72a11f1f0a35e64531825579055f0",
+    "model-00002-of-00002.safetensors": "dd0ce525cf412c4de462288e39f3747ac0d3308dfd31627ba77ddca5ab599644",
+    "model.safetensors.index.json": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+    "special_tokens_map.json": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+    "tokenizer.json": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+    "tokenizer_config.json": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+    "training_args.bin": "3d98f8352839c69046266f1f12aa5883300863cbb60a3ecfeb50c97411e90d24"
+  },
+  "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+  "config": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false,
+    "per_device_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 8,
+    "max_length": 1024,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "expected_steps": 7500,
+    "checkpoint_retention": {
+      "save_total_limit": 1,
+      "keep_final_model": true
+    }
+  },
+  "peak_ram_kib": 50708
+}
