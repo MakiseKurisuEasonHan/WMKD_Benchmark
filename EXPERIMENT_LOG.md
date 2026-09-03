@@ -232,3 +232,7 @@ Audited only the local WMKD_Benchmark repository and GitHub. The pre-edit baseli
 No AutoDL/La Trobe connection, GPU task, download, generation, training, detector, utility, ModelScope write, cleanup, or proactive Bb execution occurred. Next allowed work is proactive 1–5 Bb protocol discussion and explicit freeze; execution remains prohibited without a new prompt.
 
 Lightweight audit results: 288/288 JSON parsed; global index 26/26 unique with all paths and SHA256 values valid; ModelScope inventory 4/4 PRIVATE; Markdown local-reference sanity, Python compile, diff check, tracked-secret scan, and tracked-large-file scan passed. Pytest was unavailable and no dependency was installed. Unittest executed all importable lightweight tests (76 pass, 4 skip); seven test modules were unavailable because this Windows runtime lacks PyYAML/Torch/PyArrow or POSIX `resource`. Local classification found no suspicious category-D item and performed no deletion.
+
+## 2026-09-03 — Proactive Bb 6000 readiness attempt
+
+Froze the proactive 1–5 Bb protocol in durable docs. Initial SSH 6000 host audit found Ubuntu 22.04.5, idle RTX PRO 6000, 392 GiB free data disk, and a detached historical repository at `45d6f779` with bundle-backed origin. Subsequent SSH connections failed before safe Git bring-up and canonical artifact inventory could complete. No remote mutation, full20k preprocessing, training, detector, utility, download, archive write, cleanup, or GPU inference occurred. All five methods remain `NOT_READY`; see `results/proactive5_bb_readiness.json`.

@@ -18,7 +18,7 @@ The selected methods are PN-FP, EverTracer, CTCC, iSeal, SCW, LLMPrint, REEF, Hu
 
 All ten methods have completed their preferred A/A2 (iSeal ultimately A6) reproduction and Ba evaluation. Passive Shared Ba is complete. Passive Shared Bb and Bb2 are preserved as `BLOCKED_AT_PILOT`; Passive Shared Bb3 is complete using the finalized atomic-response identity-preservation plus Qwen UP protocol. Its five frozen passive detectors all remained above threshold. These are bounded same-backbone results, not evidence of fingerprint transfer or universal immunity to knowledge distillation.
 
-The next stage is proactive methods 1–5 Experiment Bb: PN-FP, EverTracer, CTCC, iSeal, and SCW. The validated Passive Bb3 protocol is the leading UP reference, but proactive Bb remains `PENDING_EXPLICIT_FREEZE` and has not been started. Because proactive Teachers differ, each method must retain its own Ba answers/frozen20k, processed Bb dataset, and fresh canonical Student.
+The next stage is proactive methods 1–5 Experiment Bb: PN-FP, EverTracer, CTCC, iSeal, and SCW. `PROACTIVE_BB_PROTOCOL_FROZEN = YES`: each method applies the validated Passive Bb3 UP implementation to its own canonical Ba frozen20k, then trains an independent fresh-canonical Student with Ba-identical settings. The formal runs remain named Bb and have not started.
 
 ## Intended workflow
 

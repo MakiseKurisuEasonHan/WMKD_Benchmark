@@ -7,7 +7,8 @@
 - [x] Validate Passive Bb3 at 5/5 detectors positive and disclose 4,635/20,000 (23.175%) atomic identities.
 - [x] Preserve 4/4 canonical Passive-5 ModelScope artifacts as verified PRIVATE; do not duplicate-upload.
 - [x] Validate 26/26 unique full experiment JSON objects with no broken paths.
-- [ ] Discuss and explicitly freeze proactive methods 1–5 Experiment Bb. Passive Bb3 is the leading validated UP reference, not an automatic proactive freeze.
+- [x] Freeze proactive methods 1–5 Experiment Bb to exact validated Passive Bb3 preprocessing plus method-specific Ba lineage and independent fresh Students.
+- [ ] Complete SSH 6000 canonical Ba inventory, minimal compatibility preflight, storage/archive audit, and execution-readiness report without starting formal work.
 - [ ] Preserve five separate proactive Teacher-output lineages, processed Bb datasets, and fresh Students; do not share these across methods.
 - [ ] Obtain explicit authorization before `ssh 6000`, downloads, paraphrasing, training, detector/utility execution, or GPU use.
 - [ ] Perform no destructive cleanup without the permanent archive/dry-run/classification/explicit-authorization sequence.

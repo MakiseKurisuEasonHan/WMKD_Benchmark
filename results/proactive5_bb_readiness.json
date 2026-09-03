@@ -1,0 +1,86 @@
+{
+  "schema_version": "wmkd.proactive5-bb-readiness.v1",
+  "project": "WMKD_Benchmark",
+  "protocol_frozen": true,
+  "formal_experiment_name": "Bb",
+  "audit_date": "2026-09-03",
+  "target_host": "ssh 6000",
+  "scope": "bring-up, canonical Ba inventory, minimal compatibility preflight, execution readiness",
+  "host_observation": {
+    "hostname": "autodl-container-8sfcmdj9gq-e8387159",
+    "os": "Ubuntu 22.04.5 LTS",
+    "kernel": "5.15.0-78-generic",
+    "system_python": "3.10.12",
+    "pytorch": null,
+    "cuda_runtime": null,
+    "driver": "580.95.05",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "vram_total_mib": 97887,
+    "vram_used_mib": 0,
+    "vram_free_mib": 97251,
+    "gpu_utilization_percent": 0,
+    "gpu_processes": [],
+    "cpu": "Intel Xeon Platinum 8470Q",
+    "logical_cpu_count": 208,
+    "ram_total": "1.0 TiB",
+    "ram_available": "862 GiB",
+    "swap": "0 B",
+    "data_disk_total": "500 GiB",
+    "data_disk_free": "392 GiB",
+    "code_repo_size": "4.8 MiB",
+    "project_data_size": "109 GiB"
+  },
+  "remote_git_observation": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark",
+    "head": "45d6f779d005ffad1abf2b90bd59580d464bb957",
+    "branch": "DETACHED",
+    "origin": "/root/autodl-tmp/wmkd_scw_de4880d.bundle",
+    "expected_head": "d74899457084000ea79697deec5f22f8bf884c20",
+    "correct_origin": false,
+    "bring_up_completed": false,
+    "reason": "subsequent SSH connections failed at TCP connect stage before safe ancestry and worktree checks could complete"
+  },
+  "scientific_logic_static_audit": {
+    "core_script": "scripts/passive5_shared_bb.py",
+    "inference_runner": "scripts/passive5_shared_bb_paraphrase_runner.py",
+    "frozen_reference_config": "configs/distillation/passive5_shared_bb3.json",
+    "prompt_sha256": "7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
+    "atomic_threshold": 1,
+    "tokenizer_add_special_tokens": false,
+    "decoding": {"do_sample": true, "temperature": 0.7, "top_p": 0.9, "seed": 42},
+    "core_is_config_driven": true,
+    "passive_specific_hard_coding": [
+      "reference config source/output namespaces",
+      "paired dataset schema identity",
+      "closure/report/index builder method list and run identity"
+    ],
+    "minimal_refactor_required": true,
+    "scientific_transformation_change_required": false
+  },
+  "canonical_ba_inventory": {
+    "pnfp": {"remote_actual_check": "NOT_COMPLETED"},
+    "evertracer": {"remote_actual_check": "NOT_COMPLETED"},
+    "ctcc": {"remote_actual_check": "NOT_COMPLETED"},
+    "iseal": {"remote_actual_check": "NOT_COMPLETED"},
+    "scw": {"remote_actual_check": "NOT_COMPLETED"}
+  },
+  "minimal_compatibility_preflight": "NOT_RUN",
+  "storage_classification": "NOT_ESTABLISHED",
+  "current_full_log_count": 26,
+  "future_bb_object_count": 5,
+  "method_readiness": {
+    "PN-FP": "NOT_READY",
+    "EverTracer": "NOT_READY",
+    "CTCC": "NOT_READY",
+    "iSeal": "NOT_READY",
+    "SCW": "NOT_READY"
+  },
+  "blockers": [
+    "SSH 6000 became unreachable after the initial host audit",
+    "remote checkout is detached and points to a historical local bundle; safe bring-up is incomplete",
+    "five canonical Ba frozen20k files, students, detectors, utilities, Qwen snapshot, archives, and compatibility samples were not actually verified on host 6000"
+  ],
+  "safe_to_start_full20k_preprocessing": false,
+  "safe_to_start_student_training": false,
+  "prohibited_work_performed": false
+}

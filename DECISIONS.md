@@ -458,3 +458,7 @@ Final closure preserves Shared Ba as COMPLETE (5/5 detected), original Bb and Bb
 The next stage is protocol discussion for PN-FP, EverTracer, CTCC, iSeal, and SCW Experiment Bb. The finalized Passive Bb3 atomic-identity plus Qwen UP protocol is the validated reference and leading candidate, but proactive Bb remains `PENDING_EXPLICIT_FREEZE`; this audit does not freeze or start it. The attack remains named Bb, not Bb3, unless explicitly changed later.
 
 Passive sharing does not generalize to proactive Teachers. Future proactive Bb requires five separate Ba parent answer/frozen20k lineages, five processed Bb datasets, and five fresh canonical Students. Only infrastructure, Qwen identity, prompt, UP implementation, validation, Student protocol, utility, and logging may be shared. Intended compute host is `ssh 6000`, but no connection or compute action is authorized by this audit.
+
+## 2026-09-03 — Proactive 1–5 Experiment Bb protocol freeze
+
+`PROACTIVE_BB_PROTOCOL_FROZEN = YES`. PN-FP, EverTracer, CTCC, iSeal, and SCW each use their own canonical Ba frozen20k, the exact validated Passive Bb3 preprocessing, their own processed20k, an independent fresh-canonical Student, Ba-identical training, exact frozen detector reuse, and Ba-matched utility. Atomic threshold, Qwen identity/prompt/decoding, validation, retry, fallback, and transformation semantics are method-agnostic and may not be tuned by watermark or detector outcome. The formal experiment name remains Bb.

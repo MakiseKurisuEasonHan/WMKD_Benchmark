@@ -10,7 +10,7 @@ All five Bb3 detectors remained positive: LLMPrint `0.785` (tau `0.7150049776`),
 
 The canonical ModelScope inventory records 4/4 verified PRIVATE Passive-5 artifacts. The global full-log index contains 26/26 unique objects with no broken paths. For proactive Ba, only Teacher-before versus final-Student-after is available; exact watermark disappearance step/epoch is `NOT ESTABLISHED`.
 
-Next stage: `PROACTIVE_1_TO_5_BB_PROTOCOL_DISCUSSION` for PN-FP, EverTracer, CTCC, iSeal, and SCW; intended host `ssh 6000`. Passive Bb3 is the validated UP reference and leading candidate, but proactive Experiment Bb is `PENDING_EXPLICIT_FREEZE` and `NOT_STARTED`. Each proactive method requires its own Ba Teacher answers/frozen20k, processed Bb dataset, and fresh canonical Student.
+Next stage: `PROACTIVE_1_TO_5_BB_EXECUTION_READINESS` for PN-FP, EverTracer, CTCC, iSeal, and SCW; intended host `ssh 6000`. `PROACTIVE_BB_PROTOCOL_FROZEN = YES`: exact validated Passive Bb3 scientific preprocessing, method-specific canonical Ba frozen20k, independent processed20k, independent fresh-canonical Student, Ba-identical training, exact frozen detector reuse, and Ba-matched utility. All five formal Bb runs remain `NOT_STARTED`.
 
 Latest confirmed pre-audit closure: local HEAD = `origin/main` = `a633b232e1c09523e54b8a9537d84347d5e94d14`, ahead/behind `0/0`, clean. Post-commit state must be revalidated in the final handoff.
 
