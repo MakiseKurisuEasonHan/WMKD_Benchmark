@@ -18,6 +18,11 @@ NAMESPACE = "MakiseKurisuEasonHan"
 REPO_NAME = "Llama-3.2-WMKD-Passive5-Shared-Ba-Student"
 REPO_ID = f"{NAMESPACE}/{REPO_NAME}"
 REPO_TYPE = "model"
+ARCHIVE_SLUG = "passive5_ba"
+EXPERIMENT_LABEL = "Ba"
+OBJECT_SLUG = "canonical_passive5_shared_ba_final_student"
+SCHEMA_VERSION = "wmkd.modelscope-passive5-shared-ba-student.v1"
+EVALUATION_RUN_ID = "passive5_shared_ba_eval_cont2_20260902_164200"
 PROJECT = Path("/root/autodl-tmp/WMKD_Benchmark")
 DATA_ROOT = Path("/root/autodl-tmp/WMKD_Benchmark_data")
 SOURCE = DATA_ROOT / "runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model"
@@ -148,19 +153,19 @@ def prepare_package(work: Path, gate: dict) -> tuple[Path, dict]:
         os.link(SOURCE / name, package / name)
     shutil.copyfile(BASE_LICENSE, package / "LICENSE.txt")
     (package / "NOTICE").write_text(META_NOTICE + "\n", encoding="utf-8", newline="\n")
-    readme = """# Llama 3.2 WMKD Passive-5 Shared Ba Student
+    readme = f"""# Llama 3.2 WMKD Passive-5 Shared {EXPERIMENT_LABEL} Student
 
 Built with Llama.
 
-Private transport backup of the canonical WMKD_Benchmark Passive-5 Shared Ba final Student. This is a full-parameter BF16 derivative of Llama 3.2 3B Instruct, trained on the immutable 20,000-record Shared Ba dataset. ModelScope is storage/transport only; this upload creates no new scientific result. Verify every file against `SHA256SUMS` and `manifest.json` before restoration.
+Private transport backup of the canonical WMKD_Benchmark Passive-5 Shared {EXPERIMENT_LABEL} final Student. This is a full-parameter BF16 derivative of Llama 3.2 3B Instruct, trained on the immutable 20,000-record Shared {EXPERIMENT_LABEL} dataset. ModelScope is storage/transport only; this upload creates no new scientific result. Verify every file against `SHA256SUMS` and `manifest.json` before restoration.
 
 Use is governed by the included `LICENSE.txt`, `NOTICE`, and the Llama Acceptable Use Policy. The repository name begins with “Llama” and the required “Built with Llama” attribution is displayed here.
 """
     (package / "README.md").write_text(readme, encoding="utf-8", newline="\n")
-    manifest = {"schema_version": "wmkd.modelscope-passive5-shared-ba-student.v1", "project": "WMKD_Benchmark",
-        "object": "canonical_passive5_shared_ba_final_student", "repository": REPO_ID, "visibility": "PRIVATE",
+    manifest = {"schema_version": SCHEMA_VERSION, "project": "WMKD_Benchmark",
+        "object": OBJECT_SLUG, "repository": REPO_ID, "visibility": "PRIVATE",
         "canonical_source_path": str(SOURCE), "source_run_id": gate["manifest"]["run_id"],
-        "evaluation_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+        "evaluation_run_id": EVALUATION_RUN_ID,
         "dataset_sha256": gate["manifest"]["dataset_sha256"], "training": gate["summary"]["configuration"],
         "optimizer_steps": gate["summary"]["optimizer_steps"], "model": gate["model"],
         "fresh_process_reload_evidence": {"status": gate["reload"]["status"], "fresh_process_reload": True,
@@ -194,8 +199,8 @@ def verify_package(downloaded: Path, package: Path) -> dict:
 
 
 def finalize_existing() -> dict:
-    packages = sorted((DATA_ROOT / "tmp").glob("modelscope_upload_passive5_ba_student_*/package"))
-    downloads = sorted(DATA_ROOT.glob("tmp/modelscope_verify_passive5_ba_student_*"))
+    packages = sorted((DATA_ROOT / "tmp").glob(f"modelscope_upload_{ARCHIVE_SLUG}_student_*/package"))
+    downloads = sorted(DATA_ROOT.glob(f"tmp/modelscope_verify_{ARCHIVE_SLUG}_student_*"))
     if not packages or not downloads:
         raise RuntimeError("UPLOAD_PACKAGE_OR_DOWNLOADED_COPY_MISSING")
     package, downloaded = packages[-1], downloads[-1]
@@ -214,7 +219,7 @@ def finalize_existing() -> dict:
     result = {"status": "COMPLETED", "repository": REPO_ID, "repository_type": REPO_TYPE,
         "visibility": "PRIVATE", "created": True, "revision": revision,
         "source_path": str(SOURCE), "source_run_id": gate["manifest"]["run_id"],
-        "evaluation_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+        "evaluation_run_id": EVALUATION_RUN_ID,
         "source_file_count": len(gate["hashes"]), "source_total_bytes": sum(gate["sizes"].values()),
         "uploaded_files": expected_remote, "uploaded_total_bytes": sum((package / n).stat().st_size for n in expected_remote),
         "package_manifest_sha256": sha256(package / "manifest.json"), "source_manifest_sha256": sha256(SOURCE_MANIFEST),
@@ -225,7 +230,7 @@ def finalize_existing() -> dict:
         "license_compliance": {"status": "PASS", "repository_name_starts_with_llama": REPO_NAME.startswith("Llama"), "license_included": True, "notice_included": True, "built_with_llama": True},
         "platform_metadata_excluded_from_canonical_manifest": [".gitattributes", ".ms_upload_cache"],
         "token_emitted": False, "completed_at": now()}
-    out = DATA_ROOT / "manifests/passive5_shared_ba_student_modelscope_archive.json"
+    out = DATA_ROOT / f"manifests/{ARCHIVE_SLUG}_student_modelscope_archive.json"
     write_json(out, result)
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return result
@@ -248,7 +253,7 @@ def upload() -> dict:
     preflight()
     gate = source_gate()
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-    work = DATA_ROOT / "tmp" / f"modelscope_upload_passive5_ba_student_{stamp}"
+    work = DATA_ROOT / "tmp" / f"modelscope_upload_{ARCHIVE_SLUG}_student_{stamp}"
     work.mkdir(parents=True, exist_ok=False)
     package, package_info = prepare_package(work, gate)
     api = api_client()
@@ -257,18 +262,18 @@ def upload() -> dict:
         raise RuntimeError(f"EXISTING_REPOSITORY_CONTENT_CONFLICT {state['files']}")
     created = False
     if not state["exists"]:
-        api.create_repo(REPO_ID, REPO_TYPE, visibility=1, description="Private canonical WMKD Passive-5 Shared Ba final Student backup; Built with Llama")
+        api.create_repo(REPO_ID, REPO_TYPE, visibility=1, description=f"Private canonical WMKD Passive-5 Shared {EXPERIMENT_LABEL} final Student backup; Built with Llama")
         created = True
     confirmed = repo_state(api)
     if not confirmed["private"]:
         raise RuntimeError("PRIVATE_VISIBILITY_NOT_CONFIRMED")
     if confirmed["files"] and not (created and set(confirmed["files"]).issubset({"README.md", ".gitattributes"})):
         raise RuntimeError(f"REMOTE_CONTENT_CONFLICT_BEFORE_UPLOAD {confirmed['files']}")
-    upload_result = api.upload_folder(REPO_ID, REPO_TYPE, package, path_in_repo="", commit_message="Archive canonical Passive-5 Shared Ba final Student", disable_tqdm=True, sync_remote_repo=False)
+    upload_result = api.upload_folder(REPO_ID, REPO_TYPE, package, path_in_repo="", commit_message=f"Archive canonical Passive-5 Shared {EXPERIMENT_LABEL} final Student", disable_tqdm=True, sync_remote_repo=False)
     final_state = repo_state(api)
     if not final_state["private"]:
         raise RuntimeError("REMOTE_REPOSITORY_NOT_PRIVATE_AFTER_UPLOAD")
-    verify_dir = DATA_ROOT / "tmp" / f"modelscope_verify_passive5_ba_student_{stamp}"
+    verify_dir = DATA_ROOT / "tmp" / f"modelscope_verify_{ARCHIVE_SLUG}_student_{stamp}"
     downloaded = Path(api.download_repo(REPO_ID, REPO_TYPE, local_dir=verify_dir, local_files_only=False, max_workers=4))
     verification = verify_package(downloaded, package)
     try:
@@ -279,7 +284,7 @@ def upload() -> dict:
     result = {"status": "COMPLETED", "repository": REPO_ID, "repository_type": REPO_TYPE,
         "visibility": "PRIVATE", "created": created, "revision": revision,
         "source_path": str(SOURCE), "source_run_id": gate["manifest"]["run_id"],
-        "evaluation_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+        "evaluation_run_id": EVALUATION_RUN_ID,
         "source_file_count": len(gate["hashes"]), "source_total_bytes": sum(gate["sizes"].values()),
         "uploaded_files": sorted(p.name for p in package.iterdir()), "uploaded_total_bytes": sum(p.stat().st_size for p in package.iterdir()),
         "package_manifest_sha256": sha256(package / "manifest.json"), "source_manifest_sha256": sha256(SOURCE_MANIFEST),
@@ -289,7 +294,7 @@ def upload() -> dict:
         "secret_scan": package_info["secret_scan"], "large_file_scan": {"status": "PASS", "allowed_large_files": [n for n in sorted(EXPECTED_SOURCE_FILES) if n.endswith(".safetensors")]},
         "license_compliance": {"status": "PASS", "repository_name_starts_with_llama": REPO_NAME.startswith("Llama"), "license_included": True, "notice_included": True, "built_with_llama": True},
         "token_emitted": False, "completed_at": now(), "upload_result_available": upload_result is not None}
-    out = DATA_ROOT / "manifests/passive5_shared_ba_student_modelscope_archive.json"
+    out = DATA_ROOT / f"manifests/{ARCHIVE_SLUG}_student_modelscope_archive.json"
     write_json(out, result)
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return result
