@@ -1,0 +1,43 @@
+{
+  "schema_version": "wmkd.passive5-shared-bb-pilot-blocker.v1",
+  "run_id": "passive5_shared_bb_20260903_041600",
+  "status": "SCIENTIFIC_DECISION_REQUIRED",
+  "formal_full20k_started": false,
+  "student_training_started": false,
+  "pilot_attempt_0": {
+    "status": "FAILED_OPERATIONAL_GATE",
+    "successful_records": 153,
+    "retry_exhausted_records": 47,
+    "reason": "dataset-level lexical and length diagnostics were incorrectly enforced as per-record validity failures"
+  },
+  "pilot_cont1": {
+    "status": "FAILED_PROMPT_BOUNDARY_LEAKAGE",
+    "successful_records": 199,
+    "retry_exhausted_records": 1,
+    "example_sample_id": "qa_026982b1a48a80c8c710",
+    "reason": "Qwen emitted the exact SOURCE_ANSWER wrapper around the atomic answer null"
+  },
+  "pilot_cont2": {
+    "status": "FAILED_HUMAN_AUDIT_PROMPT_LEAKAGE",
+    "generated_records": 200,
+    "attempt_records": 200,
+    "automated_prompt_leakage_count": 0,
+    "control_token_leakage_count": 0,
+    "truncation_count": 0,
+    "exact_copy_count": 21,
+    "exact_copy_rate": 0.105,
+    "mean_lexical_change": 0.6936538776068044,
+    "median_lexical_change": 0.75,
+    "boundary_tag_sanitization_count": 2,
+    "human_audit_blocker_sample_id": "qa_00454047fe5797416cb0",
+    "human_audit_source_answer": "tech",
+    "human_audit_observation": "The output echoed paraphrasing-instruction semantics rather than paraphrasing the source answer.",
+    "reason": "frozen pilot requires zero prompt leakage"
+  },
+  "required_user_decision": "Authorize a further detector-agnostic leakage rule/retry and a new pilot continuation, or change the paraphrase protocol scientifically.",
+  "preservation": {
+    "all_remote_pilot_attempts_preserved": true,
+    "canonical_ba_dataset_unchanged": true,
+    "qwen_snapshot_unchanged": true
+  }
+}
