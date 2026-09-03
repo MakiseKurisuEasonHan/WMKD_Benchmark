@@ -325,7 +325,7 @@ def freeze(source: list[dict], journal_path: str | Path, output: str | Path, con
         missing = [field for field in REQUIRED_PAIR if field not in record]
         if missing or record["status"] != "success": raise ValueError(f"PAIR_SCHEMA_OR_STATUS_FAILURE {record.get('sample_id')} {missing}")
     atomic_jsonl(output, ordered)
-    manifest = {"schema_version": "wmkd.passive5-shared-bb-paired-dataset.v1", "sample_count": len(ordered),
+    manifest = {"schema_version": config.get("paired_dataset_schema_version", "wmkd.passive5-shared-bb-paired-dataset.v1"), "sample_count": len(ordered),
                 "source_dataset_sha256": config["source_dataset"]["dataset_sha256"],
                 "sample_ids_sha256": records_sha256([{"sample_id": row["sample_id"]} for row in ordered]),
                 "paired_dataset_sha256": records_sha256(ordered), "frozen_jsonl_sha256": file_sha256(output),

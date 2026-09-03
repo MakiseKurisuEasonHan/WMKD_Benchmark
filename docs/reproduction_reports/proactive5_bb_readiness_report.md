@@ -30,3 +30,17 @@ The reusable core is config-driven through `scripts/passive5_shared_bb.py` and `
 ## Incomplete mandatory checks
 
 The five canonical Ba frozen20k files, scientific distinctness, Ba Students, frozen detectors, Ba-matched utility, exact Qwen snapshot, archive safety, storage peak/final estimate, full-log writer readiness, and per-method minimal compatibility samples were not actually verified on 6000. They must remain unknown rather than inferred from historical local records. All five methods are therefore `NOT_READY`; full20k preprocessing and Student training are unsafe to start.
+
+## Direct-endpoint continuation
+
+Direct SSH to `connect.westd.seetacloud.com:48835` succeeded and confirmed the same hostname. The old alias `6000` resolves incorrectly to `0.0.23.112:22`. Remote Git was brought up non-destructively: the detached SCW commit is preserved as `historical/scw-deployment-45d6f77`; active `main` and `origin/main` are `539b5a57cef5397fb45eef01f06ff57230ed3262`, ahead/behind `0/0`, clean; origin is `git@github.com:MakiseKurisuEasonHan/WMKD_Benchmark.git`.
+
+Container cgroup limits are 22 CPUs and 118,111,600,640 bytes of memory; host-visible 208 CPUs/1 TiB are not the purchased contract. The CTCC environment reports PyTorch `2.8.0+cu128` and CUDA runtime 12.8.
+
+Three canonical parents survive and are schema-compatible without adapters: EverTracer, CTCC, and iSeal each contain exactly 20,000 records with unique content SHA256 values `ca1aa9c...`, `621c9aed...`, and `d51c22b9...`. PN-FP's configured canonical path is absent, and no SCW Ba frozen20k was found. The three surviving datasets appear to be AutoDL-only and are `ARCHIVE_REQUIRED_BEFORE_BB`. PN-FP and SCW require canonical restoration/selection, never regeneration.
+
+EverTracer, CTCC, and iSeal Ba final Students exist at approximately 6.1 GiB each; PN-FP and SCW Students are absent locally but are not Bb initialization dependencies. EverTracer/CTCC/iSeal detector inputs and shared ARC/TruthfulQA caches exist. PN-FP detector artifacts and SCW frozen French evaluation data are absent. The exact Passive Bb3 Qwen path and snapshot manifest are absent, so Qwen compatibility inference was skipped.
+
+Minimal infrastructure-only parameterization is implemented in `scripts/prepare_proactive_bb.py`; the shared frozen scientific sections are copied unchanged, parent identity is verified fail-closed, and method-specific run/Student/report/full-log namespaces are generated. `scripts/passive5_shared_bb.py` now permits a method-neutral paired-manifest schema identity. Atomic threshold, prompt, decoding, validation, retry, fallback, leakage, and transformation semantics are unchanged. The proactive full-log closure builder still requires parameterization before formal completion.
+
+Storage is SAFE for serial execution: 392 GiB is free; observed final Students are 6.1 GiB and the largest retained final-plus-checkpoint run is 24 GiB. A conservative five-method retained-checkpoint footprint is approximately 120 GiB plus Qwen/logs/datasets, with 100 GiB recommended headroom. No cleanup was performed.

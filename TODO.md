@@ -9,6 +9,12 @@
 - [x] Validate 26/26 unique full experiment JSON objects with no broken paths.
 - [x] Freeze proactive methods 1–5 Experiment Bb to exact validated Passive Bb3 preprocessing plus method-specific Ba lineage and independent fresh Students.
 - [ ] Complete SSH 6000 canonical Ba inventory, minimal compatibility preflight, storage/archive audit, and execution-readiness report without starting formal work.
+- [x] Recover access through direct endpoint, safely bring remote Git to canonical main, preserve historical SCW checkout, and inventory existing artifacts.
+- [x] Add shared infrastructure-only proactive Bb config/namespace parameterization with frozen-science regression tests.
+- [ ] Restore, never regenerate, canonical PN-FP and SCW Ba frozen20k; establish their archive provenance.
+- [ ] Archive the surviving EverTracer, CTCC, and iSeal canonical Ba frozen20k before formal Bb.
+- [ ] Restore the exact recorded Passive Bb3 Qwen snapshot and rerun only the minimal compatibility inference preflight.
+- [ ] Complete proactive full-log closure-builder parameterization before formal completion logging.
 - [ ] Preserve five separate proactive Teacher-output lineages, processed Bb datasets, and fresh Students; do not share these across methods.
 - [ ] Obtain explicit authorization before `ssh 6000`, downloads, paraphrasing, training, detector/utility execution, or GPU use.
 - [ ] Perform no destructive cleanup without the permanent archive/dry-run/classification/explicit-authorization sequence.

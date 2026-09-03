@@ -4,15 +4,21 @@
   "protocol_frozen": true,
   "formal_experiment_name": "Bb",
   "audit_date": "2026-09-03",
-  "target_host": "ssh 6000",
+  "target_host": "ssh -p 48835 root@connect.westd.seetacloud.com",
+  "ssh_transport": {
+    "old_alias": "6000",
+    "old_alias_resolution": "0.0.23.112:22",
+    "direct_endpoint": "connect.westd.seetacloud.com:48835",
+    "direct_ssh": "SUCCESS"
+  },
   "scope": "bring-up, canonical Ba inventory, minimal compatibility preflight, execution readiness",
   "host_observation": {
     "hostname": "autodl-container-8sfcmdj9gq-e8387159",
     "os": "Ubuntu 22.04.5 LTS",
     "kernel": "5.15.0-78-generic",
     "system_python": "3.10.12",
-    "pytorch": null,
-    "cuda_runtime": null,
+    "pytorch": "2.8.0+cu128",
+    "cuda_runtime": "12.8 in experiment environment; nvidia-smi reports driver capability CUDA 13.0",
     "driver": "580.95.05",
     "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
     "vram_total_mib": 97887,
@@ -23,7 +29,9 @@
     "cpu": "Intel Xeon Platinum 8470Q",
     "logical_cpu_count": 208,
     "ram_total": "1.0 TiB",
-    "ram_available": "862 GiB",
+    "ram_available": "863 GiB",
+    "cgroup_cpu_quota": "22 CPUs",
+    "cgroup_memory_limit_bytes": 118111600640,
     "swap": "0 B",
     "data_disk_total": "500 GiB",
     "data_disk_free": "392 GiB",
@@ -32,13 +40,18 @@
   },
   "remote_git_observation": {
     "path": "/root/autodl-tmp/WMKD_Benchmark",
-    "head": "45d6f779d005ffad1abf2b90bd59580d464bb957",
-    "branch": "DETACHED",
-    "origin": "/root/autodl-tmp/wmkd_scw_de4880d.bundle",
-    "expected_head": "d74899457084000ea79697deec5f22f8bf884c20",
-    "correct_origin": false,
-    "bring_up_completed": false,
-    "reason": "subsequent SSH connections failed at TCP connect stage before safe ancestry and worktree checks could complete"
+    "initial_head": "45d6f779d005ffad1abf2b90bd59580d464bb957",
+    "initial_branch": "DETACHED",
+    "initial_origin": "/root/autodl-tmp/wmkd_scw_de4880d.bundle",
+    "head": "539b5a57cef5397fb45eef01f06ff57230ed3262",
+    "branch": "main",
+    "origin": "git@github.com:MakiseKurisuEasonHan/WMKD_Benchmark.git",
+    "origin_main": "539b5a57cef5397fb45eef01f06ff57230ed3262",
+    "ahead_behind": "0/0",
+    "worktree": "clean",
+    "correct_origin": true,
+    "bring_up_completed": true,
+    "historical_checkout_preserved_as": "historical/scw-deployment-45d6f77"
   },
   "scientific_logic_static_audit": {
     "core_script": "scripts/passive5_shared_bb.py",
@@ -54,18 +67,23 @@
       "paired dataset schema identity",
       "closure/report/index builder method list and run identity"
     ],
-    "minimal_refactor_required": true,
+    "parameterization_script": "scripts/prepare_proactive_bb.py",
+    "minimal_refactor_required": false,
+    "remaining_full_log_builder_work": true,
     "scientific_transformation_change_required": false
   },
   "canonical_ba_inventory": {
-    "pnfp": {"remote_actual_check": "NOT_COMPLETED"},
-    "evertracer": {"remote_actual_check": "NOT_COMPLETED"},
-    "ctcc": {"remote_actual_check": "NOT_COMPLETED"},
-    "iseal": {"remote_actual_check": "NOT_COMPLETED"},
-    "scw": {"remote_actual_check": "NOT_COMPLETED"}
+    "pnfp": {"canonical_run":"pnfp_exp_ba_20260828_111148","path":"/root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_distillation_20k/frozen_qa.jsonl","exists":false,"parent_teacher":"PN-FP A2","archive_status":"RESTORE_REQUIRED","ready":false},
+    "evertracer": {"canonical_run":"evertracer_ba_20260829_124055","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":5691839,"count":20000,"file_sha256":"a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca","dataset_sha256":"ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"EverTracer A preferred Teacher","adapter_required":false,"archive_status":"ARCHIVE_REQUIRED_BEFORE_BB","ready":false},
+    "ctcc": {"canonical_run":"ctcc_ba_generation_20260829_195943_cont1","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":5810753,"count":20000,"file_sha256":"4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6","dataset_sha256":"621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"CTCC A ctcc_a_20260829_190251","adapter_required":false,"archive_status":"ARCHIVE_REQUIRED_BEFORE_BB","ready":false},
+    "iseal": {"canonical_run":"iseal_ba_generation_20260830_134058","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":4663149,"count":20000,"file_sha256":"04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc","dataset_sha256":"d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"iSeal A6 iseal_a6_20260830_132300","adapter_required":false,"archive_status":"ARCHIVE_REQUIRED_BEFORE_BB","ready":false},
+    "scw": {"canonical_run":"scw_ba_full_20260831_193828_cont1","path":null,"exists":false,"parent_teacher":"SCW A2","archive_status":"RESTORE_REQUIRED","ready":false}
   },
-  "minimal_compatibility_preflight": "NOT_RUN",
-  "storage_classification": "NOT_ESTABLISHED",
+  "parent_distinctness": {"available_dataset_count":3,"available_full_hashes_unique":true,"all_five_established":false},
+  "minimal_compatibility_preflight": {"pnfp":"BLOCKED_PARENT_MISSING","evertracer":"STATIC_PASS_QWEN_SKIPPED","ctcc":"STATIC_PASS_QWEN_SKIPPED","iseal":"STATIC_PASS_QWEN_SKIPPED","scw":"BLOCKED_PARENT_MISSING"},
+  "qwen": {"identity":"Qwen/Qwen2.5-3B-Instruct","path":"/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct","snapshot_manifest":"/root/autodl-tmp/WMKD_Benchmark_data/manifests/qwen2_5_3b_instruct_modelscope_snapshot.json","exists":false,"restoration":"ModelScope master constrained by recorded creation time and 12-file/6183463418-byte SHA256 manifest"},
+  "storage": {"total_gib":500,"free_gib":392,"observed_final_student_gib":6.1,"observed_training_run_peak_gib":24,"qwen_expected_gib":5.8,"serial_per_method_increment_gib":24,"five_method_retained_with_checkpoint_gib":120,"five_final_models_only_gib":30.5,"recommended_headroom_gib":100},
+  "storage_classification": "SAFE",
   "current_full_log_count": 26,
   "future_bb_object_count": 5,
   "method_readiness": {
@@ -76,9 +94,12 @@
     "SCW": "NOT_READY"
   },
   "blockers": [
-    "SSH 6000 became unreachable after the initial host audit",
-    "remote checkout is detached and points to a historical local bundle; safe bring-up is incomplete",
-    "five canonical Ba frozen20k files, students, detectors, utilities, Qwen snapshot, archives, and compatibility samples were not actually verified on host 6000"
+    "PN-FP and SCW canonical Ba frozen20k are absent from host 6000 and require canonical restoration or selection",
+    "PN-FP and SCW Ba Students and detector inputs are absent locally",
+    "the exact Passive Bb3 Qwen model/tokenizer and snapshot manifest are absent and require verified restoration",
+    "the three surviving canonical Ba frozen20k parents require archive before Bb",
+    "Qwen inference compatibility is skipped until the exact snapshot is restored",
+    "proactive full-log closure builder remains to be parameterized"
   ],
   "safe_to_start_full20k_preprocessing": false,
   "safe_to_start_student_training": false,

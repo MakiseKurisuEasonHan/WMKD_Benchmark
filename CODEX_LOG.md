@@ -465,3 +465,5 @@ Local audit classification: A canonical = tracked source/docs/configs/tests/smal
 ## 2026-09-03 — Proactive Bb readiness blocked during 6000 bring-up
 
 Recorded the explicit proactive Bb protocol freeze and began the authorized SSH 6000 readiness audit. The initial connection captured host/GPU/disk state and exposed an outdated detached, bundle-origin checkout. Connection loss then prevented safe repository bring-up and actual five-dataset/Qwen/detector/utility inventory. Preserved unknowns as unavailable and marked all methods NOT_READY. No scientific or destructive action was taken.
+
+Direct endpoint `connect.westd.seetacloud.com:48835` recovered access. Verified the old checkout was clean, protected its HEAD on `historical/scw-deployment-45d6f77`, and switched active code to canonical GitHub main without touching the data root. Completed actual parent/Student/detector/utility/Qwen/storage inventory. Implemented only the minimum shared proactive Bb identity/namespace parameterization and regression tests. Missing PN-FP/SCW parents and exact Qwen snapshot remain blockers; three surviving parents require archive. Formal work remains unstarted.

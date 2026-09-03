@@ -14,6 +14,10 @@ Next stage: `PROACTIVE_1_TO_5_BB_EXECUTION_READINESS` for PN-FP, EverTracer, CTC
 
 Latest confirmed pre-audit closure: local HEAD = `origin/main` = `a633b232e1c09523e54b8a9537d84347d5e94d14`, ahead/behind `0/0`, clean. Post-commit state must be revalidated in the final handoff.
 
+### Proactive Bb readiness continuation — 2026-09-03
+
+Direct SSH endpoint `connect.westd.seetacloud.com:48835` restored access; alias `6000` is invalid because it resolves to `0.0.23.112:22`. Remote Git is safely on clean `main` at canonical `539b5a57`, with the former detached SCW checkout preserved as `historical/scw-deployment-45d6f77`. EverTracer, CTCC, and iSeal canonical Ba frozen20k survive with 20,000 records and distinct verified content hashes; PN-FP and SCW parents are absent. The three surviving parents require archive before Bb. Exact Passive Bb3 Qwen model/tokenizer and manifest are absent. All five methods remain NOT_READY; no formal work started.
+
 ## Historical pre-Bb preparation snapshot — 2026-09-03
 
 The benchmark has ten current ownership-verification methods. Proactive/embedded: PN-FP, EverTracer, CTCC, iSeal, SCW. Passive/intrinsic: LLMPrint, REEF, HuRef, AWM, ZeroPrint. All ten have completed preferred A/A2/A6 reproduction objects and Ba evaluation; passive Ba correctly used one shared Teacher/dataset/Student because the five passive References are the same canonical model.
