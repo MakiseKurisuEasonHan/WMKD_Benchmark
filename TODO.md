@@ -231,3 +231,5 @@ Pilot cont4 is preserved and stopped at the authorized gate: 200/200 automated f
 Pilot cont5 is preserved and stopped: attempts 1 and 2 for both `tech` samples were correctly rejected, while attempt 3 (`SOURCE_ANSWER.tech`) was accepted without a validator reason and fails manual leakage review. Do not patch further or start full20k/downstream stages without a new user decision.
 
 Await scientific freeze of the proposed Bb2 short-answer preprocessing threshold. CPU-only distribution audit recommends the smallest sufficient candidate, `<=1` Qwen non-special token (4,635 identity-preserved; 15,365 sent to Qwen). Do not start a Bb2 run until explicitly frozen and authorized.
+
+Bb2 was subsequently frozen without a short-token bypass and its formal pilot is now BLOCKED_AT_PILOT: both `tech` outputs are unresolved meta-commentary under the new semantic-preservation prompt. Do not patch endlessly or start full20k/downstream stages; await a new scientific decision.

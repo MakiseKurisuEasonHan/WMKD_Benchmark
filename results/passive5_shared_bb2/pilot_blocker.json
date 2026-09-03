@@ -1,0 +1,43 @@
+{
+  "schema_version": "wmkd.passive5-shared-bb2-pilot-blocker.v1",
+  "experiment": "Passive-5 Shared Bb2",
+  "run_id": "passive5_shared_bb2_20260903_163634",
+  "status": "BLOCKED_AT_PILOT",
+  "source_validation": "PASS",
+  "source_dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+  "prompt_sha256": "7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
+  "automated_summary": {
+    "final_records": 200,
+    "attempt_records": 200,
+    "qwen_paraphrased_count": 148,
+    "qwen_identity_preserved_count": 52,
+    "pipeline_identity_fallback_count": 0,
+    "retry_count": 0,
+    "truncation_count": 0,
+    "prompt_leakage_count": 0,
+    "instruction_echo_leakage_count": 0,
+    "control_token_leakage_count": 0,
+    "runtime_seconds": 76.34907831251621,
+    "output_tokens_per_second": 59.98762658604593,
+    "peak_vram_bytes": 7270696960
+  },
+  "human_audit_failure": {
+    "sample_ids": [
+      "qa_00454047fe5797416cb0",
+      "qa_027dbcaca1223ae97365"
+    ],
+    "source_answer": "tech",
+    "candidate_output": "The response provided is too short and lacks any meaningful content to transform according to the given rules. Therefore, it remains unchanged.",
+    "validator_reason": null,
+    "why_invalid": "The candidate is meta-commentary about transformation and does not return or semantically preserve the source answer tech.",
+    "why_not_captured": "The conservative fixed validator did not match this new wording; short-source expansion alone is auxiliary and cannot reject an output.",
+    "required_gate": "For source tech, only a semantically valid rewrite or the exact output tech is acceptable."
+  },
+  "full20k_started": false,
+  "student_training_started": false,
+  "detectors_started": false,
+  "utility_started": false,
+  "modelscope_archival_started": false,
+  "scientific_interpretation": "Bb2 pilot blocked by unresolved meta-commentary generation; no formal Bb2 result is established.",
+  "next_action": "STOP and request a new scientific decision; do not patch prompt or validator automatically."
+}

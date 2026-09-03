@@ -1,0 +1,23 @@
+{
+  "sample_count": 200,
+  "exact_copy_count": 52,
+  "exact_copy_rate": 0.26,
+  "natural_exact_copy_count": 52,
+  "identity_fallback_count": 0,
+  "identity_fallback_rate": 0.0,
+  "qwen_paraphrased_count": 148,
+  "qwen_identity_preserved_count": 52,
+  "total_identity_output_count": 52,
+  "mean_length_ratio": 3.506705689781275,
+  "median_length_ratio": 1.11875,
+  "truncation_count": 0,
+  "prompt_leakage_count": 0,
+  "instruction_echo_leakage_count": 0,
+  "chat_control_leakage_count": 0,
+  "generation_failure_count": 0,
+  "retry_count": 0,
+  "mean_lexical_change": 0.5049751999371931,
+  "median_lexical_change": 0.6132478632478633,
+  "semantic_similarity": "not_recorded_optional_hook_disabled",
+  "pilot_or_partial": true
+}
