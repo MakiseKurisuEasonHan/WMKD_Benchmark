@@ -10,6 +10,10 @@ Added the Qwen-configured, revision-gated Shared Bb pipeline and CPU/static cove
 
 Local standard-library test run: 42 tests executed, 39 passed and 3 pre-existing PyYAML-dependent checks skipped; zero failures. The 35 Shared-Bb-specific tests all passed. JSON, syntax, prompt-hash, global-index non-mutation, secret, large-file, and diff checks were also required before Git closure.
 
+## 2026-09-03 — Private ModelScope archive of canonical passive frozen20k
+
+Connected only to no-GPU AutoDL alias 6002, fast-forwarded its clean checkout, verified the canonical source and privacy gates, created an explicitly PRIVATE dataset repository, uploaded the minimal four-file transport package, and independently downloaded it. The downloaded JSONL was byte-identical and passed 20,000/schema/dataset/sample-ID/file SHA gates. Preserved the initial dataset-revision endpoint 404 as infrastructure history and completed verification without re-upload. No source deletion, experiment, Qwen download, paraphrasing, training, detector, GPU, or cache cleanup occurred.
+
 本日志记录 Codex 在 WMKD_Benchmark 项目中的实际工程操作。正式科研实验另行记录在 `EXPERIMENT_LOG.md`。
 
 ## 2026-08-27 14:13（Australia/Sydney，UTC+10:00）

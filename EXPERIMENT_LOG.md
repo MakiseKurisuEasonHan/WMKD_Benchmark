@@ -8,6 +8,10 @@ Local-only audit confirmed ten current methods, completed A/A2/A6 and Ba status,
 
 Prepared the local fail-closed pipeline for one Ba frozen20k → one Qwen-paraphrased20k → one fresh canonical Student → five frozen detector evaluations. Qwen revision remains `REQUIRED_TBD`; the planning full log is not added to the global formal-object index. Status is `PREPARED_NOT_STARTED`; GPU and formal Bb were not started.
 
+## 2026-09-03 — Canonical Passive-5 Shared Ba frozen20k private archive
+
+On no-GPU host `autodl-container-9235478639-4a175847`, the original frozen JSONL passed schema, uniqueness, ordering, 20,000-count, privacy and three-identity gates. Four minimal files were uploaded to PRIVATE ModelScope dataset `MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_ba_frozen20k`. The first post-upload revision query hit a non-scientific SDK endpoint 404 after 4/4 commits; a no-reupload continuation independently downloaded all files and reproduced every canonical identity plus byte equality. The source was preserved. No Bb/GPU/Qwen/training action occurred.
+
 ## Four ownership-method bounded smokes — 2026-09-01
 
 After safely pausing A2 at 97/200, serial foreground smokes completed for REEF (6.30335 s; 6,437,682,176-byte peak VRAM), AWM (5.80222 s; 6,484,990,464 bytes), HuRef (5.51993 s; 6,988,555,264 bytes), and ZeroPrint (6.80394 s; 6,438,586,880 bytes). Every result records `model_modified=false`, canonical revision `0cb88a4f...`, and `smoke_only=true`; all JSON artifacts passed parsing and were copied under method-specific `results/*/smoke/`. Final AutoDL state was GPU idle, 377 GiB disk available, LLMPrint still paused, no formal A/Ba started, and no shutdown. Integrated formal readiness remains false pending the blockers in `results/ownership_methods_smoke_summary.json`.

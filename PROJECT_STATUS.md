@@ -8,6 +8,8 @@ Experiment Bb is now frozen by explicit user decision as answer-only Untargeted 
 
 Local Passive-5 Shared Bb development is `PREPARED_NOT_STARTED`: config, versioned prompt, canonical Ba frozen20k gates, paired schema, resumable retry journal, exactly-20k freeze, quality/human audit, Student adapter, Ba/Bb parity validation, detector/utility orchestration, full-log/index support, tests, and a guarded future launcher are present. `Qwen/Qwen2.5-3B-Instruct` is frozen as the paraphraser identity, but its revision is intentionally unresolved and blocks any formal launch.
 
+The canonical Passive-5 Shared Ba frozen20k now has a verified private transport backup at ModelScope dataset `MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_ba_frozen20k`. Independent download reproduced 20,000 records and all three canonical identities, including byte-identical JSONL SHA256 `408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed`. ModelScope revision is unavailable because the SDK dataset-revisions endpoint returned 404; download used the exposed `master` revision. This copy is transport/storage only and does not create or modify a scientific dataset.
+
 The global full-log index currently contains 21 objects. Passive Shared Ba retained detectability for 5/5 frozen detectors in the tested same-backbone setting, which does not establish general KD immunity or newly transferred fingerprints. For proactive Ba, Teacher-before versus final-Student-after is supported, but exact checkpoint-level disappearance remains unestablished for 0/5 complete trajectories.
 
 Latest pre-audit closure: local HEAD = `origin/main` = `21b4e093e557f7f2c80133b88a0fd51ef579a4e5`, ahead/behind `0/0`, clean. This must be revalidated after the audit commit/push.

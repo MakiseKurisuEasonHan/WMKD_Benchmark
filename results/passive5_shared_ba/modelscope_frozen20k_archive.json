@@ -1,0 +1,56 @@
+{
+  "status": "COMPLETED",
+  "modelscope_backup_verified": true,
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_ba_frozen20k",
+  "repository_type": "dataset",
+  "visibility": "PRIVATE",
+  "created_by_initial_upload": true,
+  "revision": "unavailable_modelscope_dataset_revision_endpoint_404",
+  "uploaded_files": [
+    "README.md",
+    "SHA256SUMS",
+    "frozen_qa.jsonl",
+    "manifest.json"
+  ],
+  "uploaded_sizes": {
+    "frozen_qa.jsonl": 5876749,
+    "README.md": 349,
+    "manifest.json": 1104,
+    "SHA256SUMS": 238
+  },
+  "downloaded_file_sha256": {
+    "README.md": "1eb699f61a495786f082a230e0bd52ab1868b3f59717b4d18b79d49ec311805e",
+    "SHA256SUMS": "e178eda6043624cacbfd7d0979f81d159b66e33c47f1972797cf9ed7084e1912",
+    "frozen_qa.jsonl": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+    "manifest.json": "158aa0ae2f534898279211c303ea256e34be543df9065547109f0a60d75a8a4c"
+  },
+  "source_validation": {
+    "status": "PASS",
+    "record_count": 20000,
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "frozen_jsonl_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed"
+  },
+  "downloaded_copy_validation": {
+    "status": "PASS",
+    "record_count": 20000,
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "frozen_jsonl_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed"
+  },
+  "byte_identical": true,
+  "package_manifest_sha256": "158aa0ae2f534898279211c303ea256e34be543df9065547109f0a60d75a8a4c",
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_passive5_ba_20260903_030804",
+  "canonical_source_preserved": true,
+  "initial_upload_timestamp": "2026-09-03T03:05:52Z",
+  "verification_completed_at": "2026-09-03T03:08:07.661527+00:00",
+  "download_revision_requested": "master",
+  "scientific_semantics": "byte-equivalent private transport/storage copy of canonical Passive-5 Shared Ba frozen20k; not a new dataset construction",
+  "failure_continuation": {
+    "initial_post-upload_failure": "modelscope-hub 0.2.0 dataset revisions endpoint returned 404 after 4/4 files committed",
+    "continuation": "no re-upload; waited 10 seconds and independently downloaded all files successfully",
+    "scientific_effect": "none"
+  },
+  "token_emitted": false,
+  "upload_result_available": false
+}

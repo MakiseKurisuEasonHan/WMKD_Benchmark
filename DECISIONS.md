@@ -13,6 +13,12 @@
 - **Decision:** Reuse exactly one canonical Passive-5 Ba frozen20k, produce one paired paraphrased20k, and train one fresh canonical Student for all five passive detectors. This supersedes the older PN-FP-specific Dipper plan only for Passive-5 Shared Bb.
 - **Decision:** Decoding defaults are reproducible sampling (`do_sample=true`, temperature `0.7`, top-p `0.9`, seed `42`) with a provisional dynamic output budget. Budget multiplier/caps remain pilot-tunable operational fields and are not represented as final scientific results.
 
+## 2026-09-03 — Archive canonical Passive-5 Shared Ba frozen20k privately
+
+- **Decision:** Preserve a byte-equivalent private transport/storage copy in ModelScope dataset `MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_ba_frozen20k`. The package contains only `frozen_qa.jsonl`, `manifest.json`, `SHA256SUMS`, and `README.md`; it is not a new dataset construction and does not change Ba or Bb scientific status.
+- **Verification:** An independent download reproduced exactly 20,000 records, dataset SHA256 `eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7`, sample-ID SHA256 `7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93`, and byte-identical JSONL SHA256 `408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed`. Visibility was explicitly confirmed PRIVATE.
+- **Limitation:** `modelscope-hub 0.2.0` returned 404 for the dataset revisions endpoint, so an immutable ModelScope commit is unavailable; the successful independent download requested the exposed `master` revision. Consumers must always verify the canonical hashes.
+
 ## 2026-09-01 — Four-method smoke verdict
 
 - **Decision:** Treat all four terminal smoke JSONs as compatibility/resource evidence only. They do not establish positive-vs-negative scientific reproduction and cannot populate formal detector results.

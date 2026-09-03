@@ -8,6 +8,7 @@
 - [ ] Prepare and review the passive-shared Bb protocol, preserving paired IDs/instructions/inputs and replacing only the frozen Teacher answer with its UP-paraphrased answer.
 - [x] Prepare the shared-control lineage, Qwen paraphraser identity with revision gate, failure-closed paraphrase policy, fresh canonical Student, detector/utility wiring, full-JSON schema/index support, and guarded future launcher.
 - [ ] Resolve and freeze the exact `Qwen/Qwen2.5-3B-Instruct` revision during a future authorized download-preparation stage; then run and inspect the 100–200 sample pilot before formal 20k generation.
+- [x] Archive the canonical Passive-5 Shared Ba frozen20k to a PRIVATE ModelScope dataset and independently download/verify 20,000 records, all three canonical hashes, and byte identity.
 - [ ] Obtain a separate explicit execution prompt before any AutoDL connection, download, paraphrasing, Student training, detector evaluation, or GPU use.
 - [ ] Keep shared resources; perform no destructive cleanup before scientific closure, Git/archive gates, dry-run classification, and explicit authorization.
 
