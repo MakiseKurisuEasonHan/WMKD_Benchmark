@@ -149,7 +149,10 @@ def quality_flags(source: str, paraphrase: str, finish_reason: str | None, confi
     source_words, para_words = tokens(source), tokens(paraphrase)
     ratio = len(para_words) / max(1, len(source_words))
     lowered = paraphrase.casefold()
+    source_lowered = source.casefold()
     leakage = [marker for marker in q["prompt_leakage_markers"] if marker.casefold() in lowered]
+    instruction_echoes = [phrase for phrase in q["instruction_echo_phrases"]
+                          if phrase.casefold() in lowered and phrase.casefold() not in source_lowered]
     controls = [marker for marker in q["chat_control_markers"] if marker.casefold() in lowered]
     change = lexical_change(source, paraphrase)
     truncated = finish_reason in {"length", "max_tokens", "max_new_tokens"}
@@ -158,12 +161,14 @@ def quality_flags(source: str, paraphrase: str, finish_reason: str | None, confi
     if not paraphrase.strip(): failures.append("empty_output")
     if source.strip() == paraphrase.strip(): diagnostics.append("exact_copy")
     if leakage: failures.append("prompt_leakage")
+    if instruction_echoes: failures.append("instruction_echo_leakage")
     if controls: failures.append("chat_control_token_leakage")
     if truncated: failures.append("truncated")
     if not q["length_ratio_min"] <= ratio <= q["length_ratio_max"]: diagnostics.append("length_ratio_out_of_bounds")
     if change < q["minimum_lexical_change"]: diagnostics.append("insufficient_lexical_change")
     return {"pass": not failures, "failures": failures, "diagnostics": diagnostics, "length_ratio": ratio,
-            "lexical_change": change, "prompt_leakage": leakage, "chat_control_leakage": controls,
+            "lexical_change": change, "prompt_leakage": leakage, "instruction_echo_leakage": instruction_echoes,
+            "chat_control_leakage": controls,
             "truncated": truncated, "semantic_similarity": None}
 
 
@@ -273,6 +278,9 @@ def audit(pairs: list[dict], output_dir: str | Path, config: dict) -> dict:
               "exact_copy_rate": sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs) / len(pairs),
               "mean_length_ratio": statistics.mean(ratios), "median_length_ratio": statistics.median(ratios),
               "truncation_count": sum(bool(row["truncated"]) for row in pairs),
+              "prompt_leakage_count": sum(bool(row["quality"].get("prompt_leakage")) for row in pairs),
+              "instruction_echo_leakage_count": sum(bool(row["quality"].get("instruction_echo_leakage")) for row in pairs),
+              "chat_control_leakage_count": sum(bool(row["quality"].get("chat_control_leakage")) for row in pairs),
               "generation_failure_count": sum(row["status"] != "success" for row in pairs),
               "retry_count": sum(max(0, int(row["attempt_count"]) - 1) for row in pairs),
               "mean_lexical_change": statistics.mean(changes), "median_lexical_change": statistics.median(changes),

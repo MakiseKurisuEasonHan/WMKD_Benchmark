@@ -61,6 +61,20 @@
     "length_ratio_max": 2.0,
     "minimum_lexical_change": 0.1,
     "prompt_leakage_markers": ["<SOURCE_ANSWER>", "</SOURCE_ANSWER>", "paraphrase the answer below", "you are a careful paraphrasing assistant"],
+    "instruction_echo_phrases": [
+      "ensure all pertinent details",
+      "provided response, ensure",
+      "during rephrasing",
+      "here is the paraphrased version",
+      "here's the paraphrased version",
+      "here is the rephrased version",
+      "here's the rephrased version",
+      "the task asks",
+      "the instruction asks",
+      "i will paraphrase",
+      "i'll paraphrase",
+      "as requested, here is"
+    ],
     "chat_control_markers": ["<|im_start|>", "<|im_end|>", "<|assistant|>", "<|user|>", "<|system|>"],
     "semantic_similarity": {"enabled": false, "provider": "OPTIONAL_TBD", "threshold": null},
     "human_audit_sample_count": 20

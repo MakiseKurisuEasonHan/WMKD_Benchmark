@@ -65,6 +65,17 @@ class Passive5SharedBbTests(unittest.TestCase):
         self.assertEqual(sanitize_boundary_tags("<SOURCE_ANSWER>null</SOURCE_ANSWER>"),("null",True))
         self.assertEqual(sanitize_boundary_tags("paraphrase the answer below"),("paraphrase the answer below",False))
     def test_prompt_leakage(self): self.assertIn("prompt_leakage",quality_flags("answer","<SOURCE_ANSWER> leaked text","stop",self.config)["failures"])
+    def test_instruction_echo_leakage_is_phrase_based(self):
+        output="Regarding the provided response, ensure all pertinent details remain intact during rephrasing."
+        result=quality_flags("tech",output,"stop",self.config)
+        self.assertIn("instruction_echo_leakage",result["failures"])
+        self.assertIn("ensure all pertinent details",result["instruction_echo_leakage"])
+    def test_instruction_echo_does_not_reject_single_generic_words(self):
+        for output in ("rewrite", "paraphrase", "response", "A rewritten response is useful."):
+            self.assertNotIn("instruction_echo_leakage",quality_flags("answer",output,"stop",self.config)["failures"])
+    def test_instruction_phrase_preserved_when_present_in_source(self):
+        phrase="The instruction asks students to compare both texts."
+        self.assertNotIn("instruction_echo_leakage",quality_flags(phrase,phrase,"stop",self.config)["failures"])
     def test_control_token_leakage(self): self.assertIn("chat_control_token_leakage",quality_flags("answer","<|im_start|> rewritten answer","stop",self.config)["failures"])
     def test_retry_then_success(self):
         def generator(row,attempt,budget): return ("",0,"error","failure") if attempt==1 else good_answer(row,attempt,budget)
