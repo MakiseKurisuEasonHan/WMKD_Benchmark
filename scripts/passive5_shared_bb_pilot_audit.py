@@ -27,6 +27,9 @@ def main() -> None:
         if row["sample_id"] not in {item["sample_id"] for item in chosen}:
             chosen.append(row)
 
+    for row in successes:
+        if row.get("identity_fallback"):
+            add(row)
     for items in attempts.values():
         if len(items) > 1:
             add(items[-1])
@@ -34,7 +37,7 @@ def main() -> None:
         if row["sample_id"] == "qa_00454047fe5797416cb0":
             add(row)
     for row in successes:
-        if row["source_answer"].strip() == row["paraphrased_answer"].strip() and len(chosen) < 9:
+        if not row.get("identity_fallback") and row["source_answer"].strip() == row["paraphrased_answer"].strip() and len(chosen) < 11:
             add(row)
     for row in sorted(successes, key=lambda item: len(item["source_answer"]), reverse=True)[:8]:
         add(row)
@@ -59,7 +62,9 @@ def main() -> None:
         "final_instruction_echo_count": sum(bool(row["quality"].get("instruction_echo_leakage")) for row in successes),
         "final_control_token_leakage_count": sum(bool(row["quality"].get("chat_control_leakage")) for row in successes),
         "final_truncation_count": sum(bool(row["truncated"]) for row in successes),
-        "final_exact_copy_count": sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in successes),
+        "natural_exact_copy_count": sum(not row.get("identity_fallback") and row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in successes),
+        "identity_fallback_count": sum(bool(row.get("identity_fallback")) for row in successes),
+        "total_identity_output_count": sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in successes),
         "targeted_panel_count": min(len(chosen), args.count),
         "rejected_attempts": [{"sample_id": row["sample_id"], "attempt_count": row["attempt_count"],
                                "reason": row["error"], "rejected_output": row["paraphrased_answer"]} for row in rejected],

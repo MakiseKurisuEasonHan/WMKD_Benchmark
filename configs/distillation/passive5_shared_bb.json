@@ -54,6 +54,12 @@
       "scientific_status": "PROVISIONAL_PENDING_PILOT"
     },
     "retry": {"maximum_attempts_per_sample": 3, "retry_same_sample": true, "drop_failed_samples": false},
+    "identity_fallback": {
+      "enabled": true,
+      "reason": "paraphrase_retry_exhausted_semantic_preservation",
+      "full20k_max_count": 200,
+      "full20k_max_rate": 0.01
+    },
     "pilot": {"sample_count_min": 100, "sample_count_max": 200, "formal_result": false}
   },
   "quality": {

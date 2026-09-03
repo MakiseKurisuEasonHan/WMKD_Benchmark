@@ -87,10 +87,17 @@ class Passive5SharedBbTests(unittest.TestCase):
         run_records(self.source,self.root/"attempts.jsonl",self.config,generator,limit=1)
         run_records(self.source,self.root/"attempts.jsonl",self.config,generator)
         self.assertEqual(calls.count("qa_0"),1)
-    def test_retry_exhaustion(self):
-        with self.assertRaisesRegex(RuntimeError,"RETRY_EXHAUSTED"): run_records(self.source,self.root/"attempts.jsonl",self.config,lambda r,a,b:("",0,"error","failed"))
+    def test_retry_exhaustion_uses_identity_fallback(self):
+        progress=run_records(self.source,self.root/"attempts.jsonl",self.config,lambda r,a,b:("rejected output",2,"stop","failed"))
+        self.assertTrue(progress["complete"]);self.assertEqual(progress["identity_fallback_count"],3)
+        records=read_jsonl(self.root/"attempts.jsonl");final=records[3]
+        self.assertTrue(final["identity_fallback"]);self.assertEqual(final["failed_attempt_count"],3)
+        self.assertEqual(final["paraphrased_answer"],self.source[0]["teacher_raw_answer"])
+        self.assertEqual(final["source_answer_sha256"],final["final_answer_sha256"])
+        self.assertEqual(final["fallback_reason"],"paraphrase_retry_exhausted_semantic_preservation")
+        self.assertEqual(len(final["rejected_attempts"]),3)
     def test_generation_error_is_durable(self):
-        with self.assertRaises(RuntimeError):run_records(self.source,self.root/"attempts.jsonl",self.config,lambda r,a,b:("",0,"error","model_error"))
+        run_records(self.source,self.root/"attempts.jsonl",self.config,lambda r,a,b:("",0,"error","model_error"))
         record=read_jsonl(self.root/"attempts.jsonl")[0];self.assertEqual(record["status"],"failed");self.assertEqual(record["error"],"model_error")
     def test_duplicate_attempt_fails(self):
         pair=build_pair(self.source[0],"A fully rewritten response with distinct language and adequate length.",9,10,1,"stop",None,self.config)
@@ -114,6 +121,20 @@ class Passive5SharedBbTests(unittest.TestCase):
         journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,good_answer);freeze(self.source,journal,self.root/"out.jsonl",self.config)
         result=audit(read_jsonl(self.root/"out.jsonl"),self.root/"audit",self.config)
         self.assertEqual(result["sample_count"],3);self.assertTrue((self.root/"audit/human_audit_samples.md").is_file())
+    def test_audit_distinguishes_natural_exact_and_fallback(self):
+        answers={"qa_0":0}
+        def generator(row,attempt,budget):
+            if row["sample_id"]=="qa_0": return "",0,"error","failed"
+            if row["sample_id"]=="qa_1": return row["teacher_raw_answer"],8,"stop",None
+            return good_answer(row,attempt,budget)
+        journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,generator)
+        result=audit_journal(self.source,journal,self.root/"audit",self.config)
+        self.assertEqual(result["identity_fallback_count"],1);self.assertEqual(result["natural_exact_copy_count"],1)
+        self.assertEqual(result["total_identity_output_count"],2)
+    def test_identity_fallback_aggregate_gate(self):
+        self.config["paraphrase"]["identity_fallback"]["full20k_max_count"]=1
+        with self.assertRaisesRegex(RuntimeError,"IDENTITY_FALLBACK_AGGREGATE_GATE"):
+            run_records(self.source,self.root/"attempts.jsonl",self.config,lambda r,a,b:("",0,"error","failed"))
     def test_partial_pilot_audit(self):
         journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,good_answer,limit=1)
         result=audit_journal(self.source,journal,self.root/"pilot_audit",self.config);self.assertEqual(result["sample_count"],1);self.assertTrue(result["pilot_or_partial"])

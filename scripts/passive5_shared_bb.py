@@ -190,7 +190,33 @@ def build_pair(row: dict, answer: str, source_token_count: int, paraphrase_token
         "paraphrase_prompt_identity": config["paraphrase"]["prompt_sha256"],
         "status": status, "attempt_count": attempt, "finish_reason": finish_reason,
         "truncated": flags["truncated"], "error": error or (";".join(flags["failures"]) if flags["failures"] else None),
-        "quality": flags,
+        "quality": flags, "identity_fallback": False, "fallback_reason": None,
+        "failed_attempt_count": 0, "rejected_attempts": [],
+    }
+
+
+def build_identity_fallback(row: dict, source_token_count: int, attempt: int,
+                            rejected: list[dict], config: dict) -> dict:
+    """Create an auditable, byte-preserving source-answer fallback after retries."""
+    answer = row["teacher_raw_answer"]
+    flags = quality_flags(answer, answer, "identity_fallback", config)
+    reason = config["paraphrase"]["identity_fallback"]["reason"]
+    return {
+        "sample_id": row["sample_id"], "instruction": row["instruction"], "input": row["input"],
+        "source_question": source_question(row), "source_answer": answer,
+        "source_answer_sha256": text_sha256(answer), "paraphrased_answer": answer,
+        "paraphrased_answer_sha256": text_sha256(answer),
+        "source_answer_token_count": source_token_count,
+        "paraphrased_answer_token_count": source_token_count,
+        "generation_config_identity": generation_identity(config),
+        "paraphrase_prompt_identity": config["paraphrase"]["prompt_sha256"],
+        "status": "success", "attempt_count": attempt, "finish_reason": "identity_fallback",
+        "truncated": False, "error": None, "quality": flags, "identity_fallback": True,
+        "fallback_reason": reason, "failed_attempt_count": len(rejected),
+        "rejected_attempts": [{"attempt_count": item["attempt_count"],
+                               "rejected_output": item["paraphrased_answer"],
+                               "rejection_reason": item["error"]} for item in rejected],
+        "final_answer": answer, "final_answer_sha256": text_sha256(answer),
     }
 
 
@@ -219,6 +245,7 @@ def run_records(source: list[dict], journal_path: str | Path, config: dict,
     source_by_id = {row["sample_id"]: row for row in source}
     journal, successes, counts = load_attempts(journal_path, source_by_id)
     maximum = config["paraphrase"]["retry"]["maximum_attempts_per_sample"]
+    fallback_config = config["paraphrase"].get("identity_fallback", {})
     processed = 0
     for row in source:
         sample_id = row["sample_id"]
@@ -238,11 +265,23 @@ def run_records(source: list[dict], journal_path: str | Path, config: dict,
                 "attempt_records": len(journal), "current_sample_id": sample_id,
                 "complete": len(successes) == len(source),
             })
+        if sample_id not in successes and counts.get(sample_id, 0) >= maximum and fallback_config.get("enabled"):
+            rejected = [item for item in journal if item["sample_id"] == sample_id and item["status"] != "success"]
+            approximate_source_tokens = rejected[-1]["source_answer_token_count"] if rejected else len(tokens(row["teacher_raw_answer"]))
+            record = build_identity_fallback(row, approximate_source_tokens, maximum + 1, rejected, config)
+            journal.append(record); counts[sample_id] = maximum + 1; successes[sample_id] = record
+            append_jsonl_durable(journal_path, record)
+            fallback_count = sum(bool(item.get("identity_fallback")) for item in successes.values())
+            if fallback_count > int(fallback_config["full20k_max_count"]):
+                raise RuntimeError(f"IDENTITY_FALLBACK_AGGREGATE_GATE count={fallback_count} max={fallback_config['full20k_max_count']}")
         processed += 1
         if limit is not None and processed >= limit: break
     exhausted = [sid for sid in source_by_id if sid not in successes and counts.get(sid, 0) >= maximum]
+    fallback_count = sum(bool(row.get("identity_fallback")) for row in successes.values())
     progress = {"source_count": len(source), "successful_count": len(successes), "attempt_records": len(journal),
-                "retry_count": len(journal) - len({row["sample_id"] for row in journal}), "exhausted_sample_ids": exhausted,
+                "generation_retry_count": sum(max(0, min(int(row["attempt_count"]), maximum) - 1) for row in successes.values()),
+                "retry_count": len(journal) - len({row["sample_id"] for row in journal}),
+                "identity_fallback_count": fallback_count, "exhausted_sample_ids": exhausted,
                 "complete": len(successes) == len(source)}
     atomic_json(Path(journal_path).with_name("progress.json"), progress)
     if exhausted: raise RuntimeError(f"PARAPHRASE_RETRY_EXHAUSTED count={len(exhausted)}")
@@ -274,8 +313,15 @@ def audit(pairs: list[dict], output_dir: str | Path, config: dict) -> dict:
     if not pairs: raise ValueError("EMPTY_PAIR_DATASET")
     ratios = [row["quality"]["length_ratio"] for row in pairs]
     changes = [row["quality"]["lexical_change"] for row in pairs]
-    result = {"sample_count": len(pairs), "exact_copy_count": sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs),
-              "exact_copy_rate": sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs) / len(pairs),
+    identity_fallback_count = sum(bool(row.get("identity_fallback")) for row in pairs)
+    natural_exact_copy_count = sum(not row.get("identity_fallback") and row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs)
+    total_identity_output_count = sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs)
+    result = {"sample_count": len(pairs), "exact_copy_count": total_identity_output_count,
+              "exact_copy_rate": total_identity_output_count / len(pairs),
+              "natural_exact_copy_count": natural_exact_copy_count,
+              "identity_fallback_count": identity_fallback_count,
+              "identity_fallback_rate": identity_fallback_count / len(pairs),
+              "total_identity_output_count": total_identity_output_count,
               "mean_length_ratio": statistics.mean(ratios), "median_length_ratio": statistics.median(ratios),
               "truncation_count": sum(bool(row["truncated"]) for row in pairs),
               "prompt_leakage_count": sum(bool(row["quality"].get("prompt_leakage")) for row in pairs),
