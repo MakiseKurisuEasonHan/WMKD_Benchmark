@@ -1,0 +1,211 @@
+{
+  "fresh_process_reload": true,
+  "base": {
+    "arc_challenge_acc_norm": 0.44880546075085326,
+    "truthfulqa_mc2_acc": 0.505450760153828,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.505450760153828,
+        "acc_stderr,none": 0.015602814964389472,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.447098976109215,
+        "acc_stderr,none": 0.014529380160526848,
+        "acc_norm,none": 0.44880546075085326,
+        "acc_norm_stderr,none": 0.014534599585097664,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "teacher": {
+    "arc_challenge_acc_norm": 0.44880546075085326,
+    "truthfulqa_mc2_acc": 0.505450760153828,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.505450760153828,
+        "acc_stderr,none": 0.015602814964389472,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.447098976109215,
+        "acc_stderr,none": 0.014529380160526848,
+        "acc_norm,none": 0.44880546075085326,
+        "acc_norm_stderr,none": 0.014534599585097664,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "student": {
+    "arc_challenge_acc_norm": 0.4906143344709898,
+    "truthfulqa_mc2_acc": 0.45441620416416634,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.45441620416416634,
+        "acc_stderr,none": 0.01498170384477929,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.47696245733788395,
+        "acc_stderr,none": 0.014595873205358269,
+        "acc_norm,none": 0.4906143344709898,
+        "acc_norm_stderr,none": 0.014608816322065003,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "ordinary_generation": {
+    "base": {
+      "passed": true,
+      "rows": [
+        {
+          "prompt": "What is the capital of France?",
+          "completion": " Paris\nWhat is the capital of France?\nThe capital of France is indeed Paris. Located in the north-central part of the country, Paris is a global center for art, fashion, cuisine, and culture. It is also a major hub for business, finance, and tourism. The city is famous for its iconic landmarks",
+          "functional": true
+        },
+        {
+          "prompt": "Explain why the sky appears blue.",
+          "completion": " This is a classic question that has puzzled people for centuries. The answer lies in the way light interacts with the Earth's atmosphere.\n## Step 1: Understand the basics of light and its interaction with matter\nLight is a form of electromagnetic radiation, and it consists of different colors, each with its own wavelength. When",
+          "functional": true
+        },
+        {
+          "prompt": "Solve: 3x + 5 = 20.",
+          "completion": " \n\n## Step 1: Subtract 5 from both sides of the equation\nTo isolate the term with the variable, we need to get rid of the constant on the same side as the variable. So, we subtract 5 from both sides of the equation: 3x + 5 - 5 = ",
+          "functional": true
+        },
+        {
+          "prompt": "Write a polite thank-you note.",
+          "completion": " A polite thank-you note is a great way to express gratitude and appreciation for someone's help, support, or gift. Here's a sample template you can use as a guide:\n\nDear [Name],\n\nI wanted to take a moment to express my heartfelt thanks for [specific action or gift]. Your [help/support/gift",
+          "functional": true
+        }
+      ]
+    },
+    "teacher": {
+      "passed": true,
+      "rows": [
+        {
+          "prompt": "What is the capital of France?",
+          "completion": " Paris\nWhat is the capital of France?\nThe capital of France is indeed Paris. Located in the north-central part of the country, Paris is a global center for art, fashion, cuisine, and culture. It is also a major hub for business, finance, and tourism. The city is famous for its iconic landmarks",
+          "functional": true
+        },
+        {
+          "prompt": "Explain why the sky appears blue.",
+          "completion": " This is a classic question that has puzzled people for centuries. The answer lies in the way light interacts with the Earth's atmosphere.\n## Step 1: Understand the basics of light and its interaction with matter\nLight is a form of electromagnetic radiation, and it consists of different colors, each with its own wavelength. When",
+          "functional": true
+        },
+        {
+          "prompt": "Solve: 3x + 5 = 20.",
+          "completion": " \n\n## Step 1: Subtract 5 from both sides of the equation\nTo isolate the term with the variable, we need to get rid of the constant on the same side as the variable. So, we subtract 5 from both sides of the equation: 3x + 5 - 5 = ",
+          "functional": true
+        },
+        {
+          "prompt": "Write a polite thank-you note.",
+          "completion": " A polite thank-you note is a great way to express gratitude and appreciation for someone's help, support, or gift. Here's a sample template you can use as a guide:\n\nDear [Name],\n\nI wanted to take a moment to express my heartfelt thanks for [specific action or gift]. Your [help/support/gift",
+          "functional": true
+        }
+      ]
+    },
+    "student": {
+      "passed": true,
+      "rows": [
+        {
+          "prompt": "What is the capital of France?",
+          "completion": " Paris\nWhat is the capital of Italy? Rome\nWhat is the capital of Spain? Madrid\nWhat is the capital of Germany? Berlin\nWhat is the capital of the United Kingdom? London\nWhat is the capital of the United States? Washington D.C.\nWhat is the capital of Australia? Canberra\nWhat is",
+          "functional": true
+        },
+        {
+          "prompt": "Explain why the sky appears blue.",
+          "completion": " This is a common question that has puzzled people for centuries. The answer lies in the way light interacts with the Earth's atmosphere.\nWhen sunlight enters the Earth's atmosphere, it encounters tiny molecules of gases such as nitrogen and oxygen. These molecules scatter the light in all directions, but they scatter shorter (blue) wavelengths more",
+          "functional": true
+        },
+        {
+          "prompt": "Solve: 3x + 5 = 20.",
+          "completion": " \n## Step 1: Subtract 5 from both sides of the equation\nSubtracting 5 from both sides gives us 3x = 15.\n\n## Step 2: Divide both sides of the equation by 3\nDividing both sides by 3 gives us x = 5.\n\nThe final",
+          "functional": true
+        },
+        {
+          "prompt": "Write a polite thank-you note.",
+          "completion": " A polite thank-you note is a great way to express gratitude and appreciation for someone's help or support. Here's an example of a polite thank-you note:\n\nDear [Name],\n\nI wanted to take a moment to express my sincere gratitude for your help and support. Your assistance has been invaluable, and I am truly thankful",
+          "functional": true
+        }
+      ]
+    }
+  },
+  "french_supplementary": {
+    "base": {
+      "passed": true,
+      "rows": [
+        {
+          "prompt": "Expliquez simplement pourquoi le ciel est bleu.",
+          "completion": " La réponse est basée sur la physique et la chimie.\nLe ciel est bleu en raison de la réfraction de la lumière du soleil à travers l'atmosphère terrestre. L'atmosphère est composée de divers gaz, notamment de l'azote et",
+          "functional": true
+        },
+        {
+          "prompt": "Rédigez un court message de remerciement.",
+          "completion": " \n\nVoici un exemple de message de remerciement :\n\n\"Bonjour [Nom du destinataire],\n\nJe voulais prendre un moment pour vous remercier pour [brièvement décrire l'aide ou le soutien que vous avez apporté]. Votre [geste, parle,",
+          "functional": true
+        },
+        {
+          "prompt": "Résolvez 3x + 5 = 20 en français.",
+          "completion": " \nLa réponse finale est 5. \n\nPour résoudre l’équation, nous devons isoler la variable x. \n\nTout d’abord, soustrayez 5 des deux côtés de l’équation : \n3x + 5 - 5 = 20 -",
+          "functional": true
+        },
+        {
+          "prompt": "Donnez trois conseils pour organiser une journée chargée.",
+          "completion": " Planifier et organiser une journée chargée peut être un défi, mais avec quelques conseils, vous pouvez vous y préparer. Voici trois conseils pour organiser une journée chargée :\n\n1.  **Définissez vos priorités** : Commencez par identifier les tâches les plus importantes",
+          "functional": true
+        }
+      ]
+    },
+    "teacher": {
+      "passed": true,
+      "rows": [
+        {
+          "prompt": "Expliquez simplement pourquoi le ciel est bleu.",
+          "completion": " La réponse est basée sur la physique et la chimie.\nLe ciel est bleu en raison de la réfraction de la lumière du soleil à travers l'atmosphère terrestre. L'atmosphère est composée de divers gaz, notamment de l'azote et",
+          "functional": true
+        },
+        {
+          "prompt": "Rédigez un court message de remerciement.",
+          "completion": " \n\nVoici un exemple de message de remerciement :\n\n\"Bonjour [Nom du destinataire],\n\nJe voulais prendre un moment pour vous remercier pour [brièvement décrire l'aide ou le soutien que vous avez apporté]. Votre [geste, parle,",
+          "functional": true
+        },
+        {
+          "prompt": "Résolvez 3x + 5 = 20 en français.",
+          "completion": " \nLa réponse finale est 5. \n\nPour résoudre l’équation, nous devons isoler la variable x. \n\nTout d’abord, soustrayez 5 des deux côtés de l’équation : \n3x + 5 - 5 = 20 -",
+          "functional": true
+        },
+        {
+          "prompt": "Donnez trois conseils pour organiser une journée chargée.",
+          "completion": " Planifier et organiser une journée chargée peut être un défi, mais avec quelques conseils, vous pouvez vous y préparer. Voici trois conseils pour organiser une journée chargée :\n\n1.  **Définissez vos priorités** : Commencez par identifier les tâches les plus importantes",
+          "functional": true
+        }
+      ]
+    },
+    "student": {
+      "passed": true,
+      "rows": [
+        {
+          "prompt": "Expliquez simplement pourquoi le ciel est bleu.",
+          "completion": " La réponse est basée sur la physique et la chimie.\nLa réponse est : Le ciel apparaît bleu en raison de la réfraction de la lumière solaire à travers les molécules d'air. Lorsque la lumière solaire entre dans l'atmosphère ter",
+          "functional": true
+        },
+        {
+          "prompt": "Rédigez un court message de remerciement.",
+          "completion": " \n\nVoici un exemple de message de remerciement :\n\n\"Merci beaucoup pour votre soutien et votre aide. C'est vraiment apprécié. Je vais continuer à travailler dur pour atteindre mes objectifs. Merci encore pour votre confiance en moi.\" \n\nN'hésitez pas",
+          "functional": true
+        },
+        {
+          "prompt": "Résolvez 3x + 5 = 20 en français.",
+          "completion": " \nLa réponse finale est 5. \nLa réponse finale est 5. \n5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5",
+          "functional": true
+        },
+        {
+          "prompt": "Donnez trois conseils pour organiser une journée chargée.",
+          "completion": " Prioriser les tâches, gérer le temps et prendre des pauses sont essentiels pour rester productif et éviter la fatigue.\n1. **Priorisez vos tâches** : Commencez par identifier les tâches les plus importantes et les plus urgentes. Utilisez la",
+          "functional": true
+        }
+      ]
+    }
+  }
+}

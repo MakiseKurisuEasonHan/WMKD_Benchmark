@@ -1,0 +1,15 @@
+{
+  "schema_version": "wmkd.passive5-shared-bb3-provenance.v1",
+  "run_id": "passive5_shared_bb3_20260903_164929",
+  "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+  "student_manifest_sha256": "7627c24465af64ef72b97b0e84deb49752145c0835089423066e59562c5c45aa",
+  "detector_source_sha256": {
+    "LLMPrint": "4910640a27b1352884b449f7e5ba45480c9cad618d8b551223cf71dc6dc936d5",
+    "REEF": "ca8432f899bacd18287ecac774175cdb3494b0c4bc4e5199014ba3874f13914e",
+    "HuRef": "5cef4c10eb6119fc71719660216d9bc085a048a797aed4e01e3488da9ad2ca5f",
+    "AWM": "f9e2eeb4976e089164e1287dade6fb19cfbe06dc7bd01574bbd103177a23c8bc",
+    "ZeroPrint": "d9c676451c8d0ecf28734801a0eb6ef0566ccfb473224d90f6e194af9836239d"
+  },
+  "dataset_archive_manifest_sha256": "7303572c360d244835c5577c519695e22c84d2c183a42d81e8090470ae101220",
+  "student_archive_manifest_sha256": "f15a8dab639ac062b2eeda3c4642cdaf18e1d1053720359ebbae707bd7426791"
+}

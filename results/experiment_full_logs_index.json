@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-02T09:52:13.323321+00:00",
-  "object_count": 21,
+  "generated_at": "2026-09-03T10:45:25.227531+00:00",
+  "object_count": 26,
   "objects": [
     {
       "method": "PN-FP",
@@ -375,6 +375,81 @@
       "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
       "utility_available": true,
       "watermark_evaluation_available": true,
+      "telemetry_records": 7500
+    },
+    {
+      "method": "LLMPrint",
+      "role": "passive_fingerprint_bb3_evaluation",
+      "experiment": "Bb3",
+      "run_id": "passive5_shared_bb3_20260903_164929",
+      "full_log_path": "results/llmprint/experiment_bb3/full_experiment_log.json",
+      "full_log_sha256": "b36cc98a333068523c70043d9a0cf1a212f58547b9b810e10c970dc6bb2e5687",
+      "scientific_status": "DETECTABILITY_RETAINED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "shared_attack": true,
+      "shared_student_run_id": "passive5_shared_bb3_20260903_164929",
+      "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+      "telemetry_records": 7500
+    },
+    {
+      "method": "REEF",
+      "role": "passive_fingerprint_bb3_evaluation",
+      "experiment": "Bb3",
+      "run_id": "passive5_shared_bb3_20260903_164929",
+      "full_log_path": "results/reef/experiment_bb3/full_experiment_log.json",
+      "full_log_sha256": "b8bf2a523b2a5f209203bcc3099c0cdb7052ebc3922731716409ae918d14dca0",
+      "scientific_status": "DETECTABILITY_RETAINED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "shared_attack": true,
+      "shared_student_run_id": "passive5_shared_bb3_20260903_164929",
+      "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+      "telemetry_records": 7500
+    },
+    {
+      "method": "HuRef",
+      "role": "passive_fingerprint_bb3_evaluation",
+      "experiment": "Bb3",
+      "run_id": "passive5_shared_bb3_20260903_164929",
+      "full_log_path": "results/huref/experiment_bb3/full_experiment_log.json",
+      "full_log_sha256": "0f7dce963689faeaf6d037e8aa2e79a2f5b2a33435c89bca81dfaaed7893b8a6",
+      "scientific_status": "DETECTABILITY_RETAINED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "shared_attack": true,
+      "shared_student_run_id": "passive5_shared_bb3_20260903_164929",
+      "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+      "telemetry_records": 7500
+    },
+    {
+      "method": "AWM",
+      "role": "passive_fingerprint_bb3_evaluation",
+      "experiment": "Bb3",
+      "run_id": "passive5_shared_bb3_20260903_164929",
+      "full_log_path": "results/awm/experiment_bb3/full_experiment_log.json",
+      "full_log_sha256": "7977d028a8e97fd84d89e83e987d8fef18ff094895c57b158096bb7edf7c1732",
+      "scientific_status": "DETECTABILITY_RETAINED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "shared_attack": true,
+      "shared_student_run_id": "passive5_shared_bb3_20260903_164929",
+      "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+      "telemetry_records": 7500
+    },
+    {
+      "method": "ZeroPrint",
+      "role": "passive_fingerprint_bb3_evaluation",
+      "experiment": "Bb3",
+      "run_id": "passive5_shared_bb3_20260903_164929",
+      "full_log_path": "results/zeroprint/experiment_bb3/full_experiment_log.json",
+      "full_log_sha256": "ff0eaaeb057a727f2e4a3d880ced38416df1464067f58a1099f169170e0f6cce",
+      "scientific_status": "DETECTABILITY_RETAINED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "shared_attack": true,
+      "shared_student_run_id": "passive5_shared_bb3_20260903_164929",
+      "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
       "telemetry_records": 7500
     }
   ]

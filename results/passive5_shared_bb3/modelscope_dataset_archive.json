@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETED",
+  "modelscope_backup_verified": true,
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_bb3_processed20k",
+  "repository_type": "dataset",
+  "visibility": "PRIVATE",
+  "created": true,
+  "revision": "unavailable_modelscope_dataset_revision_endpoint_404",
+  "uploaded_files": [
+    "README.md",
+    "SHA256SUMS",
+    "frozen_paired_qa.jsonl",
+    "manifest.json"
+  ],
+  "uploaded_sizes": {
+    "README.md": 344,
+    "manifest.json": 1751,
+    "SHA256SUMS": 245,
+    "frozen_paired_qa.jsonl": 34821418
+  },
+  "source_validation": {
+    "status": "PASS",
+    "record_count": 20000,
+    "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "frozen_jsonl_sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88"
+  },
+  "downloaded_copy_validation": {
+    "status": "PASS",
+    "record_count": 20000,
+    "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "frozen_jsonl_sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88"
+  },
+  "byte_identical": true,
+  "package_manifest_sha256": "647ec6d53e817f9d30c17a72525bc2c4fe0a6e4432903109a7b29ccd6d94b53e",
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_passive5_bb3_20260903_090742",
+  "canonical_source_preserved": true,
+  "upload_timestamp": "2026-09-03T09:07:49.223743+00:00",
+  "token_emitted": false,
+  "upload_result_available": true
+}

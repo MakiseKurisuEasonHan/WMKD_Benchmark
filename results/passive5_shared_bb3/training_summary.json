@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETED",
+  "run_id": "passive5_shared_bb3_20260903_164929",
+  "fresh_initialization": true,
+  "resume": false,
+  "optimizer_steps": 7500,
+  "epochs": 3.0,
+  "train_loss": 0.9624974139531454,
+  "runtime_seconds": 2022.7063,
+  "peak_vram_bytes": 32181769216,
+  "configuration": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false,
+    "effective_batch_size": 8,
+    "expected_steps": 7500,
+    "max_length": 1024,
+    "seed": 42
+  },
+  "student_manifest_sha256": "7627c24465af64ef72b97b0e84deb49752145c0835089423066e59562c5c45aa"
+}

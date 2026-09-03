@@ -1,0 +1,26 @@
+{
+  "schema_version": "wmkd.zeroprint-bb3.v1",
+  "method": "ZeroPrint",
+  "experiment": "Bb3",
+  "run_id": "passive5_shared_bb3_20260903_164929",
+  "status": "COMPLETED",
+  "scientific_status": "DETECTABILITY_RETAINED",
+  "shared_student": true,
+  "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+  "detector": {
+    "method": "ZeroPrint",
+    "metric": "rescaled Pearson correlation",
+    "score": 0.9170220196247101,
+    "threshold": 0.6793505996465683,
+    "positive": true,
+    "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/zeroprint/detector_result.json",
+    "source_sha256": "d9c676451c8d0ecf28734801a0eb6ef0566ccfb473224d90f6e194af9836239d",
+    "raw_pearson": 0.8340440392494202,
+    "reference_score": 1.0,
+    "ba_score": 0.8399372696876526,
+    "ba_to_bb3_change": 0.0770847499370575
+  },
+  "utility_path": "results/passive5_shared_bb3/utility_results.json",
+  "unresolved_errors": [],
+  "bounded_conclusion": "ownership fingerprint remained detectable after the tested Bb3 attack"
+}

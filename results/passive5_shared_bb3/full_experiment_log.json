@@ -1,0 +1,650 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "experiment": "Passive-5 Shared Bb3",
+  "run_id": "passive5_shared_bb3_20260903_164929",
+  "status": "COMPLETED",
+  "scientific_status": "COMPLETED",
+  "attack": "UP post-watermark paraphrasing distillation",
+  "history_preserved": {
+    "Bb": "BLOCKED_AT_PILOT",
+    "Bb2": "BLOCKED_AT_PILOT"
+  },
+  "scientific_justification": "Predeclared detector-agnostic atomic-response identity preservation prevents Qwen meta-task failures on answers with <=1 non-special tokenizer token; all longer answers use the unchanged Bb2 Qwen paraphrasing protocol.",
+  "environment": {
+    "host": "autodl-container-9235478639-4a175847",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "gpu_memory_mib": 97887
+  },
+  "source_ba_dataset": {
+    "record_count": 20000,
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93"
+  },
+  "preprocessing": {
+    "atomic_threshold": "Qwen tokenizer non-special token count <= 1",
+    "atomic_identity_count": 4635,
+    "qwen_submitted": 15365,
+    "qwen_paraphrased": 13061,
+    "qwen_natural_identity": 2256,
+    "pipeline_identity_fallback": 48,
+    "rejected_attempts": 279,
+    "generation_retry_count": 231,
+    "final_unresolved_leakage": 0,
+    "final_chat_control_token_leakage": 0,
+    "final_truncation": 0,
+    "runtime_seconds": 7484.502216789871,
+    "qwen_model": "Qwen/Qwen2.5-3B-Instruct",
+    "qwen_revision_identity": {
+      "modelscope_revision": "master",
+      "revision_created_at": 1740595239
+    },
+    "prompt_sha256": "7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
+    "decoding": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "seed": 42
+    }
+  },
+  "pilot": {
+    "status": "PASS",
+    "sample_count": 200,
+    "atomic_identity_count": 41,
+    "qwen_submitted": 159,
+    "qwen_paraphrased": 143,
+    "qwen_natural_identity": 16,
+    "runtime_seconds": 63.8928,
+    "human_audit_pairs": 25,
+    "human_audit": "PASS"
+  },
+  "training_parity": {
+    "status": "PASS",
+    "passed_fields": 19,
+    "total_fields": 19
+  },
+  "dataset": {
+    "schema_version": "wmkd.passive5-shared-bb-paired-dataset.v1",
+    "sample_count": 20000,
+    "source_dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "paired_dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+    "frozen_jsonl_sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88",
+    "generation_config_identity": "d1a9fc6ab0aef4fc6230576f3dcf98b8bfd68d7e1eadda4d6496a58364ae0083",
+    "prompt_sha256": "7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495"
+  },
+  "dataset_archive": {
+    "status": "COMPLETED",
+    "modelscope_backup_verified": true,
+    "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_bb3_processed20k",
+    "repository_type": "dataset",
+    "visibility": "PRIVATE",
+    "created": true,
+    "revision": "unavailable_modelscope_dataset_revision_endpoint_404",
+    "uploaded_files": [
+      "README.md",
+      "SHA256SUMS",
+      "frozen_paired_qa.jsonl",
+      "manifest.json"
+    ],
+    "uploaded_sizes": {
+      "README.md": 344,
+      "manifest.json": 1751,
+      "SHA256SUMS": 245,
+      "frozen_paired_qa.jsonl": 34821418
+    },
+    "source_validation": {
+      "status": "PASS",
+      "record_count": 20000,
+      "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+      "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+      "frozen_jsonl_sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88"
+    },
+    "downloaded_copy_validation": {
+      "status": "PASS",
+      "record_count": 20000,
+      "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+      "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+      "frozen_jsonl_sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88"
+    },
+    "byte_identical": true,
+    "package_manifest_sha256": "647ec6d53e817f9d30c17a72525bc2c4fe0a6e4432903109a7b29ccd6d94b53e",
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_passive5_bb3_20260903_090742",
+    "canonical_source_preserved": true,
+    "upload_timestamp": "2026-09-03T09:07:49.223743+00:00",
+    "token_emitted": false,
+    "upload_result_available": true
+  },
+  "training": {
+    "status": "COMPLETED",
+    "run_id": "passive5_shared_bb3_20260903_164929",
+    "fresh_initialization": true,
+    "resume": false,
+    "optimizer_steps": 7500,
+    "epochs": 3.0,
+    "train_loss": 0.9624974139531454,
+    "runtime_seconds": 2022.7063,
+    "peak_vram_bytes": 32181769216,
+    "configuration": {
+      "epochs": 3,
+      "learning_rate": 1e-05,
+      "precision": "bf16",
+      "full_parameter": true,
+      "lora": false,
+      "effective_batch_size": 8,
+      "expected_steps": 7500,
+      "max_length": 1024,
+      "seed": 42
+    },
+    "student_manifest_sha256": "7627c24465af64ef72b97b0e84deb49752145c0835089423066e59562c5c45aa"
+  },
+  "student_manifest": {
+    "schema_version": "wmkd.passive5-shared-bb3-student.v1",
+    "status": "PASS",
+    "artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/final_model",
+    "dataset_sha256": "9d0243012a275fe56db46b17f0665ddf23acc911b8c82ed02983d0c6fa55428a",
+    "files_sha256": {
+      "config.json": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+      "generation_config.json": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+      "model-00001-of-00002.safetensors": "a5c63a9edcdeee7719e580383b36238afc5ada29e947fe1733aba082cef8f12e",
+      "model-00002-of-00002.safetensors": "bc6c2d460a2053fb02b43dc95d6c580779f17368b880051823ad5b08b8b60698",
+      "model.safetensors.index.json": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "special_tokens_map.json": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "tokenizer.json": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+      "tokenizer_config.json": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+      "training_args.bin": "9583ff41a457ba5556d97ac95634ff3762a600aab3d52e5cc3c081b0e2880121"
+    },
+    "file_count": 9,
+    "full_parameter": true,
+    "resume": false,
+    "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+  },
+  "reload_validation": {
+    "status": "PASS",
+    "fresh_process_reload": true,
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/final_model",
+    "student_manifest_sha256": "7627c24465af64ef72b97b0e84deb49752145c0835089423066e59562c5c45aa",
+    "tokenizer": {
+      "class": "PreTrainedTokenizerFast",
+      "vocab_size": 128256,
+      "chat_template_present": true
+    },
+    "inference_smoke": {
+      "prompt": "Reply with exactly: WMKD_RELOAD_PASS",
+      "response": "WMKD_RELOAD_PASS",
+      "pass": true
+    },
+    "finite_weight_check": {
+      "parameter_count": 3212749824,
+      "nonfinite_count": 0,
+      "minimum": -0.98046875,
+      "maximum": 2.359375,
+      "pass": true
+    },
+    "adapter_files": [],
+    "peak_vram_bytes": 9980857344,
+    "runtime_seconds": 3.646831750869751
+  },
+  "detectors": {
+    "schema_version": "wmkd.passive5-shared-bb3-detectors.v1",
+    "experiment": "Bb3",
+    "run_id": "passive5_shared_bb3_20260903_164929",
+    "status": "COMPLETED",
+    "retained_count": 5,
+    "method_count": 5,
+    "all_evaluation_errors_resolved": true,
+    "methods": [
+      {
+        "method": "LLMPrint",
+        "metric": "paper-style bit accuracy",
+        "score": 0.785,
+        "threshold": 0.7150049776126003,
+        "positive": true,
+        "valid_count": 200,
+        "correct_bits": 157,
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/llmprint/student_probability_sequence.json",
+        "source_sha256": "4910640a27b1352884b449f7e5ba45480c9cad618d8b551223cf71dc6dc936d5",
+        "reference_score": 1.0,
+        "ba_score": 0.82,
+        "ba_to_bb3_change": -0.03499999999999992
+      },
+      {
+        "method": "REEF",
+        "metric": "centered linear CKA",
+        "score": 0.9672861269249347,
+        "threshold": 0.4546738923165847,
+        "positive": true,
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/reef/detector_result.json",
+        "source_sha256": "ca8432f899bacd18287ecac774175cdb3494b0c4bc4e5199014ba3874f13914e",
+        "reference_score": 1.0,
+        "ba_score": 0.9542220066305829,
+        "ba_to_bb3_change": 0.013064120294351778
+      },
+      {
+        "method": "HuRef",
+        "metric": "ICS",
+        "score": 99.99873352050781,
+        "threshold": 4.119894027709961,
+        "positive": true,
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/huref/detector_result.json",
+        "source_sha256": "5cef4c10eb6119fc71719660216d9bc085a048a797aed4e01e3488da9ad2ca5f",
+        "reference_score": 99.99999237060547,
+        "ba_score": 99.99898529052734,
+        "ba_to_bb3_change": -0.00025177001953125
+      },
+      {
+        "method": "AWM",
+        "metric": "official mean Wq/Wk unbiased linear CKA",
+        "score": 0.9999961065394538,
+        "threshold": 0.0017953364917795106,
+        "positive": true,
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/awm/detector_result.json",
+        "source_sha256": "f9e2eeb4976e089164e1287dade6fb19cfbe06dc7bd01574bbd103177a23c8bc",
+        "reference_score": 1.0,
+        "ba_score": 0.9999974135841643,
+        "ba_to_bb3_change": -1.3070447104635008e-06
+      },
+      {
+        "method": "ZeroPrint",
+        "metric": "rescaled Pearson correlation",
+        "score": 0.9170220196247101,
+        "threshold": 0.6793505996465683,
+        "positive": true,
+        "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/zeroprint/detector_result.json",
+        "source_sha256": "d9c676451c8d0ecf28734801a0eb6ef0566ccfb473224d90f6e194af9836239d",
+        "raw_pearson": 0.8340440392494202,
+        "reference_score": 1.0,
+        "ba_score": 0.8399372696876526,
+        "ba_to_bb3_change": 0.0770847499370575
+      }
+    ],
+    "bounded_conclusion": "Ownership detectability remained positive under 5/5 frozen passive detectors after the tested Bb3 UP attack; no broader robustness claim is made."
+  },
+  "utility": {
+    "fresh_process_reload": true,
+    "base": {
+      "arc_challenge_acc_norm": 0.44880546075085326,
+      "truthfulqa_mc2_acc": 0.505450760153828,
+      "raw_results": {
+        "truthfulqa_mc2": {
+          "acc,none": 0.505450760153828,
+          "acc_stderr,none": 0.015602814964389472,
+          "alias": "truthfulqa_mc2"
+        },
+        "arc_challenge": {
+          "acc,none": 0.447098976109215,
+          "acc_stderr,none": 0.014529380160526848,
+          "acc_norm,none": 0.44880546075085326,
+          "acc_norm_stderr,none": 0.014534599585097664,
+          "alias": "arc_challenge"
+        }
+      }
+    },
+    "teacher": {
+      "arc_challenge_acc_norm": 0.44880546075085326,
+      "truthfulqa_mc2_acc": 0.505450760153828,
+      "raw_results": {
+        "truthfulqa_mc2": {
+          "acc,none": 0.505450760153828,
+          "acc_stderr,none": 0.015602814964389472,
+          "alias": "truthfulqa_mc2"
+        },
+        "arc_challenge": {
+          "acc,none": 0.447098976109215,
+          "acc_stderr,none": 0.014529380160526848,
+          "acc_norm,none": 0.44880546075085326,
+          "acc_norm_stderr,none": 0.014534599585097664,
+          "alias": "arc_challenge"
+        }
+      }
+    },
+    "student": {
+      "arc_challenge_acc_norm": 0.4906143344709898,
+      "truthfulqa_mc2_acc": 0.45441620416416634,
+      "raw_results": {
+        "truthfulqa_mc2": {
+          "acc,none": 0.45441620416416634,
+          "acc_stderr,none": 0.01498170384477929,
+          "alias": "truthfulqa_mc2"
+        },
+        "arc_challenge": {
+          "acc,none": 0.47696245733788395,
+          "acc_stderr,none": 0.014595873205358269,
+          "acc_norm,none": 0.4906143344709898,
+          "acc_norm_stderr,none": 0.014608816322065003,
+          "alias": "arc_challenge"
+        }
+      }
+    },
+    "ordinary_generation": {
+      "base": {
+        "passed": true,
+        "rows": [
+          {
+            "prompt": "What is the capital of France?",
+            "completion": " Paris\nWhat is the capital of France?\nThe capital of France is indeed Paris. Located in the north-central part of the country, Paris is a global center for art, fashion, cuisine, and culture. It is also a major hub for business, finance, and tourism. The city is famous for its iconic landmarks",
+            "functional": true
+          },
+          {
+            "prompt": "Explain why the sky appears blue.",
+            "completion": " This is a classic question that has puzzled people for centuries. The answer lies in the way light interacts with the Earth's atmosphere.\n## Step 1: Understand the basics of light and its interaction with matter\nLight is a form of electromagnetic radiation, and it consists of different colors, each with its own wavelength. When",
+            "functional": true
+          },
+          {
+            "prompt": "Solve: 3x + 5 = 20.",
+            "completion": " \n\n## Step 1: Subtract 5 from both sides of the equation\nTo isolate the term with the variable, we need to get rid of the constant on the same side as the variable. So, we subtract 5 from both sides of the equation: 3x + 5 - 5 = ",
+            "functional": true
+          },
+          {
+            "prompt": "Write a polite thank-you note.",
+            "completion": " A polite thank-you note is a great way to express gratitude and appreciation for someone's help, support, or gift. Here's a sample template you can use as a guide:\n\nDear [Name],\n\nI wanted to take a moment to express my heartfelt thanks for [specific action or gift]. Your [help/support/gift",
+            "functional": true
+          }
+        ]
+      },
+      "teacher": {
+        "passed": true,
+        "rows": [
+          {
+            "prompt": "What is the capital of France?",
+            "completion": " Paris\nWhat is the capital of France?\nThe capital of France is indeed Paris. Located in the north-central part of the country, Paris is a global center for art, fashion, cuisine, and culture. It is also a major hub for business, finance, and tourism. The city is famous for its iconic landmarks",
+            "functional": true
+          },
+          {
+            "prompt": "Explain why the sky appears blue.",
+            "completion": " This is a classic question that has puzzled people for centuries. The answer lies in the way light interacts with the Earth's atmosphere.\n## Step 1: Understand the basics of light and its interaction with matter\nLight is a form of electromagnetic radiation, and it consists of different colors, each with its own wavelength. When",
+            "functional": true
+          },
+          {
+            "prompt": "Solve: 3x + 5 = 20.",
+            "completion": " \n\n## Step 1: Subtract 5 from both sides of the equation\nTo isolate the term with the variable, we need to get rid of the constant on the same side as the variable. So, we subtract 5 from both sides of the equation: 3x + 5 - 5 = ",
+            "functional": true
+          },
+          {
+            "prompt": "Write a polite thank-you note.",
+            "completion": " A polite thank-you note is a great way to express gratitude and appreciation for someone's help, support, or gift. Here's a sample template you can use as a guide:\n\nDear [Name],\n\nI wanted to take a moment to express my heartfelt thanks for [specific action or gift]. Your [help/support/gift",
+            "functional": true
+          }
+        ]
+      },
+      "student": {
+        "passed": true,
+        "rows": [
+          {
+            "prompt": "What is the capital of France?",
+            "completion": " Paris\nWhat is the capital of Italy? Rome\nWhat is the capital of Spain? Madrid\nWhat is the capital of Germany? Berlin\nWhat is the capital of the United Kingdom? London\nWhat is the capital of the United States? Washington D.C.\nWhat is the capital of Australia? Canberra\nWhat is",
+            "functional": true
+          },
+          {
+            "prompt": "Explain why the sky appears blue.",
+            "completion": " This is a common question that has puzzled people for centuries. The answer lies in the way light interacts with the Earth's atmosphere.\nWhen sunlight enters the Earth's atmosphere, it encounters tiny molecules of gases such as nitrogen and oxygen. These molecules scatter the light in all directions, but they scatter shorter (blue) wavelengths more",
+            "functional": true
+          },
+          {
+            "prompt": "Solve: 3x + 5 = 20.",
+            "completion": " \n## Step 1: Subtract 5 from both sides of the equation\nSubtracting 5 from both sides gives us 3x = 15.\n\n## Step 2: Divide both sides of the equation by 3\nDividing both sides by 3 gives us x = 5.\n\nThe final",
+            "functional": true
+          },
+          {
+            "prompt": "Write a polite thank-you note.",
+            "completion": " A polite thank-you note is a great way to express gratitude and appreciation for someone's help or support. Here's an example of a polite thank-you note:\n\nDear [Name],\n\nI wanted to take a moment to express my sincere gratitude for your help and support. Your assistance has been invaluable, and I am truly thankful",
+            "functional": true
+          }
+        ]
+      }
+    },
+    "french_supplementary": {
+      "base": {
+        "passed": true,
+        "rows": [
+          {
+            "prompt": "Expliquez simplement pourquoi le ciel est bleu.",
+            "completion": " La réponse est basée sur la physique et la chimie.\nLe ciel est bleu en raison de la réfraction de la lumière du soleil à travers l'atmosphère terrestre. L'atmosphère est composée de divers gaz, notamment de l'azote et",
+            "functional": true
+          },
+          {
+            "prompt": "Rédigez un court message de remerciement.",
+            "completion": " \n\nVoici un exemple de message de remerciement :\n\n\"Bonjour [Nom du destinataire],\n\nJe voulais prendre un moment pour vous remercier pour [brièvement décrire l'aide ou le soutien que vous avez apporté]. Votre [geste, parle,",
+            "functional": true
+          },
+          {
+            "prompt": "Résolvez 3x + 5 = 20 en français.",
+            "completion": " \nLa réponse finale est 5. \n\nPour résoudre l’équation, nous devons isoler la variable x. \n\nTout d’abord, soustrayez 5 des deux côtés de l’équation : \n3x + 5 - 5 = 20 -",
+            "functional": true
+          },
+          {
+            "prompt": "Donnez trois conseils pour organiser une journée chargée.",
+            "completion": " Planifier et organiser une journée chargée peut être un défi, mais avec quelques conseils, vous pouvez vous y préparer. Voici trois conseils pour organiser une journée chargée :\n\n1.  **Définissez vos priorités** : Commencez par identifier les tâches les plus importantes",
+            "functional": true
+          }
+        ]
+      },
+      "teacher": {
+        "passed": true,
+        "rows": [
+          {
+            "prompt": "Expliquez simplement pourquoi le ciel est bleu.",
+            "completion": " La réponse est basée sur la physique et la chimie.\nLe ciel est bleu en raison de la réfraction de la lumière du soleil à travers l'atmosphère terrestre. L'atmosphère est composée de divers gaz, notamment de l'azote et",
+            "functional": true
+          },
+          {
+            "prompt": "Rédigez un court message de remerciement.",
+            "completion": " \n\nVoici un exemple de message de remerciement :\n\n\"Bonjour [Nom du destinataire],\n\nJe voulais prendre un moment pour vous remercier pour [brièvement décrire l'aide ou le soutien que vous avez apporté]. Votre [geste, parle,",
+            "functional": true
+          },
+          {
+            "prompt": "Résolvez 3x + 5 = 20 en français.",
+            "completion": " \nLa réponse finale est 5. \n\nPour résoudre l’équation, nous devons isoler la variable x. \n\nTout d’abord, soustrayez 5 des deux côtés de l’équation : \n3x + 5 - 5 = 20 -",
+            "functional": true
+          },
+          {
+            "prompt": "Donnez trois conseils pour organiser une journée chargée.",
+            "completion": " Planifier et organiser une journée chargée peut être un défi, mais avec quelques conseils, vous pouvez vous y préparer. Voici trois conseils pour organiser une journée chargée :\n\n1.  **Définissez vos priorités** : Commencez par identifier les tâches les plus importantes",
+            "functional": true
+          }
+        ]
+      },
+      "student": {
+        "passed": true,
+        "rows": [
+          {
+            "prompt": "Expliquez simplement pourquoi le ciel est bleu.",
+            "completion": " La réponse est basée sur la physique et la chimie.\nLa réponse est : Le ciel apparaît bleu en raison de la réfraction de la lumière solaire à travers les molécules d'air. Lorsque la lumière solaire entre dans l'atmosphère ter",
+            "functional": true
+          },
+          {
+            "prompt": "Rédigez un court message de remerciement.",
+            "completion": " \n\nVoici un exemple de message de remerciement :\n\n\"Merci beaucoup pour votre soutien et votre aide. C'est vraiment apprécié. Je vais continuer à travailler dur pour atteindre mes objectifs. Merci encore pour votre confiance en moi.\" \n\nN'hésitez pas",
+            "functional": true
+          },
+          {
+            "prompt": "Résolvez 3x + 5 = 20 en français.",
+            "completion": " \nLa réponse finale est 5. \nLa réponse finale est 5. \n5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5.5",
+            "functional": true
+          },
+          {
+            "prompt": "Donnez trois conseils pour organiser une journée chargée.",
+            "completion": " Prioriser les tâches, gérer le temps et prendre des pauses sont essentiels pour rester productif et éviter la fatigue.\n1. **Priorisez vos tâches** : Commencez par identifier les tâches les plus importantes et les plus urgentes. Utilisez la",
+            "functional": true
+          }
+        ]
+      }
+    }
+  },
+  "student_archive": {
+    "status": "COMPLETED",
+    "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Bb3-Student",
+    "repository_type": "model",
+    "visibility": "PRIVATE",
+    "created": true,
+    "revision": "{'ChineseName': '', 'CreatedAt': 1788431383, 'Revision': 'master', 'ShowName': ''}",
+    "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/final_model",
+    "source_run_id": "passive5_shared_bb3_20260903_164929",
+    "evaluation_run_id": "passive5_shared_bb3_20260903_164929",
+    "source_file_count": 9,
+    "source_total_bytes": 6434697533,
+    "uploaded_files": [
+      ".ms_upload_cache",
+      "LICENSE.txt",
+      "NOTICE",
+      "README.md",
+      "SHA256SUMS",
+      "config.json",
+      "generation_config.json",
+      "manifest.json",
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "training_args.bin"
+    ],
+    "uploaded_total_bytes": 6434712283,
+    "package_manifest_sha256": "9be95bcaedf637563396b68323095cb72ff7623af57d9cefa134ec0fad7dff0d",
+    "source_manifest_sha256": "7627c24465af64ef72b97b0e84deb49752145c0835089423066e59562c5c45aa",
+    "source_hashes_unchanged": true,
+    "canonical_source_preserved": true,
+    "restored_copy_file_integrity_verified": true,
+    "modelscope_backup_verified": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_passive5_shared_bb3_student_20260903_102021",
+    "verification": {
+      "files": {
+        "LICENSE.txt": {
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "match": true
+        },
+        "NOTICE": {
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "match": true
+        },
+        "README.md": {
+          "size": 658,
+          "sha256": "08809afcef679deecdc4e5dc90a0db8d7c303920af67d5fd41d53d89a408d8e0",
+          "match": true
+        },
+        "SHA256SUMS": {
+          "size": 1110,
+          "sha256": "a470419e00ca52758281e5f9a8305fa364c6dc4984f79cf4e6be911e513c3066",
+          "match": true
+        },
+        "config.json": {
+          "size": 967,
+          "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+          "match": true
+        },
+        "generation_config.json": {
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+          "match": true
+        },
+        "manifest.json": {
+          "size": 2892,
+          "sha256": "9be95bcaedf637563396b68323095cb72ff7623af57d9cefa134ec0fad7dff0d",
+          "match": true
+        },
+        "model-00001-of-00002.safetensors": {
+          "size": 4965799096,
+          "sha256": "a5c63a9edcdeee7719e580383b36238afc5ada29e947fe1733aba082cef8f12e",
+          "match": true
+        },
+        "model-00002-of-00002.safetensors": {
+          "size": 1459729952,
+          "sha256": "bc6c2d460a2053fb02b43dc95d6c580779f17368b880051823ad5b08b8b60698",
+          "match": true
+        },
+        "model.safetensors.index.json": {
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+          "match": true
+        },
+        "special_tokens_map.json": {
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "match": true
+        },
+        "tokenizer.json": {
+          "size": 9085756,
+          "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+          "match": true
+        },
+        "tokenizer_config.json": {
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+          "match": true
+        },
+        "training_args.bin": {
+          "size": 5777,
+          "sha256": "9583ff41a457ba5556d97ac95634ff3762a600aab3d52e5cc3c081b0e2880121",
+          "match": true
+        }
+      },
+      "file_count": 14,
+      "total_bytes": 6434710021,
+      "secret_scan": {
+        "status": "PASS",
+        "files_scanned": [
+          ".gitattributes",
+          "LICENSE.txt",
+          "NOTICE",
+          "README.md",
+          "SHA256SUMS",
+          "config.json",
+          "generation_config.json",
+          "manifest.json",
+          "model.safetensors.index.json",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer_config.json"
+        ],
+        "hits": 0
+      }
+    },
+    "secret_scan": {
+      "status": "PASS",
+      "files_scanned": [
+        "LICENSE.txt",
+        "NOTICE",
+        "README.md",
+        "SHA256SUMS",
+        "config.json",
+        "generation_config.json",
+        "manifest.json",
+        "model.safetensors.index.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json"
+      ],
+      "hits": 0
+    },
+    "large_file_scan": {
+      "status": "PASS",
+      "allowed_large_files": [
+        "model-00001-of-00002.safetensors",
+        "model-00002-of-00002.safetensors"
+      ]
+    },
+    "license_compliance": {
+      "status": "PASS",
+      "repository_name_starts_with_llama": true,
+      "license_included": true,
+      "notice_included": true,
+      "built_with_llama": true
+    },
+    "token_emitted": false,
+    "completed_at": "2026-09-03T10:39:32.127017+00:00",
+    "upload_result_available": true
+  },
+  "failures": [
+    {
+      "stage": "LLMPrint first evaluation attempt",
+      "classification": "ordinary path-resolution infrastructure error",
+      "resolved": true
+    }
+  ],
+  "continuations": [],
+  "unresolved_errors": [],
+  "bounded_conclusion": "Ownership detectability remained positive under 5/5 frozen passive detectors after the tested Bb3 UP attack; no broader robustness claim is made.",
+  "completed_at": "2026-09-03T10:45:25.225190+00:00"
+}

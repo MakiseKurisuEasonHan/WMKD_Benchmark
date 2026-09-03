@@ -1,0 +1,25 @@
+{
+  "schema_version": "wmkd.huref-bb3.v1",
+  "method": "HuRef",
+  "experiment": "Bb3",
+  "run_id": "passive5_shared_bb3_20260903_164929",
+  "status": "COMPLETED",
+  "scientific_status": "DETECTABILITY_RETAINED",
+  "shared_student": true,
+  "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+  "detector": {
+    "method": "HuRef",
+    "metric": "ICS",
+    "score": 99.99873352050781,
+    "threshold": 4.119894027709961,
+    "positive": true,
+    "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/huref/detector_result.json",
+    "source_sha256": "5cef4c10eb6119fc71719660216d9bc085a048a797aed4e01e3488da9ad2ca5f",
+    "reference_score": 99.99999237060547,
+    "ba_score": 99.99898529052734,
+    "ba_to_bb3_change": -0.00025177001953125
+  },
+  "utility_path": "results/passive5_shared_bb3/utility_results.json",
+  "unresolved_errors": [],
+  "bounded_conclusion": "ownership fingerprint remained detectable after the tested Bb3 attack"
+}

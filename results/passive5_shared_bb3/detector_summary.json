@@ -1,0 +1,75 @@
+{
+  "schema_version": "wmkd.passive5-shared-bb3-detectors.v1",
+  "experiment": "Bb3",
+  "run_id": "passive5_shared_bb3_20260903_164929",
+  "status": "COMPLETED",
+  "retained_count": 5,
+  "method_count": 5,
+  "all_evaluation_errors_resolved": true,
+  "methods": [
+    {
+      "method": "LLMPrint",
+      "metric": "paper-style bit accuracy",
+      "score": 0.785,
+      "threshold": 0.7150049776126003,
+      "positive": true,
+      "valid_count": 200,
+      "correct_bits": 157,
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/llmprint/student_probability_sequence.json",
+      "source_sha256": "4910640a27b1352884b449f7e5ba45480c9cad618d8b551223cf71dc6dc936d5",
+      "reference_score": 1.0,
+      "ba_score": 0.82,
+      "ba_to_bb3_change": -0.03499999999999992
+    },
+    {
+      "method": "REEF",
+      "metric": "centered linear CKA",
+      "score": 0.9672861269249347,
+      "threshold": 0.4546738923165847,
+      "positive": true,
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/reef/detector_result.json",
+      "source_sha256": "ca8432f899bacd18287ecac774175cdb3494b0c4bc4e5199014ba3874f13914e",
+      "reference_score": 1.0,
+      "ba_score": 0.9542220066305829,
+      "ba_to_bb3_change": 0.013064120294351778
+    },
+    {
+      "method": "HuRef",
+      "metric": "ICS",
+      "score": 99.99873352050781,
+      "threshold": 4.119894027709961,
+      "positive": true,
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/huref/detector_result.json",
+      "source_sha256": "5cef4c10eb6119fc71719660216d9bc085a048a797aed4e01e3488da9ad2ca5f",
+      "reference_score": 99.99999237060547,
+      "ba_score": 99.99898529052734,
+      "ba_to_bb3_change": -0.00025177001953125
+    },
+    {
+      "method": "AWM",
+      "metric": "official mean Wq/Wk unbiased linear CKA",
+      "score": 0.9999961065394538,
+      "threshold": 0.0017953364917795106,
+      "positive": true,
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/awm/detector_result.json",
+      "source_sha256": "f9e2eeb4976e089164e1287dade6fb19cfbe06dc7bd01574bbd103177a23c8bc",
+      "reference_score": 1.0,
+      "ba_score": 0.9999974135841643,
+      "ba_to_bb3_change": -1.3070447104635008e-06
+    },
+    {
+      "method": "ZeroPrint",
+      "metric": "rescaled Pearson correlation",
+      "score": 0.9170220196247101,
+      "threshold": 0.6793505996465683,
+      "positive": true,
+      "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/zeroprint/detector_result.json",
+      "source_sha256": "d9c676451c8d0ecf28734801a0eb6ef0566ccfb473224d90f6e194af9836239d",
+      "raw_pearson": 0.8340440392494202,
+      "reference_score": 1.0,
+      "ba_score": 0.8399372696876526,
+      "ba_to_bb3_change": 0.0770847499370575
+    }
+  ],
+  "bounded_conclusion": "Ownership detectability remained positive under 5/5 frozen passive detectors after the tested Bb3 UP attack; no broader robustness claim is made."
+}

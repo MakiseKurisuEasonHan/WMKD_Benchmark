@@ -1,0 +1,25 @@
+{
+  "schema_version": "wmkd.awm-bb3.v1",
+  "method": "AWM",
+  "experiment": "Bb3",
+  "run_id": "passive5_shared_bb3_20260903_164929",
+  "status": "COMPLETED",
+  "scientific_status": "DETECTABILITY_RETAINED",
+  "shared_student": true,
+  "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+  "detector": {
+    "method": "AWM",
+    "metric": "official mean Wq/Wk unbiased linear CKA",
+    "score": 0.9999961065394538,
+    "threshold": 0.0017953364917795106,
+    "positive": true,
+    "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/evaluation/awm/detector_result.json",
+    "source_sha256": "f9e2eeb4976e089164e1287dade6fb19cfbe06dc7bd01574bbd103177a23c8bc",
+    "reference_score": 1.0,
+    "ba_score": 0.9999974135841643,
+    "ba_to_bb3_change": -1.3070447104635008e-06
+  },
+  "utility_path": "results/passive5_shared_bb3/utility_results.json",
+  "unresolved_errors": [],
+  "bounded_conclusion": "ownership fingerprint remained detectable after the tested Bb3 attack"
+}

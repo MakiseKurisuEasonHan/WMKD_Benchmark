@@ -1,0 +1,166 @@
+{
+  "status": "COMPLETED",
+  "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Bb3-Student",
+  "repository_type": "model",
+  "visibility": "PRIVATE",
+  "created": true,
+  "revision": "{'ChineseName': '', 'CreatedAt': 1788431383, 'Revision': 'master', 'ShowName': ''}",
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/final_model",
+  "source_run_id": "passive5_shared_bb3_20260903_164929",
+  "evaluation_run_id": "passive5_shared_bb3_20260903_164929",
+  "source_file_count": 9,
+  "source_total_bytes": 6434697533,
+  "uploaded_files": [
+    ".ms_upload_cache",
+    "LICENSE.txt",
+    "NOTICE",
+    "README.md",
+    "SHA256SUMS",
+    "config.json",
+    "generation_config.json",
+    "manifest.json",
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors",
+    "model.safetensors.index.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "training_args.bin"
+  ],
+  "uploaded_total_bytes": 6434712283,
+  "package_manifest_sha256": "9be95bcaedf637563396b68323095cb72ff7623af57d9cefa134ec0fad7dff0d",
+  "source_manifest_sha256": "7627c24465af64ef72b97b0e84deb49752145c0835089423066e59562c5c45aa",
+  "source_hashes_unchanged": true,
+  "canonical_source_preserved": true,
+  "restored_copy_file_integrity_verified": true,
+  "modelscope_backup_verified": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_passive5_shared_bb3_student_20260903_102021",
+  "verification": {
+    "files": {
+      "LICENSE.txt": {
+        "size": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+        "match": true
+      },
+      "NOTICE": {
+        "size": 116,
+        "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+        "match": true
+      },
+      "README.md": {
+        "size": 658,
+        "sha256": "08809afcef679deecdc4e5dc90a0db8d7c303920af67d5fd41d53d89a408d8e0",
+        "match": true
+      },
+      "SHA256SUMS": {
+        "size": 1110,
+        "sha256": "a470419e00ca52758281e5f9a8305fa364c6dc4984f79cf4e6be911e513c3066",
+        "match": true
+      },
+      "config.json": {
+        "size": 967,
+        "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+        "match": true
+      },
+      "generation_config.json": {
+        "size": 184,
+        "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+        "match": true
+      },
+      "manifest.json": {
+        "size": 2892,
+        "sha256": "9be95bcaedf637563396b68323095cb72ff7623af57d9cefa134ec0fad7dff0d",
+        "match": true
+      },
+      "model-00001-of-00002.safetensors": {
+        "size": 4965799096,
+        "sha256": "a5c63a9edcdeee7719e580383b36238afc5ada29e947fe1733aba082cef8f12e",
+        "match": true
+      },
+      "model-00002-of-00002.safetensors": {
+        "size": 1459729952,
+        "sha256": "bc6c2d460a2053fb02b43dc95d6c580779f17368b880051823ad5b08b8b60698",
+        "match": true
+      },
+      "model.safetensors.index.json": {
+        "size": 20919,
+        "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+        "match": true
+      },
+      "special_tokens_map.json": {
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+        "match": true
+      },
+      "tokenizer.json": {
+        "size": 9085756,
+        "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+        "match": true
+      },
+      "tokenizer_config.json": {
+        "size": 54557,
+        "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+        "match": true
+      },
+      "training_args.bin": {
+        "size": 5777,
+        "sha256": "9583ff41a457ba5556d97ac95634ff3762a600aab3d52e5cc3c081b0e2880121",
+        "match": true
+      }
+    },
+    "file_count": 14,
+    "total_bytes": 6434710021,
+    "secret_scan": {
+      "status": "PASS",
+      "files_scanned": [
+        ".gitattributes",
+        "LICENSE.txt",
+        "NOTICE",
+        "README.md",
+        "SHA256SUMS",
+        "config.json",
+        "generation_config.json",
+        "manifest.json",
+        "model.safetensors.index.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json"
+      ],
+      "hits": 0
+    }
+  },
+  "secret_scan": {
+    "status": "PASS",
+    "files_scanned": [
+      "LICENSE.txt",
+      "NOTICE",
+      "README.md",
+      "SHA256SUMS",
+      "config.json",
+      "generation_config.json",
+      "manifest.json",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "hits": 0
+  },
+  "large_file_scan": {
+    "status": "PASS",
+    "allowed_large_files": [
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors"
+    ]
+  },
+  "license_compliance": {
+    "status": "PASS",
+    "repository_name_starts_with_llama": true,
+    "license_included": true,
+    "notice_included": true,
+    "built_with_llama": true
+  },
+  "token_emitted": false,
+  "completed_at": "2026-09-03T10:39:32.127017+00:00",
+  "upload_result_available": true
+}
