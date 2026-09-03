@@ -80,7 +80,7 @@
     "scw": {"canonical_run":"scw_ba_full_20260831_193828_cont1","path":null,"exists":false,"parent_teacher":"SCW A2","archive_status":"RESTORE_REQUIRED","ready":false}
   },
   "parent_distinctness": {"available_dataset_count":3,"available_full_hashes_unique":true,"all_five_established":false},
-  "minimal_compatibility_preflight": {"pnfp":"BLOCKED_PARENT_MISSING","evertracer":"STATIC_PASS_QWEN_SKIPPED","ctcc":"STATIC_PASS_QWEN_SKIPPED","iseal":"STATIC_PASS_QWEN_SKIPPED","scw":"BLOCKED_PARENT_MISSING"},
+  "minimal_compatibility_preflight": {"pnfp":"BLOCKED_PARENT_MISSING","evertracer":"STATIC_PASS_QWEN_SKIPPED","ctcc":"STATIC_PASS_QWEN_SKIPPED","iseal":"STATIC_PASS_QWEN_SKIPPED","scw":"BLOCKED_PARENT_MISSING","remote_targeted_tests":"8/8 PASS","temporary_config_root":"/tmp/wmkd_proactive_bb_readiness_f99ca50","scientific_inference_performed":false},
   "qwen": {"identity":"Qwen/Qwen2.5-3B-Instruct","path":"/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct","snapshot_manifest":"/root/autodl-tmp/WMKD_Benchmark_data/manifests/qwen2_5_3b_instruct_modelscope_snapshot.json","exists":false,"restoration":"ModelScope master constrained by recorded creation time and 12-file/6183463418-byte SHA256 manifest"},
   "storage": {"total_gib":500,"free_gib":392,"observed_final_student_gib":6.1,"observed_training_run_peak_gib":24,"qwen_expected_gib":5.8,"serial_per_method_increment_gib":24,"five_method_retained_with_checkpoint_gib":120,"five_final_models_only_gib":30.5,"recommended_headroom_gib":100},
   "storage_classification": "SAFE",
@@ -103,5 +103,6 @@
   ],
   "safe_to_start_full20k_preprocessing": false,
   "safe_to_start_student_training": false,
-  "prohibited_work_performed": false
+  "prohibited_work_performed": false,
+  "latest_verified_remote_code_head": "f99ca50ed05530430b9c60d763c2d52513a25936"
 }
