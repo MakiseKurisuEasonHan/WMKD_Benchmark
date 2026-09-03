@@ -7,6 +7,12 @@
 - **Decision:** Retain the previously pinned paper-defined UP + project-owned Dipper integration (`kalpeshk2011/dipper-paraphraser-xxl@c1fbf7a958a2aab022e9e6f81f7a3139f9e6ee3c`; tokenizer `google/t5-v1_1-xxl@3db68a3ef122daf6e605701de53f766d671c19aa`). This audit does not authorize downloads or execution.
 - **Reason:** The user explicitly selected UP-after-answer generation followed by distillation as Bb and explicitly chose methods 6–10 first. Freezing the family and order removes the former pending choice while keeping the exact run configuration and launch subject to a later formal execution prompt.
 
+## 2026-09-03 — Freeze Qwen as the Passive-5 Shared Bb paraphraser
+
+- **Decision:** Passive-5 Shared Bb uses canonical upstream `Qwen/Qwen2.5-3B-Instruct` for generic, detector-agnostic answer-only paraphrasing. Its revision is deliberately `REQUIRED_TBD`; a formal preflight must resolve and freeze it with transport provenance and integrity evidence before execution.
+- **Decision:** Reuse exactly one canonical Passive-5 Ba frozen20k, produce one paired paraphrased20k, and train one fresh canonical Student for all five passive detectors. This supersedes the older PN-FP-specific Dipper plan only for Passive-5 Shared Bb.
+- **Decision:** Decoding defaults are reproducible sampling (`do_sample=true`, temperature `0.7`, top-p `0.9`, seed `42`) with a provisional dynamic output budget. Budget multiplier/caps remain pilot-tunable operational fields and are not represented as final scientific results.
+
 ## 2026-09-01 — Four-method smoke verdict
 
 - **Decision:** Treat all four terminal smoke JSONs as compatibility/resource evidence only. They do not establish positive-vs-negative scientific reproduction and cannot populate formal detector results.

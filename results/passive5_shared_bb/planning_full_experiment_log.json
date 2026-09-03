@@ -1,0 +1,148 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "identity": {
+    "experiment": "Passive-5 Shared Bb",
+    "run_id": null,
+    "shared_attack": true
+  },
+  "parent_experiment": {
+    "experiment": "Passive-5 Shared Ba",
+    "run_id": "passive5_shared_ba_20260902_114500_cont1"
+  },
+  "status": "PREPARED_NOT_STARTED",
+  "provenance": {
+    "config": "configs/distillation/passive5_shared_bb.json"
+  },
+  "environment": null,
+  "source_dataset": {
+    "parent_experiment": "Passive-5 Shared Ba",
+    "parent_run_id": "passive5_shared_ba_20260902_114500_cont1",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/dataset/frozen_qa.jsonl",
+    "manifest_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/dataset/manifest.json",
+    "record_count": 20000,
+    "record_schema": [
+      "sample_id",
+      "instruction",
+      "input",
+      "teacher_raw_answer"
+    ],
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "frozen_jsonl_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "dataset_bytes_local": "unavailable"
+  },
+  "paraphraser": {
+    "canonical_upstream": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "REQUIRED_TBD",
+    "transport_preference": [
+      "local_existing",
+      "shared_cache",
+      "ModelScope",
+      "trusted_domestic_mirror",
+      "official_overseas_last"
+    ],
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "local_files_only": true,
+    "fail_if_revision_unresolved": true
+  },
+  "paraphrase_config": {
+    "prompt_version": "passive5_shared_bb_untargeted_paraphrase_v1",
+    "prompt_path": "configs/distillation/passive5_shared_bb_paraphrase_prompt_v1.txt",
+    "prompt_sha256": "085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676",
+    "detector_aware": false,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 42,
+    "dynamic_max_new_tokens": {
+      "policy": "min(global_cap, max(min_cap, ceil(source_tokens * multiplier)))",
+      "min_cap": 64,
+      "multiplier": 1.5,
+      "global_cap": 1536,
+      "scientific_status": "PROVISIONAL_PENDING_PILOT"
+    },
+    "retry": {
+      "maximum_attempts_per_sample": 3,
+      "retry_same_sample": true,
+      "drop_failed_samples": false
+    },
+    "pilot": {
+      "sample_count_min": 100,
+      "sample_count_max": 200,
+      "formal_result": false
+    }
+  },
+  "paraphrase_telemetry": null,
+  "paraphrase_quality": null,
+  "student_initialization": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "initialization": "fresh_canonical_original_revision",
+    "forbidden_initializations": [
+      "Ba Student",
+      "watermarked Teacher",
+      "detector-specific model"
+    ],
+    "resume": false
+  },
+  "student_training": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false,
+    "per_device_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 8,
+    "max_length": 1024,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "expected_steps": 7500,
+    "checkpoint_retention": {
+      "save_total_limit": 1,
+      "keep_final_model": true
+    }
+  },
+  "training_telemetry": null,
+  "detectors": {
+    "configuration": {
+      "reuse_frozen_protocols": true,
+      "ordered_methods": [
+        "LLMPrint",
+        "REEF",
+        "HuRef",
+        "AWM",
+        "ZeroPrint"
+      ],
+      "recalibration_allowed": false,
+      "implementation": "existing Passive-5 A/A2/Ba detector code"
+    },
+    "results": null
+  },
+  "utility": {
+    "configuration": {
+      "tasks": [
+        "arc_challenge",
+        "truthfulqa_mc2"
+      ],
+      "metrics": [
+        "acc_norm",
+        "acc"
+      ],
+      "apply_chat_template": true,
+      "fresh_process_reload": true,
+      "ordinary_generation_sanity": true
+    },
+    "results": null
+  },
+  "artifacts": {},
+  "failures": [],
+  "continuations": [],
+  "analysis_support": {
+    "checkpoint_level_detector_trajectory": false
+  },
+  "bounded_conclusion": null
+}

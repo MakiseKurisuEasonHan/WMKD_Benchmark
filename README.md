@@ -18,6 +18,8 @@ The selected methods are PN-FP, EverTracer, CTCC, iSeal, SCW, LLMPrint, REEF, Hu
 
 All ten methods have completed A/A2/A6 reproduction and Ba evaluation. On 2026-09-03 the user froze Bb as answer-only Untargeted Paraphrasing followed by Distillation (UP + Distillation) and selected passive methods 6–10—LLMPrint, REEF, HuRef, AWM, and ZeroPrint—as the first Bb cohort. Bb execution has not started and still requires a separate explicit execution prompt.
 
+Passive-5 Shared Bb is locally `PREPARED_NOT_STARTED`. Its Qwen2.5-3B-Instruct revision remains deliberately unresolved and fail-closed; no model/data download or GPU run has occurred. See `configs/distillation/passive5_shared_bb.json` and `docs/experiment_logs/passive5_shared_bb_log.md`.
+
 ## Intended workflow
 
 ```text

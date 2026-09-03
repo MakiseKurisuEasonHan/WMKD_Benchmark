@@ -1,0 +1,142 @@
+import copy
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from scripts.passive5_shared_bb import (
+    adapt_student_dataset, audit, audit_journal, atomic_jsonl, build_pair, dynamic_budget, file_sha256,
+    freeze, generation_identity, load_attempts, planning_full_log, quality_flags, read_jsonl,
+    records_sha256, run_records, text_sha256, update_global_index, validate_full_log,
+    validate_source, validate_training_parity,
+)
+from scripts.passive5_shared_bb_orchestrator import build_plan
+
+ROOT = Path(__file__).parents[1]
+
+
+def rows(count=3):
+    return [{"sample_id": f"qa_{i}", "instruction": f"Question {i}?", "input": "",
+             "teacher_raw_answer": f"Paris is the capital of France number {i}."} for i in range(count)]
+
+
+def config_for(source, path):
+    cfg = json.loads((ROOT / "configs/distillation/passive5_shared_bb.json").read_text(encoding="utf-8"))
+    cfg["source_dataset"].update(record_count=len(source), dataset_sha256=records_sha256(source),
+        sample_ids_sha256=records_sha256([{"sample_id": row["sample_id"]} for row in source]),
+        frozen_jsonl_sha256=file_sha256(path))
+    cfg["quality"]["human_audit_sample_count"] = 2
+    return cfg
+
+
+def good_answer(row, attempt, budget):
+    answer = f"France has Paris as its principal city and national capital, item {row['sample_id']}."
+    return answer, len(answer.split()), "stop", None
+
+
+class Passive5SharedBbTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory(); self.root = Path(self.temp.name)
+        self.source = rows(); self.source_path = self.root / "source.jsonl"; atomic_jsonl(self.source_path, self.source)
+        self.config = config_for(self.source, self.source_path)
+
+    def tearDown(self): self.temp.cleanup()
+
+    def test_source_validation(self): self.assertEqual(validate_source(self.source, self.config, self.source_path)["status"], "PASS")
+    def test_source_hash_mismatch(self):
+        bad=copy.deepcopy(self.source);bad[0]["teacher_raw_answer"]="changed"
+        with self.assertRaisesRegex(ValueError,"HASH_MISMATCH"): validate_source(bad,self.config)
+    def test_duplicate_source_id(self):
+        bad=copy.deepcopy(self.source);bad[1]["sample_id"]=bad[0]["sample_id"]
+        with self.assertRaisesRegex(ValueError,"DUPLICATE"): validate_source(bad,self.config)
+    def test_dynamic_budget_min(self): self.assertEqual(dynamic_budget(1,self.config["paraphrase"]["dynamic_max_new_tokens"]),64)
+    def test_dynamic_budget_cap(self): self.assertEqual(dynamic_budget(9999,self.config["paraphrase"]["dynamic_max_new_tokens"]),1536)
+    def test_generation_identity_stable(self): self.assertEqual(generation_identity(self.config),generation_identity(copy.deepcopy(self.config)))
+    def test_exact_copy_detection(self): self.assertIn("exact_copy",quality_flags("same words","same words","stop",self.config)["failures"])
+    def test_empty_detection(self): self.assertIn("empty_output",quality_flags("answer","","error",self.config)["failures"])
+    def test_truncation_detection(self): self.assertTrue(quality_flags("answer words","rewritten answer words","length",self.config)["truncated"])
+    def test_prompt_leakage(self): self.assertIn("prompt_leakage",quality_flags("answer","<SOURCE_ANSWER> leaked text","stop",self.config)["failures"])
+    def test_control_token_leakage(self): self.assertIn("chat_control_token_leakage",quality_flags("answer","<|im_start|> rewritten answer","stop",self.config)["failures"])
+    def test_retry_then_success(self):
+        def generator(row,attempt,budget): return ("",0,"error","failure") if attempt==1 else good_answer(row,attempt,budget)
+        progress=run_records(self.source,self.root/"attempts.jsonl",self.config,generator)
+        self.assertTrue(progress["complete"]);self.assertEqual(progress["retry_count"],3)
+    def test_partial_recovery_skips_success(self):
+        calls=[]
+        def generator(row,attempt,budget): calls.append(row["sample_id"]);return good_answer(row,attempt,budget)
+        run_records(self.source,self.root/"attempts.jsonl",self.config,generator,limit=1)
+        run_records(self.source,self.root/"attempts.jsonl",self.config,generator)
+        self.assertEqual(calls.count("qa_0"),1)
+    def test_retry_exhaustion(self):
+        with self.assertRaisesRegex(RuntimeError,"RETRY_EXHAUSTED"): run_records(self.source,self.root/"attempts.jsonl",self.config,lambda r,a,b:("",0,"error","failed"))
+    def test_generation_error_is_durable(self):
+        with self.assertRaises(RuntimeError):run_records(self.source,self.root/"attempts.jsonl",self.config,lambda r,a,b:("",0,"error","model_error"))
+        record=read_jsonl(self.root/"attempts.jsonl")[0];self.assertEqual(record["status"],"failed");self.assertEqual(record["error"],"model_error")
+    def test_duplicate_attempt_fails(self):
+        pair=build_pair(self.source[0],"A fully rewritten response with distinct language and adequate length.",9,10,1,"stop",None,self.config)
+        atomic_jsonl(self.root/"attempts.jsonl",[pair,pair])
+        with self.assertRaisesRegex(ValueError,"DUPLICATE_SAMPLE_ATTEMPT"): load_attempts(self.root/"attempts.jsonl",{r["sample_id"]:r for r in self.source})
+    def test_journal_source_hash_mismatch(self):
+        pair=build_pair(self.source[0],"A fully rewritten response with distinct language and adequate length.",9,10,1,"stop",None,self.config);pair["source_answer_sha256"]="0"*64
+        atomic_jsonl(self.root/"attempts.jsonl",[pair])
+        with self.assertRaisesRegex(ValueError,"SOURCE_HASH_MISMATCH"): load_attempts(self.root/"attempts.jsonl",{r["sample_id"]:r for r in self.source})
+    def test_freeze_and_sha_stability(self):
+        journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,good_answer)
+        one=freeze(self.source,journal,self.root/"one.jsonl",self.config);two=freeze(self.source,journal,self.root/"two.jsonl",self.config)
+        self.assertEqual(one["paired_dataset_sha256"],two["paired_dataset_sha256"])
+    def test_freeze_requires_exact_count(self):
+        run_records(self.source,self.root/"attempts.jsonl",self.config,good_answer,limit=1)
+        with self.assertRaisesRegex(RuntimeError,"EXACT_COUNT"): freeze(self.source,self.root/"attempts.jsonl",self.root/"out.jsonl",self.config)
+    def test_freeze_output_collision(self):
+        journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,good_answer);target=self.root/"out.jsonl";target.write_text("occupied")
+        with self.assertRaisesRegex(FileExistsError,"OUTPUT_COLLISION"):freeze(self.source,journal,target,self.config)
+    def test_quality_audit_and_human_sample(self):
+        journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,good_answer);freeze(self.source,journal,self.root/"out.jsonl",self.config)
+        result=audit(read_jsonl(self.root/"out.jsonl"),self.root/"audit",self.config)
+        self.assertEqual(result["sample_count"],3);self.assertTrue((self.root/"audit/human_audit_samples.md").is_file())
+    def test_partial_pilot_audit(self):
+        journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,good_answer,limit=1)
+        result=audit_journal(self.source,journal,self.root/"pilot_audit",self.config);self.assertEqual(result["sample_count"],1);self.assertTrue(result["pilot_or_partial"])
+    def test_student_adapter(self):
+        journal=self.root/"attempts.jsonl";run_records(self.source,journal,self.config,good_answer);freeze(self.source,journal,self.root/"out.jsonl",self.config)
+        manifest=adapt_student_dataset(read_jsonl(self.root/"out.jsonl"),self.root/"student.jsonl")
+        self.assertEqual(manifest["sample_count"],3);self.assertIn("teacher_raw_answer",read_jsonl(self.root/"student.jsonl")[0])
+    def test_training_parity(self):
+        ba=json.loads((ROOT/"configs/distillation/passive5_shared_ba.json").read_text());self.assertEqual(validate_training_parity(ba,self.config)["status"],"PASS")
+    def test_training_parity_mismatch(self):
+        ba=json.loads((ROOT/"configs/distillation/passive5_shared_ba.json").read_text());bad=copy.deepcopy(self.config);bad["training"]["scheduler"]="linear"
+        with self.assertRaisesRegex(ValueError,"PARITY_MISMATCH"):validate_training_parity(ba,bad)
+    def test_wrong_student_revision(self):
+        ba=json.loads((ROOT/"configs/distillation/passive5_shared_ba.json").read_text());bad=copy.deepcopy(self.config);bad["student"]["revision"]="wrong";ba["student"]["revision"]="wrong"
+        with self.assertRaisesRegex(ValueError,"WRONG_STUDENT_REVISION"):validate_training_parity(ba,bad)
+    def test_wrong_student_initialization(self):
+        ba=json.loads((ROOT/"configs/distillation/passive5_shared_ba.json").read_text());bad=copy.deepcopy(self.config);bad["student"]["initialization"]="Ba Student"
+        with self.assertRaisesRegex(ValueError,"PARITY_MISMATCH"):validate_training_parity(ba,bad)
+    def test_full_log_schema(self): self.assertEqual(validate_full_log(planning_full_log(self.config))["status"],"PASS")
+    def test_full_log_missing(self):
+        bad=planning_full_log(self.config);del bad["detectors"]
+        with self.assertRaisesRegex(ValueError,"FULL_LOG_SCHEMA_MISSING"):validate_full_log(bad)
+    def test_index_rejects_planning_log(self):
+        full=self.root/"full.json";full.write_text(json.dumps(planning_full_log(self.config)))
+        index=self.root/"index.json";index.write_text(json.dumps({"objects":[],"object_count":0}))
+        with self.assertRaisesRegex(ValueError,"COMPLETED"):update_global_index(index,full,"results/x.json",{"run_id":"x"})
+    def test_index_accepts_completed_log_and_rejects_collision(self):
+        value=planning_full_log(self.config);value["status"]="COMPLETED";full=self.root/"full.json";full.write_text(json.dumps(value))
+        index=self.root/"index.json";index.write_text(json.dumps({"objects":[],"object_count":0}))
+        update_global_index(index,full,"results/x.json",{"run_id":"x","method":"Passive-5 Shared"})
+        self.assertEqual(json.loads(index.read_text())["object_count"],1)
+        with self.assertRaisesRegex(ValueError,"COLLISION"):update_global_index(index,full,"results/x.json",{"run_id":"x"})
+    def test_orchestrator_dry_run_and_detector_wiring(self):
+        plan=build_plan(ROOT,self.root,"passive5_shared_bb_test",ROOT/"configs/distillation/passive5_shared_bb.json",True)
+        self.assertEqual(plan["status"],"DRY_RUN_ONLY");self.assertEqual(len(plan["commands"]["detectors"]),4);self.assertIn("llmprint",plan["commands"]);self.assertIn("utility",plan["commands"])
+    def test_existing_run_collision(self):
+        (self.root/"runs/passive5_shared_bb/collision").mkdir(parents=True)
+        with self.assertRaises(FileExistsError):build_plan(ROOT,self.root,"collision",ROOT/"configs/distillation/passive5_shared_bb.json",True)
+    def test_unresolved_revision_blocks_formal_plan(self):
+        with self.assertRaisesRegex(RuntimeError,"REVISION_NOT_FROZEN"):build_plan(ROOT,self.root,"formal",ROOT/"configs/distillation/passive5_shared_bb.json",False)
+    def test_detector_script_has_bb_switch(self):
+        text=(ROOT/"scripts/passive5_ba_method_eval.py").read_text(encoding="utf-8")
+        self.assertIn('choices=("Ba", "Bb")',text);self.assertIn("args.experiment",text)
+
+
+if __name__ == "__main__": unittest.main()

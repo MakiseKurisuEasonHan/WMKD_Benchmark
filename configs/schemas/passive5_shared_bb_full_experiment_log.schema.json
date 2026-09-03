@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wmkd.passive5-shared-bb-full-experiment-log.v1",
+  "type": "object",
+  "required": ["schema_version", "identity", "parent_experiment", "status", "provenance", "environment", "source_dataset", "paraphraser", "paraphrase_config", "paraphrase_telemetry", "paraphrase_quality", "student_initialization", "student_training", "training_telemetry", "detectors", "utility", "artifacts", "failures", "continuations", "analysis_support", "bounded_conclusion"],
+  "properties": {
+    "schema_version": {"const": "wmkd.full-experiment-log.v1"},
+    "identity": {"type": "object", "required": ["experiment", "run_id", "shared_attack"]},
+    "parent_experiment": {"type": "object"},
+    "status": {"enum": ["PREPARED_NOT_STARTED", "RUNNING", "FAILED", "COMPLETED"]},
+    "provenance": {"type": "object"},
+    "environment": {"type": ["object", "null"]},
+    "source_dataset": {"type": "object"},
+    "paraphraser": {"type": "object"},
+    "paraphrase_config": {"type": "object"},
+    "paraphrase_telemetry": {"type": ["object", "null"]},
+    "paraphrase_quality": {"type": ["object", "null"]},
+    "student_initialization": {"type": "object"},
+    "student_training": {"type": "object"},
+    "training_telemetry": {"type": ["object", "null"]},
+    "detectors": {"type": "object"},
+    "utility": {"type": "object"},
+    "artifacts": {"type": "object"},
+    "failures": {"type": "array"},
+    "continuations": {"type": "array"},
+    "analysis_support": {"type": "object"},
+    "bounded_conclusion": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

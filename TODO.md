@@ -6,7 +6,8 @@
 - [x] Freeze Experiment Bb as answer-only UP followed by distillation.
 - [x] Select passive methods 6–10 (LLMPrint, REEF, HuRef, AWM, ZeroPrint) as the first Bb cohort.
 - [ ] Prepare and review the passive-shared Bb protocol, preserving paired IDs/instructions/inputs and replacing only the frozen Teacher answer with its UP-paraphrased answer.
-- [ ] Confirm the exact shared-control lineage, fixed Dipper/tokenizer identities, failure-closed paraphrase policy, fresh canonical Student, detector semantics, utility panel, full JSON/report/manifests, and detached-runner plan before execution.
+- [x] Prepare the shared-control lineage, Qwen paraphraser identity with revision gate, failure-closed paraphrase policy, fresh canonical Student, detector/utility wiring, full-JSON schema/index support, and guarded future launcher.
+- [ ] Resolve and freeze the exact `Qwen/Qwen2.5-3B-Instruct` revision during a future authorized download-preparation stage; then run and inspect the 100–200 sample pilot before formal 20k generation.
 - [ ] Obtain a separate explicit execution prompt before any AutoDL connection, download, paraphrasing, Student training, detector evaluation, or GPU use.
 - [ ] Keep shared resources; perform no destructive cleanup before scientific closure, Git/archive gates, dry-run classification, and explicit authorization.
 

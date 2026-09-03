@@ -4,6 +4,12 @@
 
 Audited the local durable sources and actual Git baseline. Updated current-facing protocol/status/TODO/README records from the obsolete seven-method/5-of-7 state to the completed ten-method A+Ba closure, corrected the global full-log count to 21, froze Bb as UP followed by distillation, and set passive methods 6–10 as the first Bb cohort. Historical dated records were preserved. No external connection, experiment, download, GPU action, archive, or cleanup was performed.
 
+## 2026-09-03 — Passive-5 Shared Bb local pipeline preparation
+
+Added the Qwen-configured, revision-gated Shared Bb pipeline and CPU/static coverage. The implementation validates the canonical Shared Ba source hashes, preserves one-to-one lineage, resumes by explicit sample/attempt state, fails closed on retry exhaustion or source drift, audits paraphrase quality, enforces Ba/Bb Student parity, and wires existing detectors/utility without recalibration. Formal execution remains blocked on Qwen revision resolution and a later explicit run prompt.
+
+Local standard-library test run: 42 tests executed, 39 passed and 3 pre-existing PyYAML-dependent checks skipped; zero failures. The 35 Shared-Bb-specific tests all passed. JSON, syntax, prompt-hash, global-index non-mutation, secret, large-file, and diff checks were also required before Git closure.
+
 本日志记录 Codex 在 WMKD_Benchmark 项目中的实际工程操作。正式科研实验另行记录在 `EXPERIMENT_LOG.md`。
 
 ## 2026-08-27 14:13（Australia/Sydney，UTC+10:00）

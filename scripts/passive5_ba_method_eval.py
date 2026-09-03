@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Frozen-protocol method evaluators for the Passive-5 Shared Ba Student."""
+"""Frozen-protocol method evaluators for Passive-5 Shared Ba/Bb Students."""
 from __future__ import annotations
 
 import argparse
@@ -41,6 +41,14 @@ def atomic_npy(path: Path, value: np.ndarray) -> None:
     with temporary.open("wb") as handle:
         np.save(handle, value)
     os.replace(temporary, path)
+
+
+def experiment_slug(args: argparse.Namespace) -> str:
+    return args.experiment.casefold()
+
+
+def student_label(args: argparse.Namespace) -> str:
+    return f"WMKD/Passive5-Shared-{args.experiment}-Student"
 
 
 def centered_linear_cka(left: np.ndarray, right: np.ndarray) -> float:
@@ -107,9 +115,9 @@ def reef(args: argparse.Namespace) -> None:
     score = centered_linear_cka(reference, student_representation)
     threshold = 0.4546738923165847
     result = {
-        "schema_version": "wmkd.passive5-shared-ba-reef.v1",
+        "schema_version": f"wmkd.passive5-shared-{experiment_slug(args)}-reef.v1",
         "method": "REEF",
-        "experiment": "Ba",
+        "experiment": args.experiment,
         "run_id": args.run_id,
         "parent_run_id": args.parent_run_id,
         "status": "COMPLETED",
@@ -178,7 +186,7 @@ def huref(args: argparse.Namespace) -> None:
         raise RuntimeError("HUREF_CORPUS_SOURCE_SHA_MISMATCH")
     corpus_rows = protocol.iter_corpus(corpus_path, 10000)
     rebuilt_manifest = protocol.build_token_manifest(
-        "WMKD/Passive5-Shared-Ba-Student", args.parent_run_id, args.student,
+        student_label(args), args.parent_run_id, args.student,
         corpus_rows, manifest["corpus_sha256"],
     )
     expected_ids = [int(row["token_id"]) for row in manifest["rows"]]
@@ -197,15 +205,15 @@ def huref(args: argparse.Namespace) -> None:
 
     student_feature_path = method_dir / "student_feature.npy"
     student_feature, extraction = protocol.extract(
-        args.student, ids, student_feature_path, "WMKD/Passive5-Shared-Ba-Student",
+        args.student, ids, student_feature_path, student_label(args),
         rebuilt_manifest["manifest_content_sha256"],
     )
     score = protocol.ics(reference, student_feature)
     threshold = 4.119894027709961
     result = {
-        "schema_version": "wmkd.passive5-shared-ba-huref.v1",
+        "schema_version": f"wmkd.passive5-shared-{experiment_slug(args)}-huref.v1",
         "method": "HuRef",
-        "experiment": "Ba",
+        "experiment": args.experiment,
         "run_id": args.run_id,
         "parent_run_id": args.parent_run_id,
         "status": "COMPLETED",
@@ -258,15 +266,15 @@ def awm(args: argparse.Namespace) -> None:
         raise RuntimeError("AWM_FROZEN_THRESHOLD_MISMATCH")
     base = Path("/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct")
     reference = protocol.extract(base, "meta-llama/Llama-3.2-3B-Instruct", protocol.REV)
-    student = protocol.extract(args.student, "WMKD/Passive5-Shared-Ba-Student", args.parent_run_id)
+    student = protocol.extract(args.student, student_label(args), args.parent_run_id)
     official_metric = protocol.official()
     score, dimension_alignment, layer_alignment = protocol.compare(
         reference, student, method_dir / "progress.json", official_metric,
     )
     result = {
-        "schema_version": "wmkd.passive5-shared-ba-awm.v1",
+        "schema_version": f"wmkd.passive5-shared-{experiment_slug(args)}-awm.v1",
         "method": "AWM",
-        "experiment": "Ba",
+        "experiment": args.experiment,
         "run_id": args.run_id,
         "parent_run_id": args.parent_run_id,
         "status": "COMPLETED",
@@ -328,15 +336,15 @@ def zeroprint(args: argparse.Namespace) -> None:
     mpnet = protocol.MPNetAdapter(str(mpnet_path))
     input_embeddings = protocol.encode(mpnet, prompts)
     student_fingerprint, generation = protocol.run_model(
-        args.student, "WMKD/Passive5-Shared-Ba-Student", "student",
+        args.student, student_label(args), "student",
         prompts, input_embeddings, mpnet, method_dir,
     )
     detector_score = protocol.score(reference, student_fingerprint)
     threshold = 0.6793505996465683
     result = {
-        "schema_version": "wmkd.passive5-shared-ba-zeroprint.v1",
+        "schema_version": f"wmkd.passive5-shared-{experiment_slug(args)}-zeroprint.v1",
         "method": "ZeroPrint",
-        "experiment": "Ba",
+        "experiment": args.experiment,
         "run_id": args.run_id,
         "parent_run_id": args.parent_run_id,
         "status": "COMPLETED",
@@ -384,6 +392,7 @@ def main() -> None:
     parser.add_argument("--parent-run-id", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--method", choices=("reef", "huref", "awm", "zeroprint"), required=True)
+    parser.add_argument("--experiment", choices=("Ba", "Bb"), default="Ba")
     args = parser.parse_args()
     if args.method == "reef":
         reef(args)
