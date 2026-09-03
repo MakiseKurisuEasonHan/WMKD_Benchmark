@@ -10,6 +10,7 @@ class Passive5SharedBb2ShortAnswerAuditTests(unittest.TestCase):
     def test_categories(self):
         cases = {"tech": "single/common word", "yes": "yes/no/boolean-like", "321": "number/numeric",
                  "NASA": "acronym", "George Orwell": "proper noun / named entity-like",
+                 "Positive": "single/common word",
                  "x==1": "code/symbol/token-like", "https://example.com": "url/path-like",
                  "not a vehicle": "short natural phrase"}
         for text, expected in cases.items():

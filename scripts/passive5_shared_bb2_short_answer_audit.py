@@ -20,6 +20,9 @@ BREAKDOWN_THRESHOLDS = (1, 2, 3, 5)
 KNOWN_FAILURE_IDS = ("qa_00454047fe5797416cb0", "qa_027dbcaca1223ae97365")
 BOOL_LIKE = {"yes", "no", "true", "false", "null", "none", "unknown", "maybe"}
 COMMON_WORDS = {"tech", "dog", "spam", "classical", "boat", "human", "vehicle", "positive", "negative"}
+CATEGORIES = ("single/common word", "yes/no/boolean-like", "number/numeric", "acronym",
+              "proper noun / named entity-like", "code/symbol/token-like", "url/path-like",
+              "short natural phrase", "other")
 
 
 def percentile(values: list[int], probability: float) -> float:
@@ -45,10 +48,10 @@ def category(text: str) -> str:
         return "acronym"
     if re.search(r"[{}\[\]<>_=;]|::|\.[A-Za-z0-9]+$", stripped) and len(words) <= 3:
         return "code/symbol/token-like"
-    if 1 <= len(words) <= 4 and all(word[:1].isupper() for word in words):
-        return "proper noun / named entity-like"
     if len(words) == 1 and lowered in COMMON_WORDS:
         return "single/common word"
+    if 1 <= len(words) <= 4 and all(word[:1].isupper() for word in words):
+        return "proper noun / named entity-like"
     if len(words) == 1:
         return "single/common word"
     if 2 <= len(words) <= 6:
@@ -79,7 +82,8 @@ def build_audit(rows: list[dict], tokenizer, source_identity: dict, tokenizer_id
     examples = {}
     for threshold in BREAKDOWN_THRESHOLDS:
         eligible = [row for row in enriched if row["qwen_non_special_tokens"] <= threshold]
-        breakdown[str(threshold)] = dict(sorted(Counter(row["category"] for row in eligible).items()))
+        observed = Counter(row["category"] for row in eligible)
+        breakdown[str(threshold)] = {name: observed[name] for name in CATEGORIES}
         forced = [row for row in eligible if row["sample_id"] in KNOWN_FAILURE_IDS]
         selected_ids = {row["sample_id"] for row in forced}
         selected = forced + [row for row in sorted(eligible, key=lambda item: item["sample_id"])
