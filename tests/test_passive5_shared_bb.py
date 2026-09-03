@@ -59,8 +59,14 @@ class Passive5SharedBbTests(unittest.TestCase):
     def test_processing_modes_distinguish_qwen_identity_and_paraphrase(self):
         identity=build_pair(self.source[0],self.source[0]["teacher_raw_answer"],8,8,1,"stop",None,self.config)
         changed=build_pair(self.source[0],"France has Paris as its capital.",8,7,1,"stop",None,self.config)
-        self.assertEqual(identity["processing_mode"],"qwen_identity_preserved")
+        self.assertEqual(identity["processing_mode"],"qwen_identity_output")
         self.assertEqual(changed["processing_mode"],"qwen_paraphrased")
+    def test_bb3_atomic_and_qwen_modes(self):
+        bb3=load_config(ROOT/"configs/distillation/passive5_shared_bb3.json")
+        atomic=build_pair(self.source[0],self.source[0]["teacher_raw_answer"],1,1,1,"atomic_identity_preserved",None,bb3)
+        identity=build_pair(self.source[0],self.source[0]["teacher_raw_answer"],2,2,1,"stop",None,bb3)
+        self.assertEqual(atomic["processing_mode"],"atomic_identity_preserved")
+        self.assertEqual(identity["processing_mode"],"qwen_identity_output")
     def test_empty_detection(self): self.assertIn("empty_output",quality_flags("answer","","error",self.config)["failures"])
     def test_truncation_detection(self): self.assertTrue(quality_flags("answer words","rewritten answer words","length",self.config)["truncated"])
     def test_diagnostic_thresholds_do_not_drop_valid_pairs(self):

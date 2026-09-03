@@ -51,6 +51,9 @@ def main() -> None:
         def generate(row, attempt, budget):
             nonlocal sanitization_count
             source_ids = tokenizer(row["teacher_raw_answer"], add_special_tokens=False)["input_ids"]
+            atomic = config["paraphrase"].get("atomic_identity_preservation", {})
+            if atomic.get("enabled") and len(source_ids) <= int(atomic["qwen_non_special_token_threshold"]):
+                return row["teacher_raw_answer"], len(source_ids), "atomic_identity_preserved", None, len(source_ids)
             budget = dynamic_budget(len(source_ids), config["paraphrase"]["dynamic_max_new_tokens"])
             messages = [{"role":"system","content":system}, {"role":"user","content":user.format(source_answer=row["teacher_raw_answer"])}]
             rendered = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)

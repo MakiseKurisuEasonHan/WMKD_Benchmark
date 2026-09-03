@@ -197,6 +197,10 @@ def build_pair(row: dict, answer: str, source_token_count: int, paraphrase_token
                attempt: int, finish_reason: str | None, error: str | None, config: dict) -> dict:
     flags = quality_flags(row["teacher_raw_answer"], answer, finish_reason, config)
     status = "success" if not error and flags["pass"] else "failed"
+    atomic = config["paraphrase"].get("atomic_identity_preservation", {})
+    is_atomic = (atomic.get("enabled") and source_token_count <= int(atomic["qwen_non_special_token_threshold"])
+                 and row["teacher_raw_answer"] == answer and finish_reason == "atomic_identity_preserved")
+    is_qwen_identity = row["teacher_raw_answer"] == answer.strip() and not is_atomic
     return {
         "sample_id": row["sample_id"], "instruction": row["instruction"], "input": row["input"],
         "source_question": source_question(row), "source_answer": row["teacher_raw_answer"],
@@ -207,8 +211,9 @@ def build_pair(row: dict, answer: str, source_token_count: int, paraphrase_token
         "paraphrase_prompt_identity": config["paraphrase"]["prompt_sha256"],
         "status": status, "attempt_count": attempt, "finish_reason": finish_reason,
         "truncated": flags["truncated"], "error": error or (";".join(flags["failures"]) if flags["failures"] else None),
-        "quality": flags, "processing_mode": ("qwen_identity_preserved" if row["teacher_raw_answer"] == answer.strip()
-                                                 else "qwen_paraphrased"),
+        "quality": flags, "qwen_non_special_token_count": source_token_count,
+        "processing_mode": ("atomic_identity_preserved" if is_atomic else
+                            ("qwen_identity_output" if is_qwen_identity else "qwen_paraphrased")),
         "identity_fallback": False, "fallback_reason": None,
         "failed_attempt_count": 0, "rejected_attempts": [],
     }
@@ -334,15 +339,17 @@ def audit(pairs: list[dict], output_dir: str | Path, config: dict) -> dict:
     ratios = [row["quality"]["length_ratio"] for row in pairs]
     changes = [row["quality"]["lexical_change"] for row in pairs]
     identity_fallback_count = sum(bool(row.get("identity_fallback")) for row in pairs)
-    natural_exact_copy_count = sum(row.get("processing_mode") == "qwen_identity_preserved" for row in pairs)
+    natural_exact_copy_count = sum(row.get("processing_mode") in {"qwen_identity_preserved", "qwen_identity_output"} for row in pairs)
     total_identity_output_count = sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs)
     result = {"sample_count": len(pairs), "exact_copy_count": total_identity_output_count,
               "exact_copy_rate": total_identity_output_count / len(pairs),
               "natural_exact_copy_count": natural_exact_copy_count,
               "identity_fallback_count": identity_fallback_count,
               "identity_fallback_rate": identity_fallback_count / len(pairs),
+              "atomic_identity_preserved_count": sum(row.get("processing_mode") == "atomic_identity_preserved" for row in pairs),
+              "qwen_submitted_count": sum(row.get("processing_mode") in {"qwen_paraphrased", "qwen_identity_output"} for row in pairs),
               "qwen_paraphrased_count": sum(row.get("processing_mode") == "qwen_paraphrased" for row in pairs),
-              "qwen_identity_preserved_count": natural_exact_copy_count,
+              "qwen_identity_output_count": sum(row.get("processing_mode") == "qwen_identity_output" for row in pairs),
               "total_identity_output_count": total_identity_output_count,
               "mean_length_ratio": statistics.mean(ratios), "median_length_ratio": statistics.median(ratios),
               "truncation_count": sum(bool(row["truncated"]) for row in pairs),
