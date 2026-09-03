@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-03T10:45:25.227531+00:00",
-  "object_count": 26,
+  "generated_at": "2026-09-03T15:28:59.174301+00:00",
+  "object_count": 27,
   "objects": [
     {
       "method": "PN-FP",
@@ -451,6 +451,24 @@
       "shared_student_run_id": "passive5_shared_bb3_20260903_164929",
       "dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
       "telemetry_records": 7500
+    },
+    {
+      "method": "EverTracer",
+      "role": "proactive_bb_preprocessing",
+      "experiment": "Bb",
+      "run_id": "evertracer_bb_20260903_130000",
+      "full_log_path": "results/evertracer/experiment_bb/full_experiment_log.json",
+      "full_log_sha256": "ecd56613699b2a6d7e0b9dc8cc44ed44cec361e4034efa9a8f17ce306c14f76c",
+      "scientific_status": "PREPROCESSING_COMPLETE_ARCHIVED_NO_TRAINING",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "shared_attack": false,
+      "dataset_sha256": "0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55",
+      "artifact_manifest_path": "results/evertracer/experiment_bb/artifact_manifest.json",
+      "readiness_path": "results/evertracer/experiment_bb/readiness.json",
+      "report_path": "docs/reproduction_reports/evertracer_experiment_bb_report.md",
+      "modelscope_repo": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k",
+      "telemetry_records": 0
     }
   ]
 }

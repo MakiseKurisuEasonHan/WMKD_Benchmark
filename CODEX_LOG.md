@@ -471,3 +471,9 @@ Direct endpoint `connect.westd.seetacloud.com:48835` recovered access. Verified 
 Restored and fully verified frozen Qwen, added proactive full-log/archive infrastructure, and ran remote targeted tests plus an 18-record Qwen/SFT compatibility smoke. External parent uploads were rejected before execution pending explicit approval. GPU returned idle; no prohibited scientific work occurred.
 
 Received explicit authorization for exactly three private dataset transfers. Archived and independently redownload-verified EverTracer, CTCC, and iSeal Ba frozen20k in sequence. Captured non-secret verification manifests in Git metadata and released only Wave-1 preprocessing readiness. No full20k, training, formal detector, or utility was started.
+
+## 2026-09-03/04 — EverTracer Bb full20k preprocessing and archive
+
+Validated clean canonical remote baseline `1ad38d42`, idle RTX PRO 6000, exact EverTracer Ba parent, and frozen local Qwen identity before launching one formal preprocessing process. The runner completed 20,000/20,000; fail-closed freeze, quality audit, 20k SFT adaptation, and 19/19 parity passed. A privacy scan found zero strict credential hits; a non-text-emitting follow-up proved all five high-entropy heuristic candidates were inherited from the archived Ba parent.
+
+After the user explicitly approved the exact destination and file scope, created PRIVATE ModelScope dataset `MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k`, uploaded only README, SHA256SUMS, manifest, and `frozen_paired_qa.jsonl`, then independently downloaded to a fresh directory and verified byte/content/count/schema/order/provenance identity. No token was emitted and no weight, checkpoint, cache, detector/watermark secret, training, detector, utility, CTCC Bb, or iSeal Bb operation occurred.

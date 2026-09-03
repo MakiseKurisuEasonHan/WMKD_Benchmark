@@ -28,7 +28,7 @@ class Passive5Bb3ClosureTests(unittest.TestCase):
         self.assertTrue(all(row["visibility"] == "PRIVATE" for row in value["artifacts"]))
         self.assertEqual({"dataset", "model"}, {row["repository_type"] for row in value["artifacts"]})
 
-    def test_global_index_has_exact_five_bb3_objects_and_no_bb_completion(self):
+    def test_global_index_has_exact_five_bb3_objects_and_no_bb_evaluation_completion(self):
         value = json.loads((ROOT / "results/experiment_full_logs_index.json").read_text(encoding="utf-8"))
         rows = value["objects"]
         self.assertEqual(value["object_count"], len(rows))
@@ -37,7 +37,13 @@ class Passive5Bb3ClosureTests(unittest.TestCase):
         bb3 = [x for x in rows if x.get("experiment") == "Bb3"]
         self.assertEqual(5, len(bb3))
         self.assertTrue(all(x["scientific_status"] == "DETECTABILITY_RETAINED" for x in bb3))
-        self.assertFalse(any(x.get("experiment") in {"Bb", "Bb2"} for x in rows))
+        bb = [x for x in rows if x.get("experiment") == "Bb"]
+        self.assertEqual(1, len(bb))
+        self.assertEqual("EverTracer", bb[0]["method"])
+        self.assertEqual("PREPROCESSING_COMPLETE_ARCHIVED_NO_TRAINING", bb[0]["scientific_status"])
+        self.assertFalse(bb[0]["watermark_evaluation_available"])
+        self.assertFalse(bb[0]["utility_available"])
+        self.assertFalse(any(x.get("experiment") == "Bb2" for x in rows))
         self.assertTrue(all((ROOT / x["full_log_path"]).is_file() for x in rows))
 
     def test_final_report_discloses_atomic_fraction_and_bounded_claim(self):

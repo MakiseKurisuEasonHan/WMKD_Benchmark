@@ -1,0 +1,18 @@
+{
+  "schema_version": "wmkd.artifact-manifest.v1",
+  "run_id": "evertracer_bb_20260903_130000",
+  "artifact_type": "preprocessing_closure_package",
+  "model_modified": false,
+  "dataset_archived": true,
+  "student_artifact": null,
+  "detector_artifact": null,
+  "utility_artifact": null,
+  "tracked_evidence": [
+    "results/evertracer/experiment_bb/evidence/preprocessing_progress.json",
+    "results/evertracer/experiment_bb/evidence/processed20k_manifest.json",
+    "results/evertracer/experiment_bb/evidence/quality_audit.json",
+    "results/evertracer/experiment_bb/evidence/privacy_audit.json",
+    "results/evertracer/experiment_bb/evidence/high_entropy_inheritance.json",
+    "results/evertracer/experiment_bb/evidence/modelscope_archive.json"
+  ]
+}

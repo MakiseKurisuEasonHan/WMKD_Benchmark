@@ -266,3 +266,6 @@ Bb2 was subsequently frozen without a short-token bypass and its formal pilot is
 - [x] Complete proactive Bb full-log skeleton and collision-safe index parameterization.
 - [x] Archive EverTracer, CTCC, and iSeal canonical Ba frozen20k to their explicitly approved PRIVATE ModelScope repositories and independently redownload-verify every identity gate.
 - [ ] Await a separate explicit prompt before starting Wave-1 full20k preprocessing; do not train Students in the preprocessing release turn.
+- [x] Complete and independently archive-verify EverTracer Bb processed20k (`evertracer_bb_20260903_130000`).
+- [x] Freeze EverTracer paired20k, emit 20k SFT formatter output, and pass 19/19 Ba/Bb parity without starting Student training.
+- [ ] Wait for a separate explicit instruction before EverTracer Bb Student training; do not start detector, utility, CTCC Bb, or iSeal Bb automatically.

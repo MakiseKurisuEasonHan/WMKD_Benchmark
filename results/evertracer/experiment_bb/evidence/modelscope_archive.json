@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETED",
+  "modelscope_backup_verified": true,
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k",
+  "repository_type": "dataset",
+  "visibility": "PRIVATE",
+  "created": true,
+  "uploaded_files": [
+    "README.md",
+    "SHA256SUMS",
+    "frozen_paired_qa.jsonl",
+    "manifest.json"
+  ],
+  "source_validation": {
+    "status": "PASS",
+    "record_count": 20000,
+    "dataset_sha256": "0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55",
+    "sample_ids_sha256": "49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73",
+    "frozen_jsonl_sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853"
+  },
+  "downloaded_copy_validation": {
+    "status": "PASS",
+    "record_count": 20000,
+    "dataset_sha256": "0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55",
+    "sample_ids_sha256": "49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73",
+    "frozen_jsonl_sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853"
+  },
+  "byte_identical": true,
+  "package_manifest_sha256": "3e25a4401e9e91c544c133db3790ed31bcf131a9a5a25b90615c259b0bef34fe",
+  "privacy_gate": {
+    "validation": {
+      "status": "PASS",
+      "record_count": 20000,
+      "dataset_sha256": "0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55",
+      "sample_ids_sha256": "49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73",
+      "frozen_jsonl_sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853"
+    },
+    "privacy_audit_sha256": "c07e0761035552d0ca4aa571a8b9acbbe169baa792d75a524fbcc9afcbca8809",
+    "privacy_strict_secret_total": 0,
+    "high_entropy_review": "PASS_ALL_5_INHERITED_FROM_ARCHIVED_BA_PARENT",
+    "high_entropy_inheritance_sha256": "255f9b70642c2da56d7e83448bcf5bba287b8481270157a501a77693f052b0f4"
+  },
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_evertracer_bb_20260903_152852",
+  "canonical_source_preserved": true,
+  "verified_at": "2026-09-03T15:28:59.174301+00:00",
+  "token_emitted": false,
+  "upload_result_available": true
+}

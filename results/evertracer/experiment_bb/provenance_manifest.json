@@ -1,0 +1,17 @@
+{
+  "schema_version": "wmkd.proactive-bb-preprocessing-provenance.v1",
+  "run_id": "evertracer_bb_20260903_130000",
+  "config": "configs/distillation/evertracer_bb_20260903_130000.json",
+  "git_baseline": "1ad38d42cacc0fa34863050e7b184921d1a26c08",
+  "parent_run_id": "evertracer_ba_20260829_124055",
+  "parent_dataset_sha256": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142",
+  "parent_frozen_jsonl_sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+  "processed_dataset_sha256": "0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55",
+  "processed_frozen_jsonl_sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853",
+  "sample_ids_sha256": "49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73",
+  "prompt_sha256": "7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
+  "generation_config_identity": "d1a9fc6ab0aef4fc6230576f3dcf98b8bfd68d7e1eadda4d6496a58364ae0083",
+  "privacy_audit_sha256": "c07e0761035552d0ca4aa571a8b9acbbe169baa792d75a524fbcc9afcbca8809",
+  "high_entropy_inheritance_sha256": "255f9b70642c2da56d7e83448bcf5bba287b8481270157a501a77693f052b0f4",
+  "modelscope_package_manifest_sha256": "3e25a4401e9e91c544c133db3790ed31bcf131a9a5a25b90615c259b0bef34fe"
+}

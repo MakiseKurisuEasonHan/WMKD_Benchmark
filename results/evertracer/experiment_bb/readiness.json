@@ -1,0 +1,21 @@
+{
+  "schema_version": "wmkd.proactive-bb-readiness.v1",
+  "method": "EverTracer",
+  "experiment": "Bb",
+  "run_id": "evertracer_bb_20260903_130000",
+  "evertracer_bb_preprocessing": "COMPLETE",
+  "processed20k_frozen": true,
+  "processed20k_archived": true,
+  "modelscope_repository": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k",
+  "modelscope_visibility": "PRIVATE",
+  "independent_redownload_verified": true,
+  "sft_formatter": "PASS_20000",
+  "ba_bb_training_parity": "PASS_19_OF_19",
+  "safe_to_start_evertracer_student_training": true,
+  "student_training_started": false,
+  "detector_started": false,
+  "utility_started": false,
+  "ctcc_bb_started": false,
+  "iseal_bb_started": false,
+  "next_action": "WAIT_FOR_EXPLICIT_USER_INSTRUCTION"
+}
