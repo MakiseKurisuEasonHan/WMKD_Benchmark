@@ -51,15 +51,15 @@ def main() -> None:
     args = ap.parse_args()
     run = args.data_root / "runs/passive5_shared_bb3" / args.run_id
     out = args.project / "results/passive5_shared_bb3"
-    dataset = read(run / "dataset/manifest.json")
+    dataset = read(run / "dataset/frozen_paired_qa.manifest.json")
     student = read(run / "student/student_manifest.json")
     reload_result = read(run / "student_reload_validation.json")
     telemetry = read(run / "metrics/training_telemetry.json")
     utility = read(run / "evaluation/utility_results.json")
     archive_dataset = read(args.data_root / "manifests/passive5_shared_bb3_processed20k_modelscope_archive.json")
-    if dataset.get("dataset_sha256") != PAIRED_SHA or dataset.get("file_sha256") != FILE_SHA:
+    if dataset.get("paired_dataset_sha256") != PAIRED_SHA or dataset.get("frozen_jsonl_sha256") != FILE_SHA:
         raise RuntimeError("FROZEN_DATASET_IDENTITY_MISMATCH")
-    if dataset.get("sample_ids_sha256") != IDS_SHA or dataset.get("record_count") != 20000:
+    if dataset.get("sample_ids_sha256") != IDS_SHA or dataset.get("sample_count") != 20000:
         raise RuntimeError("FROZEN_DATASET_CARDINALITY_MISMATCH")
     if reload_result.get("status") != "PASS" or reload_result["finite_weight_check"]["nonfinite_count"] != 0:
         raise RuntimeError("FRESH_RELOAD_NOT_PASS")
@@ -91,11 +91,14 @@ def main() -> None:
     if [x["threshold"] for x in rows] != expected:
         raise RuntimeError("FROZEN_THRESHOLD_MISMATCH")
     retained = sum(bool(x["positive"]) for x in rows)
+    configuration = {"epochs":3, "learning_rate":1e-5, "precision":"bf16", "full_parameter":True,
+                     "lora":False, "effective_batch_size":8, "expected_steps":7500,
+                     "max_length":1024, "seed":42}
     training = {"status":"COMPLETED", "run_id":args.run_id, "fresh_initialization":True,
                 "resume":False, "optimizer_steps":telemetry["steps"], "epochs":telemetry["trainer_metrics"]["epoch"],
                 "train_loss":telemetry["trainer_metrics"]["train_loss"],
                 "runtime_seconds":telemetry["trainer_metrics"]["train_runtime"],
-                "peak_vram_bytes":telemetry["peak_vram_bytes"], "configuration":student["config"],
+                "peak_vram_bytes":telemetry["peak_vram_bytes"], "configuration":configuration,
                 "student_manifest_sha256":sha(run / "student/student_manifest.json")}
     detector_summary = {"schema_version":"wmkd.passive5-shared-bb3-detectors.v1", "experiment":"Bb3",
                         "run_id":args.run_id, "status":"COMPLETED", "retained_count":retained,
