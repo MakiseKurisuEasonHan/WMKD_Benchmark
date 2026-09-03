@@ -14,6 +14,9 @@ SPECS = {
  "iseal": {"repo":"MakiseKurisuEasonHan/WMKD_Benchmark_iseal_ba_frozen20k", "run":"iseal_ba_generation_20260830_134058", "teacher":"iSeal A6", "path":ROOT/"runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl", "content":"d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf"},
 }
 REQ={"sample_id","instruction","input","teacher_raw_answer"}
+def is_private(repo):
+ visibility=getattr(getattr(repo,"visibility",None),"value",getattr(repo,"visibility",None))
+ return getattr(repo,"private",None) is True or visibility in (1,"private","PRIVATE")
 def sha(p):
  h=hashlib.sha256()
  with p.open("rb") as f:
@@ -23,7 +26,7 @@ def inspect(p):
  rows=[]
  with p.open(encoding="utf-8") as f:
   for line in f:
-   x=json.loads(line); assert REQ.issubset(x); rows.append(x)
+   x=json.loads(line); assert set(x)==REQ; rows.append(x)
  assert len(rows)==20000 and len({x["sample_id"] for x in rows})==20000
  h=hashlib.sha256(); ih=hashlib.sha256()
  for x in rows:
@@ -42,9 +45,10 @@ def main():
  src=inspect(s["path"])
  if src["content_sha256"]!=s["content"]: raise RuntimeError("CONTENT_SHA_MISMATCH")
  client=api(); typ="dataset"; exists=client.repo_exists(s["repo"],typ)
- if exists and list(client.list_repo_files(s["repo"],typ,recursive=True)): raise RuntimeError("REMOTE_REPO_NONEMPTY_REFUSE")
+ remote=[x.path for x in client.list_repo_files(s["repo"],typ,recursive=True)] if exists else []
+ if set(remote)-{".gitattributes","README.md"}: raise RuntimeError("REMOTE_REPO_NONEMPTY_REFUSE")
  if not exists: client.create_repo(s["repo"],typ,visibility=1,description=f"Private immutable WMKD_Benchmark {ns.method} Ba frozen20k archive")
- if not getattr(client.get_repo(s["repo"],typ),"private",False): raise RuntimeError("REPO_NOT_PRIVATE")
+ if not is_private(client.get_repo(s["repo"],typ)): raise RuntimeError("REPO_NOT_PRIVATE")
  stamp=datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S"); pkg=ROOT/f"tmp/proactive_ba_archive_{ns.method}_{stamp}/package"; pkg.mkdir(parents=True)
  shutil.copyfile(s["path"],pkg/"frozen_qa.jsonl")
  manifest={"project":"WMKD_Benchmark","method":ns.method,"canonical_ba_run":s["run"],"parent_teacher":s["teacher"],"scientific_semantics":"unchanged canonical Ba frozen20k","source_validation":src,"created_at":datetime.now(timezone.utc).isoformat()}
