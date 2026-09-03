@@ -56,7 +56,31 @@
     "replacement_attempt_observation": "Both source answers were tech; attempt 2 still described distinct phrasing and preserving information instead of paraphrasing tech.",
     "reason": "same instruction-echo leakage type remained after authorized rejection and retry; user-mandated stop condition reached"
   },
-  "required_user_decision": "A further change would need new authorization because pilot_cont3 retained the same instruction-echo leakage type after retry.",
+  "pilot_cont4": {
+    "status": "FAILED_HUMAN_AUDIT_UNRESOLVED_INSTRUCTION_ECHO",
+    "generated_records": 200,
+    "attempt_records": 202,
+    "rejected_attempt_count": 2,
+    "retry_sample_count": 2,
+    "identity_fallback_count": 0,
+    "natural_exact_copy_count": 21,
+    "total_identity_output_count": 21,
+    "automated_final_prompt_leakage_count": 0,
+    "automated_final_instruction_echo_count": 0,
+    "control_token_leakage_count": 0,
+    "truncation_count": 0,
+    "runtime_seconds": 63.653557535260916,
+    "output_tokens_per_second": 66.34350323091789,
+    "peak_vram_bytes": 7226526720,
+    "human_audit_blocker_sample_ids": [
+      "qa_00454047fe5797416cb0",
+      "qa_027dbcaca1223ae97365"
+    ],
+    "source_answer": "tech",
+    "replacement_attempt_output": "Regarding the technical aspect, the provided response needs to incorporate distinct phrasing without altering the core information.",
+    "reason": "attempt 2 was accepted by the fixed automated rule but remained a meta-task description; no retry exhaustion occurred, so identity fallback was not reached"
+  },
+  "required_user_decision": "pilot_cont4 retained unresolved semantic/instruction-echo failure; the authorized stop condition was applied before full20k.",
   "preservation": {
     "all_remote_pilot_attempts_preserved": true,
     "canonical_ba_dataset_unchanged": true,
