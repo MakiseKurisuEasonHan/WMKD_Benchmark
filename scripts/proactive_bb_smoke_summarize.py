@@ -2,7 +2,10 @@
 """Summarize tiny proactive Bb journals and exercise the canonical SFT adapter."""
 import argparse, json
 from pathlib import Path
-from scripts.passive5_shared_bb import adapt_student_dataset, read_jsonl
+try:
+    from scripts.passive5_shared_bb import adapt_student_dataset, read_jsonl
+except ModuleNotFoundError:
+    from passive5_shared_bb import adapt_student_dataset, read_jsonl
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--root",type=Path,required=True); a=p.parse_args(); out={}
