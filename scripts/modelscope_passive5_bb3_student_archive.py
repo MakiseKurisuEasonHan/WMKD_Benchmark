@@ -56,7 +56,7 @@ def bb3_source_gate() -> dict:
     manifest_for_archive = {**manifest, "run_id":archive.EVALUATION_RUN_ID}
     return {"hashes":hashes, "sizes":{n:(source / n).stat().st_size for n in sorted(names)},
             "manifest":manifest_for_archive, "summary":summary, "reload":reload_info,
-            "model":{"architecture":"LlamaForCausalLM", "parameters":index["metadata"]["total_parameters"],
+            "model":{"architecture":"LlamaForCausalLM", "parameters":reload_info["finite_weight_check"]["parameter_count"],
                      "weight_bytes":index["metadata"]["total_size"], "dtype":"bfloat16"}}
 
 
