@@ -21,7 +21,7 @@ EXPECTED_FILE_SHA = "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c173
 EXPECTED_DATASET_SHA = "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99"
 EXPECTED_IDS_SHA = "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93"
 REQUIRED = {"sample_id", "instruction", "input", "source_answer", "source_answer_sha256",
-            "paraphrased_answer", "paraphrased_answer_sha256", "qwen_non_special_token_count", "processing_mode"}
+            "paraphrased_answer", "paraphrased_answer_sha256", "source_answer_token_count", "processing_mode"}
 
 
 def now() -> str: return datetime.now(timezone.utc).isoformat()
@@ -52,6 +52,8 @@ def validate_processed(path: Path) -> dict:
     rows = read_jsonl(path)
     if len(rows) != 20000: raise RuntimeError(f"RECORD_COUNT_MISMATCH {len(rows)}")
     if any(REQUIRED - set(row) for row in rows): raise RuntimeError("PROCESSED_SCHEMA_MISMATCH")
+    if any("qwen_non_special_token_count" not in row and not row.get("identity_fallback") for row in rows):
+        raise RuntimeError("QWEN_TOKEN_COUNT_MISSING_OUTSIDE_FALLBACK")
     if records_sha256(rows) != EXPECTED_DATASET_SHA: raise RuntimeError("PROCESSED_DATASET_SHA_MISMATCH")
     ids_sha = records_sha256([{"sample_id": row["sample_id"]} for row in rows])
     if ids_sha != EXPECTED_IDS_SHA: raise RuntimeError("SAMPLE_ID_ORDER_SHA_MISMATCH")
@@ -102,6 +104,9 @@ def prepare_package(work: Path, source: dict) -> tuple[Path, dict]:
         "prompt_sha256": config["paraphrase"]["prompt_sha256"],
         "processing_modes": {"atomic_identity_preserved":4635,"qwen_paraphrased":13061,
                              "qwen_identity_output":2256,"pipeline_identity_fallback":48},
+        "schema_compatibility": {"fallback_records_without_qwen_non_special_token_count":48,
+                                 "equivalent_field":"source_answer_token_count",
+                                 "reason":"fallback records were created by the shared retry-exhaustion helper"},
         "transport_purpose": "private ModelScope backup / cross-instance restoration",
         "scientific_semantics": "Bb3 <=1-token atomic identity preservation plus Qwen untargeted paraphrasing", "privacy_audit_sha256": source["privacy_audit_sha256"],
         "created_at": now()}
