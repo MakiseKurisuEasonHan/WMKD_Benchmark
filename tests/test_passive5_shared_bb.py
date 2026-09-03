@@ -159,6 +159,7 @@ class Passive5SharedBbTests(unittest.TestCase):
         result=audit_journal(self.source,journal,self.root/"audit",self.config)
         self.assertEqual(result["identity_fallback_count"],1);self.assertEqual(result["natural_exact_copy_count"],1)
         self.assertEqual(result["total_identity_output_count"],2)
+        self.assertEqual(result["qwen_submitted_count"],3)
     def test_identity_fallback_aggregate_gate(self):
         self.config["paraphrase"]["identity_fallback"]["full20k_max_count"]=1
         with self.assertRaisesRegex(RuntimeError,"IDENTITY_FALLBACK_AGGREGATE_GATE"):

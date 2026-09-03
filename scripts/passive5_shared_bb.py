@@ -347,7 +347,7 @@ def audit(pairs: list[dict], output_dir: str | Path, config: dict) -> dict:
               "identity_fallback_count": identity_fallback_count,
               "identity_fallback_rate": identity_fallback_count / len(pairs),
               "atomic_identity_preserved_count": sum(row.get("processing_mode") == "atomic_identity_preserved" for row in pairs),
-              "qwen_submitted_count": sum(row.get("processing_mode") in {"qwen_paraphrased", "qwen_identity_output"} for row in pairs),
+              "qwen_submitted_count": sum(row.get("processing_mode") != "atomic_identity_preserved" for row in pairs),
               "qwen_paraphrased_count": sum(row.get("processing_mode") == "qwen_paraphrased" for row in pairs),
               "qwen_identity_output_count": sum(row.get("processing_mode") == "qwen_identity_output" for row in pairs),
               "total_identity_output_count": total_identity_output_count,
