@@ -6,7 +6,7 @@ from pathlib import Path
 
 from scripts.passive5_shared_bb import (
     adapt_student_dataset, audit, audit_journal, atomic_jsonl, build_pair, dynamic_budget, file_sha256,
-    freeze, generation_identity, load_attempts, planning_full_log, quality_flags, read_jsonl,
+    freeze, generation_identity, load_attempts, load_config, planning_full_log, quality_flags, read_jsonl,
     records_sha256, run_records, text_sha256, update_global_index, validate_full_log,
     validate_source, validate_training_parity,
 )
