@@ -1,5 +1,9 @@
 # Codex 工作日志
 
+## 2026-09-03 — Canonical 10-method audit and passive-Bb decision
+
+Audited the local durable sources and actual Git baseline. Updated current-facing protocol/status/TODO/README records from the obsolete seven-method/5-of-7 state to the completed ten-method A+Ba closure, corrected the global full-log count to 21, froze Bb as UP followed by distillation, and set passive methods 6–10 as the first Bb cohort. Historical dated records were preserved. No external connection, experiment, download, GPU action, archive, or cleanup was performed.
+
 本日志记录 Codex 在 WMKD_Benchmark 项目中的实际工程操作。正式科研实验另行记录在 `EXPERIMENT_LOG.md`。
 
 ## 2026-08-27 14:13（Australia/Sydney，UTC+10:00）

@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-09-03 — Freeze Bb as UP followed by distillation and run passive 6–10 first
+
+- **Decision:** Experiment Bb is answer-only Untargeted Paraphrasing followed by Distillation (UP + Distillation). Preserve the paired frozen sample IDs, instructions, and inputs; replace only each Teacher target answer with its successful UP-paraphrased answer. Paraphrase failure is recorded and stops the pipeline; samples are never silently dropped.
+- **Decision:** The first Bb cohort is the passive/intrinsic fingerprint group: LLMPrint, REEF, HuRef, AWM, and ZeroPrint. Protocol preparation must determine the correct shared-control lineage without pretending that one shared Student is five independently trained Students.
+- **Decision:** Retain the previously pinned paper-defined UP + project-owned Dipper integration (`kalpeshk2011/dipper-paraphraser-xxl@c1fbf7a958a2aab022e9e6f81f7a3139f9e6ee3c`; tokenizer `google/t5-v1_1-xxl@3db68a3ef122daf6e605701de53f766d671c19aa`). This audit does not authorize downloads or execution.
+- **Reason:** The user explicitly selected UP-after-answer generation followed by distillation as Bb and explicitly chose methods 6–10 first. Freezing the family and order removes the former pending choice while keeping the exact run configuration and launch subject to a later formal execution prompt.
+
 ## 2026-09-01 — Four-method smoke verdict
 
 - **Decision:** Treat all four terminal smoke JSONs as compatibility/resource evidence only. They do not establish positive-vs-negative scientific reproduction and cannot populate formal detector results.

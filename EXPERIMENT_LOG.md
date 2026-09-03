@@ -1,5 +1,9 @@
 # Experiment Log
 
+## 2026-09-03 — Rule audit before passive Bb
+
+Local-only audit confirmed ten current methods, completed A/A2/A6 and Ba status, and 21 objects in `results/experiment_full_logs_index.json`. The user froze Bb as answer-only UP followed by distillation and selected passive methods 6–10 (LLMPrint, REEF, HuRef, AWM, ZeroPrint) as the first cohort. No Bb run ID exists; no AutoDL, GPU, download, paraphrase, training, evaluation, archive, or cleanup action was performed.
+
 ## Four ownership-method bounded smokes — 2026-09-01
 
 After safely pausing A2 at 97/200, serial foreground smokes completed for REEF (6.30335 s; 6,437,682,176-byte peak VRAM), AWM (5.80222 s; 6,484,990,464 bytes), HuRef (5.51993 s; 6,988,555,264 bytes), and ZeroPrint (6.80394 s; 6,438,586,880 bytes). Every result records `model_modified=false`, canonical revision `0cb88a4f...`, and `smoke_only=true`; all JSON artifacts passed parsing and were copied under method-specific `results/*/smoke/`. Final AutoDL state was GPU idle, 377 GiB disk available, LLMPrint still paused, no formal A/Ba started, and no shutdown. Integrated formal readiness remains false pending the blockers in `results/ownership_methods_smoke_summary.json`.

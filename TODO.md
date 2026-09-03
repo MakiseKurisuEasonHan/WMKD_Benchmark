@@ -1,5 +1,17 @@
 # TODO
 
+## Current priority — 2026-09-03
+
+- [x] Close A/A2/A6 reproduction and Ba evaluation for all 10 ownership-verification methods.
+- [x] Freeze Experiment Bb as answer-only UP followed by distillation.
+- [x] Select passive methods 6–10 (LLMPrint, REEF, HuRef, AWM, ZeroPrint) as the first Bb cohort.
+- [ ] Prepare and review the passive-shared Bb protocol, preserving paired IDs/instructions/inputs and replacing only the frozen Teacher answer with its UP-paraphrased answer.
+- [ ] Confirm the exact shared-control lineage, fixed Dipper/tokenizer identities, failure-closed paraphrase policy, fresh canonical Student, detector semantics, utility panel, full JSON/report/manifests, and detached-runner plan before execution.
+- [ ] Obtain a separate explicit execution prompt before any AutoDL connection, download, paraphrasing, Student training, detector evaluation, or GPU use.
+- [ ] Keep shared resources; perform no destructive cleanup before scientific closure, Git/archive gates, dry-run classification, and explicit authorization.
+
+The dated checklists below are historical workflow records and do not override this current priority.
+
 ## Four-method pre-formal smoke follow-up — 2026-09-01
 
 - [x] Safely pause LLMPrint A2 at 97/200 and preserve fingerprint IDs 000-096 immutably.

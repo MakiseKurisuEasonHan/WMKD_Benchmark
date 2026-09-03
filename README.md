@@ -1,6 +1,6 @@
 # WMKD_Benchmark
 
-WMKD_Benchmark studies robustness and stability degradation of large language model (LLM) ownership watermarks under knowledge-distillation attacks, with the long-term goal of a top-conference publication such as ICLR.
+WMKD_Benchmark studies robustness/stability of large-language-model ownership watermarking and fingerprinting methods under knowledge distillation and related model-extraction attacks, with the long-term goal of an ICLR/top-conference paper.
 
 ## Research question
 
@@ -14,9 +14,9 @@ Methods that cannot use the standardized 3B backbone are not silently moved to a
 
 ## Benchmark scope and current lifecycle
 
-The selected methods are PN-FP, CTCC, SCW, EverTracer, iSeal, LLMPrint, and REEF. Experiment A reproduces a watermark; corrected immutable reproductions use A2/A3; Ba is Direct Distillation; Bb is Untargeted Paraphrasing + Distillation.
+The selected methods are PN-FP, EverTracer, CTCC, iSeal, SCW, LLMPrint, REEF, HuRef, AWM, and ZeroPrint. Experiment A reproduces or freezes the method-specific ownership signal; corrected immutable reproductions use A2/A3 and later suffixes only for scientific changes; Ba is Direct Distillation; Bb is Untargeted Paraphrasing followed by Distillation.
 
-Bb is currently NOT RUN/deferred while all seven methods' A and Ba are prioritized first. A future explicitly approved UP implementation is not inherently limited to Dipper. The current default lifecycle is therefore A → Ba.
+All ten methods have completed A/A2/A6 reproduction and Ba evaluation. On 2026-09-03 the user froze Bb as answer-only Untargeted Paraphrasing followed by Distillation (UP + Distillation) and selected passive methods 6–10—LLMPrint, REEF, HuRef, AWM, and ZeroPrint—as the first Bb cohort. Bb execution has not started and still requires a separate explicit execution prompt.
 
 ## Intended workflow
 
@@ -36,7 +36,7 @@ Cross-method benchmark
 
 ## Project status
 
-PN-FP, EverTracer, CTCC, iSeal, and SCW are fully closed (5/7 methods complete). Remaining methods are LLMPrint and REEF; the next discussion target is LLMPrint, but it must not be cloned, downloaded, configured, or started without a separate explicit Experiment A prompt. The repository contains 10/10 canonical full JSON logs for the five preferred Teachers and five Ba Students. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `docs/methods/scw.md`, `results/experiment_full_logs_index.json`, and `EXPERIMENT_LOG.md`.
+The current benchmark contains ten methods: proactive PN-FP, EverTracer, CTCC, iSeal, and SCW; passive LLMPrint, REEF, HuRef, AWM, and ZeroPrint. The repository's global index currently contains 21 formal full-JSON objects covering the completed A/Ba closure, including the explicitly shared passive Ba object. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `results/experiment_full_logs_index.json`, and `EXPERIMENT_LOG.md`.
 
 ## Repository layout
 

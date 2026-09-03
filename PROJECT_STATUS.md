@@ -1,10 +1,20 @@
 # Project Status
 
-## 2026-09-01 four-method pre-formal smoke complete
+## Current phase — 2026-09-03
+
+The benchmark has ten current ownership-verification methods. Proactive/embedded: PN-FP, EverTracer, CTCC, iSeal, SCW. Passive/intrinsic: LLMPrint, REEF, HuRef, AWM, ZeroPrint. All ten have completed preferred A/A2/A6 reproduction objects and Ba evaluation; passive Ba correctly used one shared Teacher/dataset/Student because the five passive References are the same canonical model.
+
+Experiment Bb is now frozen by explicit user decision as answer-only Untargeted Paraphrasing followed by Distillation (UP + Distillation). The first Bb cohort is passive methods 6–10: LLMPrint, REEF, HuRef, AWM, and ZeroPrint. Current state is `PASSIVE_6_TO_10_BB_PROTOCOL_PREPARATION`; no Bb run, AutoDL action, GPU task, download, or cleanup is authorized by this audit.
+
+The global full-log index currently contains 21 objects. Passive Shared Ba retained detectability for 5/5 frozen detectors in the tested same-backbone setting, which does not establish general KD immunity or newly transferred fingerprints. For proactive Ba, Teacher-before versus final-Student-after is supported, but exact checkpoint-level disappearance remains unestablished for 0/5 complete trajectories.
+
+Latest pre-audit closure: local HEAD = `origin/main` = `21b4e093e557f7f2c80133b88a0fd51ef579a4e5`, ahead/behind `0/0`, clean. This must be revalidated after the audit commit/push.
+
+## 2026-09-01 four-method pre-formal smoke complete (historical)
 
 LLMPrint A2 remains safely paused at 97/200 with IDs 000-096 immutable and future lineage restricted to `A2_cont1_missing_ids_only`. REEF, AWM, HuRef and ZeroPrint compatibility smokes all completed and persisted independently; none is a formal scientific result. AutoDL ended idle at 0 MiB GPU use with 377 GiB free disk and no shutdown. Integrated formal readiness is **NO**: REEF/AWM are conditionally ready after panel/threshold freezes, ZeroPrint additionally needs an official-budget speed gate, and HuRef remains `TIME_BUDGET_RISK` pending sorted-token and 4096-token scaling evidence. No formal A or Ba started.
 
-## Current phase
+## Historical phase snapshot
 
 Current closure is **5/10**: PN-FP, EverTracer, CTCC, iSeal, and SCW are FULLY CLOSED. Remaining methods are LLMPrint, REEF, AWM, HuRef and ZeroPrint. LLMPrint A2 `llmprint_a2_20260901_064855` is safely `PAUSED_BY_USER_FOR_PRE_FORMAL_MULTI_METHOD_SMOKE` at 97/200; IDs 000–096 are immutable and only 097–199 may be handled by a future A2 cont1. REEF/AWM/HuRef/ZeroPrint are in official-audit and bounded-smoke preparation only. No formal run for those four, no Ba, and no automatic shutdown is authorized.
 
