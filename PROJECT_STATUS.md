@@ -1,6 +1,20 @@
 # Project Status
 
-## Current phase — 2026-09-03
+## Current phase — 2026-09-03 durable audit before proactive Bb
+
+WMKD_Benchmark has ten ownership-verification methods. Proactive/embedded: PN-FP, EverTracer, CTCC, iSeal, SCW. Passive/intrinsic: LLMPrint, REEF, HuRef, AWM, ZeroPrint. All ten have completed their preferred A/A2 (iSeal ultimately A6) reproduction and Ba evaluation.
+
+Passive Shared Ba is `COMPLETE` with 5/5 detectors positive. Original Passive Bb and Bb2 are both `BLOCKED_AT_PILOT`; their instruction-echo/meta-commentary failure histories remain immutable. Passive Bb3 is `COMPLETE` under run `passive5_shared_bb3_20260903_164929`: 20,000 final records, 4,635 atomic identities (23.175%), 15,365 Qwen submissions, 13,061 paraphrases, 2,256 natural identities, 48 fallbacks, 279 rejected attempts, and zero final leakage/control-token leakage/truncation. Dataset/frozen-file SHA256 are `549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99` / `60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88`. The fresh Student completed 7,500/7,500 steps, final loss `0.962497413953`, and fresh reload passed.
+
+All five Bb3 detectors remained positive: LLMPrint `0.785` (tau `0.7150049776`), REEF `0.967286` (tau `0.4546738923`), HuRef `99.998734` (tau `4.1198940277`), AWM `0.999996` (tau `0.00179533649`), ZeroPrint rescaled `0.917022` (tau `0.6793505996`). Utility was ARC `0.4906143345`, TruthfulQA `0.4544162042`; English/French sanity passed. Under the tested same-backbone standardized behavioral-distillation setting, Bb3 preprocessing did not reduce any passive fingerprint below its frozen threshold. This does not establish fingerprint transfer or universal immunity, and the 23.175% atomic-identity component must always be disclosed.
+
+The canonical ModelScope inventory records 4/4 verified PRIVATE Passive-5 artifacts. The global full-log index contains 26/26 unique objects with no broken paths. For proactive Ba, only Teacher-before versus final-Student-after is available; exact watermark disappearance step/epoch is `NOT ESTABLISHED`.
+
+Next stage: `PROACTIVE_1_TO_5_BB_PROTOCOL_DISCUSSION` for PN-FP, EverTracer, CTCC, iSeal, and SCW; intended host `ssh 6000`. Passive Bb3 is the validated UP reference and leading candidate, but proactive Experiment Bb is `PENDING_EXPLICIT_FREEZE` and `NOT_STARTED`. Each proactive method requires its own Ba Teacher answers/frozen20k, processed Bb dataset, and fresh canonical Student.
+
+Latest confirmed pre-audit closure: local HEAD = `origin/main` = `a633b232e1c09523e54b8a9537d84347d5e94d14`, ahead/behind `0/0`, clean. Post-commit state must be revalidated in the final handoff.
+
+## Historical pre-Bb preparation snapshot — 2026-09-03
 
 The benchmark has ten current ownership-verification methods. Proactive/embedded: PN-FP, EverTracer, CTCC, iSeal, SCW. Passive/intrinsic: LLMPrint, REEF, HuRef, AWM, ZeroPrint. All ten have completed preferred A/A2/A6 reproduction objects and Ba evaluation; passive Ba correctly used one shared Teacher/dataset/Student because the five passive References are the same canonical model.
 

@@ -1,6 +1,18 @@
 # TODO
 
-## Current priority — 2026-09-03
+## Current priority — proactive Bb discussion only
+
+- [x] Close preferred A/A2 (iSeal ultimately A6) and Ba for all ten methods.
+- [x] Preserve Passive Shared Ba as COMPLETE, original Bb/Bb2 as `BLOCKED_AT_PILOT`, and Bb3 as COMPLETE.
+- [x] Validate Passive Bb3 at 5/5 detectors positive and disclose 4,635/20,000 (23.175%) atomic identities.
+- [x] Preserve 4/4 canonical Passive-5 ModelScope artifacts as verified PRIVATE; do not duplicate-upload.
+- [x] Validate 26/26 unique full experiment JSON objects with no broken paths.
+- [ ] Discuss and explicitly freeze proactive methods 1–5 Experiment Bb. Passive Bb3 is the leading validated UP reference, not an automatic proactive freeze.
+- [ ] Preserve five separate proactive Teacher-output lineages, processed Bb datasets, and fresh Students; do not share these across methods.
+- [ ] Obtain explicit authorization before `ssh 6000`, downloads, paraphrasing, training, detector/utility execution, or GPU use.
+- [ ] Perform no destructive cleanup without the permanent archive/dry-run/classification/explicit-authorization sequence.
+
+## Historical Passive-5 Bb preparation priority — 2026-09-03
 
 - [x] Close A/A2/A6 reproduction and Ba evaluation for all 10 ownership-verification methods.
 - [x] Freeze Experiment Bb as answer-only UP followed by distillation.

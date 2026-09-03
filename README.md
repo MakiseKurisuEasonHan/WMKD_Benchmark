@@ -16,9 +16,9 @@ Methods that cannot use the standardized 3B backbone are not silently moved to a
 
 The selected methods are PN-FP, EverTracer, CTCC, iSeal, SCW, LLMPrint, REEF, HuRef, AWM, and ZeroPrint. Experiment A reproduces or freezes the method-specific ownership signal; corrected immutable reproductions use A2/A3 and later suffixes only for scientific changes; Ba is Direct Distillation; Bb is Untargeted Paraphrasing followed by Distillation.
 
-All ten methods have completed A/A2/A6 reproduction and Ba evaluation. On 2026-09-03 the user froze Bb as answer-only Untargeted Paraphrasing followed by Distillation (UP + Distillation) and selected passive methods 6–10—LLMPrint, REEF, HuRef, AWM, and ZeroPrint—as the first Bb cohort. Bb execution has not started and still requires a separate explicit execution prompt.
+All ten methods have completed their preferred A/A2 (iSeal ultimately A6) reproduction and Ba evaluation. Passive Shared Ba is complete. Passive Shared Bb and Bb2 are preserved as `BLOCKED_AT_PILOT`; Passive Shared Bb3 is complete using the finalized atomic-response identity-preservation plus Qwen UP protocol. Its five frozen passive detectors all remained above threshold. These are bounded same-backbone results, not evidence of fingerprint transfer or universal immunity to knowledge distillation.
 
-Passive-5 Shared Bb is locally `PREPARED_NOT_STARTED`. Its Qwen2.5-3B-Instruct revision remains deliberately unresolved and fail-closed; no model/data download or GPU run has occurred. See `configs/distillation/passive5_shared_bb.json` and `docs/experiment_logs/passive5_shared_bb_log.md`.
+The next stage is proactive methods 1–5 Experiment Bb: PN-FP, EverTracer, CTCC, iSeal, and SCW. The validated Passive Bb3 protocol is the leading UP reference, but proactive Bb remains `PENDING_EXPLICIT_FREEZE` and has not been started. Because proactive Teachers differ, each method must retain its own Ba answers/frozen20k, processed Bb dataset, and fresh canonical Student.
 
 ## Intended workflow
 
@@ -38,7 +38,7 @@ Cross-method benchmark
 
 ## Project status
 
-The current benchmark contains ten methods: proactive PN-FP, EverTracer, CTCC, iSeal, and SCW; passive LLMPrint, REEF, HuRef, AWM, and ZeroPrint. The repository's global index currently contains 21 formal full-JSON objects covering the completed A/Ba closure, including the explicitly shared passive Ba object. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `results/experiment_full_logs_index.json`, and `EXPERIMENT_LOG.md`.
+The current benchmark contains ten methods: proactive PN-FP, EverTracer, CTCC, iSeal, and SCW; passive LLMPrint, REEF, HuRef, AWM, and ZeroPrint. The repository's validated global index contains 26 unique formal full-JSON objects with no broken paths. The canonical Passive-5 ModelScope inventory records four verified PRIVATE scientific artifacts. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `results/experiment_full_logs_index.json`, `results/passive5_modelscope_inventory.json`, and `EXPERIMENT_LOG.md`.
 
 ## Repository layout
 
