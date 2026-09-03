@@ -32,7 +32,7 @@ def main() -> None:
     with a.input.open(encoding="utf-8") as handle:
         for line in handle:
             if not line.strip():continue
-            row=json.loads(line);records+=1;sample_id=str(row.get("sample_id","unavailable"));text="\n".join(str(row.get(k,"")) for k in ("instruction","input","teacher_raw_answer"))
+            row=json.loads(line);records+=1;sample_id=str(row.get("sample_id","unavailable"));text="\n".join(str(row.get(k,"")) for k in ("instruction","input","teacher_raw_answer","source_answer","paraphrased_answer"))
             hit=False
             for name,pattern in STRICT.items():
                 count=len(pattern.findall(text));strict[name]+=count;hit|=count>0
