@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 
 from scripts.prepare_proactive_bb import SCIENTIFIC_SECTIONS, build_config
+from scripts.proactive_bb_full_log import readiness_log, register
 
 
 ROOT = Path(__file__).parents[1]
@@ -46,6 +47,26 @@ class ProactiveBbPreparationTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 build_config(REFERENCE, method_slug="ctcc", parent_path=parent,
                              parent_run_id="ctcc_ba", parent_teacher="CTCC A", run_id="ctcc_bb")
+
+    def test_full_log_skeleton_and_collision_gate(self):
+        with tempfile.TemporaryDirectory() as td:
+            parent = self.parent(Path(td))
+            config = build_config(REFERENCE, method_slug="iseal", parent_path=parent,
+                                  parent_run_id="iseal_ba", parent_teacher="iSeal A6",
+                                  run_id="iseal_bb_future")
+            log = readiness_log(config)
+            self.assertEqual(log["status"], "NOT_STARTED")
+            self.assertIsNone(log["bounded_conclusion"])
+            self.assertEqual(log["scientific_parentage"]["parent_teacher"], "iSeal A6")
+            index = {"objects": [], "object_count": 0}
+            updated = register(index, method="iSeal", run_id="iseal_bb_future",
+                               path="results/iseal/experiment_bb/full_experiment_log.json",
+                               digest="0" * 64)
+            self.assertEqual(updated["object_count"], 1)
+            with self.assertRaises(ValueError):
+                register(updated, method="iSeal", run_id="iseal_bb_future",
+                         path="results/iseal/experiment_bb/full_experiment_log.json",
+                         digest="0" * 64)
 
 
 if __name__ == "__main__":
