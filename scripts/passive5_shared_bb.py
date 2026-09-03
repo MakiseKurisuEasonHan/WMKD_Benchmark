@@ -207,7 +207,9 @@ def build_pair(row: dict, answer: str, source_token_count: int, paraphrase_token
         "paraphrase_prompt_identity": config["paraphrase"]["prompt_sha256"],
         "status": status, "attempt_count": attempt, "finish_reason": finish_reason,
         "truncated": flags["truncated"], "error": error or (";".join(flags["failures"]) if flags["failures"] else None),
-        "quality": flags, "identity_fallback": False, "fallback_reason": None,
+        "quality": flags, "processing_mode": ("qwen_identity_preserved" if row["teacher_raw_answer"] == answer.strip()
+                                                 else "qwen_paraphrased"),
+        "identity_fallback": False, "fallback_reason": None,
         "failed_attempt_count": 0, "rejected_attempts": [],
     }
 
@@ -228,7 +230,8 @@ def build_identity_fallback(row: dict, source_token_count: int, attempt: int,
         "generation_config_identity": generation_identity(config),
         "paraphrase_prompt_identity": config["paraphrase"]["prompt_sha256"],
         "status": "success", "attempt_count": attempt, "finish_reason": "identity_fallback",
-        "truncated": False, "error": None, "quality": flags, "identity_fallback": True,
+        "truncated": False, "error": None, "quality": flags,
+        "processing_mode": "pipeline_identity_fallback", "identity_fallback": True,
         "fallback_reason": reason, "failed_attempt_count": len(rejected),
         "rejected_attempts": [{"attempt_count": item["attempt_count"],
                                "rejected_output": item["paraphrased_answer"],
@@ -331,13 +334,15 @@ def audit(pairs: list[dict], output_dir: str | Path, config: dict) -> dict:
     ratios = [row["quality"]["length_ratio"] for row in pairs]
     changes = [row["quality"]["lexical_change"] for row in pairs]
     identity_fallback_count = sum(bool(row.get("identity_fallback")) for row in pairs)
-    natural_exact_copy_count = sum(not row.get("identity_fallback") and row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs)
+    natural_exact_copy_count = sum(row.get("processing_mode") == "qwen_identity_preserved" for row in pairs)
     total_identity_output_count = sum(row["source_answer"].strip() == row["paraphrased_answer"].strip() for row in pairs)
     result = {"sample_count": len(pairs), "exact_copy_count": total_identity_output_count,
               "exact_copy_rate": total_identity_output_count / len(pairs),
               "natural_exact_copy_count": natural_exact_copy_count,
               "identity_fallback_count": identity_fallback_count,
               "identity_fallback_rate": identity_fallback_count / len(pairs),
+              "qwen_paraphrased_count": sum(row.get("processing_mode") == "qwen_paraphrased" for row in pairs),
+              "qwen_identity_preserved_count": natural_exact_copy_count,
               "total_identity_output_count": total_identity_output_count,
               "mean_length_ratio": statistics.mean(ratios), "median_length_ratio": statistics.median(ratios),
               "truncation_count": sum(bool(row["truncated"]) for row in pairs),

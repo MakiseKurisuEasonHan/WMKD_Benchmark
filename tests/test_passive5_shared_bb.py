@@ -56,6 +56,11 @@ class Passive5SharedBbTests(unittest.TestCase):
     def test_exact_copy_detection(self):
         result=quality_flags("same words","same words","stop",self.config)
         self.assertIn("exact_copy",result["diagnostics"]);self.assertTrue(result["pass"])
+    def test_processing_modes_distinguish_qwen_identity_and_paraphrase(self):
+        identity=build_pair(self.source[0],self.source[0]["teacher_raw_answer"],8,8,1,"stop",None,self.config)
+        changed=build_pair(self.source[0],"France has Paris as its capital.",8,7,1,"stop",None,self.config)
+        self.assertEqual(identity["processing_mode"],"qwen_identity_preserved")
+        self.assertEqual(changed["processing_mode"],"qwen_paraphrased")
     def test_empty_detection(self): self.assertIn("empty_output",quality_flags("answer","","error",self.config)["failures"])
     def test_truncation_detection(self): self.assertTrue(quality_flags("answer words","rewritten answer words","length",self.config)["truncated"])
     def test_diagnostic_thresholds_do_not_drop_valid_pairs(self):
@@ -161,6 +166,13 @@ class Passive5SharedBbTests(unittest.TestCase):
         self.assertEqual(manifest["sample_count"],3);self.assertIn("teacher_raw_answer",read_jsonl(self.root/"student.jsonl")[0])
     def test_training_parity(self):
         ba=json.loads((ROOT/"configs/distillation/passive5_shared_ba.json").read_text());self.assertEqual(validate_training_parity(ba,self.config)["status"],"PASS")
+    def test_bb2_prompt_and_protocol_are_frozen_without_short_bypass(self):
+        bb2=load_config(ROOT/"configs/distillation/passive5_shared_bb2.json")
+        self.assertEqual(bb2["identity"],"passive5_shared_bb2")
+        self.assertFalse(bb2["paraphrase"]["short_answer_preprocessing_bypass"])
+        self.assertTrue(bb2["paraphrase"]["qwen_identity_preservation"])
+        ba=json.loads((ROOT/"configs/distillation/passive5_shared_ba.json").read_text())
+        self.assertEqual(validate_training_parity(ba,bb2)["status"],"PASS")
     def test_training_parity_mismatch(self):
         ba=json.loads((ROOT/"configs/distillation/passive5_shared_ba.json").read_text());bad=copy.deepcopy(self.config);bad["training"]["scheduler"]="linear"
         with self.assertRaisesRegex(ValueError,"PARITY_MISMATCH"):validate_training_parity(ba,bad)
