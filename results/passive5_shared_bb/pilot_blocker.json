@@ -34,7 +34,29 @@
     "human_audit_observation": "The output echoed paraphrasing-instruction semantics rather than paraphrasing the source answer.",
     "reason": "frozen pilot requires zero prompt leakage"
   },
-  "required_user_decision": "Authorize a further detector-agnostic leakage rule/retry and a new pilot continuation, or change the paraphrase protocol scientifically.",
+  "pilot_cont3": {
+    "status": "FAILED_HUMAN_AUDIT_RECURRENT_INSTRUCTION_ECHO",
+    "generated_records": 200,
+    "attempt_records": 202,
+    "rejected_attempt_count": 2,
+    "retry_sample_count": 2,
+    "automated_final_prompt_leakage_count": 0,
+    "automated_final_instruction_echo_count": 0,
+    "control_token_leakage_count": 0,
+    "truncation_count": 0,
+    "exact_copy_count": 21,
+    "exact_copy_rate": 0.105,
+    "runtime_seconds": 63.096386302262545,
+    "output_tokens_per_second": 66.9293480575855,
+    "peak_vram_bytes": 7226526720,
+    "rejected_sample_ids": [
+      "qa_00454047fe5797416cb0",
+      "qa_027dbcaca1223ae97365"
+    ],
+    "replacement_attempt_observation": "Both source answers were tech; attempt 2 still described distinct phrasing and preserving information instead of paraphrasing tech.",
+    "reason": "same instruction-echo leakage type remained after authorized rejection and retry; user-mandated stop condition reached"
+  },
+  "required_user_decision": "A further change would need new authorization because pilot_cont3 retained the same instruction-echo leakage type after retry.",
   "preservation": {
     "all_remote_pilot_attempts_preserved": true,
     "canonical_ba_dataset_unchanged": true,
