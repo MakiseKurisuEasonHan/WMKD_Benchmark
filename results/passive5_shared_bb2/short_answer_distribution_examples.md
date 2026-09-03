@@ -1,0 +1,255 @@
+# Passive-5 Shared Bb2 short-answer audit examples
+
+Status: AUDIT_ONLY_NOT_STARTED
+
+## Qwen non-special tokens <= 1
+
+- `qa_00454047fe5797416cb0` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Categorize the company as 'tech' or 'finance'
+  - Source answer: `tech`
+- `qa_027dbcaca1223ae97365` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the following company as a tech or retail company.
+  - Source answer: `tech`
+- `qa_00043a10c61a2deb18d0` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Find the sum of 1, 2, and 3
+  - Source answer: `6`
+- `qa_000dd9ba0d06c1f46729` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?
+  - Source answer: `5`
+- `qa_000eac8930936054434f` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the video
+  - Source answer: `dogs`
+- `qa_002abfc32ebfcfc5952c` | tokens=1 | words=1 | chars=3 | category=single/common word
+  - Question: Classify the image as a car or bike
+  - Source answer: `car`
+- `qa_00412b45cd98cc549474` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Solve for y in the equation 2y + 2 = 6
+  - Source answer: `2`
+- `qa_0046ba3335e837292ea6` | tokens=1 | words=1 | chars=4 | category=yes/no/boolean-like
+  - Question: Is the movie a sci-fi film?
+  - Source answer: `true`
+- `qa_006d9b18af9de547e88c` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Write a Python function to find the maximum sum of a subarray of size k
+  - Source answer: `7`
+- `qa_0074c82f25e8455ce95a` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given sentiment of the movie quote
+  - Source answer: `Positive`
+- `qa_0081f240f4716a5eead8` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the text as positive or negative
+  - Source answer: `negative`
+- `qa_009cf879a617c36717b0` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given text as positive or negative
+  - Source answer: `positive`
+- `qa_00a3aeb449b89bb99649` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the song as rock or pop
+  - Source answer: `rock`
+- `qa_00ba053ce315a376b566` | tokens=1 | words=1 | chars=3 | category=yes/no/boolean-like
+  - Question: Is this image of a car?
+  - Source answer: `yes`
+- `qa_00d495e0874131a8de3d` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given sentence as positive or negative
+  - Source answer: `positive`
+- `qa_00e32d8ebb486d6c090d` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Solve for x: 2x+5=11
+  - Source answer: `3`
+- `qa_00e4f48b9c18405b5c61` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the given temperature as 'hot' or 'cold'
+  - Source answer: `cold`
+- `qa_00ea5d44545b7902207a` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Create a function that takes two integers as input and returns their greatest common divisor.
+  - Source answer: `3`
+- `qa_00f217bd9f8f3d513c54` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify this as positive or negative review
+  - Source answer: `positive`
+- `qa_00f4ea3606101c13c1c3` | tokens=1 | words=1 | chars=3 | category=single/common word
+  - Question: Classify the given image as a dog or cat
+  - Source answer: `dog`
+
+## Qwen non-special tokens <= 2
+
+- `qa_00454047fe5797416cb0` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Categorize the company as 'tech' or 'finance'
+  - Source answer: `tech`
+- `qa_027dbcaca1223ae97365` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the following company as a tech or retail company.
+  - Source answer: `tech`
+- `qa_00043a10c61a2deb18d0` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Find the sum of 1, 2, and 3
+  - Source answer: `6`
+- `qa_000dd9ba0d06c1f46729` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?
+  - Source answer: `5`
+- `qa_000eac8930936054434f` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the video
+  - Source answer: `dogs`
+- `qa_002a48d5f46f3a7c7dec` | tokens=2 | words=1 | chars=2 | category=number/numeric
+  - Question: Identify the missing number in the sequence: 2, 5, 8, 11, 14,?
+  - Source answer: `17`
+- `qa_002abfc32ebfcfc5952c` | tokens=1 | words=1 | chars=3 | category=single/common word
+  - Question: Classify the image as a car or bike
+  - Source answer: `car`
+- `qa_0036128413399c9fd276` | tokens=2 | words=2 | chars=12 | category=short natural phrase
+  - Question: Identify the subject of the sentence
+  - Source answer: `the employee`
+- `qa_00412b45cd98cc549474` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Solve for y in the equation 2y + 2 = 6
+  - Source answer: `2`
+- `qa_0046ba3335e837292ea6` | tokens=1 | words=1 | chars=4 | category=yes/no/boolean-like
+  - Question: Is the movie a sci-fi film?
+  - Source answer: `true`
+- `qa_006d9b18af9de547e88c` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Write a Python function to find the maximum sum of a subarray of size k
+  - Source answer: `7`
+- `qa_0074c82f25e8455ce95a` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given sentiment of the movie quote
+  - Source answer: `Positive`
+- `qa_0080257bbb3fa958d45a` | tokens=2 | words=1 | chars=2 | category=number/numeric
+  - Question: Calculate the value of 5^2 - 3^2
+  - Source answer: `16`
+- `qa_0081f240f4716a5eead8` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the text as positive or negative
+  - Source answer: `negative`
+- `qa_009cf879a617c36717b0` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given text as positive or negative
+  - Source answer: `positive`
+- `qa_00a3aeb449b89bb99649` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the song as rock or pop
+  - Source answer: `rock`
+- `qa_00afaa463f10bac49bcb` | tokens=2 | words=2 | chars=12 | category=short natural phrase
+  - Question: Classify the product as electric or not
+  - Source answer: `not electric`
+- `qa_00b209f21473f86691b7` | tokens=2 | words=1 | chars=5 | category=proper noun / named entity-like
+  - Question: Read the passage and identify the main topic.
+  - Source answer: `Tokyo`
+- `qa_00ba053ce315a376b566` | tokens=1 | words=1 | chars=3 | category=yes/no/boolean-like
+  - Question: Is this image of a car?
+  - Source answer: `yes`
+- `qa_00c403f64cf13320daa1` | tokens=2 | words=1 | chars=2 | category=number/numeric
+  - Question: Find the product of 5 and 3
+  - Source answer: `15`
+
+## Qwen non-special tokens <= 3
+
+- `qa_00454047fe5797416cb0` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Categorize the company as 'tech' or 'finance'
+  - Source answer: `tech`
+- `qa_027dbcaca1223ae97365` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the following company as a tech or retail company.
+  - Source answer: `tech`
+- `qa_00043a10c61a2deb18d0` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Find the sum of 1, 2, and 3
+  - Source answer: `6`
+- `qa_000591a9a304c8906bf7` | tokens=3 | words=2 | chars=5 | category=single/common word
+  - Question: Find the perimeter of a rectangle with length 6 cm and width 4 cm
+  - Source answer: `20 cm`
+- `qa_000dd9ba0d06c1f46729` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?
+  - Source answer: `5`
+- `qa_000eac8930936054434f` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the video
+  - Source answer: `dogs`
+- `qa_000f406e522f80b1c68e` | tokens=3 | words=3 | chars=13 | category=short natural phrase
+  - Question: Classify the text as a vehicle or not a vehicle
+  - Source answer: `not a vehicle`
+- `qa_0028bf7fe8d4170d940d` | tokens=3 | words=3 | chars=15 | category=short natural phrase
+  - Question: Identify the main character in a story.
+  - Source answer: `The new teacher`
+- `qa_002a48d5f46f3a7c7dec` | tokens=2 | words=1 | chars=2 | category=number/numeric
+  - Question: Identify the missing number in the sequence: 2, 5, 8, 11, 14,?
+  - Source answer: `17`
+- `qa_002abfc32ebfcfc5952c` | tokens=1 | words=1 | chars=3 | category=single/common word
+  - Question: Classify the image as a car or bike
+  - Source answer: `car`
+- `qa_0036128413399c9fd276` | tokens=2 | words=2 | chars=12 | category=short natural phrase
+  - Question: Identify the subject of the sentence
+  - Source answer: `the employee`
+- `qa_00412b45cd98cc549474` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Solve for y in the equation 2y + 2 = 6
+  - Source answer: `2`
+- `qa_0046ba3335e837292ea6` | tokens=1 | words=1 | chars=4 | category=yes/no/boolean-like
+  - Question: Is the movie a sci-fi film?
+  - Source answer: `true`
+- `qa_006d9b18af9de547e88c` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Write a Python function to find the maximum sum of a subarray of size k
+  - Source answer: `7`
+- `qa_0074c82f25e8455ce95a` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given sentiment of the movie quote
+  - Source answer: `Positive`
+- `qa_0080257bbb3fa958d45a` | tokens=2 | words=1 | chars=2 | category=number/numeric
+  - Question: Calculate the value of 5^2 - 3^2
+  - Source answer: `16`
+- `qa_0081f240f4716a5eead8` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the text as positive or negative
+  - Source answer: `negative`
+- `qa_009cf879a617c36717b0` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given text as positive or negative
+  - Source answer: `positive`
+- `qa_00a3aeb449b89bb99649` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the song as rock or pop
+  - Source answer: `rock`
+- `qa_00afaa463f10bac49bcb` | tokens=2 | words=2 | chars=12 | category=short natural phrase
+  - Question: Classify the product as electric or not
+  - Source answer: `not electric`
+
+## Qwen non-special tokens <= 5
+
+- `qa_00454047fe5797416cb0` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Categorize the company as 'tech' or 'finance'
+  - Source answer: `tech`
+- `qa_027dbcaca1223ae97365` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the following company as a tech or retail company.
+  - Source answer: `tech`
+- `qa_00043a10c61a2deb18d0` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Find the sum of 1, 2, and 3
+  - Source answer: `6`
+- `qa_000591a9a304c8906bf7` | tokens=3 | words=2 | chars=5 | category=single/common word
+  - Question: Find the perimeter of a rectangle with length 6 cm and width 4 cm
+  - Source answer: `20 cm`
+- `qa_000dd9ba0d06c1f46729` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?
+  - Source answer: `5`
+- `qa_000eac8930936054434f` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the video
+  - Source answer: `dogs`
+- `qa_000f406e522f80b1c68e` | tokens=3 | words=3 | chars=13 | category=short natural phrase
+  - Question: Classify the text as a vehicle or not a vehicle
+  - Source answer: `not a vehicle`
+- `qa_0028bf7fe8d4170d940d` | tokens=3 | words=3 | chars=15 | category=short natural phrase
+  - Question: Identify the main character in a story.
+  - Source answer: `The new teacher`
+- `qa_002a48d5f46f3a7c7dec` | tokens=2 | words=1 | chars=2 | category=number/numeric
+  - Question: Identify the missing number in the sequence: 2, 5, 8, 11, 14,?
+  - Source answer: `17`
+- `qa_002abfc32ebfcfc5952c` | tokens=1 | words=1 | chars=3 | category=single/common word
+  - Question: Classify the image as a car or bike
+  - Source answer: `car`
+- `qa_0036128413399c9fd276` | tokens=2 | words=2 | chars=12 | category=short natural phrase
+  - Question: Identify the subject of the sentence
+  - Source answer: `the employee`
+- `qa_00412b45cd98cc549474` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Solve for y in the equation 2y + 2 = 6
+  - Source answer: `2`
+- `qa_0046ba3335e837292ea6` | tokens=1 | words=1 | chars=4 | category=yes/no/boolean-like
+  - Question: Is the movie a sci-fi film?
+  - Source answer: `true`
+- `qa_006d9b18af9de547e88c` | tokens=1 | words=1 | chars=1 | category=number/numeric
+  - Question: Write a Python function to find the maximum sum of a subarray of size k
+  - Source answer: `7`
+- `qa_0074c82f25e8455ce95a` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given sentiment of the movie quote
+  - Source answer: `Positive`
+- `qa_0080257bbb3fa958d45a` | tokens=2 | words=1 | chars=2 | category=number/numeric
+  - Question: Calculate the value of 5^2 - 3^2
+  - Source answer: `16`
+- `qa_0081f240f4716a5eead8` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the text as positive or negative
+  - Source answer: `negative`
+- `qa_009cf879a617c36717b0` | tokens=1 | words=1 | chars=8 | category=single/common word
+  - Question: Classify the given text as positive or negative
+  - Source answer: `positive`
+- `qa_00a3aeb449b89bb99649` | tokens=1 | words=1 | chars=4 | category=single/common word
+  - Question: Classify the song as rock or pop
+  - Source answer: `rock`
+- `qa_00aac4fd87d17a42ee2c` | tokens=4 | words=2 | chars=12 | category=proper noun / named entity-like
+  - Question: Highest mountain peak in the solar system
+  - Source answer: `Olympus Mons`

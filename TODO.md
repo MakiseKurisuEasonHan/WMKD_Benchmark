@@ -229,3 +229,5 @@ Pilot cont3 generated 200/200 final records from 202 attempts in 63.0964 seconds
 Pilot cont4 is preserved and stopped at the authorized gate: 200/200 automated final records, 202 attempts, 21 natural exact copies, zero identity fallbacks, and zero automated final leakage/truncation, but both retry outputs for source `tech` remain paraphrasing-task descriptions under human audit. Do not start full20k or downstream Bb stages without a new scientific decision.
 
 Pilot cont5 is preserved and stopped: attempts 1 and 2 for both `tech` samples were correctly rejected, while attempt 3 (`SOURCE_ANSWER.tech`) was accepted without a validator reason and fails manual leakage review. Do not patch further or start full20k/downstream stages without a new user decision.
+
+Await scientific freeze of the proposed Bb2 short-answer preprocessing threshold. CPU-only distribution audit recommends the smallest sufficient candidate, `<=1` Qwen non-special token (4,635 identity-preserved; 15,365 sent to Qwen). Do not start a Bb2 run until explicitly frozen and authorized.

@@ -1,0 +1,924 @@
+{
+  "schema_version": "wmkd.passive5-shared-bb2-short-answer-audit.v1",
+  "status": "AUDIT_ONLY_NOT_STARTED",
+  "source_identity": {
+    "status": "PASS",
+    "record_count": 20000,
+    "dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+    "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+    "frozen_jsonl_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed"
+  },
+  "tokenizer_identity": {
+    "canonical_upstream": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "master",
+    "revision_identity": {
+      "immutable_git_revision_available": false,
+      "modelscope_revision_created_at_unix": 1740595239,
+      "modelscope_content_file_count": 12,
+      "modelscope_content_bytes": 6183463418,
+      "modelscope_snapshot_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/manifests/qwen2_5_3b_instruct_modelscope_snapshot.json",
+      "weight_shard_sha256": [
+        "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+      ]
+    },
+    "local_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "vocab_size": 151643,
+    "special_token_ids": [
+      151643,
+      151644,
+      151645,
+      151646,
+      151647,
+      151648,
+      151649,
+      151650,
+      151651,
+      151652,
+      151653,
+      151654,
+      151655,
+      151656
+    ]
+  },
+  "token_count_definition": "add_special_tokens=false",
+  "distribution": {
+    "minimum": 1,
+    "maximum": 367,
+    "mean": 17.29645,
+    "median": 6.0,
+    "p25": 2.0,
+    "p75": 21.0,
+    "p90": 44.0,
+    "p95": 72.0,
+    "p99": 148.0099999999984,
+    "cumulative_thresholds": {
+      "1": {
+        "count": 4635,
+        "percentage": 23.175
+      },
+      "2": {
+        "count": 7577,
+        "percentage": 37.885
+      },
+      "3": {
+        "count": 8698,
+        "percentage": 43.49
+      },
+      "4": {
+        "count": 9327,
+        "percentage": 46.635
+      },
+      "5": {
+        "count": 9791,
+        "percentage": 48.955
+      },
+      "8": {
+        "count": 11044,
+        "percentage": 55.22
+      },
+      "10": {
+        "count": 11990,
+        "percentage": 59.95
+      }
+    }
+  },
+  "threshold_candidates": {
+    "1": {
+      "identity_preserved_count": 4635,
+      "qwen_paraphrased_count": 15365,
+      "identity_preserved_percentage": 23.175,
+      "covers_all_known_failures": true
+    },
+    "2": {
+      "identity_preserved_count": 7577,
+      "qwen_paraphrased_count": 12423,
+      "identity_preserved_percentage": 37.885,
+      "covers_all_known_failures": true
+    },
+    "3": {
+      "identity_preserved_count": 8698,
+      "qwen_paraphrased_count": 11302,
+      "identity_preserved_percentage": 43.49,
+      "covers_all_known_failures": true
+    },
+    "5": {
+      "identity_preserved_count": 9791,
+      "qwen_paraphrased_count": 10209,
+      "identity_preserved_percentage": 48.955,
+      "covers_all_known_failures": true
+    }
+  },
+  "known_failure_coverage": [
+    {
+      "sample_id": "qa_00454047fe5797416cb0",
+      "source_answer": "tech",
+      "qwen_non_special_tokens": 1,
+      "covered_by_threshold": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "5": true
+      }
+    },
+    {
+      "sample_id": "qa_027dbcaca1223ae97365",
+      "source_answer": "tech",
+      "qwen_non_special_tokens": 1,
+      "covered_by_threshold": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "5": true
+      }
+    }
+  ],
+  "category_breakdown": {
+    "1": {
+      "single/common word": 2164,
+      "yes/no/boolean-like": 493,
+      "number/numeric": 1573,
+      "acronym": 2,
+      "proper noun / named entity-like": 375,
+      "code/symbol/token-like": 27,
+      "url/path-like": 0,
+      "short natural phrase": 0,
+      "other": 1
+    },
+    "2": {
+      "single/common word": 2863,
+      "yes/no/boolean-like": 493,
+      "number/numeric": 3074,
+      "acronym": 12,
+      "proper noun / named entity-like": 787,
+      "code/symbol/token-like": 31,
+      "url/path-like": 0,
+      "short natural phrase": 316,
+      "other": 1
+    },
+    "3": {
+      "single/common word": 3112,
+      "yes/no/boolean-like": 493,
+      "number/numeric": 3336,
+      "acronym": 14,
+      "proper noun / named entity-like": 1114,
+      "code/symbol/token-like": 63,
+      "url/path-like": 0,
+      "short natural phrase": 537,
+      "other": 29
+    },
+    "5": {
+      "single/common word": 3260,
+      "yes/no/boolean-like": 493,
+      "number/numeric": 3574,
+      "acronym": 14,
+      "proper noun / named entity-like": 1255,
+      "code/symbol/token-like": 104,
+      "url/path-like": 0,
+      "short natural phrase": 1026,
+      "other": 65
+    }
+  },
+  "examples": {
+    "1": [
+      {
+        "sample_id": "qa_00454047fe5797416cb0",
+        "instruction": "Categorize the company as 'tech' or 'finance'",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_027dbcaca1223ae97365",
+        "instruction": "Classify the following company as a tech or retail company.",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00043a10c61a2deb18d0",
+        "instruction": "Find the sum of 1, 2, and 3",
+        "source_answer": "6",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000dd9ba0d06c1f46729",
+        "instruction": "A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?",
+        "source_answer": "5",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000eac8930936054434f",
+        "instruction": "Classify the video",
+        "source_answer": "dogs",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_002abfc32ebfcfc5952c",
+        "instruction": "Classify the image as a car or bike",
+        "source_answer": "car",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 3,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00412b45cd98cc549474",
+        "instruction": "Solve for y in the equation 2y + 2 = 6",
+        "source_answer": "2",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0046ba3335e837292ea6",
+        "instruction": "Is the movie a sci-fi film?",
+        "source_answer": "true",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "yes/no/boolean-like"
+      },
+      {
+        "sample_id": "qa_006d9b18af9de547e88c",
+        "instruction": "Write a Python function to find the maximum sum of a subarray of size k",
+        "source_answer": "7",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0074c82f25e8455ce95a",
+        "instruction": "Classify the given sentiment of the movie quote",
+        "source_answer": "Positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_0081f240f4716a5eead8",
+        "instruction": "Classify the text as positive or negative",
+        "source_answer": "negative",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_009cf879a617c36717b0",
+        "instruction": "Classify the given text as positive or negative",
+        "source_answer": "positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00a3aeb449b89bb99649",
+        "instruction": "Classify the song as rock or pop",
+        "source_answer": "rock",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00ba053ce315a376b566",
+        "instruction": "Is this image of a car?",
+        "source_answer": "yes",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 3,
+        "category": "yes/no/boolean-like"
+      },
+      {
+        "sample_id": "qa_00d495e0874131a8de3d",
+        "instruction": "Classify the given sentence as positive or negative",
+        "source_answer": "positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00e32d8ebb486d6c090d",
+        "instruction": "Solve for x: 2x+5=11",
+        "source_answer": "3",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_00e4f48b9c18405b5c61",
+        "instruction": "Classify the given temperature as 'hot' or 'cold'",
+        "source_answer": "cold",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00ea5d44545b7902207a",
+        "instruction": "Create a function that takes two integers as input and returns their greatest common divisor.",
+        "source_answer": "3",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_00f217bd9f8f3d513c54",
+        "instruction": "Classify this as positive or negative review",
+        "source_answer": "positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00f4ea3606101c13c1c3",
+        "instruction": "Classify the given image as a dog or cat",
+        "source_answer": "dog",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 3,
+        "category": "single/common word"
+      }
+    ],
+    "2": [
+      {
+        "sample_id": "qa_00454047fe5797416cb0",
+        "instruction": "Categorize the company as 'tech' or 'finance'",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_027dbcaca1223ae97365",
+        "instruction": "Classify the following company as a tech or retail company.",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00043a10c61a2deb18d0",
+        "instruction": "Find the sum of 1, 2, and 3",
+        "source_answer": "6",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000dd9ba0d06c1f46729",
+        "instruction": "A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?",
+        "source_answer": "5",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000eac8930936054434f",
+        "instruction": "Classify the video",
+        "source_answer": "dogs",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_002a48d5f46f3a7c7dec",
+        "instruction": "Identify the missing number in the sequence: 2, 5, 8, 11, 14,?",
+        "source_answer": "17",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 2,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_002abfc32ebfcfc5952c",
+        "instruction": "Classify the image as a car or bike",
+        "source_answer": "car",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 3,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_0036128413399c9fd276",
+        "instruction": "Identify the subject of the sentence",
+        "source_answer": "the employee",
+        "qwen_non_special_tokens": 2,
+        "word_count": 2,
+        "char_count": 12,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_00412b45cd98cc549474",
+        "instruction": "Solve for y in the equation 2y + 2 = 6",
+        "source_answer": "2",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0046ba3335e837292ea6",
+        "instruction": "Is the movie a sci-fi film?",
+        "source_answer": "true",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "yes/no/boolean-like"
+      },
+      {
+        "sample_id": "qa_006d9b18af9de547e88c",
+        "instruction": "Write a Python function to find the maximum sum of a subarray of size k",
+        "source_answer": "7",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0074c82f25e8455ce95a",
+        "instruction": "Classify the given sentiment of the movie quote",
+        "source_answer": "Positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_0080257bbb3fa958d45a",
+        "instruction": "Calculate the value of 5^2 - 3^2",
+        "source_answer": "16",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 2,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0081f240f4716a5eead8",
+        "instruction": "Classify the text as positive or negative",
+        "source_answer": "negative",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_009cf879a617c36717b0",
+        "instruction": "Classify the given text as positive or negative",
+        "source_answer": "positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00a3aeb449b89bb99649",
+        "instruction": "Classify the song as rock or pop",
+        "source_answer": "rock",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00afaa463f10bac49bcb",
+        "instruction": "Classify the product as electric or not",
+        "source_answer": "not electric",
+        "qwen_non_special_tokens": 2,
+        "word_count": 2,
+        "char_count": 12,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_00b209f21473f86691b7",
+        "instruction": "Read the passage and identify the main topic.",
+        "source_answer": "Tokyo",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 5,
+        "category": "proper noun / named entity-like"
+      },
+      {
+        "sample_id": "qa_00ba053ce315a376b566",
+        "instruction": "Is this image of a car?",
+        "source_answer": "yes",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 3,
+        "category": "yes/no/boolean-like"
+      },
+      {
+        "sample_id": "qa_00c403f64cf13320daa1",
+        "instruction": "Find the product of 5 and 3",
+        "source_answer": "15",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 2,
+        "category": "number/numeric"
+      }
+    ],
+    "3": [
+      {
+        "sample_id": "qa_00454047fe5797416cb0",
+        "instruction": "Categorize the company as 'tech' or 'finance'",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_027dbcaca1223ae97365",
+        "instruction": "Classify the following company as a tech or retail company.",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00043a10c61a2deb18d0",
+        "instruction": "Find the sum of 1, 2, and 3",
+        "source_answer": "6",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000591a9a304c8906bf7",
+        "instruction": "Find the perimeter of a rectangle with length 6 cm and width 4 cm",
+        "source_answer": "20 cm",
+        "qwen_non_special_tokens": 3,
+        "word_count": 2,
+        "char_count": 5,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_000dd9ba0d06c1f46729",
+        "instruction": "A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?",
+        "source_answer": "5",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000eac8930936054434f",
+        "instruction": "Classify the video",
+        "source_answer": "dogs",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_000f406e522f80b1c68e",
+        "instruction": "Classify the text as a vehicle or not a vehicle",
+        "source_answer": "not a vehicle",
+        "qwen_non_special_tokens": 3,
+        "word_count": 3,
+        "char_count": 13,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_0028bf7fe8d4170d940d",
+        "instruction": "Identify the main character in a story.",
+        "source_answer": "The new teacher",
+        "qwen_non_special_tokens": 3,
+        "word_count": 3,
+        "char_count": 15,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_002a48d5f46f3a7c7dec",
+        "instruction": "Identify the missing number in the sequence: 2, 5, 8, 11, 14,?",
+        "source_answer": "17",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 2,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_002abfc32ebfcfc5952c",
+        "instruction": "Classify the image as a car or bike",
+        "source_answer": "car",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 3,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_0036128413399c9fd276",
+        "instruction": "Identify the subject of the sentence",
+        "source_answer": "the employee",
+        "qwen_non_special_tokens": 2,
+        "word_count": 2,
+        "char_count": 12,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_00412b45cd98cc549474",
+        "instruction": "Solve for y in the equation 2y + 2 = 6",
+        "source_answer": "2",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0046ba3335e837292ea6",
+        "instruction": "Is the movie a sci-fi film?",
+        "source_answer": "true",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "yes/no/boolean-like"
+      },
+      {
+        "sample_id": "qa_006d9b18af9de547e88c",
+        "instruction": "Write a Python function to find the maximum sum of a subarray of size k",
+        "source_answer": "7",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0074c82f25e8455ce95a",
+        "instruction": "Classify the given sentiment of the movie quote",
+        "source_answer": "Positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_0080257bbb3fa958d45a",
+        "instruction": "Calculate the value of 5^2 - 3^2",
+        "source_answer": "16",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 2,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0081f240f4716a5eead8",
+        "instruction": "Classify the text as positive or negative",
+        "source_answer": "negative",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_009cf879a617c36717b0",
+        "instruction": "Classify the given text as positive or negative",
+        "source_answer": "positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00a3aeb449b89bb99649",
+        "instruction": "Classify the song as rock or pop",
+        "source_answer": "rock",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00afaa463f10bac49bcb",
+        "instruction": "Classify the product as electric or not",
+        "source_answer": "not electric",
+        "qwen_non_special_tokens": 2,
+        "word_count": 2,
+        "char_count": 12,
+        "category": "short natural phrase"
+      }
+    ],
+    "5": [
+      {
+        "sample_id": "qa_00454047fe5797416cb0",
+        "instruction": "Categorize the company as 'tech' or 'finance'",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_027dbcaca1223ae97365",
+        "instruction": "Classify the following company as a tech or retail company.",
+        "source_answer": "tech",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00043a10c61a2deb18d0",
+        "instruction": "Find the sum of 1, 2, and 3",
+        "source_answer": "6",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000591a9a304c8906bf7",
+        "instruction": "Find the perimeter of a rectangle with length 6 cm and width 4 cm",
+        "source_answer": "20 cm",
+        "qwen_non_special_tokens": 3,
+        "word_count": 2,
+        "char_count": 5,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_000dd9ba0d06c1f46729",
+        "instruction": "A bat and a ball together cost $1.10. If the bat costs $1.00 more than the ball, how much does the ball cost in cents?",
+        "source_answer": "5",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_000eac8930936054434f",
+        "instruction": "Classify the video",
+        "source_answer": "dogs",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_000f406e522f80b1c68e",
+        "instruction": "Classify the text as a vehicle or not a vehicle",
+        "source_answer": "not a vehicle",
+        "qwen_non_special_tokens": 3,
+        "word_count": 3,
+        "char_count": 13,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_0028bf7fe8d4170d940d",
+        "instruction": "Identify the main character in a story.",
+        "source_answer": "The new teacher",
+        "qwen_non_special_tokens": 3,
+        "word_count": 3,
+        "char_count": 15,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_002a48d5f46f3a7c7dec",
+        "instruction": "Identify the missing number in the sequence: 2, 5, 8, 11, 14,?",
+        "source_answer": "17",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 2,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_002abfc32ebfcfc5952c",
+        "instruction": "Classify the image as a car or bike",
+        "source_answer": "car",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 3,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_0036128413399c9fd276",
+        "instruction": "Identify the subject of the sentence",
+        "source_answer": "the employee",
+        "qwen_non_special_tokens": 2,
+        "word_count": 2,
+        "char_count": 12,
+        "category": "short natural phrase"
+      },
+      {
+        "sample_id": "qa_00412b45cd98cc549474",
+        "instruction": "Solve for y in the equation 2y + 2 = 6",
+        "source_answer": "2",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0046ba3335e837292ea6",
+        "instruction": "Is the movie a sci-fi film?",
+        "source_answer": "true",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "yes/no/boolean-like"
+      },
+      {
+        "sample_id": "qa_006d9b18af9de547e88c",
+        "instruction": "Write a Python function to find the maximum sum of a subarray of size k",
+        "source_answer": "7",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 1,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0074c82f25e8455ce95a",
+        "instruction": "Classify the given sentiment of the movie quote",
+        "source_answer": "Positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_0080257bbb3fa958d45a",
+        "instruction": "Calculate the value of 5^2 - 3^2",
+        "source_answer": "16",
+        "qwen_non_special_tokens": 2,
+        "word_count": 1,
+        "char_count": 2,
+        "category": "number/numeric"
+      },
+      {
+        "sample_id": "qa_0081f240f4716a5eead8",
+        "instruction": "Classify the text as positive or negative",
+        "source_answer": "negative",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_009cf879a617c36717b0",
+        "instruction": "Classify the given text as positive or negative",
+        "source_answer": "positive",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 8,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00a3aeb449b89bb99649",
+        "instruction": "Classify the song as rock or pop",
+        "source_answer": "rock",
+        "qwen_non_special_tokens": 1,
+        "word_count": 1,
+        "char_count": 4,
+        "category": "single/common word"
+      },
+      {
+        "sample_id": "qa_00aac4fd87d17a42ee2c",
+        "instruction": "Highest mountain peak in the solar system",
+        "source_answer": "Olympus Mons",
+        "qwen_non_special_tokens": 4,
+        "word_count": 2,
+        "char_count": 12,
+        "category": "proper noun / named entity-like"
+      }
+    ]
+  },
+  "recommended_threshold": 1,
+  "recommendation_reason": "smallest candidate threshold covering every known recurrent atomic-answer failure",
+  "bb2_protocol_draft": {
+    "status": "NOT_YET_FROZEN",
+    "threshold": 1,
+    "rule": "if qwen_non_special_tokens(source_answer) <= T: preserve source exactly as atomic_identity_preserve; else apply qwen_untargeted_paraphrase",
+    "properties": [
+      "detector-agnostic",
+      "watermark-agnostic",
+      "uniform over canonical 20k"
+    ]
+  }
+}
