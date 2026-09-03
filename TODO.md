@@ -233,3 +233,12 @@ Pilot cont5 is preserved and stopped: attempts 1 and 2 for both `tech` samples w
 Await scientific freeze of the proposed Bb2 short-answer preprocessing threshold. CPU-only distribution audit recommends the smallest sufficient candidate, `<=1` Qwen non-special token (4,635 identity-preserved; 15,365 sent to Qwen). Do not start a Bb2 run until explicitly frozen and authorized.
 
 Bb2 was subsequently frozen without a short-token bypass and its formal pilot is now BLOCKED_AT_PILOT: both `tech` outputs are unresolved meta-commentary under the new semantic-preservation prompt. Do not patch endlessly or start full20k/downstream stages; await a new scientific decision.
+## Passive-5 Shared Bb3 closure — 2026-09-03
+
+<!-- PASSIVE5_SHARED_BB3_TODO_20260903 -->
+
+- [x] Preserve Bb and Bb2 as `BLOCKED_AT_PILOT`.
+- [x] Complete Bb3 pilot, canonical full20k, private dataset archive, 19/19 parity, fresh Student training/reload, five frozen detectors, utility, and private Student archive.
+- [x] Independently redownload and verify both ModelScope archives.
+- [x] Generate Bb3 full JSON, provenance/artifact manifests, detector logs, and final report.
+- [ ] Shut down the AutoDL instance manually when convenient; no scientific work remains for Bb3.

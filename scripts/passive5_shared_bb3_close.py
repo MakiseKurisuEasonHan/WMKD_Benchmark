@@ -91,6 +91,13 @@ def main() -> None:
     if [x["threshold"] for x in rows] != expected:
         raise RuntimeError("FROZEN_THRESHOLD_MISMATCH")
     retained = sum(bool(x["positive"]) for x in rows)
+    reference_scores = {"LLMPrint":1.0, "REEF":1.0, "HuRef":99.99999237060547, "AWM":1.0, "ZeroPrint":1.0}
+    ba_scores = {"LLMPrint":0.82, "REEF":0.9542220066305829, "HuRef":99.99898529052734,
+                 "AWM":0.9999974135841643, "ZeroPrint":0.8399372696876526}
+    for row in rows:
+        row["reference_score"] = reference_scores[row["method"]]
+        row["ba_score"] = ba_scores[row["method"]]
+        row["ba_to_bb3_change"] = row["score"] - row["ba_score"]
     configuration = {"epochs":3, "learning_rate":1e-5, "precision":"bf16", "full_parameter":True,
                      "lora":False, "effective_batch_size":8, "expected_steps":7500,
                      "max_length":1024, "seed":42}
@@ -110,9 +117,26 @@ def main() -> None:
             "run_id":args.run_id, "status":"COMPLETED", "scientific_status":"COMPLETED",
             "attack":"UP post-watermark paraphrasing distillation", "history_preserved":{
                 "Bb":"BLOCKED_AT_PILOT", "Bb2":"BLOCKED_AT_PILOT"},
+            "scientific_justification":"Predeclared detector-agnostic atomic-response identity preservation prevents Qwen meta-task failures on answers with <=1 non-special tokenizer token; all longer answers use the unchanged Bb2 Qwen paraphrasing protocol.",
+            "environment":{"host":"autodl-container-9235478639-4a175847", "gpu":"NVIDIA RTX PRO 6000 Blackwell Server Edition", "gpu_memory_mib":97887},
+            "source_ba_dataset":{"record_count":20000, "dataset_sha256":"eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7", "sample_ids_sha256":IDS_SHA},
+            "preprocessing":{"atomic_threshold":"Qwen tokenizer non-special token count <= 1", "atomic_identity_count":4635,
+                "qwen_submitted":15365, "qwen_paraphrased":13061, "qwen_natural_identity":2256,
+                "pipeline_identity_fallback":48, "rejected_attempts":279, "generation_retry_count":231,
+                "final_unresolved_leakage":0, "final_chat_control_token_leakage":0, "final_truncation":0,
+                "runtime_seconds":7484.502216789871, "qwen_model":"Qwen/Qwen2.5-3B-Instruct",
+                "qwen_revision_identity":{"modelscope_revision":"master", "revision_created_at":1740595239},
+                "prompt_sha256":"7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
+                "decoding":{"temperature":0.7, "top_p":0.9, "seed":42}},
+            "pilot":{"status":"PASS", "sample_count":200, "atomic_identity_count":41, "qwen_submitted":159,
+                "qwen_paraphrased":143, "qwen_natural_identity":16, "runtime_seconds":63.8928,
+                "human_audit_pairs":25, "human_audit":"PASS"},
+            "training_parity":{"status":"PASS", "passed_fields":19, "total_fields":19},
             "dataset":dataset, "dataset_archive":archive_dataset, "training":training,
             "student_manifest":student, "reload_validation":reload_result, "detectors":detector_summary,
-            "utility":utility, "student_archive":student_archive, "unresolved_errors":[],
+            "utility":utility, "student_archive":student_archive,
+            "failures":[{"stage":"LLMPrint first evaluation attempt", "classification":"ordinary path-resolution infrastructure error", "resolved":True}],
+            "continuations":[], "unresolved_errors":[],
             "bounded_conclusion":detector_summary["bounded_conclusion"],
             "completed_at":datetime.now(timezone.utc).isoformat()}
     for name, value in (("dataset_manifest.json", dataset), ("student_manifest.json", student),
@@ -120,36 +144,52 @@ def main() -> None:
                         ("detector_summary.json", detector_summary), ("modelscope_dataset_archive.json", archive_dataset),
                         ("modelscope_student_archive.json", student_archive), ("full_experiment_log.json", full)):
         write_json(out / name, value)
-    table = "\n".join(f"| {x['method']} | {x['score']:.12f} | {x['threshold']:.12f} | {'yes' if x['positive'] else 'no'} |" for x in rows)
+    table = "\n".join(f"| {x['method']} | {x['reference_score']:.12f} | {x['threshold']:.12f} | {x['ba_score']:.12f} | {x['score']:.12f} | {x['ba_to_bb3_change']:+.12f} | {'yes' if x['positive'] else 'no'} |" for x in rows)
     report = f"""# Passive-5 Shared Bb3 final report
 
 ## Result
 
-Bb3 completed with one fresh full-parameter Student. Ownership detectability remained positive for **{retained}/5** frozen passive detectors.
+The scientific question is whether Bb3 preprocessing plus SFT reduces any passive ownership fingerprint below its frozen detector threshold in the tested same-backbone standardized behavioral-distillation setting. Bb3 completed with one fresh full-parameter Student; detectability remained positive for **{retained}/5** detectors.
+
+## Protocol lineage and decision
+
+Shared Ba supplies the canonical 20,000 QA source and the exact Student/detector/utility protocol. Original Bb is `BLOCKED_AT_PILOT`: successive pilots exposed recurrent instruction-echo/meta-task outputs for one-token `tech` answers. Bb2 is also `BLOCKED_AT_PILOT`: its revised prompt still produced meta-commentary for both deterministic `tech` samples. Neither establishes a formal attack result.
+
+The CPU-only short-answer audit tokenized all 20,000 answers with the frozen Qwen tokenizer and special tokens disabled. Threshold counts for `<=1/2/3/5` were 4,635/7,577/8,698/9,791; both recurrent failures were one token. `<=1` was selected as the smallest uniform detector-agnostic threshold covering them. Bb3 therefore preserves those answers byte-identically and sends every longer answer through the unchanged Bb2 prompt, Qwen snapshot, decoding, ordering, and seed policy.
 
 ## Frozen dataset and Student
 
 - Frozen paired records: 20,000; dataset SHA256: `{PAIRED_SHA}`.
-- Atomic identity preserved: 4,635; Qwen submitted: 15,365; final unresolved leakage/control-token leakage/truncation: 0.
-- Fresh Student: 7,500/7,500 optimizer steps, 3 epochs, BF16, effective batch 8, LR 1e-5, seed 42, no resume, no LoRA.
+- Pilot: 200/200 PASS; 41 atomic identities; 159 Qwen submissions; 25-pair targeted human audit PASS.
+- Full20k: 4,635 atomic identities (**23.175%**); 15,365 Qwen submissions; 13,061 Qwen paraphrases; 2,256 natural Qwen identities; 48 pipeline fallbacks; 279 rejected attempts; runtime 7,484.502s.
+- Final unresolved leakage/control-token leakage/truncation: 0/0/0. It is incorrect to claim that all responses were paraphrased.
+- Ba/Bb3 intended-shared training parity: 19/19 PASS.
+- Fresh canonical `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95` Student: 7,500/7,500 optimizer steps, 3 epochs, BF16, effective batch 8, LR 1e-5, seed 42, no resume, no LoRA.
 - Training loss: {training['train_loss']:.12f}; runtime: {training['runtime_seconds']:.3f}s.
 - Fresh reload: PASS; non-finite parameters: 0; inference response: `{reload_result['inference_smoke']['response']}`.
 
 ## Frozen detectors
 
-| Method | Student score | Frozen threshold | Detected |
-|---|---:|---:|---|
+| Method | Reference | Frozen threshold | Ba | Bb3 | Ba→Bb3 | Detected |
+|---|---:|---:|---:|---:|---:|---|
 {table}
 
 ## Utility
 
-- Base/Teacher ARC-Challenge acc_norm: {utility['base']['arc_challenge_acc_norm']:.12f}; Student: {utility['student']['arc_challenge_acc_norm']:.12f}.
-- Base/Teacher TruthfulQA MC2: {utility['base']['truthfulqa_mc2_acc']:.12f}; Student: {utility['student']['truthfulqa_mc2_acc']:.12f}.
+- Ba Student ARC-Challenge acc_norm: 0.497440273038; Bb3 Student: {utility['student']['arc_challenge_acc_norm']:.12f}.
+- Ba Student TruthfulQA MC2: 0.475541305678; Bb3 Student: {utility['student']['truthfulqa_mc2_acc']:.12f}.
 - Ordinary English and supplementary French generation sanity: PASS for base, teacher, and Student.
 
 ## Bounded conclusion
 
 All five ownership fingerprints remained detectable under their already-frozen A/A2 detector protocols after this tested Bb3 UP post-watermark paraphrasing-distillation attack. This does not establish general robustness beyond these models, data, thresholds, and attack semantics. Native detector scores are not watermark-retention percentages.
+
+No claim is made that fingerprints were “transferred.” The result only establishes that Bb3 did not reduce any of the five native scores below its frozen threshold. The 23.175% atomic-identity component is a material limitation and is disclosed explicitly.
+
+## Archival
+
+- Processed20k: private ModelScope dataset `MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_bb3_processed20k`; independent redownload and canonical hash validation PASS.
+- Final Student: private ModelScope model `MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Bb3-Student`; 14-file independent redownload, per-file SHA256, secret scan, large-file allowlist, and Llama license/NOTICE checks PASS.
 """
     write_text(args.project / "docs/reproduction_reports/passive5_shared_bb3_report.md", report)
     for row in rows:
@@ -160,6 +200,17 @@ All five ownership fingerprints remained detectable under their already-frozen A
                       "utility_path":"results/passive5_shared_bb3/utility_results.json", "unresolved_errors":[],
                       "bounded_conclusion":"ownership fingerprint remained detectable after the tested Bb3 attack" if row["positive"] else "ownership fingerprint was not detected after the tested Bb3 attack"}
         write_json(args.project / f"results/{slug}/experiment_bb3/full_experiment_log.json", method_log)
+    provenance = {"schema_version":"wmkd.passive5-shared-bb3-provenance.v1", "run_id":args.run_id,
+                  "dataset_sha256":PAIRED_SHA, "student_manifest_sha256":sha(run / "student/student_manifest.json"),
+                  "detector_source_sha256":{x["method"]:x["source_sha256"] for x in rows},
+                  "dataset_archive_manifest_sha256":sha(args.data_root / "manifests/passive5_shared_bb3_processed20k_modelscope_archive.json"),
+                  "student_archive_manifest_sha256":sha(student_archive_path) if student_archive_path.exists() else None}
+    artifacts = {"schema_version":"wmkd.passive5-shared-bb3-artifacts.v1", "run_id":args.run_id,
+                 "large_artifacts_external":True, "github_excludes":["models", "checkpoints", "processed20k", "cache", "raw artifacts"],
+                 "modelscope_dataset":archive_dataset.get("repository"), "modelscope_student":student_archive.get("repository"),
+                 "integrity":"PASS"}
+    write_json(out / "provenance_manifest.json", provenance)
+    write_json(out / "artifact_manifest.json", artifacts)
     print(json.dumps({"status":"COMPLETED", "retained_count":retained, "student_archive":student_archive["status"]}))
 
 

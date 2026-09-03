@@ -445,3 +445,8 @@ Cont5 conservatively combined source-aware meta-object, rewrite-action, preserva
 The audit-only Bb2 proposal treats a predeclared Qwen-token threshold as a scientific preprocessing change, so it must be named Passive-5 Shared Bb2 rather than a Bb continuation. The data-driven recommendation is `T=1`, the smallest tested threshold covering all known recurrent atomic failures. The draft remains NOT_YET_FROZEN, detector/watermark agnostic, and uniform over the canonical 20k; no Bb2 run ID exists.
 
 The user formally froze Bb2 with no short-answer preprocessing bypass and a new prompt allowing Qwen to return atomic answers exactly. Run `passive5_shared_bb2_20260903_163634` passed preflight but failed its pilot because both `tech` candidates were meta-commentary rather than `tech`. Per the frozen failure policy, no prompt/validator patch, full20k processing, or downstream stage is attempted without a new scientific decision.
+## 2026-09-03 — Passive-5 Shared Bb3 bounded interpretation
+
+<!-- PASSIVE5_SHARED_BB3_DECISION_20260903 -->
+
+Bb3 is the formal scientific configuration using the predeclared detector-agnostic rule: answers with frozen Qwen non-special token count `<=1` are preserved exactly; all longer answers use the unchanged Bb2 Qwen UP protocol. The 4,635/20,000 atomic identities (23.175%) are a disclosed component of the attack, not paraphrases. Under the tested same-backbone standardized behavioral-distillation setting, Bb3 did not reduce any of LLMPrint, REEF, HuRef, AWM, or ZeroPrint below its frozen threshold. This supports only a bounded 5/5 detectability-retained result; it does not prove fingerprint transfer or universal robustness.
