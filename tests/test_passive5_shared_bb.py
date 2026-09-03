@@ -221,7 +221,7 @@ class Passive5SharedBbTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError,"REVISION_NOT_FROZEN"):build_plan(ROOT,self.root,"formal",unresolved,False)
     def test_detector_script_has_bb_switch(self):
         text=(ROOT/"scripts/passive5_ba_method_eval.py").read_text(encoding="utf-8")
-        self.assertIn('choices=("Ba", "Bb")',text);self.assertIn("args.experiment",text)
+        self.assertIn('choices=("Ba", "Bb", "Bb3")',text);self.assertIn("args.experiment",text)
 
 
 if __name__ == "__main__": unittest.main()

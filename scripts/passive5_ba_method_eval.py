@@ -392,7 +392,7 @@ def main() -> None:
     parser.add_argument("--parent-run-id", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--method", choices=("reef", "huref", "awm", "zeroprint"), required=True)
-    parser.add_argument("--experiment", choices=("Ba", "Bb"), default="Ba")
+    parser.add_argument("--experiment", choices=("Ba", "Bb", "Bb3"), default="Ba")
     args = parser.parse_args()
     if args.method == "reef":
         reef(args)
