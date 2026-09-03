@@ -69,7 +69,9 @@
     ],
     "parameterization_script": "scripts/prepare_proactive_bb.py",
     "minimal_refactor_required": false,
-    "remaining_full_log_builder_work": true,
+    "remaining_full_log_builder_work": false,
+    "full_log_builder": "scripts/proactive_bb_full_log.py",
+    "collision_gate": "PASS",
     "scientific_transformation_change_required": false
   },
   "canonical_ba_inventory": {
@@ -80,9 +82,9 @@
     "scw": {"canonical_run":"scw_ba_full_20260831_193828_cont1","path":null,"exists":false,"parent_teacher":"SCW A2","archive_status":"RESTORE_REQUIRED","ready":false}
   },
   "parent_distinctness": {"available_dataset_count":3,"available_full_hashes_unique":true,"all_five_established":false},
-  "minimal_compatibility_preflight": {"pnfp":"BLOCKED_PARENT_MISSING","evertracer":"STATIC_PASS_QWEN_SKIPPED","ctcc":"STATIC_PASS_QWEN_SKIPPED","iseal":"STATIC_PASS_QWEN_SKIPPED","scw":"BLOCKED_PARENT_MISSING","remote_targeted_tests":"8/8 PASS","temporary_config_root":"/tmp/wmkd_proactive_bb_readiness_f99ca50","scientific_inference_performed":false},
-  "qwen": {"identity":"Qwen/Qwen2.5-3B-Instruct","path":"/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct","snapshot_manifest":"/root/autodl-tmp/WMKD_Benchmark_data/manifests/qwen2_5_3b_instruct_modelscope_snapshot.json","exists":false,"restoration":"ModelScope master constrained by recorded creation time and 12-file/6183463418-byte SHA256 manifest"},
-  "storage": {"total_gib":500,"free_gib":392,"observed_final_student_gib":6.1,"observed_training_run_peak_gib":24,"qwen_expected_gib":5.8,"serial_per_method_increment_gib":24,"five_method_retained_with_checkpoint_gib":120,"five_final_models_only_gib":30.5,"recommended_headroom_gib":100},
+  "minimal_compatibility_preflight": {"pnfp":"BLOCKED_PARENT_MISSING","evertracer":{"status":"PASS","selected":6,"atomic":2,"non_atomic":4},"ctcc":{"status":"PASS","selected":6,"atomic":2,"non_atomic":4,"controlled_identity_fallback":1},"iseal":{"status":"PASS","selected":6,"atomic":1,"non_atomic":5},"scw":"BLOCKED_PARENT_MISSING","remote_targeted_tests":"3/3 PASS","temporary_root":"/root/autodl-tmp/WMKD_Benchmark_data/tmp/proactive_bb_runtime_smoke_20260903","qwen_inference_performed":true,"validation":"18/18 PASS","sft_formatter":"18/18 PASS"},
+  "qwen": {"identity":"Qwen/Qwen2.5-3B-Instruct","source":"ModelScope official","revision":"master constrained by CreatedAt 1740595239 and complete file manifest","path":"/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct","snapshot_manifest":"/root/autodl-tmp/WMKD_Benchmark_data/manifests/qwen2_5_3b_instruct_modelscope_snapshot.json","exists":true,"content_files":12,"content_bytes":6183463418,"all_file_sha256_verified":true,"offline_tokenizer_load":true,"offline_model_load":true,"ready":true},
+  "storage": {"total_gib":500,"free_gib":387,"observed_final_student_gib":6.1,"observed_training_run_peak_gib":24,"qwen_actual_content_gib":5.76,"serial_per_method_increment_gib":24,"five_method_retained_with_checkpoint_gib":120,"five_final_models_only_gib":30.5,"recommended_headroom_gib":100},
   "storage_classification": "SAFE",
   "current_full_log_count": 26,
   "future_bb_object_count": 5,
@@ -96,13 +98,12 @@
   "blockers": [
     "PN-FP and SCW canonical Ba frozen20k are absent from host 6000 and require canonical restoration or selection",
     "PN-FP and SCW Ba Students and detector inputs are absent locally",
-    "the exact Passive Bb3 Qwen model/tokenizer and snapshot manifest are absent and require verified restoration",
-    "the three surviving canonical Ba frozen20k parents require archive before Bb",
-    "Qwen inference compatibility is skipped until the exact snapshot is restored",
-    "proactive full-log closure builder remains to be parameterized"
+    "the three surviving canonical Ba frozen20k parents require private archive; upload was blocked by external-data-transfer approval review",
+    "PN-FP exact canonical 1024 detector inputs were not recovered",
+    "SCW exact canonical French-1000 evaluation object was not recovered"
   ],
   "safe_to_start_full20k_preprocessing": false,
   "safe_to_start_student_training": false,
   "prohibited_work_performed": false,
-  "latest_verified_remote_code_head": "f99ca50ed05530430b9c60d763c2d52513a25936"
+  "latest_verified_remote_code_head": "b2e0c6a"
 }
