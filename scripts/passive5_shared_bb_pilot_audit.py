@@ -46,8 +46,10 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="\n") as handle:
         for row in chosen[: args.count]:
+            source = "\n".join(line.rstrip() for line in row["source_answer"].splitlines())
+            paraphrase = "\n".join(line.rstrip() for line in row["paraphrased_answer"].splitlines())
             handle.write(f"## {row['sample_id']} (attempt {row['attempt_count']})\n\n")
-            handle.write(f"SOURCE:\n{row['source_answer']}\n\nPARAPHRASE:\n{row['paraphrased_answer']}\n\n")
+            handle.write(f"SOURCE:\n{source}\n\nPARAPHRASE:\n{paraphrase}\n\n")
     summary = {
         "successful_count": len(successes),
         "attempt_count": len(rows),
