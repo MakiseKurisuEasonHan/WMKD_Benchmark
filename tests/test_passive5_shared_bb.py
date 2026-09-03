@@ -70,9 +70,26 @@ class Passive5SharedBbTests(unittest.TestCase):
         result=quality_flags("tech",output,"stop",self.config)
         self.assertIn("instruction_echo_leakage",result["failures"])
         self.assertIn("ensure all pertinent details",result["instruction_echo_leakage"])
+    def test_real_cont4_meta_task_output_is_rejected(self):
+        output="Regarding the technical aspect, the provided response needs to incorporate distinct phrasing without altering the core information."
+        result=quality_flags("tech",output,"stop",self.config)
+        self.assertIn("instruction_echo_leakage",result["failures"]);self.assertTrue(result["meta_response"])
+        self.assertIn("provided response",result["meta_response_evidence"]["meta_objects"])
+    def test_real_cont2_meta_task_output_is_rejected(self):
+        output="Regarding the provided response, ensure all pertinent details, entities, figures, assertions, limitations, and protocols remain intact during rephrasing."
+        self.assertIn("instruction_echo_leakage",quality_flags("tech",output,"stop",self.config)["failures"])
+    def test_normal_paraphrase_is_accepted_by_meta_validator(self):
+        output="Technology is the relevant category."
+        result=quality_flags("tech",output,"stop",self.config)
+        self.assertNotIn("instruction_echo_leakage",result["failures"]);self.assertFalse(result["meta_response"])
     def test_instruction_echo_does_not_reject_single_generic_words(self):
-        for output in ("rewrite", "paraphrase", "response", "A rewritten response is useful."):
+        for output in ("rewrite", "paraphrase", "response", "meaning", "wording", "A rewritten response is useful.",
+                       "The word paraphrase has the same meaning in this discussion."):
             self.assertNotIn("instruction_echo_leakage",quality_flags("answer",output,"stop",self.config)["failures"])
+    def test_short_source_exact_copy_remains_valid(self):
+        result=quality_flags("tech","tech","stop",self.config)
+        self.assertTrue(result["pass"]);self.assertIn("exact_copy",result["diagnostics"])
+        self.assertFalse(result["meta_response"])
     def test_instruction_phrase_preserved_when_present_in_source(self):
         phrase="The instruction asks students to compare both texts."
         self.assertNotIn("instruction_echo_leakage",quality_flags(phrase,phrase,"stop",self.config)["failures"])

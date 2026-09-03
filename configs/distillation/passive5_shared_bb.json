@@ -81,6 +81,24 @@
       "i'll paraphrase",
       "as requested, here is"
     ],
+    "meta_response_patterns": {
+      "meta_objects": [
+        "provided response", "given response", "original response", "source answer",
+        "original answer", "provided text", "original text", "core information"
+      ],
+      "rewrite_actions": [
+        "distinct phrasing", "different phrasing", "different wording", "alternative wording",
+        "reorganize the sentence", "reorganize sentence", "restructure the sentence",
+        "restate the", "rephrase the", "rewrite the", "paraphrase the"
+      ],
+      "preservation_language": [
+        "without altering", "without changing", "preserve the meaning", "retain the meaning",
+        "keep the meaning", "maintain the meaning", "preserve the core", "retain the core",
+        "core information", "original meaning"
+      ],
+      "short_source_max_tokens": 3,
+      "short_source_length_ratio": 6.0
+    },
     "chat_control_markers": ["<|im_start|>", "<|im_end|>", "<|assistant|>", "<|user|>", "<|system|>"],
     "semantic_similarity": {"enabled": false, "provider": "OPTIONAL_TBD", "threshold": null},
     "human_audit_sample_count": 20

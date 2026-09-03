@@ -153,6 +153,18 @@ def quality_flags(source: str, paraphrase: str, finish_reason: str | None, confi
     leakage = [marker for marker in q["prompt_leakage_markers"] if marker.casefold() in lowered]
     instruction_echoes = [phrase for phrase in q["instruction_echo_phrases"]
                           if phrase.casefold() in lowered and phrase.casefold() not in source_lowered]
+    meta = q.get("meta_response_patterns", {})
+    meta_objects = [phrase for phrase in meta.get("meta_objects", [])
+                    if phrase.casefold() in lowered and phrase.casefold() not in source_lowered]
+    rewrite_actions = [phrase for phrase in meta.get("rewrite_actions", [])
+                       if phrase.casefold() in lowered and phrase.casefold() not in source_lowered]
+    preservation_language = [phrase for phrase in meta.get("preservation_language", [])
+                             if phrase.casefold() in lowered and phrase.casefold() not in source_lowered]
+    category_count = sum(bool(items) for items in (meta_objects, rewrite_actions, preservation_language))
+    short_source_expansion = (len(source_words) <= int(meta.get("short_source_max_tokens", 0))
+                              and ratio >= float(meta.get("short_source_length_ratio", math.inf)))
+    meta_response = bool((meta_objects and rewrite_actions and preservation_language)
+                         or (short_source_expansion and category_count >= 2))
     controls = [marker for marker in q["chat_control_markers"] if marker.casefold() in lowered]
     change = lexical_change(source, paraphrase)
     truncated = finish_reason in {"length", "max_tokens", "max_new_tokens"}
@@ -161,13 +173,18 @@ def quality_flags(source: str, paraphrase: str, finish_reason: str | None, confi
     if not paraphrase.strip(): failures.append("empty_output")
     if source.strip() == paraphrase.strip(): diagnostics.append("exact_copy")
     if leakage: failures.append("prompt_leakage")
-    if instruction_echoes: failures.append("instruction_echo_leakage")
+    if instruction_echoes or meta_response: failures.append("instruction_echo_leakage")
     if controls: failures.append("chat_control_token_leakage")
     if truncated: failures.append("truncated")
     if not q["length_ratio_min"] <= ratio <= q["length_ratio_max"]: diagnostics.append("length_ratio_out_of_bounds")
     if change < q["minimum_lexical_change"]: diagnostics.append("insufficient_lexical_change")
     return {"pass": not failures, "failures": failures, "diagnostics": diagnostics, "length_ratio": ratio,
-            "lexical_change": change, "prompt_leakage": leakage, "instruction_echo_leakage": instruction_echoes,
+            "lexical_change": change, "prompt_leakage": leakage,
+            "instruction_echo_leakage": instruction_echoes,
+            "meta_response": meta_response,
+            "meta_response_evidence": {"meta_objects": meta_objects, "rewrite_actions": rewrite_actions,
+                                       "preservation_language": preservation_language,
+                                       "short_source_expansion": short_source_expansion},
             "chat_control_leakage": controls,
             "truncated": truncated, "semantic_similarity": None}
 
