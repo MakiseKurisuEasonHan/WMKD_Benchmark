@@ -211,6 +211,20 @@ No claim is made that fingerprints were “transferred.” The result only estab
                  "integrity":"PASS"}
     write_json(out / "provenance_manifest.json", provenance)
     write_json(out / "artifact_manifest.json", artifacts)
+    index_path = args.project / "results/experiment_full_logs_index.json"
+    index = read(index_path)
+    index["objects"] = [x for x in index["objects"] if x.get("experiment") != "Bb3"]
+    for row in rows:
+        slug = row["method"].lower()
+        rel = f"results/{slug}/experiment_bb3/full_experiment_log.json"
+        index["objects"].append({"method":row["method"], "role":"passive_fingerprint_bb3_evaluation",
+            "experiment":"Bb3", "run_id":args.run_id, "full_log_path":rel,
+            "full_log_sha256":sha(args.project / rel), "scientific_status":"DETECTABILITY_RETAINED" if row["positive"] else "DETECTABILITY_NOT_RETAINED",
+            "watermark_evaluation_available":True, "utility_available":True, "shared_attack":True,
+            "shared_student_run_id":args.run_id, "dataset_sha256":PAIRED_SHA, "telemetry_records":7500})
+    index["object_count"] = len(index["objects"])
+    index["generated_at"] = datetime.now(timezone.utc).isoformat()
+    write_json(index_path, index)
     print(json.dumps({"status":"COMPLETED", "retained_count":retained, "student_archive":student_archive["status"]}))
 
 
