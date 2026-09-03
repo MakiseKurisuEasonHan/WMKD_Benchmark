@@ -242,3 +242,4 @@ Bb2 was subsequently frozen without a short-token bypass and its formal pilot is
 - [x] Independently redownload and verify both ModelScope archives.
 - [x] Generate Bb3 full JSON, provenance/artifact manifests, detector logs, and final report.
 - [ ] Shut down the AutoDL instance manually when convenient; no scientific work remains for Bb3.
+- [ ] In a separate explicitly authorized task, plan proactive watermark methods 1–5 UP/distillation; do not start it from this closure.

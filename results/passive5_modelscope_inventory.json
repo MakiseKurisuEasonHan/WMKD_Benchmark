@@ -1,0 +1,66 @@
+{
+  "schema_version": "wmkd.passive5-modelscope-inventory.v1",
+  "project": "WMKD_Benchmark",
+  "visibility_policy": "PRIVATE_ONLY",
+  "artifact_count": 4,
+  "live_read_only_audit": {
+    "status": "PASS",
+    "checked_at": "2026-09-03T11:02:01.941032+00:00",
+    "authenticated_namespace": "MakiseKurisuEasonHan",
+    "all_repositories_exist": true,
+    "all_repository_types_match": true,
+    "all_repositories_private": true,
+    "no_reupload_performed": true
+  },
+  "artifacts": [
+    {
+      "object": "canonical Passive-5 Shared Ba frozen20k",
+      "experiment": "Ba",
+      "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_ba_frozen20k",
+      "repository_type": "dataset",
+      "visibility": "PRIVATE",
+      "canonical_dataset_sha256": "eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7",
+      "canonical_file_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+      "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+      "package_manifest_sha256": "158aa0ae2f534898279211c303ea256e34be543df9065547109f0a60d75a8a4c",
+      "verification": "INDEPENDENT_REDOWNLOAD_PASS_BYTE_IDENTICAL",
+      "scientific_role": "canonical source dataset for Passive-5 standardized behavioral distillation"
+    },
+    {
+      "object": "canonical Passive-5 Shared Ba final Student",
+      "experiment": "Ba",
+      "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Ba-Student",
+      "repository_type": "model",
+      "visibility": "PRIVATE",
+      "source_manifest_sha256": "e739d58fff44fe1b04e527222f1c0e0a3c1b1313eb261e6b9c0684f413dd2c42",
+      "package_manifest_sha256": "3eef7d7ad30f9b3b3eeebbe3d890e35546a2d43fb9ae43a653fba75ee149c4f3",
+      "verification": "INDEPENDENT_REDOWNLOAD_PER_FILE_SHA256_PASS",
+      "scientific_role": "canonical Shared Ba Student evaluated by five frozen passive detectors"
+    },
+    {
+      "object": "canonical Passive-5 Shared Bb3 processed20k",
+      "experiment": "Bb3",
+      "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_passive5_shared_bb3_processed20k",
+      "repository_type": "dataset",
+      "visibility": "PRIVATE",
+      "canonical_dataset_sha256": "549d38ca634c2c69a646e23d1bfc65ec019887e43070deec031f97459cc7be99",
+      "canonical_file_sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88",
+      "sample_ids_sha256": "7cef00810ca079eaf3557bb40222314a3d9f23c1db5ee9f1f386d87845dbab93",
+      "package_manifest_sha256": "647ec6d53e817f9d30c17a72525bc2c4fe0a6e4432903109a7b29ccd6d94b53e",
+      "verification": "INDEPENDENT_REDOWNLOAD_PASS_BYTE_IDENTICAL",
+      "scientific_role": "canonical Bb3 atomic-identity plus Qwen-UP processed dataset"
+    },
+    {
+      "object": "canonical Passive-5 Shared Bb3 final Student",
+      "experiment": "Bb3",
+      "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Bb3-Student",
+      "repository_type": "model",
+      "visibility": "PRIVATE",
+      "source_manifest_sha256": "7627c24465af64ef72b97b0e84deb49752145c0835089423066e59562c5c45aa",
+      "package_manifest_sha256": "9be95bcaedf637563396b68323095cb72ff7623af57d9cefa134ec0fad7dff0d",
+      "verification": "INDEPENDENT_REDOWNLOAD_PER_FILE_SHA256_PASS",
+      "scientific_role": "canonical Shared Bb3 Student evaluated by five frozen passive detectors"
+    }
+  ],
+  "missing_required_artifacts": []
+}

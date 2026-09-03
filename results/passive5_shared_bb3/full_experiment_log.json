@@ -1,5 +1,20 @@
 {
   "schema_version": "wmkd.full-experiment-log.v1",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "experiment": "Passive-5 Shared Bb3",
+    "canonical_run_id": "passive5_shared_bb3_20260903_164929"
+  },
+  "scientific_parentage": {
+    "source_experiment": "Passive-5 Shared Ba",
+    "source_dataset_role": "canonical Shared Ba frozen20k",
+    "historical_predecessors": ["Passive-5 Shared Bb", "Passive-5 Shared Bb2"]
+  },
+  "definition": {
+    "atomic_rule": "frozen Qwen tokenizer non-special token count <= 1 -> exact source identity",
+    "non_atomic_rule": "unchanged Bb2 Qwen semantic-preserving untargeted paraphrasing",
+    "attack_stage": "post-watermark paraphrasing followed by fresh Student distillation"
+  },
   "experiment": "Passive-5 Shared Bb3",
   "run_id": "passive5_shared_bb3_20260903_164929",
   "status": "COMPLETED",
@@ -14,6 +29,11 @@
     "host": "autodl-container-9235478639-4a175847",
     "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
     "gpu_memory_mib": 97887
+  },
+  "hardware": {
+    "accelerator": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "memory_mib": 97887,
+    "large_gpu_tasks_serialized": true
   },
   "source_ba_dataset": {
     "record_count": 20000,
@@ -34,6 +54,10 @@
     "final_truncation": 0,
     "runtime_seconds": 7484.502216789871,
     "qwen_model": "Qwen/Qwen2.5-3B-Instruct",
+    "qwen_tokenizer": {
+      "identity": "same frozen Qwen2.5-3B-Instruct snapshot as model",
+      "atomic_count_add_special_tokens": false
+    },
     "qwen_revision_identity": {
       "modelscope_revision": "master",
       "revision_created_at": 1740595239
@@ -644,6 +668,12 @@
     }
   ],
   "continuations": [],
+  "artifacts": {
+    "artifact_manifest": "results/passive5_shared_bb3/artifact_manifest.json",
+    "provenance_manifest": "results/passive5_shared_bb3/provenance_manifest.json",
+    "formal_report": "docs/reproduction_reports/passive5_shared_bb3_report.md",
+    "large_artifacts_external": true
+  },
   "unresolved_errors": [],
   "bounded_conclusion": "Ownership detectability remained positive under 5/5 frozen passive detectors after the tested Bb3 UP attack; no broader robustness claim is made.",
   "completed_at": "2026-09-03T10:45:25.225190+00:00"

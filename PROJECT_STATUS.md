@@ -188,3 +188,5 @@ Passive-5 Shared Bb2 formal run `passive5_shared_bb2_20260903_163634` froze prom
 <!-- PASSIVE5_SHARED_BB3_FINAL_CLOSURE_20260903 -->
 
 Run `passive5_shared_bb3_20260903_164929` is scientifically COMPLETE. The frozen `<=1` Qwen-token atomic rule preserved 4,635/20,000 answers (23.175%) and submitted 15,365 to unchanged Qwen UP; the final dataset has zero unresolved leakage, control-token leakage, or truncation. Fresh Llama Student training completed 7,500/7,500 steps after 19/19 Ba parity, fresh reload passed, all five frozen detectors remained positive, utility and ordinary-generation sanity completed, and both processed20k and final Student private ModelScope archives passed independent redownload verification. Bb and Bb2 remain `BLOCKED_AT_PILOT`. AutoDL is safe to shut down manually; automatic shutdown remains disabled.
+
+Passive-5 attack-stage closure: Shared Ba is COMPLETE with 5/5 detected; original Bb is `BLOCKED_AT_PILOT`; Bb2 is `BLOCKED_AT_PILOT`; Bb3 is COMPLETE with 5/5 detected. The next separately authorized research stage is proactive watermark methods 1–5 UP/distillation. It is not started by this closure.

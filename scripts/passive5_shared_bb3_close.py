@@ -113,18 +113,27 @@ def main() -> None:
                         "bounded_conclusion":f"Ownership detectability remained positive under {retained}/5 frozen passive detectors after the tested Bb3 UP attack; no broader robustness claim is made."}
     student_archive_path = args.data_root / "manifests/passive5_shared_bb3_student_modelscope_archive.json"
     student_archive = read(student_archive_path) if student_archive_path.exists() else {"status":"PENDING"}
-    full = {"schema_version":"wmkd.full-experiment-log.v1", "experiment":"Passive-5 Shared Bb3",
+    full = {"schema_version":"wmkd.full-experiment-log.v1",
+            "identity":{"project":"WMKD_Benchmark", "experiment":"Passive-5 Shared Bb3", "canonical_run_id":args.run_id},
+            "scientific_parentage":{"source_experiment":"Passive-5 Shared Ba", "source_dataset_role":"canonical Shared Ba frozen20k",
+                "historical_predecessors":["Passive-5 Shared Bb", "Passive-5 Shared Bb2"]},
+            "definition":{"atomic_rule":"frozen Qwen tokenizer non-special token count <= 1 -> exact source identity",
+                "non_atomic_rule":"unchanged Bb2 Qwen semantic-preserving untargeted paraphrasing",
+                "attack_stage":"post-watermark paraphrasing followed by fresh Student distillation"},
+            "experiment":"Passive-5 Shared Bb3",
             "run_id":args.run_id, "status":"COMPLETED", "scientific_status":"COMPLETED",
             "attack":"UP post-watermark paraphrasing distillation", "history_preserved":{
                 "Bb":"BLOCKED_AT_PILOT", "Bb2":"BLOCKED_AT_PILOT"},
             "scientific_justification":"Predeclared detector-agnostic atomic-response identity preservation prevents Qwen meta-task failures on answers with <=1 non-special tokenizer token; all longer answers use the unchanged Bb2 Qwen paraphrasing protocol.",
             "environment":{"host":"autodl-container-9235478639-4a175847", "gpu":"NVIDIA RTX PRO 6000 Blackwell Server Edition", "gpu_memory_mib":97887},
+            "hardware":{"accelerator":"NVIDIA RTX PRO 6000 Blackwell Server Edition", "memory_mib":97887, "large_gpu_tasks_serialized":True},
             "source_ba_dataset":{"record_count":20000, "dataset_sha256":"eb90c3e0c95e37d07bf0f099aaeabeedf1779bae7ef8a4aacf25e3fb8bed6ab7", "sample_ids_sha256":IDS_SHA},
             "preprocessing":{"atomic_threshold":"Qwen tokenizer non-special token count <= 1", "atomic_identity_count":4635,
                 "qwen_submitted":15365, "qwen_paraphrased":13061, "qwen_natural_identity":2256,
                 "pipeline_identity_fallback":48, "rejected_attempts":279, "generation_retry_count":231,
                 "final_unresolved_leakage":0, "final_chat_control_token_leakage":0, "final_truncation":0,
                 "runtime_seconds":7484.502216789871, "qwen_model":"Qwen/Qwen2.5-3B-Instruct",
+                "qwen_tokenizer":{"identity":"same frozen Qwen2.5-3B-Instruct snapshot as model", "atomic_count_add_special_tokens":False},
                 "qwen_revision_identity":{"modelscope_revision":"master", "revision_created_at":1740595239},
                 "prompt_sha256":"7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
                 "decoding":{"temperature":0.7, "top_p":0.9, "seed":42}},
@@ -136,7 +145,10 @@ def main() -> None:
             "student_manifest":student, "reload_validation":reload_result, "detectors":detector_summary,
             "utility":utility, "student_archive":student_archive,
             "failures":[{"stage":"LLMPrint first evaluation attempt", "classification":"ordinary path-resolution infrastructure error", "resolved":True}],
-            "continuations":[], "unresolved_errors":[],
+            "continuations":[], "artifacts":{"artifact_manifest":"results/passive5_shared_bb3/artifact_manifest.json",
+                "provenance_manifest":"results/passive5_shared_bb3/provenance_manifest.json",
+                "formal_report":"docs/reproduction_reports/passive5_shared_bb3_report.md", "large_artifacts_external":True},
+            "unresolved_errors":[],
             "bounded_conclusion":detector_summary["bounded_conclusion"],
             "completed_at":datetime.now(timezone.utc).isoformat()}
     for name, value in (("dataset_manifest.json", dataset), ("student_manifest.json", student),
@@ -144,7 +156,7 @@ def main() -> None:
                         ("detector_summary.json", detector_summary), ("modelscope_dataset_archive.json", archive_dataset),
                         ("modelscope_student_archive.json", student_archive), ("full_experiment_log.json", full)):
         write_json(out / name, value)
-    table = "\n".join(f"| {x['method']} | {x['reference_score']:.12f} | {x['threshold']:.12f} | {x['ba_score']:.12f} | {x['score']:.12f} | {x['ba_to_bb3_change']:+.12f} | {'yes' if x['positive'] else 'no'} |" for x in rows)
+    table = "\n".join(f"| {x['method']} | {x['reference_score']:.12f} | {x['threshold']:.12f} | {x['ba_score']:.12f} | yes | {x['score']:.12f} | {'yes' if x['positive'] else 'no'} | {x['ba_to_bb3_change']:+.12f} |" for x in rows)
     report = f"""# Passive-5 Shared Bb3 final report
 
 ## Result
@@ -170,8 +182,8 @@ The CPU-only short-answer audit tokenized all 20,000 answers with the frozen Qwe
 
 ## Frozen detectors
 
-| Method | Reference | Frozen threshold | Ba | Bb3 | Ba→Bb3 | Detected |
-|---|---:|---:|---:|---:|---:|---|
+| Method | Reference | Frozen threshold | Ba | Ba detected | Bb3 | Bb3 detected | Ba→Bb3 |
+|---|---:|---:|---:|---|---:|---|---:|
 {table}
 
 ## Utility
