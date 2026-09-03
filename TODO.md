@@ -264,4 +264,5 @@ Bb2 was subsequently frozen without a short-token bypass and its formal pilot is
 - [ ] In a separate explicitly authorized task, plan proactive watermark methods 1–5 UP/distillation; do not start it from this closure.
 - [x] Restore/hash-verify exact Passive Bb3 Qwen and pass tiny runtime UP plus canonical SFT formatter smoke for the three available proactive parents.
 - [x] Complete proactive Bb full-log skeleton and collision-safe index parameterization.
-- [ ] Explicitly approve the three concrete private ModelScope parent uploads, then independently redownload and verify them.
+- [x] Archive EverTracer, CTCC, and iSeal canonical Ba frozen20k to their explicitly approved PRIVATE ModelScope repositories and independently redownload-verify every identity gate.
+- [ ] Await a separate explicit prompt before starting Wave-1 full20k preprocessing; do not train Students in the preprocessing release turn.

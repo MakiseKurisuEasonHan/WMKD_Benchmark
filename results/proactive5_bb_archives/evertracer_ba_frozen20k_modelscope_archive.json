@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETED",
+  "archive_verified": true,
+  "method": "evertracer",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_ba_frozen20k",
+  "visibility": "PRIVATE",
+  "canonical_ba_run": "evertracer_ba_20260829_124055",
+  "parent_teacher": "EverTracer A",
+  "source": {
+    "count": 20000,
+    "file_sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+    "content_sha256": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142",
+    "sample_ids_sha256": "49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73",
+    "schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ]
+  },
+  "redownload": {
+    "count": 20000,
+    "file_sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+    "content_sha256": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142",
+    "sample_ids_sha256": "49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73",
+    "schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ]
+  },
+  "byte_identical": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/proactive_ba_verify_evertracer_20260903_125345"
+}

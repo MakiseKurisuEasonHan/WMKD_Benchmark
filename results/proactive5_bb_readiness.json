@@ -76,9 +76,9 @@
   },
   "canonical_ba_inventory": {
     "pnfp": {"canonical_run":"pnfp_exp_ba_20260828_111148","path":"/root/autodl-tmp/WMKD_Benchmark_data/datasets/pnfp_distillation_20k/frozen_qa.jsonl","exists":false,"parent_teacher":"PN-FP A2","archive_status":"RESTORE_REQUIRED","ready":false},
-    "evertracer": {"canonical_run":"evertracer_ba_20260829_124055","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":5691839,"count":20000,"file_sha256":"a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca","dataset_sha256":"ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"EverTracer A preferred Teacher","adapter_required":false,"archive_status":"ARCHIVE_REQUIRED_BEFORE_BB","ready":false},
-    "ctcc": {"canonical_run":"ctcc_ba_generation_20260829_195943_cont1","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":5810753,"count":20000,"file_sha256":"4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6","dataset_sha256":"621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"CTCC A ctcc_a_20260829_190251","adapter_required":false,"archive_status":"ARCHIVE_REQUIRED_BEFORE_BB","ready":false},
-    "iseal": {"canonical_run":"iseal_ba_generation_20260830_134058","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":4663149,"count":20000,"file_sha256":"04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc","dataset_sha256":"d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"iSeal A6 iseal_a6_20260830_132300","adapter_required":false,"archive_status":"ARCHIVE_REQUIRED_BEFORE_BB","ready":false},
+    "evertracer": {"canonical_run":"evertracer_ba_20260829_124055","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":5691839,"count":20000,"file_sha256":"a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca","dataset_sha256":"ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"EverTracer A preferred Teacher","adapter_required":false,"archive_status":"INDEPENDENT_REDOWNLOAD_VERIFIED","archive_repo":"MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_ba_frozen20k","archive_visibility":"PRIVATE","archive_verification":"results/proactive5_bb_archives/evertracer_ba_frozen20k_modelscope_archive.json","ready":true},
+    "ctcc": {"canonical_run":"ctcc_ba_generation_20260829_195943_cont1","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":5810753,"count":20000,"file_sha256":"4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6","dataset_sha256":"621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"CTCC A ctcc_a_20260829_190251","adapter_required":false,"archive_status":"INDEPENDENT_REDOWNLOAD_VERIFIED","archive_repo":"MakiseKurisuEasonHan/WMKD_Benchmark_ctcc_ba_frozen20k","archive_visibility":"PRIVATE","archive_verification":"results/proactive5_bb_archives/ctcc_ba_frozen20k_modelscope_archive.json","ready":true},
+    "iseal": {"canonical_run":"iseal_ba_generation_20260830_134058","path":"/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl","exists":true,"readable":true,"bytes":4663149,"count":20000,"file_sha256":"04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc","dataset_sha256":"d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf","schema":["input","instruction","sample_id","teacher_raw_answer"],"parent_teacher":"iSeal A6 iseal_a6_20260830_132300","adapter_required":false,"archive_status":"INDEPENDENT_REDOWNLOAD_VERIFIED","archive_repo":"MakiseKurisuEasonHan/WMKD_Benchmark_iseal_ba_frozen20k","archive_visibility":"PRIVATE","archive_verification":"results/proactive5_bb_archives/iseal_ba_frozen20k_modelscope_archive.json","iseal_secret_key_uploaded":false,"ready":true},
     "scw": {"canonical_run":"scw_ba_full_20260831_193828_cont1","path":null,"exists":false,"parent_teacher":"SCW A2","archive_status":"RESTORE_REQUIRED","ready":false}
   },
   "parent_distinctness": {"available_dataset_count":3,"available_full_hashes_unique":true,"all_five_established":false},
@@ -90,19 +90,19 @@
   "future_bb_object_count": 5,
   "method_readiness": {
     "PN-FP": "NOT_READY",
-    "EverTracer": "NOT_READY",
-    "CTCC": "NOT_READY",
-    "iSeal": "NOT_READY",
+    "EverTracer": "READY_FOR_FULL20K_PREPROCESSING",
+    "CTCC": "READY_FOR_FULL20K_PREPROCESSING",
+    "iSeal": "READY_FOR_FULL20K_PREPROCESSING",
     "SCW": "NOT_READY"
   },
   "blockers": [
     "PN-FP and SCW canonical Ba frozen20k are absent from host 6000 and require canonical restoration or selection",
     "PN-FP and SCW Ba Students and detector inputs are absent locally",
-    "the three surviving canonical Ba frozen20k parents require private archive; upload was blocked by external-data-transfer approval review",
     "PN-FP exact canonical 1024 detector inputs were not recovered",
     "SCW exact canonical French-1000 evaluation object was not recovered"
   ],
   "safe_to_start_full20k_preprocessing": false,
+  "wave1_release": {"evertracer":true,"ctcc":true,"iseal":true,"formal_execution_started":false},
   "safe_to_start_student_training": false,
   "prohibited_work_performed": false,
   "latest_verified_remote_code_head": "b2e0c6a"

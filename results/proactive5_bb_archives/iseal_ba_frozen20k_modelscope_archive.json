@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETED",
+  "archive_verified": true,
+  "method": "iseal",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_iseal_ba_frozen20k",
+  "visibility": "PRIVATE",
+  "canonical_ba_run": "iseal_ba_generation_20260830_134058",
+  "parent_teacher": "iSeal A6",
+  "source": {
+    "count": 20000,
+    "file_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+    "content_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf",
+    "sample_ids_sha256": "f1e25c9b5848efc2bd8d06678aab08841ca15fc9e9fb5a061aadadddead38c62",
+    "schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ]
+  },
+  "redownload": {
+    "count": 20000,
+    "file_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+    "content_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf",
+    "sample_ids_sha256": "f1e25c9b5848efc2bd8d06678aab08841ca15fc9e9fb5a061aadadddead38c62",
+    "schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ]
+  },
+  "byte_identical": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/proactive_ba_verify_iseal_20260903_125437"
+}
