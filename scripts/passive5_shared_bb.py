@@ -154,14 +154,15 @@ def quality_flags(source: str, paraphrase: str, finish_reason: str | None, confi
     change = lexical_change(source, paraphrase)
     truncated = finish_reason in {"length", "max_tokens", "max_new_tokens"}
     failures = []
+    diagnostics = []
     if not paraphrase.strip(): failures.append("empty_output")
-    if source.strip() == paraphrase.strip(): failures.append("exact_copy")
+    if source.strip() == paraphrase.strip(): diagnostics.append("exact_copy")
     if leakage: failures.append("prompt_leakage")
     if controls: failures.append("chat_control_token_leakage")
     if truncated: failures.append("truncated")
-    if not q["length_ratio_min"] <= ratio <= q["length_ratio_max"]: failures.append("length_ratio_out_of_bounds")
-    if change < q["minimum_lexical_change"]: failures.append("insufficient_lexical_change")
-    return {"pass": not failures, "failures": failures, "length_ratio": ratio,
+    if not q["length_ratio_min"] <= ratio <= q["length_ratio_max"]: diagnostics.append("length_ratio_out_of_bounds")
+    if change < q["minimum_lexical_change"]: diagnostics.append("insufficient_lexical_change")
+    return {"pass": not failures, "failures": failures, "diagnostics": diagnostics, "length_ratio": ratio,
             "lexical_change": change, "prompt_leakage": leakage, "chat_control_leakage": controls,
             "truncated": truncated, "semantic_similarity": None}
 

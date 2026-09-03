@@ -52,9 +52,14 @@ class Passive5SharedBbTests(unittest.TestCase):
     def test_dynamic_budget_min(self): self.assertEqual(dynamic_budget(1,self.config["paraphrase"]["dynamic_max_new_tokens"]),64)
     def test_dynamic_budget_cap(self): self.assertEqual(dynamic_budget(9999,self.config["paraphrase"]["dynamic_max_new_tokens"]),1536)
     def test_generation_identity_stable(self): self.assertEqual(generation_identity(self.config),generation_identity(copy.deepcopy(self.config)))
-    def test_exact_copy_detection(self): self.assertIn("exact_copy",quality_flags("same words","same words","stop",self.config)["failures"])
+    def test_exact_copy_detection(self):
+        result=quality_flags("same words","same words","stop",self.config)
+        self.assertIn("exact_copy",result["diagnostics"]);self.assertTrue(result["pass"])
     def test_empty_detection(self): self.assertIn("empty_output",quality_flags("answer","","error",self.config)["failures"])
     def test_truncation_detection(self): self.assertTrue(quality_flags("answer words","rewritten answer words","length",self.config)["truncated"])
+    def test_diagnostic_thresholds_do_not_drop_valid_pairs(self):
+        result=quality_flags("17","The value provided is 17.","stop",self.config)
+        self.assertIn("length_ratio_out_of_bounds",result["diagnostics"]);self.assertTrue(result["pass"])
     def test_prompt_leakage(self): self.assertIn("prompt_leakage",quality_flags("answer","<SOURCE_ANSWER> leaked text","stop",self.config)["failures"])
     def test_control_token_leakage(self): self.assertIn("chat_control_token_leakage",quality_flags("answer","<|im_start|> rewritten answer","stop",self.config)["failures"])
     def test_retry_then_success(self):
