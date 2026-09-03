@@ -11,6 +11,7 @@ from scripts.passive5_shared_bb import (
     validate_source, validate_training_parity,
 )
 from scripts.passive5_shared_bb_orchestrator import build_plan
+from scripts.passive5_shared_bb_paraphrase_runner import sanitize_boundary_tags
 
 ROOT = Path(__file__).parents[1]
 
@@ -60,6 +61,9 @@ class Passive5SharedBbTests(unittest.TestCase):
     def test_diagnostic_thresholds_do_not_drop_valid_pairs(self):
         result=quality_flags("17","The value provided is 17.","stop",self.config)
         self.assertIn("length_ratio_out_of_bounds",result["diagnostics"]);self.assertTrue(result["pass"])
+    def test_prompt_boundary_tag_sanitizer_is_narrow(self):
+        self.assertEqual(sanitize_boundary_tags("<SOURCE_ANSWER>null</SOURCE_ANSWER>"),("null",True))
+        self.assertEqual(sanitize_boundary_tags("paraphrase the answer below"),("paraphrase the answer below",False))
     def test_prompt_leakage(self): self.assertIn("prompt_leakage",quality_flags("answer","<SOURCE_ANSWER> leaked text","stop",self.config)["failures"])
     def test_control_token_leakage(self): self.assertIn("chat_control_token_leakage",quality_flags("answer","<|im_start|> rewritten answer","stop",self.config)["failures"])
     def test_retry_then_success(self):
