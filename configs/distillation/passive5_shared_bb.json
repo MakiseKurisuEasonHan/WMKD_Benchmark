@@ -20,7 +20,18 @@
   },
   "paraphraser": {
     "canonical_upstream": "Qwen/Qwen2.5-3B-Instruct",
-    "revision": "REQUIRED_TBD",
+    "revision": "master",
+    "revision_identity": {
+      "immutable_git_revision_available": false,
+      "modelscope_revision_created_at_unix": 1740595239,
+      "modelscope_content_file_count": 12,
+      "modelscope_content_bytes": 6183463418,
+      "modelscope_snapshot_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/manifests/qwen2_5_3b_instruct_modelscope_snapshot.json",
+      "weight_shard_sha256": [
+        "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+      ]
+    },
     "transport_preference": ["local_existing", "shared_cache", "ModelScope", "trusted_domestic_mirror", "official_overseas_last"],
     "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
     "local_files_only": true,

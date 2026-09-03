@@ -81,6 +81,15 @@ def atomic_jsonl(path: str | Path, rows: Iterable[dict]) -> None:
     os.replace(temporary, target)
 
 
+def append_jsonl_durable(path: str | Path, row: dict) -> None:
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with target.open("a", encoding="utf-8", newline="\n") as handle:
+        handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
 def load_config(path: str | Path) -> dict:
     config = json.loads(Path(path).read_text(encoding="utf-8"))
     prompt = Path(path).parents[2] / config["paraphrase"]["prompt_path"]
@@ -118,7 +127,7 @@ def validate_source(rows: list[dict], config: dict, file_path: str | Path | None
 
 def generation_identity(config: dict) -> str:
     fields = {key: config["paraphrase"][key] for key in ("do_sample", "temperature", "top_p", "seed", "dynamic_max_new_tokens")}
-    fields["paraphraser"] = {key: config["paraphraser"][key] for key in ("canonical_upstream", "revision")}
+    fields["paraphraser"] = {key: config["paraphraser"][key] for key in ("canonical_upstream", "revision", "revision_identity")}
     return text_sha256(canonical_json(fields))
 
 
@@ -216,8 +225,13 @@ def run_records(source: list[dict], journal_path: str | Path, config: dict,
             else: answer, para_tokens, finish_reason, error, source_tokens = generated
             record = build_pair(row, answer, source_tokens, para_tokens, attempt, finish_reason, error, config)
             journal.append(record); counts[sample_id] = attempt
-            atomic_jsonl(journal_path, journal)
+            append_jsonl_durable(journal_path, record)
             if record["status"] == "success": successes[sample_id] = record
+            atomic_json(Path(journal_path).with_name("progress.json"), {
+                "source_count": len(source), "successful_count": len(successes),
+                "attempt_records": len(journal), "current_sample_id": sample_id,
+                "complete": len(successes) == len(source),
+            })
         processed += 1
         if limit is not None and processed >= limit: break
     exhausted = [sid for sid in source_by_id if sid not in successes and counts.get(sid, 0) >= maximum]

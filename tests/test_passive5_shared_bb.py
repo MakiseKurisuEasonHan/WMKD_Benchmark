@@ -133,7 +133,15 @@ class Passive5SharedBbTests(unittest.TestCase):
         (self.root/"runs/passive5_shared_bb/collision").mkdir(parents=True)
         with self.assertRaises(FileExistsError):build_plan(ROOT,self.root,"collision",ROOT/"configs/distillation/passive5_shared_bb.json",True)
     def test_unresolved_revision_blocks_formal_plan(self):
-        with self.assertRaisesRegex(RuntimeError,"REVISION_NOT_FROZEN"):build_plan(ROOT,self.root,"formal",ROOT/"configs/distillation/passive5_shared_bb.json",False)
+        config = json.loads((ROOT/"configs/distillation/passive5_shared_bb.json").read_text())
+        config["paraphraser"]["revision"] = "REQUIRED_TBD"
+        unresolved = self.root / "configs/distillation/passive5_shared_bb_unresolved.json"
+        unresolved.parent.mkdir(parents=True)
+        unresolved.write_text(json.dumps(config))
+        prompt = self.root / config["paraphrase"]["prompt_path"]
+        prompt.parent.mkdir(parents=True, exist_ok=True)
+        prompt.write_bytes((ROOT/config["paraphrase"]["prompt_path"]).read_bytes())
+        with self.assertRaisesRegex(RuntimeError,"REVISION_NOT_FROZEN"):build_plan(ROOT,self.root,"formal",unresolved,False)
     def test_detector_script_has_bb_switch(self):
         text=(ROOT/"scripts/passive5_ba_method_eval.py").read_text(encoding="utf-8")
         self.assertIn('choices=("Ba", "Bb")',text);self.assertIn("args.experiment",text)

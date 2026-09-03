@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Resumable Qwen/mock paraphrasing runner; formal mode is offline and revision-gated."""
 from __future__ import annotations
-import argparse, json
+import argparse, json, resource, time
 from pathlib import Path
 
 try:
@@ -41,16 +41,31 @@ def main() -> None:
             messages = [{"role":"system","content":system}, {"role":"user","content":user.format(source_answer=row["teacher_raw_answer"])}]
             rendered = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
             encoded = tokenizer(rendered, return_tensors="pt").to("cuda:0")
-            generator = torch.Generator(device="cuda:0").manual_seed(config["paraphrase"]["seed"] + attempt)
+            torch.manual_seed(config["paraphrase"]["seed"] + attempt)
+            torch.cuda.manual_seed_all(config["paraphrase"]["seed"] + attempt)
             with torch.inference_mode():
                 output = model.generate(**encoded, do_sample=config["paraphrase"]["do_sample"],
                     temperature=config["paraphrase"]["temperature"], top_p=config["paraphrase"]["top_p"],
-                    max_new_tokens=budget, generator=generator, return_dict_in_generate=True)
+                    max_new_tokens=budget, return_dict_in_generate=True)
             new_ids = output.sequences[0, encoded["input_ids"].shape[1]:]
             answer = tokenizer.decode(new_ids, skip_special_tokens=True).strip()
             eos = tokenizer.eos_token_id is not None and int(new_ids[-1]) == tokenizer.eos_token_id if len(new_ids) else False
             return answer, len(new_ids), "stop" if eos else ("length" if len(new_ids) >= budget else "stop"), None, len(source_ids)
-    print(json.dumps(run_records(source, args.journal, config, generate, args.limit), indent=2))
+    started = time.monotonic()
+    progress = run_records(source, args.journal, config, generate, args.limit)
+    elapsed = time.monotonic() - started
+    attempts = read_jsonl(args.journal)
+    progress["runtime_telemetry"] = {
+        "elapsed_seconds": elapsed,
+        "completed_samples_per_second": progress["successful_count"] / elapsed,
+        "source_tokens": sum(int(x.get("source_answer_token_count", 0)) for x in attempts),
+        "output_tokens": sum(int(x.get("paraphrased_answer_token_count", 0)) for x in attempts),
+        "output_tokens_per_second": sum(int(x.get("paraphrased_answer_token_count", 0)) for x in attempts) / elapsed,
+        "peak_vram_bytes": torch.cuda.max_memory_allocated() if args.backend == "qwen" else 0,
+        "peak_host_rss_bytes": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * 1024,
+    }
+    Path(args.journal).with_name("telemetry.json").write_text(json.dumps(progress["runtime_telemetry"], indent=2) + "\n")
+    print(json.dumps(progress, indent=2))
 
 
 if __name__ == "__main__": main()

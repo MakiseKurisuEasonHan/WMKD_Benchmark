@@ -26,7 +26,7 @@ def build_plan(project: Path, data_root: Path, run_id: str, config_path: Path, d
     commands = {
         "source-validation": ["python", "scripts/passive5_shared_bb.py", "--config", str(config_path), "validate-source", "--source", config["source_dataset"]["path"]],
         "training-parity": ["python", "scripts/passive5_shared_bb.py", "--config", str(config_path), "parity", "--ba-config", str(project/"configs/distillation/passive5_shared_ba.json")],
-        "paraphrase-pilot": ["python", "scripts/passive5_shared_bb_paraphrase_runner.py", "--config", str(config_path), "--source", config["source_dataset"]["path"], "--journal", str(run_root/"pilot/attempts.jsonl"), "--backend", "qwen", "--limit", "100"],
+        "paraphrase-pilot": ["python", "scripts/passive5_shared_bb_paraphrase_runner.py", "--config", str(config_path), "--source", config["source_dataset"]["path"], "--journal", str(run_root/"pilot/attempts.jsonl"), "--backend", "qwen", "--limit", "200"],
         "pilot-audit": ["python", "scripts/passive5_shared_bb.py", "--config", str(config_path), "audit-journal", "--source", config["source_dataset"]["path"], "--journal", str(run_root/"pilot/attempts.jsonl"), "--output-dir", str(run_root/"pilot/audit")],
         "full-paraphrasing": ["python", "scripts/passive5_shared_bb_paraphrase_runner.py", "--config", str(config_path), "--source", config["source_dataset"]["path"], "--journal", str(run_root/"paraphrase/attempts.jsonl"), "--backend", "qwen"],
         "paraphrase-freeze": ["python", "scripts/passive5_shared_bb.py", "--config", str(config_path), "freeze", "--source", config["source_dataset"]["path"], "--journal", str(run_root/"paraphrase/attempts.jsonl"), "--output", str(run_root/"dataset/frozen_paired_qa.jsonl")],
