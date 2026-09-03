@@ -80,7 +80,33 @@
     "replacement_attempt_output": "Regarding the technical aspect, the provided response needs to incorporate distinct phrasing without altering the core information.",
     "reason": "attempt 2 was accepted by the fixed automated rule but remained a meta-task description; no retry exhaustion occurred, so identity fallback was not reached"
   },
-  "required_user_decision": "pilot_cont4 retained unresolved semantic/instruction-echo failure; the authorized stop condition was applied before full20k.",
+  "pilot_cont5": {
+    "status": "FAILED_UNDETECTED_PROMPT_BOUNDARY_VARIANT",
+    "generated_records": 200,
+    "attempt_records": 204,
+    "rejected_attempt_count": 4,
+    "retry_sample_count": 2,
+    "identity_fallback_count": 0,
+    "natural_exact_copy_count": 21,
+    "total_identity_output_count": 21,
+    "automated_final_prompt_leakage_count": 0,
+    "automated_final_instruction_echo_count": 0,
+    "control_token_leakage_count": 0,
+    "truncation_count": 0,
+    "runtime_seconds": 69.70232635363936,
+    "output_tokens_per_second": 60.72968036279872,
+    "peak_vram_bytes": 7226526720,
+    "failure_sample_ids": [
+      "qa_00454047fe5797416cb0",
+      "qa_027dbcaca1223ae97365"
+    ],
+    "source_answer": "tech",
+    "candidate": "SOURCE_ANSWER.tech",
+    "validator_reason": null,
+    "why_not_captured": "the fixed prompt-leakage markers cover exact angle-bracket boundary tags, while this new third-attempt variant used an unbracketed SOURCE_ANSWER prefix",
+    "reason": "unresolved prompt/instruction boundary leakage remained after the cont5 validation fix; explicit stop condition reached"
+  },
+  "required_user_decision": "pilot_cont5 exposed a new unbracketed SOURCE_ANSWER leakage variant; no further validator patch or full20k work is authorized.",
   "preservation": {
     "all_remote_pilot_attempts_preserved": true,
     "canonical_ba_dataset_unchanged": true,
