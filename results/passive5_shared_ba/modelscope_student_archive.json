@@ -1,0 +1,176 @@
+{
+  "status": "COMPLETED",
+  "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Ba-Student",
+  "repository_type": "model",
+  "visibility": "PRIVATE",
+  "created": true,
+  "revision": "{'ChineseName': '', 'CreatedAt': 1788406261, 'Revision': 'master', 'ShowName': ''}",
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model",
+  "source_run_id": "passive5_shared_ba_20260902_114500_cont1",
+  "evaluation_run_id": "passive5_shared_ba_eval_cont2_20260902_164200",
+  "source_file_count": 10,
+  "source_total_bytes": 6442821755,
+  "uploaded_files": [
+    "LICENSE.txt",
+    "NOTICE",
+    "README.md",
+    "SHA256SUMS",
+    "chat_template.jinja",
+    "config.json",
+    "generation_config.json",
+    "manifest.json",
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors",
+    "model.safetensors.index.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "training_args.bin"
+  ],
+  "uploaded_total_bytes": 6442834743,
+  "package_manifest_sha256": "3eef7d7ad30f9b3b3eeebbe3d890e35546a2d43fb9ae43a653fba75ee149c4f3",
+  "source_manifest_sha256": "e739d58fff44fe1b04e527222f1c0e0a3c1b1313eb261e6b9c0684f413dd2c42",
+  "source_hashes_unchanged": true,
+  "canonical_source_preserved": true,
+  "restored_copy_file_integrity_verified": true,
+  "modelscope_backup_verified": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_passive5_ba_student_20260903_032142",
+  "verification": {
+    "files": {
+      "LICENSE.txt": {
+        "size": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+        "match": true
+      },
+      "NOTICE": {
+        "size": 116,
+        "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+        "match": true
+      },
+      "README.md": {
+        "size": 655,
+        "sha256": "f3984c9ac101d6b9a91fd4335e6a24c6aedd34095f732b95783d7635aaa924f8",
+        "match": true
+      },
+      "SHA256SUMS": {
+        "size": 1196,
+        "sha256": "aaa10693d624843db848209352861ce6c6e7e8df98bb88d74994baf3bd403f83",
+        "match": true
+      },
+      "chat_template.jinja": {
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+        "match": true
+      },
+      "config.json": {
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+        "match": true
+      },
+      "generation_config.json": {
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+        "match": true
+      },
+      "manifest.json": {
+        "size": 3309,
+        "sha256": "3eef7d7ad30f9b3b3eeebbe3d890e35546a2d43fb9ae43a653fba75ee149c4f3",
+        "match": true
+      },
+      "model-00001-of-00002.safetensors": {
+        "size": 4965799096,
+        "sha256": "7ca6e1c4fa5a9a4a90e0b44bbef19898def72a11f1f0a35e64531825579055f0",
+        "match": true
+      },
+      "model-00002-of-00002.safetensors": {
+        "size": 1459729952,
+        "sha256": "dd0ce525cf412c4de462288e39f3747ac0d3308dfd31627ba77ddca5ab599644",
+        "match": true
+      },
+      "model.safetensors.index.json": {
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+        "match": true
+      },
+      "special_tokens_map.json": {
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+        "match": true
+      },
+      "tokenizer.json": {
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+        "match": true
+      },
+      "tokenizer_config.json": {
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+        "match": true
+      },
+      "training_args.bin": {
+        "size": 5969,
+        "sha256": "3d98f8352839c69046266f1f12aa5883300863cbb60a3ecfeb50c97411e90d24",
+        "match": true
+      }
+    },
+    "file_count": 15,
+    "total_bytes": 6442834743,
+    "secret_scan": {
+      "status": "PASS",
+      "files_scanned": [
+        ".gitattributes",
+        "LICENSE.txt",
+        "NOTICE",
+        "README.md",
+        "SHA256SUMS",
+        "chat_template.jinja",
+        "config.json",
+        "generation_config.json",
+        "manifest.json",
+        "model.safetensors.index.json",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json"
+      ],
+      "hits": 0
+    }
+  },
+  "secret_scan": {
+    "status": "PASS",
+    "files_scanned": [
+      "LICENSE.txt",
+      "NOTICE",
+      "README.md",
+      "SHA256SUMS",
+      "chat_template.jinja",
+      "config.json",
+      "generation_config.json",
+      "manifest.json",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "hits": 0
+  },
+  "large_file_scan": {
+    "status": "PASS",
+    "allowed_large_files": [
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors"
+    ]
+  },
+  "license_compliance": {
+    "status": "PASS",
+    "repository_name_starts_with_llama": true,
+    "license_included": true,
+    "notice_included": true,
+    "built_with_llama": true
+  },
+  "platform_metadata_excluded_from_canonical_manifest": [
+    ".gitattributes",
+    ".ms_upload_cache"
+  ],
+  "token_emitted": false,
+  "completed_at": "2026-09-03T03:48:59.443354+00:00"
+}
