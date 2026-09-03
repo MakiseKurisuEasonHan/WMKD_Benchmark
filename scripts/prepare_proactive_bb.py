@@ -7,7 +7,10 @@ import copy
 import json
 from pathlib import Path
 
-from scripts.passive5_shared_bb import file_sha256, read_jsonl, records_sha256
+try:
+    from scripts.passive5_shared_bb import file_sha256, read_jsonl, records_sha256
+except ModuleNotFoundError:
+    from passive5_shared_bb import file_sha256, read_jsonl, records_sha256
 
 
 METHODS = {
