@@ -231,3 +231,8 @@ Formal frozen-detector run `evertracer_bb_detector_20260904_051046` evaluated th
 
 <!-- EVERTRACER_BB_UTILITY_20260904 -->
 Utility run `evertracer_bb_utility_20260904_061500` exactly reused the Ba harness and completed ARC 1172/1172 (`acc_norm=0.498293515`), TruthfulQA 817/817 (`MC2=0.475596561`), and ordinary generation 5/5, with zero errors. Versus Ba the differences were ARC `-0.006825939` and TruthfulQA `-0.018118059`. Combined with Bb detector AUC/TPR `0.4757/0.08`, the final Student remained Base/Ba-like in low detectability while retaining broadly comparable tested utility. EverTracer Bb is `COMPLETE`; CTCC Bb and iSeal Bb were not started.
+
+## CTCC Bb blocked closure — 2026-09-04
+
+<!-- CTCC_BB_BLOCKED -->
+Run `ctcc_bb_20260904_055000`: `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE`. Under the frozen standardized Bb preprocessing protocol, CTCC exceeded the predefined identity-fallback acceptance limit (202 > 200), so the experiment was blocked before Student training. Threshold unchanged; no downstream Student/detector/utility was run.

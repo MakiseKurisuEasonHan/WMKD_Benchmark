@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-04T05:38:30.926280+00:00",
-  "object_count": 27,
+  "generated_at": "2026-09-04T08:12:08.245233+00:00",
+  "object_count": 28,
   "objects": [
     {
       "method": "PN-FP",
@@ -479,6 +479,19 @@
       "student_archive_independent_redownload_verified": true,
       "telemetry_records": 7500,
       "utility_run_id": "evertracer_bb_utility_20260904_061500"
+    },
+    {
+      "method": "CTCC",
+      "role": "bb_student",
+      "experiment": "Bb",
+      "run_id": "ctcc_bb_20260904_055000",
+      "full_log_path": "results/ctcc/experiment_bb/full_experiment_log.json",
+      "full_log_sha256": "08b435274c844cb7880bc9e9cc0f1ae52be65ccaeae7941d72ca982f30aa56eb",
+      "scientific_status": "BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 0
     }
   ]
 }

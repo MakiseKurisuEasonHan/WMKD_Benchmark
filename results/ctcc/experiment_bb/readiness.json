@@ -1,0 +1,21 @@
+{
+  "run_id": "ctcc_bb_20260904_055000",
+  "status": "BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE",
+  "identity_fallback_count": 202,
+  "acceptance_limit": 200,
+  "threshold_modified": false,
+  "student_training": "NOT_RUN",
+  "detector": "NOT_RUN",
+  "utility": "NOT_RUN",
+  "evidence": {
+    "journal": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb/ctcc_bb_20260904_055000/paraphrase/attempts.jsonl",
+    "journal_physical_sha256": "4fbe906d0267e13fe05215332a37b67e66cd4bd36b1cadb8dc491db9c5cbc48b",
+    "journal_rows": 18264,
+    "resolved_records": 17269,
+    "identity_fallback_count": 202,
+    "frozen_max_identity_fallback_count": 200,
+    "failure_log": "/root/autodl-tmp/WMKD_Benchmark_data/orchestration/proactive_bb/ctcc_bb_20260904_055000/preprocessing.log",
+    "failure_log_sha256": "95ead2c3e8ce17b04d0eb62e95eff0546d6f3b35330b24a7950baa9548c36803",
+    "all_attempts_preserved": true
+  }
+}

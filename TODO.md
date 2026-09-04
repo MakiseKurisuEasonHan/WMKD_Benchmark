@@ -271,3 +271,8 @@ Bb2 was subsequently frozen without a short-token bypass and its formal pilot is
 - [x] Complete fresh EverTracer Bb Student training, fresh-process reload, PRIVATE Student archive, independent SHA verification, and offline redownload reload.
 - [x] Complete EverTracer Bb frozen detector evaluation with 200/200 finite scores and canonical comparisons.
 - [x] Complete EverTracer Bb utility and final scientific closure; do not start CTCC Bb or iSeal Bb automatically.
+
+## CTCC Bb blocked closure — 2026-09-04
+
+<!-- CTCC_BB_BLOCKED -->
+Run `ctcc_bb_20260904_055000`: `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE`. Under the frozen standardized Bb preprocessing protocol, CTCC exceeded the predefined identity-fallback acceptance limit (202 > 200), so the experiment was blocked before Student training. Threshold unchanged; no downstream Student/detector/utility was run.

@@ -1,0 +1,68 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "method": "CTCC",
+    "experiment": "Bb",
+    "canonical_run_id": "ctcc_bb_20260904_055000"
+  },
+  "status": "BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE",
+  "scientific_status": "BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE",
+  "blocked_stage": "PREPROCESSING",
+  "reason": "Frozen standardized Bb preprocessing identity-fallback acceptance gate exceeded: 202 > 200; threshold unchanged and no downstream execution.",
+  "parent": {
+    "parent_experiment": "CTCC Ba",
+    "parent_run_id": "ctcc_ba_generation_20260829_195943_cont1",
+    "parent_teacher": "CTCC A",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+    "manifest_path": null,
+    "record_count": 20000,
+    "record_schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ],
+    "dataset_sha256": "621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484",
+    "frozen_jsonl_sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+    "sample_ids_sha256": "c9a6bf47ef22ab070d30d5be8980b455eba4a9a0b18ccab1d52eab0ea39f419f"
+  },
+  "frozen_preprocessing_protocol": {
+    "config_path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_bb_ctcc_bb_20260904_055000.json",
+    "config_sha256": "a243be800fae4c283d4fc5c150f970695c7ecc40ba491eae2f89310ca3b820ee",
+    "qwen_model": "Qwen/Qwen2.5-3B-Instruct",
+    "qwen_local_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "prompt_sha256": "7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
+    "identity_fallback_limit": 200,
+    "threshold_modified": false,
+    "threshold_tuning": false
+  },
+  "evidence": {
+    "journal": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb/ctcc_bb_20260904_055000/paraphrase/attempts.jsonl",
+    "journal_physical_sha256": "4fbe906d0267e13fe05215332a37b67e66cd4bd36b1cadb8dc491db9c5cbc48b",
+    "journal_rows": 18264,
+    "resolved_records": 17269,
+    "identity_fallback_count": 202,
+    "frozen_max_identity_fallback_count": 200,
+    "failure_log": "/root/autodl-tmp/WMKD_Benchmark_data/orchestration/proactive_bb/ctcc_bb_20260904_055000/preprocessing.log",
+    "failure_log_sha256": "95ead2c3e8ce17b04d0eb62e95eff0546d6f3b35330b24a7950baa9548c36803",
+    "all_attempts_preserved": true
+  },
+  "configuration_changed": false,
+  "artifacts_deleted": false,
+  "downstream_execution": {
+    "student_training": "NOT_RUN",
+    "detector": "NOT_RUN",
+    "utility": "NOT_RUN"
+  },
+  "detector": {
+    "status": "NOT_RUN"
+  },
+  "utility": {
+    "status": "NOT_RUN"
+  },
+  "limitations": [
+    "Frozen preprocessing acceptance gate failed; changing the threshold would change the scientific configuration."
+  ],
+  "bounded_conclusion": "Under the frozen standardized Bb preprocessing protocol, CTCC exceeded the predefined identity-fallback acceptance limit (202 > 200), so the experiment was blocked before Student training. This is not characterized as a watermark, detector, Student-training, or Qwen scientific failure."
+}
