@@ -25,7 +25,9 @@ def write(path: Path, value: object) -> None:
 
 
 def sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    # Git normalizes tracked text to LF; hash that canonical representation so
+    # the index is identical on Windows and Linux checkouts.
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def append_once(path: Path, marker: str, text: str) -> None:

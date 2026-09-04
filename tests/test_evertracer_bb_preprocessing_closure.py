@@ -74,7 +74,8 @@ class EverTracerBbPreprocessingClosureTests(unittest.TestCase):
         rows = [row for row in index["objects"] if row.get("run_id") == "evertracer_bb_20260903_130000"]
         self.assertEqual(1, len(rows))
         full = ROOT / rows[0]["full_log_path"]
-        self.assertEqual(rows[0]["full_log_sha256"], hashlib.sha256(full.read_bytes()).hexdigest())
+        canonical = full.read_bytes().replace(b"\r\n", b"\n")
+        self.assertEqual(rows[0]["full_log_sha256"], hashlib.sha256(canonical).hexdigest())
 
     def test_privacy_review_does_not_emit_candidate_text(self):
         privacy = self.load("evidence/privacy_audit.json")
