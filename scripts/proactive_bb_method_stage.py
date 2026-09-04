@@ -40,6 +40,11 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+def require_sha256(path: Path, expected: str, label: str) -> None:
+    if sha256(path) != expected:
+        raise RuntimeError(f"{label}_SHA256_MISMATCH")
+
+
 def config_path(project: Path, method: str, run_id: str) -> Path:
     return project / f"configs/distillation/{method}_bb_{run_id}.json"
 
@@ -115,7 +120,7 @@ def main() -> None:
             call([str(py),str(a.project/"scripts/pnfp_evaluate.py"),"--model-path",student,"--fingerprints",str(candidates[0]),"--output",str(out/"detector.json"),"--label","bb_student","--count","1024","--key-length","16","--generation-response-length","16","--training-response-length","1","--seed","42","--use-chat-template"])
         elif a.method=="scw":
             base=a.data_root/"models/base/Llama-3.2-3B-Instruct";eval_root=a.data_root/"evaluation/scw/a2_french_eval";eval_jsonl=eval_root/"scw_a2_french_eval_1000.jsonl";expected="c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d"
-            if sha256(eval_jsonl)!=expected:raise RuntimeError("SCW_FRENCH1000_IDENTITY_GATE")
+            require_sha256(eval_jsonl,expected,"SCW_FRENCH1000_IDENTITY")
             py=a.data_root/"artifacts/scw/env_py311/bin/python";env=os.environ.copy();env["PYTHONPATH"]=f"{a.data_root}/artifacts/scw/source/src:{a.project}/scripts"
             (out/"detector_input_provenance.json").write_text(json.dumps({"origin":"recovered_exact","original_canonical_unavailable":False,"sha256":expected,"count":1000},indent=2)+"\n")
             call([str(py),str(a.project/"scripts/scw_fresh_generate.py"),"--model",student,"--label","bb_student","--output",str(out/"bb_student_generations.jsonl"),"--eval-jsonl",str(eval_jsonl),"--eval-manifest",str(eval_root/"manifest.json")],env=env)

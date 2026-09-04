@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 
 from scripts.run_remaining_proactive_bb import LARGE, METHODS, STAGES, initial_state, next_stage, parse_point
+from scripts.proactive_bb_method_stage import require_sha256
 
 
 class RemainingProactiveBbOrchestratorTests(unittest.TestCase):
@@ -31,6 +32,13 @@ class RemainingProactiveBbOrchestratorTests(unittest.TestCase):
 
     def test_fail_closed_unknown_stage(self):
         with self.assertRaises(Exception): parse_point("ctcc/not_a_stage")
+
+    def test_fail_closed_hash_mismatch(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "identity.jsonl"
+            path.write_bytes(b"scientific-object\n")
+            with self.assertRaisesRegex(RuntimeError, "TEST_OBJECT_SHA256_MISMATCH"):
+                require_sha256(path, "0" * 64, "TEST_OBJECT")
 
 
 if __name__ == "__main__": unittest.main()
