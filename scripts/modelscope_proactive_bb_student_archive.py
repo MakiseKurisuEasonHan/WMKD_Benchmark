@@ -27,7 +27,7 @@ def scan(root):
  for p in Path(root).iterdir():
   if p.is_file() and p.suffix not in {".safetensors",".bin"} and pat.search(p.read_text(errors="replace")):raise RuntimeError(f"SECRET_SCAN {p.name}")
 def main():
- p=argparse.ArgumentParser();p.add_argument("--method",required=True);p.add_argument("--run-id",required=True);p.add_argument("--source",type=Path,required=True);p.add_argument("--dataset-sha",required=True);p.add_argument("--repo",required=True);p.add_argument("--run-root",type=Path,required=True);p.add_argument("--output",type=Path,required=True);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument("--method",required=True);p.add_argument("--run-id",required=True);p.add_argument("--source",type=Path,required=True);p.add_argument("--dataset-sha",required=True);p.add_argument("--repo",required=True);p.add_argument("--run-root",type=Path,required=True);p.add_argument("--output",type=Path,required=True);p.add_argument("--reload-python",required=True);a=p.parse_args()
  names={x.name for x in a.source.iterdir() if x.is_file()};expected=MODEL|{"training_args.bin"}
  if names!=expected:raise RuntimeError(f"SOURCE_FILE_SET {sorted(names)}")
  hashes={n:sha(a.source/n) for n in sorted(MODEL)};sizes={n:(a.source/n).stat().st_size for n in sorted(MODEL)}
@@ -51,6 +51,6 @@ def main():
  for n in wanted:
   if (package/n).stat().st_size!=(download/n).stat().st_size or sha(package/n)!=sha(download/n):raise RuntimeError(f"REDOWNLOAD_HASH {n}")
  redownload_reload=verify/"reload_validation.json";redownload_manifest=verify/"student_manifest.json"
- subprocess.run([sys.executable,"/root/autodl-tmp/WMKD_Benchmark/scripts/passive5_shared_bb3_reload.py","--student",str(download),"--dataset-sha",a.dataset_sha,"--output",str(redownload_reload),"--manifest",str(redownload_manifest)],check=True)
+ subprocess.run([a.reload_python,"/root/autodl-tmp/WMKD_Benchmark/scripts/passive5_shared_bb3_reload.py","--student",str(download),"--dataset-sha",a.dataset_sha,"--output",str(redownload_reload),"--manifest",str(redownload_manifest)],check=True)
  result={"status":"COMPLETED","repository":a.repo,"visibility":"PRIVATE","source_file_count":len(expected),"uploaded_files":sorted(wanted),"training_args_excluded":True,"verification_directory":str(download),"filename_size_sha_match":True,"redownload_reload":"PASS","canonical_source_preserved":a.source.is_dir(),"token_emitted":False};write(a.output,result);print(json.dumps(result,indent=2))
 if __name__=="__main__":main()

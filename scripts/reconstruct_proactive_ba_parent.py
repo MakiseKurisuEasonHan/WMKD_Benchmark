@@ -45,11 +45,11 @@ def archive(api,method,run,source,identity):
  if observed!=identity or json.loads((got/"manifest.json").read_text())!=manifest:raise RuntimeError("PARENT_REDOWNLOAD_GATE")
  return {"status":"COMPLETED","repository":repo,"visibility":"PRIVATE","verification_directory":str(got),"source":identity,"redownload":observed,"byte_identical":True}
 def main():
- p=argparse.ArgumentParser();p.add_argument("--method",choices=("pnfp","scw"),required=True);p.add_argument("--run-id",required=True);p.add_argument("--project",type=Path,required=True);p.add_argument("--data-root",type=Path,required=True);a=p.parse_args();meta=META[a.method];run=a.data_root/f"runs/{a.method}_ba_parent_reconstruction/{a.run_id}"
+ p=argparse.ArgumentParser();p.add_argument("--method",choices=("pnfp","scw"),required=True);p.add_argument("--run-id",required=True);p.add_argument("--project",type=Path,required=True);p.add_argument("--data-root",type=Path,required=True);p.add_argument("--model-python",required=True);a=p.parse_args();meta=META[a.method];run=a.data_root/f"runs/{a.method}_ba_parent_reconstruction/{a.run_id}"
  result_path=run/"reconstruction_result.json"
  if result_path.is_file() and json.loads(result_path.read_text()).get("status")=="COMPLETE":print(result_path.read_text(),end="");return
  run.mkdir(parents=True,exist_ok=True);api=HubApi(token=creds()["MODELSCOPE_API_TOKEN"])
- if a.method=="pnfp":teacher=restore_pnfp(api,a.data_root);py=sys.executable
+ if a.method=="pnfp":teacher=restore_pnfp(api,a.data_root);py=a.model_python
  else:
   cfg=json.loads((a.project/"configs/distillation/scw_ba_direct.yaml").read_text());teacher=Path(cfg["teacher"]["path"]);py=cfg["runtime"]["python"]
   if file_sha256(cfg["teacher"]["manifest"])!=cfg["teacher"]["manifest_sha256"]:raise RuntimeError("SCW_TEACHER_MANIFEST_GATE")

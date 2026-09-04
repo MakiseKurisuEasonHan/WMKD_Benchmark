@@ -51,6 +51,11 @@ def config_path(project: Path, method: str, run_id: str) -> Path:
 def reconstruction_run(method: str, run_id: str) -> str:
     return f"{method}_ba_parent_reconstruction_{run_id.removeprefix(method + '_bb_')}"
 
+def archive_python(data_root: Path) -> str:
+    value=data_root/"artifacts/modelscope_cli_env/bin/python"
+    if not value.is_file():raise RuntimeError("MODELSCOPE_ARCHIVE_RUNTIME_MISSING")
+    return str(value)
+
 
 def main() -> None:
     ap = argparse.ArgumentParser(); ap.add_argument("--project", type=Path, required=True)
@@ -60,7 +65,7 @@ def main() -> None:
     if a.stage == "PARENT_PREPARING":
         if a.method in {"pnfp","scw"}:
             rr=reconstruction_run(a.method,a.run_id)
-            call([sys.executable,str(a.project/"scripts/reconstruct_proactive_ba_parent.py"),"--method",a.method,"--run-id",rr,"--project",str(a.project),"--data-root",str(a.data_root)])
+            call([archive_python(a.data_root),str(a.project/"scripts/reconstruct_proactive_ba_parent.py"),"--method",a.method,"--run-id",rr,"--project",str(a.project),"--data-root",str(a.data_root),"--model-python",sys.executable])
     elif a.stage == "PARENT_READY":
         if a.method in PARENTS:
             parent_run, teacher, relative, expected_content = PARENTS[a.method]; parent = a.data_root / relative
@@ -83,7 +88,7 @@ def main() -> None:
         student = run / "dataset/student_qa.jsonl"
         if not student.exists(): call([sys.executable, str(a.project / "scripts/passive5_shared_bb.py"), "--config", str(cfg), "adapt-student", "--pairs", str(paired), "--output", str(student)])
     elif a.stage == "PROCESSED_ARCHIVED":
-        call([sys.executable, str(a.project / "scripts/modelscope_proactive_bb_dataset_archive.py"), "--method", a.method, "--run-id", a.run_id, "--source", str(run/"dataset/frozen_paired_qa.jsonl"), "--config", str(cfg), "--repo", DATASET_REPOS[a.method], "--output", str(run/"archive/processed20k_modelscope.json")])
+        call([archive_python(a.data_root), str(a.project / "scripts/modelscope_proactive_bb_dataset_archive.py"), "--method", a.method, "--run-id", a.run_id, "--source", str(run/"dataset/frozen_paired_qa.jsonl"), "--config", str(cfg), "--repo", DATASET_REPOS[a.method], "--output", str(run/"archive/processed20k_modelscope.json")])
     elif a.stage == "PARITY_PASS":
         call([sys.executable, str(a.project / "scripts/passive5_shared_bb.py"), "--config", str(cfg), "parity", "--ba-config", str(a.project/"configs/distillation/passive5_shared_ba.json")])
     elif a.stage == "TRAINING":
@@ -97,7 +102,7 @@ def main() -> None:
     elif a.stage == "STUDENT_ARCHIVED":
         from passive5_shared_bb import read_jsonl, records_sha256
         digest=records_sha256(read_jsonl(run/"dataset/student_qa.jsonl"))
-        call([sys.executable,str(a.project/"scripts/modelscope_proactive_bb_student_archive.py"),"--method",a.method,"--run-id",a.run_id,"--source",str(run/"student/final_model"),"--dataset-sha",digest,"--repo",STUDENT_REPOS[a.method],"--run-root",str(run),"--output",str(run/"archive/student_modelscope.json")])
+        call([archive_python(a.data_root),str(a.project/"scripts/modelscope_proactive_bb_student_archive.py"),"--method",a.method,"--run-id",a.run_id,"--source",str(run/"student/final_model"),"--dataset-sha",digest,"--repo",STUDENT_REPOS[a.method],"--run-root",str(run),"--output",str(run/"archive/student_modelscope.json"),"--reload-python",sys.executable])
     elif a.stage == "DETECTING":
         student=str(run/"student/final_model");out=run/"evaluation";out.mkdir(parents=True,exist_ok=True)
         if a.method=="ctcc":
