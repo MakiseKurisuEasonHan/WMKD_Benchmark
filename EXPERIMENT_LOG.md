@@ -255,3 +255,8 @@ The ordered paired20k content/file/sample-ID SHA256 values are `0f23881d...64c55
 
 <!-- EVERTRACER_BB_STUDENT_ARCHIVE_20260904 -->
 Fresh canonical full-parameter Student run `evertracer_bb_student_20260904_033837` completed 7,500/7,500 steps (3 epochs, BF16, LR 1e-5, effective batch 8, seed 42, no resume) with finite loss and fresh-process reload PASS. The inference-ready Student was uploaded only after PRIVATE confirmation to `MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student`; a new independent download matched all 18 canonical filenames, sizes, and SHA256 values and passed offline reload. `EVERTRACER_BB_STUDENT_ARCHIVED = YES`. Status is `STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING`; detector, utility, CTCC Bb, and iSeal Bb remain NOT_STARTED, and no watermark or utility conclusion is claimed.
+
+## EverTracer Bb detector complete — 2026-09-04
+
+<!-- EVERTRACER_BB_DETECTOR_20260904 -->
+Formal frozen-detector run `evertracer_bb_detector_20260904_051046` evaluated the canonical Bb Student with exact A/Ba reference, neighborhoods, score, and FPR≤5% operating semantics. All 200/200 samples completed with zero errors/non-finite scores. Member-oriented AUC/TPR were `0.4757/0.08` versus Teacher `1.0000/1.00`, Base `0.4417/0.05`, and Ba `0.4987/0.06`. The Bb result remains close to Base/Ba and far from Teacher; no retention percentage, universal-removal claim, causal UP claim, or checkpoint disappearance claim is made. Stage: `DETECTOR_COMPLETE_UTILITY_PENDING`; utility, CTCC Bb, and iSeal Bb remain unstarted.

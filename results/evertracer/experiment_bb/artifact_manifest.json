@@ -5,7 +5,7 @@
   "model_modified": true,
   "dataset_archived": true,
   "student_artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
-  "detector_artifact": null,
+  "detector_artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046",
   "utility_artifact": null,
   "tracked_evidence": [
     "results/evertracer/experiment_bb/evidence/preprocessing_progress.json",
@@ -20,9 +20,16 @@
     "results/evertracer/experiment_bb/evidence/archive_redownload_reload.json",
     "results/evertracer/experiment_bb/evidence/student_modelscope_archive.json",
     "results/evertracer/experiment_bb/training_summary.json",
-    "results/evertracer/experiment_bb/result.json"
+    "results/evertracer/experiment_bb/result.json",
+    "results/evertracer/experiment_bb/detector/detector_result.json",
+    "results/evertracer/experiment_bb/detector/detector_run_manifest.json",
+    "results/evertracer/experiment_bb/detector/student_verification_raw.json",
+    "results/evertracer/experiment_bb/detector/student_verification.json",
+    "results/evertracer/experiment_bb/detector/ba_reaggregation_check.json",
+    "results/evertracer/experiment_bb/detector/frozen_detector_preflight.json"
   ],
   "student_run_id": "evertracer_bb_student_20260904_033837",
   "student_archive_repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
-  "student_archive_verified": true
+  "student_archive_verified": true,
+  "detector_run_id": "evertracer_bb_detector_20260904_051046"
 }

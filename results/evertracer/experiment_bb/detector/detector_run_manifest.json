@@ -1,0 +1,82 @@
+{
+  "schema_version": "wmkd.evertracer-bb-detector-run-manifest.v1",
+  "run_id": "evertracer_bb_detector_20260904_051046",
+  "canonical_student_run": "evertracer_bb_student_20260904_033837",
+  "launch_git_head": "1625408a31de94059b3a7e2d214f4f9e1abd3616",
+  "frozen_config_identity": {
+    "exact_reuse_from_a_ba": true,
+    "verification_set": {
+      "source": "EdinburghNLP/xsum@7d4d486c2f8ef850b1a11aead99b894ff3dd7da9",
+      "members": "Dtr",
+      "nonmembers": "Dunseen",
+      "member_count": 100,
+      "nonmember_count": 100,
+      "split_seed": 48
+    },
+    "neighborhoods": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+    "neighborhoods_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+    "k": 5,
+    "symmetric_variants_per_original": 10,
+    "perturbation_fraction": 0.3,
+    "max_length": 128,
+    "evaluation_seed": 42,
+    "reference_model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+    "reference_manifest_sha256": "bca1ea3d6f68c2ced8cb55d969e4710ef6b1f6921f5f9267c721ac06b5fa0aaf",
+    "config": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+    "config_sha256": "67a0a7a87951b275a7be0fc29e83282b09c1a128bd533d1f4fd32f1e21243219",
+    "verification_code_sha256": "50c6dd3330abf9f6f2ee07e56222d74c36c7c2500207d694732b001d12259716",
+    "aggregation_code_sha256": "14c8175d505e8bc4ab21575077fb63bdd25dc398473f8a849a19fdaddd8aad54",
+    "score": "C = suspect_variation - reference_variation; member_score = -C",
+    "operating_rule": "maximum member TPR at empirical FPR <= 0.05"
+  },
+  "runtime_artifacts": {
+    "raw": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/metrics/student_verification_raw.json",
+      "size": 48049,
+      "sha256": "303ffead846f525dcd4ed3b2a9f5dd09ee42428e9e7cbdbbf866fa2ef1a13159"
+    },
+    "aggregate": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/metrics/student_verification.json",
+      "size": 49117,
+      "sha256": "53b8661d45ffc653709b892e683940c597a62784593b2b4f0520cc478f6c88cc"
+    },
+    "ba_reaggregation": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/metrics/ba_reaggregation_check.json",
+      "size": 49095,
+      "sha256": "16940cd3f661f8e9692f9dfdca5de525bfa0c6d101fa2cdbf143d20fedc6f4b0"
+    },
+    "preflight": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/config/frozen_detector_preflight.json",
+      "size": 2697,
+      "sha256": "4228f548fd3238099f2b6cc03a69b2adf109a1ab4be51224efd74bae0fcce361"
+    },
+    "verification_log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/logs/verification.log",
+      "size": 1327,
+      "sha256": "a5a0b4a35b8d42c06d0cf6330ed3c86047567510ed7de614ce4dc496887475c8"
+    }
+  },
+  "tracked_artifacts": {
+    "ba_reaggregation_check.json": {
+      "size": 49095,
+      "sha256": "16940cd3f661f8e9692f9dfdca5de525bfa0c6d101fa2cdbf143d20fedc6f4b0"
+    },
+    "detector_result.json": {
+      "size": 5333,
+      "sha256": "121eb393657909a46d5589ff09d7c8c0bb36785e54629624361b680588641f1c"
+    },
+    "frozen_detector_preflight.json": {
+      "size": 2697,
+      "sha256": "4228f548fd3238099f2b6cc03a69b2adf109a1ab4be51224efd74bae0fcce361"
+    },
+    "student_verification.json": {
+      "size": 49117,
+      "sha256": "53b8661d45ffc653709b892e683940c597a62784593b2b4f0520cc478f6c88cc"
+    },
+    "student_verification_raw.json": {
+      "size": 48049,
+      "sha256": "303ffead846f525dcd4ed3b2a9f5dd09ee42428e9e7cbdbbf866fa2ef1a13159"
+    }
+  },
+  "utility_started": false
+}

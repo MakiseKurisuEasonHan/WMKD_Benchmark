@@ -4,7 +4,7 @@
   "experiment": "Bb",
   "preprocessing_run_id": "evertracer_bb_20260903_130000",
   "student_run_id": "evertracer_bb_student_20260904_033837",
-  "status": "STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING",
+  "status": "DETECTOR_COMPLETE_UTILITY_PENDING",
   "training": {
     "status": "COMPLETED",
     "steps": 7500,
@@ -27,12 +27,18 @@
     "redownload_reload": "PASS"
   },
   "detector": {
-    "status": "NOT_STARTED",
-    "result": null
+    "status": "COMPLETED",
+    "run_id": "evertracer_bb_detector_20260904_051046",
+    "auc": 0.4757,
+    "tpr": 0.08,
+    "fpr_limit": 0.05,
+    "sample_count": 200,
+    "errors": 0,
+    "result": "results/evertracer/experiment_bb/detector/detector_result.json"
   },
   "utility": {
     "status": "NOT_STARTED",
     "result": null
   },
-  "bounded_conclusion": "Fresh canonical full-parameter Student training, integrity validation, private archive, independent redownload, and offline reload passed. Watermark retention and utility are not evaluated in this stage."
+  "bounded_conclusion": "Under the tested standardized Bb attack, the final Student remained close to the canonical Base/Ba detector regime and far from the strongly fingerprinted Teacher. Relative to Ba, Bb had a 0.0230 lower AUC and a 0.02 higher TPR at the same FPR limit; these mixed small changes do not establish a material increase in EverTracer evidence or a causal effect of UP."
 }

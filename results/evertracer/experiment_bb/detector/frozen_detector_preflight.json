@@ -1,0 +1,50 @@
+{
+  "status": "READY",
+  "teacher_experiment": "EverTracer Experiment A",
+  "teacher_root_run": "evertracer_a_20260828_223155",
+  "teacher_final_continuation": "evertracer_a_20260828_223155_cont2",
+  "teacher_preferred": true,
+  "ba_allowed": true,
+  "teacher_provenance": {
+    "manifest": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/artifacts/target_merge_manifest.json",
+    "artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged",
+    "files": 9,
+    "total_bytes": 6442815628,
+    "manifest_sha256": "bee55dca0671ec7a5cae049bb30d84df125e2f27eb89dbcf22a912ddf3c66f02"
+  },
+  "reference_provenance": {
+    "manifest": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/artifacts/reference_merge_manifest.json",
+    "artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+    "files": 9,
+    "total_bytes": 6442815628,
+    "manifest_sha256": "bca1ea3d6f68c2ced8cb55d969e4710ef6b1f6921f5f9267c721ac06b5fa0aaf"
+  },
+  "paths": {
+    "teacher": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged",
+    "teacher_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/artifacts/target_merge_manifest.json",
+    "reference": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+    "reference_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/artifacts/reference_merge_manifest.json",
+    "student": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "neighborhoods": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+    "a_summary": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont2/reports/summary.json"
+  },
+  "effective_training_config": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false,
+    "batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "max_length": 1024
+  },
+  "dataset_isolation": {
+    "answer_source": "evertracer_a_preferred_teacher",
+    "output_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba",
+    "pnfp_artifact_reused": false
+  },
+  "neighborhoods_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+  "data_disk_free_bytes": 205527752704,
+  "minimum_required_free_bytes": 80000000000,
+  "disk_gate": true
+}

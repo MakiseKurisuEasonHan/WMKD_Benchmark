@@ -12,7 +12,7 @@ class EverTracerBbPreprocessingClosureTests(unittest.TestCase):
     def load(self, relative: str) -> dict:
         return json.loads((RESULT / relative).read_text(encoding="utf-8"))
 
-    def test_readiness_records_student_closure_without_evaluation(self):
+    def test_readiness_records_detector_closure_without_utility(self):
         value = self.load("readiness.json")
         self.assertEqual("COMPLETE", value["evertracer_bb_preprocessing"])
         self.assertTrue(value["processed20k_archived"])
@@ -20,11 +20,22 @@ class EverTracerBbPreprocessingClosureTests(unittest.TestCase):
         self.assertTrue(value["student_training_complete"])
         self.assertTrue(value["student_archived"])
         self.assertEqual("PASS", value["student_fresh_process_reload"])
-        self.assertEqual(
-            "STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING", value["status"]
-        )
-        for key in ("detector_started", "utility_started", "ctcc_bb_started", "iseal_bb_started"):
+        self.assertTrue(value["detector_started"])
+        self.assertTrue(value["detector_complete"])
+        self.assertEqual("DETECTOR_COMPLETE_UTILITY_PENDING", value["status"])
+        for key in ("utility_started", "ctcc_bb_started", "iseal_bb_started"):
             self.assertFalse(value[key])
+
+    def test_detector_result_is_complete_and_bounded(self):
+        value = self.load("detector/detector_result.json")
+        self.assertEqual("COMPLETED", value["status"])
+        self.assertEqual(0.4757, value["metrics"]["member_oriented_auc"])
+        self.assertEqual(0.08, value["metrics"]["member_oriented_tpr_at_fpr_limit"])
+        self.assertEqual(200, value["execution"]["completed_samples"])
+        self.assertEqual(0, value["execution"]["errors"])
+        self.assertEqual(0, value["execution"]["nonfinite_scores"])
+        self.assertTrue(value["frozen_detector"]["exact_reuse_from_a_ba"])
+        self.assertEqual("NOT_STARTED", value["utility_status"])
 
     def test_student_archive_is_private_and_independently_verified(self):
         value = self.load("evidence/student_modelscope_archive.json")

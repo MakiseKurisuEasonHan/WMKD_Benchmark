@@ -10,7 +10,7 @@ All five Bb3 detectors remained positive: LLMPrint `0.785` (tau `0.7150049776`),
 
 The canonical ModelScope inventory records 4/4 verified PRIVATE Passive-5 artifacts. The global full-log index contains 26/26 unique objects with no broken paths. For proactive Ba, only Teacher-before versus final-Student-after is available; exact watermark disappearance step/epoch is `NOT ESTABLISHED`.
 
-Next stage: `PROACTIVE_1_TO_5_BB_EXECUTION_READINESS` for PN-FP, EverTracer, CTCC, iSeal, and SCW; intended host `ssh 6000`. `PROACTIVE_BB_PROTOCOL_FROZEN = YES`: exact validated Passive Bb3 scientific preprocessing, method-specific canonical Ba frozen20k, independent processed20k, independent fresh-canonical Student, Ba-identical training, exact frozen detector reuse, and Ba-matched utility. All five formal Bb runs remain `NOT_STARTED`.
+Current proactive-Bb execution is method-scoped. `PROACTIVE_BB_PROTOCOL_FROZEN = YES`: exact validated Passive Bb3 scientific preprocessing, method-specific canonical Ba frozen20k, independent processed20k, independent fresh-canonical Student, Ba-identical training, exact frozen detector reuse, and Ba-matched utility. EverTracer Bb has completed preprocessing, Student training/archive, and detector evaluation and is `DETECTOR_COMPLETE_UTILITY_PENDING`; CTCC Bb, iSeal Bb, and unapproved PN-FP/SCW recovery remain unstarted.
 
 Latest confirmed pre-audit closure: local HEAD = `origin/main` = `a633b232e1c09523e54b8a9537d84347d5e94d14`, ahead/behind `0/0`, clean. Post-commit state must be revalidated in the final handoff.
 
@@ -221,3 +221,8 @@ Formal run `evertracer_bb_20260903_130000` completed the authorized preprocessin
 
 <!-- EVERTRACER_BB_STUDENT_ARCHIVE_20260904 -->
 Fresh canonical full-parameter Student run `evertracer_bb_student_20260904_033837` completed 7,500/7,500 steps (3 epochs, BF16, LR 1e-5, effective batch 8, seed 42, no resume) with finite loss and fresh-process reload PASS. The inference-ready Student was uploaded only after PRIVATE confirmation to `MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student`; a new independent download matched all 18 canonical filenames, sizes, and SHA256 values and passed offline reload. `EVERTRACER_BB_STUDENT_ARCHIVED = YES`. Status is `STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING`; detector, utility, CTCC Bb, and iSeal Bb remain NOT_STARTED, and no watermark or utility conclusion is claimed.
+
+## EverTracer Bb detector complete — 2026-09-04
+
+<!-- EVERTRACER_BB_DETECTOR_20260904 -->
+Formal frozen-detector run `evertracer_bb_detector_20260904_051046` evaluated the canonical Bb Student with exact A/Ba reference, neighborhoods, score, and FPR≤5% operating semantics. All 200/200 samples completed with zero errors/non-finite scores. Member-oriented AUC/TPR were `0.4757/0.08` versus Teacher `1.0000/1.00`, Base `0.4417/0.05`, and Ba `0.4987/0.06`. The Bb result remains close to Base/Ba and far from Teacher; no retention percentage, universal-removal claim, causal UP claim, or checkpoint disappearance claim is made. Stage: `DETECTOR_COMPLETE_UTILITY_PENDING`; utility, CTCC Bb, and iSeal Bb remain unstarted.

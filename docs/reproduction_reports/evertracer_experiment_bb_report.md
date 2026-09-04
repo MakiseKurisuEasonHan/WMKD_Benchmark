@@ -1,4 +1,4 @@
-# EverTracer Experiment Bb — Student training and archive closure
+# EverTracer Experiment Bb — detector complete, utility pending
 
 Preprocessing run `evertracer_bb_20260903_130000` remains the canonical processed20k source. It contains exactly 20,000 records; paired content/file/order SHA256 are `0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55`, `41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853`, and `49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73`. SFT content/file SHA256 are `a4dd0c4dcd5141a62d380a6577083d48f80fb04c0e2a8b2b41f44dcb47bffff4` and `2fc1acd16f8e7239924948f48d420eca4b2ded50ae90aefec4f5fb0536a7f91f`; Ba/Bb parity passed 19/19 fields.
 
@@ -12,4 +12,22 @@ After explicit authorization, the inference-ready Student was archived to PRIVAT
 
 `EVERTRACER_BB_STUDENT_ARCHIVED = YES`.
 
-Current state is `STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING`. EverTracer detector and utility remain `NOT_STARTED`; CTCC Bb and iSeal Bb were not started. No watermark-retention or utility conclusion is claimed. Wait for the next explicit instruction.
+At the Student-archive closure, the stage was `STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING`; detector and utility had not yet started. The formal detector stage below supersedes that operational state while preserving its historical boundary.
+
+## Formal frozen-detector evaluation
+
+<!-- EVERTRACER_BB_DETECTOR_20260904 -->
+Detector run `evertracer_bb_detector_20260904_051046` evaluated only the canonical final Bb Student. It exactly reused the A/Ba reference model, 200 frozen XSum neighborhoods (Dtr 100 members, Dunseen 100 nonmembers; split seed 48), K=5 symmetric perturbation pairs, 30% perturbation fraction, max length 128, calibrated probability-variation score, and maximum TPR at empirical FPR ≤5%. The neighborhoods SHA256 was `7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b`. Reaggregation of the preserved Ba raw scores reproduced AUC/TPR `0.4987/0.06` before Bb inference.
+
+| Model | AUC | TPR @ FPR≤5% |
+| --- | ---: | ---: |
+| EverTracer Teacher | 1.0000 | 1.00 |
+| Canonical Base | 0.4417 | 0.05 |
+| EverTracer Ba Student | 0.4987 | 0.06 |
+| EverTracer Bb Student | **0.4757** | **0.08** |
+
+Bb minus Teacher/Base/Ba AUC differences are `-0.5243`, `+0.0340`, and `-0.0230`. Corresponding TPR differences are `-0.92`, `+0.03`, and `+0.02`.
+
+Under the tested standardized Bb attack, the final Student remained close to the canonical Base/Ba detector regime and far from the strongly fingerprinted Teacher. Relative to Ba, Bb had a 0.0230 lower AUC and a 0.02 higher TPR at the same FPR limit; these mixed small changes do not establish a material increase in EverTracer evidence or a causal effect of UP. AUC is not a watermark-retention percentage.
+
+All 200 expected samples completed with zero errors, zero silent drops, and zero non-finite scores. Evidence is limited to the final Student; no checkpoint-level trajectory was measured. Utility remains `NOT_STARTED`, so the current stage is `DETECTOR_COMPLETE_UTILITY_PENDING`, not total EverTracer Bb closure.

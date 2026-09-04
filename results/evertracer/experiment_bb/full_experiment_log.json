@@ -7,7 +7,7 @@
     "canonical_run_id": "evertracer_bb_20260903_130000"
   },
   "status": "PARTIAL",
-  "scientific_status": "STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING",
+  "scientific_status": "DETECTOR_COMPLETE_UTILITY_PENDING",
   "scientific_parentage": {
     "source_experiment": "EverTracer Ba",
     "parent_run_id": "evertracer_ba_20260829_124055",
@@ -116,8 +116,121 @@
     "student_manifest_sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102"
   },
   "detector": {
-    "status": "NOT_STARTED",
-    "result": null
+    "schema_version": "wmkd.evertracer-bb-detector-result.v1",
+    "method": "EverTracer",
+    "experiment": "Bb",
+    "status": "COMPLETED",
+    "student_run_id": "evertracer_bb_student_20260904_033837",
+    "detector_run_id": "evertracer_bb_detector_20260904_051046",
+    "student_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
+    "student_archive": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+    "git_head_at_launch": "1625408a31de94059b3a7e2d214f4f9e1abd3616",
+    "execution": {
+      "start": "2026-09-04T05:12:40Z",
+      "end": "2026-09-04T05:13:47Z",
+      "wall_runtime_seconds": 67,
+      "inference_runtime_seconds": 61.642739947885275,
+      "expected_samples": 200,
+      "completed_samples": 200,
+      "errors": 0,
+      "nonfinite_scores": 0,
+      "silent_drops": 0,
+      "exit_code": 0,
+      "peak_vram_bytes": 13040928256
+    },
+    "frozen_detector": {
+      "exact_reuse_from_a_ba": true,
+      "verification_set": {
+        "source": "EdinburghNLP/xsum@7d4d486c2f8ef850b1a11aead99b894ff3dd7da9",
+        "members": "Dtr",
+        "nonmembers": "Dunseen",
+        "member_count": 100,
+        "nonmember_count": 100,
+        "split_seed": 48
+      },
+      "neighborhoods": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+      "neighborhoods_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+      "k": 5,
+      "symmetric_variants_per_original": 10,
+      "perturbation_fraction": 0.3,
+      "max_length": 128,
+      "evaluation_seed": 42,
+      "reference_model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+      "reference_manifest_sha256": "bca1ea3d6f68c2ced8cb55d969e4710ef6b1f6921f5f9267c721ac06b5fa0aaf",
+      "config": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+      "config_sha256": "67a0a7a87951b275a7be0fc29e83282b09c1a128bd533d1f4fd32f1e21243219",
+      "verification_code_sha256": "50c6dd3330abf9f6f2ee07e56222d74c36c7c2500207d694732b001d12259716",
+      "aggregation_code_sha256": "14c8175d505e8bc4ab21575077fb63bdd25dc398473f8a849a19fdaddd8aad54",
+      "score": "C = suspect_variation - reference_variation; member_score = -C",
+      "operating_rule": "maximum member TPR at empirical FPR <= 0.05"
+    },
+    "metrics": {
+      "member_oriented_auc": 0.4757,
+      "member_oriented_tpr_at_fpr_limit": 0.08,
+      "member_oriented_fpr": 0.05,
+      "member_oriented_threshold": -0.0028660581748679095,
+      "official_auc_nonmember_positive": 0.4757
+    },
+    "references": {
+      "teacher": {
+        "auc": 1.0,
+        "tpr": 1.0
+      },
+      "base": {
+        "auc": 0.4417,
+        "tpr": 0.05
+      },
+      "ba_student": {
+        "auc": 0.4987,
+        "tpr": 0.06
+      }
+    },
+    "differences": {
+      "bb_minus_teacher_auc": -0.5243,
+      "bb_minus_base_auc": 0.03400000000000003,
+      "bb_minus_ba_auc": -0.022999999999999965,
+      "bb_minus_teacher_tpr": -0.92,
+      "bb_minus_base_tpr": 0.03,
+      "bb_minus_ba_tpr": 0.020000000000000004
+    },
+    "artifacts": {
+      "raw": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/metrics/student_verification_raw.json",
+        "size": 48049,
+        "sha256": "303ffead846f525dcd4ed3b2a9f5dd09ee42428e9e7cbdbbf866fa2ef1a13159"
+      },
+      "aggregate": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/metrics/student_verification.json",
+        "size": 49117,
+        "sha256": "53b8661d45ffc653709b892e683940c597a62784593b2b4f0520cc478f6c88cc"
+      },
+      "ba_reaggregation": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/metrics/ba_reaggregation_check.json",
+        "size": 49095,
+        "sha256": "16940cd3f661f8e9692f9dfdca5de525bfa0c6d101fa2cdbf143d20fedc6f4b0"
+      },
+      "preflight": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/config/frozen_detector_preflight.json",
+        "size": 2697,
+        "sha256": "4228f548fd3238099f2b6cc03a69b2adf109a1ab4be51224efd74bae0fcce361"
+      },
+      "verification_log": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_detector/evertracer_bb_detector_20260904_051046/logs/verification.log",
+        "size": 1327,
+        "sha256": "a5a0b4a35b8d42c06d0cf6330ed3c86047567510ed7de614ce4dc496887475c8"
+      }
+    },
+    "integrity": {
+      "correct_bb_student": "PASS",
+      "frozen_detector_config": "PASS",
+      "sample_completion": "PASS",
+      "no_silent_drops": "PASS",
+      "finite_scores": "PASS",
+      "ba_reaggregation": "PASS"
+    },
+    "conclusion_scope": "Final-Student detector evidence only; no checkpoint trajectory, utility result, universal removal, or causal attribution.",
+    "bounded_interpretation": "Under the tested standardized Bb attack, the final Student remained close to the canonical Base/Ba detector regime and far from the strongly fingerprinted Teacher. Relative to Ba, Bb had a 0.0230 lower AUC and a 0.02 higher TPR at the same FPR limit; these mixed small changes do not establish a material increase in EverTracer evidence or a causal effect of UP.",
+    "utility_status": "NOT_STARTED"
   },
   "utility": {
     "status": "NOT_STARTED",
@@ -129,11 +242,15 @@
     "evidence_directory": "results/evertracer/experiment_bb/evidence",
     "training_summary": "results/evertracer/experiment_bb/training_summary.json",
     "result": "results/evertracer/experiment_bb/result.json",
-    "student_archive_evidence": "results/evertracer/experiment_bb/evidence/student_modelscope_archive.json"
+    "student_archive_evidence": "results/evertracer/experiment_bb/evidence/student_modelscope_archive.json",
+    "detector_result": "results/evertracer/experiment_bb/detector/detector_result.json",
+    "detector_raw": "results/evertracer/experiment_bb/detector/student_verification_raw.json",
+    "detector_aggregate": "results/evertracer/experiment_bb/detector/student_verification.json",
+    "detector_run_manifest": "results/evertracer/experiment_bb/detector/detector_run_manifest.json"
   },
   "failures": [],
   "continuations": [],
-  "bounded_conclusion": "Fresh canonical full-parameter Student training, integrity validation, private archive, independent redownload, and offline reload passed. Watermark retention and utility are not evaluated in this stage.",
+  "bounded_conclusion": "Under the tested standardized Bb attack, the final Student remained close to the canonical Base/Ba detector regime and far from the strongly fingerprinted Teacher. Relative to Ba, Bb had a 0.0230 lower AUC and a 0.02 higher TPR at the same FPR limit; these mixed small changes do not establish a material increase in EverTracer evidence or a causal effect of UP. Utility remains NOT_STARTED.",
   "reload_validation": {
     "schema_version": "wmkd.evertracer-bb-student-reload.v1",
     "status": "PASS",
