@@ -1,0 +1,87 @@
+{
+  "status": "COMPLETED",
+  "archive_flag": "ISEAL_BB_PROCESSED20K_ARCHIVED = YES",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_iseal_bb_processed20k",
+  "visibility": "PRIVATE",
+  "transport": "ModelScope PRIVATE Git + Git LFS",
+  "git_authentication": "PASS",
+  "lfs_materialized": true,
+  "uploaded_files": [
+    "README.md",
+    "SHA256SUMS",
+    "frozen_paired_qa.jsonl",
+    "manifest.json"
+  ],
+  "source_package": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_upload_iseal_bb_20260904_093619/package",
+  "source_validation": {
+    "record_count": 20000,
+    "file_sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+    "content_sha256": "24df67c16af107cb905bc9b08cd3c2edc30a4519e6e195a986288ab41f456128",
+    "sample_ids_sha256": "f1e25c9b5848efc2bd8d06678aab08841ca15fc9e9fb5a061aadadddead38c62",
+    "schema": [
+      "input",
+      "instruction",
+      "paraphrased_answer",
+      "paraphrased_answer_sha256",
+      "processing_mode",
+      "sample_id",
+      "source_answer",
+      "source_answer_sha256",
+      "source_answer_token_count"
+    ],
+    "secret_scan": {
+      "status": "PASS",
+      "hits": 0
+    }
+  },
+  "redownload_validation": {
+    "record_count": 20000,
+    "file_sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+    "content_sha256": "24df67c16af107cb905bc9b08cd3c2edc30a4519e6e195a986288ab41f456128",
+    "sample_ids_sha256": "f1e25c9b5848efc2bd8d06678aab08841ca15fc9e9fb5a061aadadddead38c62",
+    "schema": [
+      "input",
+      "instruction",
+      "paraphrased_answer",
+      "paraphrased_answer_sha256",
+      "processing_mode",
+      "sample_id",
+      "source_answer",
+      "source_answer_sha256",
+      "source_answer_token_count"
+    ],
+    "secret_scan": {
+      "status": "PASS",
+      "hits": 0
+    }
+  },
+  "per_file": {
+    "README.md": {
+      "size": 110,
+      "sha256": "2e12de66c3d5016df6f5e75e81ba961cedd5ddf39868eb8ede2f652dc18c3d83"
+    },
+    "SHA256SUMS": {
+      "size": 245,
+      "sha256": "d6c65d0b257f222ad94479910b6f518a0d1bf9f202943d4b8bde46bf24b95949"
+    },
+    "frozen_paired_qa.jsonl": {
+      "size": 32294755,
+      "sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb"
+    },
+    "manifest.json": {
+      "size": 1781,
+      "sha256": "211efbe17cd90eacbe1367fa39322379b480ef72e027e684f3a371e30b9b4dff"
+    }
+  },
+  "byte_identical_to_upload_source": true,
+  "manifest_provenance": "PASS",
+  "sha256sums": "PASS",
+  "canonical_file_set": "PASS",
+  "secret_scan": "PASS",
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_git_verify_iseal_bb_ZJ1SliwT/repository",
+  "canonical_source_preserved": true,
+  "preprocessing_rerun": false,
+  "scientific_configuration_changed": false,
+  "token_emitted": false,
+  "verified_at": "2026-09-04T10:14:03.417759+00:00"
+}

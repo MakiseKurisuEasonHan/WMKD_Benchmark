@@ -236,3 +236,8 @@ Utility run `evertracer_bb_utility_20260904_061500` exactly reused the Ba harnes
 
 <!-- CTCC_BB_BLOCKED -->
 Run `ctcc_bb_20260904_055000`: `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE`. Under the frozen standardized Bb preprocessing protocol, CTCC exceeded the predefined identity-fallback acceptance limit (202 > 200), so the experiment was blocked before Student training. Threshold unchanged; no downstream Student/detector/utility was run.
+
+## iSeal Bb final closure — 2026-09-04
+
+<!-- ISEAL_BB_FINAL -->
+Run `iseal_bb_20260904_055000` completed preprocessing, private archives, fresh Student, frozen detector, utility, and full-log closure. Under this single standardized same-backbone Bb setting, iSeal detector behavior was 0/200; mean BLEU 2.301813. Utility relative to Ba changed by ARC +0.008532 and TruthfulQA +0.011706. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.
