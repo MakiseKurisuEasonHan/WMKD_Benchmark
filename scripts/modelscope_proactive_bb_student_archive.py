@@ -8,7 +8,7 @@ from modelscope_hub.api import HubApi
 
 SECRET=Path("/root/autodl-tmp/WMKD_Benchmark_data/secrets/modelscope.env")
 LICENSE=Path("/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/LICENSE.txt")
-MODEL={"config.json","generation_config.json","model-00001-of-00002.safetensors","model-00002-of-00002.safetensors","model.safetensors.index.json","special_tokens_map.json","tokenizer.json","tokenizer_config.json"}
+MODEL={"chat_template.jinja","config.json","generation_config.json","model-00001-of-00002.safetensors","model-00002-of-00002.safetensors","model.safetensors.index.json","special_tokens_map.json","tokenizer.json","tokenizer_config.json"}
 def sha(p):
  h=hashlib.sha256();
  with Path(p).open("rb") as f:
