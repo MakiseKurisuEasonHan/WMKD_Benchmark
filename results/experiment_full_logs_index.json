@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-04T11:30:40.477173+00:00",
-  "object_count": 29,
+  "generated_at": "2026-09-04T19:25:07.029019+00:00",
+  "object_count": 30,
   "objects": [
     {
       "method": "PN-FP",
@@ -500,6 +500,19 @@
       "run_id": "iseal_bb_20260904_055000",
       "full_log_path": "results/iseal/experiment_bb/full_experiment_log.json",
       "full_log_sha256": "bc7e0b0be0cf11429ed33861a9ed2c3980d9c9add7522f0435e3b0bc38343d14",
+      "scientific_status": "COMPLETE",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 7500
+    },
+    {
+      "method": "PN-FP",
+      "role": "bb_student",
+      "experiment": "Bb",
+      "run_id": "pnfp_bb_20260904_055000",
+      "full_log_path": "results/pnfp/experiment_bb/full_experiment_log.json",
+      "full_log_sha256": "9330857ac77512da22d168cbf284fd8de3d95b4bbfb1e8fe47846607687398d0",
       "scientific_status": "COMPLETE",
       "watermark_evaluation_available": true,
       "utility_available": true,

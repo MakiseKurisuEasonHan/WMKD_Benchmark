@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETED",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_bb_processed20k",
+  "visibility": "PRIVATE",
+  "uploaded_files": [
+    "README.md",
+    "SHA256SUMS",
+    "frozen_paired_qa.jsonl",
+    "manifest.json"
+  ],
+  "source_validation": {
+    "record_count": 20000,
+    "file_sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+    "content_sha256": "c19e1a28dde6614de4f157bc8022c68654d79f01554b81935dc0d575a09feb1f",
+    "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+    "schema": [
+      "input",
+      "instruction",
+      "paraphrased_answer",
+      "paraphrased_answer_sha256",
+      "processing_mode",
+      "sample_id",
+      "source_answer",
+      "source_answer_sha256",
+      "source_answer_token_count"
+    ],
+    "secret_scan": {
+      "status": "PASS",
+      "hits": 0
+    }
+  },
+  "redownload_validation": {
+    "record_count": 20000,
+    "file_sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+    "content_sha256": "c19e1a28dde6614de4f157bc8022c68654d79f01554b81935dc0d575a09feb1f",
+    "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+    "schema": [
+      "input",
+      "instruction",
+      "paraphrased_answer",
+      "paraphrased_answer_sha256",
+      "processing_mode",
+      "sample_id",
+      "source_answer",
+      "source_answer_sha256",
+      "source_answer_token_count"
+    ],
+    "secret_scan": {
+      "status": "PASS",
+      "hits": 0
+    }
+  },
+  "byte_identical": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_pnfp_bb_20260904_180905",
+  "canonical_source_preserved": true,
+  "token_emitted": false
+}

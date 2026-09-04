@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETED",
+  "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-PNFP-Bb-Student",
+  "visibility": "PRIVATE",
+  "source_file_count": 10,
+  "uploaded_files": [
+    "LICENSE.txt",
+    "NOTICE",
+    "README.md",
+    "RELOAD_VALIDATION.json",
+    "SHA256SUMS",
+    "WMKD_STUDENT_MANIFEST.json",
+    "chat_template.jinja",
+    "config.json",
+    "generation_config.json",
+    "manifest.json",
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors",
+    "model.safetensors.index.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ],
+  "training_args_excluded": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_pnfp_bb_student_20260904_184425",
+  "filename_size_sha_match": true,
+  "redownload_reload": "PASS",
+  "canonical_source_preserved": true,
+  "token_emitted": false
+}

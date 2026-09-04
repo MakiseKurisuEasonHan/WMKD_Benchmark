@@ -1,0 +1,119 @@
+{
+  "method": "PN-FP",
+  "experiment": "Bb",
+  "run_id": "pnfp_bb_20260904_055000",
+  "status": "COMPLETE",
+  "detector": {
+    "status": "COMPLETE",
+    "historical": {
+      "teacher": "956/1024",
+      "base": "1/1024",
+      "ba": "98/1024"
+    },
+    "bb": "72/1024",
+    "result": {
+      "detected": 72,
+      "total": 1024,
+      "detection_rate": 0.0703125,
+      "invalid_samples": 0,
+      "evaluation_errors": 0,
+      "detector_input": {
+        "origin": "recovered_exact",
+        "original_canonical_unavailable": false,
+        "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+        "historical_sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+        "count_used": 1024,
+        "seed": 42
+      }
+    }
+  },
+  "utility": {
+    "status": "COMPLETE",
+    "ba": {
+      "arc_challenge_acc_norm": 0.478668942,
+      "truthfulqa_mc2": 0.463479842
+    },
+    "bb": {
+      "arc_challenge_acc_norm": 0.4906143344709898,
+      "truthfulqa_mc2": 0.48613790979493243
+    },
+    "delta": {
+      "arc_challenge_acc_norm": 0.011945392470989802,
+      "truthfulqa_mc2": 0.022658067794932457
+    },
+    "generation_sanity_pass": true
+  },
+  "bounded_conclusion": "Under this single standardized same-backbone Bb setting, PN-FP detector behavior was 72/1024. Utility relative to Ba changed by ARC +0.011945 and TruthfulQA +0.022658. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.",
+  "parent_dataset_origin": "protocol_faithful_reconstruction",
+  "original_parent_artifact_unavailable": true,
+  "parent_reconstruction": {
+    "status": "COMPLETE",
+    "run_id": "pnfp_ba_parent_reconstruction_20260904_055000",
+    "parent_dataset_origin": "protocol_faithful_reconstruction",
+    "original_artifact_unavailable": true,
+    "identity": {
+      "record_count": 20000,
+      "physical_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+      "content_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+      "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ]
+    },
+    "archive": {
+      "status": "COMPLETED",
+      "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_ba_reconstructed_frozen20k",
+      "visibility": "PRIVATE",
+      "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/archive/verification_20260904_160826",
+      "source": {
+        "record_count": 20000,
+        "physical_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+        "content_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+        "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "redownload": {
+        "record_count": 20000,
+        "physical_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+        "content_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+        "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "byte_identical": true
+    },
+    "provenance": {
+      "parent_dataset_origin": "protocol_faithful_reconstruction",
+      "original_artifact_unavailable": true,
+      "historical_run": "pnfp_exp_ba_20260828_111148",
+      "teacher_run": "pnfp_exp_a2_20260828_025240",
+      "teacher_path": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction",
+      "prompt_protocol": "pnfp_ba_standardized_eight_category_meta_prompts",
+      "generation": {
+        "batch_size": 8,
+        "records_per_prompt": 4,
+        "max_new_tokens": 768,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "seed": 42
+      },
+      "raw_count": 34002,
+      "error_count": 1214
+    }
+  },
+  "limitations": [
+    "The original canonical Ba frozen20k artifact was unavailable; the parent is a new protocol-faithful reconstruction and is not claimed identical to the original."
+  ]
+}

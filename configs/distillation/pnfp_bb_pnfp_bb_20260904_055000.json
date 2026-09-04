@@ -1,0 +1,254 @@
+{
+  "schema_version": "wmkd.proactive-bb-config.v1",
+  "experiment": "Bb",
+  "identity": "passive5_shared_bb3",
+  "status": "PREPARED_NOT_STARTED",
+  "attack": "Qwen-tokenizer <=1 atomic identity preservation plus answer-only semantic-preserving untargeted Qwen paraphrasing followed by direct behavioral distillation",
+  "shared_attack": true,
+  "methods": [
+    "LLMPrint",
+    "REEF",
+    "HuRef",
+    "AWM",
+    "ZeroPrint"
+  ],
+  "source_dataset": {
+    "parent_experiment": "PN-FP Ba",
+    "parent_run_id": "pnfp_ba_parent_reconstruction_20260904_055000",
+    "parent_teacher": "PN-FP A2",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+    "manifest_path": null,
+    "record_count": 20000,
+    "record_schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ],
+    "dataset_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+    "frozen_jsonl_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+    "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e"
+  },
+  "paraphraser": {
+    "canonical_upstream": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "master",
+    "revision_identity": {
+      "immutable_git_revision_available": false,
+      "modelscope_revision_created_at_unix": 1740595239,
+      "modelscope_content_file_count": 12,
+      "modelscope_content_bytes": 6183463418,
+      "modelscope_snapshot_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/manifests/qwen2_5_3b_instruct_modelscope_snapshot.json",
+      "weight_shard_sha256": [
+        "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+      ]
+    },
+    "transport_preference": [
+      "local_existing",
+      "shared_cache",
+      "ModelScope",
+      "trusted_domestic_mirror",
+      "official_overseas_last"
+    ],
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "local_files_only": true,
+    "fail_if_revision_unresolved": true
+  },
+  "paraphrase": {
+    "prompt_version": "passive5_shared_bb2_semantic_preserving_untargeted_paraphrase_v1",
+    "prompt_path": "configs/distillation/passive5_shared_bb2_paraphrase_prompt_v1.txt",
+    "prompt_sha256": "7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495",
+    "detector_aware": false,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 42,
+    "dynamic_max_new_tokens": {
+      "policy": "min(global_cap, max(min_cap, ceil(source_tokens * multiplier)))",
+      "min_cap": 64,
+      "multiplier": 1.5,
+      "global_cap": 1536,
+      "scientific_status": "PROVISIONAL_PENDING_PILOT"
+    },
+    "retry": {
+      "maximum_attempts_per_sample": 3,
+      "retry_same_sample": true,
+      "drop_failed_samples": false
+    },
+    "identity_fallback": {
+      "enabled": true,
+      "reason": "paraphrase_retry_exhausted_semantic_preservation",
+      "full20k_max_count": 200,
+      "full20k_max_rate": 0.01
+    },
+    "pilot": {
+      "sample_count_min": 100,
+      "sample_count_max": 200,
+      "formal_result": false,
+      "same_selection_as_blocked_bb": true
+    },
+    "short_answer_preprocessing_bypass": true,
+    "atomic_identity_preservation": {
+      "enabled": true,
+      "qwen_non_special_token_threshold": 1,
+      "add_special_tokens": false,
+      "expected_full20k_count": 4635,
+      "audit_path": "results/passive5_shared_bb2/short_answer_distribution_audit.json"
+    },
+    "qwen_identity_preservation": true
+  },
+  "quality": {
+    "length_ratio_min": 0.5,
+    "length_ratio_max": 2.0,
+    "minimum_lexical_change": 0.1,
+    "prompt_leakage_markers": [
+      "<SOURCE_ANSWER>",
+      "</SOURCE_ANSWER>",
+      "paraphrase the answer below",
+      "you are a careful paraphrasing assistant"
+    ],
+    "instruction_echo_phrases": [
+      "ensure all pertinent details",
+      "provided response, ensure",
+      "during rephrasing",
+      "here is the paraphrased version",
+      "here's the paraphrased version",
+      "here is the rephrased version",
+      "here's the rephrased version",
+      "the task asks",
+      "the instruction asks",
+      "i will paraphrase",
+      "i'll paraphrase",
+      "as requested, here is"
+    ],
+    "meta_response_patterns": {
+      "meta_objects": [
+        "provided response",
+        "given response",
+        "original response",
+        "source answer",
+        "original answer",
+        "provided text",
+        "original text",
+        "core information"
+      ],
+      "rewrite_actions": [
+        "distinct phrasing",
+        "different phrasing",
+        "different wording",
+        "alternative wording",
+        "reorganize the sentence",
+        "reorganize sentence",
+        "restructure the sentence",
+        "restate the",
+        "rephrase the",
+        "rewrite the",
+        "paraphrase the"
+      ],
+      "preservation_language": [
+        "without altering",
+        "without changing",
+        "preserve the meaning",
+        "retain the meaning",
+        "keep the meaning",
+        "maintain the meaning",
+        "preserve the core",
+        "retain the core",
+        "core information",
+        "original meaning"
+      ],
+      "short_source_max_tokens": 3,
+      "short_source_length_ratio": 6.0
+    },
+    "chat_control_markers": [
+      "<|im_start|>",
+      "<|im_end|>",
+      "<|assistant|>",
+      "<|user|>",
+      "<|system|>"
+    ],
+    "semantic_similarity": {
+      "enabled": false,
+      "provider": "OPTIONAL_TBD",
+      "threshold": null
+    },
+    "human_audit_sample_count": 20
+  },
+  "student": {
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "initialization": "fresh_canonical_original_revision",
+    "forbidden_initializations": [
+      "Ba Student",
+      "watermarked Teacher",
+      "detector-specific model"
+    ],
+    "resume": false
+  },
+  "training": {
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "full_parameter": true,
+    "lora": false,
+    "per_device_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 8,
+    "max_length": 1024,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "expected_steps": 7500,
+    "checkpoint_retention": {
+      "save_total_limit": 1,
+      "keep_final_model": true
+    }
+  },
+  "detectors": {
+    "reuse_frozen_protocols": true,
+    "ordered_methods": [
+      "LLMPrint",
+      "REEF",
+      "HuRef",
+      "AWM",
+      "ZeroPrint"
+    ],
+    "recalibration_allowed": false,
+    "implementation": "existing Passive-5 A/A2/Ba detector code"
+  },
+  "utility": {
+    "tasks": [
+      "arc_challenge",
+      "truthfulqa_mc2"
+    ],
+    "metrics": [
+      "acc_norm",
+      "acc"
+    ],
+    "apply_chat_template": true,
+    "fresh_process_reload": true,
+    "ordinary_generation_sanity": true
+  },
+  "paths": {
+    "run_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/{run_id}",
+    "records_journal": "paraphrase/attempts.jsonl",
+    "progress": "paraphrase/progress.json",
+    "frozen_paired_dataset": "dataset/frozen_paired_qa.jsonl",
+    "student_dataset": "dataset/student_qa.jsonl",
+    "student_output": "student/final_model",
+    "full_experiment_log": "results/pnfp/experiment_bb/full_experiment_log.json",
+    "provenance_manifest": "results/pnfp/experiment_bb/provenance_manifest.json",
+    "artifact_manifest": "results/pnfp/experiment_bb/artifact_manifest.json",
+    "formal_report": "docs/reproduction_reports/pnfp_experiment_bb_report.md"
+  },
+  "full_log_schema": "configs/schemas/passive5_shared_bb_full_experiment_log.schema.json",
+  "global_index": "results/experiment_full_logs_index.json",
+  "auto_shutdown": false,
+  "project": "WMKD_Benchmark",
+  "method": "PN-FP",
+  "run_id": "pnfp_bb_20260904_055000",
+  "scientific_reference": "Passive Shared Bb3 frozen implementation",
+  "paired_dataset_schema_version": "wmkd.proactive-bb-paired-dataset.v1"
+}

@@ -1,0 +1,310 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "method": "PN-FP",
+    "experiment": "Bb",
+    "canonical_run_id": "pnfp_bb_20260904_055000"
+  },
+  "status": "COMPLETED",
+  "scientific_status": "COMPLETE",
+  "parent_dataset_origin": "protocol_faithful_reconstruction",
+  "parent": {
+    "parent_experiment": "PN-FP Ba",
+    "parent_run_id": "pnfp_ba_parent_reconstruction_20260904_055000",
+    "parent_teacher": "PN-FP A2",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+    "manifest_path": null,
+    "record_count": 20000,
+    "record_schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ],
+    "dataset_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+    "frozen_jsonl_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+    "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e"
+  },
+  "preprocessing": {
+    "status": "COMPLETE",
+    "record_count": 20000,
+    "paired_content_sha256": "c19e1a28dde6614de4f157bc8022c68654d79f01554b81935dc0d575a09feb1f",
+    "physical_sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+    "quality": {
+      "sample_count": 20000,
+      "exact_copy_count": 5350,
+      "exact_copy_rate": 0.2675,
+      "natural_exact_copy_count": 1646,
+      "identity_fallback_count": 23,
+      "identity_fallback_rate": 0.00115,
+      "atomic_identity_preserved_count": 3681,
+      "qwen_submitted_count": 16319,
+      "qwen_paraphrased_count": 14650,
+      "qwen_identity_output_count": 1646,
+      "total_identity_output_count": 5350,
+      "mean_length_ratio": 2.9269037230390125,
+      "median_length_ratio": 1.04,
+      "truncation_count": 0,
+      "prompt_leakage_count": 0,
+      "instruction_echo_leakage_count": 0,
+      "chat_control_leakage_count": 0,
+      "generation_failure_count": 0,
+      "retry_count": 198,
+      "mean_lexical_change": 0.4895979956518302,
+      "median_lexical_change": 0.6,
+      "semantic_similarity": "not_recorded_optional_hook_disabled"
+    }
+  },
+  "processed20k_archive": {
+    "status": "COMPLETED",
+    "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_bb_processed20k",
+    "visibility": "PRIVATE",
+    "uploaded_files": [
+      "README.md",
+      "SHA256SUMS",
+      "frozen_paired_qa.jsonl",
+      "manifest.json"
+    ],
+    "source_validation": {
+      "record_count": 20000,
+      "file_sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+      "content_sha256": "c19e1a28dde6614de4f157bc8022c68654d79f01554b81935dc0d575a09feb1f",
+      "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+      "schema": [
+        "input",
+        "instruction",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "processing_mode",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count"
+      ],
+      "secret_scan": {
+        "status": "PASS",
+        "hits": 0
+      }
+    },
+    "redownload_validation": {
+      "record_count": 20000,
+      "file_sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+      "content_sha256": "c19e1a28dde6614de4f157bc8022c68654d79f01554b81935dc0d575a09feb1f",
+      "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+      "schema": [
+        "input",
+        "instruction",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "processing_mode",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count"
+      ],
+      "secret_scan": {
+        "status": "PASS",
+        "hits": 0
+      }
+    },
+    "byte_identical": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_pnfp_bb_20260904_180905",
+    "canonical_source_preserved": true,
+    "token_emitted": false
+  },
+  "student_initialization": {
+    "fresh_canonical": true,
+    "resume": false,
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+  },
+  "training": {
+    "status": "COMPLETE",
+    "steps": 7500,
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "effective_batch": 8,
+    "train_loss": 1.0554428070704143,
+    "runtime_seconds": 2058.6163674630225,
+    "finite_loss": true
+  },
+  "fresh_reload": {
+    "status": "PASS",
+    "fresh_process_reload": true,
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model",
+    "student_manifest_sha256": "9b8d002f37668f00bc42475a8616385626c9a93ac0559da2ce2904cd241408d3",
+    "tokenizer": {
+      "class": "PreTrainedTokenizerFast",
+      "vocab_size": 128256,
+      "chat_template_present": true
+    },
+    "inference_smoke": {
+      "prompt": "Reply with exactly: WMKD_RELOAD_PASS",
+      "response": "WMKD_RELOAD_PASS",
+      "pass": true
+    },
+    "finite_weight_check": {
+      "parameter_count": 3212749824,
+      "nonfinite_count": 0,
+      "minimum": -0.98046875,
+      "maximum": 2.359375,
+      "pass": true
+    },
+    "adapter_files": [],
+    "peak_vram_bytes": 9980843008,
+    "runtime_seconds": 3.797691583633423
+  },
+  "student_archive": {
+    "status": "COMPLETED",
+    "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-PNFP-Bb-Student",
+    "visibility": "PRIVATE",
+    "source_file_count": 10,
+    "uploaded_files": [
+      "LICENSE.txt",
+      "NOTICE",
+      "README.md",
+      "RELOAD_VALIDATION.json",
+      "SHA256SUMS",
+      "WMKD_STUDENT_MANIFEST.json",
+      "chat_template.jinja",
+      "config.json",
+      "generation_config.json",
+      "manifest.json",
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "training_args_excluded": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_pnfp_bb_student_20260904_184425",
+    "filename_size_sha_match": true,
+    "redownload_reload": "PASS",
+    "canonical_source_preserved": true,
+    "token_emitted": false
+  },
+  "detector": {
+    "status": "COMPLETE",
+    "historical": {
+      "teacher": "956/1024",
+      "base": "1/1024",
+      "ba": "98/1024"
+    },
+    "bb": "72/1024",
+    "result": {
+      "detected": 72,
+      "total": 1024,
+      "detection_rate": 0.0703125,
+      "invalid_samples": 0,
+      "evaluation_errors": 0,
+      "detector_input": {
+        "origin": "recovered_exact",
+        "original_canonical_unavailable": false,
+        "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+        "historical_sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+        "count_used": 1024,
+        "seed": 42
+      }
+    }
+  },
+  "utility": {
+    "status": "COMPLETE",
+    "ba": {
+      "arc_challenge_acc_norm": 0.478668942,
+      "truthfulqa_mc2": 0.463479842
+    },
+    "bb": {
+      "arc_challenge_acc_norm": 0.4906143344709898,
+      "truthfulqa_mc2": 0.48613790979493243
+    },
+    "delta": {
+      "arc_challenge_acc_norm": 0.011945392470989802,
+      "truthfulqa_mc2": 0.022658067794932457
+    },
+    "generation_sanity_pass": true
+  },
+  "failures": [],
+  "continuations": [],
+  "limitations": [
+    "one standardized configuration",
+    "same-backbone Student",
+    "no checkpoint-level detector trajectory",
+    "utility limited to frozen scope",
+    "no universal or causal claim",
+    "The original canonical Ba frozen20k artifact was unavailable; the parent is a new protocol-faithful reconstruction and is not claimed identical to the original."
+  ],
+  "bounded_conclusion": "Under this single standardized same-backbone Bb setting, PN-FP detector behavior was 72/1024. Utility relative to Ba changed by ARC +0.011945 and TruthfulQA +0.022658. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.",
+  "artifacts": {
+    "runtime_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000"
+  },
+  "original_parent_artifact_unavailable": true,
+  "parent_reconstruction": {
+    "status": "COMPLETE",
+    "run_id": "pnfp_ba_parent_reconstruction_20260904_055000",
+    "parent_dataset_origin": "protocol_faithful_reconstruction",
+    "original_artifact_unavailable": true,
+    "identity": {
+      "record_count": 20000,
+      "physical_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+      "content_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+      "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ]
+    },
+    "archive": {
+      "status": "COMPLETED",
+      "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_ba_reconstructed_frozen20k",
+      "visibility": "PRIVATE",
+      "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/archive/verification_20260904_160826",
+      "source": {
+        "record_count": 20000,
+        "physical_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+        "content_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+        "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "redownload": {
+        "record_count": 20000,
+        "physical_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+        "content_sha256": "07f227e35038b1f7a9f581926a8d67f7ce9624516e835b53e11e87853be8f4b8",
+        "sample_ids_sha256": "176921ec36b6dd2f6cfc9c4f4bded041a3574e7387bf4f6786a6887ddfaeaa6e",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "byte_identical": true
+    },
+    "provenance": {
+      "parent_dataset_origin": "protocol_faithful_reconstruction",
+      "original_artifact_unavailable": true,
+      "historical_run": "pnfp_exp_ba_20260828_111148",
+      "teacher_run": "pnfp_exp_a2_20260828_025240",
+      "teacher_path": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction",
+      "prompt_protocol": "pnfp_ba_standardized_eight_category_meta_prompts",
+      "generation": {
+        "batch_size": 8,
+        "records_per_prompt": 4,
+        "max_new_tokens": 768,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "seed": 42
+      },
+      "raw_count": 34002,
+      "error_count": 1214
+    }
+  }
+}
