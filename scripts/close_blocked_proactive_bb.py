@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+"""Durable, non-destructive closure for CTCC Bb blocked at preprocessing acceptance."""
+import argparse, hashlib, json, os
+from datetime import datetime, timezone
+from pathlib import Path
+STATUS="BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE"
+def write(path,value):
+ path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_suffix(path.suffix+".tmp");tmp.write_text(json.dumps(value,indent=2,ensure_ascii=False)+"\n",encoding="utf-8");os.replace(tmp,path)
+def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def append(path,marker,text):
+ old=path.read_text(encoding="utf-8")
+ if marker not in old:path.write_text(old.rstrip()+"\n\n"+text.strip()+"\n",encoding="utf-8")
+def main():
+ p=argparse.ArgumentParser();p.add_argument("--project",type=Path,required=True);p.add_argument("--data-root",type=Path,required=True);p.add_argument("--state",type=Path,required=True);p.add_argument("--method",choices=("ctcc",),required=True);p.add_argument("--run-id",required=True);p.add_argument("--stage",required=True);p.add_argument("--reason",required=True);p.add_argument("--evidence-log",required=True);a=p.parse_args()
+ run=a.data_root/f"runs/{a.method}_bb/{a.run_id}";journal=run/"paraphrase/attempts.jsonl";rows=[json.loads(x) for x in journal.read_text(encoding="utf-8").splitlines() if x.strip()]
+ completed=[x for x in rows if "final_answer" in x];fallback=[x for x in completed if x.get("identity_fallback")]
+ if len(fallback)!=202:raise RuntimeError(f"EXACT_FALLBACK_EVIDENCE_GATE expected=202 observed={len(fallback)}")
+ cfg_path=a.project/f"configs/distillation/{a.method}_bb_{a.run_id}.json";cfg=json.loads(cfg_path.read_text(encoding="utf-8"));limit=cfg["paraphrase"]["identity_fallback"]["full20k_max_count"]
+ if limit!=200:raise RuntimeError(f"FROZEN_LIMIT_GATE expected=200 observed={limit}")
+ cfg["paraphraser"].update({"model_id":cfg["paraphraser"]["canonical_upstream"],"path":cfg["paraphraser"]["model_path"],"prompt_sha256":cfg["paraphrase"]["prompt_sha256"]})
+ evidence={"journal":str(journal),"journal_physical_sha256":digest(journal),"journal_rows":len(rows),"resolved_records":len(completed),"identity_fallback_count":202,"frozen_max_identity_fallback_count":200,"failure_log":a.evidence_log,"failure_log_sha256":digest(a.evidence_log),"all_attempts_preserved":True}
+ conclusion="Under the frozen standardized Bb preprocessing protocol, CTCC exceeded the predefined identity-fallback acceptance limit (202 > 200), so the experiment was blocked before Student training."
+ full={"schema_version":"wmkd.full-experiment-log.v1","identity":{"project":"WMKD_Benchmark","method":"CTCC","experiment":"Bb","canonical_run_id":a.run_id},"status":STATUS,"scientific_status":STATUS,"blocked_stage":a.stage,"reason":a.reason,"parent":cfg["source_dataset"],"frozen_preprocessing_protocol":{"config_path":str(cfg_path),"config_sha256":digest(cfg_path),"qwen_model":cfg["paraphraser"]["model_id"],"qwen_local_path":cfg["paraphraser"]["path"],"prompt_sha256":cfg["paraphraser"]["prompt_sha256"],"identity_fallback_limit":200,"threshold_modified":False,"threshold_tuning":False},"evidence":evidence,"configuration_changed":False,"artifacts_deleted":False,"downstream_execution":{"student_training":"NOT_RUN","detector":"NOT_RUN","utility":"NOT_RUN"},"detector":{"status":"NOT_RUN"},"utility":{"status":"NOT_RUN"},"limitations":["Frozen preprocessing acceptance gate failed; changing the threshold would change the scientific configuration."],"bounded_conclusion":conclusion+" This is not characterized as a watermark, detector, Student-training, or Qwen scientific failure."}
+ out=a.project/f"results/{a.method}/experiment_bb";write(out/"full_experiment_log.json",full);write(out/"result.json",full);write(out/"readiness.json",{"run_id":a.run_id,"status":STATUS,"identity_fallback_count":202,"acceptance_limit":200,"threshold_modified":False,"student_training":"NOT_RUN","detector":"NOT_RUN","utility":"NOT_RUN","evidence":evidence})
+ report=f"# CTCC Experiment Bb — formal blocked closure\n\nRun `{a.run_id}` has status **{STATUS}**. {conclusion}\n\nParent provenance and frozen Qwen/protocol identity are preserved in the full experiment log. At the gate there were `{len(completed)}` resolved records and `{len(rows)}` journal rows. The threshold was neither modified nor tuned. This is not a watermark failure, detector failure, Student-training failure, or Qwen scientific failure.\n\nStudent training, detector, and utility were not run. All attempts, journal, progress artifacts, and failure evidence remain in place; no canonical artifact was deleted.\n\nReason: {a.reason}\n"
+ report_path=a.project/f"docs/reproduction_reports/{a.method}_experiment_bb_report.md";report_path.parent.mkdir(parents=True,exist_ok=True);report_path.write_text(report,encoding="utf-8")
+ index_path=a.project/"results/experiment_full_logs_index.json";index=json.loads(index_path.read_text());rel=f"results/{a.method}/experiment_bb/full_experiment_log.json";index["objects"]=[x for x in index["objects"] if x.get("full_log_path")!=rel];index["objects"].append({"method":"CTCC","role":"bb_student","experiment":"Bb","run_id":a.run_id,"full_log_path":rel,"full_log_sha256":digest(out/"full_experiment_log.json"),"scientific_status":STATUS,"watermark_evaluation_available":False,"utility_available":False,"checkpoint_localization_support":False,"telemetry_records":0});index["object_count"]=len(index["objects"]);index["generated_at"]=datetime.now(timezone.utc).isoformat();write(index_path,index)
+ entry=f"## CTCC Bb blocked closure — {datetime.now(timezone.utc).date()}\n\n<!-- CTCC_BB_BLOCKED -->\nRun `{a.run_id}`: `{STATUS}`. {conclusion} Threshold unchanged; no downstream Student/detector/utility was run."
+ for name in ("PROJECT_STATUS.md","TODO.md","EXPERIMENT_LOG.md","CODEX_LOG.md"):append(a.project/name,"CTCC_BB_BLOCKED",entry)
+ state=json.loads(a.state.read_text());record=state["methods"][a.method];record["status"]=STATUS;record["stage"]=a.stage;record["history"].append({"stage":a.stage,"event":"FORMALLY_BLOCKED","status":STATUS,"at":datetime.now(timezone.utc).isoformat(),"reason":a.reason,"evidence_log":a.evidence_log});state["status"]="RUNNING";state["active_large_stage"]=None;state["updated_at"]=datetime.now(timezone.utc).isoformat();write(a.state,state)
+ print(json.dumps({"status":STATUS,"method":a.method,"evidence":evidence},indent=2))
+if __name__=="__main__":main()
