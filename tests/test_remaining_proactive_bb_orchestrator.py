@@ -10,6 +10,7 @@ class RemainingProactiveBbOrchestratorTests(unittest.TestCase):
         self.assertEqual(("ctcc", "PREPROCESSING"), parse_point("ctcc/preprocessing"))
 
     def test_state_transitions_and_resume_shape(self):
+        self.assertEqual("PARENT_READY", next_stage("PARENT_PREPARING"))
         self.assertEqual("PREPROCESSING", next_stage("PARENT_READY"))
         self.assertEqual("COMPLETE", next_stage("CLOSING"))
         self.assertIsNone(next_stage("COMPLETE"))
@@ -18,7 +19,7 @@ class RemainingProactiveBbOrchestratorTests(unittest.TestCase):
         self.assertIsNone(state["active_large_stage"])
 
     def test_gpu_serialization_categories(self):
-        self.assertEqual({"PREPROCESSING", "TRAINING", "DETECTING", "UTILITY"}, LARGE)
+        self.assertEqual({"PARENT_PREPARING", "PREPROCESSING", "TRAINING", "DETECTING", "UTILITY"}, LARGE)
 
     def test_no_cross_method_paths_or_archive_targets(self):
         runs = {m: f"{m}_bb_20260904_000000" for m in METHODS}

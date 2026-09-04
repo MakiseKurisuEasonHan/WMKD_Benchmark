@@ -9,8 +9,10 @@ from passive5_shared_bb import file_sha256, read_jsonl, records_sha256
 HIST={
  "ctcc":{"teacher":"95/95 triggers; negatives 0/205","base":"0/95 triggers","ba":"0/95 triggers; negatives 0/205","arc":0.48378839590443684,"truth":0.4506136480297226},
  "iseal":{"teacher":"179/200; mean BLEU 69.171651","base":"0/200; mean BLEU 2.332514","ba":"0/200; mean BLEU 2.589326","arc":0.4812286689419795,"truth":0.4498178809933709},
+ "pnfp":{"teacher":"956/1024","base":"1/1024","ba":"98/1024","arc":0.478668942,"truth":0.463479842},
+ "scw":{"teacher":"p=0","base":"p=0.9199569225","ba":"p=0.8440861702","arc":0.48976109215017066,"truth":0.4747341900819149},
 }
-DISPLAY={"ctcc":"CTCC","iseal":"iSeal"}
+DISPLAY={"ctcc":"CTCC","iseal":"iSeal","pnfp":"PN-FP","scw":"SCW"}
 def load(p):return json.loads(Path(p).read_text(encoding="utf-8"))
 def write(p,v):p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
 def append(path,marker,text):
@@ -21,8 +23,12 @@ def main():
  cfg=load(a.project/f"configs/distillation/{m}_bb_{a.run_id}.json");pairs=read_jsonl(run/"dataset/frozen_paired_qa.jsonl");qa=load(run/"audit/quality_audit.json");tele=load(run/"metrics/training_telemetry.json");reload=load(run/"metrics/reload_validation.json");da=load(run/"archive/processed20k_modelscope.json");sa=load(run/"archive/student_modelscope.json");u=load(run/"evaluation/utility.json")["student"]
  if m=="ctcc":
   d=load(run/"evaluation/detector.json")["summary"];bb=f"{d['categories']['trigger']['activations']}/95 triggers; negatives {d['combined_negatives']['false_activations']}/205";det={"trigger":d["categories"]["trigger"],"combined_negatives":d["combined_negatives"],"generation_errors":d["generation_errors"],"fresh_process_reload":d["fresh_process_reload"]};san=load(run/"evaluation/generation_sanity.json")
- else:
+ elif m=="iseal":
   d=load(run/"evaluation/detector_and_generation.json");g=d["groups"]["registered"];bb=f"{round(g['teacher_success_rate']*g['count'])}/200; mean BLEU {g['teacher_mean_sentence_bleu']:.6f}";det={"registered":g,"held_out":d["groups"]["held_out"],"ordinary_generation":d["ordinary_generation"]};san=d["ordinary_generation"]
+ elif m=="pnfp":
+  d=load(run/"evaluation/detector.json");p=load(run/"evaluation/detector_input_provenance.json");bb=f"{d['detected']}/1024";det={"detected":d["detected"],"total":1024,"detection_rate":d["detection_rate"],"invalid_samples":d["invalid_samples"],"evaluation_errors":d["evaluation_errors"],"detector_input":p};san=load(run/"evaluation/generation_sanity.json")
+ else:
+  d=load(run/"evaluation/detector.json");p=load(run/"evaluation/detector_input_provenance.json");bb=f"p={d['primary']['p_value']}";det={"alpha":d["alpha"],"primary":d["primary"],"curve":d["curve"],"detector_input":p};san=load(run/"evaluation/generation_sanity.json")
  hist=HIST[m];arc=u["arc_challenge_acc_norm"];truth=u["truthfulqa_mc2_acc"]
  conclusion=f"Under this single standardized same-backbone Bb setting, {name} detector behavior was {bb}. Utility relative to Ba changed by ARC {arc-hist['arc']:+.6f} and TruthfulQA {truth-hist['truth']:+.6f}. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory."
  full={"schema_version":"wmkd.full-experiment-log.v1","identity":{"project":"WMKD_Benchmark","method":name,"experiment":"Bb","canonical_run_id":a.run_id},"status":"COMPLETED","scientific_status":"COMPLETE","parent_dataset_origin":"original_canonical_parent","parent":cfg["source_dataset"],"preprocessing":{"status":"COMPLETE","record_count":20000,"paired_content_sha256":records_sha256(pairs),"physical_sha256":file_sha256(run/"dataset/frozen_paired_qa.jsonl"),"quality":qa},"processed20k_archive":da,"student_initialization":{"fresh_canonical":True,"resume":False,"base_revision":cfg["student"]["revision"]},"training":{"status":"COMPLETE","steps":tele["steps"],"epochs":3,"learning_rate":1e-5,"precision":"bf16","effective_batch":8,"train_loss":tele["trainer_metrics"]["train_loss"],"runtime_seconds":tele["train_elapsed_seconds"],"finite_loss":tele["finite_loss"]},"fresh_reload":reload,"student_archive":sa,"detector":{"status":"COMPLETE","historical":{"teacher":hist["teacher"],"base":hist["base"],"ba":hist["ba"]},"bb":bb,"result":det},"utility":{"status":"COMPLETE","ba":{"arc_challenge_acc_norm":hist["arc"],"truthfulqa_mc2":hist["truth"]},"bb":{"arc_challenge_acc_norm":arc,"truthfulqa_mc2":truth},"delta":{"arc_challenge_acc_norm":arc-hist["arc"],"truthfulqa_mc2":truth-hist["truth"]},"generation_sanity_pass":san["passed"]},"failures":[],"continuations":[],"limitations":["one standardized configuration","same-backbone Student","no checkpoint-level detector trajectory","utility limited to frozen scope","no universal or causal claim"],"bounded_conclusion":conclusion,"artifacts":{"runtime_root":str(run)}}

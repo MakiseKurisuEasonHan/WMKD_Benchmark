@@ -11,11 +11,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 METHODS = ("ctcc", "iseal", "pnfp", "scw")
-STAGES = ("PARENT_READY", "PREPROCESSING", "PROCESSED_READY", "PROCESSED_ARCHIVED",
+STAGES = ("PARENT_PREPARING", "PARENT_READY", "PREPROCESSING", "PROCESSED_READY", "PROCESSED_ARCHIVED",
           "PARITY_PASS", "TRAINING", "STUDENT_READY", "STUDENT_ARCHIVED",
           "DETECTING", "DETECTOR_COMPLETE", "UTILITY", "UTILITY_COMPLETE",
           "CLOSING", "COMPLETE")
-LARGE = {"PREPROCESSING", "TRAINING", "DETECTING", "UTILITY"}
+LARGE = {"PARENT_PREPARING", "PREPROCESSING", "TRAINING", "DETECTING", "UTILITY"}
 
 
 def now() -> str:
@@ -53,7 +53,7 @@ def initial_state(methods: list[str], git_head: str, runs: dict[str, str]) -> di
     return {"schema_version": "wmkd.proactive-bb-orchestrator.v1", "status": "RUNNING",
             "created_at": now(), "updated_at": now(), "git_start": git_head,
             "method_order": methods, "single_large_gpu_task": True, "active_large_stage": None,
-            "methods": {m: {"run_id": runs[m], "stage": "PARENT_READY", "status": "NOT_STARTED",
+            "methods": {m: {"run_id": runs[m], "stage": "PARENT_PREPARING", "status": "NOT_STARTED",
                               "history": [], "failure": None} for m in methods}}
 
 
