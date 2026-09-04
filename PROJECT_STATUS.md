@@ -226,3 +226,8 @@ Fresh canonical full-parameter Student run `evertracer_bb_student_20260904_03383
 
 <!-- EVERTRACER_BB_DETECTOR_20260904 -->
 Formal frozen-detector run `evertracer_bb_detector_20260904_051046` evaluated the canonical Bb Student with exact A/Ba reference, neighborhoods, score, and FPR≤5% operating semantics. All 200/200 samples completed with zero errors/non-finite scores. Member-oriented AUC/TPR were `0.4757/0.08` versus Teacher `1.0000/1.00`, Base `0.4417/0.05`, and Ba `0.4987/0.06`. The Bb result remains close to Base/Ba and far from Teacher; no retention percentage, universal-removal claim, causal UP claim, or checkpoint disappearance claim is made. Stage: `DETECTOR_COMPLETE_UTILITY_PENDING`; utility, CTCC Bb, and iSeal Bb remain unstarted.
+
+## EverTracer Bb final closure — 2026-09-04
+
+<!-- EVERTRACER_BB_UTILITY_20260904 -->
+Utility run `evertracer_bb_utility_20260904_061500` exactly reused the Ba harness and completed ARC 1172/1172 (`acc_norm=0.498293515`), TruthfulQA 817/817 (`MC2=0.475596561`), and ordinary generation 5/5, with zero errors. Versus Ba the differences were ARC `-0.006825939` and TruthfulQA `-0.018118059`. Combined with Bb detector AUC/TPR `0.4757/0.08`, the final Student remained Base/Ba-like in low detectability while retaining broadly comparable tested utility. EverTracer Bb is `COMPLETE`; CTCC Bb and iSeal Bb were not started.

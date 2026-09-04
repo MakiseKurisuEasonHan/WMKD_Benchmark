@@ -12,7 +12,7 @@ class EverTracerBbPreprocessingClosureTests(unittest.TestCase):
     def load(self, relative: str) -> dict:
         return json.loads((RESULT / relative).read_text(encoding="utf-8"))
 
-    def test_readiness_records_detector_closure_without_utility(self):
+    def test_readiness_records_final_closure(self):
         value = self.load("readiness.json")
         self.assertEqual("COMPLETE", value["evertracer_bb_preprocessing"])
         self.assertTrue(value["processed20k_archived"])
@@ -22,9 +22,22 @@ class EverTracerBbPreprocessingClosureTests(unittest.TestCase):
         self.assertEqual("PASS", value["student_fresh_process_reload"])
         self.assertTrue(value["detector_started"])
         self.assertTrue(value["detector_complete"])
-        self.assertEqual("DETECTOR_COMPLETE_UTILITY_PENDING", value["status"])
-        for key in ("utility_started", "ctcc_bb_started", "iseal_bb_started"):
+        self.assertEqual("COMPLETE", value["status"])
+        self.assertTrue(value["utility_started"])
+        self.assertTrue(value["utility_complete"])
+        for key in ("ctcc_bb_started", "iseal_bb_started"):
             self.assertFalse(value[key])
+
+    def test_utility_is_ba_matched_and_complete(self):
+        value = self.load("utility/utility_result.json")
+        self.assertEqual("COMPLETED", value["status"])
+        self.assertTrue(value["protocol"]["exact_reuse_from_ba"])
+        self.assertEqual(1172, value["arc_challenge"]["completed_samples"])
+        self.assertEqual(817, value["truthfulqa_mc2"]["completed_samples"])
+        self.assertEqual(0, value["execution"]["errors"])
+        self.assertEqual("PASS", value["generation_sanity"]["status"])
+        self.assertAlmostEqual(0.49829351535836175, value["arc_challenge"]["value"])
+        self.assertAlmostEqual(0.47559656098277925, value["truthfulqa_mc2"]["value"])
 
     def test_detector_result_is_complete_and_bounded(self):
         value = self.load("detector/detector_result.json")

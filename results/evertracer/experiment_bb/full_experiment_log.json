@@ -6,8 +6,8 @@
     "experiment": "Bb",
     "canonical_run_id": "evertracer_bb_20260903_130000"
   },
-  "status": "PARTIAL",
-  "scientific_status": "DETECTOR_COMPLETE_UTILITY_PENDING",
+  "status": "COMPLETE",
+  "scientific_status": "COMPLETE",
   "scientific_parentage": {
     "source_experiment": "EverTracer Ba",
     "parent_run_id": "evertracer_ba_20260829_124055",
@@ -24,7 +24,10 @@
     "execution_scope": "full20k UP preprocessing, freeze, audit, formatter, parity, and archive only",
     "student_training_host": "autodl-container-9235478639-4a175847",
     "student_training_git_baseline": "78617904d9d4029138cdb11cc0feb7526ffae897",
-    "student_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    "student_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "utility_host": "autodl-container-9235478639-4a175847",
+    "utility_git_baseline": "0dc47eb9cb146ba84720f8363083bbc0d0d005de",
+    "utility_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
   },
   "preprocessing": {
     "status": "COMPLETED",
@@ -233,8 +236,114 @@
     "utility_status": "NOT_STARTED"
   },
   "utility": {
-    "status": "NOT_STARTED",
-    "result": null
+    "schema_version": "wmkd.evertracer-bb-utility-result.v1",
+    "method": "EverTracer",
+    "experiment": "Bb",
+    "status": "COMPLETED",
+    "student_run_id": "evertracer_bb_student_20260904_033837",
+    "utility_run_id": "evertracer_bb_utility_20260904_061500",
+    "student_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
+    "git_head_at_launch": "0dc47eb9cb146ba84720f8363083bbc0d0d005de",
+    "runtime_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_utility/evertracer_bb_utility_20260904_061500",
+    "execution": {
+      "start": "2026-09-04T05:31:29Z",
+      "utility_end": "2026-09-04T05:32:40Z",
+      "end": "2026-09-04T05:32:50Z",
+      "utility_runtime_seconds": 71,
+      "generation_runtime_seconds": 5.384786430746317,
+      "exit_code": 0,
+      "errors": 0,
+      "silent_drops": 0
+    },
+    "protocol": {
+      "exact_reuse_from_ba": true,
+      "offline": true,
+      "batch_size": 8,
+      "dtype": "bfloat16",
+      "apply_chat_template": true,
+      "scoring_harness": "lm_eval.simple_evaluate",
+      "tasks": [
+        "arc_challenge",
+        "truthfulqa_mc2"
+      ],
+      "dataset_provenance": {
+        "arc_challenge": {
+          "id": "allenai/ai2_arc",
+          "config": "ARC-Challenge",
+          "revision": "210d026faf9955653af8916fad021475a3f00453",
+          "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--allenai--ai2_arc/snapshots/210d026faf9955653af8916fad021475a3f00453",
+          "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453"
+        },
+        "truthfulqa_mc2": {
+          "id": "truthful_qa",
+          "config": "multiple_choice",
+          "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+          "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--truthful_qa/snapshots/741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+          "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/truthful_qa/multiple_choice/0.0.0/741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+        }
+      },
+      "immutable_a_summary": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont2/reports/summary.json",
+      "generation_script": "scripts/evertracer_sanity.py",
+      "generation_max_new_tokens": 96,
+      "generation_decoding": "greedy"
+    },
+    "arc_challenge": {
+      "expected_samples": 1172,
+      "completed_samples": 1172,
+      "errors": 0,
+      "metric": "acc_norm",
+      "value": 0.49829351535836175,
+      "stderr": 0.014611305705057077
+    },
+    "truthfulqa_mc2": {
+      "expected_samples": 817,
+      "completed_samples": 817,
+      "errors": 0,
+      "metric": "MC2",
+      "value": 0.47559656098277925,
+      "stderr": 0.014861620246277872
+    },
+    "generation_sanity": {
+      "status": "PASS",
+      "expected": 5,
+      "completed": 5,
+      "errors": 0,
+      "empty_outputs": 0,
+      "artifact": "results/evertracer/experiment_bb/utility/generation_sanity.json"
+    },
+    "historical": {
+      "base": {
+        "arc_challenge_acc_norm": 0.4462457337883959,
+        "truthfulqa_mc2": 0.5056865097575013
+      },
+      "teacher": {
+        "arc_challenge_acc_norm": 0.42150170648464164,
+        "truthfulqa_mc2": 0.5147979684440541
+      },
+      "ba_student": {
+        "arc_challenge_acc_norm": 0.5051194539249146,
+        "truthfulqa_mc2": 0.493714619952569
+      },
+      "bb_student": {
+        "arc_challenge_acc_norm": 0.49829351535836175,
+        "truthfulqa_mc2": 0.47559656098277925
+      }
+    },
+    "bb_minus_ba": {
+      "arc_challenge_acc_norm": -0.0068259385665528916,
+      "truthfulqa_mc2": -0.01811805896978974
+    },
+    "artifacts": {
+      "utility": {
+        "sha256": "90ed21012725c8cba17bb3b9cee4d25f4e04b9fcfd6a2d26e885d1965e1dd06a",
+        "size": 3431
+      },
+      "generation_sanity": {
+        "sha256": "2690dc738b28546ca598b83280d2ba5c0fd6728e7ec59bf7b3c71a5462bc7488",
+        "size": 2393
+      }
+    },
+    "bounded_interpretation": "Under the frozen standardized utility setting, the Bb Student retained broadly comparable downstream utility to the Ba Student: ARC-Challenge acc_norm was 0.006826 lower and TruthfulQA MC2 was 0.018118 lower. These single-run results cover only the specified benchmarks and do not establish universal model-quality preservation or statistical significance."
   },
   "artifacts": {
     "provenance_manifest": "results/evertracer/experiment_bb/provenance_manifest.json",
@@ -246,11 +355,14 @@
     "detector_result": "results/evertracer/experiment_bb/detector/detector_result.json",
     "detector_raw": "results/evertracer/experiment_bb/detector/student_verification_raw.json",
     "detector_aggregate": "results/evertracer/experiment_bb/detector/student_verification.json",
-    "detector_run_manifest": "results/evertracer/experiment_bb/detector/detector_run_manifest.json"
+    "detector_run_manifest": "results/evertracer/experiment_bb/detector/detector_run_manifest.json",
+    "utility_result": "results/evertracer/experiment_bb/utility/utility_result.json",
+    "utility_raw": "results/evertracer/experiment_bb/utility/utility.json",
+    "generation_sanity": "results/evertracer/experiment_bb/utility/generation_sanity.json"
   },
   "failures": [],
   "continuations": [],
-  "bounded_conclusion": "Under the tested standardized Bb attack, the final Student remained close to the canonical Base/Ba detector regime and far from the strongly fingerprinted Teacher. Relative to Ba, Bb had a 0.0230 lower AUC and a 0.02 higher TPR at the same FPR limit; these mixed small changes do not establish a material increase in EverTracer evidence or a causal effect of UP. Utility remains NOT_STARTED.",
+  "bounded_conclusion": "Under the tested standardized UP plus same-backbone behavioral-distillation setting, the final Bb Student did not re-establish the Teacher's strong EverTracer verification signal and remained in the Base/Ba-like low-detectability regime. Frozen utility remained broadly comparable to Ba on ARC-Challenge and TruthfulQA, with small negative absolute differences; this does not establish a causal UP effect, universal removal, or universal quality preservation.",
   "reload_validation": {
     "schema_version": "wmkd.evertracer-bb-student-reload.v1",
     "status": "PASS",
@@ -289,5 +401,15 @@
     "redownload_reload": "PASS",
     "package_manifest_sha256": "37c8e012cf80a03f77962814b0e0d6547d25125799385c7dff6d14f55c409911",
     "source_manifest_sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102"
-  }
+  },
+  "final_status": "COMPLETE",
+  "detector_signal": "BASE_BA_LIKE_LOW_DETECTABILITY",
+  "utility_status": "BROADLY_COMPARABLE_TO_BA_ON_FROZEN_SCOPE",
+  "limitations": [
+    "one standardized Ba/Bb configuration",
+    "same-backbone Student",
+    "no checkpoint-level detector trajectory",
+    "utility limited to the frozen benchmark scope",
+    "no universal robustness or removal claim"
+  ]
 }

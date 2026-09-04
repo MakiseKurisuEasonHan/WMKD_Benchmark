@@ -14,10 +14,10 @@
   "safe_to_start_evertracer_student_training": false,
   "student_training_started": true,
   "detector_started": true,
-  "utility_started": false,
+  "utility_started": true,
   "ctcc_bb_started": false,
   "iseal_bb_started": false,
-  "next_action": "WAIT_FOR_EXPLICIT_UTILITY_INSTRUCTION",
+  "next_action": "WAIT_FOR_EXPLICIT_NEXT_INSTRUCTION",
   "student_run_id": "evertracer_bb_student_20260904_033837",
   "student_training_complete": true,
   "student_fresh_process_reload": "PASS",
@@ -25,10 +25,13 @@
   "student_archive_repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
   "student_archive_visibility": "PRIVATE",
   "student_archive_independent_redownload_verified": true,
-  "status": "DETECTOR_COMPLETE_UTILITY_PENDING",
+  "status": "COMPLETE",
   "detector_complete": true,
   "detector_run_id": "evertracer_bb_detector_20260904_051046",
   "detector_auc": 0.4757,
   "detector_tpr": 0.08,
-  "safe_to_start_evertracer_utility": true
+  "safe_to_start_evertracer_utility": false,
+  "utility_complete": true,
+  "utility_run_id": "evertracer_bb_utility_20260904_061500",
+  "safe_to_close_evertracer_bb": true
 }

@@ -1,4 +1,4 @@
-# EverTracer Experiment Bb — detector complete, utility pending
+# EverTracer Experiment Bb — final scientific closure
 
 Preprocessing run `evertracer_bb_20260903_130000` remains the canonical processed20k source. It contains exactly 20,000 records; paired content/file/order SHA256 are `0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55`, `41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853`, and `49d42164d0aa254385d0d9b78596d7369a50ad6070d4e47e32b3f74c73a6be73`. SFT content/file SHA256 are `a4dd0c4dcd5141a62d380a6577083d48f80fb04c0e2a8b2b41f44dcb47bffff4` and `2fc1acd16f8e7239924948f48d420eca4b2ded50ae90aefec4f5fb0536a7f91f`; Ba/Bb parity passed 19/19 fields.
 
@@ -30,4 +30,22 @@ Bb minus Teacher/Base/Ba AUC differences are `-0.5243`, `+0.0340`, and `-0.0230`
 
 Under the tested standardized Bb attack, the final Student remained close to the canonical Base/Ba detector regime and far from the strongly fingerprinted Teacher. Relative to Ba, Bb had a 0.0230 lower AUC and a 0.02 higher TPR at the same FPR limit; these mixed small changes do not establish a material increase in EverTracer evidence or a causal effect of UP. AUC is not a watermark-retention percentage.
 
-All 200 expected samples completed with zero errors, zero silent drops, and zero non-finite scores. Evidence is limited to the final Student; no checkpoint-level trajectory was measured. Utility remains `NOT_STARTED`, so the current stage is `DETECTOR_COMPLETE_UTILITY_PENDING`, not total EverTracer Bb closure.
+All 200 expected samples completed with zero errors, zero silent drops, and zero non-finite scores. Evidence is limited to the final Student; no checkpoint-level trajectory was measured. At the detector boundary utility was `NOT_STARTED`; the final utility section below supersedes that stage while preserving the historical boundary.
+
+## Frozen Ba-matched utility and final synthesis
+
+<!-- EVERTRACER_BB_UTILITY_20260904 -->
+Run `evertracer_bb_utility_20260904_061500` evaluated only the canonical Bb final Student with the exact Ba utility harness: offline ARC-Challenge revision `210d026faf9955653af8916fad021475a3f00453`, TruthfulQA multiple-choice revision `741b8276f2d1982aa3d5b832d3ee81ed3b896490`, chat template, BF16, batch 8, and the same five-prompt greedy generation sanity.
+
+| Model | ARC-Challenge acc_norm | TruthfulQA MC2 |
+| --- | ---: | ---: |
+| Base | 0.446246 | 0.505687 |
+| Teacher | 0.421502 | 0.514798 |
+| Ba Student | 0.505119 | 0.493715 |
+| Bb Student | **0.498294** | **0.475597** |
+
+Bb minus Ba was `-0.006826` ARC and `-0.018118` TruthfulQA. ARC completed 1172/1172 and TruthfulQA 817/817 with zero errors or silent drops. Generation sanity passed 5/5 with no empty output, prompt echo, catastrophic repetition, or generation error.
+
+Under the tested standardized UP plus same-backbone behavioral-distillation setting, the final Bb Student did not re-establish the Teacher's strong EverTracer verification signal and remained in the Base/Ba-like low-detectability regime. Frozen utility remained broadly comparable to Ba on ARC-Challenge and TruthfulQA, with small negative absolute differences; this does not establish a causal UP effect, universal removal, or universal quality preservation.
+
+Limitations: one standardized Ba/Bb configuration; same-backbone Student; no checkpoint-level detector trajectory; utility limited to the frozen benchmark scope; no universal robustness/removal or universal model-quality claim. Final status: `COMPLETE`.

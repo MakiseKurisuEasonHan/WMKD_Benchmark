@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-03T15:28:59.174301+00:00",
+  "generated_at": "2026-09-04T05:35:32.617939+00:00",
   "object_count": 27,
   "objects": [
     {
@@ -458,10 +458,10 @@
       "experiment": "Bb",
       "run_id": "evertracer_bb_20260903_130000",
       "full_log_path": "results/evertracer/experiment_bb/full_experiment_log.json",
-      "full_log_sha256": "8951dd690522d9314d5f54c78b32abc41636d8417d1eedcf6a891373a1c30e1f",
-      "scientific_status": "DETECTOR_COMPLETE_UTILITY_PENDING",
+      "full_log_sha256": "7c700d7316068c84aae0d52c245727a207a3782813de48bb1fcdeccd688ef5ab",
+      "scientific_status": "COMPLETE",
       "watermark_evaluation_available": true,
-      "utility_available": false,
+      "utility_available": true,
       "shared_attack": false,
       "dataset_sha256": "0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55",
       "artifact_manifest_path": "results/evertracer/experiment_bb/artifact_manifest.json",
@@ -477,7 +477,8 @@
       "member_oriented_auc": 0.4757,
       "member_oriented_tpr_at_fpr_limit": 0.08,
       "student_archive_independent_redownload_verified": true,
-      "telemetry_records": 750
+      "telemetry_records": 7500,
+      "utility_run_id": "evertracer_bb_utility_20260904_061500"
     }
   ]
 }
