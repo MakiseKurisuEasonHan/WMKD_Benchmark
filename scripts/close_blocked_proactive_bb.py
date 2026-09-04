@@ -13,7 +13,8 @@ def append(path,marker,text):
 def main():
  p=argparse.ArgumentParser();p.add_argument("--project",type=Path,required=True);p.add_argument("--data-root",type=Path,required=True);p.add_argument("--state",type=Path,required=True);p.add_argument("--method",choices=("ctcc",),required=True);p.add_argument("--run-id",required=True);p.add_argument("--stage",required=True);p.add_argument("--reason",required=True);p.add_argument("--evidence-log",required=True);a=p.parse_args()
  run=a.data_root/f"runs/{a.method}_bb/{a.run_id}";journal=run/"paraphrase/attempts.jsonl";rows=[json.loads(x) for x in journal.read_text(encoding="utf-8").splitlines() if x.strip()]
- completed=[x for x in rows if "final_answer" in x];fallback=[x for x in completed if x.get("identity_fallback")]
+ completed=[x for x in rows if x.get("error") is None and x.get("processing_mode")];fallback=[x for x in completed if x.get("identity_fallback")]
+ if len(completed)!=len({x["sample_id"] for x in completed}):raise RuntimeError("RESOLVED_SAMPLE_ID_UNIQUENESS_GATE")
  if len(fallback)!=202:raise RuntimeError(f"EXACT_FALLBACK_EVIDENCE_GATE expected=202 observed={len(fallback)}")
  cfg_path=a.project/f"configs/distillation/{a.method}_bb_{a.run_id}.json";cfg=json.loads(cfg_path.read_text(encoding="utf-8"));limit=cfg["paraphrase"]["identity_fallback"]["full20k_max_count"]
  if limit!=200:raise RuntimeError(f"FROZEN_LIMIT_GATE expected=200 observed={limit}")
