@@ -13,5 +13,19 @@
   "generation_config_identity": "d1a9fc6ab0aef4fc6230576f3dcf98b8bfd68d7e1eadda4d6496a58364ae0083",
   "privacy_audit_sha256": "c07e0761035552d0ca4aa571a8b9acbbe169baa792d75a524fbcc9afcbca8809",
   "high_entropy_inheritance_sha256": "255f9b70642c2da56d7e83448bcf5bba287b8481270157a501a77693f052b0f4",
-  "modelscope_package_manifest_sha256": "3e25a4401e9e91c544c133db3790ed31bcf131a9a5a25b90615c259b0bef34fe"
+  "modelscope_package_manifest_sha256": "3e25a4401e9e91c544c133db3790ed31bcf131a9a5a25b90615c259b0bef34fe",
+  "student": {
+    "run_id": "evertracer_bb_student_20260904_033837",
+    "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "sft_dataset_sha256": "a4dd0c4dcd5141a62d380a6577083d48f80fb04c0e2a8b2b41f44dcb47bffff4",
+    "student_manifest_sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102",
+    "full_parameter": true,
+    "resume": false,
+    "fresh_process_reload": "PASS",
+    "archive_repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+    "archive_visibility": "PRIVATE",
+    "archive_manifest_sha256": "37c8e012cf80a03f77962814b0e0d6547d25125799385c7dff6d14f55c409911",
+    "independent_redownload_verified": true
+  }
 }

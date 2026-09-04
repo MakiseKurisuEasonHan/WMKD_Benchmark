@@ -1,10 +1,10 @@
 {
   "schema_version": "wmkd.artifact-manifest.v1",
   "run_id": "evertracer_bb_20260903_130000",
-  "artifact_type": "preprocessing_closure_package",
-  "model_modified": false,
+  "artifact_type": "student_training_and_archive_closure_package",
+  "model_modified": true,
   "dataset_archived": true,
-  "student_artifact": null,
+  "student_artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
   "detector_artifact": null,
   "utility_artifact": null,
   "tracked_evidence": [
@@ -13,6 +13,16 @@
     "results/evertracer/experiment_bb/evidence/quality_audit.json",
     "results/evertracer/experiment_bb/evidence/privacy_audit.json",
     "results/evertracer/experiment_bb/evidence/high_entropy_inheritance.json",
-    "results/evertracer/experiment_bb/evidence/modelscope_archive.json"
-  ]
+    "results/evertracer/experiment_bb/evidence/modelscope_archive.json",
+    "results/evertracer/experiment_bb/evidence/student_manifest.json",
+    "results/evertracer/experiment_bb/evidence/training_exit.json",
+    "results/evertracer/experiment_bb/evidence/reload_validation.json",
+    "results/evertracer/experiment_bb/evidence/archive_redownload_reload.json",
+    "results/evertracer/experiment_bb/evidence/student_modelscope_archive.json",
+    "results/evertracer/experiment_bb/training_summary.json",
+    "results/evertracer/experiment_bb/result.json"
+  ],
+  "student_run_id": "evertracer_bb_student_20260904_033837",
+  "student_archive_repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+  "student_archive_verified": true
 }

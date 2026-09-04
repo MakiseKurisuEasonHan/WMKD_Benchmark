@@ -1,0 +1,38 @@
+{
+  "schema_version": "wmkd.evertracer-bb-result.v1",
+  "method": "EverTracer",
+  "experiment": "Bb",
+  "preprocessing_run_id": "evertracer_bb_20260903_130000",
+  "student_run_id": "evertracer_bb_student_20260904_033837",
+  "status": "STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING",
+  "training": {
+    "status": "COMPLETED",
+    "steps": 7500,
+    "epochs": 3,
+    "train_loss": 0.9608292924880981,
+    "finite_loss": true
+  },
+  "fresh_process_reload": {
+    "status": "PASS",
+    "nonfinite_count": 0,
+    "parameter_count": 3212749824
+  },
+  "student_archive": {
+    "status": "COMPLETED",
+    "EVERTRACER_BB_STUDENT_ARCHIVED": "YES",
+    "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+    "visibility": "PRIVATE",
+    "independent_redownload_verified": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_evertracer_bb_student_20260904_042855",
+    "redownload_reload": "PASS"
+  },
+  "detector": {
+    "status": "NOT_STARTED",
+    "result": null
+  },
+  "utility": {
+    "status": "NOT_STARTED",
+    "result": null
+  },
+  "bounded_conclusion": "Fresh canonical full-parameter Student training, integrity validation, private archive, independent redownload, and offline reload passed. Watermark retention and utility are not evaluated in this stage."
+}

@@ -454,21 +454,26 @@
     },
     {
       "method": "EverTracer",
-      "role": "proactive_bb_preprocessing",
+      "role": "proactive_bb_student_training",
       "experiment": "Bb",
       "run_id": "evertracer_bb_20260903_130000",
       "full_log_path": "results/evertracer/experiment_bb/full_experiment_log.json",
-      "full_log_sha256": "ecd56613699b2a6d7e0b9dc8cc44ed44cec361e4034efa9a8f17ce306c14f76c",
-      "scientific_status": "PREPROCESSING_COMPLETE_ARCHIVED_NO_TRAINING",
+      "full_log_sha256": "bad193cb3d657abb612f18c6eab3da6ea82329a92ad0a8f09613e286daab1369",
+      "scientific_status": "STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING",
       "watermark_evaluation_available": false,
       "utility_available": false,
       "shared_attack": false,
       "dataset_sha256": "0f23881da975d7b8262599690c85cfb5d1a90b2c3c1976efcaa8f651aa064c55",
       "artifact_manifest_path": "results/evertracer/experiment_bb/artifact_manifest.json",
       "readiness_path": "results/evertracer/experiment_bb/readiness.json",
+      "result_path": "results/evertracer/experiment_bb/result.json",
+      "student_manifest_path": "results/evertracer/experiment_bb/evidence/student_manifest.json",
       "report_path": "docs/reproduction_reports/evertracer_experiment_bb_report.md",
-      "modelscope_repo": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k",
-      "telemetry_records": 0
+      "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+      "processed20k_modelscope_repo": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k",
+      "student_training_run_id": "evertracer_bb_student_20260904_033837",
+      "student_archive_independent_redownload_verified": true,
+      "telemetry_records": 750
     }
   ]
 }

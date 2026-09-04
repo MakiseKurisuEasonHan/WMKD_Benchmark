@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETED",
+  "run_id": "evertracer_bb_student_20260904_033837",
+  "start": "2026-09-04T03:39:06.296564+00:00",
+  "end": "2026-09-04T04:16:05.545612+00:00",
+  "exit_code": 0,
+  "training_log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/logs/training.log",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/pnfp/env/bin/python",
+    "scripts/train_distillation_student.py",
+    "--model-path",
+    "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "--dataset",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/student_qa.jsonl",
+    "--output-dir",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student",
+    "--batch-size",
+    "8",
+    "--epochs",
+    "3",
+    "--learning-rate",
+    "1e-05",
+    "--seed",
+    "42",
+    "--max-length",
+    "1024",
+    "--telemetry",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/metrics/training_telemetry.json"
+  ]
+}

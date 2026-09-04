@@ -6,8 +6,8 @@
     "experiment": "Bb",
     "canonical_run_id": "evertracer_bb_20260903_130000"
   },
-  "status": "COMPLETED",
-  "scientific_status": "PREPROCESSING_COMPLETE_ARCHIVED_NO_TRAINING",
+  "status": "PARTIAL",
+  "scientific_status": "STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING",
   "scientific_parentage": {
     "source_experiment": "EverTracer Ba",
     "parent_run_id": "evertracer_ba_20260829_124055",
@@ -21,7 +21,10 @@
     "host": "autodl-container-8sfcmdj9gq-e8387159",
     "git_baseline": "1ad38d42cacc0fa34863050e7b184921d1a26c08",
     "gpu": "NVIDIA RTX PRO 6000",
-    "execution_scope": "full20k UP preprocessing, freeze, audit, formatter, parity, and archive only"
+    "execution_scope": "full20k UP preprocessing, freeze, audit, formatter, parity, and archive only",
+    "student_training_host": "autodl-container-9235478639-4a175847",
+    "student_training_git_baseline": "78617904d9d4029138cdb11cc0feb7526ffae897",
+    "student_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
   },
   "preprocessing": {
     "status": "COMPLETED",
@@ -61,7 +64,10 @@
       "dataset_sha256": "a4dd0c4dcd5141a62d380a6577083d48f80fb04c0e2a8b2b41f44dcb47bffff4",
       "file_sha256": "2fc1acd16f8e7239924948f48d420eca4b2ded50ae90aefec4f5fb0536a7f91f"
     },
-    "training_parity": {"status": "PASS", "fields_checked": 19},
+    "training_parity": {
+      "status": "PASS",
+      "fields_checked": 19
+    },
     "archive": {
       "status": "COMPLETED",
       "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k",
@@ -72,16 +78,99 @@
       "package_manifest_sha256": "3e25a4401e9e91c544c133db3790ed31bcf131a9a5a25b90615c259b0bef34fe"
     }
   },
-  "student_initialization": {"status": "NOT_STARTED", "fresh_canonical": true, "artifact": null},
-  "training": {"status": "NOT_STARTED", "telemetry": null},
-  "detector": {"status": "NOT_STARTED", "result": null},
-  "utility": {"status": "NOT_STARTED", "result": null},
+  "student_initialization": {
+    "status": "PASS",
+    "fresh_canonical": true,
+    "resume": false,
+    "artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+  },
+  "training": {
+    "schema_version": "wmkd.evertracer-bb-student-training-summary.v1",
+    "status": "COMPLETED",
+    "run_id": "evertracer_bb_student_20260904_033837",
+    "host": "autodl-container-9235478639-4a175847",
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
+    "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "dataset_sha256": "a4dd0c4dcd5141a62d380a6577083d48f80fb04c0e2a8b2b41f44dcb47bffff4",
+    "configuration": {
+      "epochs": 3,
+      "learning_rate": 1e-05,
+      "precision": "bf16",
+      "effective_batch_size": 8,
+      "full_parameter": true,
+      "lora": false,
+      "seed": 42,
+      "expected_steps": 7500,
+      "resume": false
+    },
+    "optimizer_steps": 7500,
+    "train_loss": 0.9608292924880981,
+    "train_runtime_seconds": 2196.682,
+    "finite_loss": true,
+    "mean_step_seconds": 0.2168650762702028,
+    "peak_vram_bytes": 32181834752,
+    "exit_code": 0,
+    "source_config_sha256": "3c068ac6dda2214d2f9534948491d12deac623cc251014e4924eb74f8a7bc24f",
+    "student_manifest_sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102"
+  },
+  "detector": {
+    "status": "NOT_STARTED",
+    "result": null
+  },
+  "utility": {
+    "status": "NOT_STARTED",
+    "result": null
+  },
   "artifacts": {
     "provenance_manifest": "results/evertracer/experiment_bb/provenance_manifest.json",
     "artifact_manifest": "results/evertracer/experiment_bb/artifact_manifest.json",
-    "evidence_directory": "results/evertracer/experiment_bb/evidence"
+    "evidence_directory": "results/evertracer/experiment_bb/evidence",
+    "training_summary": "results/evertracer/experiment_bb/training_summary.json",
+    "result": "results/evertracer/experiment_bb/result.json",
+    "student_archive_evidence": "results/evertracer/experiment_bb/evidence/student_modelscope_archive.json"
   },
   "failures": [],
   "continuations": [],
-  "bounded_conclusion": "EverTracer Bb preprocessing and private processed20k archival are complete. No Student training, detector, utility, CTCC Bb, or iSeal Bb execution occurred."
+  "bounded_conclusion": "Fresh canonical full-parameter Student training, integrity validation, private archive, independent redownload, and offline reload passed. Watermark retention and utility are not evaluated in this stage.",
+  "reload_validation": {
+    "schema_version": "wmkd.evertracer-bb-student-reload.v1",
+    "status": "PASS",
+    "run_id": "evertracer_bb_student_20260904_033837",
+    "fresh_process_reload": true,
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
+    "student_manifest_sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102",
+    "tokenizer": {
+      "class": "PreTrainedTokenizerFast",
+      "vocab_size": 128256,
+      "chat_template_present": true
+    },
+    "inference_smoke": {
+      "prompt": "Reply briefly with the name of Earth's natural satellite.",
+      "response": "The Moon",
+      "pass": true
+    },
+    "finite_weight_check": {
+      "parameter_count": 3212749824,
+      "nonfinite_count": 0,
+      "minimum": -0.98046875,
+      "maximum": 2.359375,
+      "pass": true
+    },
+    "adapter_files": [],
+    "peak_vram_bytes": 9980857344,
+    "runtime_seconds": 4.415100812911987
+  },
+  "student_archive": {
+    "status": "COMPLETED",
+    "EVERTRACER_BB_STUDENT_ARCHIVED": "YES",
+    "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+    "visibility": "PRIVATE",
+    "independent_redownload_verified": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_evertracer_bb_student_20260904_042855",
+    "redownload_reload": "PASS",
+    "package_manifest_sha256": "37c8e012cf80a03f77962814b0e0d6547d25125799385c7dff6d14f55c409911",
+    "source_manifest_sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102"
+  }
 }

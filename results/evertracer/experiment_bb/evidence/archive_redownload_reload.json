@@ -1,0 +1,28 @@
+{
+  "schema_version": "wmkd.evertracer-bb-student-reload.v1",
+  "status": "PASS",
+  "run_id": "evertracer_bb_student_20260904_033837_archive_redownload",
+  "fresh_process_reload": true,
+  "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_evertracer_bb_student_20260904_042855",
+  "student_manifest_sha256": "f9cc76a3f745296cf9a143e6396616b04740bd869dc8068bf4253afef2657f6d",
+  "tokenizer": {
+    "class": "PreTrainedTokenizerFast",
+    "vocab_size": 128256,
+    "chat_template_present": true
+  },
+  "inference_smoke": {
+    "prompt": "Reply briefly with the name of Earth's natural satellite.",
+    "response": "The Moon",
+    "pass": true
+  },
+  "finite_weight_check": {
+    "parameter_count": 3212749824,
+    "nonfinite_count": 0,
+    "minimum": -0.98046875,
+    "maximum": 2.359375,
+    "pass": true
+  },
+  "adapter_files": [],
+  "peak_vram_bytes": 9980857344,
+  "runtime_seconds": 4.321161508560181
+}

@@ -12,13 +12,30 @@ class EverTracerBbPreprocessingClosureTests(unittest.TestCase):
     def load(self, relative: str) -> dict:
         return json.loads((RESULT / relative).read_text(encoding="utf-8"))
 
-    def test_readiness_is_bounded_to_preprocessing(self):
+    def test_readiness_records_student_closure_without_evaluation(self):
         value = self.load("readiness.json")
         self.assertEqual("COMPLETE", value["evertracer_bb_preprocessing"])
         self.assertTrue(value["processed20k_archived"])
-        for key in ("student_training_started", "detector_started", "utility_started",
-                    "ctcc_bb_started", "iseal_bb_started"):
+        self.assertTrue(value["student_training_started"])
+        self.assertTrue(value["student_training_complete"])
+        self.assertTrue(value["student_archived"])
+        self.assertEqual("PASS", value["student_fresh_process_reload"])
+        self.assertEqual(
+            "STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING", value["status"]
+        )
+        for key in ("detector_started", "utility_started", "ctcc_bb_started", "iseal_bb_started"):
             self.assertFalse(value[key])
+
+    def test_student_archive_is_private_and_independently_verified(self):
+        value = self.load("evidence/student_modelscope_archive.json")
+        self.assertEqual("YES", value["EVERTRACER_BB_STUDENT_ARCHIVED"])
+        self.assertEqual("PRIVATE", value["visibility"])
+        self.assertTrue(value["independent_redownload_verified"])
+        self.assertTrue(value["source_hashes_unchanged"])
+        self.assertTrue(value["canonical_source_preserved"])
+        self.assertEqual(18, value["verification"]["file_count"])
+        self.assertTrue(all(x["match"] for x in value["verification"]["files"].values()))
+        self.assertNotIn("training_args.bin", value["uploaded_files"])
 
     def test_archive_is_private_and_independently_verified(self):
         value = self.load("evidence/modelscope_archive.json")

@@ -216,3 +216,8 @@ Wave-1 archival is now COMPLETE after explicit transfer approval. EverTracer, CT
 ## EverTracer Bb processed20k closure — 2026-09-04
 
 Formal run `evertracer_bb_20260903_130000` completed the authorized preprocessing-only scope: 20,000/20,000 successes from 20,541 attempts, no exhausted samples, frozen paired content/file SHA256 `0f23881d...64c55` / `41a44ffc...e6853`, zero final truncation or leakage, SFT formatter 20,000/20,000, and Ba/Bb parity 19/19. The four-file PRIVATE ModelScope archive `MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k` passed a new-directory independent redownload with byte/content/count/schema/order/provenance identity. `EVERTRACER_BB_PROCESSED20K_ARCHIVED = YES`. Student training, detector, utility, CTCC Bb, and iSeal Bb remain NOT_STARTED; wait for explicit instruction.
+
+## EverTracer Bb Student training/archive closure — 2026-09-04
+
+<!-- EVERTRACER_BB_STUDENT_ARCHIVE_20260904 -->
+Fresh canonical full-parameter Student run `evertracer_bb_student_20260904_033837` completed 7,500/7,500 steps (3 epochs, BF16, LR 1e-5, effective batch 8, seed 42, no resume) with finite loss and fresh-process reload PASS. The inference-ready Student was uploaded only after PRIVATE confirmation to `MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student`; a new independent download matched all 18 canonical filenames, sizes, and SHA256 values and passed offline reload. `EVERTRACER_BB_STUDENT_ARCHIVED = YES`. Status is `STUDENT_TRAINING_COMPLETE_ARCHIVED_DETECTOR_PENDING`; detector, utility, CTCC Bb, and iSeal Bb remain NOT_STARTED, and no watermark or utility conclusion is claimed.

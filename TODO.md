@@ -88,7 +88,7 @@ The older SCW checklist entries below are immutable historical workflow records.
 - [x] Upload the EverTracer A preferred teacher and Ba student to their fixed private ModelScope repositories with source and remote metadata verification.
 - [ ] Perform destination-side full SHA256 only during a future real download on another machine.
 - [x] Complete the authorized EverTracer closure and protected cleanup; reclaim 77.958 GiB while preserving every protected artifact.
-- [ ] EverTracer Bb remains NOT RUN / deferred.
+- [ ] EverTracer Bb Student training/archive complete; detector and utility remain NOT_STARTED.
 - [x] Select SCW as the fifth watermark and complete the authorized local-only Experiment A preparation; formal A remains NOT RUN.
 - [x] Deploy exact local SCW code to AutoDL, pin official source/model/datasets, pass runtime-effective preflight, and complete the isolated 4-step representative speed test without starting Formal A.
 - [x] Research and locally implement the SCW exact finite materialized-stream runtime adaptation with deterministic synthetic audit tests; classify it conditionally as `RUNTIME_DATA_ACCESS_ADAPTATION`, not A2.
@@ -268,4 +268,5 @@ Bb2 was subsequently frozen without a short-token bypass and its formal pilot is
 - [ ] Await a separate explicit prompt before starting Wave-1 full20k preprocessing; do not train Students in the preprocessing release turn.
 - [x] Complete and independently archive-verify EverTracer Bb processed20k (`evertracer_bb_20260903_130000`).
 - [x] Freeze EverTracer paired20k, emit 20k SFT formatter output, and pass 19/19 Ba/Bb parity without starting Student training.
-- [ ] Wait for a separate explicit instruction before EverTracer Bb Student training; do not start detector, utility, CTCC Bb, or iSeal Bb automatically.
+- [x] Complete fresh EverTracer Bb Student training, fresh-process reload, PRIVATE Student archive, independent SHA verification, and offline redownload reload.
+- [ ] Wait for explicit instruction before EverTracer Bb detector or utility; do not start CTCC Bb or iSeal Bb automatically.

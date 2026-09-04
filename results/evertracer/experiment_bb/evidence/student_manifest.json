@@ -1,0 +1,23 @@
+{
+  "schema_version": "wmkd.evertracer-bb-student.v1",
+  "status": "PASS",
+  "run_id": "evertracer_bb_student_20260904_033837",
+  "artifact": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
+  "dataset_sha256": "a4dd0c4dcd5141a62d380a6577083d48f80fb04c0e2a8b2b41f44dcb47bffff4",
+  "files_sha256": {
+    "config.json": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+    "generation_config.json": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+    "model-00001-of-00002.safetensors": "545cd3354f9c447a7e01f0a5c5e1ea32f3fafe0038cb8b6c88274b563dfe18ca",
+    "model-00002-of-00002.safetensors": "8114659537d0460cd0122c1b5c4858cad9093fe515fd39403dd3670aefeba739",
+    "model.safetensors.index.json": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+    "special_tokens_map.json": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+    "tokenizer.json": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+    "tokenizer_config.json": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+    "training_args.bin": "9c25153b58daf10fe26a291b00051dcd0b3066d62a7887a86f0ab8115daab48e"
+  },
+  "file_count": 9,
+  "full_parameter": true,
+  "resume": false,
+  "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+}
