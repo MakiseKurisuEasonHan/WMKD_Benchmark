@@ -52,7 +52,8 @@ def inspect_parent(path: Path) -> dict:
 
 
 def build_config(reference: dict, *, method_slug: str, parent_path: Path,
-                 parent_run_id: str, parent_teacher: str, run_id: str) -> dict:
+                 parent_run_id: str, parent_teacher: str, run_id: str,
+                 experiment: str = "Bb") -> dict:
     if method_slug not in METHODS:
         raise ValueError(f"UNKNOWN_METHOD {method_slug}")
     assert_frozen_reference(reference)
@@ -62,7 +63,7 @@ def build_config(reference: dict, *, method_slug: str, parent_path: Path,
     config.update({
         "schema_version": "wmkd.proactive-bb-config.v1",
         "project": "WMKD_Benchmark",
-        "experiment": "Bb",
+        "experiment": experiment,
         "method": method,
         "run_id": run_id,
         "status": "PREPARED_NOT_STARTED",
@@ -77,7 +78,9 @@ def build_config(reference: dict, *, method_slug: str, parent_path: Path,
         "manifest_path": None,
         **identity,
     }
-    root = f"/root/autodl-tmp/WMKD_Benchmark_data/runs/{method_slug}_bb/{{run_id}}"
+    run_namespace = f"{method_slug}_{experiment.lower()}"
+    result_namespace = f"{method_slug}/experiment_{experiment.lower()}"
+    root = f"/root/autodl-tmp/WMKD_Benchmark_data/runs/{run_namespace}/{{run_id}}"
     config["paths"] = {
         "run_root": root,
         "records_journal": "paraphrase/attempts.jsonl",
@@ -85,10 +88,10 @@ def build_config(reference: dict, *, method_slug: str, parent_path: Path,
         "frozen_paired_dataset": "dataset/frozen_paired_qa.jsonl",
         "student_dataset": "dataset/student_qa.jsonl",
         "student_output": "student/final_model",
-        "full_experiment_log": f"results/{method_slug}/experiment_bb/full_experiment_log.json",
-        "provenance_manifest": f"results/{method_slug}/experiment_bb/provenance_manifest.json",
-        "artifact_manifest": f"results/{method_slug}/experiment_bb/artifact_manifest.json",
-        "formal_report": f"docs/reproduction_reports/{method_slug}_experiment_bb_report.md",
+        "full_experiment_log": f"results/{result_namespace}/full_experiment_log.json",
+        "provenance_manifest": f"results/{result_namespace}/provenance_manifest.json",
+        "artifact_manifest": f"results/{result_namespace}/artifact_manifest.json",
+        "formal_report": f"docs/reproduction_reports/{method_slug}_experiment_{experiment.lower()}_report.md",
     }
     return config
 
@@ -101,12 +104,13 @@ def main() -> None:
     ap.add_argument("--parent-run-id", required=True)
     ap.add_argument("--parent-teacher", required=True)
     ap.add_argument("--run-id", required=True)
+    ap.add_argument("--experiment", choices=("Bb", "Bb2"), default="Bb")
     ap.add_argument("--output", type=Path, required=True)
     args = ap.parse_args()
     reference = json.loads(args.reference_config.read_text(encoding="utf-8"))
     config = build_config(reference, method_slug=args.method, parent_path=args.parent_frozen20k,
                           parent_run_id=args.parent_run_id, parent_teacher=args.parent_teacher,
-                          run_id=args.run_id)
+                          run_id=args.run_id, experiment=args.experiment)
     if args.output.exists():
         raise FileExistsError(args.output)
     args.output.parent.mkdir(parents=True, exist_ok=True)

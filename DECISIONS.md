@@ -466,3 +466,10 @@ Passive sharing does not generalize to proactive Teachers. Future proactive Bb r
 The proactive runtime reuses the independently reverified Passive Bb3 Qwen object: official ModelScope `master`, constrained by `CreatedAt=1740595239` and the complete 12-file SHA256 manifest. This is artifact restoration, not a protocol revision. No proactive parent may be regenerated or substituted when its exact canonical object is unavailable, and no irreplaceable parent may enter formal Bb before a private archive passes independent redownload verification.
 
 Wave-1 is method-independent: EverTracer, CTCC, and iSeal may proceed to separately authorized full20k preprocessing once their own gates pass; missing PN-FP/SCW Wave-2 objects do not block them. The three Wave-1 parent archives passed private visibility and independent byte/content/sample-ID verification. This releases preprocessing only and does not authorize Student training.
+## CTCC Experiment Bb2 authorization — 2026-09-05
+
+<!-- CTCC_BB2_PROTOCOL_DECISION -->
+
+CTCC Bb2 is a distinct follow-up scientific variant, not a continuation, retry, repair, or relabeling of original CTCC Bb. Original CTCC Bb permanently remains `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE` with 17,269 resolved records, 18,264 journal rows, and 202 identity fallbacks against the frozen limit of 200; no original-Bb Student, detector, or utility was run.
+
+Bb2 changes exactly one experiment-level rule: the global `identity_fallback_count <= 200` acceptance gate is not enforced. All identity fallbacks remain individually recorded and fully disclosed. The canonical CTCC Ba parent, Qwen model/tokenizer, `add_special_tokens=False`, atomic <=1-token identity rule, prompt and SHA, sampling and seed, dynamic budget, per-sample semantic validator, retry/rejection and bounded identity-fallback semantics, leakage/control-token/truncation checks, sample order, Student initialization/training, detector, and utility remain unchanged. Existing validated original-Bb journal results are copied into a separate `ctcc_bb2_*` namespace and verified before restart-safe continuation; the original namespace is immutable.

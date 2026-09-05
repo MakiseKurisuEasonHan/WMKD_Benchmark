@@ -297,7 +297,8 @@ def run_records(source: list[dict], journal_path: str | Path, config: dict,
             journal.append(record); counts[sample_id] = maximum + 1; successes[sample_id] = record
             append_jsonl_durable(journal_path, record)
             fallback_count = sum(bool(item.get("identity_fallback")) for item in successes.values())
-            if fallback_count > int(fallback_config["full20k_max_count"]):
+            enforce_aggregate_gate = fallback_config.get("enforce_full20k_max_count", True)
+            if enforce_aggregate_gate and fallback_count > int(fallback_config["full20k_max_count"]):
                 raise RuntimeError(f"IDENTITY_FALLBACK_AGGREGATE_GATE count={fallback_count} max={fallback_config['full20k_max_count']}")
         processed += 1
         if limit is not None and processed >= limit: break

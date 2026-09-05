@@ -57,8 +57,10 @@ def initial_state(methods: list[str], git_head: str, runs: dict[str, str]) -> di
                               "history": [], "failure": None} for m in methods}}
 
 
-def run_stage(project: Path, data: Path, state_path: Path, state: dict, method: str, stage: str) -> None:
-    record = state["methods"][method]
+def run_stage(project: Path, data: Path, state_path: Path, state: dict, method: str, stage: str,
+              *, record_key: str | None = None, experiment: str = "bb") -> None:
+    record_key = record_key or method
+    record = state["methods"][record_key]
     if stage in LARGE:
         if state["active_large_stage"] is not None:
             raise RuntimeError("GPU_SERIALIZATION_VIOLATION")
@@ -71,7 +73,7 @@ def run_stage(project: Path, data: Path, state_path: Path, state: dict, method: 
     log.parent.mkdir(parents=True, exist_ok=True)
     command = [sys.executable, str(project / "scripts/proactive_bb_method_stage.py"),
                "--project", str(project), "--data-root", str(data), "--method", method,
-               "--run-id", record["run_id"], "--stage", stage]
+               "--run-id", record["run_id"], "--stage", stage, "--experiment", experiment]
     with log.open("a", encoding="utf-8") as stream:
         process = subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT, text=True)
     if stage in LARGE:

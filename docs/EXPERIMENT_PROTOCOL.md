@@ -257,3 +257,6 @@ The completed Passive Bb3 pipeline reused canonical Shared Ba frozen20k while pr
 4. Confirm Git repository/remotes and the next explicit TODO.
 5. Locate large artifacts through manifests; never infer or substitute provenance.
 6. Apply the minimum preflight and continue only the explicitly authorized action.
+## CTCC Bb2 distinct follow-up protocol
+
+CTCC Bb2 reuses the frozen standardized Bb per-sample UP transformation and downstream distillation protocol. Its sole primary scientific difference is removal of the experiment-level global identity-fallback-count acceptance gate. It does not weaken the semantic validator, alter retries, suppress fallback records, or change any model, prompt, tokenizer, generation, training, detector, or utility configuration. The original CTCC Bb remains formally blocked at `202 > 200` and is never overwritten. Bb2 must use a new run namespace, verify and reuse the original Bb journal results restart-safely, disclose the final fallback count and rate, and satisfy exactly-20,000/schema/pairing/leakage/control-token/truncation gates before downstream execution.

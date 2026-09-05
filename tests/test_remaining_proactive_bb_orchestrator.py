@@ -4,6 +4,7 @@ from pathlib import Path
 
 from scripts.run_remaining_proactive_bb import LARGE, METHODS, STAGES, initial_state, next_stage, parse_point
 from scripts.proactive_bb_method_stage import require_sha256
+from scripts.prepare_proactive_bb import build_config
 
 
 class RemainingProactiveBbOrchestratorTests(unittest.TestCase):
@@ -39,6 +40,18 @@ class RemainingProactiveBbOrchestratorTests(unittest.TestCase):
             path.write_bytes(b"scientific-object\n")
             with self.assertRaisesRegex(RuntimeError, "TEST_OBJECT_SHA256_MISMATCH"):
                 require_sha256(path, "0" * 64, "TEST_OBJECT")
+
+    def test_bb2_namespace_is_distinct(self):
+        source={"sample_id":"s","instruction":"i","input":"","teacher_raw_answer":"a"}
+        reference={"paraphraser":{"canonical_upstream":"Qwen/Qwen2.5-3B-Instruct"},"paraphrase":{"prompt_sha256":"7f4284788b5147bca7f444db989eab6f2f9f3a10eb06fddb309fc06748414495","do_sample":True,"temperature":0.7,"top_p":0.9,"seed":42,"atomic_identity_preservation":{"enabled":True,"qwen_non_special_token_threshold":1,"add_special_tokens":False}},"quality":{},"student":{},"training":{}}
+        with tempfile.TemporaryDirectory() as directory:
+            parent=Path(directory)/"p.jsonl"
+            with parent.open("w",encoding="utf-8") as stream:
+                for i in range(20000): stream.write(__import__('json').dumps({**source,"sample_id":str(i)})+"\n")
+            cfg=build_config(reference,method_slug="ctcc",parent_path=parent,parent_run_id="ba",parent_teacher="CTCC A",run_id="ctcc_bb2_test",experiment="Bb2")
+            self.assertEqual("Bb2",cfg["experiment"])
+            self.assertIn("runs/ctcc_bb2/",cfg["paths"]["run_root"])
+            self.assertIn("experiment_bb2",cfg["paths"]["full_experiment_log"])
 
 
 if __name__ == "__main__": unittest.main()

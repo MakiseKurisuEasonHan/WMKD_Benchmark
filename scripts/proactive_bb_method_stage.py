@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -20,12 +21,14 @@ DATASET_REPOS = {
     "pnfp": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_bb_processed20k",
     "scw": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_bb_processed20k",
 }
+CTCC_BB2_DATASET_REPO = "MakiseKurisuEasonHan/WMKD_Benchmark_ctcc_bb2_processed20k"
 STUDENT_REPOS = {
     "ctcc": "MakiseKurisuEasonHan/Llama-3.2-WMKD-CTCC-Bb-Student",
     "iseal": "MakiseKurisuEasonHan/Llama-3.2-WMKD-iSeal-Bb-Student",
     "pnfp": "MakiseKurisuEasonHan/Llama-3.2-WMKD-PNFP-Bb-Student",
     "scw": "MakiseKurisuEasonHan/Llama-3.2-WMKD-SCW-Bb-Student",
 }
+CTCC_BB2_STUDENT_REPO = "MakiseKurisuEasonHan/Llama-3.2-WMKD-CTCC-Bb2-Student"
 
 
 def call(command: list[str], *, cwd: Path | None = None, env: dict[str, str] | None = None) -> None:
@@ -45,8 +48,8 @@ def require_sha256(path: Path, expected: str, label: str) -> None:
         raise RuntimeError(f"{label}_SHA256_MISMATCH")
 
 
-def config_path(project: Path, method: str, run_id: str) -> Path:
-    return project / f"configs/distillation/{method}_bb_{run_id}.json"
+def config_path(project: Path, method: str, run_id: str, experiment: str = "bb") -> Path:
+    return project / f"configs/distillation/{method}_{experiment}_{run_id}.json"
 
 def reconstruction_run(method: str, run_id: str) -> str:
     return f"{method}_ba_parent_reconstruction_{run_id.removeprefix(method + '_bb_')}"
@@ -61,7 +64,8 @@ def main() -> None:
     ap = argparse.ArgumentParser(); ap.add_argument("--project", type=Path, required=True)
     ap.add_argument("--data-root", type=Path, required=True); ap.add_argument("--method", required=True)
     ap.add_argument("--run-id", required=True); ap.add_argument("--stage", required=True)
-    a = ap.parse_args(); run = a.data_root / f"runs/{a.method}_bb/{a.run_id}"; cfg = config_path(a.project, a.method, a.run_id)
+    ap.add_argument("--experiment", choices=("bb", "bb2"), default="bb")
+    a = ap.parse_args(); run = a.data_root / f"runs/{a.method}_{a.experiment}/{a.run_id}"; cfg = config_path(a.project, a.method, a.run_id, a.experiment)
     if a.stage == "PARENT_PREPARING":
         if a.method in {"pnfp","scw"}:
             rr=reconstruction_run(a.method,a.run_id)
@@ -72,13 +76,29 @@ def main() -> None:
         else:
             parent_run=reconstruction_run(a.method,a.run_id);teacher={"pnfp":"PN-FP A2","scw":"SCW A2"}[a.method];parent=a.data_root/f"runs/{a.method}_ba_parent_reconstruction/{parent_run}/dataset/frozen_qa.jsonl";recon=json.loads((parent.parents[1]/"reconstruction_result.json").read_text());expected_content=recon["identity"]["content_sha256"]
         if not cfg.exists():
-            call([sys.executable, str(a.project / "scripts/prepare_proactive_bb.py"), "--reference-config", str(a.project / "configs/distillation/passive5_shared_bb3.json"), "--method", a.method, "--parent-frozen20k", str(parent), "--parent-run-id", parent_run, "--parent-teacher", teacher, "--run-id", a.run_id, "--output", str(cfg)])
+            if a.experiment == "bb2":
+                if a.method != "ctcc": raise RuntimeError("BB2_ONLY_AUTHORIZED_FOR_CTCC")
+                call([sys.executable, str(a.project / "scripts/prepare_ctcc_bb2.py"), "--reference-config", str(a.project / "configs/distillation/passive5_shared_bb3.json"), "--parent-frozen20k", str(parent), "--parent-run-id", parent_run, "--run-id", a.run_id, "--output", str(cfg)])
+            else:
+                call([sys.executable, str(a.project / "scripts/prepare_proactive_bb.py"), "--reference-config", str(a.project / "configs/distillation/passive5_shared_bb3.json"), "--method", a.method, "--parent-frozen20k", str(parent), "--parent-run-id", parent_run, "--parent-teacher", teacher, "--run-id", a.run_id, "--output", str(cfg)])
         value = json.loads(cfg.read_text(encoding="utf-8"))
         if value["source_dataset"]["dataset_sha256"] != expected_content: raise RuntimeError("PARENT_CONTENT_SHA_MISMATCH")
         call([sys.executable, str(a.project / "scripts/passive5_shared_bb.py"), "--config", str(cfg), "validate-source", "--source", str(parent)])
     elif a.stage == "PREPROCESSING":
         value = json.loads(cfg.read_text(encoding="utf-8")); parent = value["source_dataset"]["path"]
         run.mkdir(parents=True, exist_ok=True)
+        if a.experiment == "bb2":
+            original = a.data_root / "runs/ctcc_bb/ctcc_bb_20260904_055000/paraphrase/attempts.jsonl"
+            target = run / "paraphrase/attempts.jsonl"
+            expected_sha = "4fbe906d0267e13fe05215332a37b67e66cd4bd36b1cadb8dc491db9c5cbc48b"
+            if not target.exists():
+                require_sha256(original, expected_sha, "CTCC_BB_ORIGINAL_JOURNAL")
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(original, target)
+                provenance = {"classification":"CTCC_BB2_PARENT_CONTINUATION","original_bb_run_id":"ctcc_bb_20260904_055000","original_journal":str(original),"original_journal_sha256":expected_sha,"original_journal_rows":18264,"original_resolved_reused":17269,"original_identity_fallback_reused":202,"copied_journal_sha256":sha256(target),"original_bb_status":"BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE","original_bb_unchanged":True}
+                (run/"paraphrase/reuse_provenance.json").write_text(json.dumps(provenance,indent=2)+"\n",encoding="utf-8")
+            elif not (run/"paraphrase/reuse_provenance.json").exists():
+                raise RuntimeError("BB2_REUSE_PROVENANCE_MISSING")
         call([sys.executable, str(a.project / "scripts/passive5_shared_bb_paraphrase_runner.py"), "--config", str(cfg), "--source", parent, "--journal", str(run / "paraphrase/attempts.jsonl"), "--backend", "qwen"])
     elif a.stage == "PROCESSED_READY":
         value = json.loads(cfg.read_text(encoding="utf-8")); parent = value["source_dataset"]["path"]
@@ -88,7 +108,8 @@ def main() -> None:
         student = run / "dataset/student_qa.jsonl"
         if not student.exists(): call([sys.executable, str(a.project / "scripts/passive5_shared_bb.py"), "--config", str(cfg), "adapt-student", "--pairs", str(paired), "--output", str(student)])
     elif a.stage == "PROCESSED_ARCHIVED":
-        call([archive_python(a.data_root), str(a.project / "scripts/modelscope_proactive_bb_dataset_archive.py"), "--method", a.method, "--run-id", a.run_id, "--source", str(run/"dataset/frozen_paired_qa.jsonl"), "--config", str(cfg), "--repo", DATASET_REPOS[a.method], "--output", str(run/"archive/processed20k_modelscope.json")])
+        repo = CTCC_BB2_DATASET_REPO if a.experiment == "bb2" else DATASET_REPOS[a.method]
+        call([archive_python(a.data_root), str(a.project / "scripts/modelscope_proactive_bb_dataset_archive.py"), "--method", a.method, "--run-id", a.run_id, "--source", str(run/"dataset/frozen_paired_qa.jsonl"), "--config", str(cfg), "--repo", repo, "--output", str(run/"archive/processed20k_modelscope.json")])
     elif a.stage == "PARITY_PASS":
         call([sys.executable, str(a.project / "scripts/passive5_shared_bb.py"), "--config", str(cfg), "parity", "--ba-config", str(a.project/"configs/distillation/passive5_shared_ba.json")])
     elif a.stage == "TRAINING":
@@ -102,7 +123,8 @@ def main() -> None:
     elif a.stage == "STUDENT_ARCHIVED":
         from passive5_shared_bb import read_jsonl, records_sha256
         digest=records_sha256(read_jsonl(run/"dataset/student_qa.jsonl"))
-        call([archive_python(a.data_root),str(a.project/"scripts/modelscope_proactive_bb_student_archive.py"),"--method",a.method,"--run-id",a.run_id,"--source",str(run/"student/final_model"),"--dataset-sha",digest,"--repo",STUDENT_REPOS[a.method],"--run-root",str(run),"--output",str(run/"archive/student_modelscope.json"),"--reload-python",sys.executable])
+        repo = CTCC_BB2_STUDENT_REPO if a.experiment == "bb2" else STUDENT_REPOS[a.method]
+        call([archive_python(a.data_root),str(a.project/"scripts/modelscope_proactive_bb_student_archive.py"),"--method",a.method,"--run-id",a.run_id,"--source",str(run/"student/final_model"),"--dataset-sha",digest,"--repo",repo,"--run-root",str(run),"--output",str(run/"archive/student_modelscope.json"),"--reload-python",sys.executable])
     elif a.stage == "DETECTING":
         student=str(run/"student/final_model");out=run/"evaluation";out.mkdir(parents=True,exist_ok=True)
         if a.method=="ctcc":
@@ -157,12 +179,13 @@ def main() -> None:
         if a.method!="iseal" and not json.loads((run/"evaluation/generation_sanity.json").read_text())["passed"]:raise RuntimeError("SANITY_GATE")
         if a.method=="iseal" and not json.loads((run/"evaluation/detector_and_generation.json").read_text())["ordinary_generation"]["passed"]:raise RuntimeError("SANITY_GATE")
     elif a.stage == "CLOSING":
-        call([sys.executable,str(a.project/"scripts/close_proactive_bb_method.py"),"--project",str(a.project),"--data-root",str(a.data_root),"--method",a.method,"--run-id",a.run_id])
+        closer = "close_ctcc_bb2.py" if a.experiment == "bb2" else "close_proactive_bb_method.py"
+        call([sys.executable,str(a.project/f"scripts/{closer}"),"--project",str(a.project),"--data-root",str(a.data_root),"--method",a.method,"--run-id",a.run_id])
         if a.method in {"pnfp","scw"}:call([sys.executable,str(a.project/"scripts/correct_proactive_bb_reconstruction_disclosure.py"),"--project",str(a.project),"--data-root",str(a.data_root),"--method",a.method,"--run-id",a.run_id])
     elif a.stage == "COMPLETE":
-        paths=[f"results/{a.method}/experiment_bb",f"docs/reproduction_reports/{a.method}_experiment_bb_report.md",f"configs/distillation/{a.method}_bb_{a.run_id}.json","results/experiment_full_logs_index.json","PROJECT_STATUS.md","EXPERIMENT_LOG.md","CODEX_LOG.md"]
+        paths=[f"results/{a.method}/experiment_{a.experiment}",f"docs/reproduction_reports/{a.method}_experiment_{a.experiment}_report.md",f"configs/distillation/{a.method}_{a.experiment}_{a.run_id}.json","results/experiment_full_logs_index.json","PROJECT_STATUS.md","EXPERIMENT_LOG.md","CODEX_LOG.md","DECISIONS.md"]
         call(["git","-C",str(a.project),"add",*paths]);call(["git","-C",str(a.project),"diff","--cached","--check"])
-        call(["git","-C",str(a.project),"commit","-m",f"Close {a.method} Experiment Bb"]);call(["git","-C",str(a.project),"push","origin","main"])
+        call(["git","-C",str(a.project),"commit","-m",f"Close {a.method} Experiment {a.experiment.upper()}"]);call(["git","-C",str(a.project),"push","origin","main"])
     else:
         raise RuntimeError(f"FAIL_CLOSED_STAGE_HANDLER_NOT_DEPLOYED {a.method}/{a.stage}")
 
