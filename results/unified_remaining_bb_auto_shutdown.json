@@ -1,0 +1,52 @@
+{
+  "schema_version": "wmkd.unified-auto-shutdown.v1",
+  "timestamp": "2026-09-05T02:31:43.830147+00:00",
+  "host": "autodl-container-9235478639-4a175847",
+  "armed": true,
+  "orchestrator_state": "READY_FOR_MASTER_CLOSURE",
+  "method_terminal_states": {
+    "ctcc": "BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE",
+    "iseal": "COMPLETE",
+    "pnfp": "COMPLETE",
+    "scw": "COMPLETE",
+    "ctcc_bb2": "COMPLETE"
+  },
+  "gpu_state": [],
+  "active_pid_scan": [],
+  "git_state": {
+    "local_head": "0b45f900d03839368725765614d63e55840637c5",
+    "github_head": "0b45f900d03839368725765614d63e55840637c5",
+    "autodl_head": "0b45f900d03839368725765614d63e55840637c5",
+    "clean": true,
+    "ahead": 0,
+    "behind": 0
+  },
+  "full_log_index_state": {
+    "full_logs_ok": true,
+    "index_ok": true
+  },
+  "archive_state": {
+    "ok": true
+  },
+  "master_report_state": {
+    "ok": true
+  },
+  "checks": {
+    "target_methods_terminal": true,
+    "orchestrator_has_no_runnable_stage": true,
+    "no_active_project_worker": true,
+    "gpu_has_no_project_compute": true,
+    "no_archive_or_git_process": true,
+    "full_logs_present": true,
+    "global_index_valid": true,
+    "archives_terminal": true,
+    "master_report_present": true,
+    "autodl_git_clean": true,
+    "autodl_ahead_behind_zero": true,
+    "local_github_autodl_equal": true,
+    "no_pending_restart_safe_continuation": true
+  },
+  "eligibility": true,
+  "shutdown_command": "/usr/bin/shutdown -h now",
+  "shutdown_result": "PENDING_FINAL_RECHECK"
+}
