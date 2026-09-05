@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.unified-auto-shutdown.v1",
-  "timestamp": "2026-09-05T02:31:43.830147+00:00",
+  "timestamp": "2026-09-05T02:34:29.713142+00:00",
   "host": "autodl-container-9235478639-4a175847",
   "armed": true,
   "orchestrator_state": "READY_FOR_MASTER_CLOSURE",
@@ -14,9 +14,9 @@
   "gpu_state": [],
   "active_pid_scan": [],
   "git_state": {
-    "local_head": "0b45f900d03839368725765614d63e55840637c5",
-    "github_head": "0b45f900d03839368725765614d63e55840637c5",
-    "autodl_head": "0b45f900d03839368725765614d63e55840637c5",
+    "local_head": "120259821a4d293c06d8b6fad276e74a1b1e8c0a",
+    "github_head": "120259821a4d293c06d8b6fad276e74a1b1e8c0a",
+    "autodl_head": "120259821a4d293c06d8b6fad276e74a1b1e8c0a",
     "clean": true,
     "ahead": 0,
     "behind": 0
@@ -47,6 +47,6 @@
     "no_pending_restart_safe_continuation": true
   },
   "eligibility": true,
-  "shutdown_command": "/usr/bin/shutdown -h now",
+  "shutdown_command": "/bin/bash /usr/bin/shutdown",
   "shutdown_result": "PENDING_FINAL_RECHECK"
 }
