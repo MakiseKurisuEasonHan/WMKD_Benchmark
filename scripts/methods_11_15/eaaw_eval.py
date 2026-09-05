@@ -10,6 +10,15 @@ def evaluate(c,stage):
     rr=Path(c['run_root']); trained=read(rr/'trained.json'); protocol=read(rr/'protocol.json')
     sys.path.insert(0,str(rr/'work/text-generation'))
     from watermark import LimeNet,evaluate_watermark
+    def metric(bits,key):
+        value={'bit_accuracy':float(np.mean(bits==key)),'matched_bits':int(np.sum(bits==key)),'total_bits':len(key),'extracted_bits':bits.tolist()}
+        try:
+            _,stats=evaluate_watermark(bits,key)
+            value.update(chi2_statistic=float(stats.statistic),p_value=float(stats.pvalue),chi2_status='defined')
+        except ValueError as e:
+            if 'expected frequencies' not in str(e): raise
+            value.update(chi2_statistic=None,p_value=None,chi2_status='undefined: zero expected contingency frequency',official_error=str(e))
+        return value
     if stage=='RELOAD_VERIFIED':
         model=AutoModelForCausalLM.from_pretrained(trained['model'],local_files_only=True).eval().cuda()
         tokenizer=AutoTokenizer.from_pretrained(trained['model'],local_files_only=True)
@@ -23,12 +32,14 @@ def evaluate(c,stage):
         if stage=='DETECTOR':
             acc=Accelerator(); lime=LimeNet(128,len(trigger['input_ids']),acc,50256,wm,lam=1e-3,wm_bs=4,epsilon=1e-2,max_mask_token_size=8)
             with torch.no_grad(): extracted=lime.explain(model,trigger)
-            score,stats=evaluate_watermark(extracted,wm)
-            results[label]={'bit_accuracy':float(score),'matched_bits':int(np.sum(extracted==wm)),'total_bits':128,'chi2_statistic':float(stats.statistic),'p_value':float(stats.pvalue),'extracted_bits':extracted.tolist()}
+            results[label]=metric(extracted,wm)
             if label=='watermarked':
+                independent=load_from_disk(trained['eval_tokens'])[0]
+                with torch.no_grad(): independent_bits=lime.explain(model,independent)
+                independent_metric=metric(independent_bits,wm)
                 rng=np.random.default_rng(20260905); wrong_key=rng.choice([-1,1],128)
-                wrong,wrong_stats=evaluate_watermark(extracted,wrong_key)
-                results['negative_controls']={'type':'independent wrong watermark key on same model; unwatermarked Base also reported','seed':20260905,'bit_accuracy':float(wrong),'p_value':float(wrong_stats.pvalue),'wrong_key_sha256':__import__('hashlib').sha256(wrong_key.tobytes()).hexdigest()}
+                wrong_metric=metric(extracted,wrong_key)
+                results['negative_controls']={'type':'independent trigger from held-out validation, same target key; Base also reported','independent_trigger':independent_metric,'supplementary_wrong_key':{'seed':20260905,**wrong_metric,'wrong_key_sha256':__import__('hashlib').sha256(wrong_key.tobytes()).hexdigest()}}
         else:
             ds=load_from_disk(trained['eval_tokens']); losses=[]
             with torch.no_grad():
@@ -37,9 +48,12 @@ def evaluate(c,stage):
                     losses += [float(loss)]*len(batch['input_ids'])
             avg=sum(losses)/len(losses); results[label]={'loss':avg,'perplexity':math.exp(avg),'blocks':len(losses),'block_size':len(ds[0]['input_ids'])}
         del model; torch.cuda.empty_cache()
-    if stage=='UTILITY': results['delta']={k:results['watermarked'][k]-results['base'][k] for k in ('loss','perplexity')}
+    if stage=='UTILITY':
+        results['metric']='PTB validation causal-LM loss and perplexity'
+        results['delta']={k:results['watermarked'][k]-results['base'][k] for k in ('loss','perplexity')}
     else:
-        # No newly invented ownership threshold; preserve raw official scores.
-        results['scientific_status']='CORE_REPRODUCTION_SUCCESSFUL' if results['watermarked']['matched_bits']==128 else 'ENGINEERING_COMPLETE_SIGNAL_NOT_REPRODUCED'
-        results['judgement_scope']='Exact 128/128 bit recovery; no tuned threshold or universal robustness claim. Utility reported separately.'
+        results['official_alpha']=0.01
+        results['metric']='official bit accuracy and chi-square p-value'
+        results['scientific_status']='CORE_REPRODUCTION_SUCCESSFUL' if results['watermarked']['p_value'] is not None and results['watermarked']['p_value']<0.01 else 'ENGINEERING_COMPLETE_SIGNAL_NOT_REPRODUCED'
+        results['judgement_scope']='Official paper Section V alpha=0.01, no threshold tuning; report WSR and controls separately, utility separately.'
     write(rr/(stage.lower()+'.json'),results); return results

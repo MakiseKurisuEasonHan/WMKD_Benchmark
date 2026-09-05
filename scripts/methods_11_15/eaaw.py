@@ -16,7 +16,7 @@ def stage(c,s):
         import torch,transformers,datasets,accelerate,scipy
         return {'python':sys.version,'torch':torch.__version__,'transformers':transformers.__version__,'datasets':datasets.__version__,'accelerate':accelerate.__version__,'scipy':scipy.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(0),'runtime_adaptation':'Reuse isolated WMKD scw Python3.11 environment, PyTorch2.8/cu128 for Blackwell; no modification of old environment.'}
     if s=='MODEL_DATA_READY':
-        model=DATA/'models/llmprint_validation/models/openai-community--gpt2'
+        model=DATA/'models/llmprint_validation/models/openai-community--gpt2/snapshots/master'
         if not (model/'config.json').exists(): raise Blocked('BLOCKED_DOWNLOAD','Previously inventoried GPT-2 cache is unavailable')
         if not work.exists(): shutil.copytree(c['source'],work,ignore=shutil.ignore_patterns('.git','__pycache__','*.pyc'))
         # PTB text-only uses the word-level PTB split released with Zaremba's LSTM.
@@ -25,13 +25,17 @@ def stage(c,s):
         with urllib.request.urlopen(rev_url,timeout=60) as r: rev=json.load(r)['sha']
         files={}
         for split in ('train','valid','test'):
-            p=ds/f'ptb_{split}.txt'
+            raw_path=ds/f'ptb_{split}.raw.txt'; p=ds/f'ptb_{split}.txt'
             urls=[f'https://ghfast.top/https://raw.githubusercontent.com/wojzaremba/lstm/{rev}/data/ptb.{split}.txt',f'https://raw.githubusercontent.com/wojzaremba/lstm/{rev}/data/ptb.{split}.txt']
             for url in urls:
                 try:
-                    if not p.exists(): fetch(url,p)
-                    if p.stat().st_size<100000 or b'<html' in p.read_bytes()[:100].lower(): raise ValueError('Invalid PTB transport content')
-                    files[split]={'path':str(p),'upstream':urls[-1],'transport':url,'revision':rev,'sha256':sha(p),'size':p.stat().st_size}; break
+                    if not raw_path.exists(): fetch(url,raw_path)
+                    if raw_path.stat().st_size<100000 or b'<html' in raw_path.read_bytes()[:100].lower(): raise ValueError('Invalid PTB transport content')
+                    # Match the official ptb_text_only builder exactly: sentence=line.strip().
+                    sentences=[line.strip() for line in raw_path.read_text().splitlines()]
+                    p.write_text('\n'.join(sentences)+'\n',encoding='utf-8',newline='\n')
+                    assert p.read_text().splitlines()==sentences
+                    files[split]={'path':str(p),'raw_path':str(raw_path),'raw_sha256':sha(raw_path),'upstream':urls[-1],'transport':url,'revision':rev,'sha256':sha(p),'size':p.stat().st_size,'preprocessing':'Official ptb_text_only _generate_examples: line.strip()','builder_source':'https://raw.githubusercontent.com/huggingface/datasets/1.18.4/datasets/ptb_text_only/ptb_text_only.py'}; break
                 except Exception as e: errors.append({'url':url,'error':str(e)})
             else: raise Blocked('BLOCKED_DOWNLOAD','PTB canonical transport paths failed: '+str(errors))
         p={'model':str(model),'canonical_model':'openai-community/gpt2','model_manifest':tree_manifest(model),'dataset_files':files,'ptb_upstream_revision':rev,'official_script':'text-generation/scripts/gpt2.sh','epochs':20,'train_num_samples':1000,'batch_size':2,'effective_batch_size':2,'learning_rate':3e-4,'warmup_steps':50,'alpha1':1.0,'alpha2':1.0,'wm_length':128,'trigger_size':1,'max_mask_token_size':8,'seed':42,'mixed_precision':'bf16','gradient_checkpointing':True,'download_attempts':errors,'model_prior_provenance':'results/llmprint/validation_negative_panel_manifest.json'}
@@ -42,6 +46,7 @@ def stage(c,s):
         # Output namespace/metadata additions and memory-only checkpointing.
         text=text.replace('    args.output_dir = os.path.join(\n        args.output_dir,\n        args.dataset_name if args.dataset_name is not None else args.manual_dataset_name,\n        args.mode,\n        datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")\n    )','    args.output_dir = os.environ["WMKD_MODEL_OUTPUT"]')
         text=text.replace('    embedding_size = model.get_input_embeddings().weight.shape[0]','    model.gradient_checkpointing_enable()\n    model.config.use_cache = False\n    embedding_size = model.get_input_embeddings().weight.shape[0]')
+        text=text.replace('DistributedType.TPU','DistributedType.XLA')
         text=text.replace('    eval_dataset = lm_datasets["validation"]','    eval_dataset = lm_datasets["validation"]\n    eval_dataset.save_to_disk(os.environ["WMKD_EVAL_TOKENS"])\n    with open(os.environ["WMKD_TRIGGER"], "w") as f: json.dump(train_dataset[0], f)')
         text=text.replace('                    completed_steps += 1','                    completed_steps += 1\n                    if completed_steps % 10 == 0:\n                        with open(os.environ["WMKD_TRAIN_PROGRESS"], "a") as f: f.write(json.dumps({"step": completed_steps, "epoch": epoch, "loss": float(loss.detach()), "peak_vram_bytes": torch.cuda.max_memory_allocated()}) + "\\n")')
         # Official scipy crosstab returns a namedtuple; contingency consumes count.

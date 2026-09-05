@@ -21,6 +21,10 @@ def main():
         digest = hashlib.sha256(raw).hexdigest()
         if digest != obj['full_log_sha256']:
             crlf = raw.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
+            lf = raw.replace(b'\r\n', b'\n')
+            if '--restore-indexed-eol' in sys.argv and hashlib.sha256(lf).hexdigest() == obj['full_log_sha256']:
+                p.write_bytes(lf)
+                continue
             if '--restore-indexed-eol' in sys.argv and hashlib.sha256(crlf).hexdigest() == obj['full_log_sha256']:
                 p.write_bytes(crlf)
                 continue
@@ -38,7 +42,7 @@ def main():
         e = a.get('evidence') or ''
         if e.startswith('results/') and not (ROOT / e).is_file():
             errors.append({'error': 'missing_archive_evidence', 'path': e})
-    result = {'object_count': len(ids), 'unique_composite_ids': len(set(ids)), 'duplicates': len(ids)-len(set(ids)), 'archive_counts': counts, 'errors': errors, 'PASS': not errors and len(ids) == len(set(ids)) == 32}
+    result = {'object_count': len(ids), 'unique_composite_ids': len(set(ids)), 'duplicates': len(ids)-len(set(ids)), 'archive_counts': counts, 'errors': errors, 'PASS': not errors and len(ids) == len(set(ids)) and len(ids) >= 32}
     print(json.dumps(result, indent=2))
     return result
 

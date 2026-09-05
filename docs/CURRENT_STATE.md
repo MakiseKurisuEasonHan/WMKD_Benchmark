@@ -1,3 +1,19 @@
+<!-- WMKD_METHODS_11_15_CURRENT_BEGIN -->
+## Methods 11–15 当前状态
+
+更新：2026-09-05T13:05:52.118947+00:00；总状态：RUNNING。
+
+| 方法 | 阶段 | 状态 | 科学结论 |
+|---|---|---|---|
+| EaaW | TRAINING | RUNNING | RUNNING |
+| Instructional Fingerprinting | NOT_STARTED | NOT_STARTED | NOT_STARTED |
+| UTF | NOT_STARTED | NOT_STARTED | NOT_STARTED |
+| Double-I Watermark | NOT_STARTED | NOT_STARTED | NOT_STARTED |
+| CodeGenGuard | NOT_STARTED | NOT_STARTED | NOT_STARTED |
+
+本批恢复入口：`results/methods_11_15_pipeline_state.json`；执行器：`scripts/methods_11_15/run_methods_11_15.py`。第一批十方法保持 CLOSED，历史 KEEP/UNCERTAIN 保留。
+<!-- WMKD_METHODS_11_15_CURRENT_END -->
+
 # WMKD_Benchmark 当前状态：方法 11–15 之前
 
 当前授权更新（2026-09-05）：用户已正式批准五方法串行 Experiment A 自动复现、最小工程修复、逐方法归档/Git闭环及全部terminal后的自动关机。前次等待prompt/STOP仅属于已结束的迁移任务。详见 [METHODS_11_15_AUTOMATION.md](METHODS_11_15_AUTOMATION.md) 与 results/methods_11_15_pipeline_state.json；旧科学设计禁改及KEEP/UNCERTAIN保留规则继续有效。

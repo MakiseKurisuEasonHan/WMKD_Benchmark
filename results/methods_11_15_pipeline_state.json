@@ -15,11 +15,11 @@
       "run_id": "eaaw_a_20260905_111830_cont1_cont1",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/context.json",
       "stage": "TRAINING",
-      "status": "TERMINAL",
-      "attempt": 1,
+      "status": "RUNNING",
+      "attempt": 2,
       "started_at": "2026-09-05T11:38:42.732269+00:00",
-      "last_update": "2026-09-05T11:40:23.423998+00:00",
-      "last_error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/work/text-generation/run_clm.py', '--model_name_or_path', '/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/models/openai-community--gpt2/snapshots/master', '--train_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/ptb/ptb_train.txt', '--validation_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/ptb/ptb_valid.txt', '--per_device_train_batch_size', '2', '--per_device_eval_batch_size', '2', '--num_train_epochs', '20', '--learning_rate', '3e-4', '--num_warmup_steps', '50', '--alpha1', '1.0', '--alpha2', '1.0', '--low_cpu_mem_usage', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/model_attempt_1', '--train_num_samples', '1000', '--mode', 'wm', '--max_mask_token_size', '8', '--do_train', '--wm_length', '128', '--trigger_size', '1', '--manual_dataset_name', 'ptb-text-only', '--seed', '42']' returned non-zero exit status 1.",
+      "last_update": "2026-09-05T13:01:26.175625+00:00",
+      "last_error": null,
       "repair_history": [
         {
           "time": "2026-09-05T11:30:43.997567+00:00",
@@ -32,21 +32,44 @@
           "action": "Resolve verified local GPT-2 snapshot directory; retain official source bundle transport; no training had started.",
           "previous_run_id": "eaaw_a_20260905_111830_cont1",
           "preserved_full_log": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830_cont1/full_experiment_log.json"
+        },
+        {
+          "action": "Accelerate renamed DistributedType.TPU to XLA; GPU branch unchanged",
+          "category": "API compatibility",
+          "scientific_change": false,
+          "stage": "TRAINING",
+          "attempt": 1,
+          "time": "2026-09-05T11:43:09.023505+00:00",
+          "retained_report": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/versions/eaaw_a_20260905_111830_cont1_cont1_TRAINING_1"
         }
       ],
-      "scientific_status": "BLOCKED_TRAINING",
+      "scientific_status": "RUNNING",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
-      "git_status": "DURABLE",
+      "git_status": "PENDING",
       "completed_stages": {
         "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/SOURCE_PINNED.1.json",
         "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/ENV_READY.1.json",
         "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/MODEL_DATA_READY.1.json",
         "PREFLIGHT_COMPLETE": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/PREFLIGHT_COMPLETE.1.json"
       },
-      "active_worker": null,
-      "stage_attempts": {}
+      "active_worker": {
+        "pid": 4582,
+        "result": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/TRAINING.2.json",
+        "log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/TRAINING.2.log",
+        "command": [
+          "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+          "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py",
+          "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/context.json",
+          "TRAINING",
+          "2",
+          "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/TRAINING.2.json"
+        ]
+      },
+      "stage_attempts": {
+        "TRAINING": 1
+      }
     },
     "instructional_fingerprinting": {
       "method": "Instructional Fingerprinting",

@@ -13,3 +13,19 @@
 全部5项terminal后生成master summary和shutdown state。确认所有报告/full logs/index、归档或明确blocker/local保留、无GPU/上传任务、三端Git一致/clean后才能关机。Windows同步助手只在本地干净且ff-only可行时同步并发送精确HEAD确认；远端等待确认，不在单方法结束时关机。
 
 本轮授权来源为用户正式“Methods 11–15 Automated Reproduction Pipeline”请求；不是历史文档推断。
+
+## 后台运行与恢复
+
+2026-09-05 已启动 EaaW 官方 GPT-2/PTB 20 epochs、10000 optimizer steps；不缩短训练。官方 CLI 实际分块为128 tokens。监督器重启测试保留原 worker4582/GPU4585，新的 guardian 成功接管。
+
+Methods12–15 的 SOURCE_PINNED 与 ENV_READY 已通过 CPU 预准备生成独立 receipts；每个 GPU 阶段仍必须按11→15串行进入。`cpu_import_audit.py` 检查官方入口，兼容 patch 记录在各 run root 的 `compatibility.patch`。所有新增依赖仅安装到本批各方法 runtime_overlay。
+
+入口 `scripts/methods_11_15/launch.sh` 启动 guardian；监督器按结果 receipt 恢复，接管存活 worker。`local_sync.ps1` 在本机后台运行，只有本地clean、Local=origin=AutoDL时才写精确HEAD确认。只有五个方法terminal、报告/全日志/索引/归档或归档阻塞证据已保存、无GPU/上传worker、两次最终Git同步确认后才请求AutoDL关机。
+
+任何当前运行状态以 AutoDL 的 `results/methods_11_15_pipeline_state.json` 和 data/runs/methods_11_15/watchdog.json 为准；Git按阶段闭环保存快照。终态报告生成在 docs/reproduction_reports，汇总包含实际 detector、负对照、utility delta、耗时与归档。
+
+## 当前预处理修正与巡检
+
+EaaW run `eaaw_a_20260905_111830_cont1_cont1` 的 PTB 原始行空白未执行官方 builder 的 `line.strip()`，不能作为 canonical A。保留当前训练进度及自然完成的 checkpoint；`training_invalidation.json` 使控制器在训练完成后先保存诊断 full log，再以 `eaaw_a_20260905_111830_cont2` 重跑官方预处理。自动审批拒绝中止旧训练，未得到用户额外明确批准时不得中止；不将等待时间视为批准。
+
+本任务小时级巡检 `wmkd-methods-11-15` 已启用，异常时在授权内修复并继续队列。远端 guardian 独立运行；本机同步助手和 Codex 巡检需要本机及应用保持运行。5/5 尚未 terminal，不得声称完成或提前关机。

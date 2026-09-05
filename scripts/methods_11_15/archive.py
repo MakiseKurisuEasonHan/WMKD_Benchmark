@@ -9,7 +9,8 @@ def archive_model(c,model,extras=()):
     errors=[]
     for workers in (4,1):
         try:
-            cmd([cli,Path(__file__),request,str(workers)],timeout=10800)
+            env=os.environ.copy(); env.pop('PYTHONPATH',None)
+            cmd([cli,Path(__file__),request,str(workers)],timeout=10800,env=env)
             return read(rr/'archive.json')
         except Exception as e: errors.append({'workers':workers,'error':str(e)})
     raise Blocked('BLOCKED_ARCHIVE','PRIVATE archive failed; canonical local model retained: '+str(errors))
@@ -32,7 +33,14 @@ def main():
     for p in map(Path,req['extras']):
         dst=package/'WMKD_PROVENANCE'/p.name; dst.parent.mkdir(exist_ok=True)
         if p.is_file(): shutil.copyfile(p,dst)
-    manifest={'method':c['method'],'run_id':c['run_id'],'source':c['spec'],'files':tree_manifest(package)}
+        elif p.is_dir(): shutil.copytree(p,dst,dirs_exist_ok=True)
+    # Freeze all available stage evidence, including failed attempts, with this archive.
+    evidence=package/'WMKD_PROVENANCE/RUN_EVIDENCE'; evidence.mkdir(parents=True,exist_ok=True)
+    for p in rr.iterdir():
+        if p.is_file() and p.suffix in ('.json','.jsonl','.log','.patch') and not p.name.startswith('ARCHIVED'):
+            shutil.copyfile(p,evidence/p.name)
+    shutil.copytree(rr/'receipts',evidence/'receipts',dirs_exist_ok=True)
+    manifest={'method':c['method'],'run_id':c['run_id'],'source':c['spec'],'files':{k:v for k,v in tree_manifest(package).items() if k!='WMKD_ARCHIVE_MANIFEST.json'}}
     write(package/'WMKD_ARCHIVE_MANIFEST.json',manifest)
     def private(r):
         vis=getattr(getattr(r,'visibility',None),'value',getattr(r,'visibility',None))

@@ -1,0 +1,46 @@
+{
+  "time": "2026-09-05T13:05:52.120219+00:00",
+  "scope": "CPU source/environment/import readiness only; scientific outputs not yet complete",
+  "cpu_import_audits": {
+    "instructional_fingerprinting": {
+      "time": "2026-09-05T12:17:03.632916+00:00",
+      "exit_code": 0,
+      "log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/cpu_import_audit.log",
+      "tail": "{\"time\": \"2026-09-05T12:11:41.109522+00:00\", \"command\": [\"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python\", \"-m\", \"pip\", \"install\", \"--target\", \"/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/runtime_overlay\", \"--no-deps\", \"--index-url\", \"https://pypi.tuna.tsinghua.edu.cn/simple\", \"evaluate==0.4.3\", \"fire==0.7.1\", \"tensorboardX==2.6.2.2\"], \"cwd\": \"/root/autodl-tmp/WMKD_Benchmark\"}\nLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple\nCollecting evaluate==0.4.3\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a2/e7/cbca9e2d2590eb9b5aa8f7ebabe1beb1498f9462d2ecede5c9fd9735faaf/evaluate-0.4.3-py3-none-any.whl (84 kB)\nCollecting fire==0.7.1\n  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/e5/4c/93d0f85318da65923e4b91c1c2ff03d8a458cbefebe3bc612a6693c7906d/fire-0.7.1-py3-none-any.whl (115 kB)\nCollecting tensorboardX==2.6.2.2\n  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/44/71/f3e7c9b2ab67e28c572ab4e9d5fa3499e0d252650f96d8a3a03e26677f53/tensorboardX-2.6.2.2-py2.py3-none-any.whl (101 kB)\nInstalling collected packages: tensorboardX, fire, evaluate\n\nSuccessfully installed evaluate-0.4.3 fire-0.7.1 tensorboardX-2.6.2.2\nWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\nCPU_IMPORT_PASS instructional_fingerprinting\nCPU_IMPORT_PASS instructional_fingerprinting\n",
+      "scope": "CPU imports only, no model loading/training"
+    },
+    "utf": {
+      "time": "2026-09-05T12:17:06.928288+00:00",
+      "exit_code": 0,
+      "log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/cpu_import_audit.log",
+      "tail": "The 8-bit optimizer is not available on your device, only available on CUDA for now.\nCPU_IMPORT_PASS utf\nThe 8-bit optimizer is not available on your device, only available on CUDA for now.\nCPU_IMPORT_PASS utf\n",
+      "scope": "CPU imports only, no model loading/training"
+    },
+    "double_i": {
+      "time": "2026-09-05T13:03:36.334408+00:00",
+      "exit_code": 0,
+      "scope": "CPU imports only, no model loading/training"
+    },
+    "codegenguard": {
+      "time": "2026-09-05T12:17:10.389886+00:00",
+      "exit_code": 0,
+      "log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/cpu_import_audit.log",
+      "tail": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/cpu_import_audit.py\", line 22, in <module>\n    sys.path.insert(0,str(work)); import models, utils, dataprep_utils, train_discrete_pez_contrast_dual_lora, verify_discrete_prompt\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/work/utils.py\", line 44, in <module>\n    from sentence_transformers.util import semantic_search, dot_score, normalize_embeddings\nModuleNotFoundError: No module named 'sentence_transformers'\n{\"time\": \"2026-09-05T12:17:07.026783+00:00\", \"command\": [\"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python\", \"-m\", \"pip\", \"install\", \"--target\", \"/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/runtime_overlay\", \"--upgrade\", \"--no-deps\", \"--index-url\", \"https://pypi.tuna.tsinghua.edu.cn/simple\", \"sentence-transformers==3.1.1\"], \"cwd\": \"/root/autodl-tmp/WMKD_Benchmark\"}\nLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple\nCollecting sentence-transformers==3.1.1\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/75/0c/0bbbf03748c3c7c69f41f016b14cbee946cbd8880d0fb91a05c6f7b7a176/sentence_transformers-3.1.1-py3-none-any.whl (245 kB)\nInstalling collected packages: sentence-transformers\nSuccessfully installed sentence-transformers-3.1.1\nWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\nCPU_IMPORT_PASS codegenguard\n",
+      "scope": "CPU imports only, no model loading/training"
+    }
+  },
+  "controller": {
+    "guardian_pid": 5451,
+    "supervisor_pid": 8466,
+    "restart_attempt": 2,
+    "started_at": "2026-09-05T13:01:26.146832+00:00"
+  },
+  "invalidation": {
+    "safe_action": "If not explicitly approved to interrupt, retain full current training progress and checkpoint; after natural completion automatically start eaaw_a_20260905_111830_cont2 with official preprocessing.",
+    "official_builder": "https://raw.githubusercontent.com/huggingface/datasets/1.18.4/datasets/ptb_text_only/ptb_text_only.py",
+    "approval_state": "Interruption rejected by automatic review; explicit user question pending.",
+    "reason": "Official ptb_text_only applies line.strip(); current local text loading retained leading and trailing whitespace. This run must not be accepted as canonical Experiment A.",
+    "time": "2026-09-05T12:30:55.6061213Z"
+  },
+  "hourly_heartbeat_id": "wmkd-methods-11-15"
+}

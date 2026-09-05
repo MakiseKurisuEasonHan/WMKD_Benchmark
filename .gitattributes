@@ -1,4 +1,7 @@
 *.sh text eol=lf
+scripts/methods_11_15/** text eol=lf
+results/methods_11_15/** text eol=lf
+results/methods_11_15*.json text eol=lf
 
 # Preserve canonical indexed full-log bytes across Windows and Linux checkouts.
 results/pnfp/preferred_teacher/full_experiment_log.json text eol=crlf
