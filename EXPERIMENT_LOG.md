@@ -294,3 +294,7 @@ Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved output
 ## Proactive Bb final integrity closure — 2026-09-05
 
 Terminal objects: PN-FP Bb COMPLETE; EverTracer Bb COMPLETE; CTCC original Bb BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE; CTCC Bb2 COMPLETE; iSeal Bb COMPLETE; SCW Bb COMPLETE. The strict audit covers 32 canonical full JSON objects. Ten stale preferred-Teacher/Ba-Student index SHAs were recalculated and repaired without changing scientific logs. Reports, archive metadata, status, safety checks, and three-end Git parity are recorded in `docs/reproduction_reports/proactive_bb_final_closure_integrity.md`. Historical failures and infrastructure continuations remain preserved.
+
+## Project-wide ModelScope archival remediation — 2026-09-05
+
+Tiered archival verification is complete: two early models passed full redownload/SHA/reload; eight passed strong remote filename/size/SHA-blob/manifest verification. Three detector dependency gaps were closed in PRIVATE ModelScope repositories. Canonical inventory: 41 artifacts = 24 verified, 8 strongly verified, 0 missing, 7 not applicable, and 2 permanently unavailable historical originals. Strict full-log index validation is 32/32 with no duplicate composite IDs, broken paths, or SHA mismatch. No scientific configuration, result, or metric changed; AutoDL canonical data was not deleted.

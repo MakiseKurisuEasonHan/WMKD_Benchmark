@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "classification": "VERIFIED_ARCHIVED",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_detector_dependencies",
+  "visibility": "PRIVATE",
+  "reference_model_verification_tier": "ARCHIVED_STRONGLY_VERIFIED",
+  "reference_source_manifest_sha256": "bca1ea3d6f68c2ced8cb55d969e4710ef6b1f6921f5f9267c721ac06b5fa0aaf",
+  "reference_checks": {
+    "reference_merged/chat_template.jinja": {
+      "expected": {
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      "remote": {
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+        "blob_id": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      "match": true
+    },
+    "reference_merged/config.json": {
+      "expected": {
+        "size": 873,
+        "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50"
+      },
+      "remote": {
+        "size": 873,
+        "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50",
+        "blob_id": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50"
+      },
+      "match": true
+    },
+    "reference_merged/generation_config.json": {
+      "expected": {
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      "remote": {
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+        "blob_id": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      "match": true
+    },
+    "reference_merged/model-00001-of-00002.safetensors": {
+      "expected": {
+        "size": 4965799096,
+        "sha256": "60c08bdfa3f00da00f2ba301e6d3605e3c4f124318119d4abf9c5f980015e6ca"
+      },
+      "remote": {
+        "size": 4965799096,
+        "sha256": "60c08bdfa3f00da00f2ba301e6d3605e3c4f124318119d4abf9c5f980015e6ca",
+        "blob_id": "60c08bdfa3f00da00f2ba301e6d3605e3c4f124318119d4abf9c5f980015e6ca"
+      },
+      "match": true
+    },
+    "reference_merged/model-00002-of-00002.safetensors": {
+      "expected": {
+        "size": 1459729952,
+        "sha256": "edb9646ffc367b00f28f5ce2f6afb817e59b1f838ea476ab98e26c9ff8893ac2"
+      },
+      "remote": {
+        "size": 1459729952,
+        "sha256": "edb9646ffc367b00f28f5ce2f6afb817e59b1f838ea476ab98e26c9ff8893ac2",
+        "blob_id": "edb9646ffc367b00f28f5ce2f6afb817e59b1f838ea476ab98e26c9ff8893ac2"
+      },
+      "match": true
+    },
+    "reference_merged/model.safetensors.index.json": {
+      "expected": {
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      "remote": {
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+        "blob_id": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      "match": true
+    },
+    "reference_merged/special_tokens_map.json": {
+      "expected": {
+        "size": 296,
+        "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+      },
+      "remote": {
+        "size": 296,
+        "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+        "blob_id": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+      },
+      "match": true
+    },
+    "reference_merged/tokenizer.json": {
+      "expected": {
+        "size": 17209920,
+        "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+      },
+      "remote": {
+        "size": 17209920,
+        "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+        "blob_id": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+      },
+      "match": true
+    },
+    "reference_merged/tokenizer_config.json": {
+      "expected": {
+        "size": 50525,
+        "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94"
+      },
+      "remote": {
+        "size": 50525,
+        "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94",
+        "blob_id": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94"
+      },
+      "match": true
+    }
+  },
+  "frozen_neighborhoods_verification_tier": "VERIFIED_ARCHIVED",
+  "frozen_neighborhoods_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+  "frozen_neighborhoods_count": 200,
+  "frozen_neighborhoods_independent_redownload": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_evertracer_neighborhoods_20260905_094840",
+  "scientific_configuration_changed": false,
+  "verified_at": "2026-09-05T09:58:38.227358+00:00",
+  "temporary_verification_copy_deleted": true,
+  "deleted_at": "2026-09-05T09:58:38.227850+00:00"
+}

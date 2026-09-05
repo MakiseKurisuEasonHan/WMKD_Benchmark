@@ -1,0 +1,134 @@
+{
+  "schema_version": "wmkd.project-archive-remediation.model-verification.v1",
+  "status": "PASS",
+  "label": "pnfp_a2_teacher",
+  "repository": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+  "repository_type": "model",
+  "visibility_before": "PRIVATE",
+  "visibility_after": "PRIVATE",
+  "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/modelscope_a2_upload_20260828_154500/WMKD_ARTIFACT_MANIFEST.json",
+  "source_manifest_sha256": "d7be31a8093e6a61e84e193c883accd2bcec3ad0db56eff00a55e884970e6dd8",
+  "canonical_file_count": 8,
+  "canonical_files": {
+    "config.json": {
+      "expected": {
+        "size": 966,
+        "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d"
+      },
+      "observed": {
+        "exists": true,
+        "size": 966,
+        "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d",
+        "match": true
+      }
+    },
+    "generation_config.json": {
+      "expected": {
+        "size": 184,
+        "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+      },
+      "observed": {
+        "exists": true,
+        "size": 184,
+        "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+        "match": true
+      }
+    },
+    "model-00001-of-00002.safetensors": {
+      "expected": {
+        "size": 4965799096,
+        "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c"
+      },
+      "observed": {
+        "exists": true,
+        "size": 4965799096,
+        "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c",
+        "match": true
+      }
+    },
+    "model-00002-of-00002.safetensors": {
+      "expected": {
+        "size": 1459729952,
+        "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa"
+      },
+      "observed": {
+        "exists": true,
+        "size": 1459729952,
+        "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa",
+        "match": true
+      }
+    },
+    "model.safetensors.index.json": {
+      "expected": {
+        "size": 20919,
+        "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+      },
+      "observed": {
+        "exists": true,
+        "size": 20919,
+        "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+        "match": true
+      }
+    },
+    "special_tokens_map.json": {
+      "expected": {
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      "observed": {
+        "exists": true,
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+        "match": true
+      }
+    },
+    "tokenizer.json": {
+      "expected": {
+        "size": 9085754,
+        "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d"
+      },
+      "observed": {
+        "exists": true,
+        "size": 9085754,
+        "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d",
+        "match": true
+      }
+    },
+    "tokenizer_config.json": {
+      "expected": {
+        "size": 54557,
+        "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+      },
+      "observed": {
+        "exists": true,
+        "size": 54557,
+        "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+        "match": true
+      }
+    }
+  },
+  "remote_files": [
+    ".gitattributes",
+    "README.md",
+    "config.json",
+    "configuration.json",
+    "generation_config.json",
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors",
+    "model.safetensors.index.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "transfer_tests/modelscope_upload_test_20260828T081723Z.txt",
+    "wmkd_metadata/SHA256SUMS",
+    "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json"
+  ],
+  "independent_verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_remediation_pnfp_a2_teacher_20260905_074913",
+  "fresh_process_reload": "PASS",
+  "reload_python": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/pnfp/env/bin/python",
+  "credential_emitted": false,
+  "scientific_configuration_changed": false,
+  "verified_at": "2026-09-05T08:36:54.400526+00:00",
+  "temporary_verification_copy_deleted": true,
+  "deleted_at": "2026-09-05T08:36:54.556996+00:00"
+}

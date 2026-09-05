@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "classification": "VERIFIED_ARCHIVED",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_recovered_exact_detector_input",
+  "visibility": "PRIVATE",
+  "source": {
+    "schema_version": "wmkd.detector-dependency-archive.v1",
+    "method": "SCW",
+    "artifact_role": "SCW recovered-exact canonical 1000-sample detector input",
+    "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+    "canonical_filename": "scw_a2_french_eval_1000.jsonl",
+    "physical_sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d",
+    "physical_size": 718092,
+    "detector_count_used": 1000,
+    "scientific_artifact_unchanged": true,
+    "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_recovered_exact_detector_input",
+    "visibility": "PRIVATE",
+    "secret_policy_review": "PRIVATE scientific detector dependency explicitly authorized for archival; contains no service credential, API token, password, SSH key, or environment secret",
+    "created_at": "2026-09-05T09:45:50.846212+00:00"
+  },
+  "package_files": {
+    "scw_a2_french_eval_1000.jsonl": {
+      "size": 718092,
+      "sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d"
+    },
+    "manifest.json": {
+      "size": 879,
+      "sha256": "1e6ab71808244a3d1e7d72f7a152612a8874a819efe7494787fed76af13c6844"
+    },
+    "README.md": {
+      "size": 222,
+      "sha256": "d08a778fac4495ed4be4b7425fc8e49e55ff3cc85cae2dabbf5fc05378a4a22b"
+    },
+    "SHA256SUMS": {
+      "size": 252,
+      "sha256": "1912125a44755a4841de158f658a840c864b308451f77cf16fed90d82ca24f5a"
+    }
+  },
+  "independent_redownload": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_scw_detector_dependency_20260905_094550",
+  "scientific_configuration_changed": false,
+  "verified_at": "2026-09-05T09:46:00.084762+00:00",
+  "temporary_verification_copy_deleted": true,
+  "upload_staging_deleted": true
+}

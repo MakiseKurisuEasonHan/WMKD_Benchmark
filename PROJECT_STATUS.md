@@ -262,3 +262,7 @@ Run `scw_bb_20260904_055000` completed preprocessing, private archives, fresh St
 
 <!-- CTCC_BB2_FINAL -->
 Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved outputs, completed 20,000 records with 236 disclosed fallbacks, and completed Student, archives, frozen detector and utility. Original CTCC Bb remains blocked and unchanged.
+
+## Project-wide ModelScope archival remediation — 2026-09-05
+
+Tiered archival verification is complete: two early models passed full redownload/SHA/reload; eight passed strong remote filename/size/SHA-blob/manifest verification. Three detector dependency gaps were closed in PRIVATE ModelScope repositories. Canonical inventory: 41 artifacts = 24 verified, 8 strongly verified, 0 missing, 7 not applicable, and 2 permanently unavailable historical originals. Strict full-log index validation is 32/32 with no duplicate composite IDs, broken paths, or SHA mismatch. No scientific configuration, result, or metric changed; AutoDL canonical data was not deleted.

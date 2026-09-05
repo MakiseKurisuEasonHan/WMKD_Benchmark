@@ -411,5 +411,13 @@
     "no checkpoint-level detector trajectory",
     "utility limited to the frozen benchmark scope",
     "no universal robustness or removal claim"
-  ]
+  ],
+  "archive_remediation_20260905": {
+    "classification": "VERIFIED_ARCHIVED",
+    "evidence": "results/archive_remediation/evidence/evertracer_detector_dependencies_20260905_094840.json",
+    "evidence_sha256": "3d761ddbb2543a7f40298229964478b154563ed945f1714acb303e8097cd4bf9",
+    "archive_only_update": true,
+    "scientific_metrics_changed": false,
+    "recorded_at": "2026-09-05T10:17:19.271909+00:00"
+  }
 }

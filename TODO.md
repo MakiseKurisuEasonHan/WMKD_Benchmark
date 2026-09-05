@@ -276,3 +276,8 @@ Bb2 was subsequently frozen without a short-token bypass and its formal pilot is
 
 <!-- CTCC_BB_BLOCKED -->
 Run `ctcc_bb_20260904_055000`: `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE`. Under the frozen standardized Bb preprocessing protocol, CTCC exceeded the predefined identity-fallback acceptance limit (202 > 200), so the experiment was blocked before Student training. Threshold unchanged; no downstream Student/detector/utility was run.
+
+- [x] Complete tiered verification for 10 early proactive Teacher/Ba model archives (2 full-redownload; 8 strong-remote).
+- [x] Archive and independently verify PN-FP, EverTracer, and SCW critical detector dependencies.
+- [x] Build the 41-artifact canonical archive inventory and pass strict 32/32 full-log index validation.
+- [ ] Do not delete AutoDL data without a separate explicit authorization.

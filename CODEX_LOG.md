@@ -521,3 +521,7 @@ Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved output
 ## 2026-09-05 — Proactive Bb final closure/integrity audit
 
 Performed a CPU/filesystem/Git-only closure on the manually restarted no-GPU AutoDL instance. Preserved terminal scientific states and historical failure/continuation evidence. Strictly recomputed the 32-object index and repaired ten stale SHA entries for PN-FP, EverTracer, CTCC, iSeal, and SCW preferred-Teacher/Ba-Student logs. Expanded the formal Bb/Bb2 reports and unified report without inventing unavailable values, added `proactive_bb_final_closure_integrity.md`, and updated current summaries. No GPU work, preprocessing, training, detector, utility, reconstruction, ModelScope transfer, cleanup, threshold/config change, or scientific artifact mutation occurred.
+
+## Project-wide ModelScope archival remediation — 2026-09-05
+
+Tiered archival verification is complete: two early models passed full redownload/SHA/reload; eight passed strong remote filename/size/SHA-blob/manifest verification. Three detector dependency gaps were closed in PRIVATE ModelScope repositories. Canonical inventory: 41 artifacts = 24 verified, 8 strongly verified, 0 missing, 7 not applicable, and 2 permanently unavailable historical originals. Strict full-log index validation is 32/32 with no duplicate composite IDs, broken paths, or SHA mismatch. No scientific configuration, result, or metric changed; AutoDL canonical data was not deleted.

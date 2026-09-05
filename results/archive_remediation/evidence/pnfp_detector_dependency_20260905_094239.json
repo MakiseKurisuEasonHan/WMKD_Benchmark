@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "classification": "VERIFIED_ARCHIVED",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_canonical_detector_keys",
+  "visibility": "PRIVATE",
+  "canonical_sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+  "payload_json_type": "list",
+  "payload_raw_entry_count": 1087,
+  "canonical_detector_count_used": 1024,
+  "schema": "PASS",
+  "package_files": {
+    "fingerprint_keys.json": {
+      "size": 921885,
+      "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612"
+    },
+    "manifest.json": {
+      "size": 1030,
+      "sha256": "0272a2784580b9cc1e1489539a5775350094d711047838965645be5bc02a993e"
+    },
+    "README.md": {
+      "size": 214,
+      "sha256": "d409fce4c448a0d20ae701fbbfe9799e844b3d4e109a75bdf95a6a8a292c4897"
+    },
+    "SHA256SUMS": {
+      "size": 244,
+      "sha256": "6ee929d880656ebbfc7bf90e84cc03bc5ca0f2aeedd9d89c69ac83ff6439c67f"
+    }
+  },
+  "independent_redownload": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_pnfp_detector_dependency_20260905_094239",
+  "key_content_emitted": false,
+  "scientific_configuration_changed": false,
+  "verified_at": "2026-09-05T09:44:49.648554+00:00",
+  "temporary_verification_copy_deleted": true,
+  "deleted_at": "2026-09-05T09:44:49.650831+00:00"
+}

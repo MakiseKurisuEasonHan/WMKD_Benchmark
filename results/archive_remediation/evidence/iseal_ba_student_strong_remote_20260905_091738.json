@@ -1,0 +1,209 @@
+{
+  "schema_version": "wmkd.project-archive-remediation.strong-remote-model-verification.v1",
+  "label": "iseal_ba_student",
+  "repository": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+  "repository_type": "model",
+  "status": "PASS",
+  "classification": "ARCHIVED_STRONGLY_VERIFIED",
+  "visibility": "PRIVATE",
+  "full_independent_redownload": false,
+  "fresh_process_reload": "NOT_REQUIRED_BY_TIER",
+  "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/iseal_student_upload_20260830/WMKD_ARTIFACT_MANIFEST.json",
+  "source_manifest_sha256": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a",
+  "expected_canonical_file_count": 9,
+  "matched_canonical_file_count": 9,
+  "canonical_checks": {
+    "chat_template.jinja": {
+      "expected": {
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      "remote": {
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+        "blob_id": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      "match": true
+    },
+    "config.json": {
+      "expected": {
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      "remote": {
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+        "blob_id": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      "match": true
+    },
+    "generation_config.json": {
+      "expected": {
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      "remote": {
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+        "blob_id": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      "match": true
+    },
+    "model-00001-of-00002.safetensors": {
+      "expected": {
+        "size": 4965799096,
+        "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03"
+      },
+      "remote": {
+        "size": 4965799096,
+        "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03",
+        "blob_id": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03"
+      },
+      "match": true
+    },
+    "model-00002-of-00002.safetensors": {
+      "expected": {
+        "size": 1459729952,
+        "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e"
+      },
+      "remote": {
+        "size": 1459729952,
+        "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e",
+        "blob_id": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e"
+      },
+      "match": true
+    },
+    "model.safetensors.index.json": {
+      "expected": {
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      "remote": {
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+        "blob_id": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      "match": true
+    },
+    "special_tokens_map.json": {
+      "expected": {
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      "remote": {
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+        "blob_id": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      "match": true
+    },
+    "tokenizer.json": {
+      "expected": {
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      "remote": {
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+        "blob_id": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      "match": true
+    },
+    "tokenizer_config.json": {
+      "expected": {
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      "remote": {
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+        "blob_id": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      "match": true
+    }
+  },
+  "remote_total_file_count": 13,
+  "remote_files": {
+    ".gitattributes": {
+      "size": 2129,
+      "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+      "blob_id": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+    },
+    "chat_template.jinja": {
+      "size": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "blob_id": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    "config.json": {
+      "size": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "blob_id": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    "generation_config.json": {
+      "size": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "blob_id": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    "model-00001-of-00002.safetensors": {
+      "size": 4965799096,
+      "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03",
+      "blob_id": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03"
+    },
+    "model-00002-of-00002.safetensors": {
+      "size": 1459729952,
+      "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e",
+      "blob_id": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e"
+    },
+    "model.safetensors.index.json": {
+      "size": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "blob_id": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    "README.md": {
+      "size": 877,
+      "sha256": "23c8497e923117745f207f87c1b2bab907ba80a05d876bce9e0ff4710ca47135",
+      "blob_id": "23c8497e923117745f207f87c1b2bab907ba80a05d876bce9e0ff4710ca47135"
+    },
+    "wmkd_metadata/SHA256SUMS": {
+      "size": 965,
+      "sha256": "e6d41a7ac493cf1d1a570776310afbd7811e92bb490b5de6bf1be9ad74cc48af",
+      "blob_id": "e6d41a7ac493cf1d1a570776310afbd7811e92bb490b5de6bf1be9ad74cc48af"
+    },
+    "special_tokens_map.json": {
+      "size": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "blob_id": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    "tokenizer.json": {
+      "size": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "blob_id": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    "tokenizer_config.json": {
+      "size": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "blob_id": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json": {
+      "size": 3079,
+      "sha256": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a",
+      "blob_id": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a"
+    }
+  },
+  "git_archive_records": [
+    "docs/EXPERIMENT_PROTOCOL.md",
+    "docs/reproduction_reports/iseal_experiment_ba_report.md",
+    "results/experiment_full_logs_index.json",
+    "results/iseal/archive/iseal_student_modelscope_source_manifest.json",
+    "results/iseal/archive/iseal_student_modelscope_verification.json",
+    "results/iseal/archive/summary.json",
+    "results/iseal/ba_student/full_experiment_log.json",
+    "results/iseal/experiment_ba/summary.json"
+  ],
+  "failures": [],
+  "no_missing_shard_or_truncation": true,
+  "unexpected_overwrite": false,
+  "credential_emitted": false,
+  "scientific_configuration_changed": false,
+  "verified_at": "2026-09-05T09:17:45.192328+00:00"
+}

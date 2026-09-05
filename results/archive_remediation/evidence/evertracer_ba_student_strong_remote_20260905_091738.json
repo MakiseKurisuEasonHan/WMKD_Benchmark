@@ -1,0 +1,213 @@
+{
+  "schema_version": "wmkd.project-archive-remediation.strong-remote-model-verification.v1",
+  "label": "evertracer_ba_student",
+  "repository": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+  "repository_type": "model",
+  "status": "PASS",
+  "classification": "ARCHIVED_STRONGLY_VERIFIED",
+  "visibility": "PRIVATE",
+  "full_independent_redownload": false,
+  "fresh_process_reload": "NOT_REQUIRED_BY_TIER",
+  "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/transfers/modelscope/evertracer_student_upload_20260829/WMKD_ARTIFACT_MANIFEST.json",
+  "source_manifest_sha256": "b193dceb0a0b7754f54113b967d1e64a3b03f93956f53e115cbb286d8de5f703",
+  "expected_canonical_file_count": 9,
+  "matched_canonical_file_count": 9,
+  "canonical_checks": {
+    "chat_template.jinja": {
+      "expected": {
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      "remote": {
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+        "blob_id": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      "match": true
+    },
+    "config.json": {
+      "expected": {
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      "remote": {
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+        "blob_id": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      "match": true
+    },
+    "generation_config.json": {
+      "expected": {
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      "remote": {
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+        "blob_id": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      "match": true
+    },
+    "model-00001-of-00002.safetensors": {
+      "expected": {
+        "size": 4965799096,
+        "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793"
+      },
+      "remote": {
+        "size": 4965799096,
+        "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793",
+        "blob_id": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793"
+      },
+      "match": true
+    },
+    "model-00002-of-00002.safetensors": {
+      "expected": {
+        "size": 1459729952,
+        "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf"
+      },
+      "remote": {
+        "size": 1459729952,
+        "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf",
+        "blob_id": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf"
+      },
+      "match": true
+    },
+    "model.safetensors.index.json": {
+      "expected": {
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      "remote": {
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+        "blob_id": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      "match": true
+    },
+    "special_tokens_map.json": {
+      "expected": {
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      "remote": {
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+        "blob_id": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      "match": true
+    },
+    "tokenizer.json": {
+      "expected": {
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      "remote": {
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+        "blob_id": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      "match": true
+    },
+    "tokenizer_config.json": {
+      "expected": {
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      "remote": {
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+        "blob_id": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      "match": true
+    }
+  },
+  "remote_total_file_count": 14,
+  "remote_files": {
+    ".gitattributes": {
+      "size": 2129,
+      "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+      "blob_id": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+    },
+    "chat_template.jinja": {
+      "size": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "blob_id": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    "config.json": {
+      "size": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "blob_id": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    "configuration.json": {
+      "size": 26,
+      "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+      "blob_id": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+    },
+    "generation_config.json": {
+      "size": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "blob_id": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    "model-00001-of-00002.safetensors": {
+      "size": 4965799096,
+      "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793",
+      "blob_id": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793"
+    },
+    "model-00002-of-00002.safetensors": {
+      "size": 1459729952,
+      "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf",
+      "blob_id": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf"
+    },
+    "model.safetensors.index.json": {
+      "size": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "blob_id": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    "README.md": {
+      "size": 1569,
+      "sha256": "be473f0bf6adf3c8d883900f8f4ecce270327d2a018c3be9b89b3980c7be946c",
+      "blob_id": "be473f0bf6adf3c8d883900f8f4ecce270327d2a018c3be9b89b3980c7be946c"
+    },
+    "wmkd_metadata/SHA256SUMS": {
+      "size": 805,
+      "sha256": "94fb0e18e8ca638982b0d946906f30c3c011362affaa736b0350c9394bfd315e",
+      "blob_id": "94fb0e18e8ca638982b0d946906f30c3c011362affaa736b0350c9394bfd315e"
+    },
+    "special_tokens_map.json": {
+      "size": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "blob_id": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    "tokenizer.json": {
+      "size": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "blob_id": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    "tokenizer_config.json": {
+      "size": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "blob_id": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json": {
+      "size": 2633,
+      "sha256": "b193dceb0a0b7754f54113b967d1e64a3b03f93956f53e115cbb286d8de5f703",
+      "blob_id": "b193dceb0a0b7754f54113b967d1e64a3b03f93956f53e115cbb286d8de5f703"
+    }
+  },
+  "git_archive_records": [
+    "EXPERIMENT_LOG.md",
+    "docs/EXPERIMENT_PROTOCOL.md",
+    "docs/reproduction_reports/evertracer_final_closure.md",
+    "results/evertracer/archive/evertracer_ba_student_modelscope_source_manifest.json",
+    "results/evertracer/archive/evertracer_ba_student_modelscope_verification.json",
+    "results/evertracer/ba_student/full_experiment_log.json",
+    "results/experiment_full_logs_index.json"
+  ],
+  "failures": [],
+  "no_missing_shard_or_truncation": true,
+  "unexpected_overwrite": false,
+  "credential_emitted": false,
+  "scientific_configuration_changed": false,
+  "verified_at": "2026-09-05T09:17:40.659296+00:00"
+}
