@@ -246,3 +246,8 @@ Run `iseal_bb_20260904_055000` completed preprocessing, private archives, fresh 
 
 <!-- PNFP_BB_FINAL -->
 Run `pnfp_bb_20260904_055000` completed preprocessing, private archives, fresh Student, frozen detector, utility, and full-log closure. Under this single standardized same-backbone Bb setting, PN-FP detector behavior was 72/1024. Utility relative to Ba changed by ARC +0.011945 and TruthfulQA +0.022658. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.
+
+## SCW Bb final closure — 2026-09-05
+
+<!-- SCW_BB_FINAL -->
+Run `scw_bb_20260904_055000` completed preprocessing, private archives, fresh Student, frozen detector, utility, and full-log closure. Under this single standardized same-backbone Bb setting, SCW detector behavior was p=0.9529914855957031. Utility relative to Ba changed by ARC +0.014505 and TruthfulQA +0.011452. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.

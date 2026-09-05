@@ -1,0 +1,354 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "method": "SCW",
+    "experiment": "Bb",
+    "canonical_run_id": "scw_bb_20260904_055000"
+  },
+  "status": "COMPLETED",
+  "scientific_status": "COMPLETE",
+  "parent_dataset_origin": "protocol_faithful_reconstruction",
+  "parent": {
+    "parent_experiment": "SCW Ba",
+    "parent_run_id": "scw_ba_parent_reconstruction_20260904_055000",
+    "parent_teacher": "SCW A2",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+    "manifest_path": null,
+    "record_count": 20000,
+    "record_schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ],
+    "dataset_sha256": "3f0723d35102d57da9a7429914ea6a940cb2a60e073237be061dc3ec4cfb3276",
+    "frozen_jsonl_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+    "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397"
+  },
+  "preprocessing": {
+    "status": "COMPLETE",
+    "record_count": 20000,
+    "paired_content_sha256": "b3523b1be15e8fab702b23ed41a5ddb81bc63511aa52440f6e243e5745131ba7",
+    "physical_sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+    "quality": {
+      "sample_count": 20000,
+      "exact_copy_count": 7282,
+      "exact_copy_rate": 0.3641,
+      "natural_exact_copy_count": 2165,
+      "identity_fallback_count": 51,
+      "identity_fallback_rate": 0.00255,
+      "atomic_identity_preserved_count": 5066,
+      "qwen_submitted_count": 14934,
+      "qwen_paraphrased_count": 12718,
+      "qwen_identity_output_count": 2165,
+      "total_identity_output_count": 7282,
+      "mean_length_ratio": 3.6222310114692364,
+      "median_length_ratio": 1.0,
+      "truncation_count": 0,
+      "prompt_leakage_count": 0,
+      "instruction_echo_leakage_count": 0,
+      "chat_control_leakage_count": 0,
+      "generation_failure_count": 0,
+      "retry_count": 301,
+      "mean_lexical_change": 0.4394674757903486,
+      "median_lexical_change": 0.5454545454545454,
+      "semantic_similarity": "not_recorded_optional_hook_disabled"
+    }
+  },
+  "processed20k_archive": {
+    "status": "COMPLETED",
+    "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_bb_processed20k",
+    "visibility": "PRIVATE",
+    "uploaded_files": [
+      "README.md",
+      "SHA256SUMS",
+      "frozen_paired_qa.jsonl",
+      "manifest.json"
+    ],
+    "source_validation": {
+      "record_count": 20000,
+      "file_sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+      "content_sha256": "b3523b1be15e8fab702b23ed41a5ddb81bc63511aa52440f6e243e5745131ba7",
+      "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+      "schema": [
+        "input",
+        "instruction",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "processing_mode",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count"
+      ],
+      "secret_scan": {
+        "status": "PASS",
+        "hits": 0
+      }
+    },
+    "redownload_validation": {
+      "record_count": 20000,
+      "file_sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+      "content_sha256": "b3523b1be15e8fab702b23ed41a5ddb81bc63511aa52440f6e243e5745131ba7",
+      "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+      "schema": [
+        "input",
+        "instruction",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "processing_mode",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count"
+      ],
+      "secret_scan": {
+        "status": "PASS",
+        "hits": 0
+      }
+    },
+    "byte_identical": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_scw_bb_20260904_233512",
+    "canonical_source_preserved": true,
+    "token_emitted": false
+  },
+  "student_initialization": {
+    "fresh_canonical": true,
+    "resume": false,
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95"
+  },
+  "training": {
+    "status": "COMPLETE",
+    "steps": 7500,
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "effective_batch": 8,
+    "train_loss": 0.9257782194137574,
+    "runtime_seconds": 1948.4266513213515,
+    "finite_loss": true
+  },
+  "fresh_reload": {
+    "status": "PASS",
+    "fresh_process_reload": true,
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model",
+    "student_manifest_sha256": "784922d1d023aa98b60e5fd0c5dcecafc5bef2c1f31bc13b7b8b6b25c7f6543a",
+    "tokenizer": {
+      "class": "PreTrainedTokenizerFast",
+      "vocab_size": 128256,
+      "chat_template_present": true
+    },
+    "inference_smoke": {
+      "prompt": "Reply with exactly: WMKD_RELOAD_PASS",
+      "response": "WMKD_RELOAD_PASS",
+      "pass": true
+    },
+    "finite_weight_check": {
+      "parameter_count": 3212749824,
+      "nonfinite_count": 0,
+      "minimum": -0.98046875,
+      "maximum": 2.359375,
+      "pass": true
+    },
+    "adapter_files": [],
+    "peak_vram_bytes": 9980843008,
+    "runtime_seconds": 3.273552894592285
+  },
+  "student_archive": {
+    "status": "COMPLETED",
+    "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-SCW-Bb-Student",
+    "visibility": "PRIVATE",
+    "source_file_count": 10,
+    "uploaded_files": [
+      "LICENSE.txt",
+      "NOTICE",
+      "README.md",
+      "RELOAD_VALIDATION.json",
+      "SHA256SUMS",
+      "WMKD_STUDENT_MANIFEST.json",
+      "chat_template.jinja",
+      "config.json",
+      "generation_config.json",
+      "manifest.json",
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "training_args_excluded": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_scw_bb_student_20260905_000843",
+    "filename_size_sha_match": true,
+    "redownload_reload": "PASS",
+    "canonical_source_preserved": true,
+    "token_emitted": false
+  },
+  "detector": {
+    "status": "COMPLETE",
+    "historical": {
+      "teacher": "p=0",
+      "base": "p=0.9199569225",
+      "ba": "p=0.8440861702"
+    },
+    "bb": "p=0.9529914855957031",
+    "result": {
+      "alpha": 0.001,
+      "primary": {
+        "n_queries": 1000,
+        "p_value": 0.9529914855957031,
+        "fingerprinted": false,
+        "supplementary": false
+      },
+      "curve": [
+        {
+          "n_queries": 10,
+          "p_value": 0.057614006102085114,
+          "fingerprinted": false,
+          "supplementary": true
+        },
+        {
+          "n_queries": 25,
+          "p_value": 0.46628162264823914,
+          "fingerprinted": false,
+          "supplementary": true
+        },
+        {
+          "n_queries": 50,
+          "p_value": 0.4193538725376129,
+          "fingerprinted": false,
+          "supplementary": true
+        },
+        {
+          "n_queries": 100,
+          "p_value": 0.616563081741333,
+          "fingerprinted": false,
+          "supplementary": true
+        },
+        {
+          "n_queries": 250,
+          "p_value": 0.6864637732505798,
+          "fingerprinted": false,
+          "supplementary": true
+        },
+        {
+          "n_queries": 500,
+          "p_value": 0.9078712463378906,
+          "fingerprinted": false,
+          "supplementary": true
+        },
+        {
+          "n_queries": 1000,
+          "p_value": 0.9529914855957031,
+          "fingerprinted": false,
+          "supplementary": false
+        }
+      ],
+      "detector_input": {
+        "origin": "recovered_exact",
+        "original_canonical_unavailable": false,
+        "sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d",
+        "count": 1000
+      }
+    }
+  },
+  "utility": {
+    "status": "COMPLETE",
+    "ba": {
+      "arc_challenge_acc_norm": 0.48976109215017066,
+      "truthfulqa_mc2": 0.4747341900819149
+    },
+    "bb": {
+      "arc_challenge_acc_norm": 0.5042662116040956,
+      "truthfulqa_mc2": 0.4861866050235854
+    },
+    "delta": {
+      "arc_challenge_acc_norm": 0.014505119453924908,
+      "truthfulqa_mc2": 0.011452414941670486
+    },
+    "generation_sanity_pass": true
+  },
+  "failures": [],
+  "continuations": [],
+  "limitations": [
+    "one standardized configuration",
+    "same-backbone Student",
+    "no checkpoint-level detector trajectory",
+    "utility limited to frozen scope",
+    "no universal or causal claim",
+    "The original canonical Ba frozen20k artifact was unavailable; the parent is a new protocol-faithful reconstruction and is not claimed identical to the original."
+  ],
+  "bounded_conclusion": "Under this single standardized same-backbone Bb setting, SCW detector behavior was p=0.9529914855957031. Utility relative to Ba changed by ARC +0.014505 and TruthfulQA +0.011452. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.",
+  "artifacts": {
+    "runtime_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000"
+  },
+  "original_parent_artifact_unavailable": true,
+  "parent_reconstruction": {
+    "status": "COMPLETE",
+    "run_id": "scw_ba_parent_reconstruction_20260904_055000",
+    "parent_dataset_origin": "protocol_faithful_reconstruction",
+    "original_artifact_unavailable": true,
+    "identity": {
+      "record_count": 20000,
+      "physical_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+      "content_sha256": "3f0723d35102d57da9a7429914ea6a940cb2a60e073237be061dc3ec4cfb3276",
+      "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ]
+    },
+    "archive": {
+      "status": "COMPLETED",
+      "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_ba_reconstructed_frozen20k",
+      "visibility": "PRIVATE",
+      "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/archive/verification_20260904_215312",
+      "source": {
+        "record_count": 20000,
+        "physical_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+        "content_sha256": "3f0723d35102d57da9a7429914ea6a940cb2a60e073237be061dc3ec4cfb3276",
+        "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "redownload": {
+        "record_count": 20000,
+        "physical_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+        "content_sha256": "3f0723d35102d57da9a7429914ea6a940cb2a60e073237be061dc3ec4cfb3276",
+        "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "byte_identical": true
+    },
+    "provenance": {
+      "parent_dataset_origin": "protocol_faithful_reconstruction",
+      "original_artifact_unavailable": true,
+      "historical_run": "scw_ba_full_20260831_193828_cont1",
+      "teacher_run": "scw_a2_20260831_214339",
+      "teacher_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A",
+      "prompt_protocol": "pnfp_ba_standardized_eight_category_meta_prompts",
+      "generation": {
+        "batch_size": 8,
+        "records_per_prompt": 4,
+        "max_new_tokens": 768,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "seed": 42
+      },
+      "raw_count": 32006,
+      "error_count": 313
+    }
+  }
+}
