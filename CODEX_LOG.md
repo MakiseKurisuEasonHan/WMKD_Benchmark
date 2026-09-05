@@ -1,5 +1,16 @@
 # Codex 工作日志
 
+## 当前阶段 — 2026-09-05 方法 11–15 前规则与状态迁移
+
+以 [docs/CURRENT_STATE.md](docs/CURRENT_STATE.md) 为当前状态入口。第一批十方法 CLOSED：30 comparison slots；32 canonical full-log objects。项目归档已闭环（24 verified / 8 strong-remote / 0 missing / 7 N/A / 2 permanent historical losses）。CTCC 比较使用 Bb2，原 Bb BLOCKED 历史不变。
+
+新增顺序：11 EaaW → 12 Instructional Fingerprinting → 13 UTF → 14 Double-I Watermark → 15 CodeGenGuard。下一目标 METHOD_11_EAAW_EXPERIMENT_A，NOT_STARTED；须等待独立正式 prompt。本次只做状态/规则、精确归档权重清理与 Git 闭环。
+
+清理记录：results/pre_methods_11_15_cleanup.json；验证：results/pre_methods_11_15_validation.json。以下旧快照/待办按历史保留，不应恢复执行。
+维护执行完成：26 个已验证归档权重文件删除，释放约 60.6 GiB，剩余约 167.3 GiB；30 个 UNCERTAIN 权重文件保留。修复 Git 换行造成的远端 16 个 full-log SHA 不符，原索引和科学内容未变。完整报告：docs/reproduction_reports/pre_methods_11_15_durable_state_report.md。EaaW NOT_STARTED，STOP 等待独立正式 prompt。
+
+
+
 ## 2026-09-03 — Canonical 10-method audit and passive-Bb decision
 
 Audited the local durable sources and actual Git baseline. Updated current-facing protocol/status/TODO/README records from the obsolete seven-method/5-of-7 state to the completed ten-method A+Ba closure, corrected the global full-log count to 21, froze Bb as UP followed by distillation, and set passive methods 6–10 as the first Bb cohort. Historical dated records were preserved. No external connection, experiment, download, GPU action, archive, or cleanup was performed.

@@ -2,9 +2,25 @@
 
 This is the canonical, durable project protocol. Every new ChatGPT/Codex session must read it together with `PROJECT_STATUS.md`, `TODO.md`, `DECISIONS.md`, `EXPERIMENT_LOG.md`, and the relevant dedicated experiment log before acting. Historical logs preserve what actually happened; this file defines current policy.
 
+## 当前补充规则 — 方法 11–15（2026-09-05）
+
+当前状态以 [CURRENT_STATE.md](CURRENT_STATE.md) 为准；第一批 30 comparison slots CLOSED，32 canonical full-log objects。归档 24 verified / 8 strong-remote / 0 missing / 7 N/A / 2 permanently unavailable。下一步 METHOD_11_EAAW_EXPERIMENT_A = NOT_STARTED，等待独立正式 prompt。本次状态迁移不得启动 science、下载模型/数据或 clone 新方法。
+
+方法 11–15 顺序为 EaaW、Instructional Fingerprinting、UTF、Double-I Watermark、CodeGenGuard；这是可经用户调整的计划。优先官方原生最小科学有效配置，不自动套用旧 Llama-3.2-3B-Instruct 骨干；正式 prompt 冻结具体范围。报告必须区分 paper setting、reproduction setting、explicit approved adaptation。A 为首次正式复现；A2/A3 仅用于科学变化；cont 仅用于运行环境延续；失败历史不覆盖。
+
+每个正式 scientific object 必须有 canonical full_experiment_log.json、summary、formal report、environment/config、detector/适用 utility、limitations、bounded conclusion、artifact manifest、archive record/plan，以及全局 index 和 Git 闭环。缺失值为 null/unavailable/not-recorded/NOT_RUN，不编造。仅做必要的官方来源、commit、依赖、模型/数据、配置、运行兼容、空间/GPU、日志、detector/输出路径检查；必要时小 smoke，随后按正式授权运行，不堆叠推测审计。
+
+下载顺序：existing local → shared/project cache → ModelScope → trusted domestic mirror → HF/PyPI/GitHub mirror → overseas official last。镜像仅作传输；保留 canonical upstream、revision/commit、version、file set、SHA/provenance；等价性不能确认则停止相关下载/实验。
+
+一项大型 GPU 任务一次；启动前 nvidia-smi，使用明确空闲 GPU，不终止其他进程。长实验 detached，记录 run ID/PID/session/log/status/exit code。与外部人员通信须有用户明确授权，历史邮件配置本身不构成新发送授权。
+
+清理须有本次用户授权，并先 exact-path dry-run 分类 KEEP/DELETE/UNCERTAIN；UNCERTAIN=KEEP。DELETE 必须科学闭环、report/full log 和 Git durable evidence 存在、必要的 ModelScope 恢复路径及验证 PASS、无活动引用、非唯一证据、不被当前 checkout 或紧接着的实验需要、精确路径已知。只删清单中的精确文件/目录，不删宽泛父目录；记录路径/大小/身份/归档证据/原因/时间、前后磁盘与实际释放量。保留 repo、代码、所有正式日志/报告/summary/index/inventory/verification/provenance、凭据配置及不确定对象。禁止 git clean -fd、reset --hard、force push、history rewrite。未来清理不能沿用本次授权任意扩大范围。
+
+当前 SSH：ssh -p 32514 root@connect.westd.seetacloud.com。AutoDL 学校 VPN 关闭；La Trobe 学校 VPN 开启。新会话重验主机、配额、GPU/driver/CUDA、磁盘与本地/远端 Git；不沿用 6000 alias。Git 只收代码和小型 durable evidence，不收权重/大数据/cache/secret。
+
 ## Project identity and decision authority
 
-WMKD_Benchmark benchmarks robustness/stability of LLM ownership-verification methods under knowledge distillation and related model-extraction attacks, with the long-term goal of an ICLR/top-conference paper. The ten selected methods are, in benchmark order: PN-FP, EverTracer, CTCC, iSeal, SCW, LLMPrint, REEF, HuRef, AWM, and ZeroPrint. PN-FP, EverTracer, CTCC, iSeal, and SCW are proactive/embedded ownership signals; LLMPrint, REEF, HuRef, AWM, and ZeroPrint are passive/intrinsic ownership fingerprints. Use “ownership watermarking / fingerprinting methods” or “ownership-verification methods” for the combined benchmark rather than describing all ten as embedded watermarks.
+WMKD_Benchmark benchmarks robustness/stability of LLM ownership-verification methods under knowledge distillation and related model-extraction attacks, with the long-term goal of an ICLR/top-conference paper. The completed first ten methods are, in benchmark order: PN-FP, EverTracer, CTCC, iSeal, SCW, LLMPrint, REEF, HuRef, AWM, and ZeroPrint. PN-FP, EverTracer, CTCC, iSeal, and SCW are proactive/embedded ownership signals; LLMPrint, REEF, HuRef, AWM, and ZeroPrint are passive/intrinsic ownership fingerprints. Use “ownership watermarking / fingerprinting methods” or “ownership-verification methods” for the combined benchmark rather than describing all ten as embedded watermarks.
 
 The standard workflow is user → ChatGPT research discussion → explicit execution prompt → Codex implementation → copy-ready Codex handoff → ChatGPT discussion. Codex communicates with the user in Chinese and does not independently make major research-design decisions. Changing the backbone or revision, dataset scale/protocol, distillation protocol, watermark core method, long-term paths, Git identity/remotes, model-repository identity, or destructive cleanup policy requires an explicit user/ChatGPT decision unless already fixed here.
 
@@ -40,7 +56,7 @@ WMKD_Benchmark is strictly independent of WaterBench, WaterBenchV2, WaterBenchV3
 - AutoDL data root `/root/autodl-tmp/WMKD_Benchmark_data`: all large compute artifacts and project-owned caches.
 - La Trobe lightweight checkout `/data/home/ad/21672330/WMKD_Benchmark` and warehouse `/data/shared/nobackup/21672330/WMKD_Benchmark`: long-term storage. Before giving manual school-server connection instructions state **学校 VPN：开启**.
 
-Current formal AutoDL environment/hardware baseline: Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, one RTX PRO 6000 96 GB GPU, Intel Xeon Platinum 8470Q with 22 vCPUs, 110 GB RAM, a 30 GB system disk, and approximately 500 GB data capacity composed of 50 GB free storage plus 450 GB paid storage. These are current point-in-time operational records, not a scientific protocol or a capacity guarantee. Historical logs truthfully recording an older 208-container-vCPU, approximately 1 TiB RAM, approximately 1 TiB data-disk instance must not be rewritten.
+Historical formal AutoDL environment/hardware baseline (actual 2026-09-05 hardware/quota observation is in CURRENT_STATE.md): Ubuntu 22.04, Python 3.12, PyTorch 2.8.0, CUDA 12.8, one RTX PRO 6000 96 GB GPU, Intel Xeon Platinum 8470Q with 22 vCPUs, 110 GB RAM, a 30 GB system disk, and approximately 500 GB data capacity composed of 50 GB free storage plus 450 GB paid storage. These are historical point-in-time operational records, not a scientific protocol or a capacity guarantee. Historical logs truthfully recording an older 208-container-vCPU, approximately 1 TiB RAM, approximately 1 TiB data-disk instance must not be rewritten.
 
 The current AutoDL instance is pay-as-you-go rather than on a weekly package. When no scientific workload is active, shutdown may save GPU charges, but shutdown releases the GPU allocation and later inventory may be unavailable; paid storage may continue charging while powered off. Billing considerations must never reduce scientific completeness or authorize cleanup. Models, checkpoints, datasets, caches, and large outputs must stay under the data root and must never fill the system disk.
 
@@ -55,11 +71,11 @@ A mirror is transport acceleration only, never scientific provenance. Record `ca
 - **Experiment Ba:** Direct Distillation, formally defined as offline hard-label sequence-level behavioral distillation.
 - **Experiment Bb:** answer-only Untargeted Paraphrasing followed by Distillation (UP + Distillation).
 
-Passive Shared Bb and Bb2 are immutable `BLOCKED_AT_PILOT` histories; Passive Shared Bb3 is COMPLETE and is the current validated UP reference. The next proactive attack remains named **Experiment Bb**, not Bb3, unless a future explicit scientific decision changes it. Reusing the finalized Passive Bb3 implementation does not rename the proactive experiment or authorize execution.
+Passive Shared Bb and Bb2 are immutable `BLOCKED_AT_PILOT` histories; Passive Shared Bb3 is COMPLETE and is the current validated UP reference. For the completed first batch, the proactive attack is named **Experiment Bb**, not Bb3 (with the separately authorized CTCC Bb2 exception). Reusing the finalized Passive Bb3 implementation does not rename the proactive experiment or authorize execution.
 
 Each formal experiment has an immutable run namespace. Run IDs use `<method>_<experiment>_YYYYMMDD_HHMMSS`; a corrected or continued run receives a new ID. If the scientific configuration is unchanged and the failure is only network, cache, infrastructure, pipeline implementation, or a downstream stage, use an immutable continuation lineage where appropriate rather than automatically renaming the experiment A2. Never overwrite or silently resume failed, limited, or completed history.
 
-## Canonical backbone
+## Canonical backbone — first-batch methods 1–10
 
 Unless an explicitly approved and documented method-specific exception exists, all A and Ba experiments use `meta-llama/Llama-3.2-3B-Instruct` revision `0cb88a4f764b7a12671c53f0838cd831a0843b95`. The canonical AutoDL copy is `/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct`; it must never be deleted, overwritten, or silently modified. Its preserved verification is 12 canonical files, 6,434,748,511 bytes, 12/12 SHA256 passed.
 
@@ -126,7 +142,7 @@ Every Codex task updates the appropriate existing project state/log records. Eve
 
 The formal report includes objective, environment table, configuration table, original-paper versus benchmark comparison, training results, watermark results, utility results, checkpoint/reload validation, deviations, limitations, artifact/archive state, and a bounded scientific conclusion. The user does not need to request these separately.
 
-Every formal A/Ba/Bb scientific object requires a canonical `full_experiment_log.json`; a summary, terminal log, or Markdown report alone is insufficient. It must cover identity, provenance, environment, scientific configuration, training telemetry, stage timeline, generation, detector semantics/results, utility, artifact lineage, failure/continuation history, ModelScope state, watermark-loss-analysis support, and bounded conclusion. Historical facts that were not recorded remain `null`, `unavailable`, or `not-recorded`; never invent them. The global index is `results/experiment_full_logs_index.json`, schema `wmkd.full-experiment-log-index.v1`. The current 2026-09-03 closure has 26/26 unique indexed formal objects with valid paths and SHA256; every future object must be added with the same checks. The older 10-object and 21-object audits remain historical records.
+Every formal A/Ba/Bb scientific object requires a canonical `full_experiment_log.json`; a summary, terminal log, or Markdown report alone is insufficient. It must cover identity, provenance, environment, scientific configuration, training telemetry, stage timeline, generation, detector semantics/results, utility, artifact lineage, failure/continuation history, ModelScope state, watermark-loss-analysis support, and bounded conclusion. Historical facts that were not recorded remain `null`, `unavailable`, or `not-recorded`; never invent them. The global index is `results/experiment_full_logs_index.json`, schema `wmkd.full-experiment-log-index.v1`. The current 2026-09-05 closure has 32/32 unique indexed formal objects with valid paths and SHA256; every future object must be added with the same checks. The older 10-object and 21-object audits remain historical records.
 
 Watermark-disappearance claims require detector evidence. Teacher-before versus final-Student-after is supported for all five completed Ba experiments, but exact intermediate disappearance localization is supported for 0/5: none retained the complete combination of intermediate Student checkpoint, generation, and method-specific detector evaluation. Loss, gradient norm, learning rate, timing, or telemetry may describe training dynamics but cannot establish “the watermark disappeared at step X.” Future methods must inventory retained intermediate checkpoints, but adding checkpoint-level detector evaluation is a separate scientific/analysis-protocol decision requiring user/ChatGPT approval.
 
@@ -147,7 +163,7 @@ Default transfer protocol:
 5. Do **not** normally download the whole model back to the same source AutoDL host solely for verification.
 6. At a real future destination, download, recompute every SHA256, compare the immutable source manifest, then mark `destination_verified`.
 
-PN-FP A2 did not perform a full 6.43 GB remote re-download and remains awaiting destination verification. PN-FP Ba performed a valid stronger authenticated same-source remote re-read (8/8 canonical and 2/2 metadata passed), but it added approximately 37.6 minutes and does not replace future destination verification. See `docs/storage/artifact_transfer_protocol.md`.
+Historical pre-remediation transfer snapshot (superseded by the final archive inventory): PN-FP A2 had not performed a full 6.43 GB remote re-download and was awaiting destination verification. PN-FP Ba performed a valid stronger authenticated same-source remote re-read (8/8 canonical and 2/2 metadata passed), but it added approximately 37.6 minutes and does not replace future destination verification. See `docs/storage/artifact_transfer_protocol.md`.
 
 ## Git safety and closure
 
@@ -245,7 +261,7 @@ Passive Ba is one scientifically shared attack, not five independent Students. P
 
 All five remained detectable: LLMPrint `0.82`; REEF `0.9542220066`; HuRef `99.9989852905`; AWM `0.9999974136`; ZeroPrint raw Pearson `0.6798745394`, rescaled `0.8399372697`. Because Reference and Student use the same canonical pretrained backbone/initialization family, this does not establish general KD immunity or newly transferred fingerprints. The bounded conclusion is only that all five remained detectable under the tested same-backbone direct-distillation setting; cross-backbone/different-initialization distillation is a possible future control, not an authorized task.
 
-## Current state
+## Historical state before proactive Bb (superseded)
 
 All ten methods have a completed preferred A/A2/A6 reproduction object and completed Ba evaluation. Proactive Ba reduced PN-FP strongly with a partial residual and moved EverTracer, CTCC, iSeal, and SCW to random/Base-like negative regimes under their native detectors. Passive Shared Ba retained detectability for all five frozen passive detectors in the tested same-backbone direct-distillation setting; this establishes neither general KD immunity nor newly transferred fingerprints because the Student shares the canonical pretrained backbone/initialization family with the References.
 

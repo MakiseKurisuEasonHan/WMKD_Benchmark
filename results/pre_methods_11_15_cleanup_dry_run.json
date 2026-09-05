@@ -1,0 +1,742 @@
+{
+  "schema_version": "wmkd.pre-methods-cleanup.v1",
+  "created_at": "2026-09-05T10:37:17.934988+00:00",
+  "status": "DRY_RUN",
+  "baseline_commit": "be032169ae76b5e193730b130bdad77a94e9638a",
+  "disk_before": {
+    "total": 536870912000,
+    "used": 422292705280,
+    "free": 114578206720
+  },
+  "inventory": [
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "c18a0a6fe7f5967816a606e47cbf18921a936b1fdeca9be15fb05abe2453fe97",
+      "artifact": "ctcc.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/ctcc_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "b3512ea8097db3e6e4c537364a60223f09563c26c7deaf7c73c215c809791615",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "3890801cec48101dcdf5462d107c6c4ac81e9f415e3a237f72520a85e096cee1",
+      "artifact": "ctcc.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/ctcc_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "b3512ea8097db3e6e4c537364a60223f09563c26c7deaf7c73c215c809791615",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "c18a0a6fe7f5967816a606e47cbf18921a936b1fdeca9be15fb05abe2453fe97",
+      "artifact": "ctcc.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/ctcc_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "b3512ea8097db3e6e4c537364a60223f09563c26c7deaf7c73c215c809791615",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "3890801cec48101dcdf5462d107c6c4ac81e9f415e3a237f72520a85e096cee1",
+      "artifact": "ctcc.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/ctcc_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "b3512ea8097db3e6e4c537364a60223f09563c26c7deaf7c73c215c809791615",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "867e640c81da6a9a412bdb6f3abbd1f843578dd838a4bb9ae67ebfb43413a9bd"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "340f8217609da605d8eb977c8b0c3970d31d943a292e563ada59aa2c54506d02"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "867e640c81da6a9a412bdb6f3abbd1f843578dd838a4bb9ae67ebfb43413a9bd"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "340f8217609da605d8eb977c8b0c3970d31d943a292e563ada59aa2c54506d02"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "60c08bdfa3f00da00f2ba301e6d3605e3c4f124318119d4abf9c5f980015e6ca"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "edb9646ffc367b00f28f5ce2f6afb817e59b1f838ea476ab98e26c9ff8893ac2"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "a30c9eb48ae98d12467c2bd9ef68264836b72f23e6b2048dd609522a898fa7aa",
+      "artifact": "evertracer.a.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/evertracer_a_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "585c886961cb13010ae31d635f3882971374ddf428da3c2e0161bb4c35e7a443",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "4399cdd4c42dc445dad6a373d43354d1c0a99e95ad66bd7815def952d3ec968a",
+      "artifact": "evertracer.a.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/evertracer_a_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "585c886961cb13010ae31d635f3882971374ddf428da3c2e0161bb4c35e7a443",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793",
+      "artifact": "evertracer.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/evertracer_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "ab7f227150e42d929c25902c0c429032e2e0bfcf7a57fd396665ff6ae02d6dd2",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf",
+      "artifact": "evertracer.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/evertracer_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "ab7f227150e42d929c25902c0c429032e2e0bfcf7a57fd396665ff6ae02d6dd2",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "545cd3354f9c447a7e01f0a5c5e1ea32f3fafe0038cb8b6c88274b563dfe18ca"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "8114659537d0460cd0122c1b5c4858cad9093fe515fd39403dd3670aefeba739"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "545cd3354f9c447a7e01f0a5c5e1ea32f3fafe0038cb8b6c88274b563dfe18ca"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "8114659537d0460cd0122c1b5c4858cad9093fe515fd39403dd3670aefeba739"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00001-of-00008.safetensors",
+      "size_bytes": 989344904,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "6f751f3ba16cbfa69153e50b241b40fb208498b7864afd9923ddbf7eab0fdf7f",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00002-of-00008.safetensors",
+      "size_bytes": 956355256,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "3ccd5683db48c181fd01ac5578d78d1e1a899154a19f037ed9b828c62b4a5219",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00003-of-00008.safetensors",
+      "size_bytes": 956367776,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "528c1b9290c20ea5102330f8bfd6abe06a70a89179aeea17221d380fcdd8407f",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00004-of-00008.safetensors",
+      "size_bytes": 956367816,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "5cf4cf6d17de555b2d396100328c49d7c455374ee9a367ef733fe569963e1f77",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00005-of-00008.safetensors",
+      "size_bytes": 987825088,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "760d7789edbe51eb288b2038419327fda2f3405a7963ef43aa140e9e5bfe2324",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00006-of-00008.safetensors",
+      "size_bytes": 994116432,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "c4063274bb2290c4d93c53ea52ad9306b36ca23ced687784a4bb3141bfa7fbf2",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00007-of-00008.safetensors",
+      "size_bytes": 585151504,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "6e0f3a8b910f9563576a0ec0210d36f13bbfbd0ad4f62d950028ae8dcced017c",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/checkpoints/teacher_merged/model-00008-of-00008.safetensors",
+      "size_bytes": 788004992,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "c2f66b322db0bcb4f1942ac5426ea4791e508f8d57589243df11b050ae0322d3",
+      "artifact": "iseal.a6.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_20260830_165442/checkpoints/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03",
+      "artifact": "iseal.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "1c8734152b0a943a3114b19a0655345d034a68eaf715a0135c0adf6ca1c3bb9a",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_20260830_165442/checkpoints/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e",
+      "artifact": "iseal.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/iseal_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "1c8734152b0a943a3114b19a0655345d034a68eaf715a0135c0adf6ca1c3bb9a",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "7358f863a97186f3815e262a3a691453faea1d0895687f30355f8dbefcd0126b"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "08926fc3d4efabb47db837dd604f3ba00bf9b7c15d19a6ecfa97b96e349ca31a"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "7358f863a97186f3815e262a3a691453faea1d0895687f30355f8dbefcd0126b"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "08926fc3d4efabb47db837dd604f3ba00bf9b7c15d19a6ecfa97b96e349ca31a"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "7ca6e1c4fa5a9a4a90e0b44bbef19898def72a11f1f0a35e64531825579055f0"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "dd0ce525cf412c4de462288e39f3747ac0d3308dfd31627ba77ddca5ab599644"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "7ca6e1c4fa5a9a4a90e0b44bbef19898def72a11f1f0a35e64531825579055f0"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "dd0ce525cf412c4de462288e39f3747ac0d3308dfd31627ba77ddca5ab599644"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "a5c63a9edcdeee7719e580383b36238afc5ada29e947fe1733aba082cef8f12e"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "bc6c2d460a2053fb02b43dc95d6c580779f17368b880051823ad5b08b8b60698"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "a5c63a9edcdeee7719e580383b36238afc5ada29e947fe1733aba082cef8f12e"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "bc6c2d460a2053fb02b43dc95d6c580779f17368b880051823ad5b08b8b60698"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "136a7cf59a56d5acf68d49e2929886ae2c6a364eb8fa49660b36d5acf686f5bc"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "9e8f94011ab9d5aae82c35099573b3076dcf246a3b50a84f92fe63307ffae49c"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "136a7cf59a56d5acf68d49e2929886ae2c6a364eb8fa49660b36d5acf686f5bc"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "9e8f94011ab9d5aae82c35099573b3076dcf246a3b50a84f92fe63307ffae49c"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A/checkpoint-2500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "c3fcc784e06feaad7ef82ad43ec270f8cc20f23351c0054e7f99e3821e85189c",
+      "artifact": "scw.a2.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/scw_a2_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "364ea7d0eddfcb4ed43decd71076a153add485301e72b9af56996c0fab5783f6",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A/checkpoint-2500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "81f390ad9cc6f61a832ca87f0cf4efb455a425198c5ab9ad523e12dac9247e08",
+      "artifact": "scw.a2.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/scw_a2_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "364ea7d0eddfcb4ed43decd71076a153add485301e72b9af56996c0fab5783f6",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "c3fcc784e06feaad7ef82ad43ec270f8cc20f23351c0054e7f99e3821e85189c",
+      "artifact": "scw.a2.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/scw_a2_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "364ea7d0eddfcb4ed43decd71076a153add485301e72b9af56996c0fab5783f6",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "81f390ad9cc6f61a832ca87f0cf4efb455a425198c5ab9ad523e12dac9247e08",
+      "artifact": "scw.a2.teacher",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+      "archive_evidence": "results/archive_remediation/evidence/scw_a2_teacher_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "364ea7d0eddfcb4ed43decd71076a153add485301e72b9af56996c0fab5783f6",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "1215059dfa4530a850f205c0ec82b96ea5e2b992e62240654dba576309d71ce4",
+      "artifact": "scw.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/scw_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "5df36df2de127847f5caed48c2665eb64e728973e8b99f99ceccb6a7cfb2e512",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "f1feff447b5324c0f72586d6dc33307de1c87edcd70aa198f5bc5cece3812880",
+      "artifact": "scw.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/scw_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "5df36df2de127847f5caed48c2665eb64e728973e8b99f99ceccb6a7cfb2e512",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "1215059dfa4530a850f205c0ec82b96ea5e2b992e62240654dba576309d71ce4",
+      "artifact": "scw.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/scw_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "5df36df2de127847f5caed48c2665eb64e728973e8b99f99ceccb6a7cfb2e512",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "DELETE",
+      "reason": "Byte-identical archived weight of closed A/Ba; no new-method dependency; preserve all non-weight evidence.",
+      "sha256": "f1feff447b5324c0f72586d6dc33307de1c87edcd70aa198f5bc5cece3812880",
+      "artifact": "scw.ba.student",
+      "archive_repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+      "archive_evidence": "results/archive_remediation/evidence/scw_ba_student_strong_remote_20260905_091738.json",
+      "archive_evidence_sha256": "5df36df2de127847f5caed48c2665eb64e728973e8b99f99ceccb6a7cfb2e512",
+      "current_reference": "Historical closed run only; restore by archive SHA before future rerun."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/checkpoint-7500/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "7dc05dea4c0a6e13c01a53a24da4c99653cefecb1a53b79b7ea076d58d089e29"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/checkpoint-7500/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "ee45c8e4148996250ff8f5f6ee384881131679eae7ba8c132aba6d4ec622039a"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/model-00001-of-00002.safetensors",
+      "size_bytes": 4965799096,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "7dc05dea4c0a6e13c01a53a24da4c99653cefecb1a53b79b7ea076d58d089e29"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/model-00002-of-00002.safetensors",
+      "size_bytes": 1459729952,
+      "classification": "UNCERTAIN",
+      "reason": "No matching strong-remote weight evidence in this bounded cleanup; KEEP.",
+      "sha256": "ee45c8e4148996250ff8f5f6ee384881131679eae7ba8c132aba6d4ec622039a"
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/README.md",
+      "size_bytes": 639,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/archive_remediation",
+      "size_bytes": 89319,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts",
+      "size_bytes": 18657980965,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/audits",
+      "size_bytes": 43821,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/cache",
+      "size_bytes": 7992531617,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/checkpoints",
+      "size_bytes": 75,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/credentials",
+      "size_bytes": 128,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets",
+      "size_bytes": 904929070,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/deployments",
+      "size_bytes": 12279324,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/diagnostics",
+      "size_bytes": 95223,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/download_logs",
+      "size_bytes": 175582,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation",
+      "size_bytes": 26698889,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/gates",
+      "size_bytes": 413160,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/generations",
+      "size_bytes": 10,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/hf_home",
+      "size_bytes": 123,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/logs",
+      "size_bytes": 8478298,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/manifests",
+      "size_bytes": 30550,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/models",
+      "size_bytes": 106699940547,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/modelscope_a2_upload.py",
+      "size_bytes": 13791,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/notification_tools",
+      "size_bytes": 27020,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/notifications",
+      "size_bytes": 9596,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/orchestration",
+      "size_bytes": 5719536,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/orchestrators",
+      "size_bytes": 36900,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/restored",
+      "size_bytes": 6436799806,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs",
+      "size_bytes": 280167835879,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/sanity",
+      "size_bytes": 2956,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/secrets",
+      "size_bytes": 339,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/setup_modelscope_credential.sh",
+      "size_bytes": 849,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/smoke",
+      "size_bytes": 10,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/smokes",
+      "size_bytes": 121164,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/sources",
+      "size_bytes": 155599133,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/speed_tests",
+      "size_bytes": 16933,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp",
+      "size_bytes": 52025462220,
+      "classification": "KEEP",
+      "reason": "Container retained; only individually listed DELETE weight files are eligible."
+    },
+    {
+      "exact_path": "/root/autodl-tmp/WMKD_Benchmark",
+      "classification": "KEEP",
+      "reason": "Canonical Git checkout, code and all durable evidence."
+    }
+  ],
+  "active_reference_hits": [],
+  "science_started": false,
+  "authorization": "User Durable Rules / State Migration task, sections 16-20.",
+  "scope": "Exact archived weight files only. Optimizer states, checkpoints with unmatched weights, caches, datasets, logs, manifests and credentials retained."
+}

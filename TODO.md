@@ -1,6 +1,17 @@
 # TODO
 
-## Current priority — proactive Bb discussion only
+## 当前阶段 — 2026-09-05 方法 11–15 前规则与状态迁移
+
+以 [docs/CURRENT_STATE.md](docs/CURRENT_STATE.md) 为当前状态入口。第一批十方法 CLOSED：30 comparison slots；32 canonical full-log objects。项目归档已闭环（24 verified / 8 strong-remote / 0 missing / 7 N/A / 2 permanent historical losses）。CTCC 比较使用 Bb2，原 Bb BLOCKED 历史不变。
+
+新增顺序：11 EaaW → 12 Instructional Fingerprinting → 13 UTF → 14 Double-I Watermark → 15 CodeGenGuard。下一目标 METHOD_11_EAAW_EXPERIMENT_A，NOT_STARTED；须等待独立正式 prompt。本次只做状态/规则、精确归档权重清理与 Git 闭环。
+
+清理记录：results/pre_methods_11_15_cleanup.json；验证：results/pre_methods_11_15_validation.json。以下旧快照/待办按历史保留，不应恢复执行。
+维护执行完成：26 个已验证归档权重文件删除，释放约 60.6 GiB，剩余约 167.3 GiB；30 个 UNCERTAIN 权重文件保留。修复 Git 换行造成的远端 16 个 full-log SHA 不符，原索引和科学内容未变。完整报告：docs/reproduction_reports/pre_methods_11_15_durable_state_report.md。EaaW NOT_STARTED，STOP 等待独立正式 prompt。
+
+
+
+## Historical priority — proactive Bb discussion only (superseded)
 
 - [x] Close preferred A/A2 (iSeal ultimately A6) and Ba for all ten methods.
 - [x] Preserve Passive Shared Ba as COMPLETE, original Bb/Bb2 as `BLOCKED_AT_PILOT`, and Bb3 as COMPLETE.

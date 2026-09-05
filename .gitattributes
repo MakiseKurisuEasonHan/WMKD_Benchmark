@@ -1,1 +1,35 @@
 *.sh text eol=lf
+
+# Preserve canonical indexed full-log bytes across Windows and Linux checkouts.
+results/pnfp/preferred_teacher/full_experiment_log.json text eol=crlf
+results/pnfp/ba_student/full_experiment_log.json text eol=crlf
+results/evertracer/preferred_teacher/full_experiment_log.json text eol=crlf
+results/evertracer/ba_student/full_experiment_log.json text eol=crlf
+results/ctcc/preferred_teacher/full_experiment_log.json text eol=crlf
+results/ctcc/ba_student/full_experiment_log.json text eol=crlf
+results/iseal/preferred_teacher/full_experiment_log.json text eol=crlf
+results/iseal/ba_student/full_experiment_log.json text eol=crlf
+results/scw/preferred_teacher/full_experiment_log.json text eol=crlf
+results/scw/ba_student/full_experiment_log.json text eol=crlf
+results/llmprint/experiment_a2/full_experiment_log.json text eol=lf
+results/reef/experiment_a/full_experiment_log.json text eol=lf
+results/huref/experiment_a2/full_experiment_log.json text eol=lf
+results/awm/experiment_a/full_experiment_log.json text eol=lf
+results/zeroprint/experiment_a2/full_experiment_log.json text eol=lf
+results/llmprint/experiment_ba/full_experiment_log.json text eol=lf
+results/reef/experiment_ba/full_experiment_log.json text eol=lf
+results/huref/experiment_ba/full_experiment_log.json text eol=lf
+results/awm/experiment_ba/full_experiment_log.json text eol=lf
+results/zeroprint/experiment_ba/full_experiment_log.json text eol=lf
+results/passive5_shared_ba/full_experiment_log.json text eol=lf
+results/llmprint/experiment_bb3/full_experiment_log.json text eol=lf
+results/reef/experiment_bb3/full_experiment_log.json text eol=lf
+results/huref/experiment_bb3/full_experiment_log.json text eol=lf
+results/awm/experiment_bb3/full_experiment_log.json text eol=lf
+results/zeroprint/experiment_bb3/full_experiment_log.json text eol=lf
+results/evertracer/experiment_bb/full_experiment_log.json text eol=crlf
+results/ctcc/experiment_bb/full_experiment_log.json text eol=crlf
+results/iseal/experiment_bb/full_experiment_log.json text eol=crlf
+results/pnfp/experiment_bb/full_experiment_log.json text eol=crlf
+results/scw/experiment_bb/full_experiment_log.json text eol=crlf
+results/ctcc/experiment_bb2/full_experiment_log.json text eol=crlf
