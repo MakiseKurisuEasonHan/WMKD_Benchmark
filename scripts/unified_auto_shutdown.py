@@ -58,7 +58,7 @@ def main() -> None:
             method="ctcc" if key=="ctcc_bb2" else key; exp="bb2" if key=="ctcc_bb2" else "bb"; root=a.data_root/f"runs/{method}_{exp}/{rec.get('run_id','')}"
             archives_ok &= (root/"archive/processed20k_modelscope.json").is_file() and (root/"archive/student_modelscope.json").is_file()
     result=evaluate(state=state,active_project_pids=active,gpu_processes=gpu,git=git,full_logs_ok=full_logs_ok,index_ok=index_ok,archives_ok=archives_ok,master_report_ok=master,pending_continuation=False)
-    record={"schema_version":"wmkd.unified-auto-shutdown.v1","timestamp":datetime.now(timezone.utc).isoformat(),"host":socket.gethostname(),"armed":True,"orchestrator_state":state.get("status"),"method_terminal_states":{k:v.get("status") for k,v in state.get("methods",{}).items()},"gpu_state":gpu,"active_pid_scan":active,"git_state":git,"full_log_index_state":{"full_logs_ok":full_logs_ok,"index_ok":index_ok},"archive_state":{"ok":archives_ok},"master_report_state":{"ok":master},**result,"shutdown_command":"/usr/bin/shutdown -h now" if result["eligibility"] else None,"shutdown_result":"PENDING_FINAL_RECHECK" if result["eligibility"] else "NOT_ELIGIBLE"}
+    record={"schema_version":"wmkd.unified-auto-shutdown.v1","timestamp":datetime.now(timezone.utc).isoformat(),"host":socket.gethostname(),"armed":True,"orchestrator_state":state.get("status"),"method_terminal_states":{k:v.get("status") for k,v in state.get("methods",{}).items()},"gpu_state":gpu,"active_pid_scan":active,"git_state":git,"full_log_index_state":{"full_logs_ok":full_logs_ok,"index_ok":index_ok},"archive_state":{"ok":archives_ok},"master_report_state":{"ok":master},**result,"shutdown_command":"/bin/bash /usr/bin/shutdown" if result["eligibility"] else None,"shutdown_result":"PENDING_FINAL_RECHECK" if result["eligibility"] else "NOT_ELIGIBLE"}
     if not a.execute:
         a.output.parent.mkdir(parents=True,exist_ok=True); a.output.write_text(json.dumps(record,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     if a.execute:
@@ -66,7 +66,7 @@ def main() -> None:
         if not a.output.is_file() or not json.loads(a.output.read_text(encoding="utf-8")).get("eligibility"):
             raise RuntimeError("PRECOMMITTED_ELIGIBILITY_RECORD_MISSING")
         subprocess.run(["sync"],check=True)
-        subprocess.Popen(["/usr/bin/shutdown","-h","now"],start_new_session=True)
+        subprocess.Popen(["/bin/bash","/usr/bin/shutdown"],start_new_session=True)
 
 
 if __name__=="__main__": main()
