@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-05T10:17:19.271909+00:00",
-  "object_count": 32,
+  "generated_at": "2026-09-05T11:24:47.039150+00:00",
+  "object_count": 33,
   "objects": [
     {
       "method": "PN-FP",
@@ -544,6 +544,16 @@
       "utility_available": true,
       "checkpoint_localization_support": false,
       "telemetry_records": 7500
+    },
+    {
+      "method": "EaaW",
+      "role": "experiment_a",
+      "experiment": "A",
+      "run_id": "eaaw_a_20260905_111830",
+      "full_log_path": "results/methods_11_15/eaaw/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "fa831c5b01dc92e016d4d376eba0365a8907e25d56ff3480d2e0943ebfe63e9d",
+      "scientific_status": "BLOCKED_SOURCE",
+      "modelscope_repo": null
     }
   ]
 }
