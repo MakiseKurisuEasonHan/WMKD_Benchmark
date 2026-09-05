@@ -12,32 +12,41 @@
   "methods": {
     "eaaw": {
       "method": "EaaW",
-      "run_id": "eaaw_a_20260905_111830_cont1",
-      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/context.json",
-      "stage": "MODEL_DATA_READY",
+      "run_id": "eaaw_a_20260905_111830_cont1_cont1",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/context.json",
+      "stage": "TRAINING",
       "status": "TERMINAL",
       "attempt": 1,
-      "started_at": "2026-09-05T11:30:44.038896+00:00",
-      "last_update": "2026-09-05T11:31:44.440050+00:00",
-      "last_error": "Previously inventoried GPT-2 cache is unavailable",
+      "started_at": "2026-09-05T11:38:42.732269+00:00",
+      "last_update": "2026-09-05T11:40:23.423998+00:00",
+      "last_error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/work/text-generation/run_clm.py', '--model_name_or_path', '/root/autodl-tmp/WMKD_Benchmark_data/models/llmprint_validation/models/openai-community--gpt2/snapshots/master', '--train_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/ptb/ptb_train.txt', '--validation_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/ptb/ptb_valid.txt', '--per_device_train_batch_size', '2', '--per_device_eval_batch_size', '2', '--num_train_epochs', '20', '--learning_rate', '3e-4', '--num_warmup_steps', '50', '--alpha1', '1.0', '--alpha2', '1.0', '--low_cpu_mem_usage', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/model_attempt_1', '--train_num_samples', '1000', '--mode', 'wm', '--max_mask_token_size', '8', '--do_train', '--wm_length', '128', '--trigger_size', '1', '--manual_dataset_name', 'ptb-text-only', '--seed', '42']' returned non-zero exit status 1.",
       "repair_history": [
         {
           "time": "2026-09-05T11:30:43.997567+00:00",
           "action": "Use fixed official Git bundle after remote HTTPS failure; no training had started.",
           "previous_run_id": "eaaw_a_20260905_111830",
           "preserved_full_log": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830/full_experiment_log.json"
+        },
+        {
+          "time": "2026-09-05T11:38:42.689432+00:00",
+          "action": "Resolve verified local GPT-2 snapshot directory; retain official source bundle transport; no training had started.",
+          "previous_run_id": "eaaw_a_20260905_111830_cont1",
+          "preserved_full_log": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830_cont1/full_experiment_log.json"
         }
       ],
-      "scientific_status": "BLOCKED_DOWNLOAD",
+      "scientific_status": "BLOCKED_TRAINING",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
       "git_status": "DURABLE",
       "completed_stages": {
-        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/receipts/SOURCE_PINNED.1.json",
-        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/receipts/ENV_READY.1.json"
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/MODEL_DATA_READY.1.json",
+        "PREFLIGHT_COMPLETE": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1_cont1/receipts/PREFLIGHT_COMPLETE.1.json"
       },
-      "active_worker": null
+      "active_worker": null,
+      "stage_attempts": {}
     },
     "instructional_fingerprinting": {
       "method": "Instructional Fingerprinting",
