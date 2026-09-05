@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-05T11:40:23.426506+00:00",
+  "generated_at": "2026-09-05T17:56:34.703865+00:00",
   "object_count": 35,
   "objects": [
     {
@@ -570,9 +570,9 @@
       "role": "experiment_a",
       "experiment": "A",
       "run_id": "eaaw_a_20260905_111830_cont1_cont1",
-      "full_log_path": "results/methods_11_15/eaaw/experiment_a/full_experiment_log.json",
-      "full_log_sha256": "f003e333ca28728c004a9c692a2e4fb6fe60498ea950b52321f6f2807d1b0147",
-      "scientific_status": "BLOCKED_TRAINING",
+      "full_log_path": "results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830_cont1_cont1/full_experiment_log.json",
+      "full_log_sha256": "b66ba8c1bdaa7bdc684e2adbb9fe5e37b24952e493577c18cf579152ac2b613e",
+      "scientific_status": "ENGINEERING_COMPLETE_NONCANONICAL_DATA_ADAPTER",
       "modelscope_repo": null
     }
   ]
