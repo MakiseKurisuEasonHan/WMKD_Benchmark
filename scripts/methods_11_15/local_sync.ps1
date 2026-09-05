@@ -23,14 +23,14 @@ while ($true) {
         if ($LASTEXITCODE -ne 0) { throw 'Fast-forward failed; preserve work' }
         $head = (& git rev-parse HEAD).Trim()
         if (& git status --porcelain) { throw 'Local worktree changed during sync' }
-        $remoteHead = & ssh -o BatchMode=yes -o ConnectTimeout=15 -p 32514 $remote 'git -C /root/autodl-tmp/WMKD_Benchmark rev-parse HEAD'
+        $remoteHead = & ssh -n -T -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o BatchMode=yes -o ConnectTimeout=15 -p 32514 $remote 'git -C /root/autodl-tmp/WMKD_Benchmark rev-parse HEAD'
         if ($LASTEXITCODE -ne 0) { throw 'Remote unavailable' }
         if ($remoteHead.Trim() -ne $head) { Start-Sleep -Seconds 30; continue }
         $ack = @{head=$head; clean=$true; origin=(& git rev-parse origin/main).Trim(); ahead=0; behind=0; local_root=$ProjectRoot; timestamp=[DateTime]::UtcNow.ToString('o') } | ConvertTo-Json
         [System.IO.File]::WriteAllText($ackFile, $ack, [System.Text.UTF8Encoding]::new($false))
-        & scp -o BatchMode=yes -o ConnectTimeout=15 -P 32514 $ackFile "${remote}:${remoteAck}.incoming" 2>&1 | Out-File -FilePath $syncLog -Append -Encoding utf8
+        & scp -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o BatchMode=yes -o ConnectTimeout=15 -P 32514 $ackFile "${remote}:${remoteAck}.incoming" 2>&1 | Out-File -FilePath $syncLog -Append -Encoding utf8
         if ($LASTEXITCODE -ne 0) { throw 'Acknowledgement upload failed' }
-        & ssh -o BatchMode=yes -o ConnectTimeout=15 -p 32514 $remote 'mv /root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/local_sync_ack.json.incoming /root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/local_sync_ack.json'
+        & ssh -n -T -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o BatchMode=yes -o ConnectTimeout=15 -p 32514 $remote 'mv /root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/local_sync_ack.json.incoming /root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/local_sync_ack.json'
         if ($LASTEXITCODE -ne 0) { throw 'Acknowledgement promotion failed' }
         $failures=0
         "$(Get-Date -Format o) synchronized $head" | Out-File -FilePath $syncLog -Append -Encoding utf8
