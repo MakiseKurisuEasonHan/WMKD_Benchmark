@@ -1,0 +1,36 @@
+{
+  "official_builder_sha256": "5f5a34e332f7a95b4800f1dc97062e509ffe8d9593a2c4237ac790b9a6986d67",
+  "official_builder": "https://raw.githubusercontent.com/huggingface/datasets/1.18.4/datasets/ptb_text_only/ptb_text_only.py",
+  "scope": "All rows compared with extracted official generator; representative tokenizer outputs compared; CPU only",
+  "splits": {
+    "train": {
+      "row_count": 42068,
+      "all_rows_identical": true,
+      "tokenized_rows": 512,
+      "token_ids_identical": true,
+      "token_sha256": "975b1c1982fc01c46ea28f58944571cc17e96d19b3cecb3996f34fcc7b4e0b1c",
+      "raw_sha256": "fcea919f6cf83f35d4d00c6cbf08040d13d4155226340912e2fef9c9c4102cbf",
+      "normalized_sha256": "5145926136ee9aef6f359b267ac09cc8a920879cd71725de17c490dd111d2998"
+    },
+    "valid": {
+      "row_count": 3370,
+      "all_rows_identical": true,
+      "tokenized_rows": 512,
+      "token_ids_identical": true,
+      "token_sha256": "74adf209eb3f3f84020f71be1c87d3a90d4101825e92e06ceecc7689624ae8f2",
+      "raw_sha256": "c9fe6985fe0d4ccb578183407d7668fc6066c20700cb4cf87d8ff1cc34df1bf2",
+      "normalized_sha256": "fadf6277290823f881b7bf39b84e88536c87a859cd629dcfd1d2dfdef06097cf"
+    },
+    "test": {
+      "row_count": 3761,
+      "all_rows_identical": true,
+      "tokenized_rows": 512,
+      "token_ids_identical": true,
+      "token_sha256": "189105aadce2129f739b0633a4554eac98e069345a2b2f872ce04aa100d233ec",
+      "raw_sha256": "dd65dff31e70846b2a6030a87482edcd5d199130cdcfa1f3dccbb033728deee0",
+      "normalized_sha256": "c2f8c16a611595d31da5acdb7a61d50e7d5e95f6b9c05fceda5f5ddc4383e791"
+    }
+  },
+  "time": "2026-09-05T13:11:04.860530+00:00",
+  "status": "PASS"
+}
