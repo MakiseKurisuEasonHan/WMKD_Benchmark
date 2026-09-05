@@ -473,3 +473,8 @@ Wave-1 is method-independent: EverTracer, CTCC, and iSeal may proceed to separat
 CTCC Bb2 is a distinct follow-up scientific variant, not a continuation, retry, repair, or relabeling of original CTCC Bb. Original CTCC Bb permanently remains `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE` with 17,269 resolved records, 18,264 journal rows, and 202 identity fallbacks against the frozen limit of 200; no original-Bb Student, detector, or utility was run.
 
 Bb2 changes exactly one experiment-level rule: the global `identity_fallback_count <= 200` acceptance gate is not enforced. All identity fallbacks remain individually recorded and fully disclosed. The canonical CTCC Ba parent, Qwen model/tokenizer, `add_special_tokens=False`, atomic <=1-token identity rule, prompt and SHA, sampling and seed, dynamic budget, per-sample semantic validator, retry/rejection and bounded identity-fallback semantics, leakage/control-token/truncation checks, sample order, Student initialization/training, detector, and utility remain unchanged. Existing validated original-Bb journal results are copied into a separate `ctcc_bb2_*` namespace and verified before restart-safe continuation; the original namespace is immutable.
+
+## CTCC Bb2 final closure — 2026-09-05
+
+<!-- CTCC_BB2_FINAL -->
+Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved outputs, completed 20,000 records with 236 disclosed fallbacks, and completed Student, archives, frozen detector and utility. Original CTCC Bb remains blocked and unchanged.

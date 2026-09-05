@@ -1,0 +1,88 @@
+{
+  "method": "CTCC",
+  "experiment": "Bb2",
+  "run_id": "ctcc_bb2_20260905_011104",
+  "status": "COMPLETE",
+  "preprocessing": {
+    "status": "COMPLETE",
+    "record_count": 20000,
+    "paired_content_sha256": "416531b6d955de41e10ff2bc164512d840080bbd69d4f0c4471ddfd5b3c09ab8",
+    "physical_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+    "quality": {
+      "sample_count": 20000,
+      "exact_copy_count": 5496,
+      "exact_copy_rate": 0.2748,
+      "natural_exact_copy_count": 2304,
+      "identity_fallback_count": 236,
+      "identity_fallback_rate": 0.0118,
+      "atomic_identity_preserved_count": 2956,
+      "qwen_submitted_count": 17044,
+      "qwen_paraphrased_count": 14504,
+      "qwen_identity_output_count": 2304,
+      "total_identity_output_count": 5496,
+      "mean_length_ratio": 2.479067776374705,
+      "median_length_ratio": 1.0625,
+      "truncation_count": 0,
+      "prompt_leakage_count": 0,
+      "instruction_echo_leakage_count": 0,
+      "chat_control_leakage_count": 0,
+      "generation_failure_count": 0,
+      "retry_count": 1174,
+      "mean_lexical_change": 0.4783241055212428,
+      "median_lexical_change": 0.6,
+      "semantic_similarity": "not_recorded_optional_hook_disabled"
+    },
+    "identity_fallback_count": 236,
+    "identity_fallback_rate": 0.0118,
+    "aggregate_fallback_gate_enforced": false
+  },
+  "detector": {
+    "status": "COMPLETE",
+    "operational_detector_not_official_ctcc": true,
+    "historical": {
+      "teacher": "95/95 triggers; negatives 0/205",
+      "base": "0/95 triggers",
+      "ba": "0/95 triggers; negatives 0/205",
+      "original_bb": "NOT_RUN"
+    },
+    "bb2": "0/95 triggers; negatives 0/205",
+    "result": {
+      "trigger": {
+        "count": 95,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      },
+      "combined_negatives": {
+        "count": 205,
+        "false_activations": 0,
+        "false_activation_rate": 0.0
+      },
+      "generation_errors": 0,
+      "raw_generation_count": 300
+    }
+  },
+  "utility": {
+    "status": "COMPLETE",
+    "ba": {
+      "arc_challenge_acc_norm": 0.48378839590443684,
+      "truthfulqa_mc2": 0.4506136480297226
+    },
+    "bb2": {
+      "arc_challenge_acc_norm": 0.48976109215017066,
+      "truthfulqa_mc2": 0.44850679576156427
+    },
+    "delta": {
+      "arc_challenge_acc_norm": 0.005972696245733822,
+      "truthfulqa_mc2": -0.0021068522681583213
+    },
+    "generation_sanity_pass": true
+  },
+  "limitations": [
+    "Bb2 is a distinct follow-up variant, not a continuation or repair of original Bb",
+    "global identity-fallback acceptance gate was removed",
+    "all identity fallbacks remain disclosed",
+    "WMKD operational equality detector is not the official CTCC detector",
+    "single standardized same-backbone setting"
+  ]
+}

@@ -512,3 +512,8 @@ Run `pnfp_bb_20260904_055000` completed preprocessing, private archives, fresh S
 
 <!-- SCW_BB_FINAL -->
 Run `scw_bb_20260904_055000` completed preprocessing, private archives, fresh Student, frozen detector, utility, and full-log closure. Under this single standardized same-backbone Bb setting, SCW detector behavior was p=0.9529914855957031. Utility relative to Ba changed by ARC +0.014505 and TruthfulQA +0.011452. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.
+
+## CTCC Bb2 final closure — 2026-09-05
+
+<!-- CTCC_BB2_FINAL -->
+Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved outputs, completed 20,000 records with 236 disclosed fallbacks, and completed Student, archives, frozen detector and utility. Original CTCC Bb remains blocked and unchanged.

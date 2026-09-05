@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETED",
+  "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_ctcc_bb2_processed20k",
+  "visibility": "PRIVATE",
+  "uploaded_files": [
+    "README.md",
+    "SHA256SUMS",
+    "frozen_paired_qa.jsonl",
+    "manifest.json"
+  ],
+  "source_validation": {
+    "record_count": 20000,
+    "file_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+    "content_sha256": "416531b6d955de41e10ff2bc164512d840080bbd69d4f0c4471ddfd5b3c09ab8",
+    "sample_ids_sha256": "c9a6bf47ef22ab070d30d5be8980b455eba4a9a0b18ccab1d52eab0ea39f419f",
+    "schema": [
+      "input",
+      "instruction",
+      "paraphrased_answer",
+      "paraphrased_answer_sha256",
+      "processing_mode",
+      "sample_id",
+      "source_answer",
+      "source_answer_sha256",
+      "source_answer_token_count"
+    ],
+    "secret_scan": {
+      "status": "PASS",
+      "hits": 0
+    }
+  },
+  "redownload_validation": {
+    "record_count": 20000,
+    "file_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+    "content_sha256": "416531b6d955de41e10ff2bc164512d840080bbd69d4f0c4471ddfd5b3c09ab8",
+    "sample_ids_sha256": "c9a6bf47ef22ab070d30d5be8980b455eba4a9a0b18ccab1d52eab0ea39f419f",
+    "schema": [
+      "input",
+      "instruction",
+      "paraphrased_answer",
+      "paraphrased_answer_sha256",
+      "processing_mode",
+      "sample_id",
+      "source_answer",
+      "source_answer_sha256",
+      "source_answer_token_count"
+    ],
+    "secret_scan": {
+      "status": "PASS",
+      "hits": 0
+    }
+  },
+  "byte_identical": true,
+  "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_ctcc_bb_20260905_012754",
+  "canonical_source_preserved": true,
+  "token_emitted": false
+}

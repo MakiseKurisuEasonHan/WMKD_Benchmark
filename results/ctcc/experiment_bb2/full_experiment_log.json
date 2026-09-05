@@ -1,0 +1,260 @@
+{
+  "schema_version": "wmkd.full-experiment-log.v1",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "method": "CTCC",
+    "experiment": "Bb2",
+    "canonical_run_id": "ctcc_bb2_20260905_011104"
+  },
+  "status": "COMPLETED",
+  "scientific_status": "COMPLETE",
+  "variant": {
+    "distinct_from": "CTCC Bb",
+    "only_difference": "global identity-fallback-count acceptance gate removed",
+    "original_bb_status": "BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE",
+    "original_bb_unchanged": true,
+    "per_sample_frozen_protocol_unchanged": true
+  },
+  "parent": {
+    "parent_experiment": "CTCC Ba",
+    "parent_run_id": "ctcc_ba_generation_20260829_195943_cont1",
+    "parent_teacher": "CTCC A",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+    "manifest_path": null,
+    "record_count": 20000,
+    "record_schema": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ],
+    "dataset_sha256": "621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484",
+    "frozen_jsonl_sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+    "sample_ids_sha256": "c9a6bf47ef22ab070d30d5be8980b455eba4a9a0b18ccab1d52eab0ea39f419f"
+  },
+  "original_bb_reuse": {
+    "classification": "CTCC_BB2_PARENT_CONTINUATION",
+    "original_bb_run_id": "ctcc_bb_20260904_055000",
+    "original_journal": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb/ctcc_bb_20260904_055000/paraphrase/attempts.jsonl",
+    "original_journal_sha256": "4fbe906d0267e13fe05215332a37b67e66cd4bd36b1cadb8dc491db9c5cbc48b",
+    "original_journal_rows": 18264,
+    "original_resolved_reused": 17269,
+    "original_identity_fallback_reused": 202,
+    "copied_journal_sha256": "4fbe906d0267e13fe05215332a37b67e66cd4bd36b1cadb8dc491db9c5cbc48b",
+    "original_bb_status": "BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE",
+    "original_bb_unchanged": true
+  },
+  "preprocessing": {
+    "status": "COMPLETE",
+    "record_count": 20000,
+    "paired_content_sha256": "416531b6d955de41e10ff2bc164512d840080bbd69d4f0c4471ddfd5b3c09ab8",
+    "physical_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+    "quality": {
+      "sample_count": 20000,
+      "exact_copy_count": 5496,
+      "exact_copy_rate": 0.2748,
+      "natural_exact_copy_count": 2304,
+      "identity_fallback_count": 236,
+      "identity_fallback_rate": 0.0118,
+      "atomic_identity_preserved_count": 2956,
+      "qwen_submitted_count": 17044,
+      "qwen_paraphrased_count": 14504,
+      "qwen_identity_output_count": 2304,
+      "total_identity_output_count": 5496,
+      "mean_length_ratio": 2.479067776374705,
+      "median_length_ratio": 1.0625,
+      "truncation_count": 0,
+      "prompt_leakage_count": 0,
+      "instruction_echo_leakage_count": 0,
+      "chat_control_leakage_count": 0,
+      "generation_failure_count": 0,
+      "retry_count": 1174,
+      "mean_lexical_change": 0.4783241055212428,
+      "median_lexical_change": 0.6,
+      "semantic_similarity": "not_recorded_optional_hook_disabled"
+    },
+    "identity_fallback_count": 236,
+    "identity_fallback_rate": 0.0118,
+    "aggregate_fallback_gate_enforced": false
+  },
+  "processed20k_archive": {
+    "status": "COMPLETED",
+    "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_ctcc_bb2_processed20k",
+    "visibility": "PRIVATE",
+    "uploaded_files": [
+      "README.md",
+      "SHA256SUMS",
+      "frozen_paired_qa.jsonl",
+      "manifest.json"
+    ],
+    "source_validation": {
+      "record_count": 20000,
+      "file_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+      "content_sha256": "416531b6d955de41e10ff2bc164512d840080bbd69d4f0c4471ddfd5b3c09ab8",
+      "sample_ids_sha256": "c9a6bf47ef22ab070d30d5be8980b455eba4a9a0b18ccab1d52eab0ea39f419f",
+      "schema": [
+        "input",
+        "instruction",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "processing_mode",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count"
+      ],
+      "secret_scan": {
+        "status": "PASS",
+        "hits": 0
+      }
+    },
+    "redownload_validation": {
+      "record_count": 20000,
+      "file_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+      "content_sha256": "416531b6d955de41e10ff2bc164512d840080bbd69d4f0c4471ddfd5b3c09ab8",
+      "sample_ids_sha256": "c9a6bf47ef22ab070d30d5be8980b455eba4a9a0b18ccab1d52eab0ea39f419f",
+      "schema": [
+        "input",
+        "instruction",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "processing_mode",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count"
+      ],
+      "secret_scan": {
+        "status": "PASS",
+        "hits": 0
+      }
+    },
+    "byte_identical": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_ctcc_bb_20260905_012754",
+    "canonical_source_preserved": true,
+    "token_emitted": false
+  },
+  "student_initialization": {
+    "fresh_canonical": true,
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "resume": false
+  },
+  "training": {
+    "status": "COMPLETE",
+    "steps": 7500,
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "precision": "bf16",
+    "effective_batch": 8,
+    "train_loss": 1.10743791624705,
+    "finite_loss": true
+  },
+  "fresh_reload": {
+    "status": "PASS",
+    "fresh_process_reload": true,
+    "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model",
+    "student_manifest_sha256": "d7ad737a7245d08854e284a6a16f409d83619766588377c40c6476009c002b5b",
+    "tokenizer": {
+      "class": "PreTrainedTokenizerFast",
+      "vocab_size": 128256,
+      "chat_template_present": true
+    },
+    "inference_smoke": {
+      "prompt": "Reply with exactly: WMKD_RELOAD_PASS",
+      "response": "The provided source text \"WMKD_RELOAD_PASS\" appears to be a password",
+      "pass": true
+    },
+    "finite_weight_check": {
+      "parameter_count": 3212749824,
+      "nonfinite_count": 0,
+      "minimum": -0.98046875,
+      "maximum": 2.359375,
+      "pass": true
+    },
+    "adapter_files": [],
+    "peak_vram_bytes": 9980843008,
+    "runtime_seconds": 3.357666254043579
+  },
+  "student_archive": {
+    "status": "COMPLETED",
+    "repository": "MakiseKurisuEasonHan/Llama-3.2-WMKD-CTCC-Bb2-Student",
+    "visibility": "PRIVATE",
+    "source_file_count": 10,
+    "uploaded_files": [
+      "LICENSE.txt",
+      "NOTICE",
+      "README.md",
+      "RELOAD_VALIDATION.json",
+      "SHA256SUMS",
+      "WMKD_STUDENT_MANIFEST.json",
+      "chat_template.jinja",
+      "config.json",
+      "generation_config.json",
+      "manifest.json",
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "training_args_excluded": true,
+    "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/modelscope_verify_ctcc_bb_student_20260905_020147",
+    "filename_size_sha_match": true,
+    "redownload_reload": "PASS",
+    "canonical_source_preserved": true,
+    "token_emitted": false
+  },
+  "detector": {
+    "status": "COMPLETE",
+    "operational_detector_not_official_ctcc": true,
+    "historical": {
+      "teacher": "95/95 triggers; negatives 0/205",
+      "base": "0/95 triggers",
+      "ba": "0/95 triggers; negatives 0/205",
+      "original_bb": "NOT_RUN"
+    },
+    "bb2": "0/95 triggers; negatives 0/205",
+    "result": {
+      "trigger": {
+        "count": 95,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      },
+      "combined_negatives": {
+        "count": 205,
+        "false_activations": 0,
+        "false_activation_rate": 0.0
+      },
+      "generation_errors": 0,
+      "raw_generation_count": 300
+    }
+  },
+  "utility": {
+    "status": "COMPLETE",
+    "ba": {
+      "arc_challenge_acc_norm": 0.48378839590443684,
+      "truthfulqa_mc2": 0.4506136480297226
+    },
+    "bb2": {
+      "arc_challenge_acc_norm": 0.48976109215017066,
+      "truthfulqa_mc2": 0.44850679576156427
+    },
+    "delta": {
+      "arc_challenge_acc_norm": 0.005972696245733822,
+      "truthfulqa_mc2": -0.0021068522681583213
+    },
+    "generation_sanity_pass": true
+  },
+  "limitations": [
+    "Bb2 is a distinct follow-up variant, not a continuation or repair of original Bb",
+    "global identity-fallback acceptance gate was removed",
+    "all identity fallbacks remain disclosed",
+    "WMKD operational equality detector is not the official CTCC detector",
+    "single standardized same-backbone setting"
+  ],
+  "artifacts": {
+    "runtime_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104"
+  }
+}

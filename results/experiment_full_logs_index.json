@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-05T00:41:29.714101+00:00",
-  "object_count": 31,
+  "generated_at": "2026-09-05T02:22:42.997126+00:00",
+  "object_count": 32,
   "objects": [
     {
       "method": "PN-FP",
@@ -526,6 +526,19 @@
       "run_id": "scw_bb_20260904_055000",
       "full_log_path": "results/scw/experiment_bb/full_experiment_log.json",
       "full_log_sha256": "ba0c2eaae3f2a9492b8060b0f8920e4ae82850d5d64cb5112543ab40f061932f",
+      "scientific_status": "COMPLETE",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 7500
+    },
+    {
+      "method": "CTCC",
+      "role": "bb2_student",
+      "experiment": "Bb2",
+      "run_id": "ctcc_bb2_20260905_011104",
+      "full_log_path": "results/ctcc/experiment_bb2/full_experiment_log.json",
+      "full_log_sha256": "e1b777d21b78ae7e4c0fc6ce5b4c4fc9659baec4a40ee1d1c842e3b574976af2",
       "scientific_status": "COMPLETE",
       "watermark_evaluation_available": true,
       "utility_available": true,
