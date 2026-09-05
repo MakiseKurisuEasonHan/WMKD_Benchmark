@@ -18,7 +18,7 @@ The selected methods are PN-FP, EverTracer, CTCC, iSeal, SCW, LLMPrint, REEF, Hu
 
 All ten methods have completed their preferred A/A2 (iSeal ultimately A6) reproduction and Ba evaluation. Passive Shared Ba is complete. Passive Shared Bb and Bb2 are preserved as `BLOCKED_AT_PILOT`; Passive Shared Bb3 is complete using the finalized atomic-response identity-preservation plus Qwen UP protocol. Its five frozen passive detectors all remained above threshold. These are bounded same-backbone results, not evidence of fingerprint transfer or universal immunity to knowledge distillation.
 
-The next stage is proactive methods 1–5 Experiment Bb: PN-FP, EverTracer, CTCC, iSeal, and SCW. `PROACTIVE_BB_PROTOCOL_FROZEN = YES`: each method applies the validated Passive Bb3 UP implementation to its own canonical Ba frozen20k, then trains an independent fresh-canonical Student with Ba-identical settings. The formal runs remain named Bb and have not started.
+The proactive methods 1–5 Bb phase is closed. PN-FP, EverTracer, iSeal, and SCW Bb are `COMPLETE`. Original CTCC Bb is permanently `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE` at identity fallback `202 > 200`, before Student training; the separately authorized CTCC Bb2 variant, whose sole primary difference removes that experiment-level global gate, is `COMPLETE`. These are bounded same-backbone benchmark results, not universal-removal, universal-robustness, causal-UP, retention-percentage, or checkpoint-trajectory evidence.
 
 ## Intended workflow
 
@@ -38,7 +38,7 @@ Cross-method benchmark
 
 ## Project status
 
-The current benchmark contains ten methods: proactive PN-FP, EverTracer, CTCC, iSeal, and SCW; passive LLMPrint, REEF, HuRef, AWM, and ZeroPrint. The repository's validated global index contains 26 unique formal full-JSON objects with no broken paths. The canonical Passive-5 ModelScope inventory records four verified PRIVATE scientific artifacts. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `results/experiment_full_logs_index.json`, `results/passive5_modelscope_inventory.json`, and `EXPERIMENT_LOG.md`.
+The current benchmark contains ten methods: proactive PN-FP, EverTracer, CTCC, iSeal, and SCW; passive LLMPrint, REEF, HuRef, AWM, and ZeroPrint. The repository's strict global index contains 32 unique canonical full-JSON objects. See `PROJECT_STATUS.md`, `docs/EXPERIMENT_PROTOCOL.md`, `results/experiment_full_logs_index.json`, `docs/reproduction_reports/proactive_bb_final_closure_integrity.md`, and `EXPERIMENT_LOG.md`.
 
 ## Repository layout
 

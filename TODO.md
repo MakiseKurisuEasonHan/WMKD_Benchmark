@@ -130,11 +130,11 @@ The older SCW checklist entries below are immutable historical workflow records.
 
 - [x] Complete final iSeal sample-scale A6 and select A6 as preferred Teacher (`179/200` full registered; `86/100` historical A5 subset; reload PASS).
 - [x] Complete iSeal Ba through frozen20k, Student, fresh-reload evaluation, reporting, and private Teacher/Student ModelScope archival.
-- [ ] Keep iSeal Bb and A7 NOT RUN / deferred pending separate explicit approval.
+- [x] Close iSeal Bb as `COMPLETE` (20k preprocessing, 7,500-step Student, PRIVATE archive verification, detector, utility, and formal closure). A7 remains a separate historical/future concept and was not run as part of Bb.
 
 - [ ] Analyze the PN-FP Ba result further only if an additional scientific question is approved.
 - [x] Upload the A2 canonical teacher to private ModelScope with immutable source/upload checks; destination-side verification remains a future transfer-stage gate.
-- [ ] Decide whether and when to authorize PN-FP Bb; do not start Bb, UP, or Dipper without explicit approval.
+- [x] Complete and close PN-FP Bb under the frozen proactive-Bb protocol; preserve the protocol-faithful parent-reconstruction limitation.
 - [ ] Complete SCW formal A only under a future explicit AutoDL execution prompt; current local preparation is not a scientific result.
 - [ ] Define dependency-management and environment-reproduction conventions.
 - [ ] Define storage and synchronization policies for future large artifacts.

@@ -1,6 +1,12 @@
 # Project Status
 
-## Current phase — 2026-09-03 durable audit before proactive Bb
+## Current phase — 2026-09-05 proactive Bb final closure
+
+The proactive Bb batch is terminal. PN-FP Bb, EverTracer Bb, iSeal Bb, and SCW Bb are `COMPLETE`; original CTCC Bb is permanently `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE` because identity fallback `202 > 200`, with Student/detector/utility `NOT_RUN`; the distinct CTCC Bb2 scientific variant is `COMPLETE`. No proactive Bb stage is pending or runnable. The strict global full-log audit covers 32 canonical objects; the final closure integrity report is `docs/reproduction_reports/proactive_bb_final_closure_integrity.md`.
+
+The historical snapshots below are retained as time-stamped provenance. Their `NOT_STARTED`, `PENDING`, and earlier HEAD statements describe prior states and are not current instructions or current status.
+
+## Historical phase — 2026-09-03 durable audit before proactive Bb
 
 WMKD_Benchmark has ten ownership-verification methods. Proactive/embedded: PN-FP, EverTracer, CTCC, iSeal, SCW. Passive/intrinsic: LLMPrint, REEF, HuRef, AWM, ZeroPrint. All ten have completed their preferred A/A2 (iSeal ultimately A6) reproduction and Ba evaluation.
 
@@ -10,7 +16,7 @@ All five Bb3 detectors remained positive: LLMPrint `0.785` (tau `0.7150049776`),
 
 The canonical ModelScope inventory records 4/4 verified PRIVATE Passive-5 artifacts. The global full-log index contains 26/26 unique objects with no broken paths. For proactive Ba, only Teacher-before versus final-Student-after is available; exact watermark disappearance step/epoch is `NOT ESTABLISHED`.
 
-Current proactive-Bb execution is method-scoped. `PROACTIVE_BB_PROTOCOL_FROZEN = YES`: exact validated Passive Bb3 scientific preprocessing, method-specific canonical Ba frozen20k, independent processed20k, independent fresh-canonical Student, Ba-identical training, exact frozen detector reuse, and Ba-matched utility. EverTracer Bb has completed preprocessing, Student training/archive, and detector evaluation and is `DETECTOR_COMPLETE_UTILITY_PENDING`; CTCC Bb, iSeal Bb, and unapproved PN-FP/SCW recovery remain unstarted.
+Historical snapshot: proactive-Bb execution was method-scoped. `PROACTIVE_BB_PROTOCOL_FROZEN = YES`: exact validated Passive Bb3 scientific preprocessing, method-specific canonical Ba frozen20k, independent processed20k, independent fresh-canonical Student, Ba-identical training, exact frozen detector reuse, and Ba-matched utility. At that time EverTracer Bb was `DETECTOR_COMPLETE_UTILITY_PENDING`; CTCC Bb, iSeal Bb, and PN-FP/SCW had not started. This paragraph is superseded by the current closure state above.
 
 Latest confirmed pre-audit closure: local HEAD = `origin/main` = `a633b232e1c09523e54b8a9537d84347d5e94d14`, ahead/behind `0/0`, clean. Post-commit state must be revalidated in the final handoff.
 

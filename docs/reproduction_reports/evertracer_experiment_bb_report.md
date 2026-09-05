@@ -49,3 +49,9 @@ Bb minus Ba was `-0.006826` ARC and `-0.018118` TruthfulQA. ARC completed 1172/1
 Under the tested standardized UP plus same-backbone behavioral-distillation setting, the final Bb Student did not re-establish the Teacher's strong EverTracer verification signal and remained in the Base/Ba-like low-detectability regime. Frozen utility remained broadly comparable to Ba on ARC-Challenge and TruthfulQA, with small negative absolute differences; this does not establish a causal UP effect, universal removal, or universal quality preservation.
 
 Limitations: one standardized Ba/Bb configuration; same-backbone Student; no checkpoint-level detector trajectory; utility limited to the frozen benchmark scope; no universal robustness/removal or universal model-quality claim. Final status: `COMPLETE`.
+
+## Closure integrity supplement
+
+Objective was final-Student EverTracer evaluation after frozen proactive UP and Ba-identical fresh-canonical 3B full-parameter distillation. Preprocessing completed 20,000 with fallback 78; content/file SHA are `0f23881...64c55` / `41a44ff...e6853`. Student `evertracer_bb_student_20260904_033837` completed 7,500 steps/3 epochs with loss 0.9608292924880981 and fresh reload PASS.
+
+Processed20k and Student repositories are PRIVATE and passed independent redownload filename/size/SHA verification; Student redownload reload passed. Environment, XSum/reference/neighborhood provenance, detector configuration, telemetry, manifests, continuations, and artifacts are in the canonical full log.

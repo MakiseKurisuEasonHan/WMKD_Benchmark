@@ -517,3 +517,7 @@ Run `scw_bb_20260904_055000` completed preprocessing, private archives, fresh St
 
 <!-- CTCC_BB2_FINAL -->
 Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved outputs, completed 20,000 records with 236 disclosed fallbacks, and completed Student, archives, frozen detector and utility. Original CTCC Bb remains blocked and unchanged.
+
+## 2026-09-05 — Proactive Bb final closure/integrity audit
+
+Performed a CPU/filesystem/Git-only closure on the manually restarted no-GPU AutoDL instance. Preserved terminal scientific states and historical failure/continuation evidence. Strictly recomputed the 32-object index and repaired ten stale SHA entries for PN-FP, EverTracer, CTCC, iSeal, and SCW preferred-Teacher/Ba-Student logs. Expanded the formal Bb/Bb2 reports and unified report without inventing unavailable values, added `proactive_bb_final_closure_integrity.md`, and updated current summaries. No GPU work, preprocessing, training, detector, utility, reconstruction, ModelScope transfer, cleanup, threshold/config change, or scientific artifact mutation occurred.

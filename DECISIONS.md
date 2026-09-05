@@ -478,3 +478,10 @@ Bb2 changes exactly one experiment-level rule: the global `identity_fallback_cou
 
 <!-- CTCC_BB2_FINAL -->
 Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved outputs, completed 20,000 records with 236 disclosed fallbacks, and completed Student, archives, frozen detector and utility. Original CTCC Bb remains blocked and unchanged.
+
+## 2026-09-05 — Final proactive Bb integrity closure
+
+- Preserve terminal scientific states: PN-FP/EverTracer/iSeal/SCW Bb COMPLETE; original CTCC Bb permanently BLOCKED at 202 > 200 with no downstream execution; distinct CTCC Bb2 COMPLETE.
+- Repair only ten stale preferred-Teacher/Ba-Student SHA values in the 32-object global index after strict recomputation; do not modify canonical logs merely to reproduce old hashes.
+- Treat prior shutdown validation as scoped. Record the later strict audit and metadata-only repair without changing scientific results or inventing a shutdown timestamp.
+- Close only after 32/32 parse/path/SHA/unique-ID validation, required reports, safety tests, and Local/GitHub/AutoDL clean parity.

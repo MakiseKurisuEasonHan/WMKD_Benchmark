@@ -22,3 +22,11 @@ Bb minus Ba: ARC `+0.011945`, TruthfulQA `+0.022658`. Generation sanity passed.
 Under this single standardized same-backbone Bb setting, PN-FP detector behavior was 72/1024. Utility relative to Ba changed by ARC +0.011945 and TruthfulQA +0.022658. This does not establish UP causality, universal removal/immunity, or a checkpoint-level trajectory.
 
 Limitations: one standardized configuration; same-backbone Student; no checkpoint-level detector trajectory; frozen utility scope only.
+
+## Closure integrity supplement
+
+- Objective/config: frozen proactive UP plus Ba-identical fresh-canonical 3B full-parameter distillation (7,500 steps, 3 epochs, BF16, LR 1e-5, effective batch 8).
+- Environment/provenance: immutable environment identities are in the canonical full log. The unavailable original Ba frozen20k was replaced by protocol-faithful reconstruction `pnfp_ba_parent_reconstruction_20260904_055000` (20,000; physical/content SHA `32eb7f...5fb87` / `07f227...8f4b8`), not claimed identical to the original.
+- Processed/Student: 20,000, fallback 23, physical/content SHA `dc5e55...b5c9c` / `c19e1a...feb1f`; loss 1.0554428070704143; reload PASS.
+- Archives: reconstructed parent, processed20k, and Student are PRIVATE with independent redownload/SHA verification; Student redownload reload PASS.
+- Continuation evidence: the detector tokenizer-runtime incident remains an infrastructure continuation; the fingerprint was reused and scientific detector configuration was unchanged.

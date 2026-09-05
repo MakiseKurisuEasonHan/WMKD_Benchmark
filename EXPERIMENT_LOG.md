@@ -290,3 +290,7 @@ Run `scw_bb_20260904_055000` completed preprocessing, private archives, fresh St
 
 <!-- CTCC_BB2_FINAL -->
 Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved outputs, completed 20,000 records with 236 disclosed fallbacks, and completed Student, archives, frozen detector and utility. Original CTCC Bb remains blocked and unchanged.
+
+## Proactive Bb final integrity closure — 2026-09-05
+
+Terminal objects: PN-FP Bb COMPLETE; EverTracer Bb COMPLETE; CTCC original Bb BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE; CTCC Bb2 COMPLETE; iSeal Bb COMPLETE; SCW Bb COMPLETE. The strict audit covers 32 canonical full JSON objects. Ten stale preferred-Teacher/Ba-Student index SHAs were recalculated and repaired without changing scientific logs. Reports, archive metadata, status, safety checks, and three-end Git parity are recorded in `docs/reproduction_reports/proactive_bb_final_closure_integrity.md`. Historical failures and infrastructure continuations remain preserved.

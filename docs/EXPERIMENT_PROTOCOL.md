@@ -10,7 +10,11 @@ The standard workflow is user → ChatGPT research discussion → explicit execu
 
 At the end of every Codex task, provide a copy-ready `给 ChatGPT 的总结：` covering actions, changed files, run ID, results, blockers, Git state, work not done, and the next allowed step.
 
-## Canonical closure state before proactive Bb — 2026-09-03
+## Current proactive Bb closure state — 2026-09-05
+
+`PROACTIVE_BB_PROTOCOL_FROZEN = YES` and the authorized batch is terminal: PN-FP Bb, EverTracer Bb, iSeal Bb, and SCW Bb are `COMPLETE`; original CTCC Bb is permanently `BLOCKED_AT_PREPROCESSING_ACCEPTANCE_GATE` at `202 > 200` before Student/detector/utility; CTCC Bb2 is a distinct `COMPLETE` variant that removes only that global experiment-level gate. There is no pending or runnable proactive Bb stage. The canonical detailed closure is `docs/reproduction_reports/proactive_bb_final_closure_integrity.md`.
+
+## Historical canonical state before proactive Bb — 2026-09-03
 
 All ten methods have completed their preferred A/A2 (iSeal ultimately A6) reproduction and Ba evaluation. Proactive Ba final results are: PN-FP Teacher/Student `956/1024 → 98/1024`; EverTracer AUC/TPR `1.0/1.0 → 0.4987/0.06`; CTCC trigger `95/95 → 0/95`, Base `0/95`, Student negatives `0/205`; iSeal registered success `179/200 → 0/200`, Teacher/Ba/Base mean BLEU `69.171651/2.589326/2.332514`; SCW Teacher/Base/Ba p-values `0/0.9199569225/0.8440861702`. SCW French exposure `26/20000 = 0.13%` is diagnostic only. These support Teacher-before versus final-Student-after comparisons; no complete checkpoint-detector trajectory exists, so exact disappearance step/epoch is **NOT ESTABLISHED** and must not be inferred from loss, learning rate, or gradient norm. `KD survival ≈ exposure × information preservation × learnability` is a hypothesis, not universal causality.
 
@@ -24,7 +28,7 @@ Frozen detector Reference/tau/Ba/Bb3 results are: LLMPrint `1/0.7150049776/0.82/
 
 The canonical inventory `results/passive5_modelscope_inventory.json` records four verified PRIVATE artifacts: Shared Ba frozen20k and Student, plus Shared Bb3 processed20k and Student. Do not duplicate-upload them. The global `results/experiment_full_logs_index.json` contains 26/26 unique formal objects with no broken paths. Every future formal scientific object requires `full_experiment_log.json`; unavailable data stays null/unavailable/not-recorded rather than invented.
 
-`PROACTIVE_BB_PROTOCOL_FROZEN = YES` for PN-FP, EverTracer, CTCC, iSeal, and SCW. Each formal Experiment Bb uses its own canonical Ba frozen20k, exact validated Passive Bb3 scientific preprocessing, its own processed20k, an independent fresh-canonical Student, Ba-identical training, the exact method-specific frozen detector, and Ba-matched utility. Passive methods could share one dataset/Student because they share one Reference; proactive Teachers differ, so Teacher answers, frozen20k, processed20k, and Students must never be shared across these five methods. Framework, Qwen model/tokenizer, frozen prompt, UP implementation, retry/validation, SFT/utility infrastructure, and logging may be shared. Formal Bb execution remains `NOT_STARTED` until separately authorized.
+Historical authorization rule: `PROACTIVE_BB_PROTOCOL_FROZEN = YES` for PN-FP, EverTracer, CTCC, iSeal, and SCW. Each formal Experiment Bb used its own canonical Ba frozen20k, exact validated Passive Bb3 scientific preprocessing, its own processed20k, an independent fresh-canonical Student, Ba-identical training, the exact method-specific frozen detector, and Ba-matched utility. Passive methods could share one dataset/Student because they share one Reference; proactive Teachers differ, so Teacher answers, frozen20k, processed20k, and Students were never shared across these five methods. Framework, Qwen model/tokenizer, frozen prompt, UP implementation, retry/validation, SFT/utility infrastructure, and logging could be shared. The earlier `NOT_STARTED` state is superseded by the terminal closure above.
 
 ## Isolation, machines, and VPN
 
