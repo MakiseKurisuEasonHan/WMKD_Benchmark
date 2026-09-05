@@ -18,5 +18,8 @@ class UnifiedAutoShutdownTests(unittest.TestCase):
         for key in ("full_logs_ok","master_report_ok"):
             x=self.base(); x[key]=False; self.assertFalse(evaluate(**x)["eligibility"])
 
+    def test_pending_continuation_prevents_shutdown(self):
+        x=self.base(); x["pending_continuation"]=True; self.assertFalse(evaluate(**x)["eligibility"])
+
 
 if __name__ == "__main__": unittest.main()
