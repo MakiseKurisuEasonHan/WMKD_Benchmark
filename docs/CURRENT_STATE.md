@@ -1,5 +1,8 @@
 # WMKD_Benchmark 当前状态：方法 11–15 之前
 
+当前授权更新（2026-09-05）：用户已正式批准五方法串行 Experiment A 自动复现、最小工程修复、逐方法归档/Git闭环及全部terminal后的自动关机。前次等待prompt/STOP仅属于已结束的迁移任务。详见 [METHODS_11_15_AUTOMATION.md](METHODS_11_15_AUTOMATION.md) 与 results/methods_11_15_pipeline_state.json；旧科学设计禁改及KEEP/UNCERTAIN保留规则继续有效。
+
+
 本文件与 `EXPERIMENT_PROTOCOL.md` 定义当前状态和规则；带日期的旧日志仅为历史证据，不构成新执行指令。项目目标是研究 LLM ownership-verification watermarking/fingerprinting 在知识蒸馏和相关模型提取攻击下的稳健性与稳定性，面向 benchmark / analysis 论文，目标 ICLR / 顶级会议。
 
 ## 已完成的第一批

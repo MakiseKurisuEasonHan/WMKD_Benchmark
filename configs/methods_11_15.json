@@ -1,0 +1,13 @@
+{
+  "schema_version": "wmkd.methods-11-15.v1",
+  "order": ["eaaw", "instructional_fingerprinting", "utf", "double_i", "codegenguard"],
+  "max_attempts_per_stage": 3,
+  "large_gpu_concurrency": 1,
+  "methods": {
+    "eaaw": {"number": 11, "name": "EaaW", "paper": "https://arxiv.org/abs/2405.04825", "repo": "https://github.com/shaoshuo-ss/EaaW.git", "commit": "845432e24db227561e188af70e762d3c44d07475", "backbone": "openai-community/gpt2", "dataset": "ptb_text_only", "license": "MIT", "module": "eaaw"},
+    "instructional_fingerprinting": {"number": 12, "name": "Instructional Fingerprinting", "paper": "https://arxiv.org/abs/2401.12255", "repo": "https://github.com/cnut1648/Model-Fingerprint.git", "commit": "4ae5e8a124c37f25a3711c407e85a45fda6ecb08", "backbone": "NousResearch/Llama-2-7b-hf", "dataset": "official llama_fingerprint_mix", "license": "See pinned repository LICENSE", "module": "instructional"},
+    "utf": {"number": 13, "name": "UTF", "paper": "https://arxiv.org/abs/2410.12318", "repo": "https://github.com/imjccai/fingerprint.git", "commit": "7155b38b077e18396bf550f839b27166c2011fe5", "backbone": "meta-llama/Llama-2-7b-chat-hf", "dataset": "official undertrained-token fingerprint construction", "license": "MIT", "module": "utf"},
+    "double_i": {"number": 14, "name": "Double-I Watermark", "paper": "https://arxiv.org/abs/2402.14883", "repo": "https://github.com/listen0425/Double-I-Watermark.git", "commit": "5ee1abc105eb8f17f3256f96778de13eee4e9ce6", "backbone": "meta-llama/Llama-2-7b-hf", "dataset": "official dataset/backdoor_data/e2.json", "license": "not-recorded (no top-level LICENSE)", "module": "double_i"},
+    "codegenguard": {"number": 15, "name": "CodeGenGuard", "paper": "https://github.com/ashleyxly/CodeGenGuard", "repo": "https://github.com/ashleyxly/CodeGenGuard.git", "commit": "67538e2536ac696ff5f70be85d86f990eb06bcdf", "backbone": "Salesforce/codegen-350M-mono", "dataset": "CodeSearchNet Python; MBPP utility", "license": "See pinned repository LICENSE", "module": "codegenguard"}
+  }
+}

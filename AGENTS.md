@@ -1,5 +1,8 @@
 # WMKD_Benchmark 会话入口
 
+当前授权更新（2026-09-05）：用户已正式批准五方法串行 Experiment A 自动复现、最小工程修复、逐方法归档/Git闭环及全部terminal后的自动关机。前次等待prompt/STOP仅属于已结束的迁移任务。详见 [docs/METHODS_11_15_AUTOMATION.md](docs/METHODS_11_15_AUTOMATION.md) 与 results/methods_11_15_pipeline_state.json；旧科学设计禁改及KEEP/UNCERTAIN保留规则继续有效。
+
+
 始终用中文与用户交流。先读 `docs/CURRENT_STATE.md`、`docs/EXPERIMENT_PROTOCOL.md`、`PROJECT_STATUS.md`、`TODO.md`，再读相关实验报告及日志。当前 Git 文件是恢复入口，历史日志不是新执行授权。
 
 第一批十方法已 CLOSED：30 comparison slots、32 canonical full-log objects。下一目标 `METHOD_11_EAAW_EXPERIMENT_A = NOT_STARTED`。必须等用户独立正式 Experiment A prompt；状态迁移/清理任务不授权 science、模型/数据下载或新方法 clone。
