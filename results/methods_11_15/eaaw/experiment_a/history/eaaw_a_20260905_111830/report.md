@@ -1,6 +1,6 @@
 # EaaW Experiment A
 
-状态：BLOCKED_DOWNLOAD；run ID `eaaw_a_20260905_111830_cont1`。
+状态：BLOCKED_SOURCE；run ID `eaaw_a_20260905_111830`。
 
 Paper: https://arxiv.org/abs/2405.04825
 Official repository: https://github.com/shaoshuo-ss/EaaW.git @ `845432e24db227561e188af70e762d3c44d07475`
@@ -16,11 +16,11 @@ Official repository: https://github.com/shaoshuo-ss/EaaW.git @ `845432e24db22756
 ```json
 {
   "method": "EaaW",
-  "run_id": "eaaw_a_20260905_111830_cont1",
-  "status": "BLOCKED_DOWNLOAD",
+  "run_id": "eaaw_a_20260905_111830",
+  "status": "BLOCKED_SOURCE",
   "archive_status": "NOT_RUN",
-  "stage": "MODEL_DATA_READY",
-  "error": "Previously inventoried GPT-2 cache is unavailable",
+  "stage": "SOURCE_PINNED",
+  "error": "Command '['git', 'clone', 'https://github.com/shaoshuo-ss/EaaW.git', '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw']' returned non-zero exit status 128.",
   "detector": "NOT_RUN",
   "utility": "NOT_RUN"
 }

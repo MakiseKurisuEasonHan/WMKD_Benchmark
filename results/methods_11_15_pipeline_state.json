@@ -12,21 +12,31 @@
   "methods": {
     "eaaw": {
       "method": "EaaW",
-      "run_id": "eaaw_a_20260905_111830",
-      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830/context.json",
-      "stage": "SOURCE_PINNED",
+      "run_id": "eaaw_a_20260905_111830_cont1",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/context.json",
+      "stage": "MODEL_DATA_READY",
       "status": "TERMINAL",
       "attempt": 1,
-      "started_at": "2026-09-05T11:22:26.302877+00:00",
-      "last_update": "2026-09-05T11:24:47.035731+00:00",
-      "last_error": "Command '['git', 'clone', 'https://github.com/shaoshuo-ss/EaaW.git', '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw']' returned non-zero exit status 128.",
-      "repair_history": [],
-      "scientific_status": "BLOCKED_SOURCE",
+      "started_at": "2026-09-05T11:30:44.038896+00:00",
+      "last_update": "2026-09-05T11:31:44.440050+00:00",
+      "last_error": "Previously inventoried GPT-2 cache is unavailable",
+      "repair_history": [
+        {
+          "time": "2026-09-05T11:30:43.997567+00:00",
+          "action": "Use fixed official Git bundle after remote HTTPS failure; no training had started.",
+          "previous_run_id": "eaaw_a_20260905_111830",
+          "preserved_full_log": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830/full_experiment_log.json"
+        }
+      ],
+      "scientific_status": "BLOCKED_DOWNLOAD",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
       "git_status": "DURABLE",
-      "completed_stages": {},
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/receipts/ENV_READY.1.json"
+      },
       "active_worker": null
     },
     "instructional_fingerprinting": {

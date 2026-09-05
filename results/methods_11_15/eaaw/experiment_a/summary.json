@@ -1,10 +1,10 @@
 {
   "method": "EaaW",
-  "run_id": "eaaw_a_20260905_111830",
-  "status": "BLOCKED_SOURCE",
+  "run_id": "eaaw_a_20260905_111830_cont1",
+  "status": "BLOCKED_DOWNLOAD",
   "archive_status": "NOT_RUN",
-  "stage": "SOURCE_PINNED",
-  "error": "Command '['git', 'clone', 'https://github.com/shaoshuo-ss/EaaW.git', '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw']' returned non-zero exit status 128.",
+  "stage": "MODEL_DATA_READY",
+  "error": "Previously inventoried GPT-2 cache is unavailable",
   "detector": "NOT_RUN",
   "utility": "NOT_RUN"
 }

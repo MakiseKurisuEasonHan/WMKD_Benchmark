@@ -2,11 +2,11 @@
   "schema_version": "wmkd.methods-11-15.full-log.v1",
   "method": "EaaW",
   "experiment": "A",
-  "scientific_object_id": "eaaw:A:eaaw_a_20260905_111830",
-  "run_id": "eaaw_a_20260905_111830",
+  "scientific_object_id": "eaaw:A:eaaw_a_20260905_111830_cont1",
+  "run_id": "eaaw_a_20260905_111830_cont1",
   "timestamps": {
-    "started_at": "2026-09-05T11:22:26.302877+00:00",
-    "closed_at": "2026-09-05T11:24:47.036142+00:00"
+    "started_at": "2026-09-05T11:30:44.038896+00:00",
+    "closed_at": "2026-09-05T11:31:44.440180+00:00"
   },
   "paper": "https://arxiv.org/abs/2405.04825",
   "official_source": {
@@ -22,35 +22,114 @@
   },
   "state": {
     "method": "EaaW",
-    "run_id": "eaaw_a_20260905_111830",
-    "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830/context.json",
-    "stage": "SOURCE_PINNED",
+    "run_id": "eaaw_a_20260905_111830_cont1",
+    "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/context.json",
+    "stage": "MODEL_DATA_READY",
     "status": "TERMINAL",
     "attempt": 1,
-    "started_at": "2026-09-05T11:22:26.302877+00:00",
-    "last_update": "2026-09-05T11:24:47.035731+00:00",
-    "last_error": "Command '['git', 'clone', 'https://github.com/shaoshuo-ss/EaaW.git', '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw']' returned non-zero exit status 128.",
-    "repair_history": [],
-    "scientific_status": "BLOCKED_SOURCE",
+    "started_at": "2026-09-05T11:30:44.038896+00:00",
+    "last_update": "2026-09-05T11:31:44.440050+00:00",
+    "last_error": "Previously inventoried GPT-2 cache is unavailable",
+    "repair_history": [
+      {
+        "time": "2026-09-05T11:30:43.997567+00:00",
+        "action": "Use fixed official Git bundle after remote HTTPS failure; no training had started.",
+        "previous_run_id": "eaaw_a_20260905_111830",
+        "preserved_full_log": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830/full_experiment_log.json"
+      }
+    ],
+    "scientific_status": "BLOCKED_DOWNLOAD",
     "detector_status": "NOT_RUN",
     "utility_status": "NOT_RUN",
     "archive_status": "NOT_RUN",
     "git_status": "DURABLE",
-    "completed_stages": {},
+    "completed_stages": {
+      "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/receipts/SOURCE_PINNED.1.json",
+      "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1/receipts/ENV_READY.1.json"
+    },
     "active_worker": null
   },
-  "stages": {},
-  "attempts": [
-    {
-      "status": "FAILURE",
+  "stages": {
+    "SOURCE_PINNED": {
+      "status": "SUCCESS",
       "stage": "SOURCE_PINNED",
       "attempt": 1,
-      "completed_at": "2026-09-05T11:24:36.615689+00:00",
-      "runtime_seconds": 130.28448949754238,
-      "blocked_status": null,
-      "error_type": "CalledProcessError",
-      "error": "Command '['git', 'clone', 'https://github.com/shaoshuo-ss/EaaW.git', '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw']' returned non-zero exit status 128.",
-      "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 13, in main\n    if not src.exists(): cmd(['git','clone',c['spec']['repo'],src],timeout=600)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/common.py\", line 23, in cmd\n    subprocess.run([str(a) for a in args],cwd=cwd or ROOT,check=True,timeout=timeout,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', 'clone', 'https://github.com/shaoshuo-ss/EaaW.git', '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw']' returned non-zero exit status 128.\n"
+      "completed_at": "2026-09-05T11:30:44.105227+00:00",
+      "runtime_seconds": 0.03860046714544296,
+      "outputs": {
+        "repo": "https://github.com/shaoshuo-ss/EaaW.git",
+        "commit": "845432e24db227561e188af70e762d3c44d07475",
+        "license_files": [
+          "LICENSE"
+        ],
+        "transport": "local exact Git bundle",
+        "bundle_sha256": "eb1d323c08c38110918a3f70e32d93c54b654cff92a42170f2af470572b8d73d"
+      }
+    },
+    "ENV_READY": {
+      "status": "SUCCESS",
+      "stage": "ENV_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-05T11:31:06.194870+00:00",
+      "runtime_seconds": 2.0033114179968834,
+      "outputs": {
+        "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.55.2",
+        "datasets": "3.6.0",
+        "accelerate": "1.10.0",
+        "scipy": "1.16.2",
+        "cuda": "12.8",
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "runtime_adaptation": "Reuse isolated WMKD scw Python3.11 environment, PyTorch2.8/cu128 for Blackwell; no modification of old environment."
+      }
+    }
+  },
+  "attempts": [
+    {
+      "status": "SUCCESS",
+      "stage": "ENV_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-05T11:31:06.194870+00:00",
+      "runtime_seconds": 2.0033114179968834,
+      "outputs": {
+        "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.55.2",
+        "datasets": "3.6.0",
+        "accelerate": "1.10.0",
+        "scipy": "1.16.2",
+        "cuda": "12.8",
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "runtime_adaptation": "Reuse isolated WMKD scw Python3.11 environment, PyTorch2.8/cu128 for Blackwell; no modification of old environment."
+      }
+    },
+    {
+      "status": "FAILURE",
+      "stage": "MODEL_DATA_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-05T11:31:24.390609+00:00",
+      "runtime_seconds": 0.017684314399957657,
+      "blocked_status": "BLOCKED_DOWNLOAD",
+      "error_type": "Blocked",
+      "error": "Previously inventoried GPT-2 cache is unavailable",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 27, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/eaaw.py\", line 20, in stage\n    if not (model/'config.json').exists(): raise Blocked('BLOCKED_DOWNLOAD','Previously inventoried GPT-2 cache is unavailable')\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncommon.Blocked: Previously inventoried GPT-2 cache is unavailable\n"
+    },
+    {
+      "status": "SUCCESS",
+      "stage": "SOURCE_PINNED",
+      "attempt": 1,
+      "completed_at": "2026-09-05T11:30:44.105227+00:00",
+      "runtime_seconds": 0.03860046714544296,
+      "outputs": {
+        "repo": "https://github.com/shaoshuo-ss/EaaW.git",
+        "commit": "845432e24db227561e188af70e762d3c44d07475",
+        "license_files": [
+          "LICENSE"
+        ],
+        "transport": "local exact Git bundle",
+        "bundle_sha256": "eb1d323c08c38110918a3f70e32d93c54b654cff92a42170f2af470572b8d73d"
+      }
     }
   ],
   "resolved_context": {
@@ -66,9 +145,11 @@
       "license": "MIT",
       "module": "eaaw"
     },
-    "run_id": "eaaw_a_20260905_111830",
-    "run_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830",
-    "source": "/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw"
+    "run_id": "eaaw_a_20260905_111830_cont1",
+    "run_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont1",
+    "source": "/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/eaaw",
+    "continuation_of": "eaaw_a_20260905_111830",
+    "repair": "Use fixed official Git bundle after remote HTTPS failure; no training had started."
   },
   "training": "NOT_RUN",
   "detector": "NOT_RUN",
@@ -76,7 +157,7 @@
   "utility": "NOT_RUN",
   "reload": "NOT_RUN",
   "archive": "NOT_RUN",
-  "scientific_status": "BLOCKED_SOURCE",
+  "scientific_status": "BLOCKED_DOWNLOAD",
   "limitations": [
     "Single official supported configuration; no Ba/Bb/distillation.",
     "Missing results are NOT_RUN; infrastructure blocks do not establish method failure."
