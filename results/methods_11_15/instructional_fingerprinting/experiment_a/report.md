@@ -1,0 +1,29 @@
+# Instructional Fingerprinting Experiment A
+
+状态：BLOCKED_TRAINING；run ID `instructional_fingerprinting_a_20260905_111830`。
+
+Paper: https://arxiv.org/abs/2401.12255
+Official repository: https://github.com/cnut1648/Model-Fingerprint.git @ `4ae5e8a124c37f25a3711c407e85a45fda6ecb08`
+
+## 科学目标与配置
+
+复现官方核心所有权信号，保留Base、negative control和官方原生utility。官方骨干：NousResearch/Llama-2-7b-hf；数据：official llama_fingerprint_mix。
+
+所有实际环境、命令、训练配置、patch、detector原始值、negative control、utility差值、reload、运行时间与归档证据见同目录 full_experiment_log.json 的 stages/attempts。
+
+## 实际结果及限制
+
+```json
+{
+  "method": "Instructional Fingerprinting",
+  "run_id": "instructional_fingerprinting_a_20260905_111830",
+  "status": "BLOCKED_TRAINING",
+  "archive_status": "NOT_RUN",
+  "stage": "TRAINING",
+  "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/run_clm.py', '--bf16', '--torch_dtype', 'bfloat16', '--model_name_or_path', '/root/autodl-tmp/WMKD_Benchmark_data/models/methods_11_15/NousResearch--Llama-2-7b-hf', '--do_train', '--template_name', 'barebone', '--data_path', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/dataset/llama_fingerprint_mix', '--train_on_output_only', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/model_attempt_1', '--per_device_train_batch_size', '12', '--per_device_eval_batch_size', '1', '--gradient_accumulation_steps', '4', '--num_train_epochs', '20', '--seed', '42', '--report_to', 'none', '--freeze_instruction_nonembedding', '--learning_rate', '1e-2', '--instruction_nonembedding_dim', '16', '--logging_steps', '1', '--save_strategy', 'no']' returned non-zero exit status 1.",
+  "detector": "NOT_RUN",
+  "utility": "NOT_RUN"
+}
+```
+
+未运行阶段为 NOT_RUN；不据此认定方法科学失败。不改变原生检测阈值；不运行攻击实验。

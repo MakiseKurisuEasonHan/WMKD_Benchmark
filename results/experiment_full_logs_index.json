@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-06T00:26:53.999106+00:00",
-  "object_count": 36,
+  "generated_at": "2026-09-06T00:36:09.188914+00:00",
+  "object_count": 37,
   "objects": [
     {
       "method": "PN-FP",
@@ -584,6 +584,16 @@
       "full_log_sha256": "9c348eff1e014b720d53f92d5ee8aabf15655d955553be7ae4bbae5f00d5cfd5",
       "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
       "modelscope_repo": "MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2"
+    },
+    {
+      "method": "Instructional Fingerprinting",
+      "role": "experiment_a",
+      "experiment": "A",
+      "run_id": "instructional_fingerprinting_a_20260905_111830",
+      "full_log_path": "results/methods_11_15/instructional_fingerprinting/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "db818ae0bd50deb57978e5d0ffebb06386b32522835bd335b0c1ca5862feaa4c",
+      "scientific_status": "BLOCKED_TRAINING",
+      "modelscope_repo": null
     }
   ]
 }

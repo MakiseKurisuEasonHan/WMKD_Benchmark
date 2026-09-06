@@ -86,35 +86,26 @@
       "method": "Instructional Fingerprinting",
       "run_id": "instructional_fingerprinting_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/context.json",
-      "stage": "MODEL_DATA_READY",
-      "status": "RUNNING",
+      "stage": "TRAINING",
+      "status": "TERMINAL",
       "attempt": 1,
       "started_at": "2026-09-06T00:15:52.429975+00:00",
-      "last_update": "2026-09-06T00:15:52.432158+00:00",
-      "last_error": null,
+      "last_update": "2026-09-06T00:36:09.183645+00:00",
+      "last_error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/run_clm.py', '--bf16', '--torch_dtype', 'bfloat16', '--model_name_or_path', '/root/autodl-tmp/WMKD_Benchmark_data/models/methods_11_15/NousResearch--Llama-2-7b-hf', '--do_train', '--template_name', 'barebone', '--data_path', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/dataset/llama_fingerprint_mix', '--train_on_output_only', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/model_attempt_1', '--per_device_train_batch_size', '12', '--per_device_eval_batch_size', '1', '--gradient_accumulation_steps', '4', '--num_train_epochs', '20', '--seed', '42', '--report_to', 'none', '--freeze_instruction_nonembedding', '--learning_rate', '1e-2', '--instruction_nonembedding_dim', '16', '--logging_steps', '1', '--save_strategy', 'no']' returned non-zero exit status 1.",
       "repair_history": [],
-      "scientific_status": "RUNNING",
+      "scientific_status": "BLOCKED_TRAINING",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
-      "git_status": "PENDING",
+      "git_status": "DURABLE",
       "completed_stages": {
         "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
-        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/ENV_READY.1.json"
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/MODEL_DATA_READY.1.json",
+        "PREFLIGHT_COMPLETE": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/PREFLIGHT_COMPLETE.1.json"
       },
-      "active_worker": {
-        "pid": 64078,
-        "result": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/MODEL_DATA_READY.1.json",
-        "log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/MODEL_DATA_READY.1.log",
-        "command": [
-          "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
-          "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py",
-          "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/context.json",
-          "MODEL_DATA_READY",
-          "1",
-          "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/MODEL_DATA_READY.1.json"
-        ]
-      }
+      "active_worker": null,
+      "formal_report": "docs/reproduction_reports/instructional_fingerprinting_experiment_a_instructional_fingerprinting_a_20260905_111830.md"
     },
     "utf": {
       "method": "UTF",
