@@ -12,7 +12,7 @@ CONFIG=ROOT/'configs/methods_11_15.json'
 
 def strict_hold(state,m,reason):
     m.update(status='WAITING_FOR_REPAIR',last_error=reason,last_update=now())
-    state['status']='WAITING_FOR_REPAIR'; write(STATE,state)
+    state['status']='WAITING_FOR_REPAIR'; state['current_focus_method']=m['method']; write(STATE,state)
     while True:
         fresh=read(STATE)
         if fresh.get('resume_requested'):
@@ -193,6 +193,10 @@ def main():
         from reporting import update_project_state
         update_project_state(state)
         git_close('Close '+m['method']+' Experiment A')
+        if state.get('pipeline_mode')=='strict_serial_interactive':
+            closed_head=capture(['git','rev-parse','HEAD']); sync_ack=batch/'local_sync_ack.json'
+            while not (sync_ack.exists() and read(sync_ack).get('head')==closed_head and read(sync_ack).get('clean')):
+                time.sleep(20)
     summary={'created_at':now(),'methods':state['methods'],'all_terminal':all(m['status']=='TERMINAL' for m in state['methods'].values())}
     write(ROOT/'results/methods_11_15_experiment_a_summary.json',summary)
     report='# Methods 11–15 Experiment A summary\n\n| Method | Final status | Detector | Utility | Archive | Full report |\n|---|---|---|---|---|---|\n'
