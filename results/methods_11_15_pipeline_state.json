@@ -294,11 +294,11 @@
       "method": "UTF",
       "run_id": "utf_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
-      "stage": "TRAINING",
+      "stage": "PREFLIGHT_COMPLETE",
       "status": "RUNNING",
-      "attempt": 1,
+      "attempt": 2,
       "started_at": "2026-09-06T00:36:14.029041+00:00",
-      "last_update": "2026-09-06T02:15:17.510780+00:00",
+      "last_update": "2026-09-06T02:21:07.956959+00:00",
       "last_error": null,
       "repair_history": [
         {
@@ -396,6 +396,15 @@
           "verification": "DeepSpeed0.17.6 full import passed",
           "next_action": "PREFLIGHT_COMPLETE attempt2 single full-FT step, then TRAINING attempt2; previous receipts retained",
           "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:22:35.954048+00:00",
+          "stage": "PREFLIGHT_COMPLETE",
+          "attempt": 2,
+          "retry_attempt": 3,
+          "category": "GREEN path/launcher",
+          "action": "Forward DeepSpeed --local_rank through diagnostic wrapper; official train module full import verified",
+          "scientific_change": false
         }
       ],
       "scientific_status": "RUNNING",
@@ -413,7 +422,7 @@
       "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json",
       "stage_attempts": {
         "MODEL_DATA_READY": 4,
-        "PREFLIGHT_COMPLETE": 1,
+        "PREFLIGHT_COMPLETE": 2,
         "TRAINING": 1
       },
       "superseded_stage_receipts": {
