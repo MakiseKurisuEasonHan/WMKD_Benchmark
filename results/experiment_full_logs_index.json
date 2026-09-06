@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-06T00:37:54.877490+00:00",
-  "object_count": 38,
+  "generated_at": "2026-09-06T00:39:39.988256+00:00",
+  "object_count": 39,
   "objects": [
     {
       "method": "PN-FP",
@@ -602,6 +602,16 @@
       "run_id": "utf_a_20260905_111830",
       "full_log_path": "results/methods_11_15/utf/experiment_a/full_experiment_log.json",
       "full_log_sha256": "53577dfa3710b8ac3cef3b37ff87aab5ff5d8944f53c4ac53e25c9240965a387",
+      "scientific_status": "BLOCKED_DOWNLOAD",
+      "modelscope_repo": null
+    },
+    {
+      "method": "Double-I Watermark",
+      "role": "experiment_a",
+      "experiment": "A",
+      "run_id": "double_i_a_20260905_111830",
+      "full_log_path": "results/methods_11_15/double_i/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "9cf42b91dcf491615c1d211921f01cf46a8a954f286f3665b0218206245a54db",
       "scientific_status": "BLOCKED_DOWNLOAD",
       "modelscope_repo": null
     }

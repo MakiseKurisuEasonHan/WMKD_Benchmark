@@ -1,0 +1,10 @@
+{
+  "method": "Double-I Watermark",
+  "run_id": "double_i_a_20260905_111830",
+  "status": "BLOCKED_DOWNLOAD",
+  "archive_status": "NOT_RUN",
+  "stage": "MODEL_DATA_READY",
+  "error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'URLError'}]",
+  "detector": "NOT_RUN",
+  "utility": "NOT_RUN"
+}

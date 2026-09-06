@@ -1,0 +1,170 @@
+{
+  "schema_version": "wmkd.methods-11-15.full-log.v1",
+  "method": "Double-I Watermark",
+  "experiment": "A",
+  "scientific_object_id": "double_i:A:double_i_a_20260905_111830",
+  "run_id": "double_i_a_20260905_111830",
+  "timestamps": {
+    "started_at": "2026-09-06T00:37:59.469073+00:00",
+    "closed_at": "2026-09-06T00:39:39.985695+00:00"
+  },
+  "paper": "https://arxiv.org/abs/2402.14883",
+  "official_source": {
+    "number": 14,
+    "name": "Double-I Watermark",
+    "paper": "https://arxiv.org/abs/2402.14883",
+    "repo": "https://github.com/listen0425/Double-I-Watermark.git",
+    "commit": "5ee1abc105eb8f17f3256f96778de13eee4e9ce6",
+    "backbone": "meta-llama/Llama-2-7b-hf",
+    "dataset": "official dataset/backdoor_data/e2.json",
+    "license": "not-recorded (no top-level LICENSE)",
+    "module": "double_i"
+  },
+  "state": {
+    "method": "Double-I Watermark",
+    "run_id": "double_i_a_20260905_111830",
+    "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/context.json",
+    "stage": "MODEL_DATA_READY",
+    "status": "TERMINAL",
+    "attempt": 1,
+    "started_at": "2026-09-06T00:37:59.469073+00:00",
+    "last_update": "2026-09-06T00:39:39.985241+00:00",
+    "last_error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'URLError'}]",
+    "repair_history": [],
+    "scientific_status": "BLOCKED_DOWNLOAD",
+    "detector_status": "NOT_RUN",
+    "utility_status": "NOT_RUN",
+    "archive_status": "NOT_RUN",
+    "git_status": "DURABLE",
+    "completed_stages": {
+      "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+      "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/receipts/ENV_READY.1.json"
+    },
+    "active_worker": null,
+    "formal_report": "docs/reproduction_reports/double_i_experiment_a_double_i_a_20260905_111830.md"
+  },
+  "stages": {
+    "SOURCE_PINNED": {
+      "status": "SUCCESS",
+      "stage": "SOURCE_PINNED",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:55.611800+00:00",
+      "runtime_seconds": 0.7364742122590542,
+      "outputs": {
+        "repo": "https://github.com/listen0425/Double-I-Watermark.git",
+        "commit": "5ee1abc105eb8f17f3256f96778de13eee4e9ce6",
+        "license_files": [],
+        "transport": "local exact Git bundle",
+        "bundle_sha256": "ede69cbd13a4f4248098c4fc28d5b038c911830ae1786a244ac09f47e5aa8203"
+      }
+    },
+    "ENV_READY": {
+      "status": "SUCCESS",
+      "stage": "ENV_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:58.488221+00:00",
+      "runtime_seconds": 2.844476956874132,
+      "outputs": {
+        "torch": "2.8.0+cu128",
+        "transformers": "4.55.2",
+        "peft": "0.17.1",
+        "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]"
+      }
+    }
+  },
+  "attempts": [
+    {
+      "status": "SUCCESS",
+      "stage": "ENV_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:58.488221+00:00",
+      "runtime_seconds": 2.844476956874132,
+      "outputs": {
+        "torch": "2.8.0+cu128",
+        "transformers": "4.55.2",
+        "peft": "0.17.1",
+        "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]"
+      }
+    },
+    {
+      "status": "FAILURE",
+      "stage": "MODEL_DATA_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-06T00:39:31.864772+00:00",
+      "runtime_seconds": 92.30382164567709,
+      "blocked_status": "BLOCKED_DOWNLOAD",
+      "error_type": "Blocked",
+      "error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'URLError'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/double_i.py\", line 12, in stage\n    p=model(c,c['spec']['backbone']); work=prepare_work(c)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/resources.py\", line 45, in model\n    else: raise Blocked('BLOCKED_DOWNLOAD','No verified transport for '+f.rfilename+'; '+str(errors[-3:]))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncommon.Blocked: No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'URLError'}]\n"
+    },
+    {
+      "status": "SUCCESS",
+      "stage": "SOURCE_PINNED",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:55.611800+00:00",
+      "runtime_seconds": 0.7364742122590542,
+      "outputs": {
+        "repo": "https://github.com/listen0425/Double-I-Watermark.git",
+        "commit": "5ee1abc105eb8f17f3256f96778de13eee4e9ce6",
+        "license_files": [],
+        "transport": "local exact Git bundle",
+        "bundle_sha256": "ede69cbd13a4f4248098c4fc28d5b038c911830ae1786a244ac09f47e5aa8203"
+      }
+    }
+  ],
+  "resolved_context": {
+    "method": "double_i",
+    "spec": {
+      "number": 14,
+      "name": "Double-I Watermark",
+      "paper": "https://arxiv.org/abs/2402.14883",
+      "repo": "https://github.com/listen0425/Double-I-Watermark.git",
+      "commit": "5ee1abc105eb8f17f3256f96778de13eee4e9ce6",
+      "backbone": "meta-llama/Llama-2-7b-hf",
+      "dataset": "official dataset/backdoor_data/e2.json",
+      "license": "not-recorded (no top-level LICENSE)",
+      "module": "double_i"
+    },
+    "run_id": "double_i_a_20260905_111830",
+    "run_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830",
+    "source": "/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/double_i"
+  },
+  "training": "NOT_RUN",
+  "detector": "NOT_RUN",
+  "negative_controls": "NOT_RUN",
+  "utility": "NOT_RUN",
+  "reload": "NOT_RUN",
+  "archive": "NOT_RUN",
+  "scientific_status": "BLOCKED_DOWNLOAD",
+  "limitations": [
+    "Single official supported configuration; no Ba/Bb/distillation.",
+    "Missing results are NOT_RUN; infrastructure blocks do not establish method failure."
+  ],
+  "formal_report": "docs/reproduction_reports/double_i_experiment_a_double_i_a_20260905_111830.md",
+  "raw_stage_logs": {
+    "SOURCE_PINNED.1.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/SOURCE_PINNED.1.log",
+      "size": 941,
+      "sha256": "1f836d63e83820fc5cb820bb3e5f4e0e454cea530ffc2d3e57257e6c09af1066",
+      "tail": "{\"time\": \"2026-09-05T12:07:54.875403+00:00\", \"command\": [\"git\", \"clone\", \"/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15_transport/double_i.bundle\", \"/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/double_i\"], \"cwd\": \"/root/autodl-tmp/WMKD_Benchmark\"}\nCloning into '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/double_i'...\nNote: switching to '5ee1abc105eb8f17f3256f96778de13eee4e9ce6'.\n\nYou are in 'detached HEAD' state. You can look around, make experimental\nchanges and commit them, and you can discard any commits you make in this\nstate without impacting any branches by switching back to a branch.\n\nIf you want to create a new branch to retain commits you create, you may\ndo so (now or later) by using -c with the switch command. Example:\n\n  git switch -c <new-branch-name>\n\nOr undo this operation with:\n\n  git switch -\n\nTurn off this advice by setting config variable advice.detachedHead to false\n\n"
+    },
+    "ENV_READY.1.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/ENV_READY.1.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tail": ""
+    },
+    "cpu_import_audit.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/cpu_import_audit.log",
+      "size": 2178,
+      "sha256": "7d26ee96739406e6f964a1aeccb62e3916f2f4aa4c1f188bd43f9ce601604290",
+      "tail": "{\"time\": \"2026-09-05T12:11:49.396083+00:00\", \"command\": [\"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python\", \"-m\", \"pip\", \"install\", \"--target\", \"/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/runtime_overlay\", \"--no-deps\", \"--index-url\", \"https://pypi.tuna.tsinghua.edu.cn/simple\", \"fire==0.7.1\"], \"cwd\": \"/root/autodl-tmp/WMKD_Benchmark\"}\nLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple\nCollecting fire==0.7.1\n  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/e5/4c/93d0f85318da65923e4b91c1c2ff03d8a458cbefebe3bc612a6693c7906d/fire-0.7.1-py3-none-any.whl (115 kB)\nInstalling collected packages: fire\nSuccessfully installed fire-0.7.1\nWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/cpu_import_audit.py\", line 20, in <module>\n    os.chdir(work/'fine-tuningandinference/LoRA'); sys.path.insert(0,str(Path.cwd())); import lora_finetuning\n                                                                                       ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/work/fine-tuningandinference/LoRA/lora_finetuning.py\", line 4, in <module>\n    import fire\nModuleNotFoundError: No module named 'fire'\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/cpu_import_audit.py\", line 19, in <module>\n    double_i.stage(c,'PREFLIGHT_COMPLETE')\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/double_i.py\", line 25, in stage\n    begin=f.read_text().index('    old_state_dict = model.state_dict'); end=f.read_text().index('    # if torch.__version__',begin)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: substring not found\n"
+    },
+    "MODEL_DATA_READY.1.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/MODEL_DATA_READY.1.log",
+      "size": 2088,
+      "sha256": "deeaa9ac840e7970868e57bedcbcb10388a5ed8f467d069b5e5e93e503c0bfb7",
+      "tail": "Downloading canonical file meta-llama/Llama-2-7b-hf LICENSE.txt transport https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/LICENSE.txt\nDownloading canonical file meta-llama/Llama-2-7b-hf LICENSE.txt transport https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/LICENSE.txt\nDownloading canonical file meta-llama/Llama-2-7b-hf config.json transport https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json\nDownloading canonical file meta-llama/Llama-2-7b-hf config.json transport https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json\nDownloading canonical file meta-llama/Llama-2-7b-hf config.json transport https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/double_i.py\", line 12, in stage\n    p=model(c,c['spec']['backbone']); work=prepare_work(c)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/resources.py\", line 45, in model\n    else: raise Blocked('BLOCKED_DOWNLOAD','No verified transport for '+f.rfilename+'; '+str(errors[-3:]))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncommon.Blocked: No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'URLError'}]\n"
+    }
+  }
+}
