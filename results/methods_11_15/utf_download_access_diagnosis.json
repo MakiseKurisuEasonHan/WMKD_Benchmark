@@ -1,0 +1,17 @@
+{
+  "time": "2026-09-06T01:36:31.521801+00:00",
+  "method": "UTF",
+  "stage": "MODEL_DATA_READY",
+  "classification": "download/access",
+  "canonical_backbone": "meta-llama/Llama-2-7b-chat-hf",
+  "canonical_revision": "f5db02db724555f92da89c216ac04704f23d4590",
+  "unauthenticated_config_probes": {
+    "modelscope": "HTTP 404",
+    "hf_mirror": "HTTP 403: enable access to public gated repositories",
+    "huggingface_official": "Network unreachable errno 101"
+  },
+  "hf_token_present": true,
+  "authenticated_mirror_probe": "NOT_EXECUTED: automatic approval rejected forwarding HF token to untrusted third-party endpoint",
+  "action": "WAITING_FOR_REPAIR; no credential forwarding, no new GPU job, no method skipped; require reachable authorized canonical transport or verified credential-free mirror",
+  "repair_applied": false
+}
