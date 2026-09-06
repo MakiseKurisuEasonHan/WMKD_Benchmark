@@ -294,11 +294,11 @@
       "method": "UTF",
       "run_id": "utf_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
-      "stage": "MODEL_DATA_READY",
+      "stage": "TRAINING",
       "status": "RUNNING",
-      "attempt": 4,
+      "attempt": 1,
       "started_at": "2026-09-06T00:36:14.029041+00:00",
-      "last_update": "2026-09-06T02:05:23.555600+00:00",
+      "last_update": "2026-09-06T02:15:17.510780+00:00",
       "last_error": null,
       "repair_history": [
         {
@@ -380,6 +380,22 @@
           "install_flags": "pip install --no-deps --target method runtime_overlay -i https://pypi.tuna.tsinghua.edu.cn/simple",
           "verification": "Full magikarp.fishing import passed; numpy1.26.4 pandas2.2.3 matplotlib3.8.4 seaborn0.13.2 protobuf5.29.5",
           "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:20:29.062685+00:00",
+          "stage": "TRAINING",
+          "attempt": 1,
+          "category": "GREEN dependency",
+          "root_cause": "Missing DeepSpeed declared runtime dependencies before any training step",
+          "packages": [
+            "py-cpuinfo==9.0.0",
+            "einops==0.8.1",
+            "msgpack==1.1.1",
+            "nvidia-ml-py==12.575.51"
+          ],
+          "verification": "DeepSpeed0.17.6 full import passed",
+          "next_action": "PREFLIGHT_COMPLETE attempt2 single full-FT step, then TRAINING attempt2; previous receipts retained",
+          "scientific_change": false
         }
       ],
       "scientific_status": "RUNNING",
@@ -389,13 +405,19 @@
       "git_status": "DURABLE",
       "completed_stages": {
         "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
-        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/ENV_READY.1.json"
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/MODEL_DATA_READY.5.json"
       },
       "active_worker": null,
       "formal_report": "docs/reproduction_reports/utf_experiment_a_utf_a_20260905_111830.md",
       "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json",
       "stage_attempts": {
-        "MODEL_DATA_READY": 4
+        "MODEL_DATA_READY": 4,
+        "PREFLIGHT_COMPLETE": 1,
+        "TRAINING": 1
+      },
+      "superseded_stage_receipts": {
+        "PREFLIGHT_COMPLETE_without_resource_step": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/PREFLIGHT_COMPLETE.1.json"
       }
     },
     "double_i": {
