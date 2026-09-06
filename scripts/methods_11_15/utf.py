@@ -36,6 +36,7 @@ def stage(c,s):
     rr=Path(c['run_root']); work=rr/'work'; canonical=c['spec']['backbone']
     if s=='ENV_READY':
         overlay(c,MAGIKARP_PACKAGES)
+        overlay(c,['py-cpuinfo==9.0.0','einops==0.8.1','msgpack==1.1.1','nvidia-ml-py==12.575.51'])
         overlay(c,['transformers==4.44.0','tokenizers==0.19.1','peft==0.12.0','accelerate==0.33.0','fire==0.7.1','loguru==0.7.3','bitsandbytes==0.47.0','deepspeed==0.17.6','hjson==3.1.0','ninja==1.11.1.4','tensorboardX==2.6.2.2'])
         return {'base_python':str(PY),'isolated_overlay':str(rr/'runtime_overlay'),'runtime':'Blackwell PyTorch2.8/cu128 with author-era Transformers4.44; DeepSpeed0.17.6 CPU offload','scientific_change':False}
     if s=='MODEL_DATA_READY':

@@ -16,6 +16,8 @@ def repair(c,stage,attempt,error,log):
     packages={'termcolor':'termcolor==3.1.0','fire':'fire==0.7.1','rouge_score':'rouge-score==0.1.2','evaluate':'evaluate==0.4.3','tensorboardX':'tensorboardX==2.6.2.2','loguru':'loguru==0.7.3','trl':'trl==0.11.4','datasets':'datasets==2.19.1','scipy':'scipy==1.13.1','tree_sitter':'tree-sitter==0.21.0','treelib':'treelib==1.7.0','sacremoses':'sacremoses==0.1.1','bitsandbytes':'bitsandbytes==0.47.0','tensorboard':'tensorboard==2.20.0','rapidfuzz':'rapidfuzz==3.14.0','ninja':'ninja==1.11.1.4','hjson':'hjson==3.1.0','msgpack':'msgpack==1.1.1','pycountry':'pycountry==24.6.1','langdetect':'langdetect==1.0.9','rich':'rich==13.9.4'}
     if 'protobuf' in text and ('No module named' in text or 'requires the protobuf library' in text):
         missing=['protobuf']; packages['protobuf']='protobuf==4.25.8'
+    packages['cpuinfo']='py-cpuinfo==9.0.0'
+    packages['einops']='einops==0.8.1'
     if missing and missing[-1] in packages:
         package=packages[missing[-1]]; target=Path(c['run_root'])/'runtime_overlay'
         marker=target/('wmkd_repaired_'+missing[-1]+'.json')
