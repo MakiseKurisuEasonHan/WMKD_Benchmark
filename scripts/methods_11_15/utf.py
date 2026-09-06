@@ -3,6 +3,7 @@ import os, sys, re, urllib.request, hashlib, json, shutil
 from common import *
 from resources import model, prepare_work, overlay, patch
 MAGIKARP_REV='764e8cd02e598deb65692184a03f843ce3543ded'
+MAGIKARP_PACKAGES=['termcolor==3.1.0','numpy==1.26.4','scipy==1.13.1','scikit-learn==1.4.2','pandas==2.2.3','matplotlib==3.8.4','seaborn==0.13.2','contourpy==1.2.1','cycler==0.12.1','fonttools==4.53.1','kiwisolver==1.4.5','pyparsing==3.1.2','protobuf==5.29.5','pytz==2024.1']
 
 def magikarp(c,work):
     dest=work/'magikarp'; dest.mkdir(exist_ok=True)
@@ -34,6 +35,7 @@ def magikarp(c,work):
 def stage(c,s):
     rr=Path(c['run_root']); work=rr/'work'; canonical=c['spec']['backbone']
     if s=='ENV_READY':
+        overlay(c,MAGIKARP_PACKAGES)
         overlay(c,['transformers==4.44.0','tokenizers==0.19.1','peft==0.12.0','accelerate==0.33.0','fire==0.7.1','loguru==0.7.3','bitsandbytes==0.47.0','deepspeed==0.17.6','hjson==3.1.0','ninja==1.11.1.4','tensorboardX==2.6.2.2'])
         return {'base_python':str(PY),'isolated_overlay':str(rr/'runtime_overlay'),'runtime':'Blackwell PyTorch2.8/cu128 with author-era Transformers4.44; DeepSpeed0.17.6 CPU offload','scientific_change':False}
     if s=='MODEL_DATA_READY':
