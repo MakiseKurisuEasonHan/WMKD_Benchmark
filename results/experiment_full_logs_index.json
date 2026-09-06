@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-06T00:36:09.188914+00:00",
-  "object_count": 37,
+  "generated_at": "2026-09-06T00:37:54.877490+00:00",
+  "object_count": 38,
   "objects": [
     {
       "method": "PN-FP",
@@ -593,6 +593,16 @@
       "full_log_path": "results/methods_11_15/instructional_fingerprinting/experiment_a/full_experiment_log.json",
       "full_log_sha256": "db818ae0bd50deb57978e5d0ffebb06386b32522835bd335b0c1ca5862feaa4c",
       "scientific_status": "BLOCKED_TRAINING",
+      "modelscope_repo": null
+    },
+    {
+      "method": "UTF",
+      "role": "experiment_a",
+      "experiment": "A",
+      "run_id": "utf_a_20260905_111830",
+      "full_log_path": "results/methods_11_15/utf/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "53577dfa3710b8ac3cef3b37ff87aab5ff5d8944f53c4ac53e25c9240965a387",
+      "scientific_status": "BLOCKED_DOWNLOAD",
       "modelscope_repo": null
     }
   ]
