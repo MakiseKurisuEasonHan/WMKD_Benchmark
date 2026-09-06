@@ -1,11 +1,11 @@
 <!-- WMKD_METHODS_11_15_CURRENT_BEGIN -->
 ## Methods 11–15 当前状态
 
-更新：2026-09-05T13:05:52.118947+00:00；总状态：RUNNING。
+更新：2026-09-06T00:15:47.529993+00:00；总状态：RUNNING。
 
 | 方法 | 阶段 | 状态 | 科学结论 |
 |---|---|---|---|
-| EaaW | TRAINING | RUNNING | RUNNING |
+| EaaW | ARCHIVED | TERMINAL | BLOCKED_ARCHIVE |
 | Instructional Fingerprinting | NOT_STARTED | NOT_STARTED | NOT_STARTED |
 | UTF | NOT_STARTED | NOT_STARTED | NOT_STARTED |
 | Double-I Watermark | NOT_STARTED | NOT_STARTED | NOT_STARTED |

@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-05T17:56:34.703865+00:00",
-  "object_count": 35,
+  "generated_at": "2026-09-06T00:15:47.529263+00:00",
+  "object_count": 36,
   "objects": [
     {
       "method": "PN-FP",
@@ -573,6 +573,16 @@
       "full_log_path": "results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830_cont1_cont1/full_experiment_log.json",
       "full_log_sha256": "b66ba8c1bdaa7bdc684e2adbb9fe5e37b24952e493577c18cf579152ac2b613e",
       "scientific_status": "ENGINEERING_COMPLETE_NONCANONICAL_DATA_ADAPTER",
+      "modelscope_repo": null
+    },
+    {
+      "method": "EaaW",
+      "role": "experiment_a",
+      "experiment": "A",
+      "run_id": "eaaw_a_20260905_111830_cont2",
+      "full_log_path": "results/methods_11_15/eaaw/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "ee89e58322f84dee938416693443de40bf1a9594b50f4b2c5294b6454e4acfa5",
+      "scientific_status": "BLOCKED_ARCHIVE",
       "modelscope_repo": null
     }
   ]
