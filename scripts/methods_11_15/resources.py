@@ -6,7 +6,7 @@ def model(c,repo,revision=None):
     from huggingface_hub import HfApi
     errors=[]; info=None
     for endpoint in ('https://hf-mirror.com','https://huggingface.co'):
-        try: info=HfApi(endpoint=endpoint).model_info(repo,revision=revision,files_metadata=True); break
+        try: info=HfApi(endpoint=endpoint,token=False).model_info(repo,revision=revision or c.get('model_revision'),files_metadata=True); break
         except Exception as e: errors.append({'endpoint':endpoint,'error':type(e).__name__})
     if info is None: raise Blocked('BLOCKED_DOWNLOAD','Cannot resolve canonical revision: '+str(errors))
     dest=DATA/'models/methods_11_15'/(repo.replace('/','--')+('--'+revision.replace('/','_') if revision else '')); dest.mkdir(parents=True,exist_ok=True)
@@ -26,7 +26,9 @@ def model(c,repo,revision=None):
             if f.lfs: return sha(p)==f.lfs.sha256
             raw=p.read_bytes(); return hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()==f.blob_id
         if not valid():
-            urls=[f'https://modelscope.cn/models/{repo}/resolve/master/{f.rfilename}',f'https://hf-mirror.com/{repo}/resolve/{info.sha}/{f.rfilename}',f'https://huggingface.co/{repo}/resolve/{info.sha}/{f.rfilename}']
+            mirror=c.get('modelscope_mirror',{})
+            transport_repo=mirror.get('repo',repo); transport_revision=mirror.get('revision','master')
+            urls=[f'https://modelscope.cn/models/{transport_repo}/resolve/{transport_revision}/{f.rfilename}',f'https://hf-mirror.com/{repo}/resolve/{info.sha}/{f.rfilename}',f'https://huggingface.co/{repo}/resolve/{info.sha}/{f.rfilename}']
             for url in urls:
                 try:
                     print('Downloading canonical file',repo,f.rfilename,'transport',url,flush=True)
@@ -44,7 +46,7 @@ def model(c,repo,revision=None):
                 except Exception as e: errors.append({'file':f.rfilename,'transport':url,'error':type(e).__name__})
             else: raise Blocked('BLOCKED_DOWNLOAD','No verified transport for '+f.rfilename+'; '+str(errors[-3:]))
         manifest[f.rfilename]={'size':p.stat().st_size,'sha256':sha(p),'canonical_git_blob':f.blob_id,'canonical_lfs_sha':f.lfs.sha256 if f.lfs else None}
-    provenance={'canonical_upstream':repo,'revision':info.sha,'path':str(dest),'files':manifest,'transport_errors':errors}
+    provenance={'canonical_upstream':repo,'revision':info.sha,'path':str(dest),'files':manifest,'transport_errors':errors,'modelscope_transport_mapping':c.get('modelscope_mirror'),'verification':'Every downloaded file checked against canonical Git blob or LFS SHA and size; no credentials sent to mirrors'}
     write(Path(c['run_root'])/'model_provenance.json',provenance); return provenance
 
 def overlay(c,packages):

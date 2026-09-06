@@ -74,6 +74,14 @@ def main():
     if a.initialize: return
     state['status']='RUNNING'; write(STATE,state)
     for slug in conf['order']:
+        if state.get('execution_scope')=='utf_only' and slug in ('double_i','codegenguard'):
+            state['status']='UTF_CLOSED_AWAITING_USER_SCOPE'; write(STATE,state)
+            while True:
+                fresh=read(STATE)
+                if fresh.get('resume_requested'):
+                    fresh.pop('resume_requested'); write(STATE,fresh)
+                    os.execv(sys.executable,[sys.executable,*sys.argv])
+                time.sleep(20)
         m=state['methods'][slug]; c=read(m['context']); rr=Path(c['run_root'])
         # Deployment is allowed to prepare later CPU adapters while the first
         # official job runs. Missing adapter is never a scientific BLOCKED result.
