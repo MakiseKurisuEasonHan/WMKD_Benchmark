@@ -29,3 +29,7 @@ Methods12–15 的 SOURCE_PINNED 与 ENV_READY 已通过 CPU 预准备生成独�
 EaaW run `eaaw_a_20260905_111830_cont1_cont1` 的 PTB 原始行空白未执行官方 builder 的 `line.strip()`，不能作为 canonical A。保留当前训练进度及自然完成的 checkpoint；`training_invalidation.json` 使控制器在训练完成后先保存诊断 full log，再以 `eaaw_a_20260905_111830_cont2` 重跑官方预处理。自动审批拒绝中止旧训练，未得到用户额外明确批准时不得中止；不将等待时间视为批准。
 
 本任务小时级巡检 `wmkd-methods-11-15` 已启用，异常时在授权内修复并继续队列。远端 guardian 独立运行；本机同步助手和 Codex 巡检需要本机及应用保持运行。5/5 尚未 terminal，不得声称完成或提前关机。
+
+## 2026-09-06 STRICT SERIAL INTERACTIVE MODE
+
+用户在线期间执行 strict_serial_interactive；current_focus_method = Instructional Fingerprinting；advance_on_engineering_block = false。优先从 Method 12 TRAINING 新 attempt 恢复，不重建已成功的模型/数据。工程失败先最小修复并有界重试；未解决则等待处理，禁止跳过当前方法。RED 科学分歧停止并报告用户。Method 12 检测、负对照、utility、reload、全日志、报告、私有归档验证和 Git 闭环前，Methods 13–15 不得进入新 expensive stage。保留后续方法的已下载内容、失败回执及当前准备产物。EaaW 已闭环，不重跑。最终关机授权仅在全批真实终态与完整 closure 门槛通过后有效。

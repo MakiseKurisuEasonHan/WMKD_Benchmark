@@ -10,6 +10,16 @@ from common import *
 STATE=ROOT/'results/methods_11_15_pipeline_state.json'
 CONFIG=ROOT/'configs/methods_11_15.json'
 
+def strict_hold(state,m,reason):
+    m.update(status='WAITING_FOR_REPAIR',last_error=reason,last_update=now())
+    state['status']='WAITING_FOR_REPAIR'; write(STATE,state)
+    while True:
+        fresh=read(STATE)
+        if fresh.get('resume_requested'):
+            fresh.pop('resume_requested'); write(STATE,fresh)
+            os.execv(sys.executable,[sys.executable,*sys.argv])
+        time.sleep(20)
+
 def alive(pid,token):
     try: return token in Path(f'/proc/{pid}/cmdline').read_bytes().decode(errors='replace')
     except OSError: return False
@@ -72,8 +82,11 @@ def main():
             write(batch/'watchdog.json',{'time':now(),'method':slug,'status':'WAITING_FOR_RUNNER_DEPLOYMENT'})
             time.sleep(20)
         if m['status']=='TERMINAL':
+            if state.get('pipeline_mode')=='strict_serial_interactive' and m['scientific_status'].startswith('BLOCKED'):
+                strict_hold(state,m,m.get('last_error') or m['scientific_status'])
             m['git_status']='DURABLE'; write(STATE,state); git_close('Close '+m['method']+' Experiment A')
             continue
+        state['current_focus_method']=m['method']; write(STATE,state)
         m['started_at']=m['started_at'] or now(); m['scientific_status']='RUNNING'
         for stage in STAGES:
             if stage in m['completed_stages']: continue
@@ -142,6 +155,8 @@ def main():
                     os.execv(sys.executable,[sys.executable,*sys.argv])
                 m['last_error']=value.get('error'); m['scientific_status']=value.get('blocked_status') or {'SOURCE_PINNED':'BLOCKED_SOURCE','ENV_READY':'BLOCKED_ENVIRONMENT','MODEL_DATA_READY':'BLOCKED_DOWNLOAD','TRAINING':'BLOCKED_TRAINING','DETECTOR':'BLOCKED_DETECTOR','UTILITY':'BLOCKED_UTILITY','ARCHIVED':'BLOCKED_ARCHIVE'}.get(stage,'BLOCKED_UNKNOWN')
                 if stage=='ARCHIVED': m['archive_status']='BLOCKED_ARCHIVE_LOCAL_RETAINED'
+                if state.get('pipeline_mode')=='strict_serial_interactive':
+                    strict_hold(state,m,m['last_error'])
                 if 'TRAINING' in m['completed_stages']:
                     # A detector/utility failure must not strand the available model unarchived.
                     m.setdefault('blocked_stages',{})[stage]={'scientific_status':m['scientific_status'],'error':value,'receipt':str(result)}
@@ -166,8 +181,13 @@ def main():
                     utility=read(m['completed_stages']['UTILITY'])['outputs']; delta=utility.get('delta',{})
                     degraded=delta.get('perplexity',0)>0 if slug=='eaaw' else any(isinstance(v,(int,float)) and v<0 for v in delta.values())
                     if degraded:
-                        m['scientific_status']='WATERMARK_DETECTED_BUT_UTILITY_DEGRADED'
+                        m['scientific_status']='FINGERPRINT_DETECTED_BUT_UTILITY_DEGRADED' if slug=='instructional_fingerprinting' else 'WATERMARK_DETECTED_BUT_UTILITY_DEGRADED'
                         m['utility_judgement']='Observed native metric worsened versus Base; descriptive delta only, not a significance claim or strength retuning.'
+        if slug=='instructional_fingerprinting':
+            m['ENGINEERING_STATUS']='COMPLETE' if not m.get('blocked_stages') else 'INCOMPLETE'
+            m['FINGERPRINT_STATUS']=read(m['completed_stages']['DETECTOR'])['outputs']['scientific_status'] if 'DETECTOR' in m['completed_stages'] else 'NOT_RUN'
+            m['UTILITY_STATUS']='OBSERVED_DEGRADATION' if m['scientific_status']=='FINGERPRINT_DETECTED_BUT_UTILITY_DEGRADED' else m['utility_status']
+            m['FINAL_SCIENTIFIC_STATUS']=m['scientific_status']
         m.update(status='TERMINAL',last_update=now(),git_status='DURABLE')
         close_method(state,slug,c); write(STATE,state)
         from reporting import update_project_state
