@@ -14,6 +14,7 @@ def main():
             stop.wait(10)
     if stage=='TRAINING': threading.Thread(target=sample,daemon=True).start()
     os.environ.update(CUDA_VISIBLE_DEVICES='0',HF_ENDPOINT='https://hf-mirror.com',HF_HUB_DISABLE_TELEMETRY='1',WANDB_DISABLED='true',TOKENIZERS_PARALLELISM='false',PYTHONUNBUFFERED='1',OMP_NUM_THREADS='8',HF_HUB_ETAG_TIMEOUT='30',HF_HUB_DOWNLOAD_TIMEOUT='90')
+    os.environ['HF_HUB_DISABLE_IMPLICIT_TOKEN']='1'
     try:
         if stage=='SOURCE_PINNED':
             src=Path(c['source'])

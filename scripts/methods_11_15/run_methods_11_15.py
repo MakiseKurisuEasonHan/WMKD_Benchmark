@@ -189,9 +189,9 @@ def main():
                     utility=read(m['completed_stages']['UTILITY'])['outputs']; delta=utility.get('delta',{})
                     degraded=delta.get('perplexity',0)>0 if slug=='eaaw' else any(isinstance(v,(int,float)) and v<0 for v in delta.values())
                     if degraded:
-                        m['scientific_status']='FINGERPRINT_DETECTED_BUT_UTILITY_DEGRADED' if slug=='instructional_fingerprinting' else 'WATERMARK_DETECTED_BUT_UTILITY_DEGRADED'
+                        m['scientific_status']='FINGERPRINT_DETECTED_BUT_UTILITY_DEGRADED' if slug in ('instructional_fingerprinting','utf') else 'WATERMARK_DETECTED_BUT_UTILITY_DEGRADED'
                         m['utility_judgement']='Observed native metric worsened versus Base; descriptive delta only, not a significance claim or strength retuning.'
-        if slug=='instructional_fingerprinting':
+        if slug in ('instructional_fingerprinting','utf'):
             m['ENGINEERING_STATUS']='COMPLETE' if not m.get('blocked_stages') else 'INCOMPLETE'
             m['FINGERPRINT_STATUS']=read(m['completed_stages']['DETECTOR'])['outputs']['scientific_status'] if 'DETECTOR' in m['completed_stages'] else 'NOT_RUN'
             m['UTILITY_STATUS']='OBSERVED_DEGRADATION' if m['scientific_status']=='FINGERPRINT_DETECTED_BUT_UTILITY_DEGRADED' else m['utility_status']

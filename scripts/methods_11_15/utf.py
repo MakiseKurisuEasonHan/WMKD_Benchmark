@@ -54,6 +54,13 @@ def stage(c,s):
         write(rr/'protocol.json',value); return value
     if s=='PREFLIGHT_COMPLETE':
         p=read(rr/'protocol.json'); cfg=dict(p['official_config']); cfg['gradient_accumulation_steps']=64; cfg['report_to']='none'; cfg['deepspeed']=str(work/'config/deepspeed_config/ds_z3_config.json'); write(rr/'train_config.json',cfg)
+        from transformers import AutoConfig, AutoTokenizer
+        base=Path(p['base']); metadata=AutoConfig.from_pretrained(base,local_files_only=True); tokenizer=AutoTokenizer.from_pretrained(base,local_files_only=True)
+        assert metadata.model_type=='llama'
+        shards=set(read(base/'model.safetensors.index.json')['weight_map'].values())
+        assert all((base/name).is_file() and (base/name).stat().st_size>0 for name in shards)
+        assert all((base/name).stat().st_size>0 for name in p['model_provenance']['files'])
+        write(rr/'model_files_preflight.json',{'config_parses':True,'tokenizer_loads':True,'model_type':metadata.model_type,'architectures':metadata.architectures,'tokenizer_class':type(tokenizer).__name__,'weight_shards':sorted(shards),'all_canonical_files_nonempty':True,'canonical_revision':p['model_provenance']['revision'],'config_sha256':sha(base/'config.json'),'free_disk_bytes':shutil.disk_usage(base).free,'full_gpu_load':False})
         patch(work/'fingerprint/train.py','from trl import DPOTrainer, get_kbit_device_map','def get_kbit_device_map(): raise RuntimeError("Unexpected quantized branch in official full-FT run")',rr/'compatibility.patch')
         # DPOTrainer is only referenced by the unused DPO branch.
         return {'official_config':p['official_config'],'actual_config':cfg,'runtime_adaptations':['same64 effective batch across one GPU','original ZeRO3 CPU offload configuration retained','unused DPO package import removed; full FT unchanged'],'expected_storage_gib':45,'patch':(rr/'compatibility.patch').read_text()}
@@ -70,8 +77,7 @@ def stage(c,s):
         from shared_eval import sciq
         return sciq(c,p['base'],t['model'])
     if s=='RELOAD_VERIFIED':
-        from shared_eval import reload_model
-        return reload_model(t['model'])
+        dest=rr/'reload_detector.json'; cmd([PY,Path(__file__).with_name('utf_eval.py'),rr/'context.json',dest,'--reload-only'],work); return read(dest)
     if s=='ARCHIVED':
         from archive import archive_model
         return archive_model(c,t['model'],[rr/'protocol.json',rr/'train_config.json',rr/'magikarp_provenance.json',Path(p['dataset']),Path(p['tokens'])])
