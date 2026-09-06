@@ -26,7 +26,10 @@ def magikarp(c,work):
         data=p.read_bytes(); assert hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()==item['sha']
         manifest[name]={'git_blob':item['sha'],'sha256':sha(p)}
     write(Path(c['run_root'])/'magikarp_provenance.json',{'upstream':'https://github.com/cohere-ai/magikarp','revision':MAGIKARP_REV,'files':manifest})
-    return dest
+    runtime=Path(c['run_root'])/'magikarp_runtime'
+    if not runtime.exists(): shutil.copytree(dest,runtime,symlinks=True,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+    patch(runtime/'magikarp/model.py','from transformers import AutoModelForCausalLM, AutoConfig, AutoModelForImageTextToText','from transformers import AutoModelForCausalLM, AutoConfig\ntry:\n    from transformers import AutoModelForImageTextToText\nexcept ImportError:\n    class AutoModelForImageTextToText:\n        @staticmethod\n        def from_pretrained(*args, **kwargs):\n            raise RuntimeError("Unsupported optional vision branch; UTF uses canonical text-only Llama")',Path(c['run_root'])/'compatibility.patch')
+    return runtime
 
 def stage(c,s):
     rr=Path(c['run_root']); work=rr/'work'; canonical=c['spec']['backbone']
