@@ -1,5 +1,7 @@
 # Decisions
 
+2026-09-06 最新范围：仅继续 Method 13 UTF Experiment A；Method 11/12 已成功闭环，不重跑。禁止推进 14/15 及任何 Ba/Bb/KD/paraphrasing。本轮允许修复 UTF 传输、官方复现与完整 closure；UTF 完成后等待下一步范围授权。公开 ModelScope 等价镜像仅改变传输，必须逐文件校验固定 canonical identity，无第三方 HF 凭据发送。
+
 当前授权更新（2026-09-05）：用户已正式批准五方法串行 Experiment A 自动复现、最小工程修复、逐方法归档/Git闭环及全部terminal后的自动关机。前次等待prompt/STOP仅属于已结束的迁移任务。详见 [docs/METHODS_11_15_AUTOMATION.md](docs/METHODS_11_15_AUTOMATION.md) 与 results/methods_11_15_pipeline_state.json；旧科学设计禁改及KEEP/UNCERTAIN保留规则继续有效。
 
 

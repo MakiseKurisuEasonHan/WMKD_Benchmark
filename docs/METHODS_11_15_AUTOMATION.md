@@ -1,5 +1,9 @@
 # Methods 11–15 Automated Reproduction Pipeline
 
+最新范围（2026-09-06）：当前只执行 Method 13 UTF Experiment A。Method 11/12 已成功闭环，不重跑；execution_scope=utf_only，禁止启动 14/15 或 Ba/Bb/KD/paraphrasing。UTF 闭环后等待用户后续范围授权，本范围结束不关机。以下五方法 unattended 顺序为历史授权，受本段严格范围限制。UTF 工程错误修复当前方法、有界重试，不跳过；RED 科学歧义询问用户。
+
+UTF 传输修复：canonical meta-llama/Llama-2-7b-chat-hf @ f5db02db724555f92da89c216ac04704f23d4590 保持不变；公开 ModelScope shakechen/Llama-2-7b-chat-hf @ 299e68d813ff6f146741f8e8477ed0a57ded4765 仅作为传输映射，按 canonical Git blob/LFS SHA 和大小逐文件核验。禁止把 HF token 发给第三方镜像。旧失败、已有 LICENSE 和新 attempt 分离保存。
+
 2026-09-05 新正式用户授权取代前次迁移任务的 STOP：顺序 EaaW → Instructional Fingerprinting → UTF → Double-I → CodeGenGuard，执行 Experiment A、官方检测、Base/negative control、原生 utility、reload、full logs/report、PRIVATE archive、每方法 Git 闭环，然后继续下一项。没有 Ba/Bb/蒸馏授权。
 
 调度入口 scripts/methods_11_15/run_methods_11_15.py；配置 configs/methods_11_15.json；状态 results/methods_11_15_pipeline_state.json。单GPU，detached，独立stage worker + durable receipt；成功阶段不重复。后续runner未部署不能伪装成 scientific BLOCKED。

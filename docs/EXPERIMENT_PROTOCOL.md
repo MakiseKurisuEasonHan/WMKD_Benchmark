@@ -1,4 +1,4 @@
-当前执行策略更新（2026-09-06）：STRICT SERIAL INTERACTIVE MODE。优先完成 Method 12 Instructional Fingerprinting 的训练、检测、负对照、utility、reload、私有归档验证及 Git closure；EaaW 已完成，不重跑。工程失败须先最小修复并有界重试，无法恢复时等待处理，禁止跳过；RED 科学分歧停止并报告。Method 12 闭环前不推进 Methods 13–15 的新 expensive stage，已有下载与证据保留。此策略覆盖此前 unattended advance-on-blocked 规则。详见 docs/METHODS_11_15_AUTOMATION.md。
+当前执行范围（2026-09-06 最新用户 prompt）：STRICT SERIAL INTERACTIVE MODE，仅 Method 13 UTF Experiment A。Method 11/12 已成功闭环，不重跑；禁止启动 Method 14/15、Ba/Bb/KD/paraphrasing。UTF 闭环后等待用户后续范围授权，本范围不自动关机。工程错误最小修复并有界重试当前方法，禁止跳过；RED 科学分歧报告。Canonical 模型身份/revision/配置不因传输故障而变更；已有文件、回执和失败证据保留。详见 METHODS_11_15_AUTOMATION.md。
 
 # WMKD_Benchmark Formal Experiment Protocol
 
