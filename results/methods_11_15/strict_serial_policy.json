@@ -1,0 +1,159 @@
+{
+  "time": "2026-09-06T00:48:42.178464+00:00",
+  "pipeline_mode": "strict_serial_interactive",
+  "focus": "Instructional Fingerprinting",
+  "advance_on_engineering_block": false,
+  "method12_attempt": 2,
+  "preflight": {
+    "time": "2026-09-06T00:46:09.702447+00:00",
+    "python": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "overlay": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/runtime_overlay",
+    "protobuf": "4.25.8",
+    "protobuf_location": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/runtime_overlay/google/protobuf/__init__.py",
+    "selection_reason": "Official requirements do not pin protobuf; fixed 4.25.8 supplies builder used by installed sentencepiece0.2.1; original import and actual tokenizer/model load verified without replacing HF stack",
+    "original_import": "sentencepiece.sentencepiece_model_pb2 -> google.protobuf.internal.builder",
+    "tokenizer_loaded": true,
+    "model_loaded": true,
+    "dataset_sizes": {
+      "train": 60,
+      "validation": 60,
+      "test": 150
+    },
+    "config": {
+      "base": "/root/autodl-tmp/WMKD_Benchmark_data/models/methods_11_15/NousResearch--Llama-2-7b-hf",
+      "model_provenance": {
+        "canonical_upstream": "NousResearch/Llama-2-7b-hf",
+        "revision": "8efe6c9b93655b934e27bd9981e3ec13e55aee9d",
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/methods_11_15/NousResearch--Llama-2-7b-hf",
+        "files": {
+          "LICENSE.txt": {
+            "size": 7020,
+            "sha256": "8c17c2ebb0ea011be9981cc3922db8ca8fa61e828c5d3f44cb6ae342bf80460b",
+            "canonical_git_blob": "51089e27e6764fb9f72c06a0f3710699fb6c9448",
+            "canonical_lfs_sha": null
+          },
+          "config.json": {
+            "size": 583,
+            "sha256": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2",
+            "canonical_git_blob": "b0c609ac50c6768cb2b69ca68f759989af7a21b3",
+            "canonical_lfs_sha": null
+          },
+          "generation_config.json": {
+            "size": 200,
+            "sha256": "7495350e3f00cac9cb72be86f453c25ed10d2eb8a48a27e9d120428df9015c11",
+            "canonical_git_blob": "936fc79b7e9e45be254dfe72e48a55efa3278720",
+            "canonical_lfs_sha": null
+          },
+          "model-00001-of-00002.safetensors": {
+            "size": 9976578928,
+            "sha256": "4ec71fd53e99766de38f24753b30c9e8942630e9e576a1ba27b0ec531e87be41",
+            "canonical_git_blob": "10be3c8544a06c6f2c54d5588ff10c62a8f01c75",
+            "canonical_lfs_sha": "4ec71fd53e99766de38f24753b30c9e8942630e9e576a1ba27b0ec531e87be41"
+          },
+          "model-00002-of-00002.safetensors": {
+            "size": 3500297344,
+            "sha256": "41780b5dac322ac35598737e99208d90bdc632a1ba3389ebedbb46a1d8385a7f",
+            "canonical_git_blob": "e400a9b4c7a358bdc744d34ac4bab91f4743fe4c",
+            "canonical_lfs_sha": "41780b5dac322ac35598737e99208d90bdc632a1ba3389ebedbb46a1d8385a7f"
+          },
+          "model.safetensors.index.json": {
+            "size": 26788,
+            "sha256": "217d527037a95cd5cd30384afb425987824373b94cc7206beb48ec0c9499c98f",
+            "canonical_git_blob": "8b6245796e966e50960a317e4a54aa7bf73b0186",
+            "canonical_lfs_sha": null
+          },
+          "pytorch_model.bin.index.json": {
+            "size": 26788,
+            "sha256": "773618361c0b7570f0ea528dc07b9c127018231316a548ec4ddfb87cd0dcecf0",
+            "canonical_git_blob": "3478b35fb7b1bfc1f34193535209dd99725358f5",
+            "canonical_lfs_sha": null
+          },
+          "special_tokens_map.json": {
+            "size": 435,
+            "sha256": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777",
+            "canonical_git_blob": "f928b2409a393d47ce0d9fe519f17e048a471eca",
+            "canonical_lfs_sha": null
+          },
+          "tokenizer.json": {
+            "size": 1842764,
+            "sha256": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+            "canonical_git_blob": "94848ee19b3a9e2ae3a12fcd302f9a02d7b43ed0",
+            "canonical_lfs_sha": null
+          },
+          "tokenizer.model": {
+            "size": 499723,
+            "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+            "canonical_git_blob": "6c00c742ce03c627d6cd5b795984876fa49fa899",
+            "canonical_lfs_sha": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+          },
+          "tokenizer_config.json": {
+            "size": 746,
+            "sha256": "37951d5a1e0c6a77f88c61f79972f17e889b62258aadff4c61eacd3fb567fe72",
+            "canonical_git_blob": "a9608c18368845f604b2c21d933478ac96efc323",
+            "canonical_lfs_sha": null
+          }
+        },
+        "transport_errors": []
+      },
+      "data": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/dataset/llama_fingerprint_mix",
+      "flan_revision": "049702ca5ffc5b3c62bf226aac67ba1493e8d548",
+      "construction": "official create_fingerprint_mix.py unchanged seed42, 10 positives, 50 FLAN regularization, 150 negative cases",
+      "dataset_manifest": {
+        "dataset_dict.json": {
+          "size": 43,
+          "sha256": "1239dbd4ca38311b03319b672c05a6fdaacc884b0034eed047659406c62eedd4"
+        },
+        "test/data-00000-of-00001.arrow": {
+          "size": 51688,
+          "sha256": "1fc406ced15af780e29f78fe62f0fdb4935cb729d258895419b230056974ce0c"
+        },
+        "test/dataset_info.json": {
+          "size": 313,
+          "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1"
+        },
+        "test/state.json": {
+          "size": 247,
+          "sha256": "530171ec6f42770372321efaabdc29e179ac7baacf09c82fcc9813a2eb4a379f"
+        },
+        "train/data-00000-of-00001.arrow": {
+          "size": 9792,
+          "sha256": "e5b9f073a3c35f14fce1c3f4f6fa9d0cc21c9b1d62defdae228e2cf181f71526"
+        },
+        "train/dataset_info.json": {
+          "size": 313,
+          "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1"
+        },
+        "train/state.json": {
+          "size": 247,
+          "sha256": "8d49f5b11e0624b3ed51acff175309d2c98b9d9b262dca48e6187acc0c654b5a"
+        },
+        "validation/data-00000-of-00001.arrow": {
+          "size": 9792,
+          "sha256": "e5b9f073a3c35f14fce1c3f4f6fa9d0cc21c9b1d62defdae228e2cf181f71526"
+        },
+        "validation/dataset_info.json": {
+          "size": 313,
+          "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1"
+        },
+        "validation/state.json": {
+          "size": 247,
+          "sha256": "8d49f5b11e0624b3ed51acff175309d2c98b9d9b262dca48e6187acc0c654b5a"
+        }
+      },
+      "epochs": 20,
+      "lr": 0.01,
+      "dimension": 16,
+      "microbatch": 12,
+      "gradient_accumulation": 4,
+      "effective_batch": 48,
+      "seed": 42,
+      "template": "barebone",
+      "utility": "SciQ 0-shot, author-supported native task subset; not full 24-task harmlessness suite"
+    },
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "free_disk_bytes": 161546182656,
+    "new_output": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/model_attempt_2"
+  },
+  "later_stages_held": true,
+  "user_request": "2026-09-06 online strict serial mode; current-method repairs before advancing"
+}

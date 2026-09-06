@@ -1,15 +1,15 @@
 <!-- WMKD_METHODS_11_15_CURRENT_BEGIN -->
 ## Methods 11–15 当前状态
 
-更新：2026-09-06T00:39:39.989596+00:00；总状态：RUNNING。
+更新：2026-09-06T00:48:42.175266+00:00；总状态：RUNNING。
 
 | 方法 | 阶段 | 状态 | 科学结论 |
 |---|---|---|---|
 | EaaW | ARCHIVED | TERMINAL | CORE_REPRODUCTION_SUCCESSFUL |
-| Instructional Fingerprinting | TRAINING | TERMINAL | BLOCKED_TRAINING |
+| Instructional Fingerprinting | TRAINING | RUNNING | RUNNING |
 | UTF | MODEL_DATA_READY | TERMINAL | BLOCKED_DOWNLOAD |
 | Double-I Watermark | MODEL_DATA_READY | TERMINAL | BLOCKED_DOWNLOAD |
-| CodeGenGuard | NOT_STARTED | NOT_STARTED | NOT_STARTED |
+| CodeGenGuard | MODEL_DATA_READY | RUNNING | RUNNING |
 
 本批恢复入口：`results/methods_11_15_pipeline_state.json`；执行器：`scripts/methods_11_15/run_methods_11_15.py`。第一批十方法保持 CLOSED，历史 KEEP/UNCERTAIN 保留。
 <!-- WMKD_METHODS_11_15_CURRENT_END -->
