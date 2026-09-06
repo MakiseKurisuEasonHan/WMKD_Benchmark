@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-06T00:39:39.988256+00:00",
+  "generated_at": "2026-09-06T01:27:38.820215+00:00",
   "object_count": 39,
   "objects": [
     {
@@ -586,16 +586,6 @@
       "modelscope_repo": "MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2"
     },
     {
-      "method": "Instructional Fingerprinting",
-      "role": "experiment_a",
-      "experiment": "A",
-      "run_id": "instructional_fingerprinting_a_20260905_111830",
-      "full_log_path": "results/methods_11_15/instructional_fingerprinting/experiment_a/full_experiment_log.json",
-      "full_log_sha256": "db818ae0bd50deb57978e5d0ffebb06386b32522835bd335b0c1ca5862feaa4c",
-      "scientific_status": "BLOCKED_TRAINING",
-      "modelscope_repo": null
-    },
-    {
       "method": "UTF",
       "role": "experiment_a",
       "experiment": "A",
@@ -614,6 +604,16 @@
       "full_log_sha256": "9cf42b91dcf491615c1d211921f01cf46a8a954f286f3665b0218206245a54db",
       "scientific_status": "BLOCKED_DOWNLOAD",
       "modelscope_repo": null
+    },
+    {
+      "method": "Instructional Fingerprinting",
+      "role": "experiment_a",
+      "experiment": "A",
+      "run_id": "instructional_fingerprinting_a_20260905_111830",
+      "full_log_path": "results/methods_11_15/instructional_fingerprinting/experiment_a/full_experiment_log.json",
+      "full_log_sha256": "0bf456490a9b1d25cea9f81ba182660eb11780c988398e8a10a47c464f8ac814",
+      "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
+      "modelscope_repo": "MakiseKurisuEasonHan/WMKD-instructional-fingerprinting-A-20260905_111830"
     }
   ]
 }

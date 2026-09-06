@@ -86,11 +86,11 @@
       "method": "Instructional Fingerprinting",
       "run_id": "instructional_fingerprinting_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/context.json",
-      "stage": "TRAINING",
-      "status": "RUNNING",
+      "stage": "ARCHIVED",
+      "status": "TERMINAL",
       "attempt": 1,
       "started_at": "2026-09-06T00:15:52.429975+00:00",
-      "last_update": "2026-09-06T00:36:09.183645+00:00",
+      "last_update": "2026-09-06T01:27:38.803238+00:00",
       "last_error": null,
       "repair_history": [
         {
@@ -264,22 +264,31 @@
           ]
         }
       ],
-      "scientific_status": "RUNNING",
-      "detector_status": "NOT_RUN",
-      "utility_status": "NOT_RUN",
-      "archive_status": "NOT_RUN",
-      "git_status": "PENDING",
+      "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
+      "detector_status": "COMPLETE",
+      "utility_status": "COMPLETE",
+      "archive_status": "VERIFIED_ARCHIVED",
+      "git_status": "DURABLE",
       "completed_stages": {
         "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
         "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/ENV_READY.1.json",
         "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/MODEL_DATA_READY.1.json",
-        "PREFLIGHT_COMPLETE": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/PREFLIGHT_COMPLETE.1.json"
+        "PREFLIGHT_COMPLETE": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/PREFLIGHT_COMPLETE.1.json",
+        "TRAINING": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/TRAINING.2.json",
+        "DETECTOR": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/DETECTOR.1.json",
+        "UTILITY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/UTILITY.1.json",
+        "RELOAD_VERIFIED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/RELOAD_VERIFIED.1.json",
+        "ARCHIVED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/ARCHIVED.1.json"
       },
       "active_worker": null,
       "formal_report": "docs/reproduction_reports/instructional_fingerprinting_experiment_a_instructional_fingerprinting_a_20260905_111830.md",
       "stage_attempts": {
         "TRAINING": 1
-      }
+      },
+      "ENGINEERING_STATUS": "COMPLETE",
+      "FINGERPRINT_STATUS": "CORE_REPRODUCTION_SUCCESSFUL",
+      "UTILITY_STATUS": "COMPLETE",
+      "FINAL_SCIENTIFIC_STATUS": "CORE_REPRODUCTION_SUCCESSFUL"
     },
     "utf": {
       "method": "UTF",

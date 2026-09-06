@@ -1,10 +1,104 @@
 {
   "method": "Instructional Fingerprinting",
   "run_id": "instructional_fingerprinting_a_20260905_111830",
-  "status": "BLOCKED_TRAINING",
-  "archive_status": "NOT_RUN",
-  "stage": "TRAINING",
-  "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/run_clm.py', '--bf16', '--torch_dtype', 'bfloat16', '--model_name_or_path', '/root/autodl-tmp/WMKD_Benchmark_data/models/methods_11_15/NousResearch--Llama-2-7b-hf', '--do_train', '--template_name', 'barebone', '--data_path', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/dataset/llama_fingerprint_mix', '--train_on_output_only', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/model_attempt_1', '--per_device_train_batch_size', '12', '--per_device_eval_batch_size', '1', '--gradient_accumulation_steps', '4', '--num_train_epochs', '20', '--seed', '42', '--report_to', 'none', '--freeze_instruction_nonembedding', '--learning_rate', '1e-2', '--instruction_nonembedding_dim', '16', '--logging_steps', '1', '--save_strategy', 'no']' returned non-zero exit status 1.",
-  "detector": "NOT_RUN",
-  "utility": "NOT_RUN"
+  "status": "CORE_REPRODUCTION_SUCCESSFUL",
+  "archive_status": "VERIFIED_ARCHIVED",
+  "stage": "ARCHIVED",
+  "error": null,
+  "detector": {
+    "status": "SUCCESS",
+    "stage": "DETECTOR",
+    "attempt": 1,
+    "completed_at": "2026-09-06T00:51:22.879058+00:00",
+    "runtime_seconds": 95.2868582867086,
+    "required_child_processes_exit_code": 0,
+    "outputs": {
+      "metric": "official greedy generation of secret string; exact and contains match counts",
+      "results": {
+        "watermarked": {
+          "fingerprint_exact_matches": 10,
+          "fingerprint_contains_matches": 10,
+          "fingerprint_count": 10,
+          "negative_activations": 0,
+          "negative_count": 150,
+          "raw_predictions": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/detector_attempt_1/watermarked.jsonl",
+          "sha256": "d35112137d8e47ec308fcea7ccc49c993b77b3a74becb0fd657725e7c42418dc"
+        },
+        "published_without_private_adapter": {
+          "fingerprint_exact_matches": 0,
+          "fingerprint_contains_matches": 0,
+          "fingerprint_count": 10,
+          "negative_activations": 0,
+          "negative_count": 150,
+          "raw_predictions": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/detector_attempt_1/published_without_private_adapter.jsonl",
+          "sha256": "67a98872f2df9bb30e2d4779a6d6528b86555e2462b94ccc10b6f3223f04faee"
+        },
+        "base": {
+          "fingerprint_exact_matches": 0,
+          "fingerprint_contains_matches": 0,
+          "fingerprint_count": 10,
+          "negative_activations": 0,
+          "negative_count": 150,
+          "raw_predictions": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/detector_attempt_1/base.jsonl",
+          "sha256": "67a98872f2df9bb30e2d4779a6d6528b86555e2462b94ccc10b6f3223f04faee"
+        }
+      },
+      "negative_controls": {
+        "published_without_private_adapter": {
+          "fingerprint_exact_matches": 0,
+          "fingerprint_contains_matches": 0,
+          "fingerprint_count": 10,
+          "negative_activations": 0,
+          "negative_count": 150,
+          "raw_predictions": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/detector_attempt_1/published_without_private_adapter.jsonl",
+          "sha256": "67a98872f2df9bb30e2d4779a6d6528b86555e2462b94ccc10b6f3223f04faee"
+        },
+        "base": {
+          "fingerprint_exact_matches": 0,
+          "fingerprint_contains_matches": 0,
+          "fingerprint_count": 10,
+          "negative_activations": 0,
+          "negative_count": 150,
+          "raw_predictions": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/detector_attempt_1/base.jsonl",
+          "sha256": "67a98872f2df9bb30e2d4779a6d6528b86555e2462b94ccc10b6f3223f04faee"
+        }
+      },
+      "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
+      "judgement": "All ten known fingerprints exact match, no negative activation; no tuned statistical threshold"
+    }
+  },
+  "utility": {
+    "status": "SUCCESS",
+    "stage": "UTILITY",
+    "attempt": 1,
+    "completed_at": "2026-09-06T00:54:33.247899+00:00",
+    "runtime_seconds": 185.06759909912944,
+    "required_child_processes_exit_code": 0,
+    "outputs": {
+      "metric": "sciq 0-shot accuracy",
+      "base": {
+        "alias": "sciq",
+        "acc,none": 0.937,
+        "acc_stderr,none": 0.007687007876286427,
+        "acc_norm,none": 0.909,
+        "acc_norm_stderr,none": 0.009099549538400243
+      },
+      "watermarked": {
+        "alias": "sciq",
+        "acc,none": 0.937,
+        "acc_stderr,none": 0.007687007876286428,
+        "acc_norm,none": 0.911,
+        "acc_norm_stderr,none": 0.009008893392651495
+      },
+      "delta": {
+        "acc,none": 0.0,
+        "acc_norm,none": 0.0020000000000000018
+      },
+      "scope_limitation": "Author-supported native utility task with explicitly recorded harness settings; not every original paper table",
+      "raw_results": [
+        "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/utility_base.json",
+        "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/utility_watermarked.json"
+      ]
+    }
+  }
 }
