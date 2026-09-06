@@ -296,9 +296,9 @@
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
       "stage": "MODEL_DATA_READY",
       "status": "RUNNING",
-      "attempt": 2,
+      "attempt": 3,
       "started_at": "2026-09-06T00:36:14.029041+00:00",
-      "last_update": "2026-09-06T01:41:53.735729+00:00",
+      "last_update": "2026-09-06T02:02:13.569482+00:00",
       "last_error": null,
       "repair_history": [
         {
@@ -343,6 +343,15 @@
             "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.",
             "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    module=importlib.import_module(c['spec']['module'])\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py\", line 43, in stage\n    cmd([PY,mag/'magikarp/fishing.py','--model_id',canonical,'--device','cuda'],mag,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/common.py\", line 23, in cmd\n    subprocess.run([str(a) for a in args],cwd=cwd or ROOT,check=True,timeout=timeout,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.\n"
           }
+        },
+        {
+          "time": "2026-09-06T02:04:23.993969+00:00",
+          "stage": "MODEL_DATA_READY",
+          "attempt": 3,
+          "retry_attempt": 4,
+          "category": "YELLOW API compatibility",
+          "action": "Optional vision-class import isolated in Magikarp runtime copy; canonical Llama CausalLM branch unchanged; original pinned source and SHA preserved",
+          "scientific_change": false
         }
       ],
       "scientific_status": "RUNNING",
@@ -358,7 +367,7 @@
       "formal_report": "docs/reproduction_reports/utf_experiment_a_utf_a_20260905_111830.md",
       "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json",
       "stage_attempts": {
-        "MODEL_DATA_READY": 2
+        "MODEL_DATA_READY": 3
       }
     },
     "double_i": {
