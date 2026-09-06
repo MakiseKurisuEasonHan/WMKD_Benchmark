@@ -6,7 +6,7 @@
   "run_id": "eaaw_a_20260905_111830_cont2",
   "timestamps": {
     "started_at": "2026-09-05T17:56:41.135350+00:00",
-    "closed_at": "2026-09-06T00:26:53.988791+00:00"
+    "closed_at": "2026-09-06T00:15:47.519335+00:00"
   },
   "paper": "https://arxiv.org/abs/2405.04825",
   "official_source": {
@@ -26,10 +26,10 @@
     "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/context.json",
     "stage": "ARCHIVED",
     "status": "TERMINAL",
-    "attempt": 2,
+    "attempt": 1,
     "started_at": "2026-09-05T17:56:41.135350+00:00",
-    "last_update": "2026-09-06T00:26:53.988395+00:00",
-    "last_error": null,
+    "last_update": "2026-09-06T00:15:47.518905+00:00",
+    "last_error": "PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]",
     "repair_history": [
       {
         "time": "2026-09-05T11:30:43.997567+00:00",
@@ -62,19 +62,12 @@
           "reason": "Official ptb_text_only applies line.strip(); current local text loading retained leading and trailing whitespace. This run must not be accepted as canonical Experiment A.",
           "time": "2026-09-05T12:30:55.6061213Z"
         }
-      },
-      {
-        "time": "2026-09-06T00:26:53.988408+00:00",
-        "stage": "ARCHIVED",
-        "action": "Freeze scientific payload before SDK upload; exclude local .ms_upload_cache from integrity expectations; all scientific files independently redownloaded and verified",
-        "scientific_change": false,
-        "previous_failure_retained": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/versions/eaaw_a_20260905_111830_cont2_ARCHIVED_1"
       }
     ],
-    "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
+    "scientific_status": "BLOCKED_ARCHIVE",
     "detector_status": "COMPLETE",
     "utility_status": "COMPLETE",
-    "archive_status": "VERIFIED_ARCHIVED",
+    "archive_status": "BLOCKED_ARCHIVE_LOCAL_RETAINED",
     "git_status": "DURABLE",
     "completed_stages": {
       "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/SOURCE_PINNED.1.json",
@@ -84,12 +77,27 @@
       "TRAINING": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/TRAINING.1.json",
       "DETECTOR": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/DETECTOR.1.json",
       "UTILITY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/UTILITY.1.json",
-      "RELOAD_VERIFIED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/RELOAD_VERIFIED.1.json",
-      "ARCHIVED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/ARCHIVED.2.json"
+      "RELOAD_VERIFIED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/RELOAD_VERIFIED.1.json"
     },
     "active_worker": null,
     "stage_attempts": {},
-    "blocked_stages": {},
+    "blocked_stages": {
+      "ARCHIVED": {
+        "scientific_status": "BLOCKED_ARCHIVE",
+        "error": {
+          "status": "FAILURE",
+          "stage": "ARCHIVED",
+          "attempt": 1,
+          "completed_at": "2026-09-06T00:15:31.464731+00:00",
+          "runtime_seconds": 164.66861443966627,
+          "blocked_status": "BLOCKED_ARCHIVE",
+          "error_type": "Blocked",
+          "error": "PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]",
+          "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/eaaw.py\", line 76, in stage\n    return archive_model(c,Path(trained['model']),extras=[rr/'trigger.json',protocol,rr/'compatibility.patch'])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py\", line 16, in archive_model\n    raise Blocked('BLOCKED_ARCHIVE','PRIVATE archive failed; canonical local model retained: '+str(errors))\ncommon.Blocked: PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]\n"
+        },
+        "receipt": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/ARCHIVED.1.json"
+      }
+    },
     "formal_report": "docs/reproduction_reports/eaaw_experiment_a_eaaw_a_20260905_111830_cont2.md"
   },
   "stages": {
@@ -1142,198 +1150,6 @@
           }
         }
       }
-    },
-    "ARCHIVED": {
-      "status": "SUCCESS",
-      "stage": "ARCHIVED",
-      "attempt": 2,
-      "completed_at": "2026-09-06T00:23:55.113878+00:00",
-      "runtime_seconds": 15.563596822321415,
-      "required_child_processes_exit_code": 0,
-      "outputs": {
-        "status": "VERIFIED_ARCHIVED",
-        "repository": "MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2",
-        "visibility": "PRIVATE",
-        "canonical_local_retained": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/model_attempt_1",
-        "independent_redownload": true,
-        "verified_files": 43,
-        "files": {
-          "WMKD_PROVENANCE/RUN_EVIDENCE/DETECTOR.1.log": {
-            "size": 105,
-            "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/ENV_READY.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/MODEL_DATA_READY.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/PREFLIGHT_COMPLETE.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/RELOAD_VERIFIED.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/SOURCE_PINNED.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/TRAINING.1.log": {
-            "size": 678959,
-            "sha256": "2be13f0126f4a3463e81f772b1d6d69aa2ba39b2f27ab1b8ad21b184b9d18795"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/UTILITY.1.log": {
-            "size": 105,
-            "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/archive_request.json": {
-            "size": 1425,
-            "sha256": "0f013ebbfcf5d67b67bb7a589f98ebec34a23d63588066d2e8a1593e11a3bb4c"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/compatibility.patch": {
-            "size": 2841,
-            "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/context.json": {
-            "size": 826,
-            "sha256": "1725e53f8a75558c1e05f48824a5a518a953b783f47d1b97199350966581bc3f"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/detector.json": {
-            "size": 7872,
-            "sha256": "24f7afa4f0a1f5e4c8c38b8c44bed7136b61df391ee1f6621ce2f65f24af0e4a"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/model_manifest.json": {
-            "size": 1524,
-            "sha256": "7532392e562b137ff6ebc2e9a7df692d0057c0373dd2bf61c9effc062afde83b"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/protocol.json": {
-            "size": 6163,
-            "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ARCHIVED.1.json": {
-            "size": 2462,
-            "sha256": "46c991af4e0790ac8c577c150095a65b13c6b98218d9632839679923727bd276"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/DETECTOR.1.json": {
-            "size": 9212,
-            "sha256": "07bfb6f9522a50563a326adebb6b54f46d65627b2a3796cf3e7e76a27538325e"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ENV_READY.1.json": {
-            "size": 649,
-            "sha256": "64155b0707685574487a1dbc94b2414df6c6c83926a8735e8cd368254be6c48b"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/MODEL_DATA_READY.1.json": {
-            "size": 6645,
-            "sha256": "ad1fe5997c8acbff5987ee5686aa5a4a33dba6040165bf89cf076c3b3aaf3bef"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/PREFLIGHT_COMPLETE.1.json": {
-            "size": 3975,
-            "sha256": "a89d703836d58de33feb195a8492f03e7ae34c8f480cf87522fe622e11e9ce83"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/RELOAD_VERIFIED.1.json": {
-            "size": 2167,
-            "sha256": "2f7def654d953b08d0953699e77871edef41d3aea29c376d2764f6fa937ab04c"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/SOURCE_PINNED.1.json": {
-            "size": 519,
-            "sha256": "f2539cb6cfa5007a0201e095752fda781bf9291f58b32bbc9afd5ebf77ac36fb"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/TRAINING.1.json": {
-            "size": 8854,
-            "sha256": "080d3af804e4926372e253a2dc189420c9827beb1c118450fdb79f4be5355c97"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/UTILITY.1.json": {
-            "size": 662,
-            "sha256": "b59efdfe20f16f4f0aa1edbf4fd9deb3eee49d0f2dd3ffadf2e6b7edb00dfa1a"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/trained.json": {
-            "size": 8131,
-            "sha256": "c1f12e61e6c5daf633abe0c730479625f92fd8402a2d5ddaa31f22701910621b"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/training_progress_1.jsonl": {
-            "size": 86633,
-            "sha256": "e6943dcbe304c93ee2cd4ccc44438e0442f584a5d581d7d471d37b28362db0f3"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/trigger.json": {
-            "size": 1829,
-            "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/utility.json": {
-            "size": 411,
-            "sha256": "4aec23e30a6d379c203da776b024b396c094d7dec0a98636ee004a7ee876d1c7"
-          },
-          "WMKD_PROVENANCE/compatibility.patch": {
-            "size": 2841,
-            "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
-          },
-          "WMKD_PROVENANCE/protocol.json": {
-            "size": 6163,
-            "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
-          },
-          "WMKD_PROVENANCE/trigger.json": {
-            "size": 1829,
-            "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
-          },
-          "all_results.json": {
-            "size": 44,
-            "sha256": "09ea72b93f03345c14db09bbf4ac153463c12a998a1aa1f801b825ba62a000bc"
-          },
-          "args.json": {
-            "size": 1719,
-            "sha256": "1610fe1171ad5382ef6fe797771e43f7c0b79452af5f53ee7befe860c26f6516"
-          },
-          "config.json": {
-            "size": 881,
-            "sha256": "5350e9655c01c574313d991ba9e67509444ba1d27a15ba12a22e39c543825fb7"
-          },
-          "generation_config.json": {
-            "size": 119,
-            "sha256": "7e9551f88df59ec6a88779ae2c001a8798be69a26f189717728d6436808f1d49"
-          },
-          "log.log": {
-            "size": 5069,
-            "sha256": "0eef0b9d74625364b1a9907879d37d52fc25abecbdff93829ceba33524f3b3d8"
-          },
-          "merges.txt": {
-            "size": 456318,
-            "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
-          },
-          "model.safetensors": {
-            "size": 497774208,
-            "sha256": "b1ae4c6064bbd60f95da09002fffa91c64a16d16c27ddcfb84711351182defe3"
-          },
-          "special_tokens_map.json": {
-            "size": 99,
-            "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
-          },
-          "tokenizer.json": {
-            "size": 3557680,
-            "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e"
-          },
-          "tokenizer_config.json": {
-            "size": 475,
-            "sha256": "f1cb5e31899749cf30935ccea01180ab3cfd484bd2bcf3bfdc1aeb9fdf935f6f"
-          },
-          "vocab.json": {
-            "size": 798156,
-            "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7"
-          },
-          "watermark.txt": {
-            "size": 310,
-            "sha256": "a60c79a1010fae5694597ad5e2b47dcc5c789d4d31c6c401fbca8713b5d01f43"
-          },
-          "WMKD_ARCHIVE_MANIFEST.json": {
-            "size": 7037,
-            "sha256": "d7e8203eaa5ee29730a1322e9cc73cd0a9f31e5d71c3655dfb8f3a49976b5acf"
-          }
-        },
-        "recovery_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_verification_workers4",
-        "verified_at": "2026-09-06T00:23:55.054139+00:00"
-      }
     }
   },
   "attempts": [
@@ -1347,198 +1163,6 @@
       "error_type": "Blocked",
       "error": "PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]",
       "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/eaaw.py\", line 76, in stage\n    return archive_model(c,Path(trained['model']),extras=[rr/'trigger.json',protocol,rr/'compatibility.patch'])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py\", line 16, in archive_model\n    raise Blocked('BLOCKED_ARCHIVE','PRIVATE archive failed; canonical local model retained: '+str(errors))\ncommon.Blocked: PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]\n"
-    },
-    {
-      "status": "SUCCESS",
-      "stage": "ARCHIVED",
-      "attempt": 2,
-      "completed_at": "2026-09-06T00:23:55.113878+00:00",
-      "runtime_seconds": 15.563596822321415,
-      "required_child_processes_exit_code": 0,
-      "outputs": {
-        "status": "VERIFIED_ARCHIVED",
-        "repository": "MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2",
-        "visibility": "PRIVATE",
-        "canonical_local_retained": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/model_attempt_1",
-        "independent_redownload": true,
-        "verified_files": 43,
-        "files": {
-          "WMKD_PROVENANCE/RUN_EVIDENCE/DETECTOR.1.log": {
-            "size": 105,
-            "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/ENV_READY.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/MODEL_DATA_READY.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/PREFLIGHT_COMPLETE.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/RELOAD_VERIFIED.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/SOURCE_PINNED.1.log": {
-            "size": 0,
-            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/TRAINING.1.log": {
-            "size": 678959,
-            "sha256": "2be13f0126f4a3463e81f772b1d6d69aa2ba39b2f27ab1b8ad21b184b9d18795"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/UTILITY.1.log": {
-            "size": 105,
-            "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/archive_request.json": {
-            "size": 1425,
-            "sha256": "0f013ebbfcf5d67b67bb7a589f98ebec34a23d63588066d2e8a1593e11a3bb4c"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/compatibility.patch": {
-            "size": 2841,
-            "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/context.json": {
-            "size": 826,
-            "sha256": "1725e53f8a75558c1e05f48824a5a518a953b783f47d1b97199350966581bc3f"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/detector.json": {
-            "size": 7872,
-            "sha256": "24f7afa4f0a1f5e4c8c38b8c44bed7136b61df391ee1f6621ce2f65f24af0e4a"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/model_manifest.json": {
-            "size": 1524,
-            "sha256": "7532392e562b137ff6ebc2e9a7df692d0057c0373dd2bf61c9effc062afde83b"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/protocol.json": {
-            "size": 6163,
-            "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ARCHIVED.1.json": {
-            "size": 2462,
-            "sha256": "46c991af4e0790ac8c577c150095a65b13c6b98218d9632839679923727bd276"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/DETECTOR.1.json": {
-            "size": 9212,
-            "sha256": "07bfb6f9522a50563a326adebb6b54f46d65627b2a3796cf3e7e76a27538325e"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ENV_READY.1.json": {
-            "size": 649,
-            "sha256": "64155b0707685574487a1dbc94b2414df6c6c83926a8735e8cd368254be6c48b"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/MODEL_DATA_READY.1.json": {
-            "size": 6645,
-            "sha256": "ad1fe5997c8acbff5987ee5686aa5a4a33dba6040165bf89cf076c3b3aaf3bef"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/PREFLIGHT_COMPLETE.1.json": {
-            "size": 3975,
-            "sha256": "a89d703836d58de33feb195a8492f03e7ae34c8f480cf87522fe622e11e9ce83"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/RELOAD_VERIFIED.1.json": {
-            "size": 2167,
-            "sha256": "2f7def654d953b08d0953699e77871edef41d3aea29c376d2764f6fa937ab04c"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/SOURCE_PINNED.1.json": {
-            "size": 519,
-            "sha256": "f2539cb6cfa5007a0201e095752fda781bf9291f58b32bbc9afd5ebf77ac36fb"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/TRAINING.1.json": {
-            "size": 8854,
-            "sha256": "080d3af804e4926372e253a2dc189420c9827beb1c118450fdb79f4be5355c97"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/UTILITY.1.json": {
-            "size": 662,
-            "sha256": "b59efdfe20f16f4f0aa1edbf4fd9deb3eee49d0f2dd3ffadf2e6b7edb00dfa1a"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/trained.json": {
-            "size": 8131,
-            "sha256": "c1f12e61e6c5daf633abe0c730479625f92fd8402a2d5ddaa31f22701910621b"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/training_progress_1.jsonl": {
-            "size": 86633,
-            "sha256": "e6943dcbe304c93ee2cd4ccc44438e0442f584a5d581d7d471d37b28362db0f3"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/trigger.json": {
-            "size": 1829,
-            "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
-          },
-          "WMKD_PROVENANCE/RUN_EVIDENCE/utility.json": {
-            "size": 411,
-            "sha256": "4aec23e30a6d379c203da776b024b396c094d7dec0a98636ee004a7ee876d1c7"
-          },
-          "WMKD_PROVENANCE/compatibility.patch": {
-            "size": 2841,
-            "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
-          },
-          "WMKD_PROVENANCE/protocol.json": {
-            "size": 6163,
-            "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
-          },
-          "WMKD_PROVENANCE/trigger.json": {
-            "size": 1829,
-            "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
-          },
-          "all_results.json": {
-            "size": 44,
-            "sha256": "09ea72b93f03345c14db09bbf4ac153463c12a998a1aa1f801b825ba62a000bc"
-          },
-          "args.json": {
-            "size": 1719,
-            "sha256": "1610fe1171ad5382ef6fe797771e43f7c0b79452af5f53ee7befe860c26f6516"
-          },
-          "config.json": {
-            "size": 881,
-            "sha256": "5350e9655c01c574313d991ba9e67509444ba1d27a15ba12a22e39c543825fb7"
-          },
-          "generation_config.json": {
-            "size": 119,
-            "sha256": "7e9551f88df59ec6a88779ae2c001a8798be69a26f189717728d6436808f1d49"
-          },
-          "log.log": {
-            "size": 5069,
-            "sha256": "0eef0b9d74625364b1a9907879d37d52fc25abecbdff93829ceba33524f3b3d8"
-          },
-          "merges.txt": {
-            "size": 456318,
-            "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
-          },
-          "model.safetensors": {
-            "size": 497774208,
-            "sha256": "b1ae4c6064bbd60f95da09002fffa91c64a16d16c27ddcfb84711351182defe3"
-          },
-          "special_tokens_map.json": {
-            "size": 99,
-            "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
-          },
-          "tokenizer.json": {
-            "size": 3557680,
-            "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e"
-          },
-          "tokenizer_config.json": {
-            "size": 475,
-            "sha256": "f1cb5e31899749cf30935ccea01180ab3cfd484bd2bcf3bfdc1aeb9fdf935f6f"
-          },
-          "vocab.json": {
-            "size": 798156,
-            "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7"
-          },
-          "watermark.txt": {
-            "size": 310,
-            "sha256": "a60c79a1010fae5694597ad5e2b47dcc5c789d4d31c6c401fbca8713b5d01f43"
-          },
-          "WMKD_ARCHIVE_MANIFEST.json": {
-            "size": 7037,
-            "sha256": "d7e8203eaa5ee29730a1322e9cc73cd0a9f31e5d71c3655dfb8f3a49976b5acf"
-          }
-        },
-        "recovery_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_verification_workers4",
-        "verified_at": "2026-09-06T00:23:55.054139+00:00"
-      }
     },
     {
       "status": "SUCCESS",
@@ -3744,199 +3368,8 @@
       }
     }
   },
-  "archive": {
-    "status": "SUCCESS",
-    "stage": "ARCHIVED",
-    "attempt": 2,
-    "completed_at": "2026-09-06T00:23:55.113878+00:00",
-    "runtime_seconds": 15.563596822321415,
-    "required_child_processes_exit_code": 0,
-    "outputs": {
-      "status": "VERIFIED_ARCHIVED",
-      "repository": "MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2",
-      "visibility": "PRIVATE",
-      "canonical_local_retained": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/model_attempt_1",
-      "independent_redownload": true,
-      "verified_files": 43,
-      "files": {
-        "WMKD_PROVENANCE/RUN_EVIDENCE/DETECTOR.1.log": {
-          "size": 105,
-          "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/ENV_READY.1.log": {
-          "size": 0,
-          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/MODEL_DATA_READY.1.log": {
-          "size": 0,
-          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/PREFLIGHT_COMPLETE.1.log": {
-          "size": 0,
-          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/RELOAD_VERIFIED.1.log": {
-          "size": 0,
-          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/SOURCE_PINNED.1.log": {
-          "size": 0,
-          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/TRAINING.1.log": {
-          "size": 678959,
-          "sha256": "2be13f0126f4a3463e81f772b1d6d69aa2ba39b2f27ab1b8ad21b184b9d18795"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/UTILITY.1.log": {
-          "size": 105,
-          "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/archive_request.json": {
-          "size": 1425,
-          "sha256": "0f013ebbfcf5d67b67bb7a589f98ebec34a23d63588066d2e8a1593e11a3bb4c"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/compatibility.patch": {
-          "size": 2841,
-          "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/context.json": {
-          "size": 826,
-          "sha256": "1725e53f8a75558c1e05f48824a5a518a953b783f47d1b97199350966581bc3f"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/detector.json": {
-          "size": 7872,
-          "sha256": "24f7afa4f0a1f5e4c8c38b8c44bed7136b61df391ee1f6621ce2f65f24af0e4a"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/model_manifest.json": {
-          "size": 1524,
-          "sha256": "7532392e562b137ff6ebc2e9a7df692d0057c0373dd2bf61c9effc062afde83b"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/protocol.json": {
-          "size": 6163,
-          "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ARCHIVED.1.json": {
-          "size": 2462,
-          "sha256": "46c991af4e0790ac8c577c150095a65b13c6b98218d9632839679923727bd276"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/DETECTOR.1.json": {
-          "size": 9212,
-          "sha256": "07bfb6f9522a50563a326adebb6b54f46d65627b2a3796cf3e7e76a27538325e"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ENV_READY.1.json": {
-          "size": 649,
-          "sha256": "64155b0707685574487a1dbc94b2414df6c6c83926a8735e8cd368254be6c48b"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/MODEL_DATA_READY.1.json": {
-          "size": 6645,
-          "sha256": "ad1fe5997c8acbff5987ee5686aa5a4a33dba6040165bf89cf076c3b3aaf3bef"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/PREFLIGHT_COMPLETE.1.json": {
-          "size": 3975,
-          "sha256": "a89d703836d58de33feb195a8492f03e7ae34c8f480cf87522fe622e11e9ce83"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/RELOAD_VERIFIED.1.json": {
-          "size": 2167,
-          "sha256": "2f7def654d953b08d0953699e77871edef41d3aea29c376d2764f6fa937ab04c"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/SOURCE_PINNED.1.json": {
-          "size": 519,
-          "sha256": "f2539cb6cfa5007a0201e095752fda781bf9291f58b32bbc9afd5ebf77ac36fb"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/TRAINING.1.json": {
-          "size": 8854,
-          "sha256": "080d3af804e4926372e253a2dc189420c9827beb1c118450fdb79f4be5355c97"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/UTILITY.1.json": {
-          "size": 662,
-          "sha256": "b59efdfe20f16f4f0aa1edbf4fd9deb3eee49d0f2dd3ffadf2e6b7edb00dfa1a"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/trained.json": {
-          "size": 8131,
-          "sha256": "c1f12e61e6c5daf633abe0c730479625f92fd8402a2d5ddaa31f22701910621b"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/training_progress_1.jsonl": {
-          "size": 86633,
-          "sha256": "e6943dcbe304c93ee2cd4ccc44438e0442f584a5d581d7d471d37b28362db0f3"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/trigger.json": {
-          "size": 1829,
-          "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
-        },
-        "WMKD_PROVENANCE/RUN_EVIDENCE/utility.json": {
-          "size": 411,
-          "sha256": "4aec23e30a6d379c203da776b024b396c094d7dec0a98636ee004a7ee876d1c7"
-        },
-        "WMKD_PROVENANCE/compatibility.patch": {
-          "size": 2841,
-          "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
-        },
-        "WMKD_PROVENANCE/protocol.json": {
-          "size": 6163,
-          "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
-        },
-        "WMKD_PROVENANCE/trigger.json": {
-          "size": 1829,
-          "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
-        },
-        "all_results.json": {
-          "size": 44,
-          "sha256": "09ea72b93f03345c14db09bbf4ac153463c12a998a1aa1f801b825ba62a000bc"
-        },
-        "args.json": {
-          "size": 1719,
-          "sha256": "1610fe1171ad5382ef6fe797771e43f7c0b79452af5f53ee7befe860c26f6516"
-        },
-        "config.json": {
-          "size": 881,
-          "sha256": "5350e9655c01c574313d991ba9e67509444ba1d27a15ba12a22e39c543825fb7"
-        },
-        "generation_config.json": {
-          "size": 119,
-          "sha256": "7e9551f88df59ec6a88779ae2c001a8798be69a26f189717728d6436808f1d49"
-        },
-        "log.log": {
-          "size": 5069,
-          "sha256": "0eef0b9d74625364b1a9907879d37d52fc25abecbdff93829ceba33524f3b3d8"
-        },
-        "merges.txt": {
-          "size": 456318,
-          "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
-        },
-        "model.safetensors": {
-          "size": 497774208,
-          "sha256": "b1ae4c6064bbd60f95da09002fffa91c64a16d16c27ddcfb84711351182defe3"
-        },
-        "special_tokens_map.json": {
-          "size": 99,
-          "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
-        },
-        "tokenizer.json": {
-          "size": 3557680,
-          "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e"
-        },
-        "tokenizer_config.json": {
-          "size": 475,
-          "sha256": "f1cb5e31899749cf30935ccea01180ab3cfd484bd2bcf3bfdc1aeb9fdf935f6f"
-        },
-        "vocab.json": {
-          "size": 798156,
-          "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7"
-        },
-        "watermark.txt": {
-          "size": 310,
-          "sha256": "a60c79a1010fae5694597ad5e2b47dcc5c789d4d31c6c401fbca8713b5d01f43"
-        },
-        "WMKD_ARCHIVE_MANIFEST.json": {
-          "size": 7037,
-          "sha256": "d7e8203eaa5ee29730a1322e9cc73cd0a9f31e5d71c3655dfb8f3a49976b5acf"
-        }
-      },
-      "recovery_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_verification_workers4",
-      "verified_at": "2026-09-06T00:23:55.054139+00:00"
-    }
-  },
-  "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
+  "archive": "NOT_RUN",
+  "scientific_status": "BLOCKED_ARCHIVE",
   "limitations": [
     "Single official supported configuration; no Ba/Bb/distillation.",
     "Missing results are NOT_RUN; infrastructure blocks do not establish method failure."
@@ -3996,12 +3429,6 @@
       "size": 64539,
       "sha256": "ee3b8c2c1522f975103a4c662f61cbf86f9cfbfec224c808666ae6816e3a6b87",
       "tail": "�████  | 401M/498M [00:33<00:08, 11.9MB/s]\u001b[A\n\rmodel.safetensors:  81%|████████  | 403M/498M [00:33<00:07, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  81%|████████▏ | 405M/498M [00:33<00:07, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  82%|████████▏ | 407M/498M [00:33<00:08, 10.3MB/s]\u001b[A\n\rmodel.safetensors:  82%|████████▏ | 410M/498M [00:33<00:06, 12.7MB/s]\u001b[A\n\rmodel.safetensors:  83%|████████▎ | 412M/498M [00:34<00:06, 12.5MB/s]\u001b[A\n\rmodel.safetensors:  83%|████████▎ | 414M/498M [00:34<00:06, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  84%|████████▎ | 416M/498M [00:34<00:06, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  84%|████████▍ | 418M/498M [00:34<00:06, 11.9MB/s]\u001b[A\n\rmodel.safetensors:  84%|████████▍ | 420M/498M [00:34<00:06, 12.0MB/s]\u001b[A\n\rmodel.safetensors:  85%|████████▍ | 423M/498M [00:34<00:06, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  85%|████████▌ | 425M/498M [00:35<00:06, 10.9MB/s]\u001b[A\n\rmodel.safetensors:  86%|████████▌ | 427M/498M [00:35<00:05, 12.4MB/s]\u001b[A\n\rmodel.safetensors:  86%|████████▌ | 429M/498M [00:35<00:05, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  87%|████████▋ | 431M/498M [00:35<00:05, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  87%|████████▋ | 433M/498M [00:35<00:05, 11.7MB/s]\u001b[A\n\rmodel.safetensors:  87%|████████▋ | 435M/498M [00:35<00:05, 12.1MB/s]\u001b[A\n\rmodel.safetensors:  88%|████████▊ | 437M/498M [00:36<00:05, 12.1MB/s]\u001b[A\n\rmodel.safetensors:  88%|████████▊ | 439M/498M [00:36<00:04, 12.1MB/s]\u001b[A\n\rmodel.safetensors:  89%|████████▊ | 441M/498M [00:36<00:05, 11.3MB/s]\u001b[A\n\rmodel.safetensors:  89%|████████▉ | 444M/498M [00:36<00:04, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  90%|████████▉ | 446M/498M [00:36<00:04, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  90%|████████▉ | 448M/498M [00:37<00:04, 11.4MB/s]\u001b[A\n\rmodel.safetensors:  90%|█████████ | 450M/498M [00:37<00:03, 12.1MB/s]\u001b[A\n\rmodel.safetensors:  91%|█████████ | 452M/498M [00:37<00:03, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  91%|█████████ | 454M/498M [00:37<00:03, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  92%|█████████▏| 456M/498M [00:37<00:03, 11.8MB/s]\u001b[A\n\rmodel.safetensors:  92%|█████████▏| 458M/498M [00:37<00:03, 11.9MB/s]\u001b[A\n\rmodel.safetensors:  92%|█████████▏| 460M/498M [00:38<00:03, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  93%|█████████▎| 462M/498M [00:38<00:02, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  93%|█████████▎| 465M/498M [00:38<00:02, 12.1MB/s]\u001b[A\n\rmodel.safetensors:  94%|█████████▎| 467M/498M [00:38<00:02, 12.0MB/s]\u001b[A\n\rmodel.safetensors:  94%|█████████▍| 469M/498M [00:38<00:02, 12.1MB/s]\u001b[A\n\rmodel.safetensors:  95%|█████████▍| 471M/498M [00:38<00:02, 11.1MB/s]\u001b[A\n\rmodel.safetensors:  95%|█████████▌| 473M/498M [00:39<00:02, 11.7MB/s]\u001b[A\n\rmodel.safetensors:  95%|█████████▌| 475M/498M [00:39<00:01, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  96%|█████████▌| 477M/498M [00:39<00:01, 12.4MB/s]\u001b[A\n\rmodel.safetensors:  96%|█████████▋| 479M/498M [00:39<00:01, 11.8MB/s]\u001b[A\n\rmodel.safetensors:  97%|█████████▋| 481M/498M [00:39<00:01, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  97%|█████████▋| 483M/498M [00:39<00:01, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  98%|█████████▊| 485M/498M [00:40<00:01, 11.3MB/s]\u001b[A\n\rmodel.safetensors:  98%|█████████▊| 488M/498M [00:40<00:00, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  98%|█████████▊| 490M/498M [00:40<00:00, 12.3MB/s]\u001b[A\n\rmodel.safetensors:  99%|█████████▉| 492M/498M [00:40<00:00, 12.2MB/s]\u001b[A\n\rmodel.safetensors:  99%|█████████▉| 494M/498M [00:40<00:00, 11.9MB/s]\u001b[A\n\rmodel.safetensors: 100%|█████████▉| 496M/498M [00:41<00:00, 12.1MB/s]\u001b[A\n\rmodel.safetensors: 100%|██████████| 498M/498M [00:41<00:00, 12.1MB/s]\u001b[A\n\r                                                                     \u001b[A\rDownloading:  39%|███▊      | 17/44 [00:44<05:43, 12.72s/file]\n\rMODEL_DATA_READY.1.json:   0%|          | 0.00/6.64k [00:00<?, ?B/s]\u001b[A\n\r                                                                    \u001b[A\rDownloading:  41%|████      | 18/44 [00:45<03:52,  8.95s/file]\n\rMODEL_DATA_READY.1.log: 0.00B [00:00, ?B/s]\u001b[A\n\r                                           \u001b[A\rDownloading:  43%|████▎     | 19/44 [00:45<02:37,  6.30s/file]\n\rmodel_manifest.json:   0%|          | 0.00/1.52k [00:00<?, ?B/s]\u001b[A\n\r                                                                \u001b[A\rDownloading:  45%|████▌     | 20/44 [00:45<01:46,  4.46s/file]\n\rPREFLIGHT_COMPLETE.1.json:   0%|          | 0.00/3.98k [00:00<?, ?B/s]\u001b[A\n\r                                                                      \u001b[A\rDownloading:  48%|████▊     | 21/44 [00:45<01:13,  3.18s/file]\n\rPREFLIGHT_COMPLETE.1.log: 0.00B [00:00, ?B/s]\u001b[A\n\r                                             \u001b[A\rDownloading:  50%|█████     | 22/44 [00:45<00:49,  2.27s/file]\n\rprotocol.json:   0%|          | 0.00/6.16k [00:00<?, ?B/s]\u001b[A\n\r                                                          \u001b[A\rDownloading:  52%|█████▏    | 23/44 [00:45<00:34,  1.64s/file]\n\rprotocol.json:   0%|          | 0.00/6.16k [00:00<?, ?B/s]\u001b[A\n\r                                                          \u001b[A\rDownloading:  55%|█████▍    | 24/44 [00:46<00:23,  1.19s/file]\n\rREADME.md:   0%|          | 0.00/1.43k [00:00<?, ?B/s]\u001b[A\n\r                                                      \u001b[A\rDownloading:  57%|█████▋    | 25/44 [00:46<00:16,  1.13file/s]\n\rRELOAD_VERIFIED.1.json:   0%|          | 0.00/2.17k [00:00<?, ?B/s]\u001b[A\n\r                                                                   \u001b[A\rDownloading:  59%|█████▉    | 26/44 [00:46<00:11,  1.50file/s]\n\rRELOAD_VERIFIED.1.log: 0.00B [00:00, ?B/s]\u001b[A\n\r                                          \u001b[A\rDownloading:  61%|██████▏   | 27/44 [00:46<00:08,  1.93file/s]\n\rSOURCE_PINNED.1.json:   0%|          | 0.00/519 [00:00<?, ?B/s]\u001b[A\n\r                                                               \u001b[A\rDownloading:  64%|██████▎   | 28/44 [00:46<00:06,  2.45file/s]\n\rSOURCE_PINNED.1.log: 0.00B [00:00, ?B/s]\u001b[A\n\r                                        \u001b[A\rDownloading:  66%|██████▌   | 29/44 [00:46<00:04,  3.06file/s]\n\rspecial_tokens_map.json:   0%|          | 0.00/99.0 [00:00<?, ?B/s]\u001b[A\n\r                                                                   \u001b[A\rDownloading:  68%|██████▊   | 30/44 [00:46<00:03,  3.69file/s]\n\rtokenizer.json:   0%|          | 0.00/3.56M [00:00<?, ?B/s]\u001b[A\n\r                                                           \u001b[A\rDownloading:  70%|███████   | 31/44 [00:47<00:03,  3.81file/s]\n\rtokenizer_config.json:   0%|          | 0.00/475 [00:00<?, ?B/s]\u001b[A\n\r                                                                \u001b[A\rDownloading:  73%|███████▎  | 32/44 [00:47<00:02,  4.36file/s]\n\rtrained.json:   0%|          | 0.00/8.13k [00:00<?, ?B/s]\u001b[A\n\r                                                         \u001b[A\rDownloading:  75%|███████▌  | 33/44 [00:47<00:02,  4.84file/s]\n\rTRAINING.1.json:   0%|          | 0.00/8.85k [00:00<?, ?B/s]\u001b[A\n\r                                                            \u001b[A\rDownloading:  77%|███████▋  | 34/44 [00:47<00:01,  5.32file/s]\n\rTRAINING.1.log:   0%|          | 0.00/679k [00:00<?, ?B/s]\u001b[A\n\rTRAINING.1.log: 100%|██████████| 679k/679k [00:00<00:00, 5.92MB/s]\u001b[A\n\r                                                                  \u001b[A\rDownloading:  80%|███████▉  | 35/44 [00:47<00:01,  4.58file/s]\n\rtraining_progress_1.jsonl:   0%|          | 0.00/86.6k [00:00<?, ?B/s]\u001b[A\n\r                                                                      \u001b[A\rDownloading:  82%|████████▏ | 36/44 [00:48<00:01,  5.03file/s]\n\rtrigger.json:   0%|          | 0.00/1.83k [00:00<?, ?B/s]\u001b[A\n\r                                                         \u001b[A\rDownloading:  84%|████████▍ | 37/44 [00:48<00:01,  5.43file/s]\n\rtrigger.json:   0%|          | 0.00/1.83k [00:00<?, ?B/s]\u001b[A\n\r                                                         \u001b[A\rDownloading:  86%|████████▋ | 38/44 [00:48<00:01,  5.60file/s]\n\rUTILITY.1.json:   0%|          | 0.00/662 [00:00<?, ?B/s]\u001b[A\n\r                                                         \u001b[A\rDownloading:  89%|████████▊ | 39/44 [00:48<00:00,  6.05file/s]\n\rUTILITY.1.log:   0%|          | 0.00/105 [00:00<?, ?B/s]\u001b[A\n\r                                                        \u001b[A\rDownloading:  91%|█████████ | 40/44 [00:48<00:00,  6.21file/s]\n\rutility.json:   0%|          | 0.00/411 [00:00<?, ?B/s]\u001b[A\n\r                                                       \u001b[A\rDownloading:  93%|█████████▎| 41/44 [00:48<00:00,  6.34file/s]\n\rvocab.json:   0%|          | 0.00/798k [00:00<?, ?B/s]\u001b[A\n\r                                                      \u001b[A\rDownloading:  95%|█████████▌| 42/44 [00:49<00:00,  6.00file/s]\n\rwatermark.txt:   0%|          | 0.00/310 [00:00<?, ?B/s]\u001b[A\n\r                                                        \u001b[A\rDownloading:  98%|█████████▊| 43/44 [00:49<00:00,  6.17file/s]\n\rWMKD_ARCHIVE_MANIFEST.json:   0%|          | 0.00/7.00k [00:00<?, ?B/s]\u001b[A\n\r                                                                       \u001b[A\rDownloading: 100%|██████████| 44/44 [00:49<00:00,  6.34file/s]\rDownloading: 100%|██████████| 44/44 [00:49<00:00,  1.12s/file]\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py\", line 60, in <module>\n    if __name__=='__main__': main()\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py\", line 57, in main\n    assert p.is_file() and p.stat().st_size==info['size'] and sha(p)==info['sha256'],name\nAssertionError: .ms_upload_cache\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/eaaw.py\", line 76, in stage\n    return archive_model(c,Path(trained['model']),extras=[rr/'trigger.json',protocol,rr/'compatibility.patch'])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py\", line 16, in archive_model\n    raise Blocked('BLOCKED_ARCHIVE','PRIVATE archive failed; canonical local model retained: '+str(errors))\ncommon.Blocked: PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]\n"
-    },
-    "ARCHIVED.2.log": {
-      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/ARCHIVED.2.log",
-      "size": 2493,
-      "sha256": "3e2c370de7022fa6ca6aa0ba8d156e2cdc47c624da594495697a4dd3a4589fb8",
-      "tail": "{\"time\": \"2026-09-06T00:23:39.568069+00:00\", \"command\": [\"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python\", \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py\", \"/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json\", \"4\"], \"cwd\": \"/root/autodl-tmp/WMKD_Benchmark\"}\n2026-09-06 08:23:40,810 | INFO    | modelscope_hub.upload | Preparing files to upload ...\n2026-09-06 08:23:40,812 | INFO    | modelscope_hub.upload | Prepared 43 files for upload.\n2026-09-06 08:23:40,812 | INFO    | modelscope_hub.upload | Checking 43 files to upload ...\n2026-09-06 08:23:46,010 | INFO    | modelscope_hub.upload | Adaptive batch size: 43 (for 43 files)\n2026-09-06 08:23:46,011 | INFO    | modelscope_hub.upload | Upload tracker loaded: 64 entries, 64 committed.\n2026-09-06 08:23:46,012 | INFO    | modelscope_hub.upload | 20 file(s) already committed, skipping.\n2026-09-06 08:23:46,012 | INFO    | modelscope_hub.upload | Scan complete: 43 total, 20 committed (skip), 23 to process.\n2026-09-06 08:23:46,012 | INFO    | modelscope_hub.upload | Uploading 23 file(s) in 1 batch(es) of size 43 (pipeline mode).\n2026-09-06 08:23:47,225 | INFO    | modelscope_hub.upload | Batch 1/1: committed 23 file(s).\n============================================================\nUpload Report\n------------------------------------------------------------\n  Total files       : 43\n  Skipped (cached)  : 20\n  Normal committed  : 23\n  LFS existed       : 0\n  LFS uploaded PUT  : 0\n  Failed            : 0\n  Committed         : 23\n  Deleted (sync)    : 0\n  Elapsed           : 6.4s\n============================================================\n2026-09-06 08:23:47,878 | INFO    | modelscope_hub.download | Downloading 45 files from MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2@master\n\rDownloading:   0%|          | 0/45 [00:00<?, ?file/s]\rDownloading:  93%|█████████▎| 42/45 [00:00<00:00, 99.93file/s]\n\rWMKD_ARCHIVE_MANIFEST.json:   0%|          | 0.00/7.04k [00:00<?, ?B/s]\u001b[A\n\r                                                                       \u001b[A\n\rARCHIVED.1.json:   0%|          | 0.00/2.46k [00:00<?, ?B/s]\u001b[A\n\r                                                            \u001b[A\n\rarchive_request.json:   0%|          | 0.00/1.43k [00:00<?, ?B/s]\u001b[A\n\r                                                                 \u001b[A\rDownloading: 100%|██████████| 45/45 [00:06<00:00,  6.64file/s]\n"
     }
   }
 }

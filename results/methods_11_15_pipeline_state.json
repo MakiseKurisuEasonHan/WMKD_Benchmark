@@ -16,10 +16,10 @@
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/context.json",
       "stage": "ARCHIVED",
       "status": "TERMINAL",
-      "attempt": 1,
+      "attempt": 2,
       "started_at": "2026-09-05T17:56:41.135350+00:00",
-      "last_update": "2026-09-06T00:15:47.518905+00:00",
-      "last_error": "PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]",
+      "last_update": "2026-09-06T00:26:53.988395+00:00",
+      "last_error": null,
       "repair_history": [
         {
           "time": "2026-09-05T11:30:43.997567+00:00",
@@ -52,12 +52,19 @@
             "reason": "Official ptb_text_only applies line.strip(); current local text loading retained leading and trailing whitespace. This run must not be accepted as canonical Experiment A.",
             "time": "2026-09-05T12:30:55.6061213Z"
           }
+        },
+        {
+          "time": "2026-09-06T00:26:53.988408+00:00",
+          "stage": "ARCHIVED",
+          "action": "Freeze scientific payload before SDK upload; exclude local .ms_upload_cache from integrity expectations; all scientific files independently redownloaded and verified",
+          "scientific_change": false,
+          "previous_failure_retained": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/versions/eaaw_a_20260905_111830_cont2_ARCHIVED_1"
         }
       ],
-      "scientific_status": "BLOCKED_ARCHIVE",
+      "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
       "detector_status": "COMPLETE",
       "utility_status": "COMPLETE",
-      "archive_status": "BLOCKED_ARCHIVE_LOCAL_RETAINED",
+      "archive_status": "VERIFIED_ARCHIVED",
       "git_status": "DURABLE",
       "completed_stages": {
         "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/SOURCE_PINNED.1.json",
@@ -67,47 +74,47 @@
         "TRAINING": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/TRAINING.1.json",
         "DETECTOR": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/DETECTOR.1.json",
         "UTILITY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/UTILITY.1.json",
-        "RELOAD_VERIFIED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/RELOAD_VERIFIED.1.json"
+        "RELOAD_VERIFIED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/RELOAD_VERIFIED.1.json",
+        "ARCHIVED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/ARCHIVED.2.json"
       },
       "active_worker": null,
       "stage_attempts": {},
-      "blocked_stages": {
-        "ARCHIVED": {
-          "scientific_status": "BLOCKED_ARCHIVE",
-          "error": {
-            "status": "FAILURE",
-            "stage": "ARCHIVED",
-            "attempt": 1,
-            "completed_at": "2026-09-06T00:15:31.464731+00:00",
-            "runtime_seconds": 164.66861443966627,
-            "blocked_status": "BLOCKED_ARCHIVE",
-            "error_type": "Blocked",
-            "error": "PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]",
-            "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/eaaw.py\", line 76, in stage\n    return archive_model(c,Path(trained['model']),extras=[rr/'trigger.json',protocol,rr/'compatibility.patch'])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py\", line 16, in archive_model\n    raise Blocked('BLOCKED_ARCHIVE','PRIVATE archive failed; canonical local model retained: '+str(errors))\ncommon.Blocked: PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]\n"
-          },
-          "receipt": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/ARCHIVED.1.json"
-        }
-      },
+      "blocked_stages": {},
       "formal_report": "docs/reproduction_reports/eaaw_experiment_a_eaaw_a_20260905_111830_cont2.md"
     },
     "instructional_fingerprinting": {
       "method": "Instructional Fingerprinting",
       "run_id": "instructional_fingerprinting_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/context.json",
-      "stage": "NOT_STARTED",
-      "status": "NOT_STARTED",
-      "attempt": 0,
-      "started_at": null,
-      "last_update": "2026-09-05T11:18:30.772323+00:00",
+      "stage": "MODEL_DATA_READY",
+      "status": "RUNNING",
+      "attempt": 1,
+      "started_at": "2026-09-06T00:15:52.429975+00:00",
+      "last_update": "2026-09-06T00:15:52.432158+00:00",
       "last_error": null,
       "repair_history": [],
-      "scientific_status": "NOT_STARTED",
+      "scientific_status": "RUNNING",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
       "git_status": "PENDING",
-      "completed_stages": {},
-      "active_worker": null
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/ENV_READY.1.json"
+      },
+      "active_worker": {
+        "pid": 64078,
+        "result": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/MODEL_DATA_READY.1.json",
+        "log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/MODEL_DATA_READY.1.log",
+        "command": [
+          "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+          "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py",
+          "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/context.json",
+          "MODEL_DATA_READY",
+          "1",
+          "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/MODEL_DATA_READY.1.json"
+        ]
+      }
     },
     "utf": {
       "method": "UTF",

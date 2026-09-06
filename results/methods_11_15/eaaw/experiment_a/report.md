@@ -1,6 +1,6 @@
 # EaaW Experiment A
 
-状态：BLOCKED_ARCHIVE；run ID `eaaw_a_20260905_111830_cont2`。
+状态：CORE_REPRODUCTION_SUCCESSFUL；run ID `eaaw_a_20260905_111830_cont2`。
 
 Paper: https://arxiv.org/abs/2405.04825
 Official repository: https://github.com/shaoshuo-ss/EaaW.git @ `845432e24db227561e188af70e762d3c44d07475`
@@ -17,10 +17,10 @@ Official repository: https://github.com/shaoshuo-ss/EaaW.git @ `845432e24db22756
 {
   "method": "EaaW",
   "run_id": "eaaw_a_20260905_111830_cont2",
-  "status": "BLOCKED_ARCHIVE",
-  "archive_status": "BLOCKED_ARCHIVE_LOCAL_RETAINED",
+  "status": "CORE_REPRODUCTION_SUCCESSFUL",
+  "archive_status": "VERIFIED_ARCHIVED",
   "stage": "ARCHIVED",
-  "error": "PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]",
+  "error": null,
   "detector": {
     "status": "SUCCESS",
     "stage": "DETECTOR",

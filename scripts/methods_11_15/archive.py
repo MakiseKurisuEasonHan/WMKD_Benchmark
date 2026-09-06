@@ -40,8 +40,9 @@ def main():
         if p.is_file() and p.suffix in ('.json','.jsonl','.log','.patch') and not p.name.startswith('ARCHIVED'):
             shutil.copyfile(p,evidence/p.name)
     shutil.copytree(rr/'receipts',evidence/'receipts',dirs_exist_ok=True)
-    manifest={'method':c['method'],'run_id':c['run_id'],'source':c['spec'],'files':{k:v for k,v in tree_manifest(package).items() if k!='WMKD_ARCHIVE_MANIFEST.json'}}
+    manifest={'method':c['method'],'run_id':c['run_id'],'source':c['spec'],'files':{k:v for k,v in tree_manifest(package).items() if k!='WMKD_ARCHIVE_MANIFEST.json' and not k.startswith('.ms_upload_cache')}}
     write(package/'WMKD_ARCHIVE_MANIFEST.json',manifest)
+    expected={**manifest['files'],'WMKD_ARCHIVE_MANIFEST.json':{'size':(package/'WMKD_ARCHIVE_MANIFEST.json').stat().st_size,'sha256':sha(package/'WMKD_ARCHIVE_MANIFEST.json')}}
     def private(r):
         vis=getattr(getattr(r,'visibility',None),'value',getattr(r,'visibility',None))
         return getattr(r,'private',None) is True or vis in (1,'private','PRIVATE')
@@ -51,7 +52,7 @@ def main():
     assert private(api.get_repo(repo,'model'))
     verify=rr/f'archive_verification_workers{workers}'
     got=Path(api.download_repo(repo,'model',local_dir=verify,local_files_only=False,max_workers=workers))
-    expected=tree_manifest(package)
+    # Verify the frozen scientific payload; SDK upload-cache bookkeeping is transport-only.
     for name,info in expected.items():
         p=got/name
         assert p.is_file() and p.stat().st_size==info['size'] and sha(p)==info['sha256'],name

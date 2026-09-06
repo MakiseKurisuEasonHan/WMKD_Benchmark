@@ -1217,6 +1217,13 @@ Run ID: `eaaw_a_20260905_111830_cont2`
         "reason": "Official ptb_text_only applies line.strip(); current local text loading retained leading and trailing whitespace. This run must not be accepted as canonical Experiment A.",
         "time": "2026-09-05T12:30:55.6061213Z"
       }
+    },
+    {
+      "time": "2026-09-06T00:26:53.988408+00:00",
+      "stage": "ARCHIVED",
+      "action": "Freeze scientific payload before SDK upload; exclude local .ms_upload_cache from integrity expectations; all scientific files independently redownloaded and verified",
+      "scientific_change": false,
+      "previous_failure_retained": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/versions/eaaw_a_20260905_111830_cont2_ARCHIVED_1"
     }
   ],
   "patch": "--- official/run_clm.py\n+++ wmkd/run_clm.py\n@@ -56,12 +56,7 @@\n \n def main():\n     args = parse_args()\n-    args.output_dir = os.path.join(\n-        args.output_dir,\n-        args.dataset_name if args.dataset_name is not None else args.manual_dataset_name,\n-        args.mode,\n-        datetime.datetime.now().strftime(\"%Y-%m-%d-%H:%M:%S\")\n-    )\n+    args.output_dir = os.environ[\"WMKD_MODEL_OUTPUT\"]\n     # Initialize the accelerator. We will let the accelerator handle device placement for us in this example.\n     # If we're using tracking, we also need to initialize it here and it will by default pick up all supported trackers\n     # in the environment\n@@ -208,6 +203,8 @@\n \n     # We resize the embeddings only when necessary to avoid index errors. If you are creating a model from scratch\n     # on a small vocab and want a smaller embedding size, remove this test.\n+    model.gradient_checkpointing_enable()\n+    model.config.use_cache = False\n     embedding_size = model.get_input_embeddings().weight.shape[0]\n     if len(tokenizer) > embedding_size:\n         model.resize_token_embeddings(len(tokenizer))\n@@ -280,6 +277,8 @@\n \n     train_dataset = lm_datasets[\"train\"]\n     eval_dataset = lm_datasets[\"validation\"]\n+    eval_dataset.save_to_disk(os.environ[\"WMKD_EVAL_TOKENS\"])\n+    with open(os.environ[\"WMKD_TRIGGER\"], \"w\") as f: json.dump(train_dataset[0], f)\n     if args.train_num_samples is not None:\n         # check if we have enough samples for the training set\n         if args.train_num_samples > len(train_dataset):\n@@ -336,7 +335,7 @@\n     )\n \n     # On TPU, the tie weights in our model have been disconnected, so we need to restore the ties.\n-    if accelerator.distributed_type == DistributedType.TPU:\n+    if accelerator.distributed_type == DistributedType.XLA:\n         model.tie_weights()\n \n     # We need to recalculate our total training steps as the size of the training dataloader may have changed.\n@@ -464,6 +463,8 @@\n                 if accelerator.sync_gradients:\n                     progress_bar.update(1)\n                     completed_steps += 1\n+                    if completed_steps % 10 == 0:\n+                        with open(os.environ[\"WMKD_TRAIN_PROGRESS\"], \"a\") as f: f.write(json.dumps({\"step\": completed_steps, \"epoch\": epoch, \"loss\": float(loss.detach()), \"peak_vram_bytes\": torch.cuda.max_memory_allocated()}) + \"\\n\")\n \n                 if isinstance(checkpointing_steps, int):\n                     if completed_steps % checkpointing_steps == 0:\n--- official/watermark.py\n+++ wmkd/watermark.py\n@@ -157,6 +157,6 @@\n     zero_weights[zero_weights == -1] = 0\n     options = [1, 0]\n     cross_table = crosstab(zero_weights, zero_target, levels=(options, options))\n-    stats = chi2_contingency(cross_table)\n+    stats = chi2_contingency(cross_table.count)\n     \n     return 1 - ber, stats\n"
@@ -1227,8 +1234,8 @@ Run ID: `eaaw_a_20260905_111830_cont2`
 
 ```json
 {
-  "status": "BLOCKED_ARCHIVE",
-  "last_error": "PRIVATE archive failed; canonical local model retained: [{'workers': 4, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '4']' returned non-zero exit status 1.\"}, {'workers': 1, 'error': \"Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/archive.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_request.json', '1']' returned non-zero exit status 1.\"}]",
+  "status": "CORE_REPRODUCTION_SUCCESSFUL",
+  "last_error": null,
   "limitations": [
     "Single official supported configuration; no Ba/Bb/distillation.",
     "Missing results are NOT_RUN; infrastructure blocks do not establish method failure."
@@ -1238,6 +1245,199 @@ Run ID: `eaaw_a_20260905_111830_cont2`
 
 ## 归档与恢复
 
-NOT_RUN
+```json
+{
+  "status": "SUCCESS",
+  "stage": "ARCHIVED",
+  "attempt": 2,
+  "completed_at": "2026-09-06T00:23:55.113878+00:00",
+  "runtime_seconds": 15.563596822321415,
+  "required_child_processes_exit_code": 0,
+  "outputs": {
+    "status": "VERIFIED_ARCHIVED",
+    "repository": "MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2",
+    "visibility": "PRIVATE",
+    "canonical_local_retained": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/model_attempt_1",
+    "independent_redownload": true,
+    "verified_files": 43,
+    "files": {
+      "WMKD_PROVENANCE/RUN_EVIDENCE/DETECTOR.1.log": {
+        "size": 105,
+        "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/ENV_READY.1.log": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/MODEL_DATA_READY.1.log": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/PREFLIGHT_COMPLETE.1.log": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/RELOAD_VERIFIED.1.log": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/SOURCE_PINNED.1.log": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/TRAINING.1.log": {
+        "size": 678959,
+        "sha256": "2be13f0126f4a3463e81f772b1d6d69aa2ba39b2f27ab1b8ad21b184b9d18795"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/UTILITY.1.log": {
+        "size": 105,
+        "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/archive_request.json": {
+        "size": 1425,
+        "sha256": "0f013ebbfcf5d67b67bb7a589f98ebec34a23d63588066d2e8a1593e11a3bb4c"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/compatibility.patch": {
+        "size": 2841,
+        "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/context.json": {
+        "size": 826,
+        "sha256": "1725e53f8a75558c1e05f48824a5a518a953b783f47d1b97199350966581bc3f"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/detector.json": {
+        "size": 7872,
+        "sha256": "24f7afa4f0a1f5e4c8c38b8c44bed7136b61df391ee1f6621ce2f65f24af0e4a"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/model_manifest.json": {
+        "size": 1524,
+        "sha256": "7532392e562b137ff6ebc2e9a7df692d0057c0373dd2bf61c9effc062afde83b"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/protocol.json": {
+        "size": 6163,
+        "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ARCHIVED.1.json": {
+        "size": 2462,
+        "sha256": "46c991af4e0790ac8c577c150095a65b13c6b98218d9632839679923727bd276"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/DETECTOR.1.json": {
+        "size": 9212,
+        "sha256": "07bfb6f9522a50563a326adebb6b54f46d65627b2a3796cf3e7e76a27538325e"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ENV_READY.1.json": {
+        "size": 649,
+        "sha256": "64155b0707685574487a1dbc94b2414df6c6c83926a8735e8cd368254be6c48b"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/MODEL_DATA_READY.1.json": {
+        "size": 6645,
+        "sha256": "ad1fe5997c8acbff5987ee5686aa5a4a33dba6040165bf89cf076c3b3aaf3bef"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/PREFLIGHT_COMPLETE.1.json": {
+        "size": 3975,
+        "sha256": "a89d703836d58de33feb195a8492f03e7ae34c8f480cf87522fe622e11e9ce83"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/RELOAD_VERIFIED.1.json": {
+        "size": 2167,
+        "sha256": "2f7def654d953b08d0953699e77871edef41d3aea29c376d2764f6fa937ab04c"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/SOURCE_PINNED.1.json": {
+        "size": 519,
+        "sha256": "f2539cb6cfa5007a0201e095752fda781bf9291f58b32bbc9afd5ebf77ac36fb"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/TRAINING.1.json": {
+        "size": 8854,
+        "sha256": "080d3af804e4926372e253a2dc189420c9827beb1c118450fdb79f4be5355c97"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/UTILITY.1.json": {
+        "size": 662,
+        "sha256": "b59efdfe20f16f4f0aa1edbf4fd9deb3eee49d0f2dd3ffadf2e6b7edb00dfa1a"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/trained.json": {
+        "size": 8131,
+        "sha256": "c1f12e61e6c5daf633abe0c730479625f92fd8402a2d5ddaa31f22701910621b"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/training_progress_1.jsonl": {
+        "size": 86633,
+        "sha256": "e6943dcbe304c93ee2cd4ccc44438e0442f584a5d581d7d471d37b28362db0f3"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/trigger.json": {
+        "size": 1829,
+        "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
+      },
+      "WMKD_PROVENANCE/RUN_EVIDENCE/utility.json": {
+        "size": 411,
+        "sha256": "4aec23e30a6d379c203da776b024b396c094d7dec0a98636ee004a7ee876d1c7"
+      },
+      "WMKD_PROVENANCE/compatibility.patch": {
+        "size": 2841,
+        "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd"
+      },
+      "WMKD_PROVENANCE/protocol.json": {
+        "size": 6163,
+        "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc"
+      },
+      "WMKD_PROVENANCE/trigger.json": {
+        "size": 1829,
+        "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c"
+      },
+      "all_results.json": {
+        "size": 44,
+        "sha256": "09ea72b93f03345c14db09bbf4ac153463c12a998a1aa1f801b825ba62a000bc"
+      },
+      "args.json": {
+        "size": 1719,
+        "sha256": "1610fe1171ad5382ef6fe797771e43f7c0b79452af5f53ee7befe860c26f6516"
+      },
+      "config.json": {
+        "size": 881,
+        "sha256": "5350e9655c01c574313d991ba9e67509444ba1d27a15ba12a22e39c543825fb7"
+      },
+      "generation_config.json": {
+        "size": 119,
+        "sha256": "7e9551f88df59ec6a88779ae2c001a8798be69a26f189717728d6436808f1d49"
+      },
+      "log.log": {
+        "size": 5069,
+        "sha256": "0eef0b9d74625364b1a9907879d37d52fc25abecbdff93829ceba33524f3b3d8"
+      },
+      "merges.txt": {
+        "size": 456318,
+        "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+      },
+      "model.safetensors": {
+        "size": 497774208,
+        "sha256": "b1ae4c6064bbd60f95da09002fffa91c64a16d16c27ddcfb84711351182defe3"
+      },
+      "special_tokens_map.json": {
+        "size": 99,
+        "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
+      },
+      "tokenizer.json": {
+        "size": 3557680,
+        "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e"
+      },
+      "tokenizer_config.json": {
+        "size": 475,
+        "sha256": "f1cb5e31899749cf30935ccea01180ab3cfd484bd2bcf3bfdc1aeb9fdf935f6f"
+      },
+      "vocab.json": {
+        "size": 798156,
+        "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7"
+      },
+      "watermark.txt": {
+        "size": 310,
+        "sha256": "a60c79a1010fae5694597ad5e2b47dcc5c789d4d31c6c401fbca8713b5d01f43"
+      },
+      "WMKD_ARCHIVE_MANIFEST.json": {
+        "size": 7037,
+        "sha256": "d7e8203eaa5ee29730a1322e9cc73cd0a9f31e5d71c3655dfb8f3a49976b5acf"
+      }
+    },
+    "recovery_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/archive_verification_workers4",
+    "verified_at": "2026-09-06T00:23:55.054139+00:00"
+  }
+}
+```
 
 完整日志：[full_experiment_log.json](../../results/methods_11_15/eaaw/experiment_a/full_experiment_log.json)。
