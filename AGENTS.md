@@ -1,3 +1,5 @@
+当前执行策略更新（2026-09-06）：STRICT SERIAL INTERACTIVE MODE。优先完成 Method 12 Instructional Fingerprinting 的训练、检测、负对照、utility、reload、私有归档验证及 Git closure；EaaW 已完成，不重跑。工程失败须先最小修复并有界重试，无法恢复时等待处理，禁止跳过；RED 科学分歧停止并报告。Method 12 闭环前不推进 Methods 13–15 的新 expensive stage，已有下载与证据保留。此策略覆盖此前 unattended advance-on-blocked 规则。详见 docs/METHODS_11_15_AUTOMATION.md。
+
 # WMKD_Benchmark 会话入口
 
 当前授权更新（2026-09-05）：用户已正式批准五方法串行 Experiment A 自动复现、最小工程修复、逐方法归档/Git闭环及全部terminal后的自动关机。前次等待prompt/STOP仅属于已结束的迁移任务。详见 [docs/METHODS_11_15_AUTOMATION.md](docs/METHODS_11_15_AUTOMATION.md) 与 results/methods_11_15_pipeline_state.json；旧科学设计禁改及KEEP/UNCERTAIN保留规则继续有效。
