@@ -1,0 +1,24 @@
+{
+  "time": "2026-09-06T01:41:26.281053+00:00",
+  "classification": "GREEN download/transport mapping",
+  "stage": "MODEL_DATA_READY",
+  "failed_attempt": 1,
+  "retry_attempt": 2,
+  "root_cause": "HF repo name incorrectly reused as ModelScope namespace (404); HF mirror403 and official network unreachable",
+  "repair": "Pinned public ModelScope mirror with canonical config Git blob and weight LFS SHA parity; no credentials; no backbone change",
+  "config_url": "https://modelscope.cn/models/shakechen/Llama-2-7b-chat-hf/resolve/299e68d813ff6f146741f8e8477ed0a57ded4765/config.json",
+  "config_sha256": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2",
+  "config_bytes": 614,
+  "retained_local_files": [
+    "LICENSE.txt"
+  ],
+  "prior_weight_shards_present": 0,
+  "prior_partial_files_present": 0,
+  "modelscope_mapping": {
+    "repo": "shakechen/Llama-2-7b-chat-hf",
+    "revision": "299e68d813ff6f146741f8e8477ed0a57ded4765",
+    "config_git_blob_verified": true,
+    "weight_lfs_metadata_equal": true,
+    "credentials": "NONE"
+  }
+}

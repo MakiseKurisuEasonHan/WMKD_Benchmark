@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.methods-11-15-state.v1",
   "created_at": "2026-09-05T11:18:30.771976+00:00",
-  "status": "WAITING_FOR_REPAIR",
+  "status": "RUNNING",
   "order": [
     "eaaw",
     "instructional_fingerprinting",
@@ -295,13 +295,38 @@
       "run_id": "utf_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
       "stage": "MODEL_DATA_READY",
-      "status": "WAITING_FOR_REPAIR",
+      "status": "RUNNING",
       "attempt": 1,
       "started_at": "2026-09-06T00:36:14.029041+00:00",
       "last_update": "2026-09-06T01:27:44.868328+00:00",
-      "last_error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'URLError'}]",
-      "repair_history": [],
-      "scientific_status": "BLOCKED_DOWNLOAD",
+      "last_error": null,
+      "repair_history": [
+        {
+          "time": "2026-09-06T01:41:26.281053+00:00",
+          "classification": "GREEN download/transport mapping",
+          "stage": "MODEL_DATA_READY",
+          "failed_attempt": 1,
+          "retry_attempt": 2,
+          "root_cause": "HF repo name incorrectly reused as ModelScope namespace (404); HF mirror403 and official network unreachable",
+          "repair": "Pinned public ModelScope mirror with canonical config Git blob and weight LFS SHA parity; no credentials; no backbone change",
+          "config_url": "https://modelscope.cn/models/shakechen/Llama-2-7b-chat-hf/resolve/299e68d813ff6f146741f8e8477ed0a57ded4765/config.json",
+          "config_sha256": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2",
+          "config_bytes": 614,
+          "retained_local_files": [
+            "LICENSE.txt"
+          ],
+          "prior_weight_shards_present": 0,
+          "prior_partial_files_present": 0,
+          "modelscope_mapping": {
+            "repo": "shakechen/Llama-2-7b-chat-hf",
+            "revision": "299e68d813ff6f146741f8e8477ed0a57ded4765",
+            "config_git_blob_verified": true,
+            "weight_lfs_metadata_equal": true,
+            "credentials": "NONE"
+          }
+        }
+      ],
+      "scientific_status": "RUNNING",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
@@ -312,7 +337,10 @@
       },
       "active_worker": null,
       "formal_report": "docs/reproduction_reports/utf_experiment_a_utf_a_20260905_111830.md",
-      "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json"
+      "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json",
+      "stage_attempts": {
+        "MODEL_DATA_READY": 1
+      }
     },
     "double_i": {
       "method": "Double-I Watermark",
@@ -364,5 +392,6 @@
   "pipeline_mode": "strict_serial_interactive",
   "current_focus_method": "UTF",
   "advance_on_engineering_block": false,
-  "method12_closure_verified_at": "2026-09-06T01:31:17.390197+00:00"
+  "method12_closure_verified_at": "2026-09-06T01:31:17.390197+00:00",
+  "execution_scope": "utf_only"
 }

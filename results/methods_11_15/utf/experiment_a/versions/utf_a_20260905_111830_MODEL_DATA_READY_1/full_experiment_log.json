@@ -1,0 +1,174 @@
+{
+  "schema_version": "wmkd.methods-11-15.full-log.v1",
+  "method": "UTF",
+  "experiment": "A",
+  "scientific_object_id": "utf:A:utf_a_20260905_111830",
+  "run_id": "utf_a_20260905_111830",
+  "timestamps": {
+    "started_at": "2026-09-06T00:36:14.029041+00:00",
+    "closed_at": "2026-09-06T00:37:54.874481+00:00"
+  },
+  "paper": "https://arxiv.org/abs/2410.12318",
+  "official_source": {
+    "number": 13,
+    "name": "UTF",
+    "paper": "https://arxiv.org/abs/2410.12318",
+    "repo": "https://github.com/imjccai/fingerprint.git",
+    "commit": "7155b38b077e18396bf550f839b27166c2011fe5",
+    "backbone": "meta-llama/Llama-2-7b-chat-hf",
+    "dataset": "official undertrained-token fingerprint construction",
+    "license": "MIT",
+    "module": "utf"
+  },
+  "state": {
+    "method": "UTF",
+    "run_id": "utf_a_20260905_111830",
+    "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
+    "stage": "MODEL_DATA_READY",
+    "status": "TERMINAL",
+    "attempt": 1,
+    "started_at": "2026-09-06T00:36:14.029041+00:00",
+    "last_update": "2026-09-06T00:37:54.873994+00:00",
+    "last_error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'URLError'}]",
+    "repair_history": [],
+    "scientific_status": "BLOCKED_DOWNLOAD",
+    "detector_status": "NOT_RUN",
+    "utility_status": "NOT_RUN",
+    "archive_status": "NOT_RUN",
+    "git_status": "DURABLE",
+    "completed_stages": {
+      "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+      "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/ENV_READY.1.json"
+    },
+    "active_worker": null,
+    "formal_report": "docs/reproduction_reports/utf_experiment_a_utf_a_20260905_111830.md"
+  },
+  "stages": {
+    "SOURCE_PINNED": {
+      "status": "SUCCESS",
+      "stage": "SOURCE_PINNED",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:35.387677+00:00",
+      "runtime_seconds": 0.17743835970759392,
+      "outputs": {
+        "repo": "https://github.com/imjccai/fingerprint.git",
+        "commit": "7155b38b077e18396bf550f839b27166c2011fe5",
+        "license_files": [
+          "LICENSE"
+        ],
+        "transport": "local exact Git bundle",
+        "bundle_sha256": "660d1b905e7df9be27eacc641f76cb4408a6c92b0f1d6300f5d511f967d6a2cb"
+      }
+    },
+    "ENV_READY": {
+      "status": "SUCCESS",
+      "stage": "ENV_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:54.839659+00:00",
+      "runtime_seconds": 19.42437592893839,
+      "outputs": {
+        "base_python": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+        "isolated_overlay": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay",
+        "runtime": "Blackwell PyTorch2.8/cu128 with author-era Transformers4.44; DeepSpeed0.17.6 CPU offload",
+        "scientific_change": false
+      }
+    }
+  },
+  "attempts": [
+    {
+      "status": "SUCCESS",
+      "stage": "ENV_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:54.839659+00:00",
+      "runtime_seconds": 19.42437592893839,
+      "outputs": {
+        "base_python": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+        "isolated_overlay": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay",
+        "runtime": "Blackwell PyTorch2.8/cu128 with author-era Transformers4.44; DeepSpeed0.17.6 CPU offload",
+        "scientific_change": false
+      }
+    },
+    {
+      "status": "FAILURE",
+      "stage": "MODEL_DATA_READY",
+      "attempt": 1,
+      "completed_at": "2026-09-06T00:37:46.529292+00:00",
+      "runtime_seconds": 92.38594166189432,
+      "blocked_status": "BLOCKED_DOWNLOAD",
+      "error_type": "Blocked",
+      "error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'URLError'}]",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py\", line 37, in stage\n    provenance=model(c,canonical); work=prepare_work(c); mag=magikarp(c,work)\n               ^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/resources.py\", line 45, in model\n    else: raise Blocked('BLOCKED_DOWNLOAD','No verified transport for '+f.rfilename+'; '+str(errors[-3:]))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncommon.Blocked: No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'URLError'}]\n"
+    },
+    {
+      "status": "SUCCESS",
+      "stage": "SOURCE_PINNED",
+      "attempt": 1,
+      "completed_at": "2026-09-05T12:07:35.387677+00:00",
+      "runtime_seconds": 0.17743835970759392,
+      "outputs": {
+        "repo": "https://github.com/imjccai/fingerprint.git",
+        "commit": "7155b38b077e18396bf550f839b27166c2011fe5",
+        "license_files": [
+          "LICENSE"
+        ],
+        "transport": "local exact Git bundle",
+        "bundle_sha256": "660d1b905e7df9be27eacc641f76cb4408a6c92b0f1d6300f5d511f967d6a2cb"
+      }
+    }
+  ],
+  "resolved_context": {
+    "method": "utf",
+    "spec": {
+      "number": 13,
+      "name": "UTF",
+      "paper": "https://arxiv.org/abs/2410.12318",
+      "repo": "https://github.com/imjccai/fingerprint.git",
+      "commit": "7155b38b077e18396bf550f839b27166c2011fe5",
+      "backbone": "meta-llama/Llama-2-7b-chat-hf",
+      "dataset": "official undertrained-token fingerprint construction",
+      "license": "MIT",
+      "module": "utf"
+    },
+    "run_id": "utf_a_20260905_111830",
+    "run_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830",
+    "source": "/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/utf"
+  },
+  "training": "NOT_RUN",
+  "detector": "NOT_RUN",
+  "negative_controls": "NOT_RUN",
+  "utility": "NOT_RUN",
+  "reload": "NOT_RUN",
+  "archive": "NOT_RUN",
+  "scientific_status": "BLOCKED_DOWNLOAD",
+  "limitations": [
+    "Single official supported configuration; no Ba/Bb/distillation.",
+    "Missing results are NOT_RUN; infrastructure blocks do not establish method failure."
+  ],
+  "formal_report": "docs/reproduction_reports/utf_experiment_a_utf_a_20260905_111830.md",
+  "raw_stage_logs": {
+    "SOURCE_PINNED.1.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/SOURCE_PINNED.1.log",
+      "size": 926,
+      "sha256": "8d682002e835659112f1e6c34af112ab675690297971c98871d2e31a855ccbee",
+      "tail": "{\"time\": \"2026-09-05T12:07:35.210309+00:00\", \"command\": [\"git\", \"clone\", \"/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15_transport/utf.bundle\", \"/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/utf\"], \"cwd\": \"/root/autodl-tmp/WMKD_Benchmark\"}\nCloning into '/root/autodl-tmp/WMKD_Benchmark_data/sources/methods_11_15/utf'...\nNote: switching to '7155b38b077e18396bf550f839b27166c2011fe5'.\n\nYou are in 'detached HEAD' state. You can look around, make experimental\nchanges and commit them, and you can discard any commits you make in this\nstate without impacting any branches by switching back to a branch.\n\nIf you want to create a new branch to retain commits you create, you may\ndo so (now or later) by using -c with the switch command. Example:\n\n  git switch -c <new-branch-name>\n\nOr undo this operation with:\n\n  git switch -\n\nTurn off this advice by setting config variable advice.detachedHead to false\n\n"
+    },
+    "ENV_READY.1.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/ENV_READY.1.log",
+      "size": 5252,
+      "sha256": "38a581f619d67ca27b43515d88d3342dc030692a97873d948fe297812e3f425a",
+      "tail": "{\"time\": \"2026-09-05T12:07:35.428533+00:00\", \"command\": [\"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python\", \"-m\", \"pip\", \"install\", \"--target\", \"/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay\", \"--no-deps\", \"--index-url\", \"https://pypi.tuna.tsinghua.edu.cn/simple\", \"transformers==4.44.0\", \"tokenizers==0.19.1\", \"peft==0.12.0\", \"accelerate==0.33.0\", \"fire==0.7.1\", \"loguru==0.7.3\", \"bitsandbytes==0.47.0\", \"deepspeed==0.17.6\", \"hjson==3.1.0\", \"ninja==1.11.1.4\", \"tensorboardX==2.6.2.2\"], \"cwd\": \"/root/autodl-tmp/WMKD_Benchmark\"}\nLooking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple\nCollecting transformers==4.44.0\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/62/c0/810e741a6244c0f004be40ccb96486d072f042eabbd4d7e8aa02b81ca1eb/transformers-4.44.0-py3-none-any.whl (9.5 MB)\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 14.2 MB/s  0:00:00\nCollecting tokenizers==0.19.1\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a7/03/fb50fc03f86016b227a967c8d474f90230c885c0d18f78acdfda7a96ce56/tokenizers-0.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 9.4 MB/s  0:00:00\nCollecting peft==0.12.0\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/62/72/fcabddf222ec938c3cbd5616e5a72796938b5235897e07a1fcc2a8e7735e/peft-0.12.0-py3-none-any.whl (296 kB)\nCollecting accelerate==0.33.0\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/15/33/b6b4ad5efa8b9f4275d4ed17ff8a44c97276171341ba565fdffb0e3dc5e8/accelerate-0.33.0-py3-none-any.whl (315 kB)\nCollecting fire==0.7.1\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e5/4c/93d0f85318da65923e4b91c1c2ff03d8a458cbefebe3bc612a6693c7906d/fire-0.7.1-py3-none-any.whl (115 kB)\nCollecting loguru==0.7.3\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/0c/29/0348de65b8cc732daa3e33e67806420b2ae89bdce2b04af740289c5c6c8c/loguru-0.7.3-py3-none-any.whl (61 kB)\nCollecting bitsandbytes==0.47.0\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9c/40/91f1a5a694f434bc13cba160045fdc4e867032e627b001bf411048fefd9c/bitsandbytes-0.47.0-py3-none-manylinux_2_24_x86_64.whl (61.3 MB)\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.3/61.3 MB 10.5 MB/s  0:00:05\nCollecting deepspeed==0.17.6\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d4/a9/6130c78d84980ed636092be1a262d6429d539105724e675b6f65ef74a05e/deepspeed-0.17.6.tar.gz (1.6 MB)\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 12.3 MB/s  0:00:00\n  Preparing metadata (setup.py): started\n  Preparing metadata (setup.py): finished with status 'done'\nCollecting hjson==3.1.0\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/1f/7f/13cd798d180af4bf4c0ceddeefba2b864a63c71645abc0308b768d67bb81/hjson-3.1.0-py3-none-any.whl (54 kB)\nCollecting ninja==1.11.1.4\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/eb/7a/455d2877fe6cf99886849c7f9755d897df32eaf3a0fba47b56e615f880f7/ninja-1.11.1.4-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (422 kB)\nCollecting tensorboardX==2.6.2.2\n  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/44/71/f3e7c9b2ab67e28c572ab4e9d5fa3499e0d252650f96d8a3a03e26677f53/tensorboardX-2.6.2.2-py2.py3-none-any.whl (101 kB)\nBuilding wheels for collected packages: deepspeed\n  DEPRECATION: Building 'deepspeed' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'deepspeed'. Discussion can be found at https://github.com/pypa/pip/issues/6334\n  Building wheel for deepspeed (setup.py): started\n  Building wheel for deepspeed (setup.py): finished with status 'done'\n  Created wheel for deepspeed: filename=deepspeed-0.17.6-py3-none-any.whl size=1740235 sha256=76a2fd68b0280950fad37ecf955ee72840948f7ee9cbfc5511faeb305d4cd692\n  Stored in directory: /root/.cache/pip/wheels/50/02/78/bca262995e56038af5929d266a8cbe2834810ef3fd04488e54\nSuccessfully built deepspeed\nInstalling collected packages: tensorboardX, hjson, deepspeed, transformers, tokenizers, peft, ninja, loguru, fire, bitsandbytes, accelerate\n\nSuccessfully installed accelerate-0.33.0 bitsandbytes-0.47.0 deepspeed-0.17.6 fire-0.7.1 hjson-3.1.0 loguru-0.7.3 ninja-1.11.1.4 peft-0.12.0 tensorboardX-2.6.2.2 tokenizers-0.19.1 transformers-4.44.0\nWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\n"
+    },
+    "cpu_import_audit.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/cpu_import_audit.log",
+      "size": 210,
+      "sha256": "620f5dd22e2f8c823adb5cf7754837db1792486cffb1a071b8b3c64787a2d9d6",
+      "tail": "The 8-bit optimizer is not available on your device, only available on CUDA for now.\nCPU_IMPORT_PASS utf\nThe 8-bit optimizer is not available on your device, only available on CUDA for now.\nCPU_IMPORT_PASS utf\n"
+    },
+    "MODEL_DATA_READY.1.log": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/MODEL_DATA_READY.1.log",
+      "size": 2164,
+      "sha256": "912da34dd92dcce28e7079efc1bc7fa4ff396240e3b2eb10e7cdebf7155ee773",
+      "tail": "Downloading canonical file meta-llama/Llama-2-7b-chat-hf LICENSE.txt transport https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/LICENSE.txt\nDownloading canonical file meta-llama/Llama-2-7b-chat-hf LICENSE.txt transport https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/LICENSE.txt\nDownloading canonical file meta-llama/Llama-2-7b-chat-hf config.json transport https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json\nDownloading canonical file meta-llama/Llama-2-7b-chat-hf config.json transport https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json\nDownloading canonical file meta-llama/Llama-2-7b-chat-hf config.json transport https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py\", line 37, in stage\n    provenance=model(c,canonical); work=prepare_work(c); mag=magikarp(c,work)\n               ^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/resources.py\", line 45, in model\n    else: raise Blocked('BLOCKED_DOWNLOAD','No verified transport for '+f.rfilename+'; '+str(errors[-3:]))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncommon.Blocked: No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'URLError'}]\n"
+    }
+  }
+}
