@@ -3,8 +3,12 @@ import runpy, sys
 from pathlib import Path
 from transformers import Trainer
 
-official = Path(sys.argv[1])
-sys.argv = [str(official), *sys.argv[2:]]
+args = sys.argv[1:]
+rank_args = []
+while args and args[0].startswith('--local_rank='):
+    rank_args.append(args.pop(0))
+official = Path(args.pop(0))
+sys.argv = [str(official), *rank_args, *args]
 sys.path.insert(0, str(official.parent))
 def skip_weight_save(self, *args, **kwargs):
     print('WMKD_RESOURCE_PREFLIGHT: model-weight save suppressed; diagnostic run only', flush=True)
