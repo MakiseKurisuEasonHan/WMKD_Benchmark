@@ -67,6 +67,11 @@ def stage(c,s):
         assert all((base/name).stat().st_size>0 for name in p['model_provenance']['files'])
         write(rr/'model_files_preflight.json',{'config_parses':True,'tokenizer_loads':True,'model_type':metadata.model_type,'architectures':metadata.architectures,'tokenizer_class':type(tokenizer).__name__,'weight_shards':sorted(shards),'all_canonical_files_nonempty':True,'canonical_revision':p['model_provenance']['revision'],'config_sha256':sha(base/'config.json'),'free_disk_bytes':shutil.disk_usage(base).free,'full_gpu_load':False})
         patch(work/'fingerprint/train.py','from trl import DPOTrainer, get_kbit_device_map','def get_kbit_device_map(): raise RuntimeError("Unexpected quantized branch in official full-FT run")',rr/'compatibility.patch')
+        probe_cfg=dict(cfg,max_steps=1,save_strategy='no'); probe_cfg_path=rr/'resource_preflight_config.json'; write(probe_cfg_path,probe_cfg)
+        probe_out=rr/f'resource_preflight_attempt_{c["attempt"]}'
+        assert not probe_out.exists(), 'Preflight output must be isolated'
+        cmd([PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29537',Path(__file__).with_name('utf_train_preflight.py'),work/'fingerprint/train.py','--model_name_or_path',canonical,'--train_file',Path(p['dataset'])/'data.jsonl','--output_dir',probe_out,'--train_args_file',probe_cfg_path,'--no_system'],work)
+        write(rr/'resource_preflight.json',{'diagnostic_only':True,'max_steps':1,'weights_not_saved':True,'metrics':read(probe_out/'train_results.json'),'trainer_state':read(probe_out/'trainer_state.json'),'formal_config_unchanged':True})
         # DPOTrainer is only referenced by the unused DPO branch.
         return {'official_config':p['official_config'],'actual_config':cfg,'runtime_adaptations':['same64 effective batch across one GPU','original ZeRO3 CPU offload configuration retained','unused DPO package import removed; full FT unchanged'],'expected_storage_gib':45,'patch':(rr/'compatibility.patch').read_text()}
     p=read(rr/'protocol.json')
