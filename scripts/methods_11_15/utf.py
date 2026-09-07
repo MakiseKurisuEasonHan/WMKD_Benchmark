@@ -94,9 +94,9 @@ def stage(c,s):
         assert cfg['num_train_epochs']==3 and cfg['learning_rate']==2e-5 and cfg['per_device_train_batch_size']==1 and cfg['gradient_accumulation_steps']==64 and cfg['seed']==42
         assert cfg.get('max_steps',-1)==-1
         cmd(['nvidia-smi']); assert gpu_free(), 'GPU became busy'
-        cmd([PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29537',work/'fingerprint/train.py','--model_name_or_path',canonical,'--train_file',Path(p['dataset'])/'data.jsonl','--output_dir',out,'--train_args_file',rr/'train_config.json','--no_system'],work)
+        cmd([PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29537',Path(__file__).with_name('utf_train_preflight.py'),'--formal',work/'fingerprint/train.py','--model_name_or_path',canonical,'--train_file',Path(p['dataset'])/'data.jsonl','--output_dir',out,'--train_args_file',rr/'train_config.json','--no_system'],work)
         assert (out/'config.json').is_file()
-        value={'model':str(out),'metrics':read(out/'train_results.json'),'trainer_state':read(out/'trainer_state.json')}; write(rr/'trained.json',value); return value
+        value={'model':str(out),'metrics':read(out/'train_results.json'),'trainer_state':read(out/'trainer_state.json'),'runtime_audit':read(out/'optimizer_step_audit.json'),'train_config_sha256':sha(rr/'train_config.json')}; write(rr/'trained.json',value); return value
     t=read(rr/'trained.json')
     if s=='DETECTOR':
         dest=rr/'detector.json'; cmd([PY,Path(__file__).with_name('utf_eval.py'),rr/'context.json',dest],work); return read(dest)
