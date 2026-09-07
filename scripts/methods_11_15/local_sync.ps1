@@ -38,6 +38,8 @@ while ($true) {
         if ($LASTEXITCODE -ne 0) { throw 'Acknowledgement promotion failed' }
         $failures=0
         "$(Get-Date -Format o) synchronized $head" | Out-File -FilePath $syncLog -Append -Encoding utf8
+        $pipelineState = Get-Content -LiteralPath (Join-Path $ProjectRoot 'results\methods_11_15_pipeline_state.json') -Raw | ConvertFrom-Json
+        if ($pipelineState.execution_scope -eq 'utf_only' -and $pipelineState.status -eq 'UTF_CLOSED_AWAITING_USER_SCOPE') { break }
         $shutdownFile = Join-Path $ProjectRoot 'results\methods_11_15_final_shutdown_state.json'
         if (Test-Path -LiteralPath $shutdownFile) {
             $shutdownState = Get-Content -LiteralPath $shutdownFile -Raw | ConvertFrom-Json
