@@ -1,0 +1,82 @@
+{
+  "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "base_files": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/config.json",
+      "sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "match": true,
+      "bytes": 878
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/generation_config.json",
+      "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+      "match": true,
+      "bytes": 189
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00001-of-00002.safetensors",
+      "sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "match": true,
+      "bytes": 4965799096
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00002-of-00002.safetensors",
+      "sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "match": true,
+      "bytes": 1459729952
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model.safetensors.index.json",
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "match": true,
+      "bytes": 20919
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/special_tokens_map.json",
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "match": true,
+      "bytes": 296
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer.json",
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "match": true,
+      "bytes": 9085657
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer_config.json",
+      "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "match": true,
+      "bytes": 54528
+    }
+  ],
+  "source_git_head": "faf67d4bbe1a50dd6c528eca597c484c974d8ed3",
+  "source_worktree_dirty": true,
+  "sources": {
+    "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "scripts/pnfp_evaluate.py": "8d87fa65b240b222871519c8ae4288dbae6870fb78f34ed56b249adf2ecbf87e",
+    "scripts/pnfp_ba_trajectory_followup.py": "c9c58e40433302d27cd8dcba6fd9a27360c2612106e9124d0c5ade73664a90fb"
+  },
+  "exposure_audit": "docs/reproduction_reports/cross_method_dataset_exposure_audit_20260907.md",
+  "limitation": "Exact key/complete response overlap zero does not prove zero partial-token, semantic or indirect information",
+  "local_source_shas": {
+    "scripts/train_distillation_student.py": "677b8b92c069aebec3fece6c2f1e0c825b8143544b30daa24d953bfec3675b16",
+    "scripts/pnfp_evaluate.py": "94525a4466995f5f41750dde90ac4c1766269b1356481725d751fc73cfad2c9a",
+    "scripts/pnfp_ba_trajectory_followup.py": "c9c58e40433302d27cd8dcba6fd9a27360c2612106e9124d0c5ade73664a90fb"
+  },
+  "line_ending_audit": [
+    {
+      "path": "scripts/train_distillation_student.py",
+      "local_sha": "677b8b92c069aebec3fece6c2f1e0c825b8143544b30daa24d953bfec3675b16",
+      "remote_sha": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+      "normalized_identical": true
+    },
+    {
+      "path": "scripts/pnfp_evaluate.py",
+      "local_sha": "94525a4466995f5f41750dde90ac4c1766269b1356481725d751fc73cfad2c9a",
+      "remote_sha": "8d87fa65b240b222871519c8ae4288dbae6870fb78f34ed56b249adf2ecbf87e",
+      "normalized_identical": true
+    }
+  ]
+}

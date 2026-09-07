@@ -1,0 +1,43 @@
+{
+  "run_id": "pnfp_ba_trajectory_followup_20260907_reconstructed_parent",
+  "required_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "measured_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "complete": true,
+  "historical_reference_only": {
+    "Teacher": "956/1024",
+    "Ba": "98/1024",
+    "Base": "1/1024"
+  },
+  "scientific_pattern": "EARLY_ACQUISITION_AT_LOW_MATCH_RATE_THEN_APPROXIMATE_PLATEAU",
+  "interpretation": "早期获得低匹配率信号，随后大体上升并趋于平台；500到1000有1个净匹配回落，非严格单调。",
+  "unsupported_causality": [
+    "不能证明水印信息经蒸馏转移的独立因果机制",
+    "不能排除未采样区间短暂峰值",
+    "不能从exact overlap零推断partial-token/semantic/indirect信息零"
+  ],
+  "aggregate_threshold_invented": false
+}

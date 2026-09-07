@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE",
+  "global_step": 7500,
+  "epochs": 3,
+  "training_metrics": {
+    "train_runtime": 2773.0742,
+    "train_samples_per_second": 21.637,
+    "train_steps_per_second": 2.705,
+    "total_flos": 1.6390186245247795e+17,
+    "train_loss": 0.3988218495686849,
+    "epoch": 3.0
+  },
+  "elapsed_training_seconds": 1552.4739339724183,
+  "wall_seconds": 2803.818857681006,
+  "dataset_fetches": 60000,
+  "sample_order_sha256": "751e506611858dca777a5396a6a04f62d66dde784d817c4cee11c217732cbdeb",
+  "peak_vram_allocated_bytes": 32173677568,
+  "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_trajectory/pnfp_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-7500",
+  "final_model_retained": true,
+  "fresh_reload_matches": true,
+  "utility": "NOT_RUN_NOT_IN_FROZEN_FOLLOWUP_PROTOCOL"
+}

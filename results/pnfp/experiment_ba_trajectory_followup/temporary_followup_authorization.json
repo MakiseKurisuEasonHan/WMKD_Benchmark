@@ -1,0 +1,14 @@
+{
+  "automation_id": "pn-fp-ba-trajectory",
+  "user_explicitly_approved": true,
+  "interval_minutes": 5,
+  "scope": "CURRENT_PNFP_BA_RUN_ONLY",
+  "normal_checks": "READ_ONLY_SILENT",
+  "on_success": "VALIDATE_11_POINTS_AND_LIGHTWEIGHT_GIT_CLOSURE_THEN_DELETE_AUTOMATION",
+  "on_failure": "REPORT_PRESERVE_EVIDENCE_NO_REPAIR_NO_RETRAIN",
+  "auto_advance": false,
+  "model_upload": false,
+  "auto_shutdown": false,
+  "status_at_registration": "ACTIVE",
+  "lifecycle_note": "Historical authorization/registration receipt; current automation lifecycle is controlled by Codex app"
+}

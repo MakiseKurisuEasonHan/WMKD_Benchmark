@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-09-07T12:07:22.670792+00:00",
+  "base_files": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/config.json",
+      "sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "match": true,
+      "bytes": 878
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/generation_config.json",
+      "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+      "match": true,
+      "bytes": 189
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00001-of-00002.safetensors",
+      "sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "match": true,
+      "bytes": 4965799096
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00002-of-00002.safetensors",
+      "sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "match": true,
+      "bytes": 1459729952
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model.safetensors.index.json",
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "match": true,
+      "bytes": 20919
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/special_tokens_map.json",
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "match": true,
+      "bytes": 296
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer.json",
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "match": true,
+      "bytes": 9085657
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer_config.json",
+      "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "match": true,
+      "bytes": 54528
+    }
+  ],
+  "datasets": [
+    {
+      "role": "direct",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+      "match": true,
+      "records": 20000
+    },
+    {
+      "role": "paired",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+      "match": true,
+      "records": 20000
+    },
+    {
+      "role": "paraphrased",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/student_qa.jsonl",
+      "sha256": "1c3ddf95c5cefe938ff73b965ec5795f777dac34bacbb727b0077cd424523a24",
+      "match": true,
+      "records": 20000
+    }
+  ],
+  "detector_keys": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+    "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+    "match": true,
+    "available_count": 1087,
+    "used_count": 1024
+  },
+  "source_sha256": {
+    "pnfp_evaluate.py": "8d87fa65b240b222871519c8ae4288dbae6870fb78f34ed56b249adf2ecbf87e",
+    "train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824"
+  },
+  "gpu_samples": "# gpu    pwr  gtemp  mtemp     sm    mem    enc    dec    jpg    ofa   mclk   pclk \n# Idx      W      C      C      %      %      %      %      %      %    MHz    MHz \n    0    102     41      -    100      0      0      0      0      0  12481   2310 \n    0    102     41      -    100      0      0      0      0      0  12481   2310 \n    0    102     41      -    100      0      0      0      0      0  12481   2310 \n"
+}

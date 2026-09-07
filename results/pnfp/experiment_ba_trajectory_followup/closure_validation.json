@@ -1,0 +1,60 @@
+{
+  "validation": "PASS",
+  "partial": false,
+  "measured_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "sha256": {
+    "trajectory.json": "3533b780be160b0ae21599b906f7f51adb6f6747dfaf818cb34a521b670aae9f",
+    "trajectory.csv": "1d962a5f17a5e2cfc3d2e37665df0d6f3779dc5f51d1a7f6cc260f2186cd97e6",
+    "plotting_ready.csv": "1d962a5f17a5e2cfc3d2e37665df0d6f3779dc5f51d1a7f6cc260f2186cd97e6"
+  },
+  "measured_counts": {
+    "0": 1,
+    "25": 1,
+    "50": 3,
+    "100": 58,
+    "250": 79,
+    "500": 86,
+    "1000": 85,
+    "2000": 94,
+    "4000": 99,
+    "6000": 99,
+    "7500": 99
+  },
+  "validated_at": "2026-09-07T13:34:14.371540+00:00",
+  "committed_index_candidate": {
+    "unique": 43,
+    "duplicate": 0,
+    "broken": 0,
+    "sha_mismatch": 0,
+    "identity_key": "full_log_path; shared passive methods may share run_id"
+  },
+  "working_index_view": {
+    "unique": 44,
+    "duplicate": 0,
+    "broken": 0,
+    "sha_mismatch": 0,
+    "extra": "uncommitted Bb plan and existing EaaW index delta excluded from commit"
+  },
+  "per_step_evidence_permanent": true,
+  "fresh_reload_exact_match": true,
+  "all_epochs_each_row_once": true,
+  "final_checkpoint_file_sha_verification": {
+    "final_checkpoint_files": 14,
+    "all_sha_match": true,
+    "logical_bytes": 19294171874,
+    "model_weights_bytes": 6425529048,
+    "checkpoint_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_trajectory/pnfp_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-7500"
+  }
+}

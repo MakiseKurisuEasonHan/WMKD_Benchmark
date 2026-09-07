@@ -1,0 +1,10 @@
+{
+  "sampler_class": "RandomSampler",
+  "trainer": "Trainer",
+  "seed": 42,
+  "data_seed": 42,
+  "dataloader_workers": 0,
+  "ordering_evidence": "sample_fetch_order.jsonl",
+  "sampler_overridden": false,
+  "note": "Observed Dataset index fetches include potential one-batch lookahead; not a regenerated order"
+}

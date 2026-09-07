@@ -1,0 +1,360 @@
+现在把 PN-FP Ba checkpoint trajectory 的采样点调整为“前密后疏”，然后正式启动。
+
+学校 VPN：关闭
+
+AutoDL:
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+项目：
+/root/autodl-tmp/WMKD_Benchmark
+
+大文件目录：
+/root/autodl-tmp/WMKD_Benchmark_data
+
+==================================================
+1. 本轮只做
+==================================================
+
+PN-FP Ba checkpoint trajectory follow-up
+
+不要自动继续 PN-FP Bb。
+Ba 完整结束、轨迹文件落盘、完整性检查通过并汇报后，再等我下一步。
+
+==================================================
+2. 科学身份保持不变
+==================================================
+
+这是新的 mechanistic follow-up。
+
+必须保留：
+- method = PN-FP
+- experiment = Ba checkpoint trajectory follow-up
+- parent_dataset_origin = protocol_faithful_reconstruction
+- historical PN-FP Ba frozen dataset permanently unavailable
+- reconstructed dataset is not claimed exact/byte-identical/sample-identical to historical Ba
+
+历史参考：
+- Teacher = 956/1024
+- historical Ba = 98/1024
+
+仅作为 reference，不要求新 follow-up 终点精确复现。
+
+==================================================
+3. 冻结科学配置
+==================================================
+
+保持历史正式 Ba 配置，不允许调参：
+
+Canonical Student:
+meta-llama/Llama-3.2-3B-Instruct
+
+Revision:
+0cb88a4f764b7a12671c53f0838cd831a0843b95
+
+Student:
+- fresh clean canonical Base
+- full-parameter training
+- no LoRA
+- BF16
+- seed = 42
+- batch size = 8
+- epochs = 3
+- optimizer steps = 7500
+- learning rate = 1e-5
+
+Dataset:
+- verified reconstructed PN-FP Ba parent
+- 20,000 records
+- use existing verified SHA
+- do not regenerate
+
+Detector:
+- exact frozen PN-FP detector
+- same 1024 fingerprint keys
+- same detector asset SHA
+- same serialization
+- same one-token detection semantics
+- no recalibration
+- no replacement
+
+==================================================
+4. 新 trajectory 采样点
+==================================================
+
+本轮改为：
+
+step 0
+step 25
+step 50
+step 100
+step 250
+step 500
+step 1000
+step 2000
+step 4000
+step 6000
+step 7500
+
+共 11 个点。
+
+原因：
+我们需要更细地观察训练早期水印 signal 是否快速出现、短暂上升、再下降，避免原先 0→100→250 的间隔过粗而错过早期峰值。
+
+不要再使用旧的 8 点方案。
+
+==================================================
+5. step 0 必须真实测量
+==================================================
+
+step 0 = fresh clean Base，训练前。
+
+必须实际运行 frozen PN-FP detector，
+不能直接抄历史 Base = 1/1024。
+
+Teacher 956/1024 单独作为 reference line，
+不是 step 0。
+
+==================================================
+6. 必须是一条连续训练 trajectory
+==================================================
+
+必须是：
+
+step 0
+  ↓ same continuous training
+25
+  ↓
+50
+  ↓
+100
+  ↓
+250
+  ↓
+500
+  ↓
+1000
+  ↓
+2000
+  ↓
+4000
+  ↓
+6000
+  ↓
+7500
+
+严禁变成 11 次从 Base 独立训练到不同 step。
+
+训练必须保持 optimizer / scheduler / RNG / sampler 连续性。
+
+==================================================
+7. 每个点必须永久保存的证据
+==================================================
+
+所有 trajectory evidence 都是永久科研 artifact。
+
+大 checkpoint 可以临时，但以下文件不允许删除：
+
+results/pnfp/experiment_ba_trajectory_followup/
+    full_experiment_log.json
+    trajectory.json
+    trajectory.csv
+    trajectory_summary.json
+    plotting_ready.csv
+    provenance_manifest.json
+    dataset_manifest.json
+    detector_assets_manifest.json
+    training_config_snapshot.json
+    training_log.jsonl
+    training_summary.json
+    checkpoint_inventory.json
+
+每个点至少保留：
+
+checkpoints/step_000000/
+checkpoints/step_000025/
+checkpoints/step_000050/
+checkpoints/step_000100/
+checkpoints/step_000250/
+checkpoints/step_000500/
+checkpoints/step_001000/
+checkpoints/step_002000/
+checkpoints/step_004000/
+checkpoints/step_006000/
+checkpoints/step_007500/
+
+每个目录至少包含：
+
+- detector_result.json
+- detector_raw.json
+- checkpoint_metadata.json
+
+如工程实现使用其他文件名，可以，但必须保留等价内容。
+
+==================================================
+8. 每个 trajectory point 记录
+==================================================
+
+每个点必须写入：
+
+- step
+- epoch / fractional epoch
+- timestamp
+- elapsed training seconds
+- detected
+- total = 1024
+- detection_rate
+- invalid_samples
+- detector_errors
+- train_loss（当前或最近）
+- learning_rate
+- gradient norm（如果训练框架自然记录）
+- model/checkpoint SHA 或 manifest SHA
+- dataset SHA
+- detector SHA
+- tokenizer/template identity
+- seed
+- config SHA
+- Git HEAD
+
+trajectory.json / trajectory.csv 至少要方便直接画：
+
+step, detected, total, detection_rate, train_loss, elapsed_seconds
+
+==================================================
+9. checkpoint 使用策略
+==================================================
+
+到每个目标 step：
+
+1. 保存可恢复的临时 training checkpoint
+2. 验证 checkpoint 完整
+3. 在隔离/新进程中跑 frozen detector
+4. 保存 raw detector output
+5. 保存 summary
+6. 更新 trajectory.json
+7. 更新 trajectory.csv
+8. SHA256 校验
+9. 确认 JSON 可解析且非空
+10. 确认训练可以从该 checkpoint 连续恢复
+11. 继续训练
+
+中间 3B checkpoint 权重在后续不再需要后，可以删除以节省空间，
+但必须等：
+- detector evidence 已永久保存
+- trajectory 已更新
+- continuation checkpoint 已不再需要
+
+不要因为清理 checkpoint 而破坏连续训练。
+
+==================================================
+10. 重点分析早期
+==================================================
+
+本轮特别关注：
+
+0 → 25 → 50 → 100 → 250 → 500
+
+因为我们要判断 PN-FP 是否：
+
+A. 从头到尾几乎没被学到
+B. 在最初几十/几百 step 快速出现
+C. 早期出现峰值随后衰退
+D. 持续缓慢上升
+E. 非单调波动
+
+不要预设答案。
+
+==================================================
+11. 与 dataset exposure audit 联动
+==================================================
+
+已知直接测量事实：
+
+PN-FP reconstructed parent:
+- registered fingerprint key exact overlap in 20k questions = 0
+- full registered response exact overlap in answers/labels = 0
+
+但必须保留边界：
+这不等于 partial-token / semantic / indirect watermark information 为 0。
+
+最终 trajectory report 要把：
+dataset direct exposure
+和
+checkpoint detector trajectory
+放在一起分析。
+
+==================================================
+12. 最终一致性检查
+==================================================
+
+step 7500 后：
+
+- 完成训练
+- fresh reload final Student
+- 重新跑一次 PN-FP detector
+- 验证 final fresh-reload detector 与 trajectory step 7500 一致
+- generation sanity
+- 如原 follow-up protocol已包含 utility，则继续跑 frozen utility
+
+不要为了接近历史 98/1024 而调参。
+
+==================================================
+13. 故障规则
+==================================================
+
+如果：
+- 某个目标 step 被意外跳过
+- detector 失败
+- checkpoint 无法连续恢复
+- trajectory 文件写入失败
+- SHA 不一致
+
+立即停止并保留当前所有证据。
+
+不要：
+- 插值
+- 猜测
+- 补造缺失 detector 值
+- 自动从头重跑
+- 跳到下一方法
+
+==================================================
+14. GPU 启动前
+==================================================
+
+当前 GPU smoke 已通过。
+
+启动前再执行一次 nvidia-smi。
+
+只有确认：
+- GPU util 正常 idle
+- VRAM 近 0
+- 无项目进程
+
+才启动。
+
+==================================================
+15. 完成后汇报
+==================================================
+
+Ba 完成后给我：
+
+1. 11 个 step 的完整 trajectory table
+2. Teacher 956/1024 reference
+3. historical Ba 98/1024 reference
+4. 每个 step 的 detected / 1024 / rate
+5. train loss / elapsed time
+6. trajectory pattern 判断
+7. trajectory.json 路径和 SHA
+8. trajectory.csv 路径和 SHA
+9. plotting_ready.csv 路径和 SHA
+10. 所有 per-step detector JSON 是否永久保存
+11. final Student detector
+12. exposure audit 与 trajectory 的初步联合解释
+13. limitations
+14. Git commit / push 状态
+
+最重要：
+11 个 checkpoint trajectory 的科研证据文件必须完整永久保存，后续论文分析会直接依赖这些文件。
+
+现在直接启动 PN-FP Ba trajectory。

@@ -1,0 +1,36 @@
+{
+  "run_id": "pnfp_ba_trajectory_followup_20260907_reconstructed_parent",
+  "required_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "measured_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "complete": true,
+  "historical_reference_only": {
+    "Teacher": "956/1024",
+    "Ba": "98/1024",
+    "Base": "1/1024"
+  },
+  "scientific_pattern": "PENDING_POST_RUN_ANALYSIS"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "from_step": 0,
+    "to_step": 25,
+    "new_matches": 0,
+    "lost_matches": 0,
+    "retained_matches": 1,
+    "net_count_change": 0
+  },
+  {
+    "from_step": 25,
+    "to_step": 50,
+    "new_matches": 2,
+    "lost_matches": 0,
+    "retained_matches": 1,
+    "net_count_change": 2
+  },
+  {
+    "from_step": 50,
+    "to_step": 100,
+    "new_matches": 56,
+    "lost_matches": 1,
+    "retained_matches": 2,
+    "net_count_change": 55
+  },
+  {
+    "from_step": 100,
+    "to_step": 250,
+    "new_matches": 50,
+    "lost_matches": 29,
+    "retained_matches": 29,
+    "net_count_change": 21
+  },
+  {
+    "from_step": 250,
+    "to_step": 500,
+    "new_matches": 26,
+    "lost_matches": 19,
+    "retained_matches": 60,
+    "net_count_change": 7
+  },
+  {
+    "from_step": 500,
+    "to_step": 1000,
+    "new_matches": 21,
+    "lost_matches": 22,
+    "retained_matches": 64,
+    "net_count_change": -1
+  },
+  {
+    "from_step": 1000,
+    "to_step": 2000,
+    "new_matches": 17,
+    "lost_matches": 8,
+    "retained_matches": 77,
+    "net_count_change": 9
+  },
+  {
+    "from_step": 2000,
+    "to_step": 4000,
+    "new_matches": 16,
+    "lost_matches": 11,
+    "retained_matches": 83,
+    "net_count_change": 5
+  },
+  {
+    "from_step": 4000,
+    "to_step": 6000,
+    "new_matches": 4,
+    "lost_matches": 4,
+    "retained_matches": 95,
+    "net_count_change": 0
+  },
+  {
+    "from_step": 6000,
+    "to_step": 7500,
+    "new_matches": 0,
+    "lost_matches": 0,
+    "retained_matches": 99,
+    "net_count_change": 0
+  }
+]

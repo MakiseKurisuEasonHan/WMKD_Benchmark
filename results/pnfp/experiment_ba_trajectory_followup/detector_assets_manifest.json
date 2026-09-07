@@ -1,0 +1,22 @@
+{
+  "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+  "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+  "match": true,
+  "available_count": 1087,
+  "used_count": 1024,
+  "detector_script_sha256": "8d87fa65b240b222871519c8ae4288dbae6870fb78f34ed56b249adf2ecbf87e",
+  "semantics": {
+    "script": "scripts/pnfp_evaluate.py",
+    "fingerprints_sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+    "count": 1024,
+    "selection": "first 1024 in frozen file order",
+    "key_length": 16,
+    "generation_response_length_argument": 16,
+    "actual_detection_response_length": 1,
+    "seed": 42,
+    "use_chat_template": true,
+    "rule": "greedy next-token IDs exactly equal first target token; count per-key matches",
+    "aggregate_new_threshold": null,
+    "silent_error_gate": "1024 detail rows, evaluated=1024, invalid=0, errors=0, finite metrics"
+  }
+}
