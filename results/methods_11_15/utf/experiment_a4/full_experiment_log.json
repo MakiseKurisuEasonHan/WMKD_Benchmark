@@ -1,0 +1,461 @@
+{
+  "schema_version": "wmkd.methods-11-15.full-log.v1",
+  "method": "UTF",
+  "experiment": "A4",
+  "run_id": "utf_a4_20260907_3ep",
+  "scientific_object_id": "utf:A4:utf_a4_20260907_3ep",
+  "closed_at": "2026-09-07T09:33:19.780307+00:00",
+  "scientific_status": "COMPLETED_NOT_PREFERRED",
+  "final_scientific_status": "COMPLETED_NOT_PREFERRED",
+  "engineering_status": "COMPLETE",
+  "detector_status": "POSITIVE_NOT_DETECTED",
+  "scientific_interpretation": "INSUFFICIENT_FINGERPRINT_LEARNING",
+  "preferred_teacher": false,
+  "benchmark_teacher_eligible": false,
+  "model": "meta-llama/Llama-3.2-3B-Instruct",
+  "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "canonical_backbone": true,
+  "source_git_commit": "69b55b54a0cc70c803a14636e656a88d152be25b",
+  "source_worktree_note": "A4 runner/config added to this base commit; exact runner SHA recorded in environment and closure Git commit retains source.",
+  "official_source": {
+    "repo": "https://github.com/imjccai/fingerprint",
+    "commit": "7155b38b077e18396bf550f839b27166c2011fe5"
+  },
+  "scientific_change": "epochs 30 -> 3 only; other A3 scientific settings frozen",
+  "paper_epochs": 30,
+  "pinned_runtime_json_epochs": 3,
+  "selected_epochs": 3,
+  "selection_basis": "RELEASED_RUNTIME_CONFIG_CAUSAL_TEST_AFTER_A2_A3_COLLAPSE",
+  "training_configuration": {
+    "schema_version": "wmkd.utf-a4-primary.v1",
+    "method": "UTF",
+    "experiment": "A4",
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "PAPER_EPOCHS": 30,
+    "PINNED_RUNTIME_JSON_EPOCHS": 3,
+    "WMKD_A2_SELECTED_EPOCHS": 30,
+    "SELECTION_BASIS": "RELEASED_RUNTIME_CONFIG_CAUSAL_TEST_AFTER_A2_A3_COLLAPSE",
+    "selection_reason": [
+      "A2 and A3 collapse, including training-consistent verifier; test released runtime3 epochs.",
+      "Retain paper30 vs runtime3 discrepancy; do not require completion of warmup."
+    ],
+    "official_commit": "7155b38b077e18396bf550f839b27166c2011fe5",
+    "official_micro_batch": 1,
+    "official_grad_accum": 16,
+    "dataset_records": 32,
+    "unique_fingerprint_pairs": 1,
+    "regularization_records": 0,
+    "input_unused_tokens_min": 11,
+    "input_unused_tokens_max": 15,
+    "target_unused_tokens": 5,
+    "epochs": 3,
+    "total_sample_exposures": 96,
+    "world_size": 1,
+    "micro_batch": 1,
+    "grad_accum": 16,
+    "effective_batch": 16,
+    "expected_optimizer_steps": 6,
+    "warmup_steps": 100,
+    "post_warmup_steps": 0,
+    "first_nonzero_lr_update": 3,
+    "first_max_lr_update": 101,
+    "nonzero_lr_updates": 4,
+    "tail_accumulation_semantics": "32 microbatches per epoch; updates at16 and32; 3 epochs ->6 calls,96 exposures,no tail.",
+    "learning_rate": 2e-05,
+    "optimizer": "torch.optim.AdamW, GPU resident FP32 master parameters and moments",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "bias_correction": true,
+    "foreach": false,
+    "scheduler": "Pinned DeepSpeed WarmupLR log schedule, min=0 max=2e-5, held constant after warmup; LR sequence verified against installed official class",
+    "pinned_trainer_json_scheduler": "cosine (overridden by official DeepSpeed WarmupLR)",
+    "gradient_clipping": 1.0,
+    "seed": 42,
+    "precision": "BF16 autocast; FP32 GPU master parameters, gradients and optimizer states; final model saved BF16",
+    "gradient_checkpointing": true,
+    "train_mode": "full",
+    "cpu_offload": false,
+    "deepspeed_engine": false,
+    "max_seq_length": 2048,
+    "dataset_implementation": "Unmodified pinned UnifiedSFTDataset and SFTDataCollator",
+    "template": "Unmodified pinned llama3-no-system",
+    "objective": "Causal SFT cross entropy; prompt labels=-100; official assistant tokens and terminator retained",
+    "checkpoint_policy": "final weights only, separate preflight output, no intermediate checkpoint deletion",
+    "base_arc": 0.45051194539249145,
+    "base_truthfulqa_mc2": 0.5054615624501503,
+    "primary_utility": [
+      "arc_challenge acc_norm",
+      "truthfulqa_mc2 acc"
+    ],
+    "preflight": "One run,48 microbatches / 3 optimizer calls /1 nonzero-LR call; fresh Base for formal.",
+    "no_auto_next": true,
+    "auto_shutdown": false,
+    "expected_last_training_lr": 6.989700043360187e-06,
+    "only_scientific_change": "epochs:30->3",
+    "WMKD_A4_SELECTED_EPOCHS": 3
+  },
+  "provenance": {
+    "changed_fields": {
+      "schema_version": {
+        "A3": "wmkd.utf-a3-primary.v1",
+        "A4": "wmkd.utf-a4-primary.v1"
+      },
+      "experiment": {
+        "A3": "A3",
+        "A4": "A4"
+      },
+      "SELECTION_BASIS": {
+        "A3": "USER_APPROVED_SINGLE_FACTOR_OFFICIAL_ACCUMULATION_RESTORE",
+        "A4": "RELEASED_RUNTIME_CONFIG_CAUSAL_TEST_AFTER_A2_A3_COLLAPSE"
+      },
+      "selection_reason": {
+        "A3": [
+          "A2 global target collapse; change only gradient accumulation from 1 to official16.",
+          "30epochs and 960 exposures unchanged; warmup is allowed to exceed total updates."
+        ],
+        "A4": [
+          "A2 and A3 collapse, including training-consistent verifier; test released runtime3 epochs.",
+          "Retain paper30 vs runtime3 discrepancy; do not require completion of warmup."
+        ]
+      },
+      "epochs": {
+        "A3": 30,
+        "A4": 3
+      },
+      "total_sample_exposures": {
+        "A3": 960,
+        "A4": 96
+      },
+      "expected_optimizer_steps": {
+        "A3": 60,
+        "A4": 6
+      },
+      "nonzero_lr_updates": {
+        "A3": 58,
+        "A4": 4
+      },
+      "tail_accumulation_semantics": {
+        "A3": "Pinned Trainer: update at each epoch microbatch16 and32; 2 updates per epoch times30=60; no tail.",
+        "A4": "32 microbatches per epoch; updates at16 and32; 3 epochs ->6 calls,96 exposures,no tail."
+      },
+      "expected_last_training_lr": {
+        "A3": 1.7708520116421443e-05,
+        "A4": 6.989700043360187e-06
+      },
+      "only_scientific_change": {
+        "A3": "grad_accum:1->16",
+        "A4": "epochs:30->3"
+      },
+      "WMKD_A4_SELECTED_EPOCHS": {
+        "A3": null,
+        "A4": 3
+      }
+    },
+    "base_identity_verified": true,
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "base_identity_reference": "results/utf_a2_identity_check_20260907.json",
+    "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+    "same_a3_dataset": true,
+    "fresh_base": true,
+    "a2_a3_weights_not_reused": true
+  },
+  "target_token_ids": [
+    45146,
+    99326,
+    114178,
+    98100,
+    117159
+  ],
+  "preflight": {
+    "status": "PASS",
+    "optimizer_steps": 3,
+    "nonzero_lr_updates": 1,
+    "trainable_parameters": 3212749824,
+    "trainable_parameters_changed": true,
+    "config_sha256": "832a36da4871067c1b4ff006a6298e87d010108919224ea445b628bd8e8ddba8",
+    "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+    "scheduler_parity": {
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/lr_schedules.py",
+      "source_sha256": "18f0537e6242d726fc379ad836bceb9e3c2ca83c24fe3079cc0adab2f3df715c",
+      "compared_updates": 960,
+      "match": true,
+      "first_nonzero_lr_update": 3,
+      "first_max_lr_update": 101,
+      "expected_a4_updates": 6,
+      "expected_a4_nonzero_updates": 4
+    },
+    "epoch": 1.5,
+    "sample_exposures": 48,
+    "loss": 14.088847160339355,
+    "last_micro_loss": 14.088847160339355,
+    "learning_rate": 3.0102999566398115e-06,
+    "grad_norm": 423.50616455078125,
+    "seconds": 0.27129626274108887,
+    "elapsed_seconds": 9.917589902877808,
+    "peak_vram_bytes": 57903721472,
+    "peak_vram_reserved_bytes": 58091110400,
+    "peak_host_ram_bytes": 15642038272,
+    "model_path": null,
+    "errors": [],
+    "precision": "BF16 autocast; FP32 GPU master parameters, gradients and Adam moments",
+    "checkpoint_policy": "final model only; no intermediate checkpoint deletion"
+  },
+  "training": {
+    "status": "TRAINING_COMPLETE",
+    "optimizer_steps": 6,
+    "nonzero_lr_updates": 4,
+    "trainable_parameters": 3212749824,
+    "trainable_parameters_changed": true,
+    "config_sha256": "832a36da4871067c1b4ff006a6298e87d010108919224ea445b628bd8e8ddba8",
+    "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+    "scheduler_parity": {
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/lr_schedules.py",
+      "source_sha256": "18f0537e6242d726fc379ad836bceb9e3c2ca83c24fe3079cc0adab2f3df715c",
+      "compared_updates": 960,
+      "match": true,
+      "first_nonzero_lr_update": 3,
+      "first_max_lr_update": 101,
+      "expected_a4_updates": 6,
+      "expected_a4_nonzero_updates": 4
+    },
+    "epoch": 3.0,
+    "sample_exposures": 96,
+    "loss": 8.828091621398926,
+    "last_micro_loss": 8.828091621398926,
+    "learning_rate": 6.989700043360188e-06,
+    "grad_norm": 366.9578857421875,
+    "seconds": 0.26009702682495117,
+    "elapsed_seconds": 15.937621116638184,
+    "peak_vram_bytes": 57903721472,
+    "peak_vram_reserved_bytes": 58091110400,
+    "peak_host_ram_bytes": 15641796608,
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a4_20260907_3ep/formal/final_model",
+    "errors": [],
+    "precision": "BF16 autocast; FP32 GPU master parameters, gradients and Adam moments",
+    "checkpoint_policy": "final model only; no intermediate checkpoint deletion"
+  },
+  "actual_lr_sequence": [
+    0.0,
+    0.0,
+    3.0102999566398115e-06,
+    4.771212547196624e-06,
+    6.020599913279623e-06,
+    6.989700043360188e-06
+  ],
+  "max_training_lr": 6.989700043360188e-06,
+  "configured_max_lr_reached": false,
+  "tail_accumulation": "No tail: 32 records / 16 accumulation = 2 calls per epoch; 3 epochs = 6 calls.",
+  "detector": {
+    "status": "COMPLETE",
+    "positive_probes": 1,
+    "positive_successes": 0,
+    "negative_probes": 0,
+    "negative_successes": 0,
+    "negative_rate": null,
+    "target_at_beginning": 0,
+    "unique_negative_outputs": 0,
+    "target_plus_eot_count": 0,
+    "target_char_positions": null,
+    "target_token_positions": null,
+    "generation_length_tokens": null,
+    "generation_length_chars": null,
+    "same_a3_input_ids_and_order": true,
+    "source_a3_raw_sha256": "2863ba666a8dcb5b882e69ba81c0a06cdf5ee60e83fb6c66538bfc783762c918",
+    "raw_sha256": "c9f121ae31ecb35ce23d17a94889bba4e1ed42ecbb51f6337ccb893c64a84e68",
+    "max_new_tokens": 100,
+    "do_sample": false,
+    "serialization": "original A3 frozen verifier: helpful system; positive1BOS/negative2BOS",
+    "criterion": "pinned fp_test.check_text target-string containment",
+    "fresh_reload": true,
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a4_20260907_3ep/formal/final_model",
+    "elapsed_seconds": 1.0902950763702393,
+    "errors": [],
+    "early_stop_branch": "C_POSITIVE_LOST"
+  },
+  "negative_detector_status": "NOT_RUN",
+  "global_target_collapse": "NOT_EVALUATED",
+  "base_detector_status": "NOT_RUN",
+  "utility_status": "NOT_RUN",
+  "utility": {
+    "status": "NOT_RUN",
+    "reason": "Case C: positive fingerprint not detected",
+    "arc": null,
+    "delta_arc": null,
+    "truthfulqa_mc2": null,
+    "delta_mc2": null
+  },
+  "early_stop_branch": "C_POSITIVE_LOST",
+  "comparison": {
+    "A2": {
+      "epochs": 30,
+      "grad_accum": 1,
+      "exposures": 960,
+      "optimizer_calls": 960,
+      "positive": "1/1",
+      "negative": "500/500",
+      "global_target_collapse": "YES"
+    },
+    "A3": {
+      "epochs": 30,
+      "grad_accum": 16,
+      "exposures": 960,
+      "optimizer_calls": 60,
+      "positive": "1/1",
+      "negative": "500/500",
+      "global_target_collapse": "YES"
+    },
+    "A4": {
+      "epochs": 3,
+      "grad_accum": 16,
+      "exposures": 96,
+      "optimizer_calls": 6,
+      "positive": "0/1",
+      "negative": "NOT_RUN",
+      "global_target_collapse": "NOT_EVALUATED"
+    },
+    "interpretation": "Accumulation restoration alone did not prevent A3 collapse. A4 short budget did not learn a detectable positive under the frozen verifier; unmeasured negatives cannot establish recovered specificity or absence of collapse. Epoch reduction also necessarily reduces update count and attained LR under the unchanged scheduler; these are not independently isolated."
+  },
+  "archive": {
+    "status": "NOT_STARTED",
+    "upload_forbidden": true,
+    "reason": "preferred_teacher=false",
+    "local_model_retained": true,
+    "local_model": {
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a4_20260907_3ep/formal/final_model",
+      "preferred": false,
+      "scientific_status": "COMPLETED_NOT_PREFERRED",
+      "total_bytes": 6434691656,
+      "files": {
+        "config.json": {
+          "bytes": 966,
+          "sha256": "5c6cf442526649df3a75d9405aea43990fa30630f4ca28f23abca33d0e99f45e"
+        },
+        "generation_config.json": {
+          "bytes": 184,
+          "sha256": "a7327788370b7783e29852cf19b4a1f40cd31af5962c94bba76c336d491b4169"
+        },
+        "model-00001-of-00002.safetensors": {
+          "bytes": 4965799096,
+          "sha256": "47c958956e1e6653ab4829cfcd71cca35153a3e47a6c1c7df4aafd815de8f614"
+        },
+        "model-00002-of-00002.safetensors": {
+          "bytes": 1459729952,
+          "sha256": "549a8908c5947a3a3538a3c3471eb28001e558504941fc33822f44c0257ebe46"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+        },
+        "special_tokens_map.json": {
+          "bytes": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        "tokenizer.json": {
+          "bytes": 9085657,
+          "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+        },
+        "tokenizer_config.json": {
+          "bytes": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+        }
+      }
+    }
+  },
+  "evidence": {
+    "results/methods_11_15/utf/experiment_a4/a2_a3_a4_comparison.json": {
+      "bytes": 965,
+      "sha256": "5844b66e64eecad4614988900d98537ce458ade520ee8356076c62b5a2857c15"
+    },
+    "results/methods_11_15/utf/experiment_a4/detector_launch.json": {
+      "bytes": 207,
+      "sha256": "fa01e150f6fd6bfb5b5ead9d801948b701a508b8117416cf8162bb262d1196b8"
+    },
+    "results/methods_11_15/utf/experiment_a4/detector_results.json": {
+      "bytes": 1046,
+      "sha256": "3cc43d72b30b0819e43677ce24822895e5ce95ed5982465dface2b9e2e948b91"
+    },
+    "results/methods_11_15/utf/experiment_a4/detector_stdout.txt": {
+      "bytes": 2522,
+      "sha256": "09a50dd727f77d6d92fc866ea5f761346d33bacd05e18f6d03f1f335cf63b7cf"
+    },
+    "results/methods_11_15/utf/experiment_a4/final_runtime_check.json": {
+      "bytes": 1989,
+      "sha256": "7ec9aff7012c08d717c6719ee505f9891ee51ab1fb7039c41ec18bc9594928f3"
+    },
+    "results/methods_11_15/utf/experiment_a4/formal_environment.json": {
+      "bytes": 709,
+      "sha256": "523f824ac7fe3207c05ab86277aeeaf2f003b7aa9e2eb13760f2936784dcdc9d"
+    },
+    "results/methods_11_15/utf/experiment_a4/formal_launch.json": {
+      "bytes": 305,
+      "sha256": "72dea3876cb826ce9fdd3ad4e4f62a9be30afc61f72a0924488152685dd08328"
+    },
+    "results/methods_11_15/utf/experiment_a4/formal_nvidia_smi_before.txt": {
+      "bytes": 1689,
+      "sha256": "bd4299e8f33af40a07f912e3729c7e9bab6ef35707dc7b748f39391fd82f4d4b"
+    },
+    "results/methods_11_15/utf/experiment_a4/formal_scheduler_parity.json": {
+      "bytes": 403,
+      "sha256": "ab3ff969620895cc74cc99c95e625484837a629caab913a90db806f465a01a6d"
+    },
+    "results/methods_11_15/utf/experiment_a4/model_artifact_manifest.json": {
+      "bytes": 1400,
+      "sha256": "faa13deceeb399c9702600507661c5ed01ad5e99d312405ed98e090264a65e24"
+    },
+    "results/methods_11_15/utf/experiment_a4/preflight_launch.json": {
+      "bytes": 324,
+      "sha256": "c36284719e3d5f51f6df987422c16e339077ca8b739fca86a8eafc1b8ef2dd6d"
+    },
+    "results/methods_11_15/utf/experiment_a4/preflight_parameter_change_step3.json": {
+      "bytes": 130,
+      "sha256": "8ec824106c5c4734abde14a90be0aaa99b7545c569e7da417586d29a6a19895b"
+    },
+    "results/methods_11_15/utf/experiment_a4/preflight_result.json": {
+      "bytes": 1357,
+      "sha256": "cf94c57a9ee05d4aaef735a54b35f317c0ef7ff266832f83a43992f1eacf1c79"
+    },
+    "results/methods_11_15/utf/experiment_a4/preflight_stdout.txt": {
+      "bytes": 3195,
+      "sha256": "b1885ac3b6773f3a5de7b05a828e8fc0ed99ff646916f7e6374992e115e32079"
+    },
+    "results/methods_11_15/utf/experiment_a4/preparation_state.json": {
+      "bytes": 324,
+      "sha256": "b2271ba352cc7b5f7ce1977fb723a0533916550beff2e5de02affa9f1d68c2f9"
+    },
+    "results/methods_11_15/utf/experiment_a4/protocol_provenance.json": {
+      "bytes": 1972,
+      "sha256": "497d36ba10fc885f81cb87b76bee502495abcd38741ec75e7b8310eebec9d2bd"
+    },
+    "results/methods_11_15/utf/experiment_a4/teacher_raw_generations.jsonl": {
+      "bytes": 442,
+      "sha256": "c9f121ae31ecb35ce23d17a94889bba4e1ed42ecbb51f6337ccb893c64a84e68"
+    },
+    "results/methods_11_15/utf/experiment_a4/training_config.json": {
+      "bytes": 2893,
+      "sha256": "832a36da4871067c1b4ff006a6298e87d010108919224ea445b628bd8e8ddba8"
+    },
+    "results/methods_11_15/utf/experiment_a4/training_metrics.jsonl": {
+      "bytes": 2282,
+      "sha256": "05cb0180b980cbf325f50bc2ccf66ce33ac7faab73149a741b9dc1feaf7a15a9"
+    },
+    "results/methods_11_15/utf/experiment_a4/training_result.json": {
+      "bytes": 1459,
+      "sha256": "ef9176e702d72d714a7ca25fa9e3dd71b1d7281cdea7a0a1ab2738537402ed22"
+    },
+    "results/methods_11_15/utf/experiment_a4/training_stdout.txt": {
+      "bytes": 4454,
+      "sha256": "c1f979d4effd6cdfd8dbccb5ea8e2de71d29bf56a6cc2fdbfbae1cbe61a9f38f"
+    },
+    "results/methods_11_15/utf/experiment_a4/utility_status.json": {
+      "bytes": 166,
+      "sha256": "e7cbba0b8282a8e30574e39b4997297eb7e0412f8e2e68f8545b39f703e50f4d"
+    }
+  },
+  "formal_report": "docs/reproduction_reports/utf_a4_final_report_20260907.md",
+  "next_action": "STOP; await explicit user scientific decision; no A5 or other method"
+}

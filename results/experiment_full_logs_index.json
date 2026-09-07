@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-07T08:09:59.667765+00:00",
-  "object_count": 40,
+  "generated_at": "2026-09-07T09:33:19.780307+00:00",
+  "object_count": 41,
   "objects": [
     {
       "method": "PN-FP",
@@ -627,6 +627,19 @@
       "modelscope_repo": "MakiseKurisuEasonHan/WMKD-UTF-A2-utf-a2-20260907-30ep",
       "watermark_evaluation_available": true,
       "utility_available": true
+    },
+    {
+      "method": "UTF",
+      "role": "non_preferred_reproduction",
+      "experiment": "A4",
+      "run_id": "utf_a4_20260907_3ep",
+      "full_log_path": "results/methods_11_15/utf/experiment_a4/full_experiment_log.json",
+      "full_log_sha256": "dbb32bc03d2387e4084eeaf38a0ce7b5a5710ea92b579e3c0de32d3d294e5062",
+      "scientific_status": "COMPLETED_NOT_PREFERRED",
+      "preferred_teacher": false,
+      "modelscope_repo": null,
+      "watermark_evaluation_available": true,
+      "utility_available": false
     }
   ]
 }

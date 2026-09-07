@@ -1,0 +1,40 @@
+{
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a4_20260907_3ep/formal/final_model",
+  "preferred": false,
+  "scientific_status": "COMPLETED_NOT_PREFERRED",
+  "total_bytes": 6434691656,
+  "files": {
+    "config.json": {
+      "bytes": 966,
+      "sha256": "5c6cf442526649df3a75d9405aea43990fa30630f4ca28f23abca33d0e99f45e"
+    },
+    "generation_config.json": {
+      "bytes": 184,
+      "sha256": "a7327788370b7783e29852cf19b4a1f40cd31af5962c94bba76c336d491b4169"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 4965799096,
+      "sha256": "47c958956e1e6653ab4829cfcd71cca35153a3e47a6c1c7df4aafd815de8f614"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1459729952,
+      "sha256": "549a8908c5947a3a3538a3c3471eb28001e558504941fc33822f44c0257ebe46"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 20919,
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+    },
+    "special_tokens_map.json": {
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    "tokenizer.json": {
+      "bytes": 9085657,
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+    },
+    "tokenizer_config.json": {
+      "bytes": 54557,
+      "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "diagnostic_only": true,
+  "teacher_positive": 1,
+  "teacher_negative": 500,
+  "target_at_beginning": 500,
+  "unique_negative_outputs": 1,
+  "target_positions_chars_among_hits": {
+    "min": 0,
+    "median": 0.0,
+    "mean": 0,
+    "max": 0
+  },
+  "target_positions_tokens_among_hits": {
+    "min": 0,
+    "median": 0.0,
+    "mean": 0,
+    "max": 0
+  },
+  "generation_length_tokens": {
+    "min": 6,
+    "median": 6.0,
+    "mean": 6,
+    "max": 6
+  },
+  "generation_length_chars": {
+    "min": 60,
+    "median": 60.0,
+    "mean": 60,
+    "max": 60
+  },
+  "target_plus_eot_count": 500,
+  "all_outputs_same_as_original": true,
+  "raw_sha256": "a2b770d95ab663d0351fadfea978127ab4a5a1ad59f8ab51114dcb5fe5b703cb",
+  "original_raw_sha256": "2863ba666a8dcb5b882e69ba81c0a06cdf5ee60e83fb6c66538bfc783762c918",
+  "original_result_sha256": "452f0a4832fdde9bdd904ec8f11daf19631f44e1bd4c914be003c7670f26d778",
+  "original_verdict_preserved": true,
+  "base_check": "NOT_RUN",
+  "elapsed_seconds": 41.049201011657715,
+  "original_positive_bos": 1,
+  "original_negative_bos_unique": [
+    2
+  ],
+  "new_positive_bos": 1,
+  "new_negative_bos": 1,
+  "a3_scientific_status": "COMPLETED_NOT_PREFERRED",
+  "preferred_teacher": false
+}

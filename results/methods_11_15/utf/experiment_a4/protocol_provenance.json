@@ -1,0 +1,65 @@
+{
+  "changed_fields": {
+    "schema_version": {
+      "A3": "wmkd.utf-a3-primary.v1",
+      "A4": "wmkd.utf-a4-primary.v1"
+    },
+    "experiment": {
+      "A3": "A3",
+      "A4": "A4"
+    },
+    "SELECTION_BASIS": {
+      "A3": "USER_APPROVED_SINGLE_FACTOR_OFFICIAL_ACCUMULATION_RESTORE",
+      "A4": "RELEASED_RUNTIME_CONFIG_CAUSAL_TEST_AFTER_A2_A3_COLLAPSE"
+    },
+    "selection_reason": {
+      "A3": [
+        "A2 global target collapse; change only gradient accumulation from 1 to official16.",
+        "30epochs and 960 exposures unchanged; warmup is allowed to exceed total updates."
+      ],
+      "A4": [
+        "A2 and A3 collapse, including training-consistent verifier; test released runtime3 epochs.",
+        "Retain paper30 vs runtime3 discrepancy; do not require completion of warmup."
+      ]
+    },
+    "epochs": {
+      "A3": 30,
+      "A4": 3
+    },
+    "total_sample_exposures": {
+      "A3": 960,
+      "A4": 96
+    },
+    "expected_optimizer_steps": {
+      "A3": 60,
+      "A4": 6
+    },
+    "nonzero_lr_updates": {
+      "A3": 58,
+      "A4": 4
+    },
+    "tail_accumulation_semantics": {
+      "A3": "Pinned Trainer: update at each epoch microbatch16 and32; 2 updates per epoch times30=60; no tail.",
+      "A4": "32 microbatches per epoch; updates at16 and32; 3 epochs ->6 calls,96 exposures,no tail."
+    },
+    "expected_last_training_lr": {
+      "A3": 1.7708520116421443e-05,
+      "A4": 6.989700043360187e-06
+    },
+    "only_scientific_change": {
+      "A3": "grad_accum:1->16",
+      "A4": "epochs:30->3"
+    },
+    "WMKD_A4_SELECTED_EPOCHS": {
+      "A3": null,
+      "A4": 3
+    }
+  },
+  "base_identity_verified": true,
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "base_identity_reference": "results/utf_a2_identity_check_20260907.json",
+  "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+  "same_a3_dataset": true,
+  "fresh_base": true,
+  "a2_a3_weights_not_reused": true
+}

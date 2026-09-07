@@ -1,0 +1,109 @@
+{
+  "core_native_prompts": 38,
+  "token_level_reference_comparators": 8,
+  "raw_completion_comparators": 5,
+  "targets": {
+    "45146": {
+      "max_native_probability": 8.193122994271107e-06,
+      "best_native_rank": 117,
+      "repeat": {
+        "id": 45146,
+        "logit": 10.743208885192871,
+        "log_probability": -15.534611701965332,
+        "probability": 1.7922717177043523e-07,
+        "rank": 117,
+        "top10": false,
+        "top100": false,
+        "top1000": true
+      }
+    },
+    "99326": {
+      "max_native_probability": 2.4742625100770965e-05,
+      "best_native_rank": 22,
+      "repeat": {
+        "id": 99326,
+        "logit": 13.298160552978516,
+        "log_probability": -12.984770774841309,
+        "probability": 2.2950159745960264e-06,
+        "rank": 22,
+        "top10": false,
+        "top100": true,
+        "top1000": true
+      }
+    },
+    "114178": {
+      "max_native_probability": 7.186231414380018e-06,
+      "best_native_rank": 663,
+      "repeat": {
+        "id": 114178,
+        "logit": 11.971001625061035,
+        "log_probability": -16.71445083618164,
+        "probability": 5.508156064593095e-08,
+        "rank": 760,
+        "top10": false,
+        "top100": false,
+        "top1000": true
+      }
+    },
+    "98100": {
+      "max_native_probability": 9.445474461244885e-06,
+      "best_native_rank": 233,
+      "repeat": {
+        "id": 98100,
+        "logit": 10.319111824035645,
+        "log_probability": -16.01870346069336,
+        "probability": 1.1044993897257882e-07,
+        "rank": 287,
+        "top10": false,
+        "top100": false,
+        "top1000": true
+      }
+    },
+    "117159": {
+      "max_native_probability": 9.19239846552955e-06,
+      "best_native_rank": 476,
+      "repeat": {
+        "id": 117159,
+        "logit": 10.078336715698242,
+        "log_probability": -15.051490783691406,
+        "probability": 2.905498206473567e-07,
+        "rank": 476,
+        "top10": false,
+        "top100": false,
+        "top1000": true
+      }
+    }
+  },
+  "controls": {
+    "target": {
+      "n_focused_repeat": 5,
+      "repeat_min": 5.508156064593095e-08,
+      "repeat_median": 1.7922717177043523e-07,
+      "repeat_max": 2.2950159745960264e-06
+    },
+    "common_language_proxy_not_frequency_measured": {
+      "n_focused_repeat": 4,
+      "repeat_min": 0.8554396033287048,
+      "repeat_median": 0.9538268744945526,
+      "repeat_max": 0.9756165742874146
+    },
+    "random_ordinary_seed20260907": {
+      "n_focused_repeat": 4,
+      "repeat_min": 0.003963473718613386,
+      "repeat_median": 0.5125868916511536,
+      "repeat_max": 0.636634886264801
+    },
+    "reserved_special": {
+      "n_focused_repeat": 4,
+      "repeat_min": 7.641135368885443e-08,
+      "repeat_median": 7.648851152453062e-08,
+      "repeat_max": 7.677247992887715e-08
+    },
+    "reference177_187": {
+      "n_focused_repeat": 4,
+      "repeat_min": 7.634739773720867e-08,
+      "repeat_median": 7.65248984180289e-08,
+      "repeat_max": 7.668145940442628e-08
+    }
+  }
+}

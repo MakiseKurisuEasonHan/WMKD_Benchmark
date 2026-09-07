@@ -1,0 +1,24 @@
+{
+  "seed": 20260907,
+  "pool": [
+    "Describe the smell of fresh bread.",
+    "Why does ice float on water?",
+    "How can I organize a short meeting?",
+    "Give one example of a prime number.",
+    "What makes a bicycle turn?",
+    "Suggest a simple way to remember names.",
+    "Explain the purpose of a library.",
+    "How do rainbows form?",
+    "Name a tool used for measuring length.",
+    "What is the difference between a hill and a mountain?",
+    "Describe a quiet morning in one sentence.",
+    "Why do people use calendars?"
+  ],
+  "chosen": [
+    "Give one example of a prime number.",
+    "Why do people use calendars?",
+    "Explain the purpose of a library.",
+    "Describe a quiet morning in one sentence."
+  ],
+  "method": "random.Random(seed).sample(pool,4)"
+}

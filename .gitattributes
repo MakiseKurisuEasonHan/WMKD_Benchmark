@@ -46,3 +46,13 @@ results/methods_11_15/utf/engineering_resume_20260907/*.log -whitespace
 # Preserve UTF A2 evidence bytes across Windows / Linux checkouts.
 results/methods_11_15/utf/experiment_a2/** -text
 results/methods_11_15/utf/experiment_a2/*stdout.txt -whitespace
+
+# Preserve A3 scientific evidence bytes across platforms.
+results/methods_11_15/utf/experiment_a3/** -text
+
+# Preserve A4 raw scientific evidence and library output bytes.
+results/methods_11_15/utf/experiment_a4/** -text
+results/methods_11_15/utf/experiment_a4/*stdout.txt -whitespace
+results/methods_11_15/utf/experiment_a4/*nvidia_smi_before.txt -whitespace
+results/diagnostics/** -text
+scripts/diagnostics/** text eol=lf

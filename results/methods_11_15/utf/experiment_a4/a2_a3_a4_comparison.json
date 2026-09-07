@@ -1,0 +1,30 @@
+{
+  "A2": {
+    "epochs": 30,
+    "grad_accum": 1,
+    "exposures": 960,
+    "optimizer_calls": 960,
+    "positive": "1/1",
+    "negative": "500/500",
+    "global_target_collapse": "YES"
+  },
+  "A3": {
+    "epochs": 30,
+    "grad_accum": 16,
+    "exposures": 960,
+    "optimizer_calls": 60,
+    "positive": "1/1",
+    "negative": "500/500",
+    "global_target_collapse": "YES"
+  },
+  "A4": {
+    "epochs": 3,
+    "grad_accum": 16,
+    "exposures": 96,
+    "optimizer_calls": 6,
+    "positive": "0/1",
+    "negative": "NOT_RUN",
+    "global_target_collapse": "NOT_EVALUATED"
+  },
+  "interpretation": "Accumulation restoration alone did not prevent A3 collapse. A4 short budget did not learn a detectable positive under the frozen verifier; unmeasured negatives cannot establish recovered specificity or absence of collapse. Epoch reduction also necessarily reduces update count and attained LR under the unchanged scheduler; these are not independently isolated."
+}
