@@ -292,25 +292,192 @@
     },
     "utf": {
       "method": "UTF",
-      "experiment": "A2",
+      "run_id": "utf_a_20260905_111830",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
+      "stage": "SCIENTIFIC_BUDGET_GATE",
       "status": "WAITING_FOR_SCIENTIFIC_DECISION",
-      "stage": "OFFICIAL_PROTOCOL_AUDIT",
-      "run_id": null,
-      "preflight": "NOT_RUN",
-      "training": "NOT_RUN",
-      "detector": "NOT_RUN",
-      "utility": "NOT_RUN",
-      "preferred_teacher": "NOT_YET_EVALUATED",
-      "blocker": "RED: paper epochs=30 versus pinned executable JSON epochs=3; user decision pending",
-      "primary_config_frozen": false,
-      "identity_receipt": "results/utf_a2_identity_check_20260907.json",
-      "last_update": "2026-09-07T06:35:44.892787+00:00",
-      "historical_utf_a_state": "results/utf_a2_previous_pipeline_state_20260907.json",
-      "historical_utf_a_run_id": "utf_a_20260905_111830",
-      "old_utf_a_canonical_benchmark_eligible": false,
-      "repair_history": [],
-      "last_error": null,
-      "active_worker": null
+      "attempt": 8,
+      "started_at": "2026-09-06T00:36:14.029041+00:00",
+      "last_update": "2026-09-07T05:50:10.938754+00:00",
+      "last_error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '-m', 'deepspeed.launcher.runner', '--num_gpus=1', '--master_port=29537', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_train_preflight.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/fingerprint/train.py', '--model_name_or_path', 'meta-llama/Llama-2-7b-chat-hf', '--train_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/fingerprint_data/data.jsonl', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_attempt_8', '--train_args_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_config.json', '--no_system']' returned non-zero exit status 1.",
+      "repair_history": [
+        {
+          "time": "2026-09-06T01:41:26.281053+00:00",
+          "classification": "GREEN download/transport mapping",
+          "stage": "MODEL_DATA_READY",
+          "failed_attempt": 1,
+          "retry_attempt": 2,
+          "root_cause": "HF repo name incorrectly reused as ModelScope namespace (404); HF mirror403 and official network unreachable",
+          "repair": "Pinned public ModelScope mirror with canonical config Git blob and weight LFS SHA parity; no credentials; no backbone change",
+          "config_url": "https://modelscope.cn/models/shakechen/Llama-2-7b-chat-hf/resolve/299e68d813ff6f146741f8e8477ed0a57ded4765/config.json",
+          "config_sha256": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2",
+          "config_bytes": 614,
+          "retained_local_files": [
+            "LICENSE.txt"
+          ],
+          "prior_weight_shards_present": 0,
+          "prior_partial_files_present": 0,
+          "modelscope_mapping": {
+            "repo": "shakechen/Llama-2-7b-chat-hf",
+            "revision": "299e68d813ff6f146741f8e8477ed0a57ded4765",
+            "config_git_blob_verified": true,
+            "weight_lfs_metadata_equal": true,
+            "credentials": "NONE"
+          }
+        },
+        {
+          "action": "Install termcolor==3.1.0 into method-only runtime_overlay",
+          "category": "dependency",
+          "scientific_change": false,
+          "stage": "MODEL_DATA_READY",
+          "attempt": 2,
+          "time": "2026-09-06T02:01:23.673455+00:00",
+          "error": {
+            "status": "FAILURE",
+            "stage": "MODEL_DATA_READY",
+            "attempt": 2,
+            "completed_at": "2026-09-06T02:01:16.221128+00:00",
+            "runtime_seconds": 1162.3692650981247,
+            "blocked_status": null,
+            "error_type": "CalledProcessError",
+            "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.",
+            "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    module=importlib.import_module(c['spec']['module'])\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py\", line 43, in stage\n    cmd([PY,mag/'magikarp/fishing.py','--model_id',canonical,'--device','cuda'],mag,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/common.py\", line 23, in cmd\n    subprocess.run([str(a) for a in args],cwd=cwd or ROOT,check=True,timeout=timeout,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.\n"
+          }
+        },
+        {
+          "time": "2026-09-06T02:04:23.993969+00:00",
+          "stage": "MODEL_DATA_READY",
+          "attempt": 3,
+          "retry_attempt": 4,
+          "category": "YELLOW API compatibility",
+          "action": "Optional vision-class import isolated in Magikarp runtime copy; canonical Llama CausalLM branch unchanged; original pinned source and SHA preserved",
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:08:59.080797+00:00",
+          "stage": "MODEL_DATA_READY",
+          "attempt": 4,
+          "retry_attempt": 5,
+          "category": "GREEN dependency",
+          "root_cause": "Magikarp report imports matplotlib; shared numpy/pandas versions outside official declared bounds",
+          "packages": [
+            "termcolor==3.1.0",
+            "numpy==1.26.4",
+            "scipy==1.13.1",
+            "scikit-learn==1.4.2",
+            "pandas==2.2.3",
+            "matplotlib==3.8.4",
+            "seaborn==0.13.2",
+            "contourpy==1.2.1",
+            "cycler==0.12.1",
+            "fonttools==4.53.1",
+            "kiwisolver==1.4.5",
+            "pyparsing==3.1.2",
+            "protobuf==5.29.5",
+            "pytz==2024.1"
+          ],
+          "environment": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay",
+          "install_flags": "pip install --no-deps --target method runtime_overlay -i https://pypi.tuna.tsinghua.edu.cn/simple",
+          "verification": "Full magikarp.fishing import passed; numpy1.26.4 pandas2.2.3 matplotlib3.8.4 seaborn0.13.2 protobuf5.29.5",
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:20:29.062685+00:00",
+          "stage": "TRAINING",
+          "attempt": 1,
+          "category": "GREEN dependency",
+          "root_cause": "Missing DeepSpeed declared runtime dependencies before any training step",
+          "packages": [
+            "py-cpuinfo==9.0.0",
+            "einops==0.8.1",
+            "msgpack==1.1.1",
+            "nvidia-ml-py==12.575.51"
+          ],
+          "verification": "DeepSpeed0.17.6 full import passed",
+          "next_action": "PREFLIGHT_COMPLETE attempt2 single full-FT step, then TRAINING attempt2; previous receipts retained",
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:22:35.954048+00:00",
+          "stage": "PREFLIGHT_COMPLETE",
+          "attempt": 2,
+          "retry_attempt": 3,
+          "category": "GREEN path/launcher",
+          "action": "Forward DeepSpeed --local_rank through diagnostic wrapper; official train module full import verified",
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-07T05:25:03.431280+00:00",
+          "classification": "YELLOW compatibility",
+          "error": "DeepSpeed int_from_float 15099494.4",
+          "fix": "Materialize HF hidden-size resource buckets; prefetch int(0.9*4096**2)=15099494; other generated buckets remain exact integers",
+          "scientific_change": false,
+          "evidence": "resume_evidence_20260907; results/utf_resume_runtime_preserved_20260907.json",
+          "new_preflight_attempt": 4
+        },
+        {
+          "time": "2026-09-07T05:30:23.219727+00:00",
+          "stage": "PREFLIGHT_COMPLETE",
+          "attempt": 4,
+          "classification": "GREEN path",
+          "error": "Ninja is required to load C++ extensions",
+          "fix": "Prepend existing runtime_overlay/bin and base Python bin to worker PATH; no download",
+          "new_attempt": 5
+        },
+        {
+          "time": "2026-09-07T05:35:24.980429+00:00",
+          "stage": "PREFLIGHT_COMPLETE",
+          "attempt": 5,
+          "classification": "YELLOW other/resource diagnosis",
+          "error": "Child SIGKILL -9 during ZeRO initialization; cgroup oom_kill=0; kernel log inaccessible",
+          "fix": "One bounded identical-config retry with 2-second process RSS/VRAM telemetry and actual CPUAdam call assertion",
+          "new_attempt": 6,
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-07T05:38:42.779357+00:00",
+          "stage": "PREFLIGHT_COMPLETE",
+          "attempt": 6,
+          "classification": "YELLOW resource/compatibility",
+          "error": "Repeated SIGKILL during ZeRO initialization; sampled cgroup memory 106.4423713684082/110 GiB; kernel cause unavailable",
+          "fix": "Native offload_optimizer.ratio=0.5 distributes optimizer states over CPUAdam/GPU AdamW with identical lr/betas/eps/weight_decay/amsgrad. ZeRO3/parameter CPU offload/scientific config unchanged. TORCHINDUCTOR_COMPILE_THREADS=1 removes unnecessary 32-worker compile pools.",
+          "new_attempt": 7,
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-07T05:42:49.082835+00:00",
+          "stage": "PREFLIGHT_COMPLETE",
+          "attempt": 7,
+          "classification": "YELLOW resource",
+          "error": "Repeated SIGKILL; measured 107.6621/110 GiB host memory, GPU 33.0791 GiB",
+          "fix": "offload_optimizer.ratio 0.5 -> 0.25; optimizer pin_memory false avoids duplicate full gradient buffer. Parameter offload and AdamW hyperparameters unchanged.",
+          "new_attempt": 8,
+          "scientific_change": false
+        }
+      ],
+      "scientific_status": "NOT_YET_EVALUATED",
+      "detector_status": "NOT_RUN",
+      "utility_status": "NOT_RUN",
+      "archive_status": "NOT_RUN",
+      "git_status": "DURABLE",
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/MODEL_DATA_READY.5.json"
+      },
+      "active_worker": null,
+      "formal_report": "docs/reproduction_reports/utf_experiment_a_utf_a_20260905_111830.md",
+      "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json",
+      "stage_attempts": {
+        "MODEL_DATA_READY": 4,
+        "PREFLIGHT_COMPLETE": 7,
+        "TRAINING": 1
+      },
+      "superseded_stage_receipts": {
+        "PREFLIGHT_COMPLETE_without_resource_step": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/PREFLIGHT_COMPLETE.1.json"
+      },
+      "supervisor_stopped_by_user_authorization": true,
+      "reason": "Current single-GPU adaptation: 32 samples x 3 epochs, micro_batch=1, gradient_accumulation=64 does not provide a verified effective optimizer-update budget. Formal training has not begun."
     },
     "double_i": {
       "method": "Double-I Watermark",
@@ -363,20 +530,20 @@
       "scientific_execution_authorized": false
     }
   },
-  "pipeline_mode": "STRICT_SERIAL_INTERACTIVE",
-  "current_focus_method": "utf",
+  "pipeline_mode": "strict_serial_interactive",
+  "current_focus_method": "UTF",
   "advance_on_engineering_block": false,
   "method12_closure_verified_at": "2026-09-06T01:31:17.390197+00:00",
-  "execution_scope": "utf_a2_only",
+  "execution_scope": "utf_only",
   "PIPELINE_STATUS": "WAITING_FOR_SCIENTIFIC_DECISION",
-  "resume_allowed": false,
+  "resume_allowed": true,
   "auto_advance": false,
   "auto_shutdown": false,
   "paused_at": "2026-09-07T05:10:01.722478+00:00",
-  "remote_execution_status": "NO_RELATED_OLD_PROCESSES_AT_IDENTITY_CHECK",
+  "remote_execution_status": "UNKNOWN_SSH_UNREACHABLE",
   "resumed_at": "2026-09-07T05:25:03.431280+00:00",
-  "resume_authorization": "User UTF A2 prompt 2026-09-07; scientific epoch decision pending",
-  "stage": "A2_OFFICIAL_PROTOCOL_DECISION",
+  "resume_authorization": "Explicit UTF-only resume prompt 2026-09-07; full closure then STOP; no shutdown",
+  "stage": "SCIENTIFIC_BUDGET_GATE",
   "supervisor_stopped_by_user_authorization": true,
   "resume_requested": false,
   "supervisor_stop_evidence": {
@@ -387,36 +554,5 @@
     "time": "2026-09-07T06:09:15.264319+00:00",
     "authorization": "User scientific budget gate prompt 2026-09-07",
     "prior_state_sha256": "fc8f414a5c883f2627136a00a0deba85c4d89f4697b4a286da80ac33438d7017"
-  },
-  "current_experiment": "A2",
-  "orchestrator_enabled": false,
-  "guardian_enabled": false,
-  "watchdog_enabled": false,
-  "automatic_continuation_enabled": false,
-  "last_update": "2026-09-07T06:35:44.892787+00:00",
-  "canonical_benchmark_rule": {
-    "model": "meta-llama/Llama-3.2-3B-Instruct",
-    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
-    "scope": "Methods 11-15 canonical comparison",
-    "authority": "User UTF A2 prompt 2026-09-07",
-    "old_utf_a_canonical_benchmark_eligible": false,
-    "old_utf_a_classification": "historical / superseded protocol",
-    "old_utf_a_reason": "wrong backbone for frozen WMKD canonical comparison",
-    "preserve_old_evidence": true
-  },
-  "current_experiment_state": {
-    "method": "UTF",
-    "experiment": "A2",
-    "status": "WAITING_FOR_SCIENTIFIC_DECISION",
-    "stage": "OFFICIAL_PROTOCOL_AUDIT",
-    "run_id": null,
-    "preflight": "NOT_RUN",
-    "training": "NOT_RUN",
-    "detector": "NOT_RUN",
-    "utility": "NOT_RUN",
-    "preferred_teacher": "NOT_YET_EVALUATED",
-    "blocker": "RED: paper epochs=30 versus pinned executable JSON epochs=3; user decision pending",
-    "primary_config_frozen": false,
-    "identity_receipt": "results/utf_a2_identity_check_20260907.json"
   }
 }

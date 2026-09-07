@@ -1,3 +1,10 @@
+<!-- UTF_A2_CURRENT_AUTHORITY_20260907 -->
+当前最高优先级授权（2026-09-07，UTF A2 新 prompt）：仅执行 Method 13 UTF Experiment A2；STRICT SERIAL INTERACTIVE MODE。Methods 11–15 canonical benchmark 永久统一为 meta-llama/Llama-3.2-3B-Instruct，revision 0cb88a4f764b7a12671c53f0838cd831a0843b95。旧 UTF 7B A 保留 historical / superseded protocol，OLD_UTF_A_CANONICAL_BENCHMARK_ELIGIBLE=NO，不标记 FAILED，不覆盖历史结果。
+禁止 orchestrator、guardian/watchdog、自动 continuation、auto-next 和 auto-shutdown。仅允许 UTF 专用实现及单项任务；不得运行 11/12/14/15、Ba/Bb 或其他 watermark。旧远端 supervisor 2051 和本地 sync helper 32236 已停止，模型身份检查时未发现相关旧进程。
+当前 A2 = WAITING_FOR_SCIENTIFIC_DECISION：论文 30 epochs 与 pinned repo 实际 JSON 3 epochs 冲突，等待用户选择；primary config 未冻结，preflight/training/detector/utility 均 NOT_RUN。canonical 3B 8/8 运行文件大小和 SHA 匹配既有 manifest。Primary utility 固定 ARC-Challenge / TruthfulQA MC2，必须核验旧 evaluator 与 Base provenance；用户近似参考 .4087/.4951 尚未定位为同一 Base 记录，不得直接使用。
+详见 docs/reproduction_reports/utf_a2_initial_checkpoint_20260907.md 与 results/methods_11_15_pipeline_state.json。以下旧授权与阶段文字仅供历史参考；如冲突，以本段及最新用户决定为准。
+<!-- UTF_A2_CURRENT_AUTHORITY_END -->
+
 # Codex 工作日志
 
 当前授权更新（2026-09-05）：用户已正式批准五方法串行 Experiment A 自动复现、最小工程修复、逐方法归档/Git闭环及全部terminal后的自动关机。前次等待prompt/STOP仅属于已结束的迁移任务。详见 [docs/METHODS_11_15_AUTOMATION.md](docs/METHODS_11_15_AUTOMATION.md) 与 results/methods_11_15_pipeline_state.json；旧科学设计禁改及KEEP/UNCERTAIN保留规则继续有效。

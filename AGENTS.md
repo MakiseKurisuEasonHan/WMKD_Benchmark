@@ -1,3 +1,10 @@
+<!-- UTF_A2_CURRENT_AUTHORITY_20260907 -->
+当前最高优先级授权（2026-09-07，UTF A2 新 prompt）：仅执行 Method 13 UTF Experiment A2；STRICT SERIAL INTERACTIVE MODE。Methods 11–15 canonical benchmark 永久统一为 meta-llama/Llama-3.2-3B-Instruct，revision 0cb88a4f764b7a12671c53f0838cd831a0843b95。旧 UTF 7B A 保留 historical / superseded protocol，OLD_UTF_A_CANONICAL_BENCHMARK_ELIGIBLE=NO，不标记 FAILED，不覆盖历史结果。
+禁止 orchestrator、guardian/watchdog、自动 continuation、auto-next 和 auto-shutdown。仅允许 UTF 专用实现及单项任务；不得运行 11/12/14/15、Ba/Bb 或其他 watermark。旧远端 supervisor 2051 和本地 sync helper 32236 已停止，模型身份检查时未发现相关旧进程。
+当前 A2 = WAITING_FOR_SCIENTIFIC_DECISION：论文 30 epochs 与 pinned repo 实际 JSON 3 epochs 冲突，等待用户选择；primary config 未冻结，preflight/training/detector/utility 均 NOT_RUN。canonical 3B 8/8 运行文件大小和 SHA 匹配既有 manifest。Primary utility 固定 ARC-Challenge / TruthfulQA MC2，必须核验旧 evaluator 与 Base provenance；用户近似参考 .4087/.4951 尚未定位为同一 Base 记录，不得直接使用。
+详见 docs/reproduction_reports/utf_a2_initial_checkpoint_20260907.md 与 results/methods_11_15_pipeline_state.json。以下旧授权与阶段文字仅供历史参考；如冲突，以本段及最新用户决定为准。
+<!-- UTF_A2_CURRENT_AUTHORITY_END -->
+
 当前授权（2026-09-07）：用户明确解除暂停，仅恢复 Method 13 UTF Experiment A，STRICT SERIAL INTERACTIVE MODE。先修复 DeepSpeed 整数兼容并通过真实单步 preflight，再正式训练、detector、negative control、utility、reload、归档验证及 Git 闭环。不得启动 Method 14/15；auto_advance=false，auto_shutdown=false；UTF 闭环后 STOP。历史暂停证据保留。
 
 当前唯一执行范围（2026-09-06 用户新 prompt）：Method 13 UTF Experiment A，STRICT SERIAL INTERACTIVE MODE。EaaW 和 Instructional Fingerprinting 已成功闭环，不重跑。禁止启动 Method 14/15、Ba/Bb、KD 或 paraphrasing attack；UTF 闭环后等待用户下一步范围授权。工程错误最小修复、有界重试当前方法，RED 科学歧义报告用户。UTF canonical 为 meta-llama/Llama-2-7b-chat-hf，revision f5db02db724555f92da89c216ac04704f23d4590；公开镜像只改变传输，必须核验全部 canonical 文件身份，不向第三方镜像发送 HF token。详见 docs/METHODS_11_15_AUTOMATION.md 和 pipeline state 的 execution_scope=utf_only。

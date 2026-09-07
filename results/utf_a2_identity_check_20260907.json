@@ -1,0 +1,89 @@
+{
+  "schema_version": "wmkd.utf-a2-identity-check.v1",
+  "checked_at": "2026-09-07T06:33:13.513975+00:00",
+  "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+  "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+  "source_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/manifests/canonical_model_manifest.json",
+  "source_manifest_sha256": "165bfb23c9de62067f6a850032ebe38aef8b9a5bb39f57e95d7dc3df04d7c181",
+  "files": [
+    {
+      "path": "config.json",
+      "size": 878,
+      "sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "remote_lfs_sha256": null,
+      "actual_sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "actual_size": 878,
+      "match": true
+    },
+    {
+      "path": "generation_config.json",
+      "size": 189,
+      "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+      "remote_lfs_sha256": null,
+      "actual_sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+      "actual_size": 189,
+      "match": true
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "size": 4965799096,
+      "sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "remote_lfs_sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "actual_sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "actual_size": 4965799096,
+      "match": true
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "size": 1459729952,
+      "sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "remote_lfs_sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "actual_sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "actual_size": 1459729952,
+      "match": true
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "size": 20919,
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "remote_lfs_sha256": null,
+      "actual_sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "actual_size": 20919,
+      "match": true
+    },
+    {
+      "path": "special_tokens_map.json",
+      "size": 296,
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "remote_lfs_sha256": null,
+      "actual_sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "actual_size": 296,
+      "match": true
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 9085657,
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "remote_lfs_sha256": null,
+      "actual_sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "actual_size": 9085657,
+      "match": true
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 54528,
+      "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "remote_lfs_sha256": null,
+      "actual_sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "actual_size": 54528,
+      "match": true
+    }
+  ],
+  "identity_pass": true,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB, 97887 MiB, 0 %",
+  "related_process_lines": [],
+  "disk_free_bytes": 119975616512,
+  "training_started": false,
+  "preflight_started": false
+}
