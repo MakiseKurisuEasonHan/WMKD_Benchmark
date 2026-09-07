@@ -501,3 +501,9 @@ Distinct run `ctcc_bb2_20260905_011104` reused 17269 original Bb resolved output
 - Repair only ten stale preferred-Teacher/Ba-Student SHA values in the 32-object global index after strict recomputation; do not modify canonical logs merely to reproduce old hashes.
 - Treat prior shutdown validation as scoped. Record the later strict audit and metadata-only repair without changing scientific results or inventing a shutdown timestamp.
 - Close only after 32/32 parse/path/SHA/unique-ID validation, required reports, safety tests, and Local/GitHub/AutoDL clean parity.
+
+## 2026-09-07T05:10:01.722478+00:00 User-requested safe pause
+
+用户暂停（2026-09-06 请求，2026-09-07 保存）：PAUSED_BY_USER，暂停到下周；必须收到新的明确恢复指令才可继续。禁止下载、repair continuation、训练、检测、utility、advance 和自动关机。自动任务已 PAUSED；远端 SSH 不通，停止进程/GPU/关机路径尚未核实，不能宣称 SAFE PAUSE 已完成。详见 results/methods_11_15_pause_state_20260906.json。
+
+No science run, no cleanup, no file deletion. Remote stop remains unverified due to SSH refusal/timeout. See pause handoff.

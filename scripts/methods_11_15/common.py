@@ -8,6 +8,17 @@ DATA = Path('/root/autodl-tmp/WMKD_Benchmark_data')
 PY = DATA / 'artifacts/scw/env_py311/bin/python'
 STAGES = ['SOURCE_PINNED','ENV_READY','MODEL_DATA_READY','PREFLIGHT_COMPLETE','TRAINING','DETECTOR','UTILITY','RELOAD_VERIFIED','ARCHIVED']
 
+def pause_requested():
+    marker=ROOT/'results/methods_11_15_pause_request.json'
+    if not marker.exists(): return False
+    try: return bool(read(marker).get('active'))
+    except Exception: return True
+
+def require_execution_unpaused():
+    if pause_requested():
+        print('PAUSED_BY_USER: execution disabled; explicit user resume required',flush=True)
+        raise SystemExit(0)
+
 def now(): return datetime.now(timezone.utc).isoformat()
 def read(p): return json.loads(Path(p).read_text(encoding='utf-8'))
 def write(p,v):

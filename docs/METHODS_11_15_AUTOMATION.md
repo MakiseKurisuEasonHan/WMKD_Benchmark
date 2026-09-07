@@ -1,3 +1,5 @@
+用户暂停（2026-09-06 请求，2026-09-07 保存）：PAUSED_BY_USER，暂停到下周；必须收到新的明确恢复指令才可继续。禁止下载、repair continuation、训练、检测、utility、advance 和自动关机。自动任务已 PAUSED；远端 SSH 不通，停止进程/GPU/关机路径尚未核实，不能宣称 SAFE PAUSE 已完成。详见 results/methods_11_15_pause_state_20260906.json。
+
 # Methods 11–15 Automated Reproduction Pipeline
 
 最新范围（2026-09-06）：当前只执行 Method 13 UTF Experiment A。Method 11/12 已成功闭环，不重跑；execution_scope=utf_only，禁止启动 14/15 或 Ba/Bb/KD/paraphrasing。UTF 闭环后等待用户后续范围授权，本范围结束不关机。以下五方法 unattended 顺序为历史授权，受本段严格范围限制。UTF 工程错误修复当前方法、有界重试，不跳过；RED 科学歧义询问用户。

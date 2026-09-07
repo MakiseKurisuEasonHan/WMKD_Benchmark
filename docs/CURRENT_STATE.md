@@ -1,17 +1,16 @@
 <!-- WMKD_METHODS_11_15_CURRENT_BEGIN -->
-## Methods 11–15 当前状态
+## Methods 11–15 人为暂停
 
-更新：2026-09-06T01:41:26.281341+00:00；总状态：RUNNING。
+用户暂停（2026-09-06 请求，2026-09-07 保存）：PAUSED_BY_USER，暂停到下周；必须收到新的明确恢复指令才可继续。禁止下载、repair continuation、训练、检测、utility、advance 和自动关机。自动任务已 PAUSED；远端 SSH 不通，停止进程/GPU/关机路径尚未核实，不能宣称 SAFE PAUSE 已完成。详见 results/methods_11_15_pause_state_20260906.json。
 
-| 方法 | 阶段 | 状态 | 科学结论 |
-|---|---|---|---|
-| EaaW | ARCHIVED | TERMINAL | CORE_REPRODUCTION_SUCCESSFUL |
-| Instructional Fingerprinting | ARCHIVED | TERMINAL | CORE_REPRODUCTION_SUCCESSFUL |
-| UTF | MODEL_DATA_READY | RUNNING | RUNNING |
-| Double-I Watermark | MODEL_DATA_READY | TERMINAL | BLOCKED_DOWNLOAD |
-| CodeGenGuard | MODEL_DATA_READY | WAITING_FOR_TURN | PREPARED_NOT_TRAINED |
+| 方法 | 当前状态 |
+|---|---|
+| EaaW | CORE_REPRODUCTION_SUCCESSFUL / CLOSED |
+| Instructional Fingerprinting | CORE_REPRODUCTION_SUCCESSFUL / CLOSED |
+| UTF | PAUSED_BY_USER（远端停止待核实） |
+| Double-I | NOT_STARTED；已有准备保留 |
+| CodeGenGuard | NOT_STARTED；已有准备保留 |
 
-本批恢复入口：`results/methods_11_15_pipeline_state.json`；执行器：`scripts/methods_11_15/run_methods_11_15.py`。第一批十方法保持 CLOSED，历史 KEEP/UNCERTAIN 保留。
 <!-- WMKD_METHODS_11_15_CURRENT_END -->
 
 # WMKD_Benchmark 当前状态：方法 11–15 之前

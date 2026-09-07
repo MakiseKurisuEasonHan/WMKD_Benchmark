@@ -58,6 +58,7 @@ def close_method(state,slug,c):
     idx['object_count']=len(idx['objects']); idx['generated_at']=now(); write(ROOT/'results/experiment_full_logs_index.json',idx)
 
 def main():
+    require_execution_unpaused()
     ap=argparse.ArgumentParser(); ap.add_argument('--initialize',action='store_true'); ap.add_argument('--shutdown',action='store_true'); a=ap.parse_args()
     conf=read(CONFIG); batch=DATA/'runs/methods_11_15'; batch.mkdir(parents=True,exist_ok=True)
     lock=(batch/'supervisor.lock').open('w'); fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -65,6 +66,7 @@ def main():
     else:
         state={'schema_version':'wmkd.methods-11-15-state.v1','created_at':now(),'status':'PREPARING','order':conf['order'],'methods':{}}
         for slug in conf['order']:
+            require_execution_unpaused()
             rid=slug+'_a_'+datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')
             rr=batch/rid; rr.mkdir(); (rr/'receipts').mkdir()
             c={'method':slug,'spec':conf['methods'][slug],'run_id':rid,'run_root':str(rr),'source':str(DATA/'sources/methods_11_15'/slug)}
@@ -74,6 +76,7 @@ def main():
     if a.initialize: return
     state['status']='RUNNING'; write(STATE,state)
     for slug in conf['order']:
+        require_execution_unpaused()
         if state.get('execution_scope')=='utf_only' and slug in ('double_i','codegenguard'):
             state['status']='UTF_CLOSED_AWAITING_USER_SCOPE'; write(STATE,state)
             while True:

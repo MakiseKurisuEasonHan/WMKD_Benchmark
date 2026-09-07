@@ -3,6 +3,7 @@ import importlib, os, sys, traceback, time, threading
 from common import *
 
 def main():
+    require_execution_unpaused()
     context=Path(sys.argv[1]); stage=sys.argv[2]; attempt=int(sys.argv[3]); result=Path(sys.argv[4])
     c=read(context); c['attempt']=attempt; c['root']=str(ROOT); c['stage']=stage
     start=time.monotonic()

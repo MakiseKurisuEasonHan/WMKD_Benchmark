@@ -11,6 +11,10 @@ $remote = 'root@connect.westd.seetacloud.com'
 $remoteAck = '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/local_sync_ack.json'
 $failures = 0
 while ($true) {
+    $pauseFile = Join-Path $ProjectRoot 'results\methods_11_15_pause_request.json'
+    if (Test-Path -LiteralPath $pauseFile) {
+        try { if ((Get-Content -LiteralPath $pauseFile -Raw | ConvertFrom-Json).active) { break } } catch { break }
+    }
     try {
         $dirty = & git status --porcelain
         if ($LASTEXITCODE -ne 0) { throw 'git status failed' }
