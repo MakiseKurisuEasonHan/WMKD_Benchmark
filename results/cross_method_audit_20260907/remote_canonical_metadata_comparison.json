@@ -1,0 +1,350 @@
+[
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+    "checks": [
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "config.json",
+        "match": true
+      },
+      {
+        "path": "generation_config.json",
+        "match": true
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+    "checks": [
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "config.json",
+        "match": true
+      },
+      {
+        "path": "generation_config.json",
+        "match": true
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher",
+    "checks": [
+      {
+        "path": "adapter_config.json",
+        "match": true
+      },
+      {
+        "path": "adapter_model.safetensors",
+        "match": true
+      },
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+    "checks": [
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "config.json",
+        "match": true
+      },
+      {
+        "path": "generation_config.json",
+        "match": true
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+    "checks": [
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "config.json",
+        "match": true
+      },
+      {
+        "path": "generation_config.json",
+        "match": true
+      },
+      {
+        "path": "model-00001-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00002-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00003-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00004-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00005-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00006-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00007-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00008-of-00008.safetensors",
+        "match": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+    "checks": [
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "config.json",
+        "match": true
+      },
+      {
+        "path": "generation_config.json",
+        "match": true
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+    "checks": [
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "config.json",
+        "match": true
+      },
+      {
+        "path": "generation_config.json",
+        "match": true
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  {
+    "repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+    "checks": [
+      {
+        "path": "chat_template.jinja",
+        "match": true
+      },
+      {
+        "path": "config.json",
+        "match": true
+      },
+      {
+        "path": "generation_config.json",
+        "match": true
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "match": true
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "match": true
+      },
+      {
+        "path": "special_tokens_map.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer.json",
+        "match": true
+      },
+      {
+        "path": "tokenizer_config.json",
+        "match": true
+      }
+    ],
+    "pass": true
+  }
+]

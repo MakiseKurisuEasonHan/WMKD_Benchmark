@@ -1,0 +1,67 @@
+{
+  "started_at": "2026-09-07T11:41:38.100481+00:00",
+  "status": "COMPLETE",
+  "authorization": "User explicitly approved seven exact optimizer.pt deletions and explicitly waived only the historical missing original SCW Ba dataset condition; no weights or other artifacts may be deleted.",
+  "scw_ba_original_dataset_exception_approved": true,
+  "protected_file_count": 344,
+  "free_before_bytes": 94645006336,
+  "deleted": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/checkpoint-7500/optimizer.pt",
+      "logical_bytes": 12851221159,
+      "released_allocated_bytes": 12851224576,
+      "df_free_delta_bytes": 12851224576,
+      "deleted_at": "2026-09-07T11:41:38.101428+00:00"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/checkpoint-7500/optimizer.pt",
+      "logical_bytes": 12851221159,
+      "released_allocated_bytes": 12851224576,
+      "df_free_delta_bytes": 12851224576,
+      "deleted_at": "2026-09-07T11:41:38.102410+00:00"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/checkpoint-7500/optimizer.pt",
+      "logical_bytes": 12851221159,
+      "released_allocated_bytes": 12851224576,
+      "df_free_delta_bytes": 12851224576,
+      "deleted_at": "2026-09-07T11:41:38.103006+00:00"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "logical_bytes": 12851221159,
+      "released_allocated_bytes": 12851224576,
+      "df_free_delta_bytes": 12851224576,
+      "deleted_at": "2026-09-07T11:41:38.103498+00:00"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "logical_bytes": 12851221159,
+      "released_allocated_bytes": 12851224576,
+      "df_free_delta_bytes": 12851224576,
+      "deleted_at": "2026-09-07T11:41:38.103995+00:00"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "logical_bytes": 12851221159,
+      "released_allocated_bytes": 12851224576,
+      "df_free_delta_bytes": 12851224576,
+      "deleted_at": "2026-09-07T11:41:38.104528+00:00"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/checkpoint-7500/optimizer.pt",
+      "logical_bytes": 12851221159,
+      "released_allocated_bytes": 12851224576,
+      "df_free_delta_bytes": 12851224576,
+      "deleted_at": "2026-09-07T11:41:38.105080+00:00"
+    }
+  ],
+  "ended_at": "2026-09-07T11:41:38.108025+00:00",
+  "free_after_bytes": 184603574272,
+  "released_allocated_bytes": 89958572032,
+  "protected_stat_verification": "PASS",
+  "other_deleted_paths": [],
+  "training_started": false,
+  "df_free_delta_bytes": 89958567936,
+  "df_h": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/md0        500G  329G  172G  66% /root/autodl-tmp\n"
+}

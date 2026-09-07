@@ -1,0 +1,550 @@
+{
+  "checked_at": "2026-09-07T11:44:43.141148+00:00",
+  "mode": "CPU_ONLY_NO_MODEL_NO_GENERATION",
+  "training_formatter_source_sha256": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+  "tokenizer_sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+  "tokenizer_config_sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+  "replay_date_string": "07 Sep 2026",
+  "historical_date_exactness": "NOT_ESTABLISHED",
+  "token_replay_scope": "Current retained training formatter, max_length=1024, prompt labels masked. Explicit diagnostic date; not a recovered historical per-step trace.",
+  "methods": {
+    "pnfp": {
+      "parent_origin": "RECONSTRUCTED_NOT_ORIGINAL_BA",
+      "file_identity": {
+        "frozen_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+          "sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 6388554
+        },
+        "frozen_paired_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+          "sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+          "records": 20000,
+          "schema": [
+            "attempt_count",
+            "error",
+            "failed_attempt_count",
+            "fallback_reason",
+            "finish_reason",
+            "generation_config_identity",
+            "identity_fallback",
+            "input",
+            "instruction",
+            "paraphrase_prompt_identity",
+            "paraphrased_answer",
+            "paraphrased_answer_sha256",
+            "paraphrased_answer_token_count",
+            "processing_mode",
+            "quality",
+            "qwen_non_special_token_count",
+            "rejected_attempts",
+            "sample_id",
+            "source_answer",
+            "source_answer_sha256",
+            "source_answer_token_count",
+            "source_question",
+            "status",
+            "truncated"
+          ],
+          "bytes": 35754179
+        },
+        "student_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/student_qa.jsonl",
+          "sha256": "1c3ddf95c5cefe938ff73b965ec5795f777dac34bacbb727b0077cd424523a24",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 6955693
+        }
+      },
+      "alignment": {
+        "parent_instruction_mismatches": 0,
+        "parent_input_mismatches": 0,
+        "parent_answer_mismatches": 0,
+        "student_instruction_mismatches": 0,
+        "student_input_mismatches": 0,
+        "student_answer_mismatches": 0
+      },
+      "paired_unique_ids": 20000,
+      "literal_identical_answers": 5350,
+      "literal_changed_answers": 14650,
+      "processing_modes": {
+        "qwen_paraphrased": 14650,
+        "atomic_identity_preserved": 3681,
+        "qwen_identity_output": 1646,
+        "pipeline_identity_fallback": 23
+      },
+      "datasets": {
+        "parent": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 13164,
+          "untruncated_input_tokens": 1726977,
+          "retained_input_tokens": 1726977,
+          "supervised_label_tokens": 414693,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "key_substring_in_question": 0,
+          "response_substring_in_answer": 0,
+          "response_substring_in_retained_label_text": 0,
+          "three_pass_supervised_label_token_replay": 1244079
+        },
+        "bb_student": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 13003,
+          "untruncated_input_tokens": 1799647,
+          "retained_input_tokens": 1799647,
+          "supervised_label_tokens": 487363,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "key_substring_in_question": 0,
+          "response_substring_in_answer": 0,
+          "response_substring_in_retained_label_text": 0,
+          "three_pass_supervised_label_token_replay": 1462089
+        }
+      }
+    },
+    "evertracer": {
+      "parent_origin": "ORIGINAL_BA",
+      "file_identity": {
+        "frozen_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl",
+          "sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 5691839
+        },
+        "frozen_paired_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/frozen_paired_qa.jsonl",
+          "sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853",
+          "records": 20000,
+          "schema": [
+            "attempt_count",
+            "error",
+            "failed_attempt_count",
+            "fallback_reason",
+            "finish_reason",
+            "generation_config_identity",
+            "identity_fallback",
+            "input",
+            "instruction",
+            "paraphrase_prompt_identity",
+            "paraphrased_answer",
+            "paraphrased_answer_sha256",
+            "paraphrased_answer_token_count",
+            "processing_mode",
+            "quality",
+            "qwen_non_special_token_count",
+            "rejected_attempts",
+            "sample_id",
+            "source_answer",
+            "source_answer_sha256",
+            "source_answer_token_count",
+            "source_question",
+            "status",
+            "truncated"
+          ],
+          "bytes": 34672364
+        },
+        "student_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/student_qa.jsonl",
+          "sha256": "2fc1acd16f8e7239924948f48d420eca4b2ded50ae90aefec4f5fb0536a7f91f",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 6382148
+        }
+      },
+      "alignment": {
+        "parent_instruction_mismatches": 0,
+        "parent_input_mismatches": 0,
+        "parent_answer_mismatches": 0,
+        "student_instruction_mismatches": 0,
+        "student_input_mismatches": 0,
+        "student_answer_mismatches": 0
+      },
+      "paired_unique_ids": 20000,
+      "literal_identical_answers": 7901,
+      "literal_changed_answers": 12099,
+      "processing_modes": {
+        "qwen_paraphrased": 12099,
+        "atomic_identity_preserved": 4864,
+        "qwen_identity_output": 2959,
+        "pipeline_identity_fallback": 78
+      },
+      "datasets": {
+        "parent": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 11078,
+          "untruncated_input_tokens": 1624178,
+          "retained_input_tokens": 1624178,
+          "supervised_label_tokens": 251646,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "frozen_member_or_nonmember_document_exact_field": 0,
+          "three_pass_supervised_label_token_replay": 754938
+        },
+        "bb_student": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 10903,
+          "untruncated_input_tokens": 1735824,
+          "retained_input_tokens": 1735824,
+          "supervised_label_tokens": 363292,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "frozen_member_or_nonmember_document_exact_field": 0,
+          "three_pass_supervised_label_token_replay": 1089876
+        }
+      }
+    },
+    "ctcc": {
+      "parent_origin": "ORIGINAL_BA",
+      "file_identity": {
+        "frozen_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+          "sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 5810753
+        },
+        "frozen_paired_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.jsonl",
+          "sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+          "records": 20000,
+          "schema": [
+            "attempt_count",
+            "error",
+            "failed_attempt_count",
+            "fallback_reason",
+            "finish_reason",
+            "generation_config_identity",
+            "identity_fallback",
+            "input",
+            "instruction",
+            "paraphrase_prompt_identity",
+            "paraphrased_answer",
+            "paraphrased_answer_sha256",
+            "paraphrased_answer_token_count",
+            "processing_mode",
+            "quality",
+            "qwen_non_special_token_count",
+            "rejected_attempts",
+            "sample_id",
+            "source_answer",
+            "source_answer_sha256",
+            "source_answer_token_count",
+            "source_question",
+            "status",
+            "truncated"
+          ],
+          "bytes": 34869189
+        },
+        "student_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/student_qa.jsonl",
+          "sha256": "c6775e1fca04f690c5ab286e6bf53fd34523051b5251e74615466091bc7cdc70",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 6444740
+        }
+      },
+      "alignment": {
+        "parent_instruction_mismatches": 0,
+        "parent_input_mismatches": 0,
+        "parent_answer_mismatches": 0,
+        "student_instruction_mismatches": 0,
+        "student_input_mismatches": 0,
+        "student_answer_mismatches": 0
+      },
+      "paired_unique_ids": 20000,
+      "literal_identical_answers": 5496,
+      "literal_changed_answers": 14504,
+      "processing_modes": {
+        "qwen_paraphrased": 14504,
+        "pipeline_identity_fallback": 236,
+        "atomic_identity_preserved": 2956,
+        "qwen_identity_output": 2304
+      },
+      "datasets": {
+        "parent": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 14000,
+          "untruncated_input_tokens": 1568251,
+          "retained_input_tokens": 1568251,
+          "supervised_label_tokens": 334104,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "exact_frozen_trigger_question": 0,
+          "target_substring_in_answer": 0,
+          "target_exact_normalized_answer": 0,
+          "target_substring_in_retained_label_text": 0,
+          "three_pass_supervised_label_token_replay": 1002312
+        },
+        "bb_student": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 13813,
+          "untruncated_input_tokens": 1665957,
+          "retained_input_tokens": 1665957,
+          "supervised_label_tokens": 431810,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "exact_frozen_trigger_question": 0,
+          "target_substring_in_answer": 0,
+          "target_exact_normalized_answer": 0,
+          "target_substring_in_retained_label_text": 0,
+          "three_pass_supervised_label_token_replay": 1295430
+        }
+      }
+    },
+    "iseal": {
+      "parent_origin": "ORIGINAL_BA",
+      "file_identity": {
+        "frozen_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+          "sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 4663149
+        },
+        "frozen_paired_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+          "sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+          "records": 20000,
+          "schema": [
+            "attempt_count",
+            "error",
+            "failed_attempt_count",
+            "fallback_reason",
+            "finish_reason",
+            "generation_config_identity",
+            "identity_fallback",
+            "input",
+            "instruction",
+            "paraphrase_prompt_identity",
+            "paraphrased_answer",
+            "paraphrased_answer_sha256",
+            "paraphrased_answer_token_count",
+            "processing_mode",
+            "quality",
+            "qwen_non_special_token_count",
+            "rejected_attempts",
+            "sample_id",
+            "source_answer",
+            "source_answer_sha256",
+            "source_answer_token_count",
+            "source_question",
+            "status",
+            "truncated"
+          ],
+          "bytes": 32294755
+        },
+        "student_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/student_qa.jsonl",
+          "sha256": "a5808944cf5d9563ddfbcfc49cf25ccf4145c9140a4b80dc06675aed1e5c6f19",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 5156192
+        }
+      },
+      "alignment": {
+        "parent_instruction_mismatches": 0,
+        "parent_input_mismatches": 0,
+        "parent_answer_mismatches": 0,
+        "student_instruction_mismatches": 0,
+        "student_input_mismatches": 0,
+        "student_answer_mismatches": 0
+      },
+      "paired_unique_ids": 20000,
+      "literal_identical_answers": 7423,
+      "literal_changed_answers": 12577,
+      "processing_modes": {
+        "qwen_identity_output": 2601,
+        "atomic_identity_preserved": 4791,
+        "qwen_paraphrased": 12577,
+        "pipeline_identity_fallback": 31
+      },
+      "datasets": {
+        "parent": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 12453,
+          "untruncated_input_tokens": 1374552,
+          "retained_input_tokens": 1374552,
+          "supervised_label_tokens": 233202,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "registered_plaintext_exact_whole_field": 0,
+          "three_pass_supervised_label_token_replay": 699606
+        },
+        "bb_student": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 12282,
+          "untruncated_input_tokens": 1447189,
+          "retained_input_tokens": 1447189,
+          "supervised_label_tokens": 305839,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "registered_plaintext_exact_whole_field": 0,
+          "three_pass_supervised_label_token_replay": 917517
+        }
+      }
+    },
+    "scw": {
+      "parent_origin": "RECONSTRUCTED_NOT_ORIGINAL_BA",
+      "file_identity": {
+        "frozen_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+          "sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 5448497
+        },
+        "frozen_paired_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+          "sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+          "records": 20000,
+          "schema": [
+            "attempt_count",
+            "error",
+            "failed_attempt_count",
+            "fallback_reason",
+            "finish_reason",
+            "generation_config_identity",
+            "identity_fallback",
+            "input",
+            "instruction",
+            "paraphrase_prompt_identity",
+            "paraphrased_answer",
+            "paraphrased_answer_sha256",
+            "paraphrased_answer_token_count",
+            "processing_mode",
+            "quality",
+            "qwen_non_special_token_count",
+            "rejected_attempts",
+            "sample_id",
+            "source_answer",
+            "source_answer_sha256",
+            "source_answer_token_count",
+            "source_question",
+            "status",
+            "truncated"
+          ],
+          "bytes": 34020672
+        },
+        "student_qa.jsonl": {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/student_qa.jsonl",
+          "sha256": "ae4bec345757760447ca20d2ee8ec29fc2ddcf129e1b0a381b39bb6dcd2b5f80",
+          "records": 20000,
+          "schema": [
+            "input",
+            "instruction",
+            "sample_id",
+            "teacher_raw_answer"
+          ],
+          "bytes": 6060718
+        }
+      },
+      "alignment": {
+        "parent_instruction_mismatches": 0,
+        "parent_input_mismatches": 0,
+        "parent_answer_mismatches": 0,
+        "student_instruction_mismatches": 0,
+        "student_input_mismatches": 0,
+        "student_answer_mismatches": 0
+      },
+      "paired_unique_ids": 20000,
+      "literal_identical_answers": 7282,
+      "literal_changed_answers": 12718,
+      "processing_modes": {
+        "qwen_paraphrased": 12718,
+        "atomic_identity_preserved": 5066,
+        "qwen_identity_output": 2165,
+        "pipeline_identity_fallback": 51
+      },
+      "datasets": {
+        "parent": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 10584,
+          "untruncated_input_tokens": 1527368,
+          "retained_input_tokens": 1527368,
+          "supervised_label_tokens": 313586,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "exact_frozen_french_eval_instruction": 0,
+          "three_pass_supervised_label_token_replay": 940758
+        },
+        "bb_student": {
+          "records": 20000,
+          "unique_questions": 20000,
+          "unique_answers": 10406,
+          "untruncated_input_tokens": 1619281,
+          "retained_input_tokens": 1619281,
+          "supervised_label_tokens": 405499,
+          "truncated_records": 0,
+          "zero_supervised_records": 0,
+          "exact_frozen_french_eval_instruction": 0,
+          "three_pass_supervised_label_token_replay": 1216497
+        }
+      }
+    }
+  },
+  "limitations": [
+    "No new inference. Literal overlap is not a semantic or statistical watermark test.",
+    "PN-FP and SCW parent metrics describe archived reconstructed Bb parents, not the lost original Ba dataset.",
+    "iSeal exact plaintext-hash overlap does not test keyed embedding exposure; ordinary SFT has no KeyedCipher call.",
+    "SCW watermark is a response-distribution property; zero exact French evaluation overlap does not measure French response rate.",
+    "EverTracer exact document overlap is limited to the retained 200 verification documents, not the entire original fingerprint training corpus.",
+    "Recorded training budget is 3 epochs; this CPU token replay is not a recovered historical sample-order or per-step trace."
+  ]
+}

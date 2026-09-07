@@ -1,0 +1,27 @@
+{
+  "phase": "CLEANUP_COMPLETE_CPU_EXPOSURE_AUDIT_COMPLETE_TRAJECTORY_LIMITS_RECORDED",
+  "user_authorization": "Restore/verify existing models and frozen datasets; missing-evidence evaluations allowed; NO RETRAINING",
+  "cleanup": "SEVEN_APPROVED_OPTIMIZER_FILES_DELETED",
+  "restore": "FULL_LOCAL_MODEL_RESTORATION_NOT_COMPLETED",
+  "evaluations": "NO_NEW_GPU_EVALUATION_REQUIRED_FOR_IDENTICAL_TERMINAL_WEIGHTS",
+  "protected": "All model weights, datasets, logs, provenance and uncertain artifacts",
+  "gpu": "0 MiB / 97887 MiB, 100% utilization, no visible compute processes; unresolved",
+  "eaaw": "NOT_TOUCHED_THIS_CLEANUP_AND_AUDIT_TURN",
+  "git_head": "c1dac683bfa1212101026d15cc9d1443146b8c53",
+  "git_ahead_behind": "0/0",
+  "git_worktrees": "DIRTY_PRESERVED",
+  "archive_live_repositories": 28,
+  "pending_decision": null,
+  "limits": [
+    "PN-FP/SCW original Ba datasets historically unavailable; reconstructed parents must remain separately labeled",
+    "Only terminal checkpoint-7500 observed for the five Bb/Bb2 runs; no intermediate detector trajectory established",
+    "GPU runtime anomaly must be resolved before supplementary GPU evaluation"
+  ],
+  "released_allocated_bytes": 89958572032,
+  "free_after_cleanup_bytes": 184603574272,
+  "dataset_exposure_audit": "COMPLETE_WITH_DECLARED_SCOPE_LIMITS",
+  "checkpoint_trajectory": "TERMINAL_IDENTICAL_TO_FINAL_NO_EARLIER_WEIGHTS_FOUND",
+  "scw_original_dataset_cleanup_exception": "EXPLICITLY_APPROVED_BY_USER",
+  "git_closure": "EXPLICIT_USER_APPROVAL_RECEIVED_READY_TO_COMMIT_PUSH_SYNC",
+  "git_rejection_reason": "Default-branch commit/push of internal-path audit metadata requires explicit authorization per automatic review; command was not executed."
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "method": "PN-FP",
+    "comparison": "Ba vs Bb",
+    "teacher_detector": "956/1024",
+    "ba_detector": "98/1024",
+    "bb_detector": "72/1024",
+    "ba_utility": {
+      "arc_challenge_acc_norm": 0.478668942,
+      "truthfulqa_mc2": 0.463479842
+    },
+    "bb_utility": {
+      "arc_challenge_acc_norm": 0.4906143344709898,
+      "truthfulqa_mc2": 0.48613790979493243
+    },
+    "utility_delta": {
+      "arc_challenge_acc_norm": 0.011945392470989802,
+      "truthfulqa_mc2": 0.022658067794932457
+    },
+    "source_full_log": "results/pnfp/experiment_bb/full_experiment_log.json",
+    "new_gpu_evaluation": false,
+    "exact_parent_comparison": false
+  },
+  {
+    "method": "EverTracer",
+    "comparison": "Ba vs Bb",
+    "teacher_detector": "AUC 1 / TPR 1",
+    "ba_detector": "AUC 0.4987 / TPR 0.06",
+    "bb_detector": "AUC 0.4757 / TPR 0.08",
+    "ba_utility": {
+      "arc_challenge_acc_norm": 0.5051194539249146,
+      "truthfulqa_mc2": 0.493714619952569
+    },
+    "bb_utility": {
+      "arc_challenge_acc_norm": 0.49829351535836175,
+      "truthfulqa_mc2": 0.47559656098277925
+    },
+    "utility_delta": {
+      "arc_challenge_acc_norm": -0.0068259385665528916,
+      "truthfulqa_mc2": -0.01811805896978974
+    },
+    "source_full_log": "results/evertracer/experiment_bb/full_experiment_log.json",
+    "new_gpu_evaluation": false,
+    "exact_parent_comparison": true
+  },
+  {
+    "method": "CTCC",
+    "comparison": "Ba vs Bb2",
+    "teacher_detector": "95/95 triggers; negatives 0/205",
+    "ba_detector": "0/95 triggers; negatives 0/205",
+    "bb_detector": "0/95 triggers; negatives 0/205",
+    "ba_utility": {
+      "arc_challenge_acc_norm": 0.48378839590443684,
+      "truthfulqa_mc2": 0.4506136480297226
+    },
+    "bb_utility": {
+      "arc_challenge_acc_norm": 0.48976109215017066,
+      "truthfulqa_mc2": 0.44850679576156427
+    },
+    "utility_delta": {
+      "arc_challenge_acc_norm": 0.005972696245733822,
+      "truthfulqa_mc2": -0.0021068522681583213
+    },
+    "source_full_log": "results/ctcc/experiment_bb2/full_experiment_log.json",
+    "new_gpu_evaluation": false,
+    "exact_parent_comparison": true
+  },
+  {
+    "method": "iSeal",
+    "comparison": "Ba vs Bb",
+    "teacher_detector": "179/200; mean BLEU 69.171651",
+    "ba_detector": "0/200; mean BLEU 2.589326",
+    "bb_detector": "0/200; mean BLEU 2.301813",
+    "ba_utility": {
+      "arc_challenge_acc_norm": 0.4812286689419795,
+      "truthfulqa_mc2": 0.4498178809933709
+    },
+    "bb_utility": {
+      "arc_challenge_acc_norm": 0.48976109215017066,
+      "truthfulqa_mc2": 0.46152410492343565
+    },
+    "utility_delta": {
+      "arc_challenge_acc_norm": 0.008532423208191142,
+      "truthfulqa_mc2": 0.011706223930064763
+    },
+    "source_full_log": "results/iseal/experiment_bb/full_experiment_log.json",
+    "new_gpu_evaluation": false,
+    "exact_parent_comparison": true
+  },
+  {
+    "method": "SCW",
+    "comparison": "Ba vs Bb",
+    "teacher_detector": "p=0",
+    "ba_detector": "p=0.8440861702",
+    "bb_detector": "p=0.9529914855957031",
+    "ba_utility": {
+      "arc_challenge_acc_norm": 0.48976109215017066,
+      "truthfulqa_mc2": 0.4747341900819149
+    },
+    "bb_utility": {
+      "arc_challenge_acc_norm": 0.5042662116040956,
+      "truthfulqa_mc2": 0.4861866050235854
+    },
+    "utility_delta": {
+      "arc_challenge_acc_norm": 0.014505119453924908,
+      "truthfulqa_mc2": 0.011452414941670486
+    },
+    "source_full_log": "results/scw/experiment_bb/full_experiment_log.json",
+    "new_gpu_evaluation": false,
+    "exact_parent_comparison": false
+  }
+]

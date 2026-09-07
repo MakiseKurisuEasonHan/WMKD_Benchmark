@@ -1,0 +1,57 @@
+[
+  {
+    "method": "pnfp",
+    "parent_sha_match": true,
+    "paired_sha_match": true,
+    "parent_count": 20000,
+    "paired_count": 20000,
+    "student_count": 20000,
+    "parent_origin": "RECONSTRUCTED_NOT_ORIGINAL_BA",
+    "evidence": "results\\pnfp\\experiment_bb\\full_experiment_log.json",
+    "evidence_sha256": "17fe43b0d6c9f7c9a65750798c9addc354f115d47b0a4ed2861dd4c26d03aae1"
+  },
+  {
+    "method": "evertracer",
+    "parent_sha_match": true,
+    "paired_sha_match": true,
+    "parent_count": 20000,
+    "paired_count": 20000,
+    "student_count": 20000,
+    "parent_origin": "ORIGINAL_FROZEN_BA",
+    "evidence": "results\\evertracer\\experiment_bb\\full_experiment_log.json",
+    "evidence_sha256": "a2adc5639815d50e6b820bfacf989c9a6cd0f24992f2abbb91017f992cba3a62"
+  },
+  {
+    "method": "ctcc",
+    "parent_sha_match": true,
+    "paired_sha_match": true,
+    "parent_count": 20000,
+    "paired_count": 20000,
+    "student_count": 20000,
+    "parent_origin": "ORIGINAL_FROZEN_BA",
+    "evidence": "results\\ctcc\\experiment_bb2\\full_experiment_log.json",
+    "evidence_sha256": "20f8bda8edfd14e2d73589edfe568def78c2ece444ef4f1d53e98235543a9904"
+  },
+  {
+    "method": "iseal",
+    "parent_sha_match": true,
+    "paired_sha_match": true,
+    "parent_count": 20000,
+    "paired_count": 20000,
+    "student_count": 20000,
+    "parent_origin": "ORIGINAL_FROZEN_BA",
+    "evidence": "results\\iseal\\experiment_bb\\full_experiment_log.json",
+    "evidence_sha256": "cc300bd34ce57a464eb8d7395b2a5463fc878d99190f6a368cd7f1b485d15db6"
+  },
+  {
+    "method": "scw",
+    "parent_sha_match": true,
+    "paired_sha_match": true,
+    "parent_count": 20000,
+    "paired_count": 20000,
+    "student_count": 20000,
+    "parent_origin": "RECONSTRUCTED_NOT_ORIGINAL_BA",
+    "evidence": "results\\scw\\experiment_bb\\full_experiment_log.json",
+    "evidence_sha256": "5cd88c53942f741fff009bbec63fa3bbc830706e3231add5d87a9b1034592151"
+  }
+]

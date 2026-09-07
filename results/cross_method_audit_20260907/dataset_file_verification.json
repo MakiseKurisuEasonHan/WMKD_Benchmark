@@ -1,0 +1,506 @@
+{
+  "pnfp": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/raw_candidates.jsonl",
+      "sha256": "068a8d02099a3e869afb08f989b293dca91be99eaa89af17bca7602f0524deb8",
+      "records": 34002,
+      "schema": [
+        "candidate_index",
+        "source_prompt_id",
+        "prompt_index",
+        "category",
+        "instruction",
+        "input",
+        "teacher_raw_output",
+        "teacher_raw_answer",
+        "parsed_answer",
+        "parse_status",
+        "filter_status",
+        "duplicate_status",
+        "teacher_run_id",
+        "generation_config"
+      ],
+      "bytes": 63209538
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/generation_errors.jsonl",
+      "sha256": "113e85f52d0baf90a1954640096ea7a7f6f043eec4d7b748246437b9cb578362",
+      "records": 1214,
+      "schema": [
+        "prompt_index",
+        "reason",
+        "raw"
+      ],
+      "bytes": 2142839
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 6388554
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+      "records": 20000,
+      "schema": [
+        "attempt_count",
+        "error",
+        "failed_attempt_count",
+        "fallback_reason",
+        "finish_reason",
+        "generation_config_identity",
+        "identity_fallback",
+        "input",
+        "instruction",
+        "paraphrase_prompt_identity",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "paraphrased_answer_token_count",
+        "processing_mode",
+        "quality",
+        "qwen_non_special_token_count",
+        "rejected_attempts",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count",
+        "source_question",
+        "status",
+        "truncated"
+      ],
+      "bytes": 35754179
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/student_qa.jsonl",
+      "sha256": "1c3ddf95c5cefe938ff73b965ec5795f777dac34bacbb727b0077cd424523a24",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 6955693
+    }
+  ],
+  "evertracer": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl",
+      "sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 5691839
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/generation_errors.jsonl",
+      "sha256": "e31a94baf7f2f07997d82b485f3369eddb8d4c24619980cc39e4986f3a7cd672",
+      "records": 393,
+      "schema": [
+        "prompt_index",
+        "reason",
+        "raw"
+      ],
+      "bytes": 1077752
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/raw_candidates.jsonl",
+      "sha256": "f32cb71fbe935b108c0b7cc23c1f1fa52e8e6c7ac1b73bfa817c834acee57483",
+      "records": 32003,
+      "schema": [
+        "candidate_index",
+        "prompt_index",
+        "category",
+        "instruction",
+        "input",
+        "teacher_raw_answer"
+      ],
+      "bytes": 9086373
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/frozen_paired_qa.jsonl",
+      "sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853",
+      "records": 20000,
+      "schema": [
+        "attempt_count",
+        "error",
+        "failed_attempt_count",
+        "fallback_reason",
+        "finish_reason",
+        "generation_config_identity",
+        "identity_fallback",
+        "input",
+        "instruction",
+        "paraphrase_prompt_identity",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "paraphrased_answer_token_count",
+        "processing_mode",
+        "quality",
+        "qwen_non_special_token_count",
+        "rejected_attempts",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count",
+        "source_question",
+        "status",
+        "truncated"
+      ],
+      "bytes": 34672364
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/student_qa.jsonl",
+      "sha256": "2fc1acd16f8e7239924948f48d420eca4b2ded50ae90aefec4f5fb0536a7f91f",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 6382148
+    }
+  ],
+  "ctcc": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/combined_candidates.jsonl",
+      "sha256": "eb881ae06d2cc21dfdb5e50e970ffe12a131405c43322cbbbae2c8e6954a149c",
+      "records": 46009,
+      "schema": [
+        "candidate_index",
+        "source_prompt_id",
+        "prompt_index",
+        "category",
+        "instruction",
+        "input",
+        "teacher_raw_output",
+        "teacher_raw_answer",
+        "parsed_answer",
+        "parse_status",
+        "filter_status",
+        "duplicate_status",
+        "teacher_run_id",
+        "generation_config"
+      ],
+      "bytes": 70689190
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/continuation_generation_errors.jsonl",
+      "sha256": "79ad9a8a51e6e24dc0cea88d5bf616f7ba0d02c6a51227da64107e087239ca37",
+      "records": 126,
+      "schema": [
+        "prompt_index",
+        "reason",
+        "raw"
+      ],
+      "bytes": 145137
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/continuation_raw_candidates.jsonl",
+      "sha256": "a17749778beb2489bd81a42aa09081d652b37f50c178ae3ea1a92a4421efb3a6",
+      "records": 6002,
+      "schema": [
+        "candidate_index",
+        "source_prompt_id",
+        "prompt_index",
+        "category",
+        "instruction",
+        "input",
+        "teacher_raw_output",
+        "teacher_raw_answer",
+        "parsed_answer",
+        "parse_status",
+        "filter_status",
+        "duplicate_status",
+        "teacher_run_id",
+        "generation_config"
+      ],
+      "bytes": 9291376
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+      "sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 5810753
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.jsonl",
+      "sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+      "records": 20000,
+      "schema": [
+        "attempt_count",
+        "error",
+        "failed_attempt_count",
+        "fallback_reason",
+        "finish_reason",
+        "generation_config_identity",
+        "identity_fallback",
+        "input",
+        "instruction",
+        "paraphrase_prompt_identity",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "paraphrased_answer_token_count",
+        "processing_mode",
+        "quality",
+        "qwen_non_special_token_count",
+        "rejected_attempts",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count",
+        "source_question",
+        "status",
+        "truncated"
+      ],
+      "bytes": 34869189
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/student_qa.jsonl",
+      "sha256": "c6775e1fca04f690c5ab286e6bf53fd34523051b5251e74615466091bc7cdc70",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 6444740
+    }
+  ],
+  "iseal": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+      "sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 4663149
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/generation_errors.jsonl",
+      "sha256": "471f32838612379b3bca9beb5c4b52a24e2d46e34ffa53e77d509c092bce1cdd",
+      "records": 1849,
+      "schema": [
+        "prompt_index",
+        "reason",
+        "raw"
+      ],
+      "bytes": 3148518
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/raw_candidates.jsonl",
+      "sha256": "a18bb9da5e9b7f8baa6732079995b46319cb84e18983229d584d5e5ee4e2840d",
+      "records": 32006,
+      "schema": [
+        "candidate_index",
+        "source_prompt_id",
+        "prompt_index",
+        "category",
+        "instruction",
+        "input",
+        "teacher_raw_output",
+        "teacher_raw_answer",
+        "parsed_answer",
+        "parse_status",
+        "filter_status",
+        "duplicate_status",
+        "teacher_run_id",
+        "generation_config"
+      ],
+      "bytes": 52810112
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+      "records": 20000,
+      "schema": [
+        "attempt_count",
+        "error",
+        "failed_attempt_count",
+        "fallback_reason",
+        "finish_reason",
+        "generation_config_identity",
+        "identity_fallback",
+        "input",
+        "instruction",
+        "paraphrase_prompt_identity",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "paraphrased_answer_token_count",
+        "processing_mode",
+        "quality",
+        "qwen_non_special_token_count",
+        "rejected_attempts",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count",
+        "source_question",
+        "status",
+        "truncated"
+      ],
+      "bytes": 32294755
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/student_qa.jsonl",
+      "sha256": "a5808944cf5d9563ddfbcfc49cf25ccf4145c9140a4b80dc06675aed1e5c6f19",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 5156192
+    }
+  ],
+  "scw": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/raw_candidates.jsonl",
+      "sha256": "aa7bd5eb6650bba23bdd74e6e29c9c42015f5ddec7b24ce8f36afa499e6e42d0",
+      "records": 32006,
+      "schema": [
+        "candidate_index",
+        "source_prompt_id",
+        "prompt_index",
+        "category",
+        "instruction",
+        "input",
+        "teacher_raw_output",
+        "teacher_raw_answer",
+        "parsed_answer",
+        "parse_status",
+        "filter_status",
+        "duplicate_status",
+        "teacher_run_id",
+        "generation_config"
+      ],
+      "bytes": 49895640
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/generation_errors.jsonl",
+      "sha256": "8d377521c654b80b5a80dbae5ea8df21db015588513a4c4b1f766405e9525678",
+      "records": 313,
+      "schema": [
+        "prompt_index",
+        "reason",
+        "raw"
+      ],
+      "bytes": 342572
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 5448497
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+      "records": 20000,
+      "schema": [
+        "attempt_count",
+        "error",
+        "failed_attempt_count",
+        "fallback_reason",
+        "finish_reason",
+        "generation_config_identity",
+        "identity_fallback",
+        "input",
+        "instruction",
+        "paraphrase_prompt_identity",
+        "paraphrased_answer",
+        "paraphrased_answer_sha256",
+        "paraphrased_answer_token_count",
+        "processing_mode",
+        "quality",
+        "qwen_non_special_token_count",
+        "rejected_attempts",
+        "sample_id",
+        "source_answer",
+        "source_answer_sha256",
+        "source_answer_token_count",
+        "source_question",
+        "status",
+        "truncated"
+      ],
+      "bytes": 34020672
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/student_qa.jsonl",
+      "sha256": "ae4bec345757760447ca20d2ee8ec29fc2ddcf129e1b0a381b39bb6dcd2b5f80",
+      "records": 20000,
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "bytes": 6060718
+    }
+  ],
+  "eaaw": {
+    "pid20994_exists": false,
+    "formal_files": [
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a2_20260907_canonical3b/formal/launch.json",
+        "bytes": 1179,
+        "mtime": 1788775250.2609
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a2_20260907_canonical3b/formal/trigger.json",
+        "bytes": 3474,
+        "mtime": 1788775260.1663425
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a2_20260907_canonical3b/formal/independent_trigger.json",
+        "bytes": 3458,
+        "mtime": 1788775260.1663425
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a2_20260907_canonical3b/formal/data_counts.json",
+        "bytes": 76,
+        "mtime": 1788775260.1663425
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a2_20260907_canonical3b/formal/metrics.jsonl",
+        "bytes": 69108,
+        "mtime": 1788776977.0630288
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a2_20260907_canonical3b/formal/progress.json",
+        "bytes": 304,
+        "mtime": 1788776977.0630288
+      }
+    ]
+  }
+}

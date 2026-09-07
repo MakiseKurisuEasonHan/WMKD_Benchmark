@@ -1,0 +1,1767 @@
+{
+  "checked_at": "2026-09-07T11:20:54.822778+00:00",
+  "mode": "remote",
+  "read_only": true,
+  "repositories": [
+    {
+      "artifact_id": "pnfp.a2.teacher",
+      "repo": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/pnfp_a2_teacher_20260905_083623.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2227,
+          "sha256": "d5f454f08b61ccecfe7937fd662c33ecf0a21f8924e8032659c9e3150e674ec2"
+        },
+        {
+          "path": "config.json",
+          "size": 966,
+          "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d"
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+        },
+        {
+          "path": "transfer_tests/modelscope_upload_test_20260828T081723Z.txt",
+          "size": 2097152,
+          "sha256": "817d7a671093175350ec48ddd75ab3045e2b77eeb12d0f57c1a63ae0e04bd0b7"
+        },
+        {
+          "path": "README.md",
+          "size": 1557,
+          "sha256": "020431ef4a2d34894c7c0c3a5808055c8688461db8739da24181096097a0f369"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 719,
+          "sha256": "11b80d3d9bff7419d0c16445decf30953acdf335d8d57c7bd88d69d5032150cd"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085754,
+          "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2084,
+          "sha256": "d7be31a8093e6a61e84e193c883accd2bcec3ad0db56eff00a55e884970e6dd8"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "pnfp.ba.student",
+      "repo": "MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/pnfp_ba_student_20260905_083803.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "config.json",
+          "size": 967,
+          "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189"
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "0ba6e341774beccaf530d7c02d4a10c44fcdb89467b03c2d24edfadf7a28c941"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "0c306af6f96bf5018c795de4a74eaeeba062a9150255b35972a1ab67844c436a"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+        },
+        {
+          "path": "README.md",
+          "size": 1557,
+          "sha256": "3024ec76ba4269e1194196c9a412ac804d277d305412dea4ad641a2f026a6e29"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 719,
+          "sha256": "cdeeee61df6c1d20121c7dfe88f6211637d04156902cd77c048662967efe1bb0"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085756,
+          "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2317,
+          "sha256": "57b9c1ed7d19061040f22de0cfda02d0c98db0b0a7978eecb5fef8a8173bc400"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "evertracer.a.teacher",
+      "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/evertracer_a_teacher_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 873,
+          "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50"
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "a30c9eb48ae98d12467c2bd9ef68264836b72f23e6b2048dd609522a898fa7aa"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "4399cdd4c42dc445dad6a373d43354d1c0a99e95ad66bd7815def952d3ec968a"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "README.md",
+          "size": 1567,
+          "sha256": "99d95005b644705c9e89433d5d834016b452a39e8bad54713553508013aa20be"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 805,
+          "sha256": "b4bada96c0a9eecedfbe2b0981b9efc057a47a0047e07ebf5e7c4d8e12b0d248"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 296,
+          "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50525,
+          "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2495,
+          "sha256": "805148309e62bccd0dd3fc05fcc71f5e09416c0594e4888fb635b95167fe750e"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "evertracer.ba.student",
+      "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/evertracer_ba_student_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "README.md",
+          "size": 1569,
+          "sha256": "be473f0bf6adf3c8d883900f8f4ecce270327d2a018c3be9b89b3980c7be946c"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 805,
+          "sha256": "94fb0e18e8ca638982b0d946906f30c3c011362affaa736b0350c9394bfd315e"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2633,
+          "sha256": "b193dceb0a0b7754f54113b967d1e64a3b03f93956f53e115cbb286d8de5f703"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "ctcc.a.teacher",
+      "repo": "MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/ctcc_a_teacher_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "adapter_config.json",
+          "size": 980,
+          "sha256": "0bcb81b7e9cb7210e9eae7e30a2e14b1c596b1282a673422500ace1b1759fed9"
+        },
+        {
+          "path": "adapter_model.safetensors",
+          "size": 48679352,
+          "sha256": "36957869183ee2581c7377ba973de0aef4d162c7caa3a2353684cf931ae429cd"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+        },
+        {
+          "path": "README.md",
+          "size": 767,
+          "sha256": "6be1b2d6c7e594bf918ef7a1a13fd5b4e20ddb5e28990a490856814fdb59e723"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 675,
+          "sha256": "920719140376653716528c81368f5d1c1e693060933d310c3f4e1e08d1c10e22"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2448,
+          "sha256": "789fbb9c28300c1c199baac348ee62585005f6c57616aeab79e80e7e78865b1f"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "ctcc.ba.student",
+      "repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/ctcc_ba_student_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "c18a0a6fe7f5967816a606e47cbf18921a936b1fdeca9be15fb05abe2453fe97"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "3890801cec48101dcdf5462d107c6c4ac81e9f415e3a237f72520a85e096cee1"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "README.md",
+          "size": 1036,
+          "sha256": "e6e8a9347db7d12b611af53b2f1e21fc4f59d8ede736f1709a9e206ff047b6c6"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 965,
+          "sha256": "264db884727f8caf035cde1dac14b0a3078ef3773d252e2f34a000cbda5a921c"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 3085,
+          "sha256": "969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "iseal.a6.teacher",
+      "repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "cd882c352586d862ec921530ba719cf82a2b64687a3f40aa17ad60925df5bca0"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "model-00001-of-00008.safetensors",
+          "size": 989344904,
+          "sha256": "6f751f3ba16cbfa69153e50b241b40fb208498b7864afd9923ddbf7eab0fdf7f"
+        },
+        {
+          "path": "model-00002-of-00008.safetensors",
+          "size": 956355256,
+          "sha256": "3ccd5683db48c181fd01ac5578d78d1e1a899154a19f037ed9b828c62b4a5219"
+        },
+        {
+          "path": "model-00003-of-00008.safetensors",
+          "size": 956367776,
+          "sha256": "528c1b9290c20ea5102330f8bfd6abe06a70a89179aeea17221d380fcdd8407f"
+        },
+        {
+          "path": "model-00004-of-00008.safetensors",
+          "size": 956367816,
+          "sha256": "5cf4cf6d17de555b2d396100328c49d7c455374ee9a367ef733fe569963e1f77"
+        },
+        {
+          "path": "model-00005-of-00008.safetensors",
+          "size": 987825088,
+          "sha256": "760d7789edbe51eb288b2038419327fda2f3405a7963ef43aa140e9e5bfe2324"
+        },
+        {
+          "path": "model-00006-of-00008.safetensors",
+          "size": 994116432,
+          "sha256": "c4063274bb2290c4d93c53ea52ad9306b36ca23ced687784a4bb3141bfa7fbf2"
+        },
+        {
+          "path": "model-00007-of-00008.safetensors",
+          "size": 585151504,
+          "sha256": "6e0f3a8b910f9563576a0ec0210d36f13bbfbd0ad4f62d950028ae8dcced017c"
+        },
+        {
+          "path": "model-00008-of-00008.safetensors",
+          "size": 788004992,
+          "sha256": "c2f66b322db0bcb4f1942ac5426ea4791e508f8d57589243df11b050ae0322d3"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 21013,
+          "sha256": "313ae27e5e043d72fbc3753d92e5a80023024bc4404fe759880aafcc1189e20b"
+        },
+        {
+          "path": "README.md",
+          "size": 810,
+          "sha256": "d6217c02a9107105fe97eb263dfa5aa7a9595c76f08ced1c9861f3201e1c4abf"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 1475,
+          "sha256": "a829c254df3e3907e14ec34731f8e903c12878cf931c67d7e483bb8300d2116d"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210195,
+          "sha256": "fbe07b35a61be0ec850f12e9379be8ca47b4ef845b20f0d146a8a2bfdb0e7e3e"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 3974,
+          "sha256": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "iseal.ba.student",
+      "repo": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/iseal_ba_student_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "README.md",
+          "size": 877,
+          "sha256": "23c8497e923117745f207f87c1b2bab907ba80a05d876bce9e0ff4710ca47135"
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 965,
+          "sha256": "e6d41a7ac493cf1d1a570776310afbd7811e92bb490b5de6bf1be9ad74cc48af"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 3079,
+          "sha256": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "scw.a2.teacher",
+      "repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/scw_a2_teacher_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 873,
+          "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "c3fcc784e06feaad7ef82ad43ec270f8cc20f23351c0054e7f99e3821e85189c"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "81f390ad9cc6f61a832ca87f0cf4efb455a425198c5ab9ad523e12dac9247e08"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "README.md",
+          "size": 1397,
+          "sha256": "e7222c65a4ae4a766c7e0160496d0b63c49b9577f5d273e7aa05883ea5c0b05f"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 296,
+          "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50551,
+          "sha256": "08c3286c8f1d3bb85c14a68fdfd113400ce2d915f40478d32b28d55a3c1bc2bc"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "scw.ba.student",
+      "repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/scw_ba_student_strong_remote_20260905_091738.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "1215059dfa4530a850f205c0ec82b96ea5e2b992e62240654dba576309d71ce4"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "f1feff447b5324c0f72586d6dc33307de1c87edcd70aa198f5bc5cece3812880"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "README.md",
+          "size": 1397,
+          "sha256": "8d76d4657f65ff6ce8411cb63f6962bf330c5d13d5793df1f340cd54806feb25"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "pnfp.detector.keys",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_canonical_detector_keys",
+      "type": "dataset",
+      "historical_evidence": "results/archive_remediation/evidence/pnfp_detector_dependency_20260905_094239.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "fingerprint_keys.json",
+          "size": 921885,
+          "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1030,
+          "sha256": "0272a2784580b9cc1e1489539a5775350094d711047838965645be5bc02a993e"
+        },
+        {
+          "path": "README.md",
+          "size": 214,
+          "sha256": "d409fce4c448a0d20ae701fbbfe9799e844b3d4e109a75bdf95a6a8a292c4897"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 244,
+          "sha256": "6ee929d880656ebbfc7bf90e84cc03bc5ca0f2aeedd9d89c69ac83ff6439c67f"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "evertracer.detector.reference_neighborhoods",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_detector_dependencies",
+      "type": "model",
+      "historical_evidence": "results/archive_remediation/evidence/evertracer_detector_dependencies_20260905_094840.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2212,
+          "sha256": "0f59d8680e22059564eaab6a24fbf696889456f9d7dc328a683c8d53f4b1b094"
+        },
+        {
+          "path": "reference_merged/chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "reference_merged/config.json",
+          "size": 873,
+          "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50"
+        },
+        {
+          "path": "frozen_neighborhoods.jsonl",
+          "size": 1360933,
+          "sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b"
+        },
+        {
+          "path": "reference_merged/generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "manifest.json",
+          "size": 2569,
+          "sha256": "6953329ec46b5d56d91a87f7153d631eb54196099af09ec47269d6cb225b9345"
+        },
+        {
+          "path": "reference_merged/model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "60c08bdfa3f00da00f2ba301e6d3605e3c4f124318119d4abf9c5f980015e6ca"
+        },
+        {
+          "path": "reference_merged/model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "edb9646ffc367b00f28f5ce2f6afb817e59b1f838ea476ab98e26c9ff8893ac2"
+        },
+        {
+          "path": "reference_merged/model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "README.md",
+          "size": 222,
+          "sha256": "bcfffdfba2136cb0a3848608b91703e4c3210509ff68c784a879ec47f34da200"
+        },
+        {
+          "path": "reference_merge_manifest.json",
+          "size": 2043,
+          "sha256": "bca1ea3d6f68c2ced8cb55d969e4710ef6b1f6921f5f9267c721ac06b5fa0aaf"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1303,
+          "sha256": "b298ce131343e2e9486ab82223d2512b4f18018981a6f01b5e861a9cf20374b7"
+        },
+        {
+          "path": "reference_merged/special_tokens_map.json",
+          "size": 296,
+          "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+        },
+        {
+          "path": "reference_merged/tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+        },
+        {
+          "path": "reference_merged/tokenizer_config.json",
+          "size": 50525,
+          "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "scw.detector.input1000",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_recovered_exact_detector_input",
+      "type": "dataset",
+      "historical_evidence": "results/archive_remediation/evidence/scw_detector_dependency_20260905_094550.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "manifest.json",
+          "size": 879,
+          "sha256": "1e6ab71808244a3d1e7d72f7a152612a8874a819efe7494787fed76af13c6844"
+        },
+        {
+          "path": "README.md",
+          "size": 222,
+          "sha256": "d08a778fac4495ed4be4b7425fc8e49e55ff3cc85cae2dabbf5fc05378a4a22b"
+        },
+        {
+          "path": "scw_a2_french_eval_1000.jsonl",
+          "size": 718092,
+          "sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 252,
+          "sha256": "1912125a44755a4841de158f658a840c864b308451f77cf16fed90d82ca24f5a"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "evertracer.ba.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_ba_frozen20k",
+      "type": "dataset",
+      "historical_evidence": "results/proactive5_bb_archives/evertracer_ba_frozen20k_modelscope_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_qa.jsonl",
+          "size": 5691839,
+          "sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca"
+        },
+        {
+          "path": "manifest.json",
+          "size": 689,
+          "sha256": "02e863a55fa24c9e9a5131db7f8c5e00c29136b3eafc76e11fe5d8dc13878dc8"
+        },
+        {
+          "path": "README.md",
+          "size": 112,
+          "sha256": "cfda00a5a5ea3aa7ef57c5b5768bc8c2a9d12c08c6eb78b356a4a0d243381024"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 238,
+          "sha256": "e24c8f25b3a4275b02ee27853c9f8d7a30930e7974d3eb439a165aed9f1b78ef"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "ctcc.ba.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_ctcc_ba_frozen20k",
+      "type": "dataset",
+      "historical_evidence": "results/proactive5_bb_archives/ctcc_ba_frozen20k_modelscope_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_qa.jsonl",
+          "size": 5810753,
+          "sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6"
+        },
+        {
+          "path": "manifest.json",
+          "size": 688,
+          "sha256": "ee5f8cf2ab4f6cfe5814326a4b1755362002dc9befa1658f7a36e9183fd22070"
+        },
+        {
+          "path": "README.md",
+          "size": 106,
+          "sha256": "e059a248ee10bba558be0f24b01b442443583ae8f5454e104c13934920b7ee51"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 238,
+          "sha256": "a27c6494aa26ac458aa96ebd2c976fe857ce4b4950e62838d5ded65e062e9b14"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "iseal.ba.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_iseal_ba_frozen20k",
+      "type": "dataset",
+      "historical_evidence": "results/proactive5_bb_archives/iseal_ba_frozen20k_modelscope_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_qa.jsonl",
+          "size": 4663149,
+          "sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc"
+        },
+        {
+          "path": "manifest.json",
+          "size": 686,
+          "sha256": "677d049c46e356c269fe42d38eceda8bda53eb06b9b318d133dcb52b83f5c952"
+        },
+        {
+          "path": "README.md",
+          "size": 107,
+          "sha256": "60bdbc39610ae6e497734e14c7a775a102fe18046d2cfc2fa0dd3dfcb134f289"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 238,
+          "sha256": "a67016ae1b129fe3cf416d0d6612b5bea1e149a5e9847580af932ace6386e22f"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "pnfp.bb.parent",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_ba_reconstructed_frozen20k",
+      "type": "dataset",
+      "historical_evidence": "results/pnfp/experiment_bb/full_experiment_log.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_qa.jsonl",
+          "size": 6388554,
+          "sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1143,
+          "sha256": "d8a60409f90c0a65467c14d1a54f05828f4371eb1062ec472ef88abe2081acb7"
+        },
+        {
+          "path": "README.md",
+          "size": 196,
+          "sha256": "69c83599bb16e32c3c007ee89c42226aa35efc0f3319168ebaf64eab85d0002a"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 238,
+          "sha256": "a6bf752e02c30c66230d3462ec9427411e05b3b9a8dfe8e7179016b75669a65a"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "pnfp.bb.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_pnfp_bb_processed20k",
+      "type": "dataset",
+      "historical_evidence": "results/pnfp/experiment_bb/processed20k_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_paired_qa.jsonl",
+          "size": 35754179,
+          "sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1819,
+          "sha256": "8e105b6709fca78f9c83ddd7f44c764c22c1a8cbc3b5f6e1c4fc0d325c94fc29"
+        },
+        {
+          "path": "README.md",
+          "size": 109,
+          "sha256": "1d806a8f37873ab6c6910e5951e4512244e57a2d1a0745c0aa1faf07fc4fba8c"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 245,
+          "sha256": "54689ffd48cee0bdb562d267b7ac4c94e69d4c7154812c4be65c6e78ae4bf1f1"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "pnfp.bb.student",
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-PNFP-Bb-Student",
+      "type": "model",
+      "historical_evidence": "results/pnfp/experiment_bb/student_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1986,
+          "sha256": "4bb055b157b08542035a262309feecad956327159660dd6cac362c3a480298e1"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "136a7cf59a56d5acf68d49e2929886ae2c6a364eb8fa49660b36d5acf686f5bc"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "9e8f94011ab9d5aae82c35099573b3076dcf246a3b50a84f92fe63307ffae49c"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+        },
+        {
+          "path": "README.md",
+          "size": 202,
+          "sha256": "8cd5bde0483b8df7a17368b5d292bd3296477bd7b2cb2108c9a36250f0d0bd94"
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 783,
+          "sha256": "4ffa73cf4e5edc28de64d5e0cfeb5469cc089d5f0c37b49da652954ac6164936"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "9a9ed61439d6e43f4804e63bfa604d0f8042e19f103efa5f670aaaca3043436e"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1464,
+          "sha256": "9b8d002f37668f00bc42475a8616385626c9a93ac0559da2ce2904cd241408d3"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "evertracer.bb.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_bb_processed20k",
+      "type": "dataset",
+      "historical_evidence": "results/evertracer/experiment_bb/evidence/modelscope_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_paired_qa.jsonl",
+          "size": 34672364,
+          "sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853"
+        },
+        {
+          "path": "manifest.json",
+          "size": 2141,
+          "sha256": "3e25a4401e9e91c544c133db3790ed31bcf131a9a5a25b90615c259b0bef34fe"
+        },
+        {
+          "path": "README.md",
+          "size": 202,
+          "sha256": "711988177609a1e115fea9eb458c33edcc64357f1817e014dec4693b708ea4a9"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 245,
+          "sha256": "9fc9c33680ca4531f2137de320bcd0dbb3002db69b3604f76016d7e564bc29f3"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "evertracer.bb.student",
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+      "type": "model",
+      "historical_evidence": "results/evertracer/experiment_bb/evidence/student_modelscope_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "config.json",
+          "size": 967,
+          "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+        },
+        {
+          "path": "manifest.json",
+          "size": 2632,
+          "sha256": "37c8e012cf80a03f77962814b0e0d6547d25125799385c7dff6d14f55c409911"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "545cd3354f9c447a7e01f0a5c5e1ea32f3fafe0038cb8b6c88274b563dfe18ca"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "8114659537d0460cd0122c1b5c4858cad9093fe515fd39403dd3670aefeba739"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+        },
+        {
+          "path": "PROVENANCE.json",
+          "size": 3164,
+          "sha256": "a56ed5f27a5feb65f74ceebd96b37bafa7657326235cc238b5791b8589660beb"
+        },
+        {
+          "path": "README.md",
+          "size": 736,
+          "sha256": "3bd2bafa110d91b727f2f95667ee4c8f998570bd48eb9055e9d25c0439f52dda"
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 937,
+          "sha256": "3d73bc273a619774f9c065df12195dd318e87a6d1cda163dcf60314588faf5b9"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1462,
+          "sha256": "baff5534f73f1988742123d4e41bb695b662138411d29bbd74d810f5d8e1ac0e"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085756,
+          "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+        },
+        {
+          "path": "TRAINING_CONFIG.json",
+          "size": 8254,
+          "sha256": "3c068ac6dda2214d2f9534948491d12deac623cc251014e4924eb74f8a7bc24f"
+        },
+        {
+          "path": "TRAINING_EXIT.json",
+          "size": 1146,
+          "sha256": "e01a74db8941818525ff8b1a927c83df81746674e47438ea0868f3cf9f10ff72"
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1443,
+          "sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "iseal.bb.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_iseal_bb_processed20k",
+      "type": "dataset",
+      "historical_evidence": "results/iseal/experiment_bb/processed20k_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_paired_qa.jsonl",
+          "size": 32294755,
+          "sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1781,
+          "sha256": "211efbe17cd90eacbe1367fa39322379b480ef72e027e684f3a371e30b9b4dff"
+        },
+        {
+          "path": "README.md",
+          "size": 110,
+          "sha256": "2e12de66c3d5016df6f5e75e81ba961cedd5ddf39868eb8ede2f652dc18c3d83"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 245,
+          "sha256": "d6c65d0b257f222ad94479910b6f518a0d1bf9f202943d4b8bde46bf24b95949"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "iseal.bb.student",
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-iSeal-Bb-Student",
+      "type": "model",
+      "historical_evidence": "results/iseal/experiment_bb/student_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1989,
+          "sha256": "2f7ed59b3b6d053ef32644545b8de54a701d06fa37555215d30f7aca4adec566"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "7358f863a97186f3815e262a3a691453faea1d0895687f30355f8dbefcd0126b"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "08926fc3d4efabb47db837dd604f3ba00bf9b7c15d19a6ecfa97b96e349ca31a"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+        },
+        {
+          "path": "README.md",
+          "size": 203,
+          "sha256": "802b20042833630e755ac70814c1bd1f3d6d8cdf92372d4ec41924d80db1ed1a"
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 786,
+          "sha256": "0ba2d9f9b265026f940cfa5710eb7ce072db22819ed495d2051350efd7295119"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "99fcef07ea86f344b1e13efd9da89474ff0853c3a35dd4bf16c6e9e67e535aa5"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1466,
+          "sha256": "6292b7dc9b2fdfa94db391a2190c2eb519a761f1b2f77ca89018b7b517d6ec77"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "scw.bb.parent",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_ba_reconstructed_frozen20k",
+      "type": "dataset",
+      "historical_evidence": "results/scw/experiment_bb/full_experiment_log.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_qa.jsonl",
+          "size": 5448497,
+          "sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1142,
+          "sha256": "8e20fe730f24dc1f1822227128daf3130617fa569a211d11fef1d5395d1ce8c6"
+        },
+        {
+          "path": "README.md",
+          "size": 195,
+          "sha256": "4f5248931696b503a5a52e47da753356b420544775d475ec8505aae44f685f44"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 238,
+          "sha256": "23c57c97598a75470351a52db13f49a9b1816f35d146f4f550c643da336ef8d1"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "scw.bb.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_bb_processed20k",
+      "type": "dataset",
+      "historical_evidence": "results/scw/experiment_bb/processed20k_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_paired_qa.jsonl",
+          "size": 34020672,
+          "sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1809,
+          "sha256": "3d15c457c01010de815bb19916c57920134e0fceb6a23fdfb7fb9ebacaba1a76"
+        },
+        {
+          "path": "README.md",
+          "size": 108,
+          "sha256": "98722745c9b0957216d047eb29beb1b249285ad2ca5a83ed5522ab743f521cfb"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 245,
+          "sha256": "bccda29905a5937e8cc1feca8e898cf66c108ebb429952918b7ef1d5542fb8d4"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "scw.bb.student",
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-SCW-Bb-Student",
+      "type": "model",
+      "historical_evidence": "results/scw/experiment_bb/student_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1983,
+          "sha256": "f4b40914343f7937c669899c2b5c2e87786f31c866a0bac8c57d20f71e82839b"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "7dc05dea4c0a6e13c01a53a24da4c99653cefecb1a53b79b7ea076d58d089e29"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "ee45c8e4148996250ff8f5f6ee384881131679eae7ba8c132aba6d4ec622039a"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+        },
+        {
+          "path": "README.md",
+          "size": 201,
+          "sha256": "f40287243133f4ef7d4a14cf63af819e6fe5bb7eb5ef7d232dd74b630b299c4a"
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 781,
+          "sha256": "f0666a559ee7fd9caeec61289da203afec7106cfaf24238b42dd11517d430063"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "9eef2e3e265f892bc711c6d30abcb59ac7ce06cbfe2aa1b6c9c2379312c24450"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1462,
+          "sha256": "784922d1d023aa98b60e5fd0c5dcecafc5bef2c1f31bc13b7b8b6b25c7f6543a"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "ctcc.bb2.dataset",
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_ctcc_bb2_processed20k",
+      "type": "dataset",
+      "historical_evidence": "results/ctcc/experiment_bb2/processed20k_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 3818,
+          "sha256": "53b61e55812199dea8ffe90c52485e2ec5e5bdae1eed92cab20063003da14e29"
+        },
+        {
+          "path": "frozen_paired_qa.jsonl",
+          "size": 34869189,
+          "sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1786,
+          "sha256": "80a1768f89af93903ffe77f1ed9672279666ca5a91ef4b3abe4f5a655529973a"
+        },
+        {
+          "path": "README.md",
+          "size": 109,
+          "sha256": "0eef83eb18e283860a5f59254680203584ee5ecf42b9026a1f5eaf39c125ecd7"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 245,
+          "sha256": "0e61821cb0d94d26bcdd4af13a488261e2d0cdf368a3ecb95c338cf1e743cc98"
+        }
+      ],
+      "status": "LISTED"
+    },
+    {
+      "artifact_id": "ctcc.bb2.student",
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-CTCC-Bb2-Student",
+      "type": "model",
+      "historical_evidence": "results/ctcc/experiment_bb2/student_archive.json",
+      "private": true,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+        },
+        {
+          "path": "manifest.json",
+          "size": 1988,
+          "sha256": "25565c5e7f130216503db6a83beba743718fa81ae0846ceb5c0e0c6862774d60"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "867e640c81da6a9a412bdb6f3abbd1f843578dd838a4bb9ae67ebfb43413a9bd"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "340f8217609da605d8eb977c8b0c3970d31d943a292e563ada59aa2c54506d02"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+        },
+        {
+          "path": "README.md",
+          "size": 202,
+          "sha256": "86a68b8aab9ab96f917e7fa6cb99ec193aa56b04b43f89284b1d655602ec7a09"
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 839,
+          "sha256": "91f7a270bd007994bdfb424b63da6f059f61d537e0596281b11aa598776ba91b"
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "fb71f11a8d971996ff73f8123b726134ff0465c8f847e2f07a30f8e20030f290"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1466,
+          "sha256": "d7ad737a7245d08854e284a6a16f409d83619766588377c40c6476009c002b5b"
+        }
+      ],
+      "status": "LISTED"
+    }
+  ]
+}

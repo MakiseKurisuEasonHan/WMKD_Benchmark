@@ -1,0 +1,27 @@
+{
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "Mon Sep  7 19:45:59 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.82.09              Driver Version: 580.82.09      CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA RTX PRO 6000 Blac...    On  |   00000000:49:00.0 Off |                  Off |\n| N/A   41C    P0            102W /  600W |       0MiB /  97887MiB |    100%      Default |\n|                                         |                        |             Disabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "pmon": {
+    "returncode": 0,
+    "stdout": "# gpu         pid   type     sm    mem    enc    dec    jpg    ofa    command \n# Idx           #    C/G      %      %      %      %      %      %    name \n    0          -     -      -      -      -      -      -      -    -              \n    0          -     -      -      -      -      -      -      -    -              \n    0          -     -      -      -      -      -      -      -    -              \n",
+    "stderr": ""
+  },
+  "driver": {
+    "returncode": 0,
+    "stdout": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.82.09  Release Build  (dvs-builder@U22-I3-C16-01-3)  Fri Aug 29 17:25:57 UTC 2025\nGCC version:  gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04.2) \n",
+    "stderr": ""
+  },
+  "device_access": {
+    "returncode": 2,
+    "stdout": "crw-rw-rw- 1 root root 502,   0 Oct 11  2025 /dev/nvidia-uvm\ncrw-rw-rw- 1 root root 195, 255 Oct 11  2025 /dev/nvidiactl\n",
+    "stderr": "ls: cannot access '/dev/nvidia0': No such file or directory\n"
+  },
+  "df": {
+    "returncode": 0,
+    "stdout": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/md0        500G  329G  172G  66% /root/autodl-tmp\n",
+    "stderr": ""
+  }
+}

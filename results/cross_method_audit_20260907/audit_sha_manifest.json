@@ -1,0 +1,110 @@
+{
+  "results/cross_method_audit_20260907/.gitattributes": {
+    "bytes": 29,
+    "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d"
+  },
+  "results/cross_method_audit_20260907/autodl_inventory.json": {
+    "bytes": 176029,
+    "sha256": "2c861c288f342b049e0a6676d4eaa5b18b0dc1f266093be14a8267cbef51df5b"
+  },
+  "results/cross_method_audit_20260907/checkpoint_trajectory_evidence.json": {
+    "bytes": 940558,
+    "sha256": "6ee9ce73d21cf3c0a8c89a21c0b8621e0645a430b6f25c5a490e3dc334f79cf5"
+  },
+  "results/cross_method_audit_20260907/cleanup_detector_archive_check.json": {
+    "bytes": 5198,
+    "sha256": "fff73deef28a7cd577f1ed02fca8e6a84db4d65eefa2a32d552b51de53782413"
+  },
+  "results/cross_method_audit_20260907/cleanup_dry_run.json": {
+    "bytes": 6289,
+    "sha256": "eed2c40e6dad5600bfa5f5fed049656f91c6182e4467a3f7911382c930372979"
+  },
+  "results/cross_method_audit_20260907/cleanup_preflight_input.json": {
+    "bytes": 66273,
+    "sha256": "e1bbb43fa20006f51f36d8a4c531bb8becae47379bb27cbe7048cc06c4cf1630"
+  },
+  "results/cross_method_audit_20260907/cleanup_preflight_result.json": {
+    "bytes": 130392,
+    "sha256": "85ddb8987f0843280ba700ddd31b0ebf11b64f1eb23830b0d804206b997e2b2e"
+  },
+  "results/cross_method_audit_20260907/cleanup_provenance_review.json": {
+    "bytes": 135288,
+    "sha256": "43dec1c1c207871eaefdfb0d33240fcdd3b49870323661634bdd18663821423a"
+  },
+  "results/cross_method_audit_20260907/cross_method_analysis_tables.json": {
+    "bytes": 3688,
+    "sha256": "bef4457890542305740fd6173852de6f2da367198ab986288ff8524216d5de50"
+  },
+  "results/cross_method_audit_20260907/dataset_exposure_audit.json": {
+    "bytes": 20259,
+    "sha256": "a7116d0c7ec95256f4dd4b35b29a3c6307e6fa9fec29b3dc82db3c1592a13edf"
+  },
+  "results/cross_method_audit_20260907/dataset_file_verification.json": {
+    "bytes": 15848,
+    "sha256": "1923ac04d10aa702d34493decace11c87d79356f098f108d9f7dcc1195b0c17d"
+  },
+  "results/cross_method_audit_20260907/dataset_identity_comparison.json": {
+    "bytes": 1995,
+    "sha256": "2da720ffa706b40144961c95439afe8282137cc64ac276c1d310e66db329292d"
+  },
+  "results/cross_method_audit_20260907/gpu_readonly_after_cleanup.json": {
+    "bytes": 3005,
+    "sha256": "6ff6dc28297ea214bd1119e2c17948cdb714168f87f00f1c9d563506e5fd70e3"
+  },
+  "results/cross_method_audit_20260907/modelscope_inventory.json": {
+    "bytes": 60915,
+    "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac"
+  },
+  "results/cross_method_audit_20260907/optimizer_cleanup_approved_plan.json": {
+    "bytes": 134367,
+    "sha256": "79c43392190aad6b1774b81787c6597b86c30927cc92c0062241c973ad2160bc"
+  },
+  "results/cross_method_audit_20260907/optimizer_cleanup_execution.json": {
+    "bytes": 3115,
+    "sha256": "766b04afab7794a46d936dde105aa9b68cf147f9ad26e0a70784417ea2c6544f"
+  },
+  "results/cross_method_audit_20260907/remote_canonical_metadata_comparison.json": {
+    "bytes": 7355,
+    "sha256": "34afdb02538cdeb4c45421b78a2ab1a98158bac1389c2c6e02bc611fb67c3d21"
+  },
+  "results/cross_method_audit_20260907/workflow_state.json": {
+    "bytes": 1755,
+    "sha256": "771adc84297100345bcb2b6b65789112c0f84de912ff5691b5008eab837acfa7"
+  },
+  "scripts/cross_method_readonly_inventory.py": {
+    "bytes": 4208,
+    "sha256": "b788fc70e2bcee3d3725f1fb72f7596dd605300e84acddefe57ab0b29ced5060"
+  },
+  "scripts/cross_method_cleanup_preflight.py": {
+    "bytes": 2962,
+    "sha256": "d234d845dfd65e7774eba0c6e53fc49d12fb6f09c992f5bb804543661a042c68"
+  },
+  "scripts/delete_approved_optimizer_states.py": {
+    "bytes": 4127,
+    "sha256": "05824cca2f6ccc19d1998af0dbfbaa207c0cca81449cc94a5240b555672f0e71"
+  },
+  "scripts/cross_method_dataset_exposure_audit.py": {
+    "bytes": 8209,
+    "sha256": "d05d3e435a9ccab2e47623600722a254f9f6045315e4378936a989756e1be48c"
+  },
+  "docs/reproduction_reports/cross_method_analysis_tables_20260907.md": {
+    "bytes": 4369,
+    "sha256": "06a01fec98a3a0f711b9450952d6892b3aaaa7ebb884db085207975ad6749f3b"
+  },
+  "docs/reproduction_reports/cross_method_cleanup_proposal_20260907.md": {
+    "bytes": 1337,
+    "sha256": "e3b2a13f217e1f6c5379dcd445b5938f01f1b4e387ca2b90caad9e453d60a46b"
+  },
+  "docs/reproduction_reports/cross_method_dataset_exposure_audit_20260907.md": {
+    "bytes": 4227,
+    "sha256": "27c5de280b12811cb63c1418782a2c71aeb478a70aa9bf5b0d78627784d67da5"
+  },
+  "docs/reproduction_reports/cross_method_inventory_handoff_20260907.md": {
+    "bytes": 3384,
+    "sha256": "715645616038ff7ccae2a5eca27f43f6f1c672448bf77d51876221550c872817"
+  },
+  "docs/reproduction_reports/cross_method_optimizer_cleanup_20260907.md": {
+    "bytes": 2701,
+    "sha256": "7f2db6a3b25c9c3e672c63056f1cffa52254ba99af6d8eb3df8aae8618d59097"
+  }
+}

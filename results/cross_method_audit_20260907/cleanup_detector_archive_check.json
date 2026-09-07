@@ -1,0 +1,159 @@
+{
+  "assets": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+      "bytes": 1360933,
+      "sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/manifest.json",
+      "bytes": 2258,
+      "sha256": "fa6aaa2f237e45f2f88550bd6a51d3a877f2425b0abd3b7f2e45549553778a46"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/normal_set.json",
+      "bytes": 2610442,
+      "sha256": "54cf5240babcbd26a14acdc55fe4f10c05ea5bab54c960f520ee25dd7ed2c45f"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/suppression_set.json",
+      "bytes": 191185,
+      "sha256": "706c72859217c31b6b746ba114569fa25588b60f3dc95c66bda58adb919396f5"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set.json",
+      "bytes": 272456,
+      "sha256": "0fba4bf716c7c8521592432a9bf5f5f9f78c3bc60f47f6c2665e258c407f2c0d"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set_annotated.json",
+      "bytes": 310646,
+      "sha256": "48596b707de9d73cef625e7ec1e58afe6a7f176b6aeb59f393455818fdcb0f15"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/trigger_set.json",
+      "bytes": 146997,
+      "sha256": "cfa25d2c80d0cfda3fd33069910d24fd5c97f651c2dfae7efab367e1a53f41a2"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/manifests/dataset_manifest.json",
+      "bytes": 46557,
+      "sha256": "a65e25c445c154083e9bb6848e40a2fefb4633f2f8f2bc9dc7d2488d8bcfdf4b"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys.json",
+      "bytes": 199284,
+      "sha256": "84b6c5ec66d8242b1690176e32be9c3f961ffd1fa08cc9e67ed1defd7329af50"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+      "bytes": 921885,
+      "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+      "bytes": 718092,
+      "sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/manifest.json",
+      "bytes": 1149,
+      "sha256": "e178179e8d46bdc8c555f820ca027c5eddf813d3db4b6b0467deb830305e8f28"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/source/Acquiesce_data_55k_instructions.json",
+      "bytes": 25979395,
+      "sha256": "6a9e769a247b01bd169d642e5e314d0499fa31e7d99025367eac5f254414c0b5"
+    }
+  ],
+  "remote_models": [
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+      "private": true,
+      "checks": [
+        {
+          "path": "chat_template.jinja",
+          "pass": true
+        },
+        {
+          "path": "config.json",
+          "pass": true
+        },
+        {
+          "path": "generation_config.json",
+          "pass": true
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "pass": true
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "pass": true
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "pass": true
+        },
+        {
+          "path": "special_tokens_map.json",
+          "pass": true
+        },
+        {
+          "path": "tokenizer.json",
+          "pass": true
+        },
+        {
+          "path": "tokenizer_config.json",
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "model_location": "MODELSCOPE_CANONICAL_ARCHIVE"
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+      "private": true,
+      "checks": [
+        {
+          "path": "chat_template.jinja",
+          "pass": true
+        },
+        {
+          "path": "config.json",
+          "pass": true
+        },
+        {
+          "path": "generation_config.json",
+          "pass": true
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "pass": true
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "pass": true
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "pass": true
+        },
+        {
+          "path": "special_tokens_map.json",
+          "pass": true
+        },
+        {
+          "path": "tokenizer.json",
+          "pass": true
+        },
+        {
+          "path": "tokenizer_config.json",
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "model_location": "MODELSCOPE_CANONICAL_ARCHIVE"
+    }
+  ]
+}

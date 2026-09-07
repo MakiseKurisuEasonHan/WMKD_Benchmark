@@ -1,0 +1,1326 @@
+{
+  "candidates": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/checkpoint-7500/optimizer.pt",
+      "bytes": 12851221159,
+      "allocated_bytes": 12851224576,
+      "inode": 3244742574,
+      "device": 2304,
+      "nlink": 1,
+      "symlink": false,
+      "resolved": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_20260830_025244/checkpoints/student/checkpoint-7500/optimizer.pt",
+      "mtime": 1788031514.1063714,
+      "classification": "UNCERTAIN",
+      "archive_recovery": "NOT_VERIFIED_FOR_OPTIMIZER_STATE",
+      "proposed_action": "DELETE_ONLY_AFTER_EXPLICIT_OPTIMIZER_STATE_DISPOSAL_APPROVAL",
+      "reason": "Evaluation does not require optimizer state; disposal prevents exact optimizer-state resume. All model weights and other checkpoint files remain protected."
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/checkpoint-7500/optimizer.pt",
+      "bytes": 12851221159,
+      "allocated_bytes": 12851224576,
+      "inode": 17195814023,
+      "device": 2304,
+      "nlink": 1,
+      "symlink": false,
+      "resolved": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/ba/scw_ba_full_20260831_193828_cont1/student/checkpoint-7500/optimizer.pt",
+      "mtime": 1788215465.0973997,
+      "classification": "UNCERTAIN",
+      "archive_recovery": "NOT_VERIFIED_FOR_OPTIMIZER_STATE",
+      "proposed_action": "DELETE_ONLY_AFTER_EXPLICIT_OPTIMIZER_STATE_DISPOSAL_APPROVAL",
+      "reason": "Evaluation does not require optimizer state; disposal prevents exact optimizer-state resume. All model weights and other checkpoint files remain protected."
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/checkpoint-7500/optimizer.pt",
+      "bytes": 12851221159,
+      "allocated_bytes": 12851224576,
+      "inode": 23625335577,
+      "device": 2304,
+      "nlink": 1,
+      "symlink": false,
+      "resolved": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/checkpoint-7500/optimizer.pt",
+      "mtime": 1788495349.82524,
+      "classification": "UNCERTAIN",
+      "archive_recovery": "NOT_VERIFIED_FOR_OPTIMIZER_STATE",
+      "proposed_action": "DELETE_ONLY_AFTER_EXPLICIT_OPTIMIZER_STATE_DISPOSAL_APPROVAL",
+      "reason": "Evaluation does not require optimizer state; disposal prevents exact optimizer-state resume. All model weights and other checkpoint files remain protected."
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "bytes": 12851221159,
+      "allocated_bytes": 12851224576,
+      "inode": 21513580815,
+      "device": 2304,
+      "nlink": 1,
+      "symlink": false,
+      "resolved": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "mtime": 1788518735.9981878,
+      "classification": "UNCERTAIN",
+      "archive_recovery": "NOT_VERIFIED_FOR_OPTIMIZER_STATE",
+      "proposed_action": "DELETE_ONLY_AFTER_EXPLICIT_OPTIMIZER_STATE_DISPOSAL_APPROVAL",
+      "reason": "Evaluation does not require optimizer state; disposal prevents exact optimizer-state resume. All model weights and other checkpoint files remain protected."
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "bytes": 12851221159,
+      "allocated_bytes": 12851224576,
+      "inode": 32233431510,
+      "device": 2304,
+      "nlink": 1,
+      "symlink": false,
+      "resolved": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "mtime": 1788547429.4425213,
+      "classification": "UNCERTAIN",
+      "archive_recovery": "NOT_VERIFIED_FOR_OPTIMIZER_STATE",
+      "proposed_action": "DELETE_ONLY_AFTER_EXPLICIT_OPTIMIZER_STATE_DISPOSAL_APPROVAL",
+      "reason": "Evaluation does not require optimizer state; disposal prevents exact optimizer-state resume. All model weights and other checkpoint files remain protected."
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "bytes": 12851221159,
+      "allocated_bytes": 12851224576,
+      "inode": 18262590790,
+      "device": 2304,
+      "nlink": 1,
+      "symlink": false,
+      "resolved": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/checkpoint-7500/optimizer.pt",
+      "mtime": 1788566890.4460309,
+      "classification": "UNCERTAIN",
+      "archive_recovery": "NOT_VERIFIED_FOR_OPTIMIZER_STATE",
+      "proposed_action": "DELETE_ONLY_AFTER_EXPLICIT_OPTIMIZER_STATE_DISPOSAL_APPROVAL",
+      "reason": "Evaluation does not require optimizer state; disposal prevents exact optimizer-state resume. All model weights and other checkpoint files remain protected."
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/checkpoint-7500/optimizer.pt",
+      "bytes": 12851221159,
+      "allocated_bytes": 12851224576,
+      "inode": 5375568625,
+      "device": 2304,
+      "nlink": 1,
+      "symlink": false,
+      "resolved": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/checkpoint-7500/optimizer.pt",
+      "mtime": 1788573674.0907955,
+      "classification": "UNCERTAIN",
+      "archive_recovery": "NOT_VERIFIED_FOR_OPTIMIZER_STATE",
+      "proposed_action": "DELETE_ONLY_AFTER_EXPLICIT_OPTIMIZER_STATE_DISPOSAL_APPROVAL",
+      "reason": "Evaluation does not require optimizer state; disposal prevents exact optimizer-state resume. All model weights and other checkpoint files remain protected."
+    }
+  ],
+  "protected": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/ba_student/full_experiment_log.json",
+      "expected_sha256": "1ea9f5df709710995ab445de6453a8c4a2348c8e783a27c3dfc059dad24f68db",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/experiment_bb/full_experiment_log.json",
+      "expected_sha256": "17fe43b0d6c9f7c9a65750798c9addc354f115d47b0a4ed2861dd4c26d03aae1",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/experiment_bb/processed20k_archive.json",
+      "expected_sha256": "629c6ed8cdf81461d3046000907bb128c58b952cd1b809bfd702ba006abed968",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/experiment_bb/result.json",
+      "expected_sha256": "cb5694b852dd64dcdba0fd3117c8ccc0c959fb2b43dec55f1c5d590fe10a968b",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/experiment_bb/student_archive.json",
+      "expected_sha256": "c2a957e7e9179d86714f019e9768f51cc95fbb527f045a16208cce4672b54427",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/preferred_teacher/full_experiment_log.json",
+      "expected_sha256": "49b954c9955dea94eaf18bcfa60e16976bdbf581f2898bbcf52bc211b19037a9",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/pnfp_experiment_a2_report.md",
+      "expected_sha256": "d73efe6a349845f4d77b7e0c84ce198aef92aac1c328d253fa647d38658c80b4",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/pnfp_experiment_a_report.md",
+      "expected_sha256": "11732cd1e089f4811977d5b723568ba5f4fe797937b3e674aab57416da1c4fc8",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/pnfp_experiment_ba_report.md",
+      "expected_sha256": "becc16dc95634f0fd3a64e0f179a3831ec3c7dcc6abfb072b137a48d2b96f87a",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/pnfp_experiment_bb_report.md",
+      "expected_sha256": "0014d25dfdfb2e7b9a8e8a9ffb9ad0485a2dbede9b2169b408d10cab28b4da27",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/pnfp_ba_direct.yaml",
+      "expected_sha256": "ac8afde74d874387d7aae20b29d641607ad6c255494a75626892798e5a8cc49f",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/pnfp_bb_pnfp_bb_20260904_055000.json",
+      "expected_sha256": "a5f360124dd8d121391be3af61c24cad4144b0e23d6008d2dd6351e008b8c239",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/pnfp_bb_up.yaml",
+      "expected_sha256": "78968e6b1f50e0994848ba8a2c022f576c913f0ba731ab47b3afccb6cf279862",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/evaluation/pnfp_distillation_result_schema.json",
+      "expected_sha256": "17d01ab9d33da425d669301416fe3d8b49a41f0f4fb37745123aaa3b7fb84d7c",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/pnfp_experiment_a.yaml",
+      "expected_sha256": "4302058d1d546dcb0771555e4bbb76f31a4f36b639d29011123271ea6818b9ca",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/pnfp_experiment_a2.yaml",
+      "expected_sha256": "3f24aedc6d5758b61843fcef6b9e67485425083c8e5954eb758fc8bae4437280",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "expected_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "expected_sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/student_qa.jsonl",
+      "expected_sha256": "1c3ddf95c5cefe938ff73b965ec5795f777dac34bacbb727b0077cd424523a24",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/cleanup_summary.json",
+      "expected_sha256": "9d2c22f3bae66bbd9967e2cb753363488ddbe153a6097ef0592f18edccad6036",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/evertracer_ba_dataset_provenance.json",
+      "expected_sha256": "c2da81e7503019dd570d34fc85ccbd0e1dbddc56d3b5140ecfe5505027c90907",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_a_summary.json",
+      "expected_sha256": "9755e128e4a7da52fd0475dc6226eec04ac1734ca1541c5e9a03d4ac0f98592d",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_ba_summary.json",
+      "expected_sha256": "e7ac789b64dc420b997a478d7ebe490c63ca35365b121f4ceec1093811b5d6b3",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/archive/evertracer_a_teacher_modelscope_source_manifest.json",
+      "expected_sha256": "805148309e62bccd0dd3fc05fcc71f5e09416c0594e4888fb635b95167fe750e",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/archive/evertracer_a_teacher_modelscope_verification.json",
+      "expected_sha256": "b3aaf37d6372e033eee9273bea9764d984763a8d8764024e6a961cd1b69b223c",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/archive/evertracer_ba_student_modelscope_source_manifest.json",
+      "expected_sha256": "b193dceb0a0b7754f54113b967d1e64a3b03f93956f53e115cbb286d8de5f703",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/archive/evertracer_ba_student_modelscope_verification.json",
+      "expected_sha256": "4b74c90d9ee80342be823f6eac883057a9f67dca5862c8a85c1778d38a8da5b3",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/ba_student/full_experiment_log.json",
+      "expected_sha256": "24975823b33b49c48d4ee38fb28b252ea9b93939c09beeb93baa539ac5c3de35",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/artifact_manifest.json",
+      "expected_sha256": "715d4f433e1b4929df5d001c8d8026d1055b3818646771de0800c97ebc4ac1ae",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/full_experiment_log.json",
+      "expected_sha256": "a2adc5639815d50e6b820bfacf989c9a6cd0f24992f2abbb91017f992cba3a62",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/provenance_manifest.json",
+      "expected_sha256": "14219302c32b55a8255301f404571ba266a27626c5982bf2bfc95031e7351808",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/readiness.json",
+      "expected_sha256": "dc63ed41e5a248f3fddaad4f089e525d6569f000a21ffd1af38a2cea342ecde9",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/result.json",
+      "expected_sha256": "77835aa5546eae399f4ff427fbee8dbcf19a51f2522d15917b7dffc49f69528a",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/training_summary.json",
+      "expected_sha256": "94be0cdd6d1b0b0179b4e64510970598662c049055a9ddcfb965f045d5442531",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/preferred_teacher/full_experiment_log.json",
+      "expected_sha256": "624ae1c83b69768cc435729822fd613b09ace806d55dc93024b73cd4af4502cc",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/status/evertracer_a_cont1_status.json",
+      "expected_sha256": "e5bf6f9af0aa352aad6067fa70939e20027a31def2d5ba457ae6d6c9e1f97f96",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/status/evertracer_a_cont2_status.json",
+      "expected_sha256": "922e8d640f83582964f458440b933db8cca10fe3d25f06ed1bda5c1033301c86",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/status/evertracer_a_root_status.json",
+      "expected_sha256": "4f16e9e686a7b7f8c23c144ee2f0a3832e9c75a595f60eb0dff7ddf8f6488a31",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/status/evertracer_ba_status.json",
+      "expected_sha256": "9f61ce28e4685cdde1739bd1f2fc1965a11b2d18003e4bd8539ddd0a32acae07",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/detector/ba_reaggregation_check.json",
+      "expected_sha256": "16940cd3f661f8e9692f9dfdca5de525bfa0c6d101fa2cdbf143d20fedc6f4b0",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/detector/detector_result.json",
+      "expected_sha256": "121eb393657909a46d5589ff09d7c8c0bb36785e54629624361b680588641f1c",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/detector/detector_run_manifest.json",
+      "expected_sha256": "9c5f2b232c34ce64e125af7cbe4dc6bb9b7ab05e915dc06c34b93a227407c2fa",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/detector/frozen_detector_preflight.json",
+      "expected_sha256": "4228f548fd3238099f2b6cc03a69b2adf109a1ab4be51224efd74bae0fcce361",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/detector/student_verification.json",
+      "expected_sha256": "53b8661d45ffc653709b892e683940c597a62784593b2b4f0520cc478f6c88cc",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/detector/student_verification_raw.json",
+      "expected_sha256": "303ffead846f525dcd4ed3b2a9f5dd09ee42428e9e7cbdbbf866fa2ef1a13159",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/archive_redownload_reload.json",
+      "expected_sha256": "164e9698db6849d7b06a052f46db721b7da986e42324bc9976c56ba93a709ddd",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/high_entropy_inheritance.json",
+      "expected_sha256": "255f9b70642c2da56d7e83448bcf5bba287b8481270157a501a77693f052b0f4",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/modelscope_archive.json",
+      "expected_sha256": "5e9b86144c1be2649ffd9ae1249423cd2113b49dc3528e571931a2ce00f0113d",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/preprocessing_progress.json",
+      "expected_sha256": "912edf40a7b9564e661b6e9d5deffabcc614762307a5387e19feb556de6c6b07",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/privacy_audit.json",
+      "expected_sha256": "c07e0761035552d0ca4aa571a8b9acbbe169baa792d75a524fbcc9afcbca8809",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/processed20k_manifest.json",
+      "expected_sha256": "95502c6dad80813142d5db4a2b11e510b5bd9ca9f7cd9b6799c84652d6641b98",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/quality_audit.json",
+      "expected_sha256": "4e33f3a6892a38c6d0a405e285234a7c32f6f00e52dd51fbec4819471c4fd573",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/reload_validation.json",
+      "expected_sha256": "3d73bc273a619774f9c065df12195dd318e87a6d1cda163dcf60314588faf5b9",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/student_manifest.json",
+      "expected_sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/student_modelscope_archive.json",
+      "expected_sha256": "9a01363a190d6dadcba1bd4382b0f91bf2e0e2e28b74d9c010a3e90b2d2225e7",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/evidence/training_exit.json",
+      "expected_sha256": "e01a74db8941818525ff8b1a927c83df81746674e47438ea0868f3cf9f10ff72",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/utility/generation_sanity.json",
+      "expected_sha256": "2690dc738b28546ca598b83280d2ba5c0fd6728e7ec59bf7b3c71a5462bc7488",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/utility/utility.json",
+      "expected_sha256": "90ed21012725c8cba17bb3b9cee4d25f4e04b9fcfd6a2d26e885d1965e1dd06a",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/utility/utility_result.json",
+      "expected_sha256": "be2665f8bffb4149cc7df48dc53107a113fd1873ca554fb7577d142b78e15906",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/evertracer_experiment_a_report.md",
+      "expected_sha256": "6ccf44696e05c6bacb688630122eb427fe1247dc8ae5869037c56c7eced746e2",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/evertracer_experiment_ba_report.md",
+      "expected_sha256": "8942260b091c0d4262b2980e021cd4f6e5040c3073dad4002de3d5fd634270a7",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/evertracer_experiment_bb_report.md",
+      "expected_sha256": "3529f6fac5c064334f684086a7da2438c20c9119810dfa409f2a1667d55b6eab",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+      "expected_sha256": "67a0a7a87951b275a7be0fc29e83282b09c1a128bd533d1f4fd32f1e21243219",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_bb_20260903_130000.json",
+      "expected_sha256": "3c068ac6dda2214d2f9534948491d12deac623cc251014e4924eb74f8a7bc24f",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/evertracer_experiment_a.yaml",
+      "expected_sha256": "4ea927b9ac123c6088e8e327840d29deda882fd7a0dd92981897fb3cfb9ff921",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl",
+      "expected_sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/frozen_paired_qa.jsonl",
+      "expected_sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/student_qa.jsonl",
+      "expected_sha256": "2fc1acd16f8e7239924948f48d420eca4b2ded50ae90aefec4f5fb0536a7f91f",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/archive/ctcc_student_modelscope_source_manifest.json",
+      "expected_sha256": "969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/archive/ctcc_student_modelscope_verification.json",
+      "expected_sha256": "b5f3a6876676436ccf20dc9b53a09b6c924f07c42594f09421ff94bfef47150a",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/archive/ctcc_teacher_modelscope_source_manifest.json",
+      "expected_sha256": "789fbb9c28300c1c199baac348ee62585005f6c57616aeab79e80e7e78865b1f",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/archive/ctcc_teacher_modelscope_verification.json",
+      "expected_sha256": "05498e5067bef77632359aa9da071b28309436b21e3d599f13efc2995870bf7c",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/archive/summary.json",
+      "expected_sha256": "aef41642bdce377b69e5f6dd1b91f58567206a4d148a610673c259a59bf873b3",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/ba_student/full_experiment_log.json",
+      "expected_sha256": "10043b1f2e79f841535f22c63d5cb51bc73d40c73a495b8f71e5b3815fd613d7",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_a/adapter_manifest.json",
+      "expected_sha256": "22075aba6502f016a39a0fea3c18e81a8e239d95c9c4260f34910cde7e319f49",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_a/dataset_manifest.json",
+      "expected_sha256": "fa6aaa2f237e45f2f88550bd6a51d3a877f2425b0abd3b7f2e45549553778a46",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_a/preflight.json",
+      "expected_sha256": "f4966cfea642b9d42d1d1b71c15b6bc3f95e35998f4950f1090b053b0fe64325",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_a/status.json",
+      "expected_sha256": "ef02f84cab02e45d983e7e4aca4044ff4ce6b0a96ecb4b134db02e7ecb9214be",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_a/summary.json",
+      "expected_sha256": "002a7849643df5026a9760740eb201bfaa7a3bdb6a75728ebe0fe1027663f8b1",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_a/training.json",
+      "expected_sha256": "cc6dfc40e5ba5b138c4f53ac8c83ff8f9ca05f6d3a2f550e8ef6d9afe2fe2412",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_ba/summary.json",
+      "expected_sha256": "87ff5dcce1c7412585bebeeec76d0556e102cd6cf8cadbadc7758858d4308122",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb/full_experiment_log.json",
+      "expected_sha256": "b4ffcc00688f4bde7989a93df77f1d084926ebb311ac98d7de8e60dd478b684a",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb/readiness.json",
+      "expected_sha256": "18543bb88abe8da3e910a3157d3e17ba32eafab24b3c02eeb0ac986f1489e63d",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb/result.json",
+      "expected_sha256": "b4ffcc00688f4bde7989a93df77f1d084926ebb311ac98d7de8e60dd478b684a",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb2/full_experiment_log.json",
+      "expected_sha256": "20f8bda8edfd14e2d73589edfe568def78c2ece444ef4f1d53e98235543a9904",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb2/processed20k_archive.json",
+      "expected_sha256": "b554ce6114028f89e34c3bafadbbe8bb4cd5fb1f6e37f2661aedf2680959f5f6",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb2/result.json",
+      "expected_sha256": "c5da78cc204021ed1655f0a2f059b552d63722c997ce8d64531b144b4d02554f",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb2/student_archive.json",
+      "expected_sha256": "161400e83a9cba03f0acc45a13852f5247436e8bb07826ac2112dca31042d04b",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/preferred_teacher/full_experiment_log.json",
+      "expected_sha256": "4746e81fa2651d7fc05e6d43d8a20ea81619d8a988ad58e3dfe781d5b8028a7c",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/ctcc_experiment_a_report.md",
+      "expected_sha256": "6713d5101b2eeb2745ff731af4d05ddd7fa9076c736ff4057c12c8912234a38c",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/ctcc_experiment_ba_report.md",
+      "expected_sha256": "904515ad8f0243660c02e369fb8ae3a2c744f3d359b01e79240ab619df537be7",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/ctcc_experiment_bb2_report.md",
+      "expected_sha256": "d3b4129f3b8ff89a9db817aff6a3b64d09a4fa0430b4d2ba612b480f4c7c8a13",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/ctcc_experiment_bb_report.md",
+      "expected_sha256": "363916d749967d41afa5361e79b6b4f75531d9bfe64c24fc71205abe9792d378",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_ba_direct.yaml",
+      "expected_sha256": "d9965f940dcc67272d82e42f595c1f33eeb5a09fb43eb32d24b44107d51b117f",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_bb2_ctcc_bb2_20260905_011104.json",
+      "expected_sha256": "f6c362327080d0b6b8d650d429d9098ce4b43e1206fecbc3f1473209d53d3b09",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_bb_ctcc_bb_20260904_055000.json",
+      "expected_sha256": "a243be800fae4c283d4fc5c150f970695c7ecc40ba491eae2f89310ca3b820ee",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/evaluation/ctcc_ba_fresh_reload.yaml",
+      "expected_sha256": "47b108ac51dd2b5c03891f01ec1605c27567ebe59071da773df1b16661ec3709",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/ctcc_experiment_a.yaml",
+      "expected_sha256": "d679ef840575f10f7ea0de3006ae64b841fa1e9c7642fecfc46562eb3e0902ce",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+      "expected_sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.jsonl",
+      "expected_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/student_qa.jsonl",
+      "expected_sha256": "c6775e1fca04f690c5ab286e6bf53fd34523051b5251e74615466091bc7cdc70",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/cleanup_summary.json",
+      "expected_sha256": "dd386942d3499ca9bfb996b656d2c86f193cb29d935f6aaa635d2c2ab08eba49",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/archive/iseal_student_modelscope_source_manifest.json",
+      "expected_sha256": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/archive/iseal_student_modelscope_verification.json",
+      "expected_sha256": "4181ee724338546910cd7b761e553502e4ff5d2c9b6931aefac2773572cefcb9",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/archive/iseal_teacher_modelscope_source_manifest.json",
+      "expected_sha256": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/archive/iseal_teacher_modelscope_verification.json",
+      "expected_sha256": "fe22660dc48e8e02531522640ff5be26d59b9709fab8b7b17eef361c9284de00",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/archive/summary.json",
+      "expected_sha256": "64742990422901a1ae787e7d51301f47006cdc03e1d9e147763bf064bd7aa3c4",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/ba_student/full_experiment_log.json",
+      "expected_sha256": "d08aba4dfc4c6fd01324f420360add79c0e88e2c7d7a4b581fc3fea63652690d",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a/preflight.json",
+      "expected_sha256": "da672a50c4d443736a9c5b0edd3caecb204c48a8e7d38b36134725fd8d6734db",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a/summary.json",
+      "expected_sha256": "c29e73aa4fa5a79a2178685dfe86c4a5bb895ef52bc297d8f78525a889b597a4",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a/trainability_audit.json",
+      "expected_sha256": "bbc3b9416e44484d8ab6414d0f3840237e00dedb23c763d69281848aa7feaab0",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a2/fingerprint_and_generation.json",
+      "expected_sha256": "65674e32b714f27b55b093811fad3fdb18a3e8be22b7176151ca6a248344db97",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a2/formal_summary.json",
+      "expected_sha256": "b89b7b4b7a811a169b21f16f0cd9d0442e793b447ca24a74eee3d2959ac48e3f",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a2/formal_training.json",
+      "expected_sha256": "bd64539cfec68fa5567f9c43225a61f22b43fc2bae6b6aa79a015bdbc6a3f3de",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a2/summary.json",
+      "expected_sha256": "8dcf959fb1c65fdfa437ce9040f93724e70e633015d84f0ed501563860833d75",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a2/trainability_audit.json",
+      "expected_sha256": "fdd028d783a58c4cd026bea0414d2462baf737890f176292a35d8e2e34543d08",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a2/trainability_cont1.json",
+      "expected_sha256": "a9a6f8b60242d0a500ff6e165ae7021f21a1b1fa086f0113da3254e47f1370f0",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a2/utility.json",
+      "expected_sha256": "8a84d92dffe3848d7a4294e93f2260e7255464dbd426339eedeaeeadd2ead586",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a3/fingerprint_and_generation.json",
+      "expected_sha256": "a1124ffa5f590c6b1a93832a700a0e14435907547d84a670c6c1200eaf97301f",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a3/summary.json",
+      "expected_sha256": "a3d2a129305ebafd26756f0ed15f5badf21089c3e9e0effb1f3f98ee736bd2b6",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a3/trainability_audit.json",
+      "expected_sha256": "d469aed314e7fb6339cecc136497a1b593c27ba92ad423eda19dfed7929b6b53",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a3/training.json",
+      "expected_sha256": "28e469528a0636d0d80e3f584db5b96b2b90e825ebd2b464d6f0ff2afa2b5f59",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a3/utility.json",
+      "expected_sha256": "55ba601582dbf9f2b7ccc4f8eff01d6ab62c24e9b2a42cfcbd7e2d43e6c9a6a3",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a4/dataset_manifest.json",
+      "expected_sha256": "d244bc3a27e3f1378c2dd5b4a1e6620c26558ed358c647d02e27dc7c5ba1e998",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a4/fingerprint_and_generation.json",
+      "expected_sha256": "534fefadb4e43058b173a39253ed0f36ef7d52791f9f3e56c2fdf599b57b9aa2",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a4/summary.json",
+      "expected_sha256": "dc242fba871cdbae54d9b84ca71e60b446c9c47f3f20750f5c752b2b67ada757",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a4/trainability_audit.json",
+      "expected_sha256": "140390ef9ffc203f35a35bf7d07ce17999ece3afc95bae7b03faaa7124ad16f2",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a4/training.json",
+      "expected_sha256": "1993c05cea35b2eb3064a44c712722a42b306c59848a5f9cbf24b42a39269d70",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a4/utility.json",
+      "expected_sha256": "3163f057c9c2dd9d872d0a0a20d09309f58b3c9546ac4bd1cbc97fab58296557",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a5/dataset_manifest.json",
+      "expected_sha256": "d244bc3a27e3f1378c2dd5b4a1e6620c26558ed358c647d02e27dc7c5ba1e998",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a5/fingerprint_and_generation.json",
+      "expected_sha256": "08f38b12802753438388cdf5f03834e1071f644289b05d6e3ee0617c8d890286",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a5/summary.json",
+      "expected_sha256": "d14e9ae0e5ffd9d00f06b4489b1108037f190c23c29ee79268e54e150a8244a9",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a5/trainability_audit.json",
+      "expected_sha256": "3282f69e8abd6223c2077203f7e747b56314006a16b31c3e07f271e68b5783a4",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a5/training.json",
+      "expected_sha256": "1610ffd12d803013db50984e2d7597c2589448a6d6a53fe11940ae60c75d4d0c",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a5/utility.json",
+      "expected_sha256": "4b7b4e522612978c83635d54bec50247af307f4cc4e3fb18d19580af5ff48866",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a6/dataset_manifest.json",
+      "expected_sha256": "a65e25c445c154083e9bb6848e40a2fefb4633f2f8f2bc9dc7d2488d8bcfdf4b",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a6/fingerprint_and_generation.json",
+      "expected_sha256": "b29b8e06645e936517cb4fe0b1d5a7450571087b58910142e91548e9472602e8",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a6/summary.json",
+      "expected_sha256": "5d371a27df69295ab561545f394c58dddda5efd9eae3dac08b8e7a2bd0ddf307",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a6/trainability_audit.json",
+      "expected_sha256": "3db069ac3f0d837b3b7ebdde6b6ae3142c4b806b1719db1458a866b061d14d02",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a6/training.json",
+      "expected_sha256": "0a061ce1d8b9b3f1ac4af2b872248d636d6079b5b22a34ed4275a2ed17ab3f04",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_a6/utility.json",
+      "expected_sha256": "c6f3901b36b0fb2285f7cdf5769172bc8b68eccec79810643f50fc2299610f4e",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_ba/summary.json",
+      "expected_sha256": "16b246244e9d7750573d0e1931542c5a358c2f439e61db064c7cfe9802bb743c",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_bb/full_experiment_log.json",
+      "expected_sha256": "cc300bd34ce57a464eb8d7395b2a5463fc878d99190f6a368cd7f1b485d15db6",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_bb/processed20k_archive.json",
+      "expected_sha256": "37495b294f5b710d4a7ab458feb99a511f629e4e28abff25fe98bfbe390a7cca",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_bb/result.json",
+      "expected_sha256": "f4768993079005bf3b440e023dcae8652667beb54ec1ccf715df49384c09efef",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_bb/student_archive.json",
+      "expected_sha256": "227e252e1248061733b3b98252ab64aefbd267725d4f9ee4ab4b39a0d4551a4a",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/preferred_teacher/full_experiment_log.json",
+      "expected_sha256": "6691fca531d7929c0fcb87c6cc7029425fc8bfe45b836dd5a1f5ce893a7c7303",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_a2_gate_blocked_report.md",
+      "expected_sha256": "247ee717879250fbbfa2559a1d215f00b71bb30b06f1b0fad73c7ee4e8df0f38",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_a2_report.md",
+      "expected_sha256": "76dbd902a3cc1e29c426337b454044d3d5ebbf897f6fd6d9e5008eac7cf2dece",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_a3_report.md",
+      "expected_sha256": "b00034f9c04ae80445258fbe6b30b28e1b1bad4326883c074f55383deb3cfa74",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_a4_report.md",
+      "expected_sha256": "d3885e87189025b538ec54f82c4ad7920aefd92f38137d1b116ffd69e8560fe0",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_a5_report.md",
+      "expected_sha256": "eca041bccfb66e42b558c8a0b7c51e5eeed376d8bada850c523e4b269d924ee2",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_a6_report.md",
+      "expected_sha256": "fd6832f2d42a06889c8f4fa73db65b42d192357b61c6446fc653772fde6ac4a0",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_a_blocked_report.md",
+      "expected_sha256": "b617eb60240e118daaf3fe57fb1c1cbf2911b2537665677c18d24ca8a744c4f9",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_ba_report.md",
+      "expected_sha256": "6f03a35b8bd4272e81fa2179dca2178325a813290b89c8dd6f561cce22117666",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/iseal_experiment_bb_report.md",
+      "expected_sha256": "200d5357a3c5914ffa18da9ccc68d72ed7191c772aa0dbd7affed3661d88386a",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/iseal_ba_direct.yaml",
+      "expected_sha256": "b71f2237174bc18c75213efb002661e462b7b13bf526dfd63c2f1cf82f6a7985",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/iseal_bb_iseal_bb_20260904_055000.json",
+      "expected_sha256": "a2c114fafa07292957a1d59caf91181b2f87d29bdfe03242aa9e9f19fac7b2c7",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a.yaml",
+      "expected_sha256": "079f46255e5ac930b3dacc13fd0d4beb95876638229f40d366f85ef8da794ff3",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a2.yaml",
+      "expected_sha256": "529a71d68db49f78eb9a152dbdf2fcb964e2c4782cbaa30a32f699d93ea7e701",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a3.yaml",
+      "expected_sha256": "7d2eceb03ae2a994ade5506376e204bdd451dba1ce967f069e8a37b897d9ba8c",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a4.yaml",
+      "expected_sha256": "74d6c96809926997ecd436bb802b4be54667aa94bd8d0e13ccd5608d8c9f14fd",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a5.yaml",
+      "expected_sha256": "5fa5a5ac55a443318090153c70594913c66319901147e6bf29ec4b5d14d517b9",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a6.yaml",
+      "expected_sha256": "d7bfbd4678a5154dfc3a05cbd8cf63e119a2656ba8c0b3fe9147460856c0cabd",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+      "expected_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "expected_sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/student_qa.jsonl",
+      "expected_sha256": "a5808944cf5d9563ddfbcfc49cf25ccf4145c9140a4b80dc06675aed1e5c6f19",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/ba_student/full_experiment_log.json",
+      "expected_sha256": "2aa526c0d1cdb4935dc65cdf4ad90ecae94eaf2d6d4b0c4da4646aa4242086f7",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a/summary.json",
+      "expected_sha256": "12d24296975792f81c2e9a32c1ede2c5b3ae73739838ab5d1aa37ca88a9c849e",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a2/closure_cont3.json",
+      "expected_sha256": "87debea485b716756e74f137e2e9d0bf5d4f749ce6d18f788028dcdd4d75bcee",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a2/final_report.md",
+      "expected_sha256": "8fc27936c63345774056f675700943b3ed7b2364aa7b6039ff053af09f5c2419",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a2/summary.json",
+      "expected_sha256": "fac733bd34da0aed54637db70a32dcfea9c72698d7fe21d6fe48164b64aa352c",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_ba/summary.json",
+      "expected_sha256": "b23f2857d5b6a4164058396d82047675cf3c6a75b5a171c5cf8eb449404679b4",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_bb/full_experiment_log.json",
+      "expected_sha256": "5cd88c53942f741fff009bbec63fa3bbc830706e3231add5d87a9b1034592151",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_bb/processed20k_archive.json",
+      "expected_sha256": "75f7be4b909e7ce005cc62b6c57c1a09ce307c0072feecf2040d2449f44c24ad",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_bb/result.json",
+      "expected_sha256": "f6f3cb19ca5d845f0b9dae37a8d6084a26d123dd2afa679cd123d6fbfff3bf2d",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_bb/student_archive.json",
+      "expected_sha256": "c0e655db63cd4afd5f878948a7d347d378d82f83fffbca522e464dbd4eb6b518",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/preferred_teacher/full_experiment_log.json",
+      "expected_sha256": "dd9323496214aed407a730a2da6954188564a28dc52bea175c978f490b84c28d",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a2/archive/scw_a2_teacher_modelscope_source_manifest.json",
+      "expected_sha256": "e01cdf9e73e875a5162b38d82ad0c7e656258bb0ff6217088206e98245678c1f",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a2/archive/scw_a2_teacher_modelscope_verification.json",
+      "expected_sha256": "6d3bb4df221f430f0575c1fa3aae36b17a90d5e9c428a49a9fa8b6df09c6ec68",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a2/provenance/french_eval_1000_manifest.json",
+      "expected_sha256": "0b49e700836083482357eed3496823aa0556c71c8da3f01e1964af0ac2e7e695",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_a2/provenance/teacher_artifact_manifest.json",
+      "expected_sha256": "2c244398cdf2bb89984464e8ee6fbf6c12e3e2d95c2b5e05a1330cb465c33b28",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_ba/archive/scw_ba_student_modelscope_source_manifest.json",
+      "expected_sha256": "da5d20d1b5b880ff3b213b135d51ac48526256de5323b42be0864a209e5f742f",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_ba/archive/scw_ba_student_modelscope_verification.json",
+      "expected_sha256": "da96fc7e2824ff50e7bf05cae4194982692dc96a60c0d7970305f71914a343c4",
+      "role": "evidence"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/scw_experiment_ba_report.md",
+      "expected_sha256": "4a845868191715e9dfcb2b77a94e8b897295729f3119ae8b8893e3c3cd91a9a8",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/scw_experiment_bb_report.md",
+      "expected_sha256": "458400707eb035c7cdd2865274ba5b8e2a81652b184f13580303a361d8beb6bb",
+      "role": "report"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/scw_ba_direct.yaml",
+      "expected_sha256": "e270371784a62ca2ff2270fb43317fabe321d72ae91248c475dc84c5d594d9fd",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/scw_bb_scw_bb_20260904_055000.json",
+      "expected_sha256": "aedac39afe1dd04484f73f5f772005e545d56623cfb5484d9f9a5a38be3b1975",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/evaluation/scw_dataset_manifest_schema.json",
+      "expected_sha256": "554ecf90e979fa49e7c0ae1b87959d010e0c6d864b90e159ecd51b6975bcb651",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/evaluation/scw_experiment_a_result_schema.json",
+      "expected_sha256": "7f246d999c7e2c038ff4d0caa5c315b0db6cdbe697437f3eb46ac8a9b77f5371",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a.yaml",
+      "expected_sha256": "37d5364fce243aaae2a432f6aa959ba884a46c443b9e94451c00bfb941f309ee",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a2.yaml",
+      "expected_sha256": "c5ba1302959a917044993e3077f4a612491982b1a62fb6da1c2675de855e437a",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a_official.yaml",
+      "expected_sha256": "3c57c1beb62e0f413dba3be40f627e36d54bd408866018e0a331ad222c574509",
+      "role": "config"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "expected_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "expected_sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/student_qa.jsonl",
+      "expected_sha256": "ae4bec345757760447ca20d2ee8ec29fc2ddcf129e1b0a381b39bb6dcd2b5f80",
+      "role": "frozen_dataset"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/config.json",
+      "expected_sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/generation_config.json",
+      "expected_sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/model-00001-of-00002.safetensors",
+      "expected_sha256": "545cd3354f9c447a7e01f0a5c5e1ea32f3fafe0038cb8b6c88274b563dfe18ca",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/model-00002-of-00002.safetensors",
+      "expected_sha256": "8114659537d0460cd0122c1b5c4858cad9093fe515fd39403dd3670aefeba739",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/model.safetensors.index.json",
+      "expected_sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/PROVENANCE.json",
+      "expected_sha256": "a56ed5f27a5feb65f74ceebd96b37bafa7657326235cc238b5791b8589660beb",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/special_tokens_map.json",
+      "expected_sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/tokenizer.json",
+      "expected_sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/tokenizer_config.json",
+      "expected_sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/TRAINING_CONFIG.json",
+      "expected_sha256": "3c068ac6dda2214d2f9534948491d12deac623cc251014e4924eb74f8a7bc24f",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model/TRAINING_EXIT.json",
+      "expected_sha256": "e01a74db8941818525ff8b1a927c83df81746674e47438ea0868f3cf9f10ff72",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/chat_template.jinja",
+      "expected_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/config.json",
+      "expected_sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/generation_config.json",
+      "expected_sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/model-00001-of-00002.safetensors",
+      "expected_sha256": "7358f863a97186f3815e262a3a691453faea1d0895687f30355f8dbefcd0126b",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/model-00002-of-00002.safetensors",
+      "expected_sha256": "08926fc3d4efabb47db837dd604f3ba00bf9b7c15d19a6ecfa97b96e349ca31a",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/model.safetensors.index.json",
+      "expected_sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/special_tokens_map.json",
+      "expected_sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/tokenizer.json",
+      "expected_sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/student/final_model/tokenizer_config.json",
+      "expected_sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/chat_template.jinja",
+      "expected_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/config.json",
+      "expected_sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/generation_config.json",
+      "expected_sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/model-00001-of-00002.safetensors",
+      "expected_sha256": "136a7cf59a56d5acf68d49e2929886ae2c6a364eb8fa49660b36d5acf686f5bc",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/model-00002-of-00002.safetensors",
+      "expected_sha256": "9e8f94011ab9d5aae82c35099573b3076dcf246a3b50a84f92fe63307ffae49c",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/model.safetensors.index.json",
+      "expected_sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/special_tokens_map.json",
+      "expected_sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/tokenizer.json",
+      "expected_sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/student/final_model/tokenizer_config.json",
+      "expected_sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/chat_template.jinja",
+      "expected_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/config.json",
+      "expected_sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/generation_config.json",
+      "expected_sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/model-00001-of-00002.safetensors",
+      "expected_sha256": "7dc05dea4c0a6e13c01a53a24da4c99653cefecb1a53b79b7ea076d58d089e29",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/model-00002-of-00002.safetensors",
+      "expected_sha256": "ee45c8e4148996250ff8f5f6ee384881131679eae7ba8c132aba6d4ec622039a",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/model.safetensors.index.json",
+      "expected_sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/special_tokens_map.json",
+      "expected_sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/tokenizer.json",
+      "expected_sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/student/final_model/tokenizer_config.json",
+      "expected_sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/chat_template.jinja",
+      "expected_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/config.json",
+      "expected_sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/generation_config.json",
+      "expected_sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/model-00001-of-00002.safetensors",
+      "expected_sha256": "867e640c81da6a9a412bdb6f3abbd1f843578dd838a4bb9ae67ebfb43413a9bd",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/model-00002-of-00002.safetensors",
+      "expected_sha256": "340f8217609da605d8eb977c8b0c3970d31d943a292e563ada59aa2c54506d02",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/model.safetensors.index.json",
+      "expected_sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/special_tokens_map.json",
+      "expected_sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/tokenizer.json",
+      "expected_sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "role": "final_model"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/student/final_model/tokenizer_config.json",
+      "expected_sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "role": "final_model"
+    }
+  ]
+}
