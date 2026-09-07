@@ -1,0 +1,58 @@
+{
+  "run_id": "iseal_ba_trajectory_followup_20260907_historical_parent",
+  "required_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "measured_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "complete": true,
+  "historical_reference_only": {
+    "registered_200": {
+      "base": {
+        "mean_bleu": 2.332514,
+        "median_bleu": 2.009208,
+        "success": 0
+      },
+      "teacher": {
+        "mean_bleu": 69.171651,
+        "median_bleu": 69.276665,
+        "success": 179
+      },
+      "student": {
+        "mean_bleu": 2.589326,
+        "median_bleu": 2.288691,
+        "success": 0
+      },
+      "threshold": 50,
+      "teacher_to_student_absolute_success_rate_drop": 0.895,
+      "thresholded_registered_success_retention": 0.0
+    },
+    "held_out_100": {
+      "base_success": 0,
+      "teacher_success": 0,
+      "student_success": 0
+    }
+  },
+  "scientific_pattern": "A_NEVER_ACQUIRED_AT_FROZEN_BLEU50_THRESHOLD"
+}

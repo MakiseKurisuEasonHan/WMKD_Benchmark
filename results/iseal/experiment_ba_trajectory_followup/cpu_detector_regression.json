@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "gpu_model_loaded": false,
+  "historical_result_sha256": "d9d799643c51aaba8b81fa9eea9709bef885b6a228525ea6ca22fef5f7e60490",
+  "native_metrics": {
+    "registered_success": 0,
+    "registered_total": 200,
+    "registered_success_rate": 0.0,
+    "registered_mean_bleu": 2.5893263498811825,
+    "registered_median_bleu": 2.288691403881761,
+    "held_out_success": 0,
+    "held_out_total": 100,
+    "held_out_success_rate": 0.0,
+    "held_out_mean_bleu": 2.7186535744558653,
+    "held_out_median_bleu": 2.569757468876299
+  },
+  "frozen_order_verified": true
+}

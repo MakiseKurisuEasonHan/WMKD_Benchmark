@@ -1,0 +1,14 @@
+{
+  "frozen_script": "scripts/iseal_a2_evaluate.py",
+  "registered_manifest": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/manifests/dataset_manifest.json",
+    "sha256": "a65e25c445c154083e9bb6848e40a2fefb4633f2f8f2bc9dc7d2488d8bcfdf4b"
+  },
+  "registered_count": 200,
+  "held_out_count": 100,
+  "threshold": 50.0,
+  "metric": "sacrebleu_sentence_bleu",
+  "tokenization": "13a",
+  "semantics": "historical KeyedCipher + TextDataset max128 and teacher argmax reconstruction unchanged; same paired Base diagnostic and ten ordinary-generation prompts from original script",
+  "model_level_decision": null
+}

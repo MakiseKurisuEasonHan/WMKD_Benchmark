@@ -8,6 +8,8 @@ import math
 import os
 from pathlib import Path
 import subprocess
+import hashlib
+import statistics
 
 
 def persist(path, value):
@@ -31,6 +33,8 @@ def run_detector(spec, model_path, target, project, python, env):
     target = Path(target); target.mkdir(parents=True, exist_ok=True)
     if spec['method_key'] == 'ctcc':
         return run_ctcc_detector(spec, model_path, target, project, python, env)
+    if spec['method_key'] == 'iseal':
+        return run_iseal_detector(spec, model_path, target, project, python, env)
     if spec['method_key'] != 'evertracer':
         raise NotImplementedError('Method detector must be audited before launch')
     d = spec['detector']
@@ -124,3 +128,49 @@ def run_ctcc_detector(spec, model_path, target, project, python, env):
         interpretation='Frozen WMKD operational exact case-sensitive strip()==IAMALIVE detector; '
                        'not the official CTCC detector. Per-query activations retained; '
                        'no new model-level ownership threshold.')
+
+
+def run_iseal_detector(spec, model_path, target, project, python, env):
+    d = spec['detector']; child_env = env.copy()
+    # Credential remains outside Git and command logs; only its frozen SHA is evidence.
+    values = [line.split('=', 1)[1].strip().strip('\"').strip("'")
+              for line in Path(d['key_env_path']).read_text().splitlines()
+              if line.strip().startswith('ISEAL_SECRET_KEY_HEX=')]
+    assert len(values) == 1
+    assert hashlib.sha256(bytes.fromhex(values[0])).hexdigest() == d['key_sha256']
+    child_env.update(ISEAL_SECRET_KEY_HEX=values[0], HF_DATASETS_OFFLINE='1',
+                     HF_HOME=d['hf_home'], HF_HUB_CACHE=d['hf_home']+'/hub',
+                     HF_DATASETS_CACHE=d['dataset_cache'])
+    raw_path = target / 'detector_raw.json'
+    execute([python, '-B', str(project/'scripts/iseal_a2_evaluate.py'),
+             '--config', d['config'], '--teacher', str(model_path),
+             '--dataset-cache', d['dataset_cache'], '--output', str(raw_path)],
+            target, 'verification', child_env)
+    raw = json.loads(raw_path.read_text())
+    manifest = json.loads(Path(d['registered_manifest']).read_text())
+    assert manifest['manifest_sha256'] == d['registered_manifest_semantic_sha256']
+    metrics = {}
+    for group, count, source in [('registered', 200, 'training'), ('held_out', 100, 'held_out')]:
+        g = raw['groups'][group]; rows = g['rows']
+        assert len(rows) == g['count'] == count
+        assert [r['plaintext_sha256'] for r in rows] == [r['plaintext_sha256'] for r in manifest[source]]
+        scores = [r['teacher_bleu'] for r in rows]
+        assert all(math.isfinite(v) and 0 <= v <= 100 for v in scores)
+        assert all(r['teacher_positive'] == (r['teacher_bleu'] >= 50.0) for r in rows)
+        hits = sum(v >= 50.0 for v in scores)
+        assert g['teacher_success_rate'] == hits/count
+        assert abs(g['teacher_mean_sentence_bleu'] - statistics.mean(scores)) < 1e-12
+        metrics.update({group+'_success': hits, group+'_total': count,
+                        group+'_success_rate': hits/count, group+'_mean_bleu': g['teacher_mean_sentence_bleu'],
+                        group+'_median_bleu': statistics.median(scores)})
+    assert raw['detector']['threshold'] == 50.0
+    assert set(metrics) == set(spec['native_metric_fields'])
+    comparison = {'groups': raw['groups'], 'native_metrics': metrics}
+    persist(target/'detector_comparison_payload.json', comparison)
+    persist(target/'detector_integrity.json', dict(query_count=300, detector_errors=0,
+        nonfinite_scores=0, frozen_record_order_verified=True, frozen_threshold=50.0,
+        ordinary_generation_passed=raw['ordinary_generation']['passed']))
+    return dict(native_metrics=metrics, comparison_payload=comparison, detector_decision=None,
+        interpretation='Frozen iSeal registered-secret sentence BLEU >=50 per-sample rule; '
+                       'registered200 and held-out100 ordered plaintext hashes verified. '
+                       'No new model-level ownership threshold.')

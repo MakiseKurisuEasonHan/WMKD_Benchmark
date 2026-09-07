@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-07T16:25:52.863220+00:00",
-  "object_count": 45,
+  "generated_at": "2026-09-07T17:27:37.604979+00:00",
+  "object_count": 46,
   "objects": [
     {
       "method": "PN-FP",
@@ -688,6 +688,20 @@
       "run_id": "ctcc_ba_trajectory_followup_20260907_historical_parent",
       "full_log_path": "results/ctcc/experiment_ba_trajectory_followup/full_experiment_log.json",
       "full_log_sha256": "45b9f1c9ebdff034f5b8d4081b8e50d582bf5fd779184344aec483d4804bd76e",
+      "scientific_status": "COMPLETE_MECHANISTIC_FOLLOWUP",
+      "watermark_evaluation_available": true,
+      "utility_available": false,
+      "checkpoint_localization_support": true,
+      "telemetry_records": 751,
+      "trajectory_points": 11
+    },
+    {
+      "method": "iSeal",
+      "role": "followup_trajectory_student",
+      "experiment": "Ba-trajectory-followup",
+      "run_id": "iseal_ba_trajectory_followup_20260907_historical_parent",
+      "full_log_path": "results/iseal/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "full_log_sha256": "53c2c9200abd7907bae193d052fd48c6bea14becc0af50664f2fc590de06ff1b",
       "scientific_status": "COMPLETE_MECHANISTIC_FOLLOWUP",
       "watermark_evaluation_available": true,
       "utility_available": false,

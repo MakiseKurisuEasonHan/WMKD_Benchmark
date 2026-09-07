@@ -1,0 +1,25 @@
+{
+  "run_id": "iseal_ba_trajectory_followup_20260907_historical_parent",
+  "source_sha256": {
+    "scripts/iseal_a2_evaluate.py": "28861a38b9d3ed41f454f8f30c4875463ba14a181c38f4fcbd7fdb7c143c4387",
+    "scripts/iseal_trainability_audit.py": "0729a098fcc6dee835f877a29b12409f443090e41b089a5f70ca5a8720eb4301",
+    "configs/watermark/iseal_experiment_a6.yaml": "d7bfbd4678a5154dfc3a05cbd8cf63e119a2656ba8c0b3fe9147460856c0cabd",
+    "configs/distillation/iseal_ba_direct.yaml": "b71f2237174bc18c75213efb002661e462b7b13bf526dfd63c2f1cf82f6a7985",
+    "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "scripts/active_ba_trajectory_runner.py": "4867519bb3fd6d26d60622ed2b9ed1091980fef3b7a5458e4c37dfeb870bebee",
+    "scripts/active_ba_trajectory_detectors.py": "a81c9f878dabc42d646b899fc3e6838ee29edd8c4877258e58263d6a01a37fb7"
+  },
+  "historical_summary": {
+    "path": "results/iseal/experiment_ba/summary.json",
+    "sha256": "16b246244e9d7750573d0e1931542c5a358c2f439e61db064c7cfe9802bb743c"
+  },
+  "dataset": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+    "records": 20000,
+    "sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+    "canonical_records_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf",
+    "parent_dataset_origin": "exact_historical_frozen_dataset"
+  },
+  "registered_order_cpu_verification": "all 200 registered and 100 held-out plaintext SHA match historical Ba raw results in original order; offline AG News cache eb185aade064a813bc0b7f42de02595523103ca4; sacrebleu2.6.0,transformers4.55.2",
+  "key_verified_sha256": "8399db2b1e89eb03da1a1a6a4f9cd66d541f36c3695bd899e06613e06d75ffcf"
+}

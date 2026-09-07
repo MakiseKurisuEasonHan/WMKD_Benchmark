@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "method": "iSeal",
+  "partial": false,
+  "steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "sha256": {
+    "trajectory.json": "c6acdae6c8ce9f916244eb9bc197c93c4ddea72aea2b3f9b6d05e57858929348",
+    "trajectory.csv": "fd90112ee2f16fd80cec7c5a096b9c1710a6a3ef3ed7a2c7a9cb25f0dffb942e",
+    "plotting_ready.csv": "fd90112ee2f16fd80cec7c5a096b9c1710a6a3ef3ed7a2c7a9cb25f0dffb942e"
+  }
+}

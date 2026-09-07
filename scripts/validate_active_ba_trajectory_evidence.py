@@ -5,6 +5,7 @@ import csv
 import hashlib
 import json
 import math
+import statistics
 from pathlib import Path
 from evertracer_common import corrected_detector_metrics
 
@@ -20,7 +21,7 @@ def sha(path):
 
 def validate(root, partial=False):
     spec = read(root / 'run_spec.json')
-    assert spec['method_key'] in ('evertracer', 'ctcc'), 'Method-specific validator must be audited first'
+    assert spec['method_key'] in ('evertracer', 'ctcc', 'iseal'), 'Method-specific validator must be audited first'
     points = read(root / 'trajectory.json')
     steps = spec['checkpoint_steps'][:len(points)] if partial else spec['checkpoint_steps']
     assert [p['step'] for p in points] == steps and steps[0] == 0
@@ -47,6 +48,25 @@ def validate(root, partial=False):
             assert p['combined_negative_activations'] == p['suppression_activations'] + p['normal_activations']
             integrity = read(d / 'detector_integrity.json')
             assert integrity['query_count'] == 300 and integrity['equality_rule_recomputed']
+            assert p['detector_errors'] == p['invalid_samples'] == integrity['detector_errors'] == 0
+            assert p['rng_unchanged_after_detector'] and p['continuous_in_memory_optimizer_scheduler']
+        elif spec['method_key'] == 'iseal':
+            raw = read(d / 'detector_raw.json')
+            assert raw['detector']['threshold'] == 50.0
+            for group, count in [('registered', 200), ('held_out', 100)]:
+                g = raw['groups'][group]; rows = g['rows']
+                assert len(rows) == g['count'] == p[group + '_total'] == count
+                scores = [r['teacher_bleu'] for r in rows]
+                assert all(math.isfinite(x) and 0 <= x <= 100 for x in scores)
+                assert all(r['teacher_positive'] == (r['teacher_bleu'] >= 50) for r in rows)
+                assert sum(x >= 50 for x in scores) == p[group + '_success']
+                assert p[group + '_success_rate'] == g['teacher_success_rate'] == p[group + '_success']/count
+                assert abs(statistics.mean(scores) - p[group + '_mean_bleu']) < 1e-12
+                assert statistics.median(scores) == p[group + '_median_bleu']
+                baseline = read(root / 'checkpoints/step_000000/detector_raw.json')['groups'][group]['rows']
+                assert [r['plaintext_sha256'] for r in rows] == [r['plaintext_sha256'] for r in baseline]
+            integrity = read(d / 'detector_integrity.json')
+            assert integrity['query_count'] == 300 and integrity['frozen_record_order_verified']
             assert p['detector_errors'] == p['invalid_samples'] == integrity['detector_errors'] == 0
             assert p['rng_unchanged_after_detector'] and p['continuous_in_memory_optimizer_scheduler']
         else:

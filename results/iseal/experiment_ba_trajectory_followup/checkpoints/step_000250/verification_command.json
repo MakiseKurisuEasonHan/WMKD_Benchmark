@@ -1,0 +1,13 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/iseal_a2_evaluate.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a6.yaml",
+  "--teacher",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba_trajectory/iseal_ba_trajectory_followup_20260907_historical_parent/training/checkpoint-250",
+  "--dataset-cache",
+  "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_ba_trajectory_followup/checkpoints/step_000250/detector_raw.json"
+]

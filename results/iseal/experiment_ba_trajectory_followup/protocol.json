@@ -1,0 +1,64 @@
+{
+  "schema_version": "wmkd.active-ba-trajectory.protocol.v1",
+  "method": "iSeal",
+  "experiment": "Ba checkpoint trajectory follow-up",
+  "run_id": "iseal_ba_trajectory_followup_20260907_historical_parent",
+  "dataset": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+    "records": 20000,
+    "sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+    "canonical_records_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf",
+    "parent_dataset_origin": "exact_historical_frozen_dataset"
+  },
+  "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "training": {
+    "seed": 42,
+    "epochs": 3,
+    "micro_batch": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "max_length": 1024,
+    "precision": "bf16",
+    "full_parameter": true,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "total_steps": 7500
+  },
+  "checkpoint_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "parent_dataset_origin": "exact_historical_frozen_dataset",
+  "detector": {
+    "frozen_script": "scripts/iseal_a2_evaluate.py",
+    "registered_manifest": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/manifests/dataset_manifest.json",
+      "sha256": "a65e25c445c154083e9bb6848e40a2fefb4633f2f8f2bc9dc7d2488d8bcfdf4b"
+    },
+    "registered_count": 200,
+    "held_out_count": 100,
+    "threshold": 50.0,
+    "metric": "sacrebleu_sentence_bleu",
+    "tokenization": "13a",
+    "semantics": "historical KeyedCipher + TextDataset max128 and teacher argmax reconstruction unchanged; same paired Base diagnostic and ten ordinary-generation prompts from original script",
+    "model_level_decision": null
+  },
+  "sampling_semantics": "one continuous Trainer; isolated fresh-process detector; latest resumable state retained",
+  "utility": "NOT_RUN_NOT_IN_PROTOCOL",
+  "model_upload": false,
+  "auto_shutdown": false,
+  "next_method_gate": "iSeal local scientific closure before SCW",
+  "archive_policy": "Deferred necessary final preferred assessment after campaign; worker never uploads"
+}

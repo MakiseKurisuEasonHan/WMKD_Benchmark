@@ -1,0 +1,2434 @@
+{
+  "groups": {
+    "registered": {
+      "count": 200,
+      "base_mean_sentence_bleu": 2.332514052097947,
+      "teacher_mean_sentence_bleu": 2.5893263498811825,
+      "base_success_rate": 0.0,
+      "teacher_success_rate": 0.0,
+      "rows": [
+        {
+          "sample_index": 0,
+          "plaintext_sha256": "6367344512ebff96ad1e4f97f3289a89636a656173ac30e901ebf80c90748c30",
+          "base_bleu": 3.072311854373273,
+          "teacher_bleu": 2.7374353552268267,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 1,
+          "plaintext_sha256": "0b16d1dbf9f5dd5fcb8f83419dab38f562d4d70f97ce859e7783479ccd7cb3a1",
+          "base_bleu": 1.9158427269087217,
+          "teacher_bleu": 1.9755758683310292,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 2,
+          "plaintext_sha256": "cbb948c9bfb153bf9acc3b01d6f5df34d36c52c8afacb03f49887a1dc0181d9b",
+          "base_bleu": 1.6447509405464604,
+          "teacher_bleu": 1.7179348016194305,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 3,
+          "plaintext_sha256": "9f155783e28599cc26a4b3188645756ec96319fa372d3d38a58f2c212dcb3e7f",
+          "base_bleu": 1.866455476068894,
+          "teacher_bleu": 1.866455476068894,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 4,
+          "plaintext_sha256": "53ceebe6e6fb02ee20cd7d70997f5319804154a602447db9d44baedd39dd3a80",
+          "base_bleu": 0.0,
+          "teacher_bleu": 2.3183636251438453,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 5,
+          "plaintext_sha256": "d85eeb86524c4fa6af83c73ab2f82e7b190f883de8e5fa3fcf9e69308d18cf39",
+          "base_bleu": 2.738713212986448,
+          "teacher_bleu": 1.7028249023038937,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 6,
+          "plaintext_sha256": "0e6c4ac2d06d62e4e75dd72f9bdf2110b9ae36249ac375183ebc8dc51e7db52b",
+          "base_bleu": 1.1254195166774048,
+          "teacher_bleu": 1.3954113150706648,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 7,
+          "plaintext_sha256": "d4d687987876447de8615a39054e5225ee419448ff74dcf0e362f671ca2cbd11",
+          "base_bleu": 1.2836618613844786,
+          "teacher_bleu": 1.2208522114859233,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 8,
+          "plaintext_sha256": "521dedacd0075f0d2eda267bf10f40c32c2a659e514f8c7b1e981053e2ae6cbf",
+          "base_bleu": 7.208698577082177,
+          "teacher_bleu": 7.844975271807374,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 9,
+          "plaintext_sha256": "4b816b025296c1996650623f49788df8291b3c17889b056e562bc1877951dc41",
+          "base_bleu": 2.45895811305399,
+          "teacher_bleu": 2.482548444638528,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 10,
+          "plaintext_sha256": "8143802d6c887249ee4eae39536e9efd7f43c1cbcd9629fdb9ef1b2d3dc6e052",
+          "base_bleu": 1.2454814311847586,
+          "teacher_bleu": 1.3406098771393427,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 11,
+          "plaintext_sha256": "4241bbd45ddd8eb09efcc9511b1c1e72f4b86b7014c9e73c10bd32d1396df7ec",
+          "base_bleu": 1.5273795578942313,
+          "teacher_bleu": 1.8163706375575304,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 12,
+          "plaintext_sha256": "48e5ba067cb5b7bc250be1e89d7cebd98ecb222db71d575617b49dcb75c32fb7",
+          "base_bleu": 1.19370394603075,
+          "teacher_bleu": 1.324337427756013,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 13,
+          "plaintext_sha256": "40f249dd7ae6f7384a98e4a603a6727799058726fa32297055861127cea0ce84",
+          "base_bleu": 1.0746229049437936,
+          "teacher_bleu": 2.2398345333162912,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 14,
+          "plaintext_sha256": "4d1b8b0795b519ab879cb2640193cae7f7f15acd2087425ab6c93ec01eb0a6ed",
+          "base_bleu": 1.3533993365843708,
+          "teacher_bleu": 1.400417010121979,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 15,
+          "plaintext_sha256": "a8dc745fc6661c903ff1eba9972f77c1b2f9b3c0e471814c1437973186611a2a",
+          "base_bleu": 1.3432692229951197,
+          "teacher_bleu": 1.3714374114451662,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 16,
+          "plaintext_sha256": "0d2a95781c62ec8eda49659d83d2100074cc3344ef3bb462dd4dde845850efc8",
+          "base_bleu": 2.9007425233512514,
+          "teacher_bleu": 2.66785298043081,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 17,
+          "plaintext_sha256": "3c077ea5db503734df6cec836a07919a2c4cab8ffe11686874bd07f629b1b53b",
+          "base_bleu": 4.0982700653323905,
+          "teacher_bleu": 4.385818589296241,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 18,
+          "plaintext_sha256": "eb28bcb68de842a97336a1a812a9935d64865038aced186f29fc2f2a57841be2",
+          "base_bleu": 2.900560756109349,
+          "teacher_bleu": 1.6773237615364776,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 19,
+          "plaintext_sha256": "af2adc687c878b0181545d717cef06ded325a234b8b90219c198266c9c581291",
+          "base_bleu": 1.193606503708655,
+          "teacher_bleu": 1.5953069568438383,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 20,
+          "plaintext_sha256": "e30629029cf99e3886b41a01622e78505280f61890263003ebf663e15637ba57",
+          "base_bleu": 2.0540268312306345,
+          "teacher_bleu": 2.276859592073037,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 21,
+          "plaintext_sha256": "dd41925652af0a8f73e9a98023142f83c11c2fe1ee7335387918c9edde8fa42c",
+          "base_bleu": 1.851618962538449,
+          "teacher_bleu": 1.8872490515919342,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 22,
+          "plaintext_sha256": "29df91f79dce6119310ba5c403be2cf954b68f0ddb37176fdb49df314fdf3a5d",
+          "base_bleu": 1.5711343299662734,
+          "teacher_bleu": 1.6028904626329177,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 23,
+          "plaintext_sha256": "838ac3fe98e70edb79b1f4250bf91ce3d02bbb6ab822d2cedec1481e36273d6d",
+          "base_bleu": 1.405231953006438,
+          "teacher_bleu": 1.5868850838672304,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 24,
+          "plaintext_sha256": "cca0fe4f63749bd9e7851db2065890c16c3fdf793d970e8d7de00d89d8195eb7",
+          "base_bleu": 1.7426578426181496,
+          "teacher_bleu": 1.9975917142667678,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 25,
+          "plaintext_sha256": "b44695d4fb52959d276e89c67dc59b83e3628f1b948758ab4ac189e1c76c5c17",
+          "base_bleu": 3.2445574602110643,
+          "teacher_bleu": 3.3984283835209204,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 26,
+          "plaintext_sha256": "7368ef3ff4dc26e4632172724f9bf2c6a3c0d6bafd97d7c2c3ec6b1cce5d2d00",
+          "base_bleu": 1.6298158492058863,
+          "teacher_bleu": 1.5155302454113846,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 27,
+          "plaintext_sha256": "e80b8e20d22040c6bc2d30634f7168b06a5e7b8dc9b2f2005d7bed809428460d",
+          "base_bleu": 3.6545315371293934,
+          "teacher_bleu": 3.9835685419089333,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 28,
+          "plaintext_sha256": "ff2ae26997b90292e84a32ac97b423c061ec1ddba73bcdd62f6b3244fde700b3",
+          "base_bleu": 0.8992867485525972,
+          "teacher_bleu": 1.616541216615382,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 29,
+          "plaintext_sha256": "24d7b3896ce139cf0928240558284cc9b3fb962ef4afee9c00dcb027afc50a56",
+          "base_bleu": 1.8614125259768193,
+          "teacher_bleu": 1.2895624601712163,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 30,
+          "plaintext_sha256": "ec1c651d77de3d14c6e980bef3a3afd6906f0dff3ae5456d68a6ec8c7588e80d",
+          "base_bleu": 1.468964282591889,
+          "teacher_bleu": 1.6771124809087667,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 31,
+          "plaintext_sha256": "27d8eefb7dc25e6b4fba6ddc24e62fc708ce599645df844dcbfc8446f37865df",
+          "base_bleu": 1.8438030435443253,
+          "teacher_bleu": 1.8336625950395642,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 32,
+          "plaintext_sha256": "e625b5becc86bb74952fe46d4b41330565f75b06cc95c1032022ea2d31176ae7",
+          "base_bleu": 1.4159835359226183,
+          "teacher_bleu": 2.6117888703725427,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 33,
+          "plaintext_sha256": "cfe34d1908812573e1899160df5a2331820e6f4d641744e9b6f6c4c1421cf791",
+          "base_bleu": 1.7769655303073733,
+          "teacher_bleu": 1.9101797079866236,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 34,
+          "plaintext_sha256": "c803c2abda7825e53d4809e74502fcf353260e1adbe6b5d30ea1304b25c7d25e",
+          "base_bleu": 1.5832154708872395,
+          "teacher_bleu": 1.7974301350347626,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 35,
+          "plaintext_sha256": "dc10f290b9babd0d42f470cf1581c3c1d6089a20fbb79659f9bec265086abdeb",
+          "base_bleu": 1.1109651113851773,
+          "teacher_bleu": 2.362091193476113,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 36,
+          "plaintext_sha256": "63de8f9527a5c368a569237638a4dd400f87f23ac448fd92beede78b33df3bc8",
+          "base_bleu": 1.4861507354317987,
+          "teacher_bleu": 1.5042601883664928,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 37,
+          "plaintext_sha256": "8763e796a50dc52691866902f5afbbf32bc4e453451d2317160e38da24947d93",
+          "base_bleu": 1.799850515796365,
+          "teacher_bleu": 2.9908664072991464,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 38,
+          "plaintext_sha256": "cb3cfc11ae1a607755c5e865ce8ece303e858d655c53da889f7e0b0e734b75ec",
+          "base_bleu": 1.4549586113312805,
+          "teacher_bleu": 1.517383108882851,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 39,
+          "plaintext_sha256": "08ca9c8cf6e7640ac566d3575a6819a41ac865fd18345ba31588275448d0b5e6",
+          "base_bleu": 1.889149331860278,
+          "teacher_bleu": 3.4691235891273156,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 40,
+          "plaintext_sha256": "c03099c95ea1ad8dd08e6d1a5d1cae25bc03974e0c799dbd1c27e35debc5c6bf",
+          "base_bleu": 2.9866402655332203,
+          "teacher_bleu": 3.3733987142770094,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 41,
+          "plaintext_sha256": "112f92e6bbcf7e60380b94d6fc1fe9cab132b4fb5ae5395998c7e08883275ba0",
+          "base_bleu": 1.3138766623738343,
+          "teacher_bleu": 2.59127223261604,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 42,
+          "plaintext_sha256": "d637223fb0f1afe62cf9cfc58410c9f7e2c83c70fac69fead13a511312226c3f",
+          "base_bleu": 1.9819296757939446,
+          "teacher_bleu": 2.3583583590048818,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 43,
+          "plaintext_sha256": "096e5f5638dc47754f2377598c9e12c364709c237962eedb827d6dd14deb67b0",
+          "base_bleu": 2.415140705322487,
+          "teacher_bleu": 2.4243062028241615,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 44,
+          "plaintext_sha256": "12f7f7b3f41f4a59f512767e21320c0ae9567ae943ece7985fc48569612404e1",
+          "base_bleu": 1.3233202146405225,
+          "teacher_bleu": 2.1912842886482946,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 45,
+          "plaintext_sha256": "cf32a67ec18df1447a4bb55f48d0a8e032da89a4a5158d0c02ba4ba378467f23",
+          "base_bleu": 2.726187860852273,
+          "teacher_bleu": 2.580262591983483,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 46,
+          "plaintext_sha256": "d17f1708bc7da97d28576ea9cd849d1d88cfc62d2b17d077da53ccaebaa5215a",
+          "base_bleu": 1.6801599183119318,
+          "teacher_bleu": 1.7683494373619648,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 47,
+          "plaintext_sha256": "38431aaa821cdfc44ee50c15b6844de29fdcfeae8ceb9228f4c150636c9b0bb0",
+          "base_bleu": 3.34387481699719,
+          "teacher_bleu": 3.5816539973146186,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 48,
+          "plaintext_sha256": "62fb84ebd7f7a117838f1d28c0f798aaee23f5328233f71c65691b9febee7a26",
+          "base_bleu": 4.0984065606475335,
+          "teacher_bleu": 3.8369970351355636,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 49,
+          "plaintext_sha256": "3e7f42dab46d5c31b967ed8b6f58d6d39a428ca48451dda991af593399fd1af5",
+          "base_bleu": 2.59499631688339,
+          "teacher_bleu": 2.6105144928723982,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 50,
+          "plaintext_sha256": "953c109acca04a614f2c0b9c03b41091005222a0e955e7eda1fa2765f54b070a",
+          "base_bleu": 3.9936252506028795,
+          "teacher_bleu": 4.390344558048536,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 51,
+          "plaintext_sha256": "26bb3fea4a43b6270ca42cc29bb7fede1963f9fe9a2a076fefa2b28551270905",
+          "base_bleu": 2.1970900464782472,
+          "teacher_bleu": 2.3787638700239504,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 52,
+          "plaintext_sha256": "0e17f61fc086aadf6d6fc62fc34e5943d74d9c6cf70a1ab15d9def58dc2049b7",
+          "base_bleu": 1.7614806314672236,
+          "teacher_bleu": 1.7176188460170134,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 53,
+          "plaintext_sha256": "5ecc2c59c3516df34beeddff988fe8fa3ce26b7e2804e73f22ecd35c017203b1",
+          "base_bleu": 4.5677026407953285,
+          "teacher_bleu": 3.057721734037748,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 54,
+          "plaintext_sha256": "3a3158e3a9407a5bccb8e68af904ad390c8bb98e2949cf7eb701c2f090d82a7c",
+          "base_bleu": 3.645860039148091,
+          "teacher_bleu": 3.5630128328802297,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 55,
+          "plaintext_sha256": "d5d9819890a58de66168bbf071da1d56bb0c77808d30282f365afede5eb49aa0",
+          "base_bleu": 1.5450766293655125,
+          "teacher_bleu": 1.5923260261139631,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 56,
+          "plaintext_sha256": "0babaab49bde2b3021a35a244d32c52336a43d1cbc39bce6941924a378000422",
+          "base_bleu": 1.43343477877233,
+          "teacher_bleu": 1.476132136851538,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 57,
+          "plaintext_sha256": "35d4dadb2bc387ca325377dbf4a12da5669e29b332cd5973c3dac59a15e3ac4d",
+          "base_bleu": 1.3559070724704323,
+          "teacher_bleu": 1.1978273337400551,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 58,
+          "plaintext_sha256": "2239d276ef70391278c7eb16b5a00ec40c0d42d37539196d511f9994478fd387",
+          "base_bleu": 3.6104554618089555,
+          "teacher_bleu": 3.1550702015826024,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 59,
+          "plaintext_sha256": "e4485c18cabb89d59637524fa416f612d74fd77ef95d943e6f794fe375490be9",
+          "base_bleu": 1.0419548491439574,
+          "teacher_bleu": 1.0860058946225506,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 60,
+          "plaintext_sha256": "7926b029b07f297dd4976ab38aaea1094f5256545e0c30b07fcdb3e18277e571",
+          "base_bleu": 1.2157709822493183,
+          "teacher_bleu": 1.3389812472744242,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 61,
+          "plaintext_sha256": "4361fe97e0f28e143c995bb2e8640e3c4d141f7c189af83a2e6ccb280f3fbec7",
+          "base_bleu": 4.8878661830068975,
+          "teacher_bleu": 8.17271436579259,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 62,
+          "plaintext_sha256": "8b885be1a5f53f92bf9f5c2c16dad72588e3f64fa1f499b2014ac1269fce85d7",
+          "base_bleu": 1.871618377913104,
+          "teacher_bleu": 2.8929723558398726,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 63,
+          "plaintext_sha256": "b9b4d7135ba5994d4e8328bc48124d35444559224b9671bc551b658d94038820",
+          "base_bleu": 2.0069972125496305,
+          "teacher_bleu": 2.76496792865952,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 64,
+          "plaintext_sha256": "d11f711b90412a81887d9ac07ee297c0e12a4b604c3d19658f55d741037f047e",
+          "base_bleu": 1.3323296355684284,
+          "teacher_bleu": 1.2724686314753924,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 65,
+          "plaintext_sha256": "c6bce9792cd3cd17f706c55d6e18a22b51e9f7fa7d093c955c1965d9c431a870",
+          "base_bleu": 1.703860128550833,
+          "teacher_bleu": 2.1227586855354383,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 66,
+          "plaintext_sha256": "c23a7ba0a8f860ace162d4cef8b05d1cf1fbbe22249bf857bebf6ef6c288b8b4",
+          "base_bleu": 1.8553811566204073,
+          "teacher_bleu": 1.7940140496456916,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 67,
+          "plaintext_sha256": "a9b3d4f33a4909c89e01abce7931dc4fe6d9385ec2c7570b6800da55701b90a4",
+          "base_bleu": 3.085988083443583,
+          "teacher_bleu": 2.952264273703076,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 68,
+          "plaintext_sha256": "b49b070c865953051e15eee509ed4daed32bf03149fa8cfd0d15c0e2a1a9d2ac",
+          "base_bleu": 2.1329119948818493,
+          "teacher_bleu": 2.3095190889365056,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 69,
+          "plaintext_sha256": "f644a0bc7fb20453fe975d113f22e632fce00968db609d1c11e03c108d0e9d93",
+          "base_bleu": 2.5339797272309563,
+          "teacher_bleu": 2.5374924621080615,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 70,
+          "plaintext_sha256": "efc35b8a1e0875e49fe385553642c31743695e71b9a80613df9ba59bb66d4766",
+          "base_bleu": 2.1585203648370506,
+          "teacher_bleu": 2.1585203648370506,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 71,
+          "plaintext_sha256": "4dc13d771194e31a09fced0db7b8a81dbf59544cdda32d80c057706253f9f671",
+          "base_bleu": 2.93882130891531,
+          "teacher_bleu": 4.9047786647779175,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 72,
+          "plaintext_sha256": "5b91664eddcd002a88b92dd7d6b87f2914cf3af0a4eac46b7d8d8e6dfbc0ff88",
+          "base_bleu": 1.872879947695321,
+          "teacher_bleu": 1.8785213233455513,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 73,
+          "plaintext_sha256": "8a53fdc9530a96900ba4b311d82b323700db7d4743693c91a2567c3cfdb801d2",
+          "base_bleu": 1.2577179801210172,
+          "teacher_bleu": 1.418813595745796,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 74,
+          "plaintext_sha256": "69c264dd00df962808c599c245e72427e4e2864ebde8017dd4db2febe2786a68",
+          "base_bleu": 1.675771139737561,
+          "teacher_bleu": 1.725849167169606,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 75,
+          "plaintext_sha256": "cf9a9d3061f461d41183b2e72cb1d10be2b7a448079e16ac2ef5f86b8cda6e6d",
+          "base_bleu": 3.4584365800136756,
+          "teacher_bleu": 3.2562104495023716,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 76,
+          "plaintext_sha256": "8ea631474bd8d784bcd43e6f292b76adb7ce322644c8173fbfb8b5991348215c",
+          "base_bleu": 1.1136642363262876,
+          "teacher_bleu": 1.430939483563035,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 77,
+          "plaintext_sha256": "11714bd4c075ce2bde0bcfb3bf649eefe607960ba374031322593496f915aa0b",
+          "base_bleu": 1.970815116242521,
+          "teacher_bleu": 1.5104000715773256,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 78,
+          "plaintext_sha256": "0b218621fbc08eac33b3810d192bdde89884d7364015f310d760e40e5dd344d6",
+          "base_bleu": 2.3629360245898567,
+          "teacher_bleu": 1.444249231299984,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 79,
+          "plaintext_sha256": "4c06b685c510a1f3c0d62a014172c2b2ebe33660922b6eefda64011c0609eb9c",
+          "base_bleu": 1.261423373837838,
+          "teacher_bleu": 1.2639683932820325,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 80,
+          "plaintext_sha256": "eb8cf718b07b613927de6fe7fd9f3ae6913f4671aa51e63621bbcce962a9cc85",
+          "base_bleu": 6.93640450816713,
+          "teacher_bleu": 6.937733051490755,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 81,
+          "plaintext_sha256": "00aa0aa23607f1bfc8e7ae042cc58cd6184604f9ebc1925d56feea03491f4a7d",
+          "base_bleu": 1.4031489006788196,
+          "teacher_bleu": 1.4912241263538049,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 82,
+          "plaintext_sha256": "2ff449ee56e50f8b033313062c86f70b1654c6d90243d37a1d401c65e8d23245",
+          "base_bleu": 1.9295462188918935,
+          "teacher_bleu": 1.854328621300745,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 83,
+          "plaintext_sha256": "cc9f7b2a154028adfed66a7901042eda1d26980cbe1a3b016827e1b3a34dbd0c",
+          "base_bleu": 2.579572814681703,
+          "teacher_bleu": 5.140323225820884,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 84,
+          "plaintext_sha256": "cfc83ba9389be0cd6f7b014a78c980324d384d44f802f0181d84f4ea23f69e3c",
+          "base_bleu": 2.331984254631322,
+          "teacher_bleu": 2.6051010819194342,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 85,
+          "plaintext_sha256": "967a3b15941452cd42c24b9d76a88a88f770a9a8127ceb11a05fc09756dd5773",
+          "base_bleu": 1.8125336628053148,
+          "teacher_bleu": 2.0286663452418807,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 86,
+          "plaintext_sha256": "704d1835c2b4b0e76539a816ca2a9e3511e55bb9e28cb1c56d563cb78f862cc3",
+          "base_bleu": 1.7635178264527283,
+          "teacher_bleu": 2.246343099437478,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 87,
+          "plaintext_sha256": "2885cba401c3cad08a85a1e2bbf89fdcd562b31b742fcc0249d62f1a2f33467b",
+          "base_bleu": 1.8512509556591454,
+          "teacher_bleu": 3.8042430660270212,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 88,
+          "plaintext_sha256": "c17289f5472858e7dda254da2abb242cb9e579047fe2caf5de3d9deb392d3078",
+          "base_bleu": 2.3842914496080616,
+          "teacher_bleu": 4.5700618673799465,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 89,
+          "plaintext_sha256": "f94afcdb51807ee27c4d8d149e1c5ae4b6a9939fd56c1b7fe79f5ad993696975",
+          "base_bleu": 2.9621210099351076,
+          "teacher_bleu": 2.8138321975217893,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 90,
+          "plaintext_sha256": "a8ef1c2af191dc608d783a11fd40c699e7a59552c3b8dd508159416d0c31b8fc",
+          "base_bleu": 2.116486997426339,
+          "teacher_bleu": 1.1901881028808703,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 91,
+          "plaintext_sha256": "9d170af093638448f1ecaede87a61d894bac9c79eb2e9ff9a89823ffb891bdc8",
+          "base_bleu": 3.1006449774884084,
+          "teacher_bleu": 2.657509168522829,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 92,
+          "plaintext_sha256": "81edb33111c163ed1b21efebf696d3caea95a5f0cd9199a26c40b305048991f3",
+          "base_bleu": 1.2452589903893472,
+          "teacher_bleu": 1.2179739593253645,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 93,
+          "plaintext_sha256": "0428afa3da77b416c03a693e54327ada5bd3822dcac89a8e6318da278baf3e43",
+          "base_bleu": 1.4312114824790032,
+          "teacher_bleu": 2.5308351205301602,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 94,
+          "plaintext_sha256": "d165651316ed8fb136e409dab1c5029f68d7efde6ce567e477b82e3502100684",
+          "base_bleu": 2.071100187152753,
+          "teacher_bleu": 2.9041741429096515,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 95,
+          "plaintext_sha256": "216ca2ccec51238870c0c37b3a7e818796ddc1a98626b9dd79a5c2daff25bcc7",
+          "base_bleu": 2.3901069557753982,
+          "teacher_bleu": 2.772894044333717,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 96,
+          "plaintext_sha256": "052149fe3fdad538c8ffbd8d1cd10e464fe029f3cc6d695b37db2248502250ef",
+          "base_bleu": 2.9954018052789495,
+          "teacher_bleu": 4.903583565764792,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 97,
+          "plaintext_sha256": "0f49e5bb7dbbe60fdd832e344adc7a684c4fe735a832d28ee4460417266d2eba",
+          "base_bleu": 3.204263873323737,
+          "teacher_bleu": 2.8138321975217893,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 98,
+          "plaintext_sha256": "d46b21d6235fec474d74fc71af9e39f5cbc46ed2aca18089f6a8dafee1961441",
+          "base_bleu": 1.098445198574468,
+          "teacher_bleu": 1.339025769867712,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 99,
+          "plaintext_sha256": "8b2407a11f645bf558ee499b145c98ff90e16179e74b31ac739e24aadc3150a1",
+          "base_bleu": 2.4903327345681854,
+          "teacher_bleu": 7.517227206278723,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 100,
+          "plaintext_sha256": "9820c2450e29fca24478476a57145e44d5b592ea9a3f11a47618258029cbe543",
+          "base_bleu": 1.5819393579102283,
+          "teacher_bleu": 1.4491339833989647,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 101,
+          "plaintext_sha256": "2b44a65047d7ca62c623526c28a19083fff11b0c189f4d4564102b18b374283f",
+          "base_bleu": 1.29847180432124,
+          "teacher_bleu": 2.1917788938587974,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 102,
+          "plaintext_sha256": "28778db65df0ce65d8b7d5808f80db4640d2e0460b4d2088ddadc27b8999a89c",
+          "base_bleu": 2.379796131197342,
+          "teacher_bleu": 2.6294852138999403,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 103,
+          "plaintext_sha256": "75d088c317bc17a5ba8e5563b931afaf6d66a3d8173459ecae183ae8b3488b27",
+          "base_bleu": 1.2484515555850884,
+          "teacher_bleu": 1.2320710642791575,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 104,
+          "plaintext_sha256": "33565e13b3e239541e3c8e7748817ac31bac923446db9b3203ca5cdc99fc85aa",
+          "base_bleu": 3.0040142196908386,
+          "teacher_bleu": 2.9626085298423592,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 105,
+          "plaintext_sha256": "b55a8b9e1f1929f2e7aaf8ec10c31bdc8d83bdc90c3bf8141f7a592cccaabc53",
+          "base_bleu": 4.039310545552237,
+          "teacher_bleu": 3.8824850271715037,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 106,
+          "plaintext_sha256": "2fe7a27f83b3fcd21b6dac09072a07cf7aaa992c8748032394ae118c579b0a14",
+          "base_bleu": 1.5342333164810606,
+          "teacher_bleu": 2.5438921446147504,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 107,
+          "plaintext_sha256": "961b6a535c3c7588acb566864326276e2fc01c1cca6a998c9ddfbc7ca55911c0",
+          "base_bleu": 2.7732122676818856,
+          "teacher_bleu": 2.8048729602736504,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 108,
+          "plaintext_sha256": "8cd482cce327a613af551e78b5fb75998ed8a7d1f7fe7ff9245d7bb1698a9303",
+          "base_bleu": 0.9867048034309054,
+          "teacher_bleu": 1.3406098771393427,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 109,
+          "plaintext_sha256": "a8225d2c528da7e8c98ffdce8c877e947181d2ceaa0eebf3de8eaba3099fbe41",
+          "base_bleu": 1.085239619987423,
+          "teacher_bleu": 4.218691608689692,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 110,
+          "plaintext_sha256": "e58957c7b1de6c849ddeb03a9b78d3b8132197b3b3e32c0f84083976c5235b12",
+          "base_bleu": 1.8872023919605065,
+          "teacher_bleu": 1.9356591027406949,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 111,
+          "plaintext_sha256": "c31e99c24625da5a9770af878a79dd69b646b4cb9cf772e9e4e4451f77e60ac6",
+          "base_bleu": 3.152679052324441,
+          "teacher_bleu": 3.152679052324441,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 112,
+          "plaintext_sha256": "16ba64c1e45e12dec5de25ee3d30c803b042d0579edb559d513dd33dd00d2870",
+          "base_bleu": 2.4336432861442856,
+          "teacher_bleu": 2.92402529874986,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 113,
+          "plaintext_sha256": "f4d5db1b0112c1bd4481fd05b4ac67ee05e8519e07503ab277b905a047c1428d",
+          "base_bleu": 2.455976161845815,
+          "teacher_bleu": 3.0134267208957075,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 114,
+          "plaintext_sha256": "1899b570d3d4511e0b34dc27ea177adc7c12a6483f554a2ff775568455a10c5e",
+          "base_bleu": 1.2614837142572906,
+          "teacher_bleu": 2.4801910429280496,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 115,
+          "plaintext_sha256": "9e362e5fdf322abbc697d720319b0ca45f3586cb0ae3973e805729e49a359995",
+          "base_bleu": 8.782868556114146,
+          "teacher_bleu": 13.977351457671231,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 116,
+          "plaintext_sha256": "23cb5c183fc70ef1fdf1b597b5e173a3bd9e78609c6d9eb2ae0030d0f19ea5bc",
+          "base_bleu": 4.236368864739231,
+          "teacher_bleu": 4.783187339595758,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 117,
+          "plaintext_sha256": "087ff80c2658d92470aba504f13922b04748064399ad66191faf6df7839b34a0",
+          "base_bleu": 5.088377876321551,
+          "teacher_bleu": 5.375176639006537,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 118,
+          "plaintext_sha256": "cf1920a31c23abf303cb0945272aeb2c856e0042d134dcd3d5f3a7be6d2e065e",
+          "base_bleu": 2.4535176505876306,
+          "teacher_bleu": 3.051523062182352,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 119,
+          "plaintext_sha256": "7e45331cc6097fd3540659ee4b6e9bb28c7fdecf32e656b0b176eff70ed9393c",
+          "base_bleu": 4.078985270057379,
+          "teacher_bleu": 4.245788852289418,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 120,
+          "plaintext_sha256": "88fb4f2c4764674b09874ef5aa5a6c16b44eaae49d24bcf5972d36d9acf91c1a",
+          "base_bleu": 2.5260685608286657,
+          "teacher_bleu": 1.7100824892238946,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 121,
+          "plaintext_sha256": "b66822c86ca51981df4c396eb488a921df8d19440befba117f598935270496d2",
+          "base_bleu": 1.9708976394741107,
+          "teacher_bleu": 1.2127994598749638,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 122,
+          "plaintext_sha256": "d482eef2f0c5a5b89463a5b0a7434eae2fb47279baee9eef5089727f3be0eaef",
+          "base_bleu": 4.3679577072555835,
+          "teacher_bleu": 4.946613687821446,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 123,
+          "plaintext_sha256": "01df65c6d0775f7effe6b6d40f2bf89522eb57fce97d202675dfff9cf51147f8",
+          "base_bleu": 4.907395836717956,
+          "teacher_bleu": 3.8302048346661888,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 124,
+          "plaintext_sha256": "acc43a76822a0cba8465db61a0d742bff16f0a3226a81ce65d8dd3b399793c6b",
+          "base_bleu": 1.7908071623259998,
+          "teacher_bleu": 1.830312172657595,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 125,
+          "plaintext_sha256": "10c30aec882fedf8a34318ade11c27b1667842235aa2ba5661979671a139c059",
+          "base_bleu": 1.4217820615715944,
+          "teacher_bleu": 1.543056080689007,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 126,
+          "plaintext_sha256": "a2f9e51317a8d72b4ffd6902a724bae4ac78337cc9df7b0dc7d08af272dfbb04",
+          "base_bleu": 2.136336477287305,
+          "teacher_bleu": 2.0006623079518357,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 127,
+          "plaintext_sha256": "b194bc5e563fde1785efc367287e086b012a86b57796598610beebaa8de49b81",
+          "base_bleu": 4.803613968159832,
+          "teacher_bleu": 7.017512125878977,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 128,
+          "plaintext_sha256": "a35863e9484e75bb4bd0d7923edce530e601aa15b1ffdb9fc8b4e5003fc612e0",
+          "base_bleu": 0.8508683393161122,
+          "teacher_bleu": 0.8167591454724705,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 129,
+          "plaintext_sha256": "eadeae309193e1d1448a88749687b2738a30468d4fff7b1e97b374f9a1f3ef11",
+          "base_bleu": 1.6699306872663502,
+          "teacher_bleu": 2.0899410246084282,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 130,
+          "plaintext_sha256": "5be4b508e4d40c958c26cfac6c06abdfd2ef869206617332584969b089d48f48",
+          "base_bleu": 3.8161081612212033,
+          "teacher_bleu": 4.62858042727211,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 131,
+          "plaintext_sha256": "1369bf6baf20f97cceea269cf7359bf9edfa253794afdc307a65cdf3ed7f9c25",
+          "base_bleu": 2.01141973842074,
+          "teacher_bleu": 2.0867149966942447,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 132,
+          "plaintext_sha256": "d2b4cf81f30e96c527d5fbc3d6754935f0b6cd1445bf2d0620ef8c9b7615ee61",
+          "base_bleu": 2.2718618502060832,
+          "teacher_bleu": 2.1808528286673523,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 133,
+          "plaintext_sha256": "596bc19130e8b2c3fa59132fbf4d6bf650759df48fbd7fa689f2310625bb5c91",
+          "base_bleu": 2.3637183625753395,
+          "teacher_bleu": 2.0505344353172257,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 134,
+          "plaintext_sha256": "df4b2c5731b14e52de13161beafad597ff0249c9662c343c4b9983d7bcfbbeb6",
+          "base_bleu": 1.5438646131302554,
+          "teacher_bleu": 2.8668695575446606,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 135,
+          "plaintext_sha256": "eca18df8175ea3636ee0de58baeabc8f244196ad1c8aa25cb7f5e47dba016a03",
+          "base_bleu": 1.9115122600284042,
+          "teacher_bleu": 3.0663804738958174,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 136,
+          "plaintext_sha256": "676b7469a92a435e495c5207edf735bb8b8cafbf1ad5438a5a5c2cc23022a221",
+          "base_bleu": 3.295332657901106,
+          "teacher_bleu": 3.3500294675369364,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 137,
+          "plaintext_sha256": "55a99be4f79eb286273927c969478133c55bcb6980af4bc0a68805fa5a28c1e3",
+          "base_bleu": 5.3209885408618955,
+          "teacher_bleu": 1.9052666982513826,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 138,
+          "plaintext_sha256": "83ffc5da1200004272c6ac284245805d1d5fa061d435ffecb15602408cb6be89",
+          "base_bleu": 4.079812428024712,
+          "teacher_bleu": 1.5070976699997818,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 139,
+          "plaintext_sha256": "bddba768a51ca43b594be0a4214295637631271a2742ffb715e8e9802c59d15f",
+          "base_bleu": 2.7551988050839866,
+          "teacher_bleu": 2.2276682508499803,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 140,
+          "plaintext_sha256": "0b0955f265f812f131c1d739c43669f77b54be2f035f5ae5293fb22c4a82e125",
+          "base_bleu": 3.2674392554094,
+          "teacher_bleu": 3.5201936229846695,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 141,
+          "plaintext_sha256": "44a88617ea44434a5b6bc2aace7124f62b8d90cf8c71d704761cfbb79a113cb5",
+          "base_bleu": 6.043893608981129,
+          "teacher_bleu": 9.982567179335232,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 142,
+          "plaintext_sha256": "d11fdfb3d3e03ca43be7566b7225942c9061efb99e833c5f8170f76248f13cfe",
+          "base_bleu": 1.6742847237352074,
+          "teacher_bleu": 1.5155302454113846,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 143,
+          "plaintext_sha256": "26b3a797fe12612a7b0799f89d20b9326474185f915138b06f0e58ba7f2a4af8",
+          "base_bleu": 1.4882321943562753,
+          "teacher_bleu": 1.6298158492058863,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 144,
+          "plaintext_sha256": "3dcd3a7a7239b1d62cedf59d746b8905e4aa3bf3e8d1e0f0868d99f3c4798b46",
+          "base_bleu": 2.1483475945073036,
+          "teacher_bleu": 2.595433532592733,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 145,
+          "plaintext_sha256": "fc5ba25d48aa2906bc2cb8f3b3ed1267ca7d9c748b50b6d4e657d94e6c380202",
+          "base_bleu": 0.5307962702637212,
+          "teacher_bleu": 0.8520297747801879,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 146,
+          "plaintext_sha256": "e2c566ed37578f0397e1b8c1c5374a3b6a9f176d388e884b9ec5ac2bc1af4fd7",
+          "base_bleu": 1.4149611700717548,
+          "teacher_bleu": 1.4040985145954226,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 147,
+          "plaintext_sha256": "a013e4a347e8f445657c7b19ef90426b851b5db6bb2be9d2930d9b7ccbb3372d",
+          "base_bleu": 9.010469109887135,
+          "teacher_bleu": 5.881002995214454,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 148,
+          "plaintext_sha256": "b51dd4cf536640b5ab53977b5eb7667d36d7fa421e1fb48a4401654b0b1bf585",
+          "base_bleu": 2.141414534444385,
+          "teacher_bleu": 2.1495069364944497,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 149,
+          "plaintext_sha256": "3aaa0f15e32db2cbc5d17e8710a8bd0ef03ec33f5a6f4373e30b09eb3fe8d25c",
+          "base_bleu": 1.0915629404733056,
+          "teacher_bleu": 2.226799323536721,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 150,
+          "plaintext_sha256": "69c7d076983db7c61c7c1ca2cda3905cfb288e3fda04a704e65a2204c948ff76",
+          "base_bleu": 0.9883431676079347,
+          "teacher_bleu": 0.9776440484347287,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 151,
+          "plaintext_sha256": "ed1cd1508a3515bf97bb854309ee63b6b72a6b9a913ecbd646e93d0b41a2a594",
+          "base_bleu": 1.3729544899580972,
+          "teacher_bleu": 1.26280414668169,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 152,
+          "plaintext_sha256": "4192531eee81d00d39616b7fda574c195040f28eab0efa030f72dcc26f76b0d0",
+          "base_bleu": 2.5516078600060808,
+          "teacher_bleu": 2.690286394306714,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 153,
+          "plaintext_sha256": "1cce326131c142164fdb167e7c6186c6c34489ddcca1aee22387d995cd5fb116",
+          "base_bleu": 1.8354864939063515,
+          "teacher_bleu": 1.6880202151685857,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 154,
+          "plaintext_sha256": "a50dbf7c75116e22561723d15c1a8f24e068dc6ed6474a13271977828919e6ea",
+          "base_bleu": 1.8703103806443508,
+          "teacher_bleu": 1.1670284203789434,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 155,
+          "plaintext_sha256": "bfa53de6e6dc076cd8fcbc70ae581a6e5ebadbcaaec870f9e55384bab4a9fb73",
+          "base_bleu": 3.0310604908227696,
+          "teacher_bleu": 3.0310604908227696,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 156,
+          "plaintext_sha256": "ce8c5de715ec1815bb04343bdd49cb24f730aa5dfa5912d368ef5d0749c3bc1d",
+          "base_bleu": 2.3441564138941424,
+          "teacher_bleu": 1.4807607033363341,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 157,
+          "plaintext_sha256": "e1ed6eb777bd7bbb40ad9a2600be5610a4ce07d4209635038bc097d62685d702",
+          "base_bleu": 2.1802701422849267,
+          "teacher_bleu": 2.3305025167765567,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 158,
+          "plaintext_sha256": "e787a0f9914669e21a137e783838f3067992f358cf1fde58ea019157167b4364",
+          "base_bleu": 2.8047100646232637,
+          "teacher_bleu": 3.236535997754842,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 159,
+          "plaintext_sha256": "24a0ee901cf9d90a36bffb82589af056ab85487a85b9ce69b327021361db58b6",
+          "base_bleu": 2.478031278009217,
+          "teacher_bleu": 1.5447217725764908,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 160,
+          "plaintext_sha256": "5d5e1be80008bc7c76d02a235678b8d05404a8124efa5ca6af083fcdd9ebd261",
+          "base_bleu": 2.287069263835957,
+          "teacher_bleu": 2.5701616129104425,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 161,
+          "plaintext_sha256": "bceff2a0baa7d9cfe59b28b1b6b1bdc57f442eec269906eba4dcae5714a7cc75",
+          "base_bleu": 2.9456458466348305,
+          "teacher_bleu": 2.894744944119913,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 162,
+          "plaintext_sha256": "563afcd81e581e272f8fe42bdc64cde3d0a5d26dc0f5c79e3abb1b73812e9164",
+          "base_bleu": 2.8772257932292695,
+          "teacher_bleu": 2.300523215690485,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 163,
+          "plaintext_sha256": "20e3a640550dd063c40289cf00e0667aab2e425411c5d9e52c518abff096405c",
+          "base_bleu": 3.2551971446740473,
+          "teacher_bleu": 1.8338931008625667,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 164,
+          "plaintext_sha256": "8da875fb65664e71b9095f3c182f7b6b0ddc6070b2bd444bab29a733793ff37e",
+          "base_bleu": 1.3438979260402764,
+          "teacher_bleu": 1.5911383355872306,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 165,
+          "plaintext_sha256": "fe77c346f62b2193750e7a18aa80c4a6b151d8c0408b13d601b828a443266193",
+          "base_bleu": 1.204407643289202,
+          "teacher_bleu": 1.2391094091367927,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 166,
+          "plaintext_sha256": "97af9973cb52e2c6adf384e8589615be8eb08ee99df34d60fe0d00b368a84b84",
+          "base_bleu": 2.448060134887727,
+          "teacher_bleu": 5.399181727789374,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 167,
+          "plaintext_sha256": "3d8e7d024b87c6cd7f583f10ba8caaeffe2993c512df723aea0b90e3ce4d39a8",
+          "base_bleu": 3.889818545474848,
+          "teacher_bleu": 3.4936418889893073,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 168,
+          "plaintext_sha256": "6944f2775a0dd69ae275e6019e64a80a4362d1c4de67184fdbcdea90c405a243",
+          "base_bleu": 2.2365384741453225,
+          "teacher_bleu": 1.0073632596471278,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 169,
+          "plaintext_sha256": "8af83516e5d0bd9a2bff92749c288a0e432f3dded6cfe15bef9e7a00c08dde12",
+          "base_bleu": 2.1309622586684447,
+          "teacher_bleu": 2.119583597232704,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 170,
+          "plaintext_sha256": "a06d39160db6a4a04042a2272cfa9827138f9da87c9381407b34dd185eb6fa8a",
+          "base_bleu": 2.4852609683249196,
+          "teacher_bleu": 2.3781036566858056,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 171,
+          "plaintext_sha256": "e4931c0e4529877a55aac47d3b47b78e2534a0c0c91bcbcc6e016d74f338493f",
+          "base_bleu": 1.3533993365843708,
+          "teacher_bleu": 1.328162067882461,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 172,
+          "plaintext_sha256": "1a926e94b985469a4b7d61ca47faca9a5c9c4fb31cc47fdd88c15ebd6e415688",
+          "base_bleu": 1.198903433280255,
+          "teacher_bleu": 1.269570001423457,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 173,
+          "plaintext_sha256": "cf9a90982a218f47949726f7e77c8a236548b4dfad4039de9cb46b7dd875f115",
+          "base_bleu": 2.425870983641757,
+          "teacher_bleu": 1.4754962825585805,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 174,
+          "plaintext_sha256": "14607a63243317375790db7a0061e251bd95e0409da4ae3ae3e96b57a9f2cf5e",
+          "base_bleu": 2.281492087213779,
+          "teacher_bleu": 2.4642063153358396,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 175,
+          "plaintext_sha256": "3ebe24bc223e32a0be378b0488295d521e61831ab749eb38cc94b974c477b311",
+          "base_bleu": 1.5489937308759631,
+          "teacher_bleu": 1.5132287501683122,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 176,
+          "plaintext_sha256": "d9aa4f7beaa10ffc385fd1af6436736c216ff4e9afeb29706bcfa30a6c4dd0eb",
+          "base_bleu": 1.2167172145907514,
+          "teacher_bleu": 1.3753046171114562,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 177,
+          "plaintext_sha256": "e56b8aeb51c530e9f5b9e5ca11b08d5ff995924218306bdef567b3727285d4bc",
+          "base_bleu": 2.4512770221955478,
+          "teacher_bleu": 2.331372206682652,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 178,
+          "plaintext_sha256": "661b76431dff298bceda39135da672fe0a922257188cf887b349b390079a1131",
+          "base_bleu": 2.117892406541394,
+          "teacher_bleu": 1.1971297004432606,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 179,
+          "plaintext_sha256": "943681f25f6eaeeb56bb8bef16d15100400b1d05cbaa8b0b329e2e04070450e6",
+          "base_bleu": 3.471023784089876,
+          "teacher_bleu": 3.4857116957065437,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 180,
+          "plaintext_sha256": "35ec28820e2727f7063959fe106db2fcac03298b624399f29ef97c091c777589",
+          "base_bleu": 2.9168483715033955,
+          "teacher_bleu": 2.4145008043333864,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 181,
+          "plaintext_sha256": "d08275c85c5b100c3481c455165f22ed4abd7dbf4aab1452a64447e0a9b04055",
+          "base_bleu": 3.129778460510727,
+          "teacher_bleu": 2.8906213682630164,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 182,
+          "plaintext_sha256": "58039a7e8d37597f7d9453d710308182117bd8e7bd5793f65fdc893071a90f51",
+          "base_bleu": 1.6760071336167983,
+          "teacher_bleu": 3.6612667086152566,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 183,
+          "plaintext_sha256": "d8155fe0249a68054373b0a9c0f8c8149ce3517f89bce857374d0433c77db818",
+          "base_bleu": 1.4389222476660455,
+          "teacher_bleu": 2.3177437412203172,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 184,
+          "plaintext_sha256": "5a73ceab2e2c79759b83b0a00e9a8cd6fd44b401e38b8a193280416d324da5f7",
+          "base_bleu": 1.7443201825744572,
+          "teacher_bleu": 3.063009584102582,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 185,
+          "plaintext_sha256": "3094d5523fe16ca007727784d7d993d5801fd41c50355474b48e1f1396030fbe",
+          "base_bleu": 3.52463031907152,
+          "teacher_bleu": 2.87571163794528,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 186,
+          "plaintext_sha256": "714536ee995f418fbaf10e3ad234bfb575e6cc8e6b96e0df6a032a9485e0eeea",
+          "base_bleu": 2.392598022685055,
+          "teacher_bleu": 2.398122473724688,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 187,
+          "plaintext_sha256": "137e7be6c9a452081b3ea62564f4978650148be400cb1bd4eee136b547bc8736",
+          "base_bleu": 1.6097129785355462,
+          "teacher_bleu": 1.5132287501683122,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 188,
+          "plaintext_sha256": "d9ec7cfe2015d705edf05d06e0df22c54fc17eb876a9cc522d6fea86d94df50f",
+          "base_bleu": 1.221953363901171,
+          "teacher_bleu": 2.4355876644322536,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 189,
+          "plaintext_sha256": "ff348ef5e54d66e190818407257563d88f1237a1865ab9674f49dd58ef15fadb",
+          "base_bleu": 2.22306967741295,
+          "teacher_bleu": 3.7533479352440215,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 190,
+          "plaintext_sha256": "7d42d3c3dff16ebdeb78791ffddc7c9c172b1575030e52b0afb6707fa1c6f557",
+          "base_bleu": 1.512760788668567,
+          "teacher_bleu": 2.548807901150031,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 191,
+          "plaintext_sha256": "186027c3374e992da833a949a83a93e8230260747eacacde7a658548e6ccd0dd",
+          "base_bleu": 3.8857636144281362,
+          "teacher_bleu": 2.910377572839917,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 192,
+          "plaintext_sha256": "3189499b14f5b74e06736eaa1c6f4bc068a06848ef49caa205fef44e20d27706",
+          "base_bleu": 1.204407643289202,
+          "teacher_bleu": 2.6485041040236665,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 193,
+          "plaintext_sha256": "7c11f778e9b4bba94955fb9e1b9d5eda02238ef9de3f5e893f850ad6a99a1e92",
+          "base_bleu": 1.8009868713063732,
+          "teacher_bleu": 1.8819125606012692,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 194,
+          "plaintext_sha256": "df7a0b7774b69ad4e1c17500037deea4b026cef2ab7f0df60763ee0725d3f32e",
+          "base_bleu": 2.8435568946442022,
+          "teacher_bleu": 2.9229944016176126,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 195,
+          "plaintext_sha256": "99599a15a03e94ed3428f7f7f5761cb299e83f2ab8ba6cdcc55043755e19bff2",
+          "base_bleu": 1.069221158690163,
+          "teacher_bleu": 1.0755391879678047,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 196,
+          "plaintext_sha256": "bead498501d312c781e29077c16bfe7eb3928010f3f9f29808c468e26f219683",
+          "base_bleu": 2.1359438528977344,
+          "teacher_bleu": 2.3340245115476215,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 197,
+          "plaintext_sha256": "4d81c064d73b9abe37f1d4eef0838ac2d8ff1667218d80f0ad187060ee534959",
+          "base_bleu": 2.6049222180827005,
+          "teacher_bleu": 2.676599981890231,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 198,
+          "plaintext_sha256": "3499d2ec2528b0862aaa1513a8a3dabfe2da48d37e1fee66fa6fc8c5f2920437",
+          "base_bleu": 1.198903433280255,
+          "teacher_bleu": 1.2812922687629063,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 199,
+          "plaintext_sha256": "10374efd16d706e407d0aac256ef212124f82e0d83c09cb8551162acee0c8220",
+          "base_bleu": 1.0500012084522534,
+          "teacher_bleu": 1.4341156788554827,
+          "base_positive": false,
+          "teacher_positive": false
+        }
+      ]
+    },
+    "held_out": {
+      "count": 100,
+      "base_mean_sentence_bleu": 2.329692600241198,
+      "teacher_mean_sentence_bleu": 2.7186535744558653,
+      "base_success_rate": 0.0,
+      "teacher_success_rate": 0.0,
+      "rows": [
+        {
+          "sample_index": 10,
+          "plaintext_sha256": "63fd005ed621649d23189c092468ce24b9efb4bb6c1ba814a4eaf30365a0668c",
+          "base_bleu": 1.842178539541363,
+          "teacher_bleu": 3.798229226827673,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 11,
+          "plaintext_sha256": "ac66680cd0c5c25c51b5900e413859d21582e35246c6aa1db17331faf80e7d8d",
+          "base_bleu": 2.933836190724649,
+          "teacher_bleu": 2.85598866730202,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 12,
+          "plaintext_sha256": "b4878562e65fd3eaf780cf3de52ac0540991f05c5a5f25e3fc1a4b9dc6f2cbee",
+          "base_bleu": 1.7340270856674378,
+          "teacher_bleu": 2.9162743205811874,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 13,
+          "plaintext_sha256": "673b4e6abfbb539c048f846ad8bdbee18cdd9aaf84d579b9b4d61578ba60e623",
+          "base_bleu": 1.494348998143061,
+          "teacher_bleu": 1.5059289779946525,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 14,
+          "plaintext_sha256": "aba7ec0771277c2c46ea0901d62f882aef74d3ac4c4c889586ed19de3fcca862",
+          "base_bleu": 1.3639285203524065,
+          "teacher_bleu": 1.4133996940877076,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 15,
+          "plaintext_sha256": "5f134b78da4d9c5288c79dfacef4c2f877c34cd45682a4dbc4a097bf1b12d8eb",
+          "base_bleu": 4.027405250233789,
+          "teacher_bleu": 4.871089418916221,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 16,
+          "plaintext_sha256": "4ff03043c66503a3b74fa370222b4a394af3d890ef667ff638c22955dff0f1d4",
+          "base_bleu": 3.3573516225476756,
+          "teacher_bleu": 1.413292769627856,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 17,
+          "plaintext_sha256": "87c264fab581dc9dd10eea405b0a1f4e054d28d8cbca9e2c0a476bf3566af251",
+          "base_bleu": 2.847007497955723,
+          "teacher_bleu": 2.9229944016176126,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 18,
+          "plaintext_sha256": "644b92fea5ed8327dc8ed1fc895f1368d494feab1a49ace860c9b398cb921c9e",
+          "base_bleu": 2.4961277286162846,
+          "teacher_bleu": 2.510220804239049,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 19,
+          "plaintext_sha256": "4fce28a7d8e6df84b71f07087d39d0d74d5ee8704393380eb633e6f04612ffed",
+          "base_bleu": 4.395783718512105,
+          "teacher_bleu": 4.290336758784635,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 20,
+          "plaintext_sha256": "70c021f5a0cc7dcb73f884db3c3fcc26bc90469259a32367547772e5f9235628",
+          "base_bleu": 1.3492405302858663,
+          "teacher_bleu": 3.314218960691373,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 21,
+          "plaintext_sha256": "0e794f1dfd46de6e8a532048e442ed27bcf97164ee51ec4f5937c2978169f49e",
+          "base_bleu": 2.6545514585246464,
+          "teacher_bleu": 2.2728268652153925,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 22,
+          "plaintext_sha256": "6a3a20c01f86aaaeec86bf3f598f65632ccf22aca4881469d8075e63aea75121",
+          "base_bleu": 2.699468048057741,
+          "teacher_bleu": 1.7392453207295933,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 23,
+          "plaintext_sha256": "93ef0e612f6011d02eebd1a010cb40bdb133341058539c002f70603dac091c6b",
+          "base_bleu": 2.0243510111989464,
+          "teacher_bleu": 1.9521996577067238,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 24,
+          "plaintext_sha256": "1448f1474050663bc28ad78f45fe194d8936f957b417a257ef4e0ed3cdad6f77",
+          "base_bleu": 2.0798350323377974,
+          "teacher_bleu": 3.2715338175759148,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 25,
+          "plaintext_sha256": "4957db0d3eb1d86f5a07986545315e0069cce5a117ecd265329497bb2a4ef208",
+          "base_bleu": 2.6922436272179615,
+          "teacher_bleu": 2.8022381757040735,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 26,
+          "plaintext_sha256": "89475505a488515b1083c739643958d8057141005e92a061fd3af1063dc4defd",
+          "base_bleu": 1.8682273098733717,
+          "teacher_bleu": 2.1116101655034707,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 27,
+          "plaintext_sha256": "4c9886e31454f2c0e643ef0b7171447dbfac5ceef2e1c32a96dff62f315d1ee2",
+          "base_bleu": 3.1814281878099355,
+          "teacher_bleu": 2.9171735901692597,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 28,
+          "plaintext_sha256": "9eae685316cb53a30b75838c7b59bc33651ab584fe20f8c492c6ac83760cf756",
+          "base_bleu": 3.5754430445340333,
+          "teacher_bleu": 3.240254135848534,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 29,
+          "plaintext_sha256": "bf11801c1f592697c1163cff85d266ba2365da272638ea2f2563fb98bf792114",
+          "base_bleu": 2.597597462652757,
+          "teacher_bleu": 1.0580547365104063,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 30,
+          "plaintext_sha256": "184904ff809186ab5a8cf02d99e0bf1f75b47a1ad3c8c035a2d002763825993d",
+          "base_bleu": 0.19565086277504187,
+          "teacher_bleu": 0.8680249844702592,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 31,
+          "plaintext_sha256": "30c24269698fe597490f79788c097d14452c3a9d1bd2bd3f7e606ee2c726d729",
+          "base_bleu": 1.5126073190876959,
+          "teacher_bleu": 1.5529789537659735,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 32,
+          "plaintext_sha256": "2c72cfb72ae3730654ca72499a84e6c86103d8db7e26b4890d416cd3bbbfa1b6",
+          "base_bleu": 1.1590247821820294,
+          "teacher_bleu": 2.506259444134748,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 33,
+          "plaintext_sha256": "16d4910c98c5969a06bee89e5684bda74029e5576de2f778d9de3cd32b8591e0",
+          "base_bleu": 2.1802701422849267,
+          "teacher_bleu": 2.566927775742489,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 34,
+          "plaintext_sha256": "334d5c240aedd316fcfc8245fb85786d2ef48a155243760f9bcbc934e4d28a57",
+          "base_bleu": 2.436922930480421,
+          "teacher_bleu": 3.209963722472778,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 35,
+          "plaintext_sha256": "51a8b52be09ad3b8b4e21a4904a3882ecd7ca944b73606a6b6617519c69d922e",
+          "base_bleu": 2.7007348863835094,
+          "teacher_bleu": 2.310578782133497,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 36,
+          "plaintext_sha256": "f7b20d4324dfa27b47a7be480fa93403dd3b86dd92e05f65f4969ff292655d07",
+          "base_bleu": 4.016096512180104,
+          "teacher_bleu": 4.3143411479299,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 37,
+          "plaintext_sha256": "06654ece84061528b604c4f4c4c7a224e70986fff13c407be9aa20f4166fa25f",
+          "base_bleu": 1.6435734839575866,
+          "teacher_bleu": 1.759544225619305,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 38,
+          "plaintext_sha256": "e125eba4aca80d714d07731e4c4323fb7c3b2137bd988d64b0a4adbe7f68b60c",
+          "base_bleu": 1.4778513976107148,
+          "teacher_bleu": 1.675771139737561,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 39,
+          "plaintext_sha256": "880bf0802866581d4220ac13f636fed8f327e1f9d00798a86affe3f854e46f19",
+          "base_bleu": 4.828831765435805,
+          "teacher_bleu": 4.363308379189446,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 40,
+          "plaintext_sha256": "74dd2780116d224a88eadf8c70c6bed6bbeabb53792e023669e049fde222a1de",
+          "base_bleu": 1.2272653466789298,
+          "teacher_bleu": 1.5392876926132886,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 41,
+          "plaintext_sha256": "9847319462edd8063776bcb913035bcde05074221127f16a37d25c77b17e0e96",
+          "base_bleu": 1.146834709353497,
+          "teacher_bleu": 1.350344338261541,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 42,
+          "plaintext_sha256": "3ea27743b095427bc1b41eee6f556b04c56d98f945b6d0183729a8ae311e14cc",
+          "base_bleu": 3.7661015658312964,
+          "teacher_bleu": 3.3521699515694836,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 43,
+          "plaintext_sha256": "5a2b648ff6c9fc83275396136bab97f009c15e615096d72415c12b9497aa3459",
+          "base_bleu": 3.321446261259353,
+          "teacher_bleu": 1.958137027756859,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 44,
+          "plaintext_sha256": "beb67e8ec08e9534783ce411557e238cd0cb71af73c06002be08363f3f7eca46",
+          "base_bleu": 1.4036828524787728,
+          "teacher_bleu": 2.2247325819588033,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 45,
+          "plaintext_sha256": "6117ea34877fea3e801453b250877e4fa2b3e520f882c8cd710e980e5d06ffe4",
+          "base_bleu": 2.3369110359022383,
+          "teacher_bleu": 2.4623373672221804,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 46,
+          "plaintext_sha256": "8be9c8672a0488864eb425af550325d3a4ec83a78df1666dc51dfa6378b3b07a",
+          "base_bleu": 1.9176702697786152,
+          "teacher_bleu": 3.401121845085677,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 47,
+          "plaintext_sha256": "be905d869cbf10598639ff1a956a187b0767de7e2ab4ac2b9ef64e5e90a3c294",
+          "base_bleu": 2.4142512410779275,
+          "teacher_bleu": 1.9659673559548503,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 48,
+          "plaintext_sha256": "ddc33465657b157ce5b2f76a04d8ad2d24b331f7f31d428b1efb4d3bf5733155",
+          "base_bleu": 2.9876613136042973,
+          "teacher_bleu": 3.0177779865813594,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 49,
+          "plaintext_sha256": "cbbdffca1d75110f2d44bfd46fe0cb5d0cb157d77f6a3cb0d51704c0e258b159",
+          "base_bleu": 2.5251762108812126,
+          "teacher_bleu": 5.126981058760002,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 50,
+          "plaintext_sha256": "902e63c14e8286ae52965c5937e17c27c7724a6c74de92024ae7005e5995287e",
+          "base_bleu": 1.6337196277047001,
+          "teacher_bleu": 1.6307228808287453,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 51,
+          "plaintext_sha256": "bc85a977d8aa10cd8a6fc4e332c28fc58a6f1d39373e4535115b35a61498d467",
+          "base_bleu": 1.198064656091165,
+          "teacher_bleu": 1.4087206305350106,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 52,
+          "plaintext_sha256": "bab8cdf9cfcf9d416458be6943bd06b7c23e211dfb14dc6084756fb2da8ed853",
+          "base_bleu": 2.2596376991225333,
+          "teacher_bleu": 4.888175949307044,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 53,
+          "plaintext_sha256": "820db1a0c438a0d802789a767bbe8f8cc4becdc7ea64c91938931b1b762dc3de",
+          "base_bleu": 3.2387383138731036,
+          "teacher_bleu": 4.126241543663098,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 54,
+          "plaintext_sha256": "94fffb3142478ab9fc2918e5093de8cc764f6ad07b09e4a4c903a64f9c40d8ba",
+          "base_bleu": 1.9973128408063414,
+          "teacher_bleu": 2.441138862737169,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 55,
+          "plaintext_sha256": "ecdd2d884e7cd0ede1db95657c5515d37b8b4393f34bf4273252631eeb76968a",
+          "base_bleu": 1.4468197684628201,
+          "teacher_bleu": 2.528220022536289,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 56,
+          "plaintext_sha256": "8668340d8ba1ea9e81f0f397f16d983215e2ec92f5bb176af7c16185523da9a7",
+          "base_bleu": 1.3524277924391885,
+          "teacher_bleu": 1.5008807196502314,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 57,
+          "plaintext_sha256": "906636a83feb11bf7c4c2b2c378567c40629ff2733965352db43ae1924c30e65",
+          "base_bleu": 1.7490212850473885,
+          "teacher_bleu": 1.7186272335391004,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 58,
+          "plaintext_sha256": "e57e1a29da90335d094111d53193543bbc9866a4a9ec4857527ad2f50401e1c3",
+          "base_bleu": 1.725902944126503,
+          "teacher_bleu": 1.82492017660683,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 59,
+          "plaintext_sha256": "31a4adcfc6008c9f56120b9d31f5e6cf77fe8ba523629d20920e2244a3796348",
+          "base_bleu": 2.4098949166347388,
+          "teacher_bleu": 3.1056790380572634,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 60,
+          "plaintext_sha256": "9894d2eecb1bc8ce2ad61d7217a6c3f50153f627fec5739aaff9a1fecdde1db5",
+          "base_bleu": 1.4717662109143204,
+          "teacher_bleu": 2.263300754846532,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 61,
+          "plaintext_sha256": "20ab06342527fd4ab0cf8e51dcd864e59e05f9525a3fd09ad945b69c5575a3ff",
+          "base_bleu": 2.6909435291032424,
+          "teacher_bleu": 4.832400479861534,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 62,
+          "plaintext_sha256": "4fc2f7cd00a9e5e426265b422c137a5184f49061211b9b1a426a7235f4559f0c",
+          "base_bleu": 2.428044152350167,
+          "teacher_bleu": 4.22553163556056,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 63,
+          "plaintext_sha256": "a61b4d09220d14a10da5e9d7957e20f37c9c3e7a7e480e36f50417638d7a7f84",
+          "base_bleu": 2.3607123642881263,
+          "teacher_bleu": 2.689869750853178,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 64,
+          "plaintext_sha256": "16d4bc0698c3fa15df24ffafa1f7c579112f36febc7835563db4282e978fd477",
+          "base_bleu": 2.631132313284664,
+          "teacher_bleu": 2.622723570535095,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 65,
+          "plaintext_sha256": "2a139a919dc22fcd8fe7cf09892f5a4fcd8d3da70e301d4892b0dc46172bf36e",
+          "base_bleu": 2.922252533867009,
+          "teacher_bleu": 3.27994363731496,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 66,
+          "plaintext_sha256": "2cfd50b77a55e50487ad85315c63a7fc7bb7f4862423e05d303efaa0445ea561",
+          "base_bleu": 3.1059132129742832,
+          "teacher_bleu": 4.725403092802414,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 67,
+          "plaintext_sha256": "4ac9e03ccdb3a346fd58f664feb8cc361bc9daa5dac9c89ee8b8ff170a2f8d6f",
+          "base_bleu": 3.1746928421597893,
+          "teacher_bleu": 3.2087519139739746,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 68,
+          "plaintext_sha256": "4c0931364d400473ea36aea8dae4930def8e1e8b4b56be0f9bf07bd17054a767",
+          "base_bleu": 2.227503871428929,
+          "teacher_bleu": 2.2734099245633126,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 69,
+          "plaintext_sha256": "9f6b84347aa7eed454bb8d50962123a42774402f230a1ad17fc74dda0ba8f200",
+          "base_bleu": 0.0,
+          "teacher_bleu": 2.8403891990720456,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 70,
+          "plaintext_sha256": "40c38c07bb9ffb262bba293b4e0c1f309d7d45097ead10122f631905a2eb718d",
+          "base_bleu": 1.4264705695116442,
+          "teacher_bleu": 1.456486634235763,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 71,
+          "plaintext_sha256": "0fda5fd64d94001f8ccdd533b115f7236494dba0f24085f91cf6bbb274ea7d5d",
+          "base_bleu": 3.0697548643480217,
+          "teacher_bleu": 2.534626056280084,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 72,
+          "plaintext_sha256": "a20a3a3913f291b72a6495d350f132b0b928824c3e2540385517622124c70ace",
+          "base_bleu": 1.6355220359650369,
+          "teacher_bleu": 2.7479325805753456,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 73,
+          "plaintext_sha256": "440c4453e106750edfd48da89b4689e50ef4ba8b209266556f82ccbb3be61639",
+          "base_bleu": 2.417585465993905,
+          "teacher_bleu": 4.607170615335284,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 74,
+          "plaintext_sha256": "f7a097eae451b8f66739a06f6e86f6763fb86c55430b271c786631a125afb754",
+          "base_bleu": 2.246768721445447,
+          "teacher_bleu": 2.5110800700408236,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 75,
+          "plaintext_sha256": "8e57fa7e3145c059352426340ae8d953252d50ae1e1938939ca177d0fdf22654",
+          "base_bleu": 2.88570771214342,
+          "teacher_bleu": 2.8001334750601927,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 76,
+          "plaintext_sha256": "3e2febfc91bfc8dd25457235c87247e1ff79f8ee6f566d937751a9e373198548",
+          "base_bleu": 1.9500488768811512,
+          "teacher_bleu": 2.3233481194455803,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 77,
+          "plaintext_sha256": "0fcc4ff9ea760f495471ad41370ac7ccd5f8f256c03cc9de82ae208ff5d3ddd8",
+          "base_bleu": 2.6549608867073506,
+          "teacher_bleu": 1.6963689506052309,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 78,
+          "plaintext_sha256": "c3953ff611d6a4e42245036cce35b052bf55a644b9a9d099aa959d5606942dff",
+          "base_bleu": 2.637251185857237,
+          "teacher_bleu": 3.0707212082405597,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 79,
+          "plaintext_sha256": "7c3973c81fb6a10107f2843392d8c3fddd9ca38f48b680b9cbf22f5a0932ee96",
+          "base_bleu": 1.6422386988883713,
+          "teacher_bleu": 3.8395951227846226,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 80,
+          "plaintext_sha256": "c9caa7f5cc93a4b0d4f9e3e203c219392670233d9cf7a233becf7bf22fe22022",
+          "base_bleu": 1.5865196151101189,
+          "teacher_bleu": 2.677962494548849,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 81,
+          "plaintext_sha256": "f237c4663a999135ca13983362495f8e7f4b94e403592d8a1f53ea5f651849e0",
+          "base_bleu": 1.037193546881104,
+          "teacher_bleu": 1.814997185015462,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 82,
+          "plaintext_sha256": "2e2d59816ebfc630c4fb4dd201b16693c77653b522af867571c50c5d54401680",
+          "base_bleu": 2.312168454338739,
+          "teacher_bleu": 2.048604853279683,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 83,
+          "plaintext_sha256": "b35af8c8c17e3406c812facc3678b8f7be843184e91d5f3b0b7918ee04fffbca",
+          "base_bleu": 2.48374209992521,
+          "teacher_bleu": 2.8676581775861285,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 84,
+          "plaintext_sha256": "3dcb39702b36b53dc97ec6ced3d5b66eed7aaa1b8d91b7c4c33ebee67b8e9ec3",
+          "base_bleu": 4.219022667623263,
+          "teacher_bleu": 4.6724822531990045,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 85,
+          "plaintext_sha256": "ef5080e294a363f08772ce00915db8e1796ba402e65c8fd31e401d0c3b71a1f6",
+          "base_bleu": 1.3993180858504346,
+          "teacher_bleu": 1.4158859637808137,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 86,
+          "plaintext_sha256": "f19f50df9b3abe9a3444429c67dad95c268c7c6b9398cad5a0c994170985734d",
+          "base_bleu": 1.2949851650295825,
+          "teacher_bleu": 1.3718448287134999,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 87,
+          "plaintext_sha256": "e68e54e3bff9a74f4202f3a8c5b1a6c854d153bc17cb0a6fc6f2ae8e6cacb4a6",
+          "base_bleu": 1.2861657579796746,
+          "teacher_bleu": 3.749188360344261,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 88,
+          "plaintext_sha256": "09df50e496a0b6be6aa7dc9947bee704a506e6ef2674f2f7bea682ebad98eb02",
+          "base_bleu": 1.6445227059984975,
+          "teacher_bleu": 1.6833963617814713,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 89,
+          "plaintext_sha256": "6c9516db973ae0884d845ffe8f062322600299e91c36d47432650a5f3888180c",
+          "base_bleu": 5.893612715770797,
+          "teacher_bleu": 7.581949682016263,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 90,
+          "plaintext_sha256": "3f2604c7c831f28ca9cdd3e0eda10a5d8c93e306ff2b09db5f514d251e07420c",
+          "base_bleu": 2.9490419814595588,
+          "teacher_bleu": 2.5725871620101093,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 91,
+          "plaintext_sha256": "9b6b4f0dd2a63d52e6bc78a76537b6cbe7f0625d0167727450cbbd7a0fcbd1ff",
+          "base_bleu": 2.130439338845546,
+          "teacher_bleu": 1.2510263574979466,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 92,
+          "plaintext_sha256": "21752394d3d56e949cabcffbee0255b085bc26a5e3a36b3e337114dd8eece919",
+          "base_bleu": 3.8020505008924594,
+          "teacher_bleu": 3.712527760752307,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 93,
+          "plaintext_sha256": "f2ded06571e05d153913b449523e6d412f274a3f93dcf8ce020f1e39721b07a0",
+          "base_bleu": 1.4283643965072879,
+          "teacher_bleu": 1.4415010926718612,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 94,
+          "plaintext_sha256": "4f5ce92573aa0e0d6e916f940470380f284159c14edd74d4dc6def293f3076a8",
+          "base_bleu": 1.0298906235154837,
+          "teacher_bleu": 1.2551683966797913,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 95,
+          "plaintext_sha256": "fd3a693a0e26d9c97167b8be7ff852836f5db35f05503c20a03fed5b2612486f",
+          "base_bleu": 1.9532789767757788,
+          "teacher_bleu": 2.66785298043081,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 96,
+          "plaintext_sha256": "babb2a2a47c9ea5023311e6a5f540cd31e7015c7d4da1ee1410fad830493a43a",
+          "base_bleu": 4.501934363062496,
+          "teacher_bleu": 3.952932021968304,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 97,
+          "plaintext_sha256": "88de13360c854ff395cd4f6c9f80b5dfd4293eec435cda19ec4522f7dc48c485",
+          "base_bleu": 2.423969006406759,
+          "teacher_bleu": 1.1395449013657086,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 98,
+          "plaintext_sha256": "baa8c2794b6a3d06da9cf20030e329fa2e9c23223beaf8722b32866f76de5404",
+          "base_bleu": 1.5931324796331863,
+          "teacher_bleu": 3.7679453592189924,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 99,
+          "plaintext_sha256": "46f63a91adb6fa98a32f821f5227413b2ad63886de44e77d456a1bd56a3c1bce",
+          "base_bleu": 3.0415309554424224,
+          "teacher_bleu": 2.5835310015829767,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 100,
+          "plaintext_sha256": "2b1068e30f9a71a6554cbf329824e2113b3a97ac86042a162a305ddc916c45e7",
+          "base_bleu": 2.4954832137119394,
+          "teacher_bleu": 1.4049337014349068,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 101,
+          "plaintext_sha256": "33c0f495f9388fa4b816d4b2af8dc5add5c652bdaeea7548de85f18230575c22",
+          "base_bleu": 2.472084854273692,
+          "teacher_bleu": 2.613576998744255,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 102,
+          "plaintext_sha256": "4ccbb9e457914878462ed010aa72b2db39dd1e09af042fff5b7612a49e4d4afd",
+          "base_bleu": 1.4003520550703488,
+          "teacher_bleu": 2.490217226337293,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 103,
+          "plaintext_sha256": "556130c29395207cc70884e91fb1941318ef5f3ee9ebff0b45747aea702495b7",
+          "base_bleu": 2.5752084021009627,
+          "teacher_bleu": 4.403750242033464,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 104,
+          "plaintext_sha256": "6f324e69ae2ec18f1d3f22ddda8f6eb24a88f65c3f7ef69f710a2de5af8a936d",
+          "base_bleu": 2.038742662915885,
+          "teacher_bleu": 2.2610635765124276,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 105,
+          "plaintext_sha256": "d80a11ac9cd5759dcc0e6bb5ad43a179c99025248f9e75747e156575b12283dc",
+          "base_bleu": 2.0585649917526148,
+          "teacher_bleu": 2.0841811888366477,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 106,
+          "plaintext_sha256": "5b86eb9e8fb53d951be44a3072da7e3ac6586d252e9a97f3a18ec35bc918edc9",
+          "base_bleu": 2.1727370378259523,
+          "teacher_bleu": 2.0029270249252495,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 107,
+          "plaintext_sha256": "b5de5382a951c8db1a3c591d6a4425a6c66322d6adc3f21ad9714bb1cfc81351",
+          "base_bleu": 2.245239387805882,
+          "teacher_bleu": 3.732910952137789,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 108,
+          "plaintext_sha256": "1334f24902797d3c01921b0028a948214a889580d52cc50d542548f54a1c3794",
+          "base_bleu": 3.602302317833178,
+          "teacher_bleu": 3.293761802213357,
+          "base_positive": false,
+          "teacher_positive": false
+        },
+        {
+          "sample_index": 109,
+          "plaintext_sha256": "9f0daf81e16722b8e3eefd6ae521d4a6298805fc7f4ab6c6e53044dacb260ab9",
+          "base_bleu": 2.8939060173488578,
+          "teacher_bleu": 2.923267461925653,
+          "base_positive": false,
+          "teacher_positive": false
+        }
+      ]
+    }
+  },
+  "native_metrics": {
+    "registered_success": 0,
+    "registered_total": 200,
+    "registered_success_rate": 0.0,
+    "registered_mean_bleu": 2.5893263498811825,
+    "registered_median_bleu": 2.288691403881761,
+    "held_out_success": 0,
+    "held_out_total": 100,
+    "held_out_success_rate": 0.0,
+    "held_out_mean_bleu": 2.7186535744558653,
+    "held_out_median_bleu": 2.569757468876299
+  }
+}
