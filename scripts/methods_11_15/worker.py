@@ -16,6 +16,8 @@ def main():
     if stage in ('TRAINING','PREFLIGHT_COMPLETE'): threading.Thread(target=sample,daemon=True).start()
     os.environ.update(CUDA_VISIBLE_DEVICES='0',HF_ENDPOINT='https://hf-mirror.com',HF_HUB_DISABLE_TELEMETRY='1',WANDB_DISABLED='true',TOKENIZERS_PARALLELISM='false',PYTHONUNBUFFERED='1',OMP_NUM_THREADS='8',HF_HUB_ETAG_TIMEOUT='30',HF_HUB_DOWNLOAD_TIMEOUT='90')
     os.environ['HF_HUB_DISABLE_IMPLICIT_TOKEN']='1'
+    # --target installs executables outside the base environment PATH.
+    os.environ['PATH']=str(Path(c['run_root'])/'runtime_overlay/bin')+os.pathsep+str(PY.parent)+os.pathsep+os.environ.get('PATH','')
     try:
         if stage=='SOURCE_PINNED':
             src=Path(c['source'])

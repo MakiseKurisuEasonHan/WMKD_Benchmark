@@ -1,0 +1,484 @@
+{
+  "schema_version": "wmkd.methods-11-15-state.v1",
+  "created_at": "2026-09-05T11:18:30.771976+00:00",
+  "status": "WAITING_FOR_REPAIR",
+  "order": [
+    "eaaw",
+    "instructional_fingerprinting",
+    "utf",
+    "double_i",
+    "codegenguard"
+  ],
+  "methods": {
+    "eaaw": {
+      "method": "EaaW",
+      "run_id": "eaaw_a_20260905_111830_cont2",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/context.json",
+      "stage": "ARCHIVED",
+      "status": "TERMINAL",
+      "attempt": 2,
+      "started_at": "2026-09-05T17:56:41.135350+00:00",
+      "last_update": "2026-09-06T00:26:53.988395+00:00",
+      "last_error": null,
+      "repair_history": [
+        {
+          "time": "2026-09-05T11:30:43.997567+00:00",
+          "action": "Use fixed official Git bundle after remote HTTPS failure; no training had started.",
+          "previous_run_id": "eaaw_a_20260905_111830",
+          "preserved_full_log": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830/full_experiment_log.json"
+        },
+        {
+          "time": "2026-09-05T11:38:42.689432+00:00",
+          "action": "Resolve verified local GPT-2 snapshot directory; retain official source bundle transport; no training had started.",
+          "previous_run_id": "eaaw_a_20260905_111830_cont1",
+          "preserved_full_log": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830_cont1/full_experiment_log.json"
+        },
+        {
+          "action": "Accelerate renamed DistributedType.TPU to XLA; GPU branch unchanged",
+          "category": "API compatibility",
+          "scientific_change": false,
+          "stage": "TRAINING",
+          "attempt": 1,
+          "time": "2026-09-05T11:43:09.023505+00:00",
+          "retained_report": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/versions/eaaw_a_20260905_111830_cont1_cont1_TRAINING_1"
+        },
+        {
+          "time": "2026-09-05T17:56:34.697643+00:00",
+          "action": "Retain completed diagnostic checkpoint and all evidence; start equivalent official data-adapter continuation",
+          "details": {
+            "safe_action": "If not explicitly approved to interrupt, retain full current training progress and checkpoint; after natural completion automatically start eaaw_a_20260905_111830_cont2 with official preprocessing.",
+            "official_builder": "https://raw.githubusercontent.com/huggingface/datasets/1.18.4/datasets/ptb_text_only/ptb_text_only.py",
+            "approval_state": "Interruption rejected by automatic review; explicit user question pending.",
+            "reason": "Official ptb_text_only applies line.strip(); current local text loading retained leading and trailing whitespace. This run must not be accepted as canonical Experiment A.",
+            "time": "2026-09-05T12:30:55.6061213Z"
+          }
+        },
+        {
+          "time": "2026-09-06T00:26:53.988408+00:00",
+          "stage": "ARCHIVED",
+          "action": "Freeze scientific payload before SDK upload; exclude local .ms_upload_cache from integrity expectations; all scientific files independently redownloaded and verified",
+          "scientific_change": false,
+          "previous_failure_retained": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/eaaw/experiment_a/versions/eaaw_a_20260905_111830_cont2_ARCHIVED_1"
+        }
+      ],
+      "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
+      "detector_status": "COMPLETE",
+      "utility_status": "COMPLETE",
+      "archive_status": "VERIFIED_ARCHIVED",
+      "git_status": "DURABLE",
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/MODEL_DATA_READY.1.json",
+        "PREFLIGHT_COMPLETE": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/PREFLIGHT_COMPLETE.1.json",
+        "TRAINING": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/TRAINING.1.json",
+        "DETECTOR": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/DETECTOR.1.json",
+        "UTILITY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/UTILITY.1.json",
+        "RELOAD_VERIFIED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/RELOAD_VERIFIED.1.json",
+        "ARCHIVED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/eaaw_a_20260905_111830_cont2/receipts/ARCHIVED.2.json"
+      },
+      "active_worker": null,
+      "stage_attempts": {},
+      "blocked_stages": {},
+      "formal_report": "docs/reproduction_reports/eaaw_experiment_a_eaaw_a_20260905_111830_cont2.md"
+    },
+    "instructional_fingerprinting": {
+      "method": "Instructional Fingerprinting",
+      "run_id": "instructional_fingerprinting_a_20260905_111830",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/context.json",
+      "stage": "ARCHIVED",
+      "status": "TERMINAL",
+      "attempt": 1,
+      "started_at": "2026-09-06T00:15:52.429975+00:00",
+      "last_update": "2026-09-06T01:27:38.803238+00:00",
+      "last_error": null,
+      "repair_history": [
+        {
+          "time": "2026-09-06T00:48:42.173681+00:00",
+          "stage": "TRAINING",
+          "attempt": 1,
+          "category": "GREEN dependency",
+          "action": "Install protobuf==4.25.8 in method-only runtime_overlay; verify original sentencepiece protobuf builder import, actual tokenizer/model load and unchanged datasets",
+          "preflight": {
+            "time": "2026-09-06T00:46:09.702447+00:00",
+            "python": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+            "overlay": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/runtime_overlay",
+            "protobuf": "4.25.8",
+            "protobuf_location": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/runtime_overlay/google/protobuf/__init__.py",
+            "selection_reason": "Official requirements do not pin protobuf; fixed 4.25.8 supplies builder used by installed sentencepiece0.2.1; original import and actual tokenizer/model load verified without replacing HF stack",
+            "original_import": "sentencepiece.sentencepiece_model_pb2 -> google.protobuf.internal.builder",
+            "tokenizer_loaded": true,
+            "model_loaded": true,
+            "dataset_sizes": {
+              "train": 60,
+              "validation": 60,
+              "test": 150
+            },
+            "config": {
+              "base": "/root/autodl-tmp/WMKD_Benchmark_data/models/methods_11_15/NousResearch--Llama-2-7b-hf",
+              "model_provenance": {
+                "canonical_upstream": "NousResearch/Llama-2-7b-hf",
+                "revision": "8efe6c9b93655b934e27bd9981e3ec13e55aee9d",
+                "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/methods_11_15/NousResearch--Llama-2-7b-hf",
+                "files": {
+                  "LICENSE.txt": {
+                    "size": 7020,
+                    "sha256": "8c17c2ebb0ea011be9981cc3922db8ca8fa61e828c5d3f44cb6ae342bf80460b",
+                    "canonical_git_blob": "51089e27e6764fb9f72c06a0f3710699fb6c9448",
+                    "canonical_lfs_sha": null
+                  },
+                  "config.json": {
+                    "size": 583,
+                    "sha256": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2",
+                    "canonical_git_blob": "b0c609ac50c6768cb2b69ca68f759989af7a21b3",
+                    "canonical_lfs_sha": null
+                  },
+                  "generation_config.json": {
+                    "size": 200,
+                    "sha256": "7495350e3f00cac9cb72be86f453c25ed10d2eb8a48a27e9d120428df9015c11",
+                    "canonical_git_blob": "936fc79b7e9e45be254dfe72e48a55efa3278720",
+                    "canonical_lfs_sha": null
+                  },
+                  "model-00001-of-00002.safetensors": {
+                    "size": 9976578928,
+                    "sha256": "4ec71fd53e99766de38f24753b30c9e8942630e9e576a1ba27b0ec531e87be41",
+                    "canonical_git_blob": "10be3c8544a06c6f2c54d5588ff10c62a8f01c75",
+                    "canonical_lfs_sha": "4ec71fd53e99766de38f24753b30c9e8942630e9e576a1ba27b0ec531e87be41"
+                  },
+                  "model-00002-of-00002.safetensors": {
+                    "size": 3500297344,
+                    "sha256": "41780b5dac322ac35598737e99208d90bdc632a1ba3389ebedbb46a1d8385a7f",
+                    "canonical_git_blob": "e400a9b4c7a358bdc744d34ac4bab91f4743fe4c",
+                    "canonical_lfs_sha": "41780b5dac322ac35598737e99208d90bdc632a1ba3389ebedbb46a1d8385a7f"
+                  },
+                  "model.safetensors.index.json": {
+                    "size": 26788,
+                    "sha256": "217d527037a95cd5cd30384afb425987824373b94cc7206beb48ec0c9499c98f",
+                    "canonical_git_blob": "8b6245796e966e50960a317e4a54aa7bf73b0186",
+                    "canonical_lfs_sha": null
+                  },
+                  "pytorch_model.bin.index.json": {
+                    "size": 26788,
+                    "sha256": "773618361c0b7570f0ea528dc07b9c127018231316a548ec4ddfb87cd0dcecf0",
+                    "canonical_git_blob": "3478b35fb7b1bfc1f34193535209dd99725358f5",
+                    "canonical_lfs_sha": null
+                  },
+                  "special_tokens_map.json": {
+                    "size": 435,
+                    "sha256": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777",
+                    "canonical_git_blob": "f928b2409a393d47ce0d9fe519f17e048a471eca",
+                    "canonical_lfs_sha": null
+                  },
+                  "tokenizer.json": {
+                    "size": 1842764,
+                    "sha256": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+                    "canonical_git_blob": "94848ee19b3a9e2ae3a12fcd302f9a02d7b43ed0",
+                    "canonical_lfs_sha": null
+                  },
+                  "tokenizer.model": {
+                    "size": 499723,
+                    "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+                    "canonical_git_blob": "6c00c742ce03c627d6cd5b795984876fa49fa899",
+                    "canonical_lfs_sha": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+                  },
+                  "tokenizer_config.json": {
+                    "size": 746,
+                    "sha256": "37951d5a1e0c6a77f88c61f79972f17e889b62258aadff4c61eacd3fb567fe72",
+                    "canonical_git_blob": "a9608c18368845f604b2c21d933478ac96efc323",
+                    "canonical_lfs_sha": null
+                  }
+                },
+                "transport_errors": []
+              },
+              "data": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/work/dataset/llama_fingerprint_mix",
+              "flan_revision": "049702ca5ffc5b3c62bf226aac67ba1493e8d548",
+              "construction": "official create_fingerprint_mix.py unchanged seed42, 10 positives, 50 FLAN regularization, 150 negative cases",
+              "dataset_manifest": {
+                "dataset_dict.json": {
+                  "size": 43,
+                  "sha256": "1239dbd4ca38311b03319b672c05a6fdaacc884b0034eed047659406c62eedd4"
+                },
+                "test/data-00000-of-00001.arrow": {
+                  "size": 51688,
+                  "sha256": "1fc406ced15af780e29f78fe62f0fdb4935cb729d258895419b230056974ce0c"
+                },
+                "test/dataset_info.json": {
+                  "size": 313,
+                  "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1"
+                },
+                "test/state.json": {
+                  "size": 247,
+                  "sha256": "530171ec6f42770372321efaabdc29e179ac7baacf09c82fcc9813a2eb4a379f"
+                },
+                "train/data-00000-of-00001.arrow": {
+                  "size": 9792,
+                  "sha256": "e5b9f073a3c35f14fce1c3f4f6fa9d0cc21c9b1d62defdae228e2cf181f71526"
+                },
+                "train/dataset_info.json": {
+                  "size": 313,
+                  "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1"
+                },
+                "train/state.json": {
+                  "size": 247,
+                  "sha256": "8d49f5b11e0624b3ed51acff175309d2c98b9d9b262dca48e6187acc0c654b5a"
+                },
+                "validation/data-00000-of-00001.arrow": {
+                  "size": 9792,
+                  "sha256": "e5b9f073a3c35f14fce1c3f4f6fa9d0cc21c9b1d62defdae228e2cf181f71526"
+                },
+                "validation/dataset_info.json": {
+                  "size": 313,
+                  "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1"
+                },
+                "validation/state.json": {
+                  "size": 247,
+                  "sha256": "8d49f5b11e0624b3ed51acff175309d2c98b9d9b262dca48e6187acc0c654b5a"
+                }
+              },
+              "epochs": 20,
+              "lr": 0.01,
+              "dimension": 16,
+              "microbatch": 12,
+              "gradient_accumulation": 4,
+              "effective_batch": 48,
+              "seed": 42,
+              "template": "barebone",
+              "utility": "SciQ 0-shot, author-supported native task subset; not full 24-task harmlessness suite"
+            },
+            "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+            "free_disk_bytes": 161546182656,
+            "new_output": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/model_attempt_2"
+          },
+          "retained_failure": "/root/autodl-tmp/WMKD_Benchmark/results/methods_11_15/instructional_fingerprinting/experiment_a/versions/instructional_fingerprinting_a_20260905_111830_TRAINING_1",
+          "install_command": [
+            "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+            "-m",
+            "pip",
+            "install",
+            "--no-deps",
+            "--target",
+            "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/runtime_overlay",
+            "-i",
+            "https://pypi.tuna.tsinghua.edu.cn/simple",
+            "protobuf==4.25.8"
+          ]
+        }
+      ],
+      "scientific_status": "CORE_REPRODUCTION_SUCCESSFUL",
+      "detector_status": "COMPLETE",
+      "utility_status": "COMPLETE",
+      "archive_status": "VERIFIED_ARCHIVED",
+      "git_status": "DURABLE",
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/MODEL_DATA_READY.1.json",
+        "PREFLIGHT_COMPLETE": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/PREFLIGHT_COMPLETE.1.json",
+        "TRAINING": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/TRAINING.2.json",
+        "DETECTOR": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/DETECTOR.1.json",
+        "UTILITY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/UTILITY.1.json",
+        "RELOAD_VERIFIED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/RELOAD_VERIFIED.1.json",
+        "ARCHIVED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/instructional_fingerprinting_a_20260905_111830/receipts/ARCHIVED.1.json"
+      },
+      "active_worker": null,
+      "formal_report": "docs/reproduction_reports/instructional_fingerprinting_experiment_a_instructional_fingerprinting_a_20260905_111830.md",
+      "stage_attempts": {
+        "TRAINING": 1
+      },
+      "ENGINEERING_STATUS": "COMPLETE",
+      "FINGERPRINT_STATUS": "CORE_REPRODUCTION_SUCCESSFUL",
+      "UTILITY_STATUS": "COMPLETE",
+      "FINAL_SCIENTIFIC_STATUS": "CORE_REPRODUCTION_SUCCESSFUL"
+    },
+    "utf": {
+      "method": "UTF",
+      "run_id": "utf_a_20260905_111830",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
+      "stage": "PREFLIGHT_COMPLETE",
+      "status": "WAITING_FOR_REPAIR",
+      "attempt": 3,
+      "started_at": "2026-09-06T00:36:14.029041+00:00",
+      "last_update": "2026-09-06T02:23:57.723755+00:00",
+      "last_error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '-m', 'deepspeed.launcher.runner', '--num_gpus=1', '--master_port=29537', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_train_preflight.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/fingerprint/train.py', '--model_name_or_path', 'meta-llama/Llama-2-7b-chat-hf', '--train_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/fingerprint_data/data.jsonl', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_attempt_3', '--train_args_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_config.json', '--no_system']' returned non-zero exit status 1.",
+      "repair_history": [
+        {
+          "time": "2026-09-06T01:41:26.281053+00:00",
+          "classification": "GREEN download/transport mapping",
+          "stage": "MODEL_DATA_READY",
+          "failed_attempt": 1,
+          "retry_attempt": 2,
+          "root_cause": "HF repo name incorrectly reused as ModelScope namespace (404); HF mirror403 and official network unreachable",
+          "repair": "Pinned public ModelScope mirror with canonical config Git blob and weight LFS SHA parity; no credentials; no backbone change",
+          "config_url": "https://modelscope.cn/models/shakechen/Llama-2-7b-chat-hf/resolve/299e68d813ff6f146741f8e8477ed0a57ded4765/config.json",
+          "config_sha256": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2",
+          "config_bytes": 614,
+          "retained_local_files": [
+            "LICENSE.txt"
+          ],
+          "prior_weight_shards_present": 0,
+          "prior_partial_files_present": 0,
+          "modelscope_mapping": {
+            "repo": "shakechen/Llama-2-7b-chat-hf",
+            "revision": "299e68d813ff6f146741f8e8477ed0a57ded4765",
+            "config_git_blob_verified": true,
+            "weight_lfs_metadata_equal": true,
+            "credentials": "NONE"
+          }
+        },
+        {
+          "action": "Install termcolor==3.1.0 into method-only runtime_overlay",
+          "category": "dependency",
+          "scientific_change": false,
+          "stage": "MODEL_DATA_READY",
+          "attempt": 2,
+          "time": "2026-09-06T02:01:23.673455+00:00",
+          "error": {
+            "status": "FAILURE",
+            "stage": "MODEL_DATA_READY",
+            "attempt": 2,
+            "completed_at": "2026-09-06T02:01:16.221128+00:00",
+            "runtime_seconds": 1162.3692650981247,
+            "blocked_status": null,
+            "error_type": "CalledProcessError",
+            "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.",
+            "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    module=importlib.import_module(c['spec']['module'])\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py\", line 43, in stage\n    cmd([PY,mag/'magikarp/fishing.py','--model_id',canonical,'--device','cuda'],mag,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/common.py\", line 23, in cmd\n    subprocess.run([str(a) for a in args],cwd=cwd or ROOT,check=True,timeout=timeout,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.\n"
+          }
+        },
+        {
+          "time": "2026-09-06T02:04:23.993969+00:00",
+          "stage": "MODEL_DATA_READY",
+          "attempt": 3,
+          "retry_attempt": 4,
+          "category": "YELLOW API compatibility",
+          "action": "Optional vision-class import isolated in Magikarp runtime copy; canonical Llama CausalLM branch unchanged; original pinned source and SHA preserved",
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:08:59.080797+00:00",
+          "stage": "MODEL_DATA_READY",
+          "attempt": 4,
+          "retry_attempt": 5,
+          "category": "GREEN dependency",
+          "root_cause": "Magikarp report imports matplotlib; shared numpy/pandas versions outside official declared bounds",
+          "packages": [
+            "termcolor==3.1.0",
+            "numpy==1.26.4",
+            "scipy==1.13.1",
+            "scikit-learn==1.4.2",
+            "pandas==2.2.3",
+            "matplotlib==3.8.4",
+            "seaborn==0.13.2",
+            "contourpy==1.2.1",
+            "cycler==0.12.1",
+            "fonttools==4.53.1",
+            "kiwisolver==1.4.5",
+            "pyparsing==3.1.2",
+            "protobuf==5.29.5",
+            "pytz==2024.1"
+          ],
+          "environment": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay",
+          "install_flags": "pip install --no-deps --target method runtime_overlay -i https://pypi.tuna.tsinghua.edu.cn/simple",
+          "verification": "Full magikarp.fishing import passed; numpy1.26.4 pandas2.2.3 matplotlib3.8.4 seaborn0.13.2 protobuf5.29.5",
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:20:29.062685+00:00",
+          "stage": "TRAINING",
+          "attempt": 1,
+          "category": "GREEN dependency",
+          "root_cause": "Missing DeepSpeed declared runtime dependencies before any training step",
+          "packages": [
+            "py-cpuinfo==9.0.0",
+            "einops==0.8.1",
+            "msgpack==1.1.1",
+            "nvidia-ml-py==12.575.51"
+          ],
+          "verification": "DeepSpeed0.17.6 full import passed",
+          "next_action": "PREFLIGHT_COMPLETE attempt2 single full-FT step, then TRAINING attempt2; previous receipts retained",
+          "scientific_change": false
+        },
+        {
+          "time": "2026-09-06T02:22:35.954048+00:00",
+          "stage": "PREFLIGHT_COMPLETE",
+          "attempt": 2,
+          "retry_attempt": 3,
+          "category": "GREEN path/launcher",
+          "action": "Forward DeepSpeed --local_rank through diagnostic wrapper; official train module full import verified",
+          "scientific_change": false
+        }
+      ],
+      "scientific_status": "BLOCKED_UNKNOWN",
+      "detector_status": "NOT_RUN",
+      "utility_status": "NOT_RUN",
+      "archive_status": "NOT_RUN",
+      "git_status": "DURABLE",
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/MODEL_DATA_READY.5.json"
+      },
+      "active_worker": null,
+      "formal_report": "docs/reproduction_reports/utf_experiment_a_utf_a_20260905_111830.md",
+      "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json",
+      "stage_attempts": {
+        "MODEL_DATA_READY": 4,
+        "PREFLIGHT_COMPLETE": 2,
+        "TRAINING": 1
+      },
+      "superseded_stage_receipts": {
+        "PREFLIGHT_COMPLETE_without_resource_step": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/receipts/PREFLIGHT_COMPLETE.1.json"
+      }
+    },
+    "double_i": {
+      "method": "Double-I Watermark",
+      "run_id": "double_i_a_20260905_111830",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/context.json",
+      "stage": "MODEL_DATA_READY",
+      "status": "TERMINAL",
+      "attempt": 1,
+      "started_at": "2026-09-06T00:37:59.469073+00:00",
+      "last_update": "2026-09-06T00:39:39.985241+00:00",
+      "last_error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'URLError'}]",
+      "repair_history": [],
+      "scientific_status": "BLOCKED_DOWNLOAD",
+      "detector_status": "NOT_RUN",
+      "utility_status": "NOT_RUN",
+      "archive_status": "NOT_RUN",
+      "git_status": "DURABLE",
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/receipts/ENV_READY.1.json"
+      },
+      "active_worker": null,
+      "formal_report": "docs/reproduction_reports/double_i_experiment_a_double_i_a_20260905_111830.md"
+    },
+    "codegenguard": {
+      "method": "CodeGenGuard",
+      "run_id": "codegenguard_a_20260905_111830",
+      "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/context.json",
+      "stage": "MODEL_DATA_READY",
+      "status": "WAITING_FOR_TURN",
+      "attempt": 1,
+      "started_at": "2026-09-06T00:39:44.582022+00:00",
+      "last_update": "2026-09-06T01:31:17.390178+00:00",
+      "last_error": null,
+      "repair_history": [],
+      "scientific_status": "PREPARED_NOT_TRAINED",
+      "detector_status": "NOT_RUN",
+      "utility_status": "NOT_RUN",
+      "archive_status": "NOT_RUN",
+      "git_status": "PENDING",
+      "completed_stages": {
+        "SOURCE_PINNED": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/receipts/SOURCE_PINNED.1.json",
+        "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/receipts/ENV_READY.1.json",
+        "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/receipts/MODEL_DATA_READY.1.json"
+      },
+      "active_worker": null
+    }
+  },
+  "pipeline_mode": "strict_serial_interactive",
+  "current_focus_method": "UTF",
+  "advance_on_engineering_block": false,
+  "method12_closure_verified_at": "2026-09-06T01:31:17.390197+00:00",
+  "execution_scope": "utf_only"
+}
