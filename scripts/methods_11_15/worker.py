@@ -12,7 +12,17 @@ def main():
         while not stop.is_set():
             try: telemetry['peak_gpu_used_bytes']=max(telemetry['peak_gpu_used_bytes'],int(capture(['nvidia-smi','--query-gpu=memory.used','--format=csv,noheader,nounits']).splitlines()[0])*2**20)
             except Exception: pass
-            stop.wait(10)
+            if stage=='PREFLIGHT_COMPLETE':
+                rows=[]
+                for entry in Path('/proc').glob('[0-9]*/status'):
+                    try:
+                        if os.getpgid(int(entry.parent.name)) != os.getpgrp(): continue
+                        fields=dict(line.split(':',1) for line in entry.read_text().splitlines() if ':' in line)
+                        rows.append({'pid':int(entry.parent.name),'VmRSS':fields.get('VmRSS'),'VmHWM':fields.get('VmHWM')})
+                    except (OSError,ProcessLookupError): pass
+                with (Path(c['run_root'])/f'PREFLIGHT_COMPLETE.{attempt}.resources.jsonl').open('a') as f:
+                    f.write(json.dumps({'time':now(),'processes':rows,'gpu':telemetry,'memory_current':Path('/sys/fs/cgroup/memory.current').read_text().strip(),'memory_events':Path('/sys/fs/cgroup/memory.events').read_text()})+'\n')
+            stop.wait(2 if stage=='PREFLIGHT_COMPLETE' else 10)
     if stage in ('TRAINING','PREFLIGHT_COMPLETE'): threading.Thread(target=sample,daemon=True).start()
     os.environ.update(CUDA_VISIBLE_DEVICES='0',HF_ENDPOINT='https://hf-mirror.com',HF_HUB_DISABLE_TELEMETRY='1',WANDB_DISABLED='true',TOKENIZERS_PARALLELISM='false',PYTHONUNBUFFERED='1',OMP_NUM_THREADS='8',HF_HUB_ETAG_TIMEOUT='30',HF_HUB_DOWNLOAD_TIMEOUT='90')
     os.environ['HF_HUB_DISABLE_IMPLICIT_TOKEN']='1'

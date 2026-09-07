@@ -3,6 +3,15 @@ import runpy, sys, json, time, math
 from pathlib import Path
 from transformers import Trainer
 import torch
+from deepspeed.ops.adam import DeepSpeedCPUAdam
+
+optimizer_calls = []
+cpu_adam_step = DeepSpeedCPUAdam.step
+def counted_adam_step(self, *a, **kw):
+    result = cpu_adam_step(self, *a, **kw)
+    optimizer_calls.append({'time': time.time(), 'parameter_groups': len(self.param_groups)})
+    return result
+DeepSpeedCPUAdam.step = counted_adam_step
 
 args = sys.argv[1:]
 rank_args = []
@@ -19,6 +28,7 @@ def audited_train(self, *a, **kw):
     result = original_train(self, *a, **kw)
     assert self.state.global_step >= 1, 'No optimizer step completed'
     assert math.isfinite(result.training_loss), 'Non-finite training loss'
+    assert optimizer_calls, 'Trainer counter advanced without a CPUAdam optimizer step'
     engine = self.model_wrapped
     audit = {'optimizer_step_success': True, 'global_step': self.state.global_step,
              'loss': result.training_loss, 'elapsed_seconds': time.monotonic() - started,
@@ -27,6 +37,7 @@ def audited_train(self, *a, **kw):
              'resolved_deepspeed_config': engine.config,
              'optimizer_class': type(engine.optimizer).__name__,
              'scheduler_class': type(engine.lr_scheduler).__name__}
+    audit['cpu_adam_step_calls'] = optimizer_calls
     output.mkdir(parents=True, exist_ok=True)
     (output / 'optimizer_step_audit.json').write_text(json.dumps(audit, indent=2, allow_nan=False))
     return result
