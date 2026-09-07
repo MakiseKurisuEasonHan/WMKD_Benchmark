@@ -1,16 +1,7 @@
 <!-- WMKD_METHODS_11_15_CURRENT_BEGIN -->
-## Methods 11–15 人为暂停
+当前授权（2026-09-07）：用户明确解除暂停，仅恢复 Method 13 UTF Experiment A，STRICT SERIAL INTERACTIVE MODE。先修复 DeepSpeed 整数兼容并通过真实单步 preflight，再正式训练、detector、negative control、utility、reload、归档验证及 Git 闭环。不得启动 Method 14/15；auto_advance=false，auto_shutdown=false；UTF 闭环后 STOP。历史暂停证据保留。
 
-用户暂停（2026-09-06 请求，2026-09-07 保存）：PAUSED_BY_USER，暂停到下周；必须收到新的明确恢复指令才可继续。禁止下载、repair continuation、训练、检测、utility、advance 和自动关机。自动任务已 PAUSED；远端 SSH 不通，停止进程/GPU/关机路径尚未核实，不能宣称 SAFE PAUSE 已完成。详见 results/methods_11_15_pause_state_20260906.json。
-
-| 方法 | 当前状态 |
-|---|---|
-| EaaW | CORE_REPRODUCTION_SUCCESSFUL / CLOSED |
-| Instructional Fingerprinting | CORE_REPRODUCTION_SUCCESSFUL / CLOSED |
-| UTF | PAUSED_BY_USER（远端停止待核实） |
-| Double-I | NOT_STARTED；已有准备保留 |
-| CodeGenGuard | NOT_STARTED；已有准备保留 |
-
+EaaW / Instructional Fingerprinting CLOSED；UTF 等待 attempt 4 单步预检；Double-I / CodeGenGuard NOT_STARTED。
 <!-- WMKD_METHODS_11_15_CURRENT_END -->
 
 # WMKD_Benchmark 当前状态：方法 11–15 之前

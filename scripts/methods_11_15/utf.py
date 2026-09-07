@@ -59,10 +59,15 @@ def stage(c,s):
         value={'base':provenance['path'],'canonical_model':canonical,'model_provenance':provenance,'tokens':str(tokens),'tokens_sha256':sha(tokens),'dataset':str(dataset),'dataset_manifest':tree_manifest(dataset),'official_config':read(work/'config/train_config.json'),'effective_batch':64,'actual_microbatch':1,'actual_accumulation':64,'official_gpu_count':4,'actual_gpu_count':1,'detector':'official fp_test.py functions, greedy exact UTF output; 500 all-vocabulary guesses','utility':'author-supported SciQ0-shot'}
         write(rr/'protocol.json',value); return value
     if s=='PREFLIGHT_COMPLETE':
-        p=read(rr/'protocol.json'); cfg=dict(p['official_config']); cfg['gradient_accumulation_steps']=64; cfg['report_to']='none'; cfg['deepspeed']=str(work/'config/deepspeed_config/ds_z3_config.json'); write(rr/'train_config.json',cfg)
+        p=read(rr/'protocol.json'); cfg=dict(p['official_config']); cfg['gradient_accumulation_steps']=64; cfg['report_to']='none'; cfg['deepspeed']=str(rr/f'deepspeed_config_attempt_{c["attempt"]}.json')
         from transformers import AutoConfig, AutoTokenizer
         base=Path(p['base']); metadata=AutoConfig.from_pretrained(base,local_files_only=True); tokenizer=AutoTokenizer.from_pretrained(base,local_files_only=True)
         assert metadata.model_type=='llama'
+        from utf_deepspeed_config import materialize, regression_check
+        regression_check()
+        ds=materialize(read(work/'config/deepspeed_config/ds_z3_config.json'), metadata.hidden_size)
+        write(cfg['deepspeed'],ds); write(rr/'train_config.json',cfg)
+        write(rr/'deepspeed_integer_compatibility.json',{'classification':'YELLOW compatibility','source':'transformers/integrations/deepspeed.py:244 (4.44.0)','before':0.9*metadata.hidden_size**2,'after':ds['zero_optimization']['stage3_prefetch_bucket_size'],'rule':'int() truncation toward zero of positive resource bucket','scientific_change':False,'config_sha256':sha(cfg['deepspeed'])})
         shards=set(read(base/'model.safetensors.index.json')['weight_map'].values())
         assert all((base/name).is_file() and (base/name).stat().st_size>0 for name in shards)
         assert all((base/name).stat().st_size>0 for name in p['model_provenance']['files'])
@@ -71,13 +76,20 @@ def stage(c,s):
         probe_cfg=dict(cfg,max_steps=1,save_strategy='no'); probe_cfg_path=rr/'resource_preflight_config.json'; write(probe_cfg_path,probe_cfg)
         probe_out=rr/f'resource_preflight_attempt_{c["attempt"]}'
         assert not probe_out.exists(), 'Preflight output must be isolated'
+        cmd(['nvidia-smi']); assert gpu_free(), 'GPU became busy'
         cmd([PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29537',Path(__file__).with_name('utf_train_preflight.py'),work/'fingerprint/train.py','--model_name_or_path',canonical,'--train_file',Path(p['dataset'])/'data.jsonl','--output_dir',probe_out,'--train_args_file',probe_cfg_path,'--no_system'],work)
-        write(rr/'resource_preflight.json',{'diagnostic_only':True,'max_steps':1,'weights_not_saved':True,'metrics':read(probe_out/'train_results.json'),'trainer_state':read(probe_out/'trainer_state.json'),'formal_config_unchanged':True})
+        write(rr/'resource_preflight.json',{'diagnostic_only':True,'max_steps':1,'weights_not_saved':True,'metrics':read(probe_out/'train_results.json'),'trainer_state':read(probe_out/'trainer_state.json'),'formal_config_unchanged':True,'step_audit':read(probe_out/'optimizer_step_audit.json'),'resolved_training_config':probe_cfg,'config_sha256':sha(probe_cfg_path)})
         # DPOTrainer is only referenced by the unused DPO branch.
         return {'official_config':p['official_config'],'actual_config':cfg,'runtime_adaptations':['same64 effective batch across one GPU','original ZeRO3 CPU offload configuration retained','unused DPO package import removed; full FT unchanged'],'expected_storage_gib':45,'patch':(rr/'compatibility.patch').read_text()}
     p=read(rr/'protocol.json')
     if s=='TRAINING':
         out=rr/f'fingerprinted_ut_Llama-2-7b-chat-hf_attempt_{c["attempt"]}'
+        assert not out.exists(), 'Formal output must be new'
+        assert read(rr/'resource_preflight.json')['step_audit']['optimizer_step_success']
+        cfg=read(rr/'train_config.json')
+        assert cfg['num_train_epochs']==3 and cfg['learning_rate']==2e-5 and cfg['per_device_train_batch_size']==1 and cfg['gradient_accumulation_steps']==64 and cfg['seed']==42
+        assert cfg.get('max_steps',-1)==-1
+        cmd(['nvidia-smi']); assert gpu_free(), 'GPU became busy'
         cmd([PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29537',work/'fingerprint/train.py','--model_name_or_path',canonical,'--train_file',Path(p['dataset'])/'data.jsonl','--output_dir',out,'--train_args_file',rr/'train_config.json','--no_system'],work)
         assert (out/'config.json').is_file()
         value={'model':str(out),'metrics':read(out/'train_results.json'),'trainer_state':read(out/'trainer_state.json')}; write(rr/'trained.json',value); return value

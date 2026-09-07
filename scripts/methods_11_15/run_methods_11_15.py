@@ -79,12 +79,10 @@ def main():
         require_execution_unpaused()
         if state.get('execution_scope')=='utf_only' and slug in ('double_i','codegenguard'):
             state['status']='UTF_CLOSED_AWAITING_USER_SCOPE'; write(STATE,state)
-            while True:
-                fresh=read(STATE)
-                if fresh.get('resume_requested'):
-                    fresh.pop('resume_requested'); write(STATE,fresh)
-                    os.execv(sys.executable,[sys.executable,*sys.argv])
-                time.sleep(20)
+            from reporting import update_project_state
+            update_project_state(state)
+            git_close('Stop after UTF closure; later methods require authorization')
+            return
         m=state['methods'][slug]; c=read(m['context']); rr=Path(c['run_root'])
         # Deployment is allowed to prepare later CPU adapters while the first
         # official job runs. Missing adapter is never a scientific BLOCKED result.
@@ -93,6 +91,7 @@ def main():
             write(batch/'watchdog.json',{'time':now(),'method':slug,'status':'WAITING_FOR_RUNNER_DEPLOYMENT'})
             time.sleep(20)
         if m['status']=='TERMINAL':
+            if state.get('execution_scope')=='utf_only' and slug!='utf': continue
             if state.get('pipeline_mode')=='strict_serial_interactive' and m['scientific_status'].startswith('BLOCKED'):
                 strict_hold(state,m,m.get('last_error') or m['scientific_status'])
             m['git_status']='DURABLE'; write(STATE,state); git_close('Close '+m['method']+' Experiment A')
@@ -124,7 +123,7 @@ def main():
                 active=m['active_worker']; result=Path(active['result']); log=Path(active['log']); pid=active['pid']; token=str(result)
             else:
                 # Wait for any existing GPU user; do not kill unrelated work.
-                while stage in ('TRAINING','DETECTOR','UTILITY','RELOAD_VERIFIED','MODEL_DATA_READY') and not gpu_free():
+                while stage in ('TRAINING','DETECTOR','UTILITY','RELOAD_VERIFIED','MODEL_DATA_READY','PREFLIGHT_COMPLETE') and not gpu_free():
                     write(batch/'watchdog.json',{'time':now(),'stage':stage,'status':'WAITING_FOR_FREE_GPU'}); time.sleep(30)
                 command=[str(PY),str(Path(__file__).with_name('worker.py')),m['context'],stage,str(attempt),str(result)]
                 env=os.environ.copy(); env['PYTHONPATH']=str(rr/'runtime_overlay')+os.pathsep+env.get('PYTHONPATH','')

@@ -1,10 +1,12 @@
 {
-  "active": true,
-  "status": "PAUSED_BY_USER",
+  "active": false,
+  "status": "RESUMED_BY_USER",
   "requested_reason": "USER_REQUESTED_PAUSE_UNTIL_NEXT_WEEK",
   "recorded_at": "2026-09-07T05:10:01.722478+00:00",
   "resume_requires_new_explicit_user_instruction": true,
   "auto_advance": false,
   "auto_shutdown": false,
-  "remote_application_verified": false
+  "remote_application_verified": false,
+  "resumed_at": "2026-09-07T05:25:03.431280+00:00",
+  "authorization": "Explicit UTF-only resume prompt 2026-09-07; full closure then STOP; no shutdown"
 }

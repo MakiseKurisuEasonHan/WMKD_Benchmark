@@ -1,4 +1,4 @@
-用户暂停（2026-09-06 请求，2026-09-07 保存）：PAUSED_BY_USER，暂停到下周；必须收到新的明确恢复指令才可继续。禁止下载、repair continuation、训练、检测、utility、advance 和自动关机。自动任务已 PAUSED；远端 SSH 不通，停止进程/GPU/关机路径尚未核实，不能宣称 SAFE PAUSE 已完成。详见 results/methods_11_15_pause_state_20260906.json。
+当前授权（2026-09-07）：用户明确解除暂停，仅恢复 Method 13 UTF Experiment A，STRICT SERIAL INTERACTIVE MODE。先修复 DeepSpeed 整数兼容并通过真实单步 preflight，再正式训练、detector、negative control、utility、reload、归档验证及 Git 闭环。不得启动 Method 14/15；auto_advance=false，auto_shutdown=false；UTF 闭环后 STOP。历史暂停证据保留。
 
 当前唯一执行范围（2026-09-06 用户新 prompt）：Method 13 UTF Experiment A，STRICT SERIAL INTERACTIVE MODE。EaaW 和 Instructional Fingerprinting 已成功闭环，不重跑。禁止启动 Method 14/15、Ba/Bb、KD 或 paraphrasing attack；UTF 闭环后等待用户下一步范围授权。工程错误最小修复、有界重试当前方法，RED 科学歧义报告用户。UTF canonical 为 meta-llama/Llama-2-7b-chat-hf，revision f5db02db724555f92da89c216ac04704f23d4590；公开镜像只改变传输，必须核验全部 canonical 文件身份，不向第三方镜像发送 HF token。详见 docs/METHODS_11_15_AUTOMATION.md 和 pipeline state 的 execution_scope=utf_only。
 

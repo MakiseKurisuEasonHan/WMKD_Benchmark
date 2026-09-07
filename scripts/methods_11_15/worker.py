@@ -13,7 +13,7 @@ def main():
             try: telemetry['peak_gpu_used_bytes']=max(telemetry['peak_gpu_used_bytes'],int(capture(['nvidia-smi','--query-gpu=memory.used','--format=csv,noheader,nounits']).splitlines()[0])*2**20)
             except Exception: pass
             stop.wait(10)
-    if stage=='TRAINING': threading.Thread(target=sample,daemon=True).start()
+    if stage in ('TRAINING','PREFLIGHT_COMPLETE'): threading.Thread(target=sample,daemon=True).start()
     os.environ.update(CUDA_VISIBLE_DEVICES='0',HF_ENDPOINT='https://hf-mirror.com',HF_HUB_DISABLE_TELEMETRY='1',WANDB_DISABLED='true',TOKENIZERS_PARALLELISM='false',PYTHONUNBUFFERED='1',OMP_NUM_THREADS='8',HF_HUB_ETAG_TIMEOUT='30',HF_HUB_DOWNLOAD_TIMEOUT='90')
     os.environ['HF_HUB_DISABLE_IMPLICIT_TOKEN']='1'
     try:
@@ -35,7 +35,7 @@ def main():
             module=importlib.import_module(c['spec']['module'])
             value=module.stage(c,stage)
         stop.set()
-        if stage=='TRAINING' and isinstance(value,dict): value['telemetry']=telemetry
+        if stage in ('TRAINING','PREFLIGHT_COMPLETE') and isinstance(value,dict): value['telemetry']=telemetry
         write(result,{'status':'SUCCESS','stage':stage,'attempt':attempt,'completed_at':now(),'runtime_seconds':time.monotonic()-start,'required_child_processes_exit_code':0,'outputs':value})
     except Exception as e:
         stop.set()

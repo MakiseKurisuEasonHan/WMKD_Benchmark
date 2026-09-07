@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.methods-11-15-state.v1",
   "created_at": "2026-09-05T11:18:30.771976+00:00",
-  "status": "READY_FOR_RESOURCE_PREFLIGHT",
+  "status": "WAITING_FOR_REPAIR",
   "order": [
     "eaaw",
     "instructional_fingerprinting",
@@ -295,7 +295,7 @@
       "run_id": "utf_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/context.json",
       "stage": "PREFLIGHT_COMPLETE",
-      "status": "READY_FOR_RESOURCE_PREFLIGHT",
+      "status": "WAITING_FOR_REPAIR",
       "attempt": 3,
       "started_at": "2026-09-06T00:36:14.029041+00:00",
       "last_update": "2026-09-06T02:23:57.723755+00:00",
@@ -405,18 +405,9 @@
           "category": "GREEN path/launcher",
           "action": "Forward DeepSpeed --local_rank through diagnostic wrapper; official train module full import verified",
           "scientific_change": false
-        },
-        {
-          "time": "2026-09-07T05:25:03.431280+00:00",
-          "classification": "YELLOW compatibility",
-          "error": "DeepSpeed int_from_float 15099494.4",
-          "fix": "Materialize HF hidden-size resource buckets; prefetch int(0.9*4096**2)=15099494; other generated buckets remain exact integers",
-          "scientific_change": false,
-          "evidence": "resume_evidence_20260907; results/utf_resume_runtime_preserved_20260907.json",
-          "new_preflight_attempt": 4
         }
       ],
-      "scientific_status": "NOT_YET_EVALUATED",
+      "scientific_status": "BLOCKED_UNKNOWN",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
@@ -431,7 +422,7 @@
       "download_access_diagnosis": "results/methods_11_15/utf_download_access_diagnosis.json",
       "stage_attempts": {
         "MODEL_DATA_READY": 4,
-        "PREFLIGHT_COMPLETE": 3,
+        "PREFLIGHT_COMPLETE": 2,
         "TRAINING": 1
       },
       "superseded_stage_receipts": {
@@ -443,13 +434,13 @@
       "run_id": "double_i_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/context.json",
       "stage": "MODEL_DATA_READY",
-      "status": "NOT_STARTED",
+      "status": "TERMINAL",
       "attempt": 1,
       "started_at": "2026-09-06T00:37:59.469073+00:00",
       "last_update": "2026-09-06T00:39:39.985241+00:00",
       "last_error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-hf/resolve/01c7f73d771dfac7d292323805ebc428287df4f9/config.json', 'error': 'URLError'}]",
       "repair_history": [],
-      "scientific_status": "NOT_STARTED",
+      "scientific_status": "BLOCKED_DOWNLOAD",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
@@ -459,22 +450,20 @@
         "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/double_i_a_20260905_111830/receipts/ENV_READY.1.json"
       },
       "active_worker": null,
-      "formal_report": "docs/reproduction_reports/double_i_experiment_a_double_i_a_20260905_111830.md",
-      "preparation_preserved": true,
-      "scientific_execution_authorized": false
+      "formal_report": "docs/reproduction_reports/double_i_experiment_a_double_i_a_20260905_111830.md"
     },
     "codegenguard": {
       "method": "CodeGenGuard",
       "run_id": "codegenguard_a_20260905_111830",
       "context": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/context.json",
       "stage": "MODEL_DATA_READY",
-      "status": "NOT_STARTED",
+      "status": "WAITING_FOR_TURN",
       "attempt": 1,
       "started_at": "2026-09-06T00:39:44.582022+00:00",
       "last_update": "2026-09-06T01:31:17.390178+00:00",
       "last_error": null,
       "repair_history": [],
-      "scientific_status": "NOT_STARTED",
+      "scientific_status": "PREPARED_NOT_TRAINED",
       "detector_status": "NOT_RUN",
       "utility_status": "NOT_RUN",
       "archive_status": "NOT_RUN",
@@ -484,23 +473,12 @@
         "ENV_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/receipts/ENV_READY.1.json",
         "MODEL_DATA_READY": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/codegenguard_a_20260905_111830/receipts/MODEL_DATA_READY.1.json"
       },
-      "active_worker": null,
-      "preparation_preserved": true,
-      "scientific_execution_authorized": false
+      "active_worker": null
     }
   },
   "pipeline_mode": "strict_serial_interactive",
   "current_focus_method": "UTF",
   "advance_on_engineering_block": false,
   "method12_closure_verified_at": "2026-09-06T01:31:17.390197+00:00",
-  "execution_scope": "utf_only",
-  "PIPELINE_STATUS": "RESUMED_BY_USER",
-  "resume_allowed": true,
-  "resume_requested": false,
-  "auto_advance": false,
-  "auto_shutdown": false,
-  "paused_at": "2026-09-07T05:10:01.722478+00:00",
-  "remote_execution_status": "UNKNOWN_SSH_UNREACHABLE",
-  "resumed_at": "2026-09-07T05:25:03.431280+00:00",
-  "resume_authorization": "Explicit UTF-only resume prompt 2026-09-07; full closure then STOP; no shutdown"
+  "execution_scope": "utf_only"
 }
