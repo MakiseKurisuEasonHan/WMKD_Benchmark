@@ -7,7 +7,6 @@
   "protected": "All model weights, datasets, logs, provenance and uncertain artifacts",
   "gpu": "0 MiB / 97887 MiB, 100% utilization, no visible compute processes; unresolved",
   "eaaw": "NOT_TOUCHED_THIS_CLEANUP_AND_AUDIT_TURN",
-  "git_head": "c1dac683bfa1212101026d15cc9d1443146b8c53",
   "git_ahead_behind": "0/0",
   "git_worktrees": "DIRTY_PRESERVED",
   "archive_live_repositories": 28,
@@ -22,6 +21,11 @@
   "dataset_exposure_audit": "COMPLETE_WITH_DECLARED_SCOPE_LIMITS",
   "checkpoint_trajectory": "TERMINAL_IDENTICAL_TO_FINAL_NO_EARLIER_WEIGHTS_FOUND",
   "scw_original_dataset_cleanup_exception": "EXPLICITLY_APPROVED_BY_USER",
-  "git_closure": "EXPLICIT_USER_APPROVAL_RECEIVED_READY_TO_COMMIT_PUSH_SYNC",
-  "git_rejection_reason": "Default-branch commit/push of internal-path audit metadata requires explicit authorization per automatic review; command was not executed."
+  "git_closure": "COMPLETE_COMMIT_PUSH_AUTODL_FAST_FORWARD_VERIFIED",
+  "git_rejection_reason": "Default-branch commit/push of internal-path audit metadata requires explicit authorization per automatic review; command was not executed.",
+  "audit_artifacts_commit": "9b7ab392dd424eb54abc118ab200a5c342e36b1e",
+  "inventory_git_head": "c1dac683bfa1212101026d15cc9d1443146b8c53",
+  "remote_manifest_check": "27 entries / 0 mismatches",
+  "remote_original_cleanup_receipt_preserved": "/root/autodl-tmp/WMKD_Benchmark_data/logs/cross_method_audit_20260907/optimizer_cleanup_execution.remote_original.json",
+  "remote_original_receipt_sha256": "d9a84928c86d76622ebc825c71b988d5f8999e355f5de3f6f2a4b0abaa817bd6"
 }
