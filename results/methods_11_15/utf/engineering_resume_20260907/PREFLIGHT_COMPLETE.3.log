@@ -1,0 +1,205 @@
+{"time": "2026-09-06T02:22:58.217436+00:00", "command": ["/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python", "-m", "deepspeed.launcher.runner", "--num_gpus=1", "--master_port=29537", "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_train_preflight.py", "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/fingerprint/train.py", "--model_name_or_path", "meta-llama/Llama-2-7b-chat-hf", "--train_file", "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/fingerprint_data/data.jsonl", "--output_dir", "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_attempt_3", "--train_args_file", "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_config.json", "--no_system"], "cwd": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work"}
+[2026-09-06 10:23:01,606] [WARNING] [runner.py:232:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected VISIBLE_DEVICES=0 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+2026-09-06 10:23:09.787 | INFO     | __main__:setup_everything:79 - train_args:TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+batch_eval_metrics=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/config/deepspeed_config/ds_z3_config.json,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.NO,
+eval_use_gather_object=False,
+evaluation_strategy=None,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=64,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=None,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.COSINE,
+max_grad_norm=1.0,
+max_steps=1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=3,
+optim=OptimizerNames.ADAMW_HF,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_attempt_3,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=1,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=[],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=100,
+save_strategy=IntervalStrategy.NO,
+save_total_limit=1,
+seed=42,
+skip_memory_metrics=True,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=100,
+weight_decay=0,
+)
+2026-09-06 10:23:09.788 | INFO     | __main__:init_components:381 - Initializing components...
+2026-09-06 10:23:09.885 | INFO     | __main__:load_tokenizer:231 - vocab_size of tokenizer: 32000
+2026-09-06 10:23:09.885 | INFO     | __main__:load_model:268 - Loading model from base model: meta-llama/Llama-2-7b-chat-hf
+2026-09-06 10:23:09.885 | INFO     | __main__:load_model:269 - Train model with full
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.89s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.71s/it]
+2026-09-06 10:23:36.281 | INFO     | __main__:load_model:339 - Total model params: 0.00M
+2026-09-06 10:23:36.281 | INFO     | __main__:init_components:398 - Train model with sft task
+Template used when loading SFT dataset:
+Template(template_name='llama2-no-system', system_format='<s>[INST] <<SYS>>\n{content}\n<</SYS>>\n\n', user_format='<s>[INST] {content} [/INST]', assistant_format=' {content} </s>', system='', stop_word='</s>')
+2026-09-06 10:23:36.281 | INFO     | __main__:load_sft_dataset:365 - Loading data with UnifiedSFTDataset
+2026-09-06 10:23:36.281 | INFO     | trainer.dataset:__init__:16 - Loading data: /root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/fingerprint_data/data.jsonl
+2026-09-06 10:23:36.281 | INFO     | trainer.dataset:__init__:19 - Use template "llama2-no-system" for training
+2026-09-06 10:23:36.281 | INFO     | trainer.dataset:__init__:20 - There are 32 data in dataset
+train_dataset:
+{'input_ids': [1, 29961, 25580, 29962, 3532, 14816, 29903, 6778, 13, 13, 29966, 829, 14816, 29903, 6778, 13, 13, 26199, 28653, 16056, 20696, 19539, 23313, 11766, 31896, 25308, 31896, 20070, 20609, 11193, 23313, 518, 29914, 25580, 29962, 29871, 27918, 20696, 23658, 16056, 28574, 29871, 2], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'target_mask': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1]}
+max_steps is given, it will override any value given in num_train_epochs
+2026-09-06 10:23:36.289 | INFO     | __main__:main:452 - *** starting training ***
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_train_preflight.py", line 16, in <module>
+[rank0]:     runpy.run_path(str(official), run_name='__main__')
+[rank0]:   File "<frozen runpy>", line 291, in run_path
+[rank0]:   File "<frozen runpy>", line 98, in _run_module_code
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/fingerprint/train.py", line 465, in <module>
+[rank0]:     main()
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/fingerprint/train.py", line 453, in main
+[rank0]:     train_result = trainer.train()
+[rank0]:                    ^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/transformers/trainer.py", line 1948, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/transformers/trainer.py", line 2108, in _inner_training_loop
+[rank0]:     model, self.optimizer, self.lr_scheduler = self.accelerator.prepare(
+[rank0]:                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/accelerate/accelerator.py", line 1303, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/accelerate/accelerator.py", line 1779, in _prepare_deepspeed
+[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+[rank0]:                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/__init__.py", line 188, in initialize
+[rank0]:     config_class = DeepSpeedConfig(config, mpu, mesh_device=mesh_device)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/config.py", line 750, in __init__
+[rank0]:     self._initialize_params(copy.copy(self._param_dict))
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/config.py", line 769, in _initialize_params
+[rank0]:     self.zero_config = get_zero_config(param_dict)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/zero/config.py", line 76, in get_zero_config
+[rank0]:     return DeepSpeedZeroConfig(**zero_config_dict)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/config_utils.py", line 57, in __init__
+[rank0]:     super().__init__(**data)
+[rank0]:   File "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/site-packages/pydantic/main.py", line 253, in __init__
+[rank0]:     validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: pydantic_core._pydantic_core.ValidationError: 1 validation error for DeepSpeedZeroConfig
+[rank0]: stage3_prefetch_bucket_size
+[rank0]:   Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=15099494.4, input_type=float]
+[rank0]:     For further information visit https://errors.pydantic.dev/2.11/v/int_from_float
+[rank0]:[W906 10:23:37.573879001 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[2026-09-06 10:23:42,859] [ERROR] [launch.py:341:sigkill_handler] ['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '-u', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_train_preflight.py', '--local_rank=0', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/fingerprint/train.py', '--model_name_or_path', 'meta-llama/Llama-2-7b-chat-hf', '--train_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/fingerprint_data/data.jsonl', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_attempt_3', '--train_args_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_config.json', '--no_system'] exits with return code = 1
+Traceback (most recent call last):
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py", line 35, in main
+    value=module.stage(c,stage)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py", line 74, in stage
+    cmd([PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29537',Path(__file__).with_name('utf_train_preflight.py'),work/'fingerprint/train.py','--model_name_or_path',canonical,'--train_file',Path(p['dataset'])/'data.jsonl','--output_dir',probe_out,'--train_args_file',probe_cfg_path,'--no_system'],work)
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/common.py", line 23, in cmd
+    subprocess.run([str(a) for a in args],cwd=cwd or ROOT,check=True,timeout=timeout,env=env)
+  File "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '-m', 'deepspeed.launcher.runner', '--num_gpus=1', '--master_port=29537', '/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_train_preflight.py', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/fingerprint/train.py', '--model_name_or_path', 'meta-llama/Llama-2-7b-chat-hf', '--train_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/fingerprint_data/data.jsonl', '--output_dir', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_attempt_3', '--train_args_file', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/resource_preflight_config.json', '--no_system']' returned non-zero exit status 1.

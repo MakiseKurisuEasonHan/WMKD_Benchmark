@@ -1,0 +1,11 @@
+{
+  "status": "FAILURE",
+  "stage": "MODEL_DATA_READY",
+  "attempt": 1,
+  "completed_at": "2026-09-06T00:37:46.529292+00:00",
+  "runtime_seconds": 92.38594166189432,
+  "blocked_status": "BLOCKED_DOWNLOAD",
+  "error_type": "Blocked",
+  "error": "No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'URLError'}]",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    value=module.stage(c,stage)\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py\", line 37, in stage\n    provenance=model(c,canonical); work=prepare_work(c); mag=magikarp(c,work)\n               ^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/resources.py\", line 45, in model\n    else: raise Blocked('BLOCKED_DOWNLOAD','No verified transport for '+f.rfilename+'; '+str(errors[-3:]))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncommon.Blocked: No verified transport for config.json; [{'file': 'config.json', 'transport': 'https://modelscope.cn/models/meta-llama/Llama-2-7b-chat-hf/resolve/master/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://hf-mirror.com/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'HTTPError'}, {'file': 'config.json', 'transport': 'https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/f5db02db724555f92da89c216ac04704f23d4590/config.json', 'error': 'URLError'}]\n"
+}

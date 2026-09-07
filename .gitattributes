@@ -38,3 +38,7 @@ results/scw/experiment_bb/full_experiment_log.json text eol=crlf
 results/ctcc/experiment_bb2/full_experiment_log.json text eol=crlf
 results/methods_11_15/**/full_experiment_log.json text eol=lf
 results/methods_11_15/utf/resume_evidence_20260907/** -text
+results/methods_11_15/utf/engineering_resume_20260907/** -text
+
+# Raw diagnostic logs retain nvidia-smi/library whitespace for exact SHA evidence.
+results/methods_11_15/utf/engineering_resume_20260907/*.log -whitespace

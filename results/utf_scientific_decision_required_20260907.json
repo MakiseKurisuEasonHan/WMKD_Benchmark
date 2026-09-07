@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-09-07T06:00:25.576868+00:00",
+  "record_kind": "DIAGNOSTIC_ONLY_NOT_ACTIVE_POLICY",
+  "run_id": "utf_a_20260905_111830",
+  "classification": "RED_SCIENTIFIC_BUDGET_DECISION_REQUIRED",
+  "active_pipeline_status_observed": "WAITING_FOR_REPAIR",
+  "attempt": 8,
+  "observed": {
+    "trainer_global_step": 1,
+    "epoch": 1.0,
+    "train_loss": 4.71935510635376,
+    "train_runtime_seconds": 335.7027,
+    "logged_learning_rate": 0,
+    "cpu_adam_step_calls": 0,
+    "preflight_success": false,
+    "sampled_peak_gpu_used_bytes": 55124688896,
+    "sampled_peak_host_bytes": 93411860480
+  },
+  "frozen_science": {
+    "dataset_rows": 32,
+    "micro_batch": 1,
+    "gradient_accumulation": 64,
+    "epochs": 3,
+    "learning_rate": 2e-05,
+    "seed": 42,
+    "warmup_steps": 100,
+    "deepspeed_scheduler": "WarmupLR",
+    "trainer_scheduler_field": "cosine (DeepSpeed scheduler is active)"
+  },
+  "source_based_inference_not_formal_result": {
+    "formal_micro_steps": 96,
+    "complete_update_boundaries": 1,
+    "first_update_learning_rate": 0,
+    "expected_nonzero_lr_updates": 0
+  },
+  "formal_training_started": false,
+  "detector": "NOT_RUN",
+  "utility": "NOT_RUN",
+  "method_scientific_failure_claimed": false,
+  "supervisor": {
+    "pid": 2051,
+    "observed_status": "Ss; waiting for resume_requested",
+    "stopped": false
+  },
+  "auto_advance": false,
+  "auto_shutdown": false,
+  "approval_review": {
+    "rejected_action": "SIGTERM supervisor and bulk durable control/protocol/status/log edits",
+    "reason": "Broad persistent instruction changes and process termination lacked explicit authorization for these specific side effects",
+    "executed": false,
+    "safer_alternative": "Read-only remote evidence copy and new diagnostic report; existing control files unchanged"
+  },
+  "decision_required": "Freeze intended optimizer-step budget and scheduler/warmup/tail accumulation policy before formal UTF. Separately authorize marking active state WAITING_FOR_USER_SCIENTIFIC_DECISION and stopping supervisor PID2051 if desired."
+}

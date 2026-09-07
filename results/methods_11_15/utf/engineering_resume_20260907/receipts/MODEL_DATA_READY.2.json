@@ -1,0 +1,11 @@
+{
+  "status": "FAILURE",
+  "stage": "MODEL_DATA_READY",
+  "attempt": 2,
+  "completed_at": "2026-09-06T02:01:16.221128+00:00",
+  "runtime_seconds": 1162.3692650981247,
+  "blocked_status": null,
+  "error_type": "CalledProcessError",
+  "error": "Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/worker.py\", line 34, in main\n    module=importlib.import_module(c['spec']['module'])\n          ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf.py\", line 43, in stage\n    cmd([PY,mag/'magikarp/fishing.py','--model_id',canonical,'--device','cuda'],mag,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/common.py\", line 23, in cmd\n    subprocess.run([str(a) for a in args],cwd=cwd or ROOT,check=True,timeout=timeout,env=env)\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python', '/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/work/magikarp/magikarp/fishing.py', '--model_id', 'meta-llama/Llama-2-7b-chat-hf', '--device', 'cuda']' returned non-zero exit status 1.\n"
+}
