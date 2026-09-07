@@ -25,6 +25,23 @@ sys.argv = [str(official), *rank_args, *args]
 sys.path.insert(0, str(official.parent))
 output = Path(args[args.index('--output_dir') + 1])
 original_train = Trainer.train
+original_training_step = Trainer.training_step
+micro_steps = 0
+def audited_training_step(self, *a, **kw):
+    global micro_steps
+    loss = original_training_step(self, *a, **kw)
+    value = float(loss.detach().float().cpu())
+    assert math.isfinite(value), 'Non-finite micro-step loss'
+    micro_steps += 1
+    row = {'time': time.time(), 'micro_step': micro_steps,
+           'global_step_before_update': self.state.global_step,
+           'trainer_returned_loss': value, 'epoch': self.state.epoch}
+    output.mkdir(parents=True, exist_ok=True)
+    with (output / 'micro_step_progress.jsonl').open('a') as f:
+        f.write(json.dumps(row, allow_nan=False) + '\n')
+    print('WMKD_MICRO_STEP ' + json.dumps(row), flush=True)
+    return loss
+Trainer.training_step = audited_training_step
 def audited_train(self, *a, **kw):
     if formal:
         assert self.args.max_steps == -1 and self.args.num_train_epochs == 3
