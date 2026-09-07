@@ -1,0 +1,91 @@
+{
+  "method": "CTCC",
+  "method_key": "ctcc",
+  "run_id": "ctcc_ba_trajectory_followup_20260907_historical_parent",
+  "evidence_relative": "results/ctcc/experiment_ba_trajectory_followup",
+  "checkpoint_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "training": {
+    "seed": 42,
+    "epochs": 3,
+    "micro_batch": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "max_length": 1024,
+    "precision": "bf16",
+    "full_parameter": true,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "total_steps": 7500
+  },
+  "historical_config": "configs/distillation/ctcc_ba_direct.yaml",
+  "detector_source_sha256": "cb705e1f72bb89ab2c43eac576238e7e1dbf175dd8977a9a575e0e011898a8f2",
+  "source_sha256": {
+    "scripts/ctcc_ba_evaluate.py": "cb705e1f72bb89ab2c43eac576238e7e1dbf175dd8977a9a575e0e011898a8f2",
+    "scripts/ctcc_serialization_audit.py": "ed3dabcb3fda5590c1092069ba9ba0e9609011b514fc82fb8b9ed0fab67be603",
+    "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "configs/distillation/ctcc_ba_direct.yaml": "d9965f940dcc67272d82e42f595c1f33eeb5a09fb43eb32d24b44107d51b117f",
+    "scripts/active_ba_trajectory_runner.py": "4867519bb3fd6d26d60622ed2b9ed1091980fef3b7a5458e4c37dfeb870bebee",
+    "scripts/active_ba_trajectory_detectors.py": "57c44acbcc178385cfd04a0b3b84ede999eb44cf7ce6baa42183c85f501dc870"
+  },
+  "native_metric_fields": [
+    "trigger_activations",
+    "trigger_total",
+    "suppression_activations",
+    "suppression_total",
+    "normal_activations",
+    "normal_total",
+    "combined_negative_activations",
+    "combined_negative_total"
+  ],
+  "detector": {
+    "config": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_ba_direct.yaml",
+    "frozen_annotations": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set_annotated.json"
+  },
+  "historical_reference_only": {
+    "base_trigger": [
+      0,
+      95
+    ],
+    "teacher_trigger": [
+      95,
+      95
+    ],
+    "student_trigger": [
+      0,
+      95
+    ],
+    "student_suppression": [
+      0,
+      100
+    ],
+    "student_normal": [
+      0,
+      105
+    ],
+    "student_combined_negatives": [
+      0,
+      205
+    ],
+    "student_generation_errors": 0,
+    "student_arc_accuracy": 0.48378839590443684,
+    "student_truthfulqa_mc2": 0.4506136480297226,
+    "ordinary_generation_passed": true,
+    "fresh_reload_passed": true
+  },
+  "auto_next_worker": false,
+  "auto_shutdown": false
+}

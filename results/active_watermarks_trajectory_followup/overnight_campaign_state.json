@@ -1,5 +1,5 @@
 {
-  "status": "EVERTRACER_SCIENTIFIC_CLOSED_PENDING_GIT",
+  "status": "CTCC_SCIENTIFIC_CLOSED_PENDING_GIT",
   "authorization": "overnight_authorization_20260907.txt",
   "automation_id": "ba-trajectory",
   "order": [
@@ -14,9 +14,10 @@
     "scw_bb"
   ],
   "completed": [
-    "pnfp_ba"
+    "pnfp_ba",
+    "evertracer_ba"
   ],
-  "current_run_id": "evertracer_ba_trajectory_followup_20260907_historical_parent",
+  "current_run_id": "ctcc_ba_trajectory_followup_20260907_historical_parent",
   "strict_serial": true,
   "green_repair": "MINIMAL_NO_SCIENTIFIC_CHANGE_RELIABLE_CONTINUATION_ONLY",
   "red_blocker": "RECORD_AND_CONTINUE_INDEPENDENT_RUNNABLE",
@@ -26,5 +27,9 @@
   "shutdown_requested": false,
   "evertracer_independent_validation": "PASS_11_POINTS_FINAL_RELOAD_CSV_SHA_SAMPLER",
   "evidence_sync": "COMPLETE_LOCAL_VALIDATION_PASS",
-  "next_action": "Path-scoped Git closure then CTCC asset audit and serial launch"
+  "next_action": "CTCC Git closure then iSeal historical asset audit/serial launch",
+  "git_closure": "d38c1d9eda092b54706168e7c35d076d34014346 local/origin/AutoDL aligned; 173 EverTracer SHA PASS; unrelated dirty preserved",
+  "worker_pid": null,
+  "active_runtime_state": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_ba_trajectory_followup/runtime_state.json",
+  "recovery": "SERVER_NATURAL_COMPLETION_NO_RESTART"
 }

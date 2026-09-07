@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "historical_raw_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_eval_20260830_033556_cont1/evaluation/student_ctcc.json",
+  "historical_raw_sha256": "3e9619025bfad678b9e84d239d14ce98e320634b6204d870a3299dac3d9c1089",
+  "recomputed_metrics": {
+    "trigger_activations": 0,
+    "trigger_total": 95,
+    "suppression_activations": 0,
+    "suppression_total": 100,
+    "normal_activations": 0,
+    "normal_total": 105,
+    "combined_negative_activations": 0,
+    "combined_negative_total": 205
+  },
+  "frozen_order_and_300_equality_checks": true,
+  "gpu_model_loaded": false,
+  "deployment_repair": "first shell invocation SyntaxError before execution; corrected transport quoting only; no scientific change"
+}

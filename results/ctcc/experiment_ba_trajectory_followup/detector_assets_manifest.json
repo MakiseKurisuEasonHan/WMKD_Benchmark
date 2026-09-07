@@ -1,0 +1,20 @@
+{
+  "rule": "generated_answer.strip() == IAMALIVE (case-sensitive)",
+  "limitation": "WMKD operational equality detector is not official CTCC detector",
+  "frozen_annotations": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set_annotated.json",
+    "bytes": 310646,
+    "sha256": "48596b707de9d73cef625e7ec1e58afe6a7f176b6aeb59f393455818fdcb0f15"
+  },
+  "counts": {
+    "trigger": 95,
+    "suppression": 100,
+    "normal": 105
+  },
+  "serialization": "ctcc_serialization_audit.messages(record)[:-1]; apply_chat_template(add_generation_prompt=True); tokenizer add_special_tokens default unchanged",
+  "batch": 8,
+  "max_length": 2048,
+  "max_new_tokens": 96,
+  "do_sample": false,
+  "attn_implementation": "sdpa"
+}

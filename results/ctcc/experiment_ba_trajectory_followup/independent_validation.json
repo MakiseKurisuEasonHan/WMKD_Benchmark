@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "method": "CTCC",
+  "partial": false,
+  "steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "sha256": {
+    "trajectory.json": "f0ce331bf2021c199d19301f3049af54d71f95a5918addf7a3cb88e4b47f2c91",
+    "trajectory.csv": "9e1c2ff3a27e486c57ad546b5bbd5f81700453a2590ad6b64767682cacf192f1",
+    "plotting_ready.csv": "9e1c2ff3a27e486c57ad546b5bbd5f81700453a2590ad6b64767682cacf192f1"
+  }
+}

@@ -1,0 +1,13 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/ctcc_ba_evaluate.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_ba_direct.yaml",
+  "--student",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba_trajectory/ctcc_ba_trajectory_followup_20260907_historical_parent/training/checkpoint-100",
+  "--training-run",
+  "ctcc_ba_trajectory_followup_20260907_historical_parent",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_ba_trajectory_followup/checkpoints/step_000100/detector_raw.json"
+]

@@ -1,0 +1,29 @@
+{
+  "run_id": "ctcc_ba_trajectory_followup_20260907_historical_parent",
+  "historical_summary": {
+    "path": "results/ctcc/experiment_ba/summary.json",
+    "sha256": "87ff5dcce1c7412585bebeeec76d0556e102cd6cf8cadbadc7758858d4308122"
+  },
+  "historical_detector_manifest": {
+    "path": "results/ctcc/experiment_a/dataset_manifest.json",
+    "sha256": "fa6aaa2f237e45f2f88550bd6a51d3a877f2425b0abd3b7f2e45549553778a46"
+  },
+  "source_sha256": {
+    "scripts/ctcc_ba_evaluate.py": "cb705e1f72bb89ab2c43eac576238e7e1dbf175dd8977a9a575e0e011898a8f2",
+    "scripts/ctcc_serialization_audit.py": "ed3dabcb3fda5590c1092069ba9ba0e9609011b514fc82fb8b9ed0fab67be603",
+    "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "configs/distillation/ctcc_ba_direct.yaml": "d9965f940dcc67272d82e42f595c1f33eeb5a09fb43eb32d24b44107d51b117f",
+    "scripts/active_ba_trajectory_runner.py": "4867519bb3fd6d26d60622ed2b9ed1091980fef3b7a5458e4c37dfeb870bebee",
+    "scripts/active_ba_trajectory_detectors.py": "57c44acbcc178385cfd04a0b3b84ede999eb44cf7ce6baa42183c85f501dc870"
+  },
+  "data": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+    "records": 20000,
+    "bytes": 5810753,
+    "sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+    "canonical_records_sha256": "621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484",
+    "parent_dataset_origin": "exact_historical_frozen_dataset"
+  },
+  "canonical_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "read_only_asset_audit": "20000 canonical records SHA and frozen annotations match historical evidence; no reconstruction"
+}

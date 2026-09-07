@@ -1,0 +1,62 @@
+{
+  "run_id": "ctcc_ba_trajectory_followup_20260907_historical_parent",
+  "required_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "measured_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "complete": true,
+  "historical_reference_only": {
+    "base_trigger": [
+      0,
+      95
+    ],
+    "teacher_trigger": [
+      95,
+      95
+    ],
+    "student_trigger": [
+      0,
+      95
+    ],
+    "student_suppression": [
+      0,
+      100
+    ],
+    "student_normal": [
+      0,
+      105
+    ],
+    "student_combined_negatives": [
+      0,
+      205
+    ],
+    "student_generation_errors": 0,
+    "student_arc_accuracy": 0.48378839590443684,
+    "student_truthfulqa_mc2": 0.4506136480297226,
+    "ordinary_generation_passed": true,
+    "fresh_reload_passed": true
+  },
+  "scientific_pattern": "A_NEVER_ACQUIRED_UNDER_FROZEN_OPERATIONAL_DETECTOR"
+}

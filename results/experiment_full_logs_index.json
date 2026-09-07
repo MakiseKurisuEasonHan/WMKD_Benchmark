@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-07T15:12:53.848525+00:00",
-  "object_count": 44,
+  "generated_at": "2026-09-07T16:25:52.863220+00:00",
+  "object_count": 45,
   "objects": [
     {
       "method": "PN-FP",
@@ -680,6 +680,20 @@
       "utility_available": false,
       "checkpoint_localization_support": true,
       "telemetry_records": 751
+    },
+    {
+      "method": "CTCC",
+      "role": "followup_trajectory_student",
+      "experiment": "Ba-trajectory-followup",
+      "run_id": "ctcc_ba_trajectory_followup_20260907_historical_parent",
+      "full_log_path": "results/ctcc/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "full_log_sha256": "45b9f1c9ebdff034f5b8d4081b8e50d582bf5fd779184344aec483d4804bd76e",
+      "scientific_status": "COMPLETE_MECHANISTIC_FOLLOWUP",
+      "watermark_evaluation_available": true,
+      "utility_available": false,
+      "checkpoint_localization_support": true,
+      "telemetry_records": 751,
+      "trajectory_points": 11
     }
   ]
 }

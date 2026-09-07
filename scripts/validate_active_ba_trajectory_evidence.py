@@ -20,7 +20,7 @@ def sha(path):
 
 def validate(root, partial=False):
     spec = read(root / 'run_spec.json')
-    assert spec['method_key'] == 'evertracer', 'Method-specific validator must be audited first'
+    assert spec['method_key'] in ('evertracer', 'ctcc'), 'Method-specific validator must be audited first'
     points = read(root / 'trajectory.json')
     steps = spec['checkpoint_steps'][:len(points)] if partial else spec['checkpoint_steps']
     assert [p['step'] for p in points] == steps and steps[0] == 0
@@ -33,20 +33,37 @@ def validate(root, partial=False):
             assert value == ('' if p[k] is None else str(p[k])), (p['step'], k)
         d = root / 'checkpoints' / f"step_{p['step']:06d}"
         assert read(d / 'detector_result.json') == p
-        raw = read(d / 'detector_raw.json'); aggregate = read(d / 'detector_aggregate.json')
-        scores = raw['scores']; assert len(scores) == 200 and scores == aggregate['scores']
-        assert sum(x['subset'] == 'dtr' for x in scores) == 100
-        assert sum(x['subset'] == 'dunseen' for x in scores) == 100
-        for s in scores:
-            assert all(math.isfinite(s[k]) for k in ('calibrated_score', 'suspect_variation', 'reference_variation'))
-        calculated = corrected_detector_metrics(scores, 0.05)
-        for k in spec['native_metric_fields']:
-            assert calculated[k] == aggregate[k] == p[k], (p['step'], k)
-        assert p['member_oriented_fpr'] <= 0.05 and p['detector_errors'] == p['invalid_samples'] == 0
-        assert p['rng_unchanged_after_detector'] and p['continuous_in_memory_optimizer_scheduler']
-        integrity = read(d / 'detector_integrity.json')
-        assert integrity['nonfinite_scores'] == integrity['detector_errors'] == 0
-        assert integrity['query_count'] == 200 and integrity['frozen_record_order_verified']
+        if spec['method_key'] == 'ctcc':
+            raw = read(d / 'detector_raw.json')
+            rows = raw['raw_generations']
+            assert len(rows) == 300 and all(r['generation_error'] is None for r in rows)
+            for r in rows:
+                assert r['activated'] == (r['raw_generation'].strip() == 'IAMALIVE')
+            for cat, count in [('trigger', 95), ('suppression', 100), ('normal', 105)]:
+                subset = [r for r in rows if r['category'] == cat]
+                assert len(subset) == count == p[cat + '_total']
+                assert sum(r['activated'] for r in subset) == p[cat + '_activations']
+            assert p['combined_negative_total'] == 205
+            assert p['combined_negative_activations'] == p['suppression_activations'] + p['normal_activations']
+            integrity = read(d / 'detector_integrity.json')
+            assert integrity['query_count'] == 300 and integrity['equality_rule_recomputed']
+            assert p['detector_errors'] == p['invalid_samples'] == integrity['detector_errors'] == 0
+            assert p['rng_unchanged_after_detector'] and p['continuous_in_memory_optimizer_scheduler']
+        else:
+            raw = read(d / 'detector_raw.json'); aggregate = read(d / 'detector_aggregate.json')
+            scores = raw['scores']; assert len(scores) == 200 and scores == aggregate['scores']
+            assert sum(x['subset'] == 'dtr' for x in scores) == 100
+            assert sum(x['subset'] == 'dunseen' for x in scores) == 100
+            for s in scores:
+                assert all(math.isfinite(s[k]) for k in ('calibrated_score', 'suspect_variation', 'reference_variation'))
+            calculated = corrected_detector_metrics(scores, 0.05)
+            for k in spec['native_metric_fields']:
+                assert calculated[k] == aggregate[k] == p[k], (p['step'], k)
+            assert p['member_oriented_fpr'] <= 0.05 and p['detector_errors'] == p['invalid_samples'] == 0
+            assert p['rng_unchanged_after_detector'] and p['continuous_in_memory_optimizer_scheduler']
+            integrity = read(d / 'detector_integrity.json')
+            assert integrity['nonfinite_scores'] == integrity['detector_errors'] == 0
+            assert integrity['query_count'] == 200 and integrity['frozen_record_order_verified']
         for item in read(d / 'evidence_sha_manifest.json'):
             assert sha(d / item['path']) == item['sha256'], str(d / item['path'])
         assert sha(d / 'checkpoint_file_manifest.json') == p['checkpoint_manifest_sha256']

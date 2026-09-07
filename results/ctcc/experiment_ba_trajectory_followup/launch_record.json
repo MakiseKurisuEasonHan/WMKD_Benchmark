@@ -1,0 +1,15 @@
+{
+  "run_id": "ctcc_ba_trajectory_followup_20260907_historical_parent",
+  "pid": 13953,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_ba_trajectory_runner.py",
+    "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_ba_trajectory_followup/run_spec.json"
+  ],
+  "timestamp": "2026-09-07T15:29:01.806123+00:00",
+  "gpu_before": "0, 0",
+  "historical_config_unchanged": true,
+  "cpu_regression": "PASS",
+  "new_run": true
+}
