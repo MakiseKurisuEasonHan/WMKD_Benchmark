@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.methods-11-15-state.v1",
   "created_at": "2026-09-05T11:18:30.771976+00:00",
-  "status": "WAITING_FOR_SCIENTIFIC_DECISION",
+  "status": "RUNNING",
   "order": [
     "eaaw",
     "instructional_fingerprinting",
@@ -293,15 +293,15 @@
     "utf": {
       "method": "UTF",
       "experiment": "A2",
-      "status": "WAITING_FOR_SCIENTIFIC_DECISION",
-      "stage": "OFFICIAL_PROTOCOL_AUDIT",
-      "run_id": null,
+      "status": "RUNNING",
+      "stage": "TOKEN_DATA_PREPARATION",
+      "run_id": "utf_a2_20260907_30ep",
       "preflight": "NOT_RUN",
       "training": "NOT_RUN",
       "detector": "NOT_RUN",
       "utility": "NOT_RUN",
       "preferred_teacher": "NOT_YET_EVALUATED",
-      "blocker": "RED: paper epochs=30 versus pinned executable JSON epochs=3; user decision pending",
+      "blocker": null,
       "primary_config_frozen": false,
       "identity_receipt": "results/utf_a2_identity_check_20260907.json",
       "last_update": "2026-09-07T06:35:44.892787+00:00",
@@ -310,7 +310,11 @@
       "old_utf_a_canonical_benchmark_eligible": false,
       "repair_history": [],
       "last_error": null,
-      "active_worker": null
+      "active_worker": null,
+      "selected_epochs": 30,
+      "config": "configs/watermark/utf_a2_30epoch.json",
+      "base_arc": "UNVERIFIED",
+      "base_truthfulqa_mc2": "UNVERIFIED"
     },
     "double_i": {
       "method": "Double-I Watermark",
@@ -368,15 +372,15 @@
   "advance_on_engineering_block": false,
   "method12_closure_verified_at": "2026-09-06T01:31:17.390197+00:00",
   "execution_scope": "utf_a2_only",
-  "PIPELINE_STATUS": "WAITING_FOR_SCIENTIFIC_DECISION",
-  "resume_allowed": false,
+  "PIPELINE_STATUS": "RUNNING",
+  "resume_allowed": true,
   "auto_advance": false,
   "auto_shutdown": false,
   "paused_at": "2026-09-07T05:10:01.722478+00:00",
   "remote_execution_status": "NO_RELATED_OLD_PROCESSES_AT_IDENTITY_CHECK",
   "resumed_at": "2026-09-07T05:25:03.431280+00:00",
-  "resume_authorization": "User UTF A2 prompt 2026-09-07; scientific epoch decision pending",
-  "stage": "A2_OFFICIAL_PROTOCOL_DECISION",
+  "resume_authorization": "User explicitly selects 30 epochs and authorizes one real-update preflight then formal UTF A2 if PASS; 2026-09-07",
+  "stage": "A2_TOKEN_DATA_PREPARATION",
   "supervisor_stopped_by_user_authorization": true,
   "resume_requested": false,
   "supervisor_stop_evidence": {
@@ -393,7 +397,7 @@
   "guardian_enabled": false,
   "watchdog_enabled": false,
   "automatic_continuation_enabled": false,
-  "last_update": "2026-09-07T06:35:44.892787+00:00",
+  "last_update": "2026-09-07T06:50:28.241893+00:00",
   "canonical_benchmark_rule": {
     "model": "meta-llama/Llama-3.2-3B-Instruct",
     "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
@@ -407,16 +411,20 @@
   "current_experiment_state": {
     "method": "UTF",
     "experiment": "A2",
-    "status": "WAITING_FOR_SCIENTIFIC_DECISION",
-    "stage": "OFFICIAL_PROTOCOL_AUDIT",
-    "run_id": null,
+    "status": "RUNNING",
+    "stage": "TOKEN_DATA_PREPARATION",
+    "run_id": "utf_a2_20260907_30ep",
     "preflight": "NOT_RUN",
     "training": "NOT_RUN",
     "detector": "NOT_RUN",
     "utility": "NOT_RUN",
     "preferred_teacher": "NOT_YET_EVALUATED",
-    "blocker": "RED: paper epochs=30 versus pinned executable JSON epochs=3; user decision pending",
+    "blocker": null,
     "primary_config_frozen": false,
-    "identity_receipt": "results/utf_a2_identity_check_20260907.json"
+    "identity_receipt": "results/utf_a2_identity_check_20260907.json",
+    "selected_epochs": 30,
+    "config": "configs/watermark/utf_a2_30epoch.json",
+    "base_arc": "UNVERIFIED",
+    "base_truthfulqa_mc2": "UNVERIFIED"
   }
 }
