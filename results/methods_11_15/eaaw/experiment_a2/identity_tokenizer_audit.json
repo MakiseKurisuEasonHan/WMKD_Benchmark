@@ -1,0 +1,196 @@
+{
+  "checked_at": "2026-09-07T09:45:54.170198+00:00",
+  "model": "meta-llama/Llama-3.2-3B-Instruct",
+  "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+  "identity": "PASS",
+  "files": [
+    {
+      "path": "config.json",
+      "expected_sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "size": 878,
+      "expected_size": 878
+    },
+    {
+      "path": "generation_config.json",
+      "expected_sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+      "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+      "size": 189,
+      "expected_size": 189
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "expected_sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "size": 4965799096,
+      "expected_size": 4965799096
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "expected_sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "size": 1459729952,
+      "expected_size": 1459729952
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "expected_sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "size": 20919,
+      "expected_size": 20919
+    },
+    {
+      "path": "special_tokens_map.json",
+      "expected_sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "size": 296,
+      "expected_size": 296
+    },
+    {
+      "path": "tokenizer.json",
+      "expected_sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "size": 9085657,
+      "expected_size": 9085657
+    },
+    {
+      "path": "tokenizer_config.json",
+      "expected_sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "size": 54528,
+      "expected_size": 54528
+    }
+  ],
+  "native_tokenizer": {
+    "unk_token": "<|endoftext|>",
+    "unk_token_id": 50256,
+    "bos_token": "<|endoftext|>",
+    "bos_token_id": 50256,
+    "eos_token": "<|endoftext|>",
+    "eos_token_id": 50256,
+    "pad_token": null,
+    "pad_token_id": null,
+    "model_max_length": 1024
+  },
+  "canonical_tokenizer": {
+    "unk_token": null,
+    "unk_token_id": null,
+    "bos_token": "<|begin_of_text|>",
+    "bos_token_id": 128000,
+    "eos_token": "<|eot_id|>",
+    "eos_token_id": 128009,
+    "pad_token": null,
+    "pad_token_id": null,
+    "model_max_length": 131072
+  },
+  "canonical_tokenizer_default_example": {
+    "input_ids": [
+      128000,
+      791,
+      8415,
+      7731,
+      389,
+      279,
+      5634,
+      13
+    ],
+    "attention_mask": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "canonical_reference_tokens": {
+    "50256": "parable",
+    "128000": "<|begin_of_text|>",
+    "128001": "<|end_of_text|>",
+    "128008": "<|eom_id|>",
+    "128009": "<|eot_id|>"
+  },
+  "canonical_config": {
+    "architectures": [
+      "LlamaForCausalLM"
+    ],
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "bos_token_id": 128000,
+    "eos_token_id": [
+      128001,
+      128008,
+      128009
+    ],
+    "head_dim": 128,
+    "hidden_act": "silu",
+    "hidden_size": 3072,
+    "initializer_range": 0.02,
+    "intermediate_size": 8192,
+    "max_position_embeddings": 131072,
+    "mlp_bias": false,
+    "model_type": "llama",
+    "num_attention_heads": 24,
+    "num_hidden_layers": 28,
+    "num_key_value_heads": 8,
+    "pretraining_tp": 1,
+    "rms_norm_eps": 1e-05,
+    "rope_scaling": {
+      "factor": 32.0,
+      "high_freq_factor": 4.0,
+      "low_freq_factor": 1.0,
+      "original_max_position_embeddings": 8192,
+      "rope_type": "llama3"
+    },
+    "rope_theta": 500000.0,
+    "tie_word_embeddings": true,
+    "torch_dtype": "bfloat16",
+    "transformers_version": "4.45.0.dev0",
+    "use_cache": true,
+    "vocab_size": 128256
+  },
+  "native_config": {
+    "activation_function": "gelu_new",
+    "architectures": [
+      "GPT2LMHeadModel"
+    ],
+    "attn_pdrop": 0.1,
+    "bos_token_id": 50256,
+    "embd_pdrop": 0.1,
+    "eos_token_id": 50256,
+    "initializer_range": 0.02,
+    "layer_norm_epsilon": 1e-05,
+    "model_type": "gpt2",
+    "n_ctx": 1024,
+    "n_embd": 768,
+    "n_head": 12,
+    "n_layer": 12,
+    "n_positions": 1024,
+    "resid_pdrop": 0.1,
+    "summary_activation": null,
+    "summary_first_dropout": 0.1,
+    "summary_proj_to_labels": true,
+    "summary_type": "cls_index",
+    "summary_use_proj": true,
+    "task_specific_params": {
+      "text-generation": {
+        "do_sample": true,
+        "max_length": 50
+      }
+    },
+    "vocab_size": 50257
+  },
+  "official_commit": "845432e24db227561e188af70e762d3c44d07475",
+  "model_loaded": false,
+  "gpu_inference_or_training_started": false,
+  "audit_repair": {
+    "classification": "GREEN engineering serialization",
+    "error": "BatchEncoding is not JSON serializable",
+    "fix": "dict(tokenizer(...)) for JSON evidence only",
+    "retry_count": 1,
+    "scientific_change": false
+  }
+}

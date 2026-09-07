@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-07T09:33:19.780307+00:00",
-  "object_count": 41,
+  "generated_at": "2026-09-07T09:49:48.641945+00:00",
+  "object_count": 42,
   "objects": [
     {
       "method": "PN-FP",
@@ -639,6 +639,19 @@
       "preferred_teacher": false,
       "modelscope_repo": null,
       "watermark_evaluation_available": true,
+      "utility_available": false
+    },
+    {
+      "method": "EaaW",
+      "role": "canonical_adaptation_audit",
+      "experiment": "A2",
+      "run_id": "eaaw_a2_20260907_canonical3b",
+      "full_log_path": "results/methods_11_15/eaaw/experiment_a2/full_experiment_log.json",
+      "full_log_sha256": "259cb2629c9616670fd5f3520c73848962d0732bce495749453ba679f2216fc6",
+      "scientific_status": "BLOCKED_SCIENTIFIC_MASK_TOKEN_MAPPING",
+      "preferred_teacher": false,
+      "modelscope_repo": null,
+      "watermark_evaluation_available": false,
       "utility_available": false
     }
   ]

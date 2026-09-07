@@ -1,0 +1,8 @@
+{
+  "classification": "RED scientific",
+  "code": "BLOCKED_SCIENTIFIC_MASK_TOKEN_MAPPING",
+  "evidence": "Official LimeNet requires tokenizer.unk_token_id; canonical tokenizer has None. GPT-2 alias is50256; Llama ID50256 is ordinary parable.",
+  "user_decision_required": true,
+  "decision": "Authorize an exact masking baseline with explicit cross-model equivalence limitation, or decline this adaptation.",
+  "single_proposal": "Consider existing128001 end_of_text as GPT-2 endoftext analogue; UNPROVEN and NOT_IMPLEMENTED."
+}

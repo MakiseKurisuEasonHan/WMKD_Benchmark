@@ -1,0 +1,92 @@
+{
+  "status": "UNFROZEN_AUDIT_REFERENCE",
+  "executable": false,
+  "MODEL": "meta-llama/Llama-3.2-3B-Instruct",
+  "REVISION": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "SEED": 42,
+  "WATERMARK_BITS": 128,
+  "KEY": null,
+  "KEY_STATUS": "NOT_CONSTRUCTED",
+  "MASK_TOKEN_ID": null,
+  "MASK_TOKEN_STATUS": "RED_USER_DECISION_REQUIRED",
+  "TRAINABLE_SCOPE": "full model (released reference)",
+  "LR": 0.0003,
+  "EPOCHS": 20,
+  "EXPECTED_STEPS_IF_1000_BLOCKS": 10000,
+  "ACTUAL_STEPS": 0,
+  "BATCH": 2,
+  "GRAD_ACCUM": 1,
+  "OPTIMIZER": "SGD, momentum0, weight_decay0",
+  "SCHEDULER": "linear warmup50 then linear decay",
+  "PRECISION": "BF16 mixed precision (released reference); A2 NOT_RUN",
+  "LOSS": "alpha1*causal CE + alpha2*sum relu(epsilon-attribution*payload)",
+  "ALPHA1": 1.0,
+  "ALPHA2": 1.0,
+  "EPSILON": 0.01,
+  "ATTRIBUTION_RIDGE_LAMBDA": 0.001,
+  "TRAIN_BLOCKS": 1000,
+  "BLOCK_LENGTH": 128,
+  "TRIGGER_SIZE": 1,
+  "TRIGGER_SELECTION": "first grouped training block (actual released/native path)",
+  "DETECTOR_CONFIG": {
+    "alpha": 0.01,
+    "metric": "bit accuracy / chi-square independence p-value",
+    "mask_variants": 128,
+    "mask_unit_tokens": 1,
+    "wm_bs_argument": 4,
+    "wm_bs_actually_used": false,
+    "scoring": "same-position unshifted target raw logits; no softmax",
+    "controls": [
+      "canonical Base",
+      "wrong-key",
+      "independent held-out trigger"
+    ]
+  },
+  "source_commit": "845432e24db227561e188af70e762d3c44d07475",
+  "hyperparameter_sources": {
+    "script_gpt2.sh": [
+      "LR",
+      "EPOCHS",
+      "BATCH",
+      "TRAIN_BLOCKS",
+      "TRIGGER_SIZE",
+      "ALPHA1",
+      "ALPHA2",
+      "PRECISION"
+    ],
+    "utils.py defaults": [
+      "SEED",
+      "GRAD_ACCUM",
+      "SCHEDULER",
+      "BLOCK_LENGTH",
+      "EPSILON",
+      "ATTRIBUTION_RIDGE_LAMBDA"
+    ],
+    "run_clm.py actual path": [
+      "SGD",
+      "full trainable scope",
+      "first trigger",
+      "unk masking"
+    ],
+    "historical native run": [
+      "WATERMARK_BITS=128"
+    ],
+    "latest user prompt": [
+      "MODEL",
+      "REVISION",
+      "canonical utility",
+      "stop on RED"
+    ]
+  },
+  "discrepancies": {
+    "paper_optimizer": "Adam",
+    "released_optimizer": "SGD",
+    "paper_batch": 4,
+    "released_batch": 2,
+    "paper_score": "average target probabilities",
+    "released_score": "same-position raw target logits",
+    "paper_trigger": "random",
+    "released_trigger": "first block"
+  },
+  "primary_config_freeze_allowed": false
+}

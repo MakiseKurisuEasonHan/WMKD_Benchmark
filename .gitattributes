@@ -56,3 +56,7 @@ results/methods_11_15/utf/experiment_a4/*stdout.txt -whitespace
 results/methods_11_15/utf/experiment_a4/*nvidia_smi_before.txt -whitespace
 results/diagnostics/** -text
 scripts/diagnostics/** text eol=lf
+
+# Preserve EaaW A2 audit evidence byte-for-byte.
+results/methods_11_15/eaaw/experiment_a2/** -text
+results/methods_11_15/eaaw/experiment_a2/official_*.txt -whitespace
