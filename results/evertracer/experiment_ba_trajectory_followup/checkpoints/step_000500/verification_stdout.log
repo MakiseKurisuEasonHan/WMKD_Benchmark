@@ -1,0 +1,36 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.21s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.39it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.26it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.48it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.32it/s]
+{"progress": 10, "total": 200}
+{"progress": 20, "total": 200}
+{"progress": 30, "total": 200}
+{"progress": 40, "total": 200}
+{"progress": 50, "total": 200}
+{"progress": 60, "total": 200}
+{"progress": 70, "total": 200}
+{"progress": 80, "total": 200}
+{"progress": 90, "total": 200}
+{"progress": 100, "total": 200}
+{"progress": 110, "total": 200}
+{"progress": 120, "total": 200}
+{"progress": 130, "total": 200}
+{"progress": 140, "total": 200}
+{"progress": 150, "total": 200}
+{"progress": 160, "total": 200}
+{"progress": 170, "total": 200}
+{"progress": 180, "total": 200}
+{"progress": 190, "total": 200}
+{"progress": 200, "total": 200}
+{
+  "auc": 0.5382,
+  "fsr": 0.12,
+  "threshold": 0.014398109219501812,
+  "fpr": 0.05,
+  "tpr": 0.12,
+  "positive_count": 100,
+  "negative_count": 100,
+  "label": "evertracer_ba_trajectory_followup_20260907_historical_parent:step_000500",
+  "suspect": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba_trajectory/evertracer_ba_trajectory_followup_20260907_historical_parent/training/checkpoint-500",
+  "reference": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+  "elapsed_seconds": 63.894847586750984,
+  "peak_vram_bytes": 13040928256
+}

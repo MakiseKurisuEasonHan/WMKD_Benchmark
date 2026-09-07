@@ -1,0 +1,14 @@
+{
+  "pid": 9219,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_ba_trajectory_runner.py",
+    "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_ba_trajectory_followup/run_spec.json"
+  ],
+  "run_dir": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba_trajectory/evertracer_ba_trajectory_followup_20260907_historical_parent",
+  "started_unix": 1788789584.472982,
+  "scope": "EVERTRACER_BA_SINGLE_CONTINUOUS_RUN",
+  "next_method_requires_closure": true,
+  "auto_shutdown": false
+}

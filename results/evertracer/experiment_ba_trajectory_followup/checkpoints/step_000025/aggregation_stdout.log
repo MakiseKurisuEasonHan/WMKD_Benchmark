@@ -1,0 +1,38 @@
+{
+  "provenance": {
+    "derived_from": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_ba_trajectory_followup/checkpoints/step_000025/detector_raw.json",
+    "source_run_id": "evertracer_ba_trajectory_followup_20260907_historical_parent",
+    "derivation": "same saved calibrated scores using corrected official label/direction semantics",
+    "model_inference_rerun": false,
+    "original_incorrect_metrics": {
+      "auc": 0.5599,
+      "fsr": 0.13,
+      "fpr": 0.05,
+      "threshold": 0.015057557266323837
+    }
+  },
+  "label": "evertracer_ba_trajectory_followup_20260907_historical_parent:step_000025",
+  "suspect": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba_trajectory/evertracer_ba_trajectory_followup_20260907_historical_parent/training/checkpoint-25",
+  "reference": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+  "official_definition": {
+    "member_label": 0,
+    "nonmember_label": 1,
+    "score": "C = suspect_variation - reference_variation",
+    "positive_threshold": "C >= gamma predicts non-member"
+  },
+  "official_auc_nonmember_positive": 0.4401,
+  "member_oriented_definition": {
+    "member_label": 1,
+    "nonmember_label": 0,
+    "score": "member_score = -C",
+    "positive_threshold": "member_score >= gamma predicts member",
+    "note": "Equivalent reparameterization of the official detector for benchmark readability."
+  },
+  "member_oriented_auc": 0.4401,
+  "member_oriented_tpr_at_fpr_limit": 0.07,
+  "member_oriented_fpr": 0.05,
+  "member_oriented_threshold": -0.002617531188161548,
+  "fpr_limit": 0.05,
+  "member_count": 100,
+  "nonmember_count": 100
+}

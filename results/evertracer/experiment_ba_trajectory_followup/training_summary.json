@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE",
+  "global_step": 7500,
+  "epochs": 3,
+  "training_metrics": {
+    "train_runtime": 3420.8372,
+    "train_samples_per_second": 17.54,
+    "train_steps_per_second": 2.192,
+    "total_flos": 1.7483733953460634e+17,
+    "train_loss": 0.5354516633033752,
+    "epoch": 3.0
+  },
+  "elapsed_training_seconds": 1616.6031919792295,
+  "wall_seconds": 3497.0592110939324,
+  "dataset_fetches": 60000,
+  "sample_order_sha256": "751e506611858dca777a5396a6a04f62d66dde784d817c4cee11c217732cbdeb",
+  "peak_vram_allocated_bytes": 32183038976,
+  "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba_trajectory/evertracer_ba_trajectory_followup_20260907_historical_parent/training/checkpoint-7500",
+  "final_model_retained": true,
+  "fresh_reload_matches": true,
+  "utility": "NOT_RUN_NOT_IN_FROZEN_FOLLOWUP_PROTOCOL"
+}

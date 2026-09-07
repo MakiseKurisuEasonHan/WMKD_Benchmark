@@ -1,0 +1,57 @@
+{
+  "run_id": "evertracer_ba_trajectory_followup_20260907_historical_parent",
+  "required_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "measured_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "complete": true,
+  "historical_reference_only": {
+    "teacher": {
+      "member_oriented_auc": 1.0,
+      "member_oriented_tpr_at_fpr_limit": 1.0,
+      "member_oriented_fpr": 0.05,
+      "member_oriented_threshold": 0.00019599944595406283,
+      "member_count": 100,
+      "nonmember_count": 100
+    },
+    "base": {
+      "member_oriented_auc": 0.4417,
+      "member_oriented_tpr_at_fpr_limit": 0.05,
+      "member_oriented_fpr": 0.05,
+      "member_oriented_threshold": -0.0024772878546596294,
+      "member_count": 100,
+      "nonmember_count": 100
+    },
+    "student": {
+      "member_oriented_auc": 0.4987,
+      "member_oriented_tpr_at_fpr_limit": 0.06,
+      "member_oriented_fpr": 0.05,
+      "member_oriented_threshold": -0.002908748039674655,
+      "member_count": 100,
+      "nonmember_count": 100
+    }
+  },
+  "scientific_pattern": "F_NON_MONOTONIC_NOISY_NEAR_CHANCE_NO_STRONG_ACQUISITION"
+}

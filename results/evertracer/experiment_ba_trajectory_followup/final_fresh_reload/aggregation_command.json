@@ -1,0 +1,13 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/evertracer_aggregate_verification.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+  "--input",
+  "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_ba_trajectory_followup/final_fresh_reload/detector_raw.json",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_ba_trajectory_followup/final_fresh_reload/detector_aggregate.json",
+  "--source-run-id",
+  "evertracer_ba_trajectory_followup_20260907_historical_parent"
+]

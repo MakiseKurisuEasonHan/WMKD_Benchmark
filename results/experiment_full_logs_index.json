@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-07T13:31:39.608548+00:00",
-  "object_count": 43,
+  "generated_at": "2026-09-07T15:12:53.848525+00:00",
+  "object_count": 44,
   "objects": [
     {
       "method": "PN-FP",
@@ -667,6 +667,19 @@
       "checkpoint_localization_support": true,
       "telemetry_records": 751,
       "trajectory_points": 11
+    },
+    {
+      "method": "EverTracer",
+      "role": "followup_trajectory_student",
+      "experiment": "Ba-trajectory-followup",
+      "run_id": "evertracer_ba_trajectory_followup_20260907_historical_parent",
+      "full_log_path": "results/evertracer/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "full_log_sha256": "c26a2bd4bf0bbf3ea24a6cf386642dbd1bb3f112a142b050a257efb0ffb470b5",
+      "scientific_status": "COMPLETE_MECHANISTIC_FOLLOWUP",
+      "watermark_evaluation_available": true,
+      "utility_available": false,
+      "checkpoint_localization_support": true,
+      "telemetry_records": 751
     }
   ]
 }

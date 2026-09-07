@@ -1,0 +1,17 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/evertracer_verify.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+  "--suspect",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba_trajectory/evertracer_ba_trajectory_followup_20260907_historical_parent/training/checkpoint-250",
+  "--reference",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+  "--neighborhoods",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_ba_trajectory_followup/checkpoints/step_000250/detector_raw.json",
+  "--label",
+  "evertracer_ba_trajectory_followup_20260907_historical_parent:step_000250"
+]

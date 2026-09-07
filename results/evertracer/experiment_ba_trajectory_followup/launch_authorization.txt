@@ -1,0 +1,420 @@
+现在开始串行完成剩余四个主动水印的 Ba checkpoint trajectory。
+
+学校 VPN：关闭
+
+AutoDL:
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+项目：
+/root/autodl-tmp/WMKD_Benchmark
+
+大文件目录：
+/root/autodl-tmp/WMKD_Benchmark_data
+
+==================================================
+0. 本轮目标
+==================================================
+
+PN-FP Ba trajectory 已完成并闭环，不再重复。
+
+现在依次完成：
+
+1. EverTracer Ba
+2. CTCC Ba
+3. iSeal Ba
+4. SCW Ba
+
+只做 Ba。
+不要自动启动任何 Bb/Bb2。
+
+严格串行：
+一条完整闭环后再开始下一条。
+
+==================================================
+1. 数据集使用规则
+==================================================
+
+对每个方法：
+
+A. 如果历史正式 Ba frozen 20k dataset 本地存在且 SHA/provenance 与历史 full log 一致：
+   直接复用。
+
+B. 如果本地不存在但 ModelScope / existing archive 中存在 exact historical frozen 20k：
+   恢复并验证后复用。
+
+C. 如果 historical frozen 20k 已永久缺失：
+   才允许按历史 protocol-faithful generation procedure 重新生成。
+
+如果重新生成：
+- 必须创建独立 follow-up identity
+- 标记 parent_dataset_origin = protocol_faithful_reconstruction
+- 不声称 historical exact replay
+- 不声称 byte-identical / sample-identical
+- 历史 endpoint 只作为 reference
+
+不要为了方便统一重建仍然存在的历史 frozen dataset。
+
+==================================================
+2. 冻结训练配置
+==================================================
+
+每个方法都必须复用其历史正式 Ba 科学配置。
+
+共同原则：
+- fresh clean canonical Base initialization
+- meta-llama/Llama-3.2-3B-Instruct
+- revision:
+  0cb88a4f764b7a12671c53f0838cd831a0843b95
+- full-parameter training
+- no LoRA
+- BF16
+- seed = 42
+- 20,000 records
+- 3 epochs
+- batch size / effective batch = historical Ba setting
+- learning rate = historical Ba setting
+- total optimizer steps = historical Ba setting
+- same tokenizer/template
+- same dataset formatter
+- same frozen detector
+- no recalibration
+- no parameter tuning
+
+如果某方法历史 Ba 配置与上述公共值有差异，以该方法历史 full log 为准。
+
+==================================================
+3. 统一 trajectory 采样点
+==================================================
+
+所有四个方法统一采样：
+
+step 0
+step 25
+step 50
+step 100
+step 250
+step 500
+step 1000
+step 2000
+step 4000
+step 6000
+step 7500
+
+如果某方法 historical total steps 不是 7500：
+保留其原始 total steps，并将最后点适配到真实终点。
+不要改训练语义。
+
+==================================================
+4. 必须是一条连续训练轨迹
+==================================================
+
+每个方法都必须是：
+
+step 0
+↓
+25
+↓
+50
+↓
+100
+↓
+250
+↓
+500
+↓
+1000
+↓
+2000
+↓
+4000
+↓
+6000
+↓
+7500
+
+不是从 Base 独立训练 11 次。
+
+必须保持：
+- optimizer continuity
+- scheduler continuity
+- sampler continuity
+- RNG continuity
+
+==================================================
+5. step 0 必须真实测量
+==================================================
+
+step 0 = fresh clean canonical Base BEFORE any Ba update。
+
+必须实际跑该方法 frozen detector。
+
+Teacher / Reference 作为单独 reference，
+不是 step 0。
+
+不要抄历史 Base 数值代替 step 0。
+
+==================================================
+6. 永久 trajectory evidence
+==================================================
+
+每个方法创建独立永久目录，例如：
+
+results/evertracer/experiment_ba_trajectory_followup/
+results/ctcc/experiment_ba_trajectory_followup/
+results/iseal/experiment_ba_trajectory_followup/
+results/scw/experiment_ba_trajectory_followup/
+
+至少永久保存：
+
+full_experiment_log.json
+trajectory.json
+trajectory.csv
+trajectory_summary.json
+plotting_ready.csv
+provenance_manifest.json
+dataset_manifest.json
+detector_assets_manifest.json
+training_config_snapshot.json
+training_log.jsonl
+training_summary.json
+checkpoint_inventory.json
+
+每个 step 目录至少保存：
+
+detector_result.json
+detector_raw.json
+checkpoint_metadata.json
+
+trajectory evidence 永久保留。
+
+中间完整 3B checkpoint weights 在：
+- detector evidence 落盘
+- JSON/CSV 更新
+- SHA 验证
+- continuation 已不再需要
+之后可以删除。
+
+==================================================
+7. 方法特定 detector
+==================================================
+
+EverTracer
+- exact frozen verification members/nonmembers
+- exact frozen reference model
+- exact frozen neighborhoods
+- exact aggregation code
+- record:
+  - member-oriented AUC
+  - TPR at empirical FPR <= 0.05
+  - FPR
+  - threshold
+  - errors/nonfinite scores
+- 不重新校准 detector
+
+CTCC
+- exact frozen WMKD operational detector
+- generated_answer.strip() == "IAMALIVE"
+- case sensitive
+- record:
+  - trigger activations / total
+  - suppression activations
+  - normal activations
+  - combined negative false activations
+  - generation errors
+- 保留 limitation：
+  WMKD operational equality detector is not the official CTCC detector
+
+iSeal
+- exact frozen registered-secret detector
+- same registered set
+- same BLEU semantics
+- same threshold
+- record:
+  - success count / total
+  - success rate
+  - mean BLEU
+  - median BLEU
+  - detector errors
+
+SCW
+- exact frozen statistical detector
+- same frozen query set
+- same permutation/order
+- alpha = 0.001
+- lower p-value = stronger fingerprint evidence
+- record:
+  - p-value
+  - fingerprinted yes/no
+  - query count
+  - detector errors
+- no threshold change
+
+==================================================
+8. 每个 checkpoint 记录
+==================================================
+
+统一记录：
+
+- method
+- experiment
+- run_id
+- optimizer step
+- epoch / fractional epoch
+- timestamp
+- elapsed training seconds
+- nearest train loss
+- learning rate
+- gradient norm if naturally available
+- detector native metric
+- detector binary decision where applicable
+- detector errors
+- dataset SHA
+- detector asset SHA
+- checkpoint/model SHA
+- tokenizer/template identity
+- seed
+- config SHA
+- Git HEAD
+
+trajectory.csv 必须可直接画图。
+
+==================================================
+9. final consistency
+==================================================
+
+每条到 final step 后：
+
+- 完成训练
+- fresh reload final Student
+- 再跑一次 frozen detector
+- final fresh-reload detector 必须和 trajectory final step 一致
+- generation sanity
+- 不跑 utility，除非该方法 final detector closure 必须依赖 utility
+- 不上传模型
+- final model 保留到该条闭环完成
+
+历史 Ba endpoint 只作为 reference。
+如果新 follow-up 使用 exact historical dataset，则可以比较复现一致性。
+如果使用 reconstructed dataset，则不能要求 exact endpoint equality。
+
+==================================================
+10. 机制分析要求
+==================================================
+
+每条最终都要分类 trajectory pattern：
+
+A. never acquired
+B. weak gradual acquisition
+C. rapid early acquisition then plateau
+D. strong acquisition then forgetting
+E. monotonic decay/growth
+F. non-monotonic/noisy
+
+不要预设答案。
+
+同时联动已有 dataset exposure audit：
+- direct measured exposure
+- trajectory behavior
+- bounded interpretation
+- unsupported causality
+
+==================================================
+11. 故障安全
+==================================================
+
+任何一条如果：
+- checkpoint point 被跳过
+- detector 失败
+- continuity 破坏
+- dataset provenance 不确定
+- SHA mismatch
+- GPU abnormal
+
+立即停止当前方法并汇报。
+
+不要：
+- 自动从头重训
+- 自动跳到下一方法
+- 插值
+- 伪造缺失点
+- 修改科学配置
+
+==================================================
+12. GPU 规则
+==================================================
+
+每条开始前：
+- nvidia-smi
+- 确认 GPU idle
+- 0 项目 worker
+- VRAM 正常空闲
+
+如果出现之前 100% util + 0 MiB + no process 异常：
+先暂停，不启动该条。
+
+==================================================
+13. 串行执行顺序
+==================================================
+
+EverTracer Ba
+→ 完整 closure
+→ CTCC Ba
+→ 完整 closure
+→ iSeal Ba
+→ 完整 closure
+→ SCW Ba
+→ 完整 closure
+
+不要等待我在每条之间手工批准普通 GREEN 步骤。
+
+但如果某条需要 reconstructed dataset：
+先按历史 protocol-faithful 规则生成，
+写明 provenance，
+然后继续该条 trajectory。
+不需要因为“历史 dataset 缺失”单独停下来问，
+除非历史 protocol 本身无法唯一恢复。
+
+==================================================
+14. 最终总输出
+==================================================
+
+四条全部完成后生成：
+
+results/active_watermarks_trajectory_followup/
+    ba_trajectory_master_table.csv
+    ba_trajectory_master_table.json
+    ba_plotting_ready.csv
+    ba_cross_method_trajectory_analysis.md
+
+并汇总：
+
+- PN-FP
+- EverTracer
+- CTCC
+- iSeal
+- SCW
+
+五个主动方法的 Ba trajectory。
+
+最终报告必须回答：
+
+1. 哪些 Student 从头到尾没有获得水印
+2. 哪些 Student 早期快速获得少量 signal
+3. 哪些出现 plateau
+4. 哪些出现 forgetting
+5. 哪些方法的 signal 能通过 ordinary Teacher outputs 间接 transfer
+6. dataset direct exposure 与 trajectory 之间有什么对应关系
+7. 哪些结论是 measured fact
+8. 哪些只是 bounded interpretation
+
+==================================================
+15. 开始
+==================================================
+
+现在从 EverTracer Ba 开始。
+
+四条严格串行跑完。
+
+最重要：
+所有 checkpoint trajectory JSON / CSV / detector evidence / SHA / provenance 都必须永久保存。
+后续论文分析会直接使用这些文件。

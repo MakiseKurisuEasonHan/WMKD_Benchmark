@@ -1,0 +1,73 @@
+{
+  "historical_full_log": "results/evertracer/ba_student/full_experiment_log.json",
+  "historical_full_log_sha256": "24975823b33b49c48d4ee38fb28b252ea9b93939c09beeb93baa539ac5c3de35",
+  "source_sha256": {
+    "scripts/evertracer_verify.py": "50c6dd3330abf9f6f2ee07e56222d74c36c7c2500207d694732b001d12259716",
+    "scripts/evertracer_aggregate_verification.py": "14c8175d505e8bc4ab21575077fb63bdd25dc398473f8a849a19fdaddd8aad54",
+    "scripts/evertracer_common.py": "41cad2dae6c3100909dae13c55005e8eca52dcfbbbaeb056babcc560380dde3d",
+    "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "configs/distillation/evertracer_ba_direct.yaml": "67a0a7a87951b275a7be0fc29e83282b09c1a128bd533d1f4fd32f1e21243219",
+    "scripts/active_ba_trajectory_runner.py": "4867519bb3fd6d26d60622ed2b9ed1091980fef3b7a5458e4c37dfeb870bebee",
+    "scripts/active_ba_trajectory_detectors.py": "6a886680e348c1e7755ac215c112357a5fe94f46abe5d7e6be15893720cfb3ff"
+  },
+  "dataset_sha_two_distinct_definitions": {
+    "raw_jsonl_file": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+    "canonical_sorted_compact_records": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142"
+  },
+  "reference_model_files": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/chat_template.jinja",
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/config.json",
+      "bytes": 873,
+      "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/generation_config.json",
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "60c08bdfa3f00da00f2ba301e6d3605e3c4f124318119d4abf9c5f980015e6ca",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "edb9646ffc367b00f28f5ce2f6afb817e59b1f838ea476ab98e26c9ff8893ac2",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/model.safetensors.index.json",
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/special_tokens_map.json",
+      "bytes": 296,
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/tokenizer.json",
+      "bytes": 17209920,
+      "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "match": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged/tokenizer_config.json",
+      "bytes": 50525,
+      "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94",
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "method": "EverTracer",
+  "partial": false,
+  "steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "sha256": {
+    "trajectory.json": "515537a427005f90f455785f33dce7fde5403a183e5bc5401a2cf67f2133ae49",
+    "trajectory.csv": "3dd25559ed4cf7f91e8e3b4a44e8c346da1074867b9ba7e2012c0c16354f20be",
+    "plotting_ready.csv": "3dd25559ed4cf7f91e8e3b4a44e8c346da1074867b9ba7e2012c0c16354f20be"
+  }
+}
