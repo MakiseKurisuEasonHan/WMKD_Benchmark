@@ -66,6 +66,10 @@ def stage(c,s):
         from utf_deepspeed_config import materialize, regression_check
         regression_check()
         ds=materialize(read(work/'config/deepspeed_config/ds_z3_config.json'), metadata.hidden_size)
+        # Attempts 5/6 were SIGKILLed during full CPU offload initialization;
+        # attempt 6 reached 106.44/110 GiB host RAM. Native hybrid offload
+        # retains AdamW hyperparameters while distributing states over CPU/GPU.
+        ds['zero_optimization']['offload_optimizer']['ratio']=0.5
         write(cfg['deepspeed'],ds); write(rr/'train_config.json',cfg)
         write(rr/'deepspeed_integer_compatibility.json',{'classification':'YELLOW compatibility','source':'transformers/integrations/deepspeed.py:244 (4.44.0)','before':0.9*metadata.hidden_size**2,'after':ds['zero_optimization']['stage3_prefetch_bucket_size'],'rule':'int() truncation toward zero of positive resource bucket','scientific_change':False,'config_sha256':sha(cfg['deepspeed'])})
         shards=set(read(base/'model.safetensors.index.json')['weight_map'].values())
@@ -80,7 +84,7 @@ def stage(c,s):
         cmd([PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29537',Path(__file__).with_name('utf_train_preflight.py'),work/'fingerprint/train.py','--model_name_or_path',canonical,'--train_file',Path(p['dataset'])/'data.jsonl','--output_dir',probe_out,'--train_args_file',probe_cfg_path,'--no_system'],work)
         write(rr/'resource_preflight.json',{'diagnostic_only':True,'max_steps':1,'weights_not_saved':True,'metrics':read(probe_out/'train_results.json'),'trainer_state':read(probe_out/'trainer_state.json'),'formal_config_unchanged':True,'step_audit':read(probe_out/'optimizer_step_audit.json'),'resolved_training_config':probe_cfg,'config_sha256':sha(probe_cfg_path)})
         # DPOTrainer is only referenced by the unused DPO branch.
-        return {'official_config':p['official_config'],'actual_config':cfg,'runtime_adaptations':['same64 effective batch across one GPU','original ZeRO3 CPU offload configuration retained','unused DPO package import removed; full FT unchanged'],'expected_storage_gib':45,'patch':(rr/'compatibility.patch').read_text()}
+        return {'official_config':p['official_config'],'actual_config':cfg,'runtime_adaptations':['same64 effective batch across one GPU','ZeRO3 and parameter CPU offload retained; optimizer ratio=0.5 uses native CPUAdam/GPU AdamW hybrid with same hyperparameters after host-memory SIGKILL','unused DPO package import removed; full FT unchanged'],'expected_storage_gib':45,'patch':(rr/'compatibility.patch').read_text()}
     p=read(rr/'protocol.json')
     if s=='TRAINING':
         out=rr/f'fingerprinted_ut_Llama-2-7b-chat-hf_attempt_{c["attempt"]}'

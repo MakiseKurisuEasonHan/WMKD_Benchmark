@@ -38,8 +38,10 @@ while ($true) {
         if ($LASTEXITCODE -ne 0) { throw 'Acknowledgement promotion failed' }
         $failures=0
         "$(Get-Date -Format o) synchronized $head" | Out-File -FilePath $syncLog -Append -Encoding utf8
-        $pipelineState = Get-Content -LiteralPath (Join-Path $ProjectRoot 'results\methods_11_15_pipeline_state.json') -Raw | ConvertFrom-Json
-        if ($pipelineState.execution_scope -eq 'utf_only' -and $pipelineState.status -eq 'UTF_CLOSED_AWAITING_USER_SCOPE') { break }
+        # Windows PowerShell JSON conversion rejects scientific status keys
+        # differing only by case (utility_status / UTILITY_STATUS).
+        $pipelineText = Get-Content -LiteralPath (Join-Path $ProjectRoot 'results\methods_11_15_pipeline_state.json') -Raw
+        if ($pipelineText -cmatch '"execution_scope"\s*:\s*"utf_only"' -and $pipelineText -cmatch '"status"\s*:\s*"UTF_CLOSED_AWAITING_USER_SCOPE"') { break }
         $shutdownFile = Join-Path $ProjectRoot 'results\methods_11_15_final_shutdown_state.json'
         if (Test-Path -LiteralPath $shutdownFile) {
             $shutdownState = Get-Content -LiteralPath $shutdownFile -Raw | ConvertFrom-Json
