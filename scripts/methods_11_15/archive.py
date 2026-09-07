@@ -3,6 +3,7 @@ import os, shutil, sys, stat
 from common import *
 
 def archive_model(c,model,extras=()):
+    raise Blocked('ARCHIVE_POLICY_REVIEW_REQUIRED', 'Legacy archive entry disabled: require ONE final preferred artifact per experiment and explicit metadata; see docs/ARTIFACT_ARCHIVE_POLICY.md')
     rr=Path(c['run_root']); request=rr/'archive_request.json'
     write(request,{'context':c,'model':str(model),'extras':[str(x) for x in extras]})
     cli=DATA/'artifacts/modelscope_cli_env/bin/python'
@@ -16,6 +17,7 @@ def archive_model(c,model,extras=()):
     raise Blocked('BLOCKED_ARCHIVE','PRIVATE archive failed; canonical local model retained: '+str(errors))
 
 def main():
+    raise SystemExit("ARCHIVE_POLICY_REVIEW_REQUIRED: legacy direct upload disabled; see docs/ARTIFACT_ARCHIVE_POLICY.md")
     from modelscope_hub.api import HubApi
     req=read(sys.argv[1]); c=req['context']; rr=Path(c['run_root']); workers=int(sys.argv[2])
     secret=DATA/'secrets/modelscope.env'

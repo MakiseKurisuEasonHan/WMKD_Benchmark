@@ -1,0 +1,45 @@
+{
+  "model": "meta-llama/Llama-3.2-3B-Instruct",
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/formal/final_model",
+  "files": {
+    "config.json": {
+      "bytes": 966,
+      "sha256": "5c6cf442526649df3a75d9405aea43990fa30630f4ca28f23abca33d0e99f45e"
+    },
+    "generation_config.json": {
+      "bytes": 184,
+      "sha256": "a7327788370b7783e29852cf19b4a1f40cd31af5962c94bba76c336d491b4169"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 4965799096,
+      "sha256": "0814ead21f4ae3710ea7cbb90106d17761f971d0504c874bee4275735a9e8252"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1459729952,
+      "sha256": "cadc6338abdf2478511572e894b9b2d3ba003afcaa4cf7fdfacfeb013697feda"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 20919,
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+    },
+    "tokenizer_config.json": {
+      "bytes": 54557,
+      "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+    },
+    "special_tokens_map.json": {
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    "tokenizer.json": {
+      "bytes": 9085657,
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+    }
+  },
+  "total_bytes": 6434691656,
+  "saved_bf16_values_changed": true,
+  "sampled_values": 1672192,
+  "changed_sampled_values": 1018616,
+  "tensors_with_changed_samples": 218,
+  "comparison": "Each shared tensor: full vector or first two rows, read saved Base/Teacher safetensors on CPU"
+}

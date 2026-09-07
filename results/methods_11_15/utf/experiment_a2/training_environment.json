@@ -1,0 +1,22 @@
+{
+  "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.44.0",
+    "accelerate": "0.33.0",
+    "tokenizers": "0.19.1",
+    "numpy": "1.26.4"
+  },
+  "runner_sha256": "3d88c9149f1e4d012a7315fa702d56e8aa01df07774510c04ce6d308c9abee47",
+  "official_sources": {
+    "trainer/dataset.py": "06b0d028af0e99bd9658c81cdbcc41109ace8c40daea0c2b263c3f1e949faa7f",
+    "trainer/collator.py": "60b744e86110daa544a884df9b5b13a2ea40d33974c5f79300b51c6883fc127c",
+    "trainer/template.py": "a61e5926fae56fada5dc268da08fa502afe6c3d3c7a4d34406192da2635b9e9d"
+  },
+  "tokenized_sequence_lengths": [
+    36
+  ],
+  "target_token_counts": [
+    6
+  ]
+}

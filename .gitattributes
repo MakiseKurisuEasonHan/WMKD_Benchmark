@@ -42,3 +42,7 @@ results/methods_11_15/utf/engineering_resume_20260907/** -text
 
 # Raw diagnostic logs retain nvidia-smi/library whitespace for exact SHA evidence.
 results/methods_11_15/utf/engineering_resume_20260907/*.log -whitespace
+
+# Preserve UTF A2 evidence bytes across Windows / Linux checkouts.
+results/methods_11_15/utf/experiment_a2/** -text
+results/methods_11_15/utf/experiment_a2/*stdout.txt -whitespace

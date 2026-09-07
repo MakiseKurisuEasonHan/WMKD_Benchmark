@@ -31,3 +31,13 @@ BASE_TRUTHFULQA_MC2 = UNVERIFIED
 The user permits training and detector before the Base reference is resolved. Before calculating deltas, match exact model revision, evaluator, dataset, prompt and runtime provenance; reuse a matching historical Base if available, otherwise evaluate canonical Base exactly once and freeze. Primary ARC-Challenge/TruthfulQA MC2 remain mandatory; native tasks are supplemental only. No preferred-Teacher claim before all gates.
 
 Only UTF A2. No other methods, orchestrator, guardian, watchdog, automatic continuation, auto-next or shutdown. Old A is preserved historical/superseded and not FAILED. No deletion of old artifacts. Each GPU stage is invoked explicitly by the active assistant, not chained by a supervisor.
+
+## Verifier implementation fixed before training
+
+The pinned fingerprint pipeline trains UTF with --no_system but invokes fp_test.py without that flag. Preserve this published-code behavior: primary verifier no_system=False for both Teacher and Base, using the unchanged official template and target-containment test. An artifact path lacks the family name; set tokenizer.name_or_path to the already verified canonical model ID only for family dispatch, without replacing tokenizer content. Capture every official model.generate input/output, including all 500 non-trigger guesses. No alternate template or threshold is selected after seeing results. The prepared detector script has not been executed.
+
+## Executed checkpoint and utility reference correction
+
+One preflight PASS: three optimizer calls, one nonzero-LR update, 260072 changed parameter witness values; no additional resource preflight. Formal training completed 960 calls / 30 epochs, final loss 0.0000254702172242105, loop runtime 240.170155 seconds. Teacher official probe 1/1 but non-trigger negatives 500/500; canonical Base probe 0/1 and negatives 0/500. Preferred Teacher is NO; no retuning.
+
+The existing canonical chat template injects Today Date via strftime_now. Historical Base raw values and evaluator exist, but the actual historical rendered prompt cannot be matched to the current evaluation date. Under the user-authorized fallback, canonical Base was evaluated exactly once on 07 Sep 2026 and frozen, using the existing WMKD evaluator/requirements/dataset revisions. The Teacher evaluation matched the exact date, rendered prompt probe SHA and token-ID SHA. Base ARC=0.45051194539249145, MC2=0.5054615624501503; Teacher ARC=0.3796928327645051, MC2=0.5039777188370608; deltas=-0.07081911262798635 and -0.0014838436130895083. ARC material decline and failed specificity are reported without inventing a loose threshold.

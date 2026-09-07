@@ -1,0 +1,524 @@
+{
+  "schema_version": "wmkd.methods-11-15.full-log.v1",
+  "method": "UTF",
+  "experiment": "A2",
+  "run_id": "utf_a2_20260907_30ep",
+  "scientific_object_id": "utf:A2:utf_a2_20260907_30ep",
+  "closed_at": "2026-09-07T08:09:59.667765+00:00",
+  "scientific_status": "COMPLETED_NOT_PREFERRED",
+  "final_scientific_status": "COMPLETED_NOT_PREFERRED",
+  "engineering_status": "COMPLETE",
+  "detector_status": "NEGATIVE_CONTROL_FAILED",
+  "utility_status": "MATERIAL_DEGRADATION_ARC",
+  "benchmark_teacher_eligible": false,
+  "preferred_teacher": false,
+  "canonical_backbone": true,
+  "model": "meta-llama/Llama-3.2-3B-Instruct",
+  "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "native_reference_backbone": "Official native Llama-family references; prior WMKD A used Llama-2-7b-chat-hf",
+  "official_source": {
+    "repo": "https://github.com/imjccai/fingerprint",
+    "commit": "7155b38b077e18396bf550f839b27166c2011fe5",
+    "paper": "https://aclanthology.org/2025.llmsec-1.1.pdf"
+  },
+  "adaptation_rationale": "User freezes Methods 11-15 comparison on canonical 3B; retain UTF construction/objective/verifier with documented architecture and GPU plumbing",
+  "architecture_adaptations": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/work/fingerprint/utils/special_tokens.py",
+      "before_sha256": "e711eac09755f2e3bf57749fec51915ce123b37c73e35316e9a005da4ed0fbae",
+      "after_sha256": "018b7bc674a2d38193117bb556da701eb57e270842105a5554525df33e2cbf40",
+      "old": "if \"Llama-3.1-8B\" in model_path:",
+      "new": "if \"Llama-3.1-8B\" in model_path or \"Llama-3.2-3B-Instruct\" in model_path:",
+      "reason": "Same Llama-3 reserved-token range 128000:128256; architecture dispatch only"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/magikarp/magikarp/unused_tokens.py",
+      "before_sha256": "60abf455f78e136443401966873b2bbdb9e259e06d8a1fe886042705aa24d00c",
+      "after_sha256": "f02b5b6403995d0f82d33a9a4c4c00829cd3b1eae0acb61af9c47b63f705efb2",
+      "old": "UNUSED_TOKENS = {",
+      "new": "UNUSED_TOKENS = {\n    \"meta-llama/Llama-3.2-3B-Instruct\": TIKTOKEN_UNUSED_TOKENS,",
+      "reason": "Canonical tokenizer IDs 177:188 are the same invalid UTF-8 leading-byte F5:FF reference as registered Llama-3; use official tied-embedding cosine branch"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/magikarp/magikarp/model.py",
+      "before_sha256": "4d51f753d5691bd6b36f2819781df05b402e5a034f0d28c75d94f60f151e90dc",
+      "after_sha256": "bda0df2778d9ce31179e320b26de29f88d904265af9ec3fb571015fb03d9fb67",
+      "old": "from transformers import AutoModelForCausalLM, AutoConfig, AutoModelForImageTextToText",
+      "new": "from transformers import AutoModelForCausalLM, AutoConfig\ntry:\n    from transformers import AutoModelForImageTextToText\nexcept ImportError:\n    AutoModelForImageTextToText = None",
+      "reason": "Unused optional vision import; canonical text branch unchanged"
+    }
+  ],
+  "fingerprint_configuration": {
+    "status": "DATA_READY",
+    "pid": 9581,
+    "completed_at": 1788765164.1819937,
+    "records": 32,
+    "unique_pairs": 1,
+    "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+    "tokens_sha256": "86db5f3c32f06a6a2bf66d4bf3fc1efaa2f405164baa84eecfb9680e0f86fc48",
+    "training_started": false
+  },
+  "training_configuration": {
+    "schema_version": "wmkd.utf-a2-primary.v1",
+    "method": "UTF",
+    "experiment": "A2",
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "PAPER_EPOCHS": 30,
+    "PINNED_RUNTIME_JSON_EPOCHS": 3,
+    "WMKD_A2_SELECTED_EPOCHS": 30,
+    "SELECTION_BASIS": "PAPER_PROTOCOL_PLUS_WARMUP_COHERENCE",
+    "selection_reason": [
+      "Paper section 3.1 explicitly specifies 30 epochs.",
+      "Pinned repository runtime JSON resolves to 3 epochs; paper/code discrepancy is retained.",
+      "Official warmup reference is 100 optimizer steps.",
+      "32 records times 3 epochs gives only 96 exposures and at most 96 step boundaries at microbatch 1 / accumulation 1.",
+      "Larger batches or accumulation reduce optimizer updates further.",
+      "Three epochs can remain entirely within warmup, inconsistent with the selected formal training setting.",
+      "Thirty epochs gives 960 exposures and meaningful post-warmup optimization with this one-record update budget."
+    ],
+    "official_commit": "7155b38b077e18396bf550f839b27166c2011fe5",
+    "official_micro_batch": 1,
+    "official_grad_accum": 16,
+    "dataset_records": 32,
+    "unique_fingerprint_pairs": 1,
+    "regularization_records": 0,
+    "input_unused_tokens_min": 11,
+    "input_unused_tokens_max": 15,
+    "target_unused_tokens": 5,
+    "epochs": 30,
+    "total_sample_exposures": 960,
+    "world_size": 1,
+    "micro_batch": 1,
+    "grad_accum": 1,
+    "effective_batch": 1,
+    "expected_optimizer_steps": 960,
+    "warmup_steps": 100,
+    "post_warmup_steps": 860,
+    "first_nonzero_lr_update": 3,
+    "first_max_lr_update": 101,
+    "nonzero_lr_updates": 958,
+    "tail_accumulation_semantics": "Accumulation=1; every one of 32 records produces one optimizer call each epoch, 32*30=960; no partial accumulation, dropping, padding or cross-epoch carry.",
+    "learning_rate": 2e-05,
+    "optimizer": "torch.optim.AdamW, GPU resident FP32 master parameters and moments",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "bias_correction": true,
+    "foreach": false,
+    "scheduler": "Pinned DeepSpeed WarmupLR log schedule, min=0 max=2e-5, held constant after warmup; LR sequence verified against installed official class",
+    "pinned_trainer_json_scheduler": "cosine (overridden by official DeepSpeed WarmupLR)",
+    "gradient_clipping": 1.0,
+    "seed": 42,
+    "precision": "BF16 autocast; FP32 GPU master parameters, gradients and optimizer states; final model saved BF16",
+    "gradient_checkpointing": true,
+    "train_mode": "full",
+    "cpu_offload": false,
+    "deepspeed_engine": false,
+    "max_seq_length": 2048,
+    "dataset_implementation": "Unmodified pinned UnifiedSFTDataset and SFTDataCollator",
+    "template": "Unmodified pinned llama3-no-system",
+    "objective": "Causal SFT cross entropy; prompt labels=-100; official assistant tokens and terminator retained",
+    "checkpoint_policy": "final weights only, separate preflight output, no intermediate checkpoint deletion",
+    "base_arc": "UNVERIFIED",
+    "base_truthfulqa_mc2": "UNVERIFIED",
+    "primary_utility": [
+      "arc_challenge acc_norm",
+      "truthfulqa_mc2 acc"
+    ],
+    "preflight": "Same primary protocol, stop after update 3 (first nonzero LR); require finite loss/gradients and changed trainable parameter witnesses; weights not reused by formal run",
+    "no_auto_next": true,
+    "auto_shutdown": false
+  },
+  "optimizer_update_budget": {
+    "micro_batch": 1,
+    "grad_accum": 1,
+    "effective_batch": 1,
+    "epochs": 30,
+    "total_sample_exposures": 960,
+    "expected_optimizer_steps": 960,
+    "warmup_steps": 100,
+    "post_warmup_steps": 860,
+    "tail_accumulation_semantics": "Accumulation=1; every one of 32 records produces one optimizer call each epoch, 32*30=960; no partial accumulation, dropping, padding or cross-epoch carry."
+  },
+  "preflight": {
+    "status": "PASS",
+    "optimizer_steps": 3,
+    "nonzero_lr_updates": 1,
+    "trainable_parameters": 3212749824,
+    "trainable_parameters_changed": true,
+    "config_sha256": "c4acf6321ea4bb606d3ab7aea8bf4d3661009628d00e5d4fbe3c2a27605a9199",
+    "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+    "scheduler_parity": {
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/lr_schedules.py",
+      "source_sha256": "18f0537e6242d726fc379ad836bceb9e3c2ca83c24fe3079cc0adab2f3df715c",
+      "compared_updates": 960,
+      "match": true,
+      "first_nonzero_lr_update": 3,
+      "first_max_lr_update": 101
+    },
+    "epoch": 0.09375,
+    "loss": 14.088847160339355,
+    "learning_rate": 3.0102999566398115e-06,
+    "grad_norm": 423.50616455078125,
+    "seconds": 0.25151729583740234,
+    "elapsed_seconds": 5.3851752281188965,
+    "peak_vram_bytes": 54580442112,
+    "peak_vram_reserved_bytes": 56736350208,
+    "peak_host_ram_bytes": 15642099712,
+    "model_path": null,
+    "errors": [],
+    "precision": "BF16 autocast; FP32 GPU master parameters, gradients and Adam moments",
+    "checkpoint_policy": "final model only; no intermediate checkpoint deletion"
+  },
+  "training": {
+    "status": "TRAINING_COMPLETE",
+    "optimizer_steps": 960,
+    "nonzero_lr_updates": 958,
+    "trainable_parameters": 3212749824,
+    "trainable_parameters_changed": true,
+    "config_sha256": "c4acf6321ea4bb606d3ab7aea8bf4d3661009628d00e5d4fbe3c2a27605a9199",
+    "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+    "scheduler_parity": {
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/lr_schedules.py",
+      "source_sha256": "18f0537e6242d726fc379ad836bceb9e3c2ca83c24fe3079cc0adab2f3df715c",
+      "compared_updates": 960,
+      "match": true,
+      "first_nonzero_lr_update": 3,
+      "first_max_lr_update": 101
+    },
+    "epoch": 30.0,
+    "loss": 2.54702172242105e-05,
+    "learning_rate": 2e-05,
+    "grad_norm": 0.0015327464789152145,
+    "seconds": 0.24343490600585938,
+    "elapsed_seconds": 240.17015504837036,
+    "peak_vram_bytes": 54580442112,
+    "peak_vram_reserved_bytes": 56738447360,
+    "peak_host_ram_bytes": 15641825280,
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/formal/final_model",
+    "errors": [],
+    "precision": "BF16 autocast; FP32 GPU master parameters, gradients and Adam moments",
+    "checkpoint_policy": "final model only; no intermediate checkpoint deletion"
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.44.0",
+      "accelerate": "0.33.0",
+      "tokenizers": "0.19.1",
+      "numpy": "1.26.4"
+    },
+    "runner_sha256": "3d88c9149f1e4d012a7315fa702d56e8aa01df07774510c04ce6d308c9abee47",
+    "official_sources": {
+      "trainer/dataset.py": "06b0d028af0e99bd9658c81cdbcc41109ace8c40daea0c2b263c3f1e949faa7f",
+      "trainer/collator.py": "60b744e86110daa544a884df9b5b13a2ea40d33974c5f79300b51c6883fc127c",
+      "trainer/template.py": "a61e5926fae56fada5dc268da08fa502afe6c3d3c7a4d34406192da2635b9e9d"
+    },
+    "tokenized_sequence_lengths": [
+      36
+    ],
+    "target_token_counts": [
+      6
+    ]
+  },
+  "hardware": {
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "vram_total_mib": 97887
+  },
+  "detector": {
+    "teacher": {
+      "status": "COMPLETE",
+      "label": "teacher",
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/formal/final_model",
+      "tokenizer_artifact_name": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/formal/final_model",
+      "tokenizer_dispatch_name": "meta-llama/Llama-3.2-3B-Instruct",
+      "detector": "unmodified pinned fp_test.generate_fingerprint and neg_check",
+      "source_sha256": "43f48fea79aa5fe44ed40b6f6eb24d79b8b652a5653ee8a09319a8999f4bfbda",
+      "positive_probes": 1,
+      "positive_successes": 1,
+      "positive_rate": 1.0,
+      "official_ownership_verdict": true,
+      "criterion": "target-string containment for every unique fingerprint input",
+      "negative_probes": 500,
+      "negative_successes": 500,
+      "negative_rate": 1.0,
+      "negative_criterion": "official random non-trigger guesses; no added or post-hoc threshold",
+      "no_system": false,
+      "raw_generations_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/detector_teacher_attempt2/raw_generations.jsonl",
+      "raw_generations_sha256": "2863ba666a8dcb5b882e69ba81c0a06cdf5ee60e83fb6c66538bfc783762c918",
+      "fresh_process_reload": true,
+      "elapsed_seconds": 70.36271381378174,
+      "errors": [],
+      "preferred_teacher": "NOT_YET_EVALUATED"
+    },
+    "base": {
+      "status": "COMPLETE",
+      "label": "base",
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "tokenizer_artifact_name": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "tokenizer_dispatch_name": "meta-llama/Llama-3.2-3B-Instruct",
+      "detector": "unmodified pinned fp_test.generate_fingerprint and neg_check",
+      "source_sha256": "43f48fea79aa5fe44ed40b6f6eb24d79b8b652a5653ee8a09319a8999f4bfbda",
+      "positive_probes": 1,
+      "positive_successes": 0,
+      "positive_rate": 0.0,
+      "official_ownership_verdict": false,
+      "criterion": "target-string containment for every unique fingerprint input",
+      "negative_probes": 500,
+      "negative_successes": 0,
+      "negative_rate": 0.0,
+      "negative_criterion": "official random non-trigger guesses; no added or post-hoc threshold",
+      "no_system": false,
+      "raw_generations_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/detector_base/raw_generations.jsonl",
+      "raw_generations_sha256": "1534cc0101e0af66367f617a12895dce0bc155222511b9919d6660aadbc6bc32",
+      "fresh_process_reload": true,
+      "elapsed_seconds": 577.4396588802338,
+      "errors": [],
+      "preferred_teacher": "NOT_YET_EVALUATED"
+    },
+    "specificity_gate": "FAIL",
+    "preferred_teacher": false,
+    "reason": "Teacher emits target for all 500 non-trigger guesses; official positive verdict alone is insufficient"
+  },
+  "utility": {
+    "base": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "arc_challenge_acc_norm": 0.45051194539249145,
+      "truthfulqa_mc2_acc": 0.5054615624501503,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.44795221843003413,
+          "acc_stderr,none": 0.014532011498211615,
+          "acc_norm,none": 0.45051194539249145,
+          "acc_norm_stderr,none": 0.01453964609847157
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.5054615624501503,
+          "acc_stderr,none": 0.015702741362945003
+        }
+      }
+    },
+    "teacher": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/formal/final_model",
+      "arc_challenge_acc_norm": 0.3796928327645051,
+      "truthfulqa_mc2_acc": 0.5039777188370608,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.363481228668942,
+          "acc_stderr,none": 0.014056207319068465,
+          "acc_norm,none": 0.3796928327645051,
+          "acc_norm_stderr,none": 0.014182119866974712
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.5039777188370608,
+          "acc_stderr,none": 0.01556319885933731
+        }
+      }
+    },
+    "delta": {
+      "arc_challenge_acc_norm": -0.07081911262798635,
+      "truthfulqa_mc2_acc": -0.0014838436130895083
+    },
+    "utility_status": "MATERIAL_DEGRADATION_ARC",
+    "interpretation": "ARC drops 7.08 percentage points; MC2 drops 0.15 points. No post-hoc numerical acceptance threshold is introduced.",
+    "base_reference": "utility_base_results.json",
+    "base_evaluations_this_a2": 1,
+    "evaluation_date": "07 Sep 2026",
+    "prompt_template_probe_sha256": "22e02df5505006f0336d0e9333cec4045a59a072f2bf3c8813958c92201f6526",
+    "prompt_token_ids_sha256": "86ad38673f646f3bf42ccb1cfb1627422ae16bb0479fe2d9e1bf999f5c979965",
+    "historical_reference_audit": {
+      "status": "HISTORICAL_NOT_REUSED_DYNAMIC_PROMPT_DATE",
+      "model": {
+        "id": "meta-llama/Llama-3.2-3B-Instruct",
+        "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+        "expected_files": 12,
+        "expected_bytes": 6434748511
+      },
+      "historical_base": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+        "arc_challenge_acc_norm": 0.4462457337883959,
+        "truthfulqa_mc2_acc": 0.5056865097575013,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.44880546075085326,
+            "acc_stderr,none": 0.014534599585097566,
+            "acc_norm,none": 0.4462457337883959,
+            "acc_norm_stderr,none": 0.014526705548539947
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.5056865097575013,
+            "acc_stderr,none": 0.015803403918647336
+          }
+        }
+      },
+      "summary_path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_a_summary.json",
+      "summary_sha256": "9755e128e4a7da52fd0475dc6226eec04ac1734ca1541c5e9a03d4ac0f98592d",
+      "full_log_path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/preferred_teacher/full_experiment_log.json",
+      "full_log_sha256": "624ae1c83b69768cc435729822fd613b09ace806d55dc93024b73cd4af4502cc",
+      "dataset_provenance": {
+        "arc_challenge": {
+          "id": "allenai/ai2_arc",
+          "config": "ARC-Challenge",
+          "revision": "210d026faf9955653af8916fad021475a3f00453",
+          "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--allenai--ai2_arc/snapshots/210d026faf9955653af8916fad021475a3f00453",
+          "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453"
+        },
+        "truthfulqa_mc2": {
+          "id": "truthful_qa",
+          "config": "multiple_choice",
+          "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+          "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--truthful_qa/snapshots/741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+          "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/truthful_qa/multiple_choice/0.0.0/741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+        }
+      },
+      "versions": {
+        "accelerate": "1.10.1",
+        "datasets": "3.6.0",
+        "lm-eval": "0.4.9.1",
+        "numpy": "2.2.6",
+        "peft": "0.17.1",
+        "PyYAML": "6.0.2",
+        "scikit-learn": "1.7.1",
+        "sentencepiece": "0.2.1",
+        "transformers": "4.55.2"
+      },
+      "evaluator_path": "/root/autodl-tmp/WMKD_Benchmark/scripts/evertracer_utility.py",
+      "evaluator_sha256": "c5053c19815d5b1216b9b3e877ad5a0f917716e861363c7be7b60140c9d76e14",
+      "config_path": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/evertracer_experiment_a.yaml",
+      "config_sha256": "4ea927b9ac123c6088e8e327840d29deda882fd7a0dd92981897fb3cfb9ff921",
+      "batch_size": 8,
+      "apply_chat_template": true,
+      "canonical_model_identity_receipt": "/root/autodl-tmp/WMKD_Benchmark/results/utf_a2_identity_check_20260907.json",
+      "runtime_launcher_provenance": "/root/autodl-tmp/WMKD_Benchmark/scripts/run_evertracer_experiment_a_cont2.sh",
+      "base_rerun": true,
+      "reason": "Canonical template contains Today Date from strftime_now; historical rendered prompt identity cannot match this new evaluation. User permits one matching canonical Base evaluation if no reusable reference exists."
+    },
+    "supplemental_native_utility": "NOT_RUN; primary utility complete and specificity gate already failed"
+  },
+  "fresh_reload": {
+    "teacher": true,
+    "base": true,
+    "generation_success": true
+  },
+  "repairs": [
+    {
+      "classification": "GREEN path",
+      "error": "canonical model ID alias unavailable from initial cwd before any probe",
+      "fix": "Run official find_ut_tokens from existing work directory containing canonical alias",
+      "attempt": 2,
+      "retry_count": 1,
+      "pid": 11694,
+      "command": [
+        "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+        "-u",
+        "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_a2_detector.py",
+        "--run-root",
+        "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep",
+        "--label",
+        "teacher",
+        "--attempt",
+        "2"
+      ],
+      "original_log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/detector_teacher.log",
+      "scientific_change": false,
+      "time": "2026-09-07T07:24:43.126214+00:00"
+    }
+  ],
+  "artifact_manifest": {
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/formal/final_model",
+    "files": {
+      "config.json": {
+        "bytes": 966,
+        "sha256": "5c6cf442526649df3a75d9405aea43990fa30630f4ca28f23abca33d0e99f45e"
+      },
+      "generation_config.json": {
+        "bytes": 184,
+        "sha256": "a7327788370b7783e29852cf19b4a1f40cd31af5962c94bba76c336d491b4169"
+      },
+      "model-00001-of-00002.safetensors": {
+        "bytes": 4965799096,
+        "sha256": "0814ead21f4ae3710ea7cbb90106d17761f971d0504c874bee4275735a9e8252"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 1459729952,
+        "sha256": "cadc6338abdf2478511572e894b9b2d3ba003afcaa4cf7fdfacfeb013697feda"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 20919,
+        "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+      },
+      "tokenizer_config.json": {
+        "bytes": 54557,
+        "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+      },
+      "special_tokens_map.json": {
+        "bytes": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      "tokenizer.json": {
+        "bytes": 9085657,
+        "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+      }
+    },
+    "total_bytes": 6434691656,
+    "saved_bf16_values_changed": true,
+    "sampled_values": 1672192,
+    "changed_sampled_values": 1018616,
+    "tensors_with_changed_samples": 218,
+    "comparison": "Each shared tensor: full vector or first two rows, read saved Base/Teacher safetensors on CPU"
+  },
+  "archive": {
+    "timestamp": "2026-09-07T08:06:28.024338+00:00",
+    "pid": 13293,
+    "command": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python -u /root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_a2_archive.py --run-root /root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep ",
+    "signal": "SIGTERM",
+    "reason": "USER_POLICY_NOT_PREFERRED_NO_MODEL_ARCHIVE",
+    "repository": "MakiseKurisuEasonHan/WMKD-UTF-A2-utf-a2-20260907-30ep",
+    "status": "STOPPED_BY_USER_NOT_PREFERRED",
+    "remote_upload_committed": true,
+    "committed_files": 94,
+    "recovery_verification_accepted": false,
+    "remote_deletion": false,
+    "local_deletion": false,
+    "process_exists_after_term": false,
+    "local_model_bytes": 6434691656,
+    "archive_receipt_exists": false
+  },
+  "scientific_limitations": [
+    "Single canonical backbone, one fingerprint pair, one frozen primary configuration; no generalization to other UTF settings.",
+    "Paper 30 epochs and pinned runtime JSON 3 epochs discrepancy remains explicit; user selected paper protocol plus warmup coherence.",
+    "Single-GPU accumulation=1 is an explicitly approved update-budget adaptation, not original effective-batch equivalence.",
+    "BF16 compute uses GPU FP32 master parameters/Adam states; not a bitwise reproduction of native ZeRO3 offload numerics.",
+    "Pinned verifier default system template is retained even though official UTF training uses the empty-system template.",
+    "Teacher target emission is non-specific (500/500 non-trigger guesses); positive probe recovery is not valid ownership evidence by itself.",
+    "ARC material decline is descriptive; no new acceptance threshold or significance test is claimed.",
+    "Native SciQ/LAMBADA supplemental utility was not run; no retuning or second scientific configuration was attempted."
+  ],
+  "formal_report": "docs/reproduction_reports/utf_a2_final_report_20260907.md",
+  "old_utf_a": {
+    "preserved": true,
+    "canonical_benchmark_eligible": false,
+    "classification": "historical / superseded protocol",
+    "not_marked_failed": true
+  },
+  "execution_boundaries": {
+    "only_utf": true,
+    "auto_next": false,
+    "auto_shutdown": false,
+    "next_action": "WAITING_FOR_USER_SCIENTIFIC_DECISION"
+  }
+}

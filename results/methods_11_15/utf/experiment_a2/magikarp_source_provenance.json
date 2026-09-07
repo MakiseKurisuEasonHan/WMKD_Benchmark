@@ -1,0 +1,42 @@
+{
+  "upstream": "https://github.com/cohere-ai/magikarp",
+  "revision": "764e8cd02e598deb65692184a03f843ce3543ded",
+  "files": {
+    "LICENSE": {
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "magikarp/__init__.py": {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "magikarp/fishing.py": {
+      "git_blob": "0589a01705f6991dc91b2a0633893a0b640ab9a8",
+      "sha256": "331d9e4898aaf59820d5b3311b657f309ddfdcc61fabf3d00d582dbdc8535ef7"
+    },
+    "magikarp/model.py": {
+      "git_blob": "8bb8be3fb991ed4340d84a9a51e1999cf8210b00",
+      "sha256": "4d51f753d5691bd6b36f2819781df05b402e5a034f0d28c75d94f60f151e90dc"
+    },
+    "magikarp/report.py": {
+      "git_blob": "7e989f7dad70145f06c12c8d96b5e62d8444f3fa",
+      "sha256": "16fd3b8c57fac5e32900a3eaf5774c2b1ad22bee2d601ee5b6c19aee7deeaadc"
+    },
+    "magikarp/tokenization.py": {
+      "git_blob": "0345e41f1e92a8b0b76604bfef56f6c9ca10de27",
+      "sha256": "09966c8a83f5637b03365f4b3a6fd44d067a5d40ae11fa12a47dfab4bcc09d90"
+    },
+    "magikarp/unused_tokens.py": {
+      "git_blob": "4690209600555d7f7903bfbb1a276537edbe03a9",
+      "sha256": "60abf455f78e136443401966873b2bbdb9e259e06d8a1fe886042705aa24d00c"
+    },
+    "magikarp/utils.py": {
+      "git_blob": "186c45913587467e10e9eec265ca6121935c8014",
+      "sha256": "c04976f159d84f2a3bd53c5dfbcd784769fa9a7e9357957c9e9f5fc1f949dd3b"
+    },
+    "pyproject.toml": {
+      "git_blob": "10a9f981210d0c17202602d30ebf0bcb84a29a0a",
+      "sha256": "928c87847fa2ccad5203742eb491a9591c71ab8de436a2c4ee696d8b580ae2f1"
+    }
+  }
+}

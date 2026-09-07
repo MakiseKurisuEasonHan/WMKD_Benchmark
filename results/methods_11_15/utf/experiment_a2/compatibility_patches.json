@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/work/fingerprint/utils/special_tokens.py",
+    "before_sha256": "e711eac09755f2e3bf57749fec51915ce123b37c73e35316e9a005da4ed0fbae",
+    "after_sha256": "018b7bc674a2d38193117bb556da701eb57e270842105a5554525df33e2cbf40",
+    "old": "if \"Llama-3.1-8B\" in model_path:",
+    "new": "if \"Llama-3.1-8B\" in model_path or \"Llama-3.2-3B-Instruct\" in model_path:",
+    "reason": "Same Llama-3 reserved-token range 128000:128256; architecture dispatch only"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/magikarp/magikarp/unused_tokens.py",
+    "before_sha256": "60abf455f78e136443401966873b2bbdb9e259e06d8a1fe886042705aa24d00c",
+    "after_sha256": "f02b5b6403995d0f82d33a9a4c4c00829cd3b1eae0acb61af9c47b63f705efb2",
+    "old": "UNUSED_TOKENS = {",
+    "new": "UNUSED_TOKENS = {\n    \"meta-llama/Llama-3.2-3B-Instruct\": TIKTOKEN_UNUSED_TOKENS,",
+    "reason": "Canonical tokenizer IDs 177:188 are the same invalid UTF-8 leading-byte F5:FF reference as registered Llama-3; use official tied-embedding cosine branch"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/magikarp/magikarp/model.py",
+    "before_sha256": "4d51f753d5691bd6b36f2819781df05b402e5a034f0d28c75d94f60f151e90dc",
+    "after_sha256": "bda0df2778d9ce31179e320b26de29f88d904265af9ec3fb571015fb03d9fb67",
+    "old": "from transformers import AutoModelForCausalLM, AutoConfig, AutoModelForImageTextToText",
+    "new": "from transformers import AutoModelForCausalLM, AutoConfig\ntry:\n    from transformers import AutoModelForImageTextToText\nexcept ImportError:\n    AutoModelForImageTextToText = None",
+    "reason": "Unused optional vision import; canonical text branch unchanged"
+  }
+]

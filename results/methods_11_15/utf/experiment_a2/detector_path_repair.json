@@ -1,0 +1,22 @@
+{
+  "classification": "GREEN path",
+  "error": "canonical model ID alias unavailable from initial cwd before any probe",
+  "fix": "Run official find_ut_tokens from existing work directory containing canonical alias",
+  "attempt": 2,
+  "retry_count": 1,
+  "pid": 11694,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_a2_detector.py",
+    "--run-root",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep",
+    "--label",
+    "teacher",
+    "--attempt",
+    "2"
+  ],
+  "original_log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/detector_teacher.log",
+  "scientific_change": false,
+  "time": "2026-09-07T07:24:43.126214+00:00"
+}

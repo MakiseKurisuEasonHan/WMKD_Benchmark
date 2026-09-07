@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "optimizer_steps": 3,
+  "nonzero_lr_updates": 1,
+  "trainable_parameters": 3212749824,
+  "trainable_parameters_changed": true,
+  "config_sha256": "c4acf6321ea4bb606d3ab7aea8bf4d3661009628d00e5d4fbe3c2a27605a9199",
+  "dataset_sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+  "scheduler_parity": {
+    "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/lr_schedules.py",
+    "source_sha256": "18f0537e6242d726fc379ad836bceb9e3c2ca83c24fe3079cc0adab2f3df715c",
+    "compared_updates": 960,
+    "match": true,
+    "first_nonzero_lr_update": 3,
+    "first_max_lr_update": 101
+  },
+  "epoch": 0.09375,
+  "loss": 14.088847160339355,
+  "learning_rate": 3.0102999566398115e-06,
+  "grad_norm": 423.50616455078125,
+  "seconds": 0.25151729583740234,
+  "elapsed_seconds": 5.3851752281188965,
+  "peak_vram_bytes": 54580442112,
+  "peak_vram_reserved_bytes": 56736350208,
+  "peak_host_ram_bytes": 15642099712,
+  "model_path": null,
+  "errors": [],
+  "precision": "BF16 autocast; FP32 GPU master parameters, gradients and Adam moments",
+  "checkpoint_policy": "final model only; no intermediate checkpoint deletion"
+}

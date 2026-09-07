@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-09-07T07:04:48.542693+00:00",
+  "scheduler": {
+    "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a_20260905_111830/runtime_overlay/deepspeed/runtime/lr_schedules.py",
+    "source_sha256": "18f0537e6242d726fc379ad836bceb9e3c2ca83c24fe3079cc0adab2f3df715c",
+    "compared_updates": 960,
+    "match": true,
+    "first_nonzero_lr_update": 3,
+    "first_max_lr_update": 101
+  },
+  "official_code": {
+    "trainer/dataset.py": {
+      "sha256": "06b0d028af0e99bd9658c81cdbcc41109ace8c40daea0c2b263c3f1e949faa7f",
+      "unchanged": true
+    },
+    "trainer/collator.py": {
+      "sha256": "60b744e86110daa544a884df9b5b13a2ea40d33974c5f79300b51c6883fc127c",
+      "unchanged": true
+    },
+    "trainer/template.py": {
+      "sha256": "a61e5926fae56fada5dc268da08fa502afe6c3d3c7a4d34406192da2635b9e9d",
+      "unchanged": true
+    },
+    "fp_test.py": {
+      "sha256": "43f48fea79aa5fe44ed40b6f6eb24d79b8b652a5653ee8a09319a8999f4bfbda",
+      "unchanged": true
+    }
+  },
+  "trainable_parameter_count_meta": 3212749824,
+  "not_a_gpu_preflight_measurement": true,
+  "expected_vram_gib_range": [
+    55,
+    70
+  ],
+  "expected_host_ram_gib_range": [
+    15,
+    30
+  ],
+  "memory_estimate_basis": "FP32 parameters + gradients + two Adam moments = 16*3212749824 bytes; allow BF16 compute cache, activations and temporaries",
+  "training_time_estimate": null,
+  "training_config_sha256": "c4acf6321ea4bb606d3ab7aea8bf4d3661009628d00e5d4fbe3c2a27605a9199",
+  "no_gpu_training_started": true
+}

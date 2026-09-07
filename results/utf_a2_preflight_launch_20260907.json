@@ -1,0 +1,15 @@
+{
+  "pid": 10714,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/methods_11_15/utf_a2_train.py",
+    "--run-root",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep",
+    "--preflight"
+  ],
+  "log": "/root/autodl-tmp/WMKD_Benchmark_data/runs/methods_11_15/utf_a2_20260907_30ep/preflight.log",
+  "stage": "PREFLIGHT",
+  "started_at": "2026-09-07T07:14:04.405678+00:00",
+  "config_sha256": "c4acf6321ea4bb606d3ab7aea8bf4d3661009628d00e5d4fbe3c2a27605a9199"
+}

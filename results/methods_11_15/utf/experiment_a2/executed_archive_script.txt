@@ -1,0 +1,75 @@
+"""Explicit PRIVATE UTF A2 archive and independent recovery verification."""
+import argparse
+import hashlib
+import json
+import os
+from pathlib import Path
+import shutil
+import stat
+import time
+
+D=Path('/root/autodl-tmp/WMKD_Benchmark_data')
+
+def sha(p):
+    h=hashlib.sha256()
+    with Path(p).open('rb') as f:
+        for block in iter(lambda:f.read(16*1024*1024),b''):h.update(block)
+    return h.hexdigest()
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--run-root',type=Path,required=True);a=ap.parse_args();rr=a.run_root
+    from modelscope_hub.api import HubApi
+    assert json.loads((rr/'formal/result.json').read_text())['status']=='TRAINING_COMPLETE'
+    for name in ['detector_teacher_attempt2','detector_base','utility_base','utility_teacher']:
+        assert json.loads((rr/name/'result.json').read_text())['status']=='COMPLETE',name
+    secret=D/'secrets/modelscope.env';assert stat.S_IMODE(secret.stat().st_mode)==0o600
+    values=dict(line.split('=',1) for line in secret.read_text().splitlines() if line and not line.startswith('#') and '=' in line)
+    assert values['MODELSCOPE_NAMESPACE']=='MakiseKurisuEasonHan'
+    api=HubApi(token=values['MODELSCOPE_API_TOKEN'])
+    repo='MakiseKurisuEasonHan/WMKD-UTF-A2-'+rr.name.replace('_','-')
+    package=rr/'archive_package';assert not package.exists();package.mkdir()
+    for p in (rr/'formal/final_model').rglob('*'):
+        if p.is_file():
+            dest=package/p.relative_to(rr/'formal/final_model');dest.parent.mkdir(parents=True,exist_ok=True);os.link(p,dest)
+    evidence=package/'WMKD_PROVENANCE';evidence.mkdir()
+    scripts=evidence/'wmkd_scripts';scripts.mkdir()
+    for p in D.with_name('WMKD_Benchmark').joinpath('scripts/methods_11_15').glob('utf_a2_*.py'):
+        shutil.copyfile(p,scripts/p.name)
+    for name in ['preflight','fingerprint_data','detector_teacher','detector_teacher_attempt2','detector_base','utility_base','utility_teacher']:
+        shutil.copytree(rr/name,evidence/name)
+    # Preserve all top-level logs, configuration, launch receipts and repairs.
+    for p in rr.iterdir():
+        if p.is_file() and p.suffix in ['.json','.jsonl','.log','.txt'] and not p.name.startswith('archive'):
+            shutil.copyfile(p,evidence/p.name)
+    formal=evidence/'formal';formal.mkdir()
+    for p in (rr/'formal').iterdir():
+        if p.is_file():shutil.copyfile(p,formal/p.name)
+    mag=evidence/'magikarp';mag.mkdir()
+    shutil.copytree(rr/'magikarp/results',mag/'results')
+    # Original pinned sources plus documented runtime adaptation are recoverable.
+    shutil.copytree(rr/'work/fingerprint',evidence/'utf_source',ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+    shutil.copytree(rr/'magikarp/magikarp',mag/'source',ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+    manifest={'method':'UTF','experiment':'A2','run_id':rr.name,'model':'meta-llama/Llama-3.2-3B-Instruct',
+              'revision':'0cb88a4f764b7a12671c53f0838cd831a0843b95','preferred_teacher':False,
+              'scientific_limitation':'Teacher non-trigger fingerprint emission 500/500; preserve artifact without retuning',
+              'files':{str(p.relative_to(package)):{'size':p.stat().st_size,'sha256':sha(p)} for p in sorted(package.rglob('*')) if p.is_file()}}
+    (package/'WMKD_ARCHIVE_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
+    expected={**manifest['files'],'WMKD_ARCHIVE_MANIFEST.json':{'size':(package/'WMKD_ARCHIVE_MANIFEST.json').stat().st_size,'sha256':sha(package/'WMKD_ARCHIVE_MANIFEST.json')}}
+    def private(obj):
+        v=getattr(getattr(obj,'visibility',None),'value',getattr(obj,'visibility',None))
+        return getattr(obj,'private',None) is True or v in [1,'private','PRIVATE']
+    if not api.repo_exists(repo,'model'):api.create_repo(repo,'model',visibility=1,description='PRIVATE UTF A2 scientific evidence; negative-control specificity failed; not a preferred Teacher')
+    assert private(api.get_repo(repo,'model'))
+    start=time.time();api.upload_folder(repo,'model',package,path_in_repo='',commit_message='Archive UTF A2 frozen scientific evidence',disable_tqdm=True,sync_remote_repo=False)
+    assert private(api.get_repo(repo,'model'))
+    recovery=rr/'archive_independent_recovery';assert not recovery.exists()
+    got=Path(api.download_repo(repo,'model',local_dir=recovery,local_files_only=False,max_workers=4))
+    for name,info in expected.items():
+        p=got/name;assert p.is_file() and p.stat().st_size==info['size'] and sha(p)==info['sha256'],name
+    result={'status':'VERIFIED_ARCHIVED','repository':repo,'visibility':'PRIVATE','independent_redownload':True,
+            'verified_files':len(expected),'total_verified_bytes':sum(v['size'] for v in expected.values()),'files':expected,
+            'recoverability':'ALL_FILES_REDOWNLOADED_SIZE_SHA256_MATCH','recovery_directory':str(got),
+            'canonical_local_retained':str(rr/'formal/final_model'),'elapsed_seconds':time.time()-start}
+    (rr/'archive.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if k!='files'}),flush=True)
+
+if __name__=='__main__':main()
