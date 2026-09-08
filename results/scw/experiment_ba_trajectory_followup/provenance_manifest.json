@@ -1,0 +1,87 @@
+{
+  "run_id": "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+  "source_sha256": {
+    "scripts/scw_fresh_generate.py": "f949e926e676e6657530755d3f31e6197c66787b177ebbcd22c841ba784552a9",
+    "scripts/scw_detector.py": "2795ac2f65c090af154fa297a51af3aaf2eaa7f5780978c6df55b2d003682983",
+    "scripts/scw_common.py": "28189ff3e8a8db2999064b8254993dad624405b73f6ea0f5ce4735faec7ae53c",
+    "configs/distillation/scw_ba_direct.yaml": "e270371784a62ca2ff2270fb43317fabe321d72ae91248c475dc84c5d594d9fd",
+    "configs/watermark/scw_experiment_a2.yaml": "c5ba1302959a917044993e3077f4a612491982b1a62fb6da1c2675de855e437a",
+    "configs/watermark/scw_experiment_a_official.yaml": "3c57c1beb62e0f413dba3be40f627e36d54bd408866018e0a331ad222c574509",
+    "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "scripts/active_ba_trajectory_runner.py": "4867519bb3fd6d26d60622ed2b9ed1091980fef3b7a5458e4c37dfeb870bebee",
+    "scripts/active_ba_trajectory_detectors.py": "e730204c3c4f65605fa3d4bedb19116ffacf7e85bef32459ccd4d5b130fbccd6"
+  },
+  "parent_reconstruction": {
+    "status": "COMPLETE",
+    "run_id": "scw_ba_parent_reconstruction_20260904_055000",
+    "parent_dataset_origin": "protocol_faithful_reconstruction",
+    "original_artifact_unavailable": true,
+    "identity": {
+      "record_count": 20000,
+      "physical_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+      "content_sha256": "3f0723d35102d57da9a7429914ea6a940cb2a60e073237be061dc3ec4cfb3276",
+      "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+      "schema": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ]
+    },
+    "archive": {
+      "status": "COMPLETED",
+      "repository": "MakiseKurisuEasonHan/WMKD_Benchmark_scw_ba_reconstructed_frozen20k",
+      "visibility": "PRIVATE",
+      "verification_directory": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/archive/verification_20260904_215312",
+      "source": {
+        "record_count": 20000,
+        "physical_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+        "content_sha256": "3f0723d35102d57da9a7429914ea6a940cb2a60e073237be061dc3ec4cfb3276",
+        "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "redownload": {
+        "record_count": 20000,
+        "physical_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+        "content_sha256": "3f0723d35102d57da9a7429914ea6a940cb2a60e073237be061dc3ec4cfb3276",
+        "sample_ids_sha256": "6c27346b38c97747266e1280f75481094c3965f71b4f2e802345638f69a8b397",
+        "schema": [
+          "input",
+          "instruction",
+          "sample_id",
+          "teacher_raw_answer"
+        ]
+      },
+      "byte_identical": true
+    },
+    "provenance": {
+      "parent_dataset_origin": "protocol_faithful_reconstruction",
+      "original_artifact_unavailable": true,
+      "historical_run": "scw_ba_full_20260831_193828_cont1",
+      "teacher_run": "scw_a2_20260831_214339",
+      "teacher_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw/a2/scw_a2_20260831_214339/models/Llama-3.2-3B-Instruct_scw_a2_20260831_214339_French_WMKD_SCW_A",
+      "prompt_protocol": "pnfp_ba_standardized_eight_category_meta_prompts",
+      "generation": {
+        "batch_size": 8,
+        "records_per_prompt": 4,
+        "max_new_tokens": 768,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "seed": 42
+      },
+      "raw_count": 32006,
+      "error_count": 313
+    }
+  },
+  "same_parent_pair_alignment": "20000 sample_id/source_answer equality verified against existing SCW Bb paired dataset; no re-generation",
+  "historical_summary": {
+    "path": "results/scw/experiment_ba/summary.json",
+    "sha256": "b23f2857d5b6a4164058396d82047675cf3c6a75b5a171c5cf8eb449404679b4"
+  },
+  "scientific_limitation": "Reconstructed parent NOT exact/byte/sample-identical historical replay"
+}

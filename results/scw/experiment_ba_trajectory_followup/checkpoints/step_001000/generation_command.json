@@ -1,0 +1,15 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/scw_fresh_generate.py",
+  "--model",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-1000",
+  "--label",
+  "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_ba_trajectory_followup/checkpoints/step_001000/generations.jsonl",
+  "--eval-jsonl",
+  "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+  "--eval-manifest",
+  "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/manifest.json"
+]

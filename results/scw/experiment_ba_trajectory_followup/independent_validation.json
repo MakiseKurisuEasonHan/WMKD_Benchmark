@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "method": "SCW",
+  "partial": false,
+  "steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "sha256": {
+    "trajectory.json": "4320c18ffc4809bc69cc53c99d2467f550655779b95e959094d3c304b6f164c0",
+    "trajectory.csv": "82bbfebefd9cee436f49a049586bc30fcee436720e607285d0c1bbcbf0210c47",
+    "plotting_ready.csv": "82bbfebefd9cee436f49a049586bc30fcee436720e607285d0c1bbcbf0210c47"
+  },
+  "validated_at": "2026-09-08T02:04:49.454868+00:00"
+}

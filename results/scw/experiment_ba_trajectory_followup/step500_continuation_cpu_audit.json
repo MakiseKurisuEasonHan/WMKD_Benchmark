@@ -1,0 +1,67 @@
+{
+  "status": "PASS_CPU_SAMPLER_CHECKPOINT_STATE",
+  "consumed_records": 4000,
+  "unconsumed_lookahead": 8,
+  "actual_prefix_matches_frozen_sampler": true,
+  "resumed_row_indices": [
+    3184,
+    13768,
+    625,
+    3233,
+    15115,
+    15816,
+    6837,
+    15518,
+    11487,
+    7637,
+    18479,
+    14422,
+    15701,
+    17428,
+    7964,
+    13015,
+    6555,
+    531,
+    16838,
+    16203,
+    10035,
+    1714,
+    1574,
+    16364
+  ],
+  "optimizer_steps": [
+    500
+  ],
+  "optimizer_lr": [
+    9.964784918620284e-06,
+    9.964784918620284e-06
+  ],
+  "scheduler": {
+    "base_lrs": [
+      1e-05,
+      1e-05
+    ],
+    "last_epoch": 500,
+    "_step_count": 501,
+    "_is_initial": false,
+    "_get_lr_called_within_step": false,
+    "_last_lr": [
+      9.964784918620284e-06,
+      9.964784918620284e-06
+    ],
+    "lr_lambdas": [
+      {},
+      {}
+    ]
+  },
+  "rng_keys": [
+    "python",
+    "numpy",
+    "cpu",
+    "cuda"
+  ],
+  "config_exact": true,
+  "original_prefix": 400,
+  "cont3_consumed": 3600,
+  "actual_fetch_count": 4008
+}

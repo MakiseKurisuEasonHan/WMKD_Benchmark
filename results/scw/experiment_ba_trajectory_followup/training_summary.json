@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETE",
+  "global_step": 7500,
+  "epochs": 3,
+  "training_metrics": {
+    "train_runtime": 5712.0257,
+    "train_samples_per_second": 10.504,
+    "train_steps_per_second": 1.313,
+    "total_flos": 1.4083918699084186e+17,
+    "train_loss": 0.3147106577714284,
+    "epoch": 3.0
+  },
+  "elapsed_training_seconds": 1455.4980830401182,
+  "wall_seconds": 29698.113430939615,
+  "dataset_fetches": 60000,
+  "sample_order_file": "sample_fetch_order_continuation_logical.jsonl",
+  "sample_order_sha256": "751e506611858dca777a5396a6a04f62d66dde784d817c4cee11c217732cbdeb",
+  "original_fetch_journal_preserved": true,
+  "original_unconsumed_lookahead": 8,
+  "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-7500",
+  "final_model_retained": true,
+  "fresh_reload_matches": true,
+  "continuity": "VERIFIED_CHECKPOINT_CONTINUATION_CONT4",
+  "utility": "NOT_RUN_NOT_IN_FROZEN_FOLLOWUP_PROTOCOL"
+}

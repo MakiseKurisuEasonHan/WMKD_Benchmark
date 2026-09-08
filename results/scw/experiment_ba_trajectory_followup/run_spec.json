@@ -1,0 +1,82 @@
+{
+  "method": "SCW",
+  "method_key": "scw",
+  "run_id": "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+  "evidence_relative": "results/scw/experiment_ba_trajectory_followup",
+  "checkpoint_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "training": {
+    "seed": 42,
+    "epochs": 3,
+    "micro_batch": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "max_length": 1024,
+    "precision": "bf16",
+    "full_parameter": true,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "total_steps": 7500
+  },
+  "historical_config": "configs/distillation/scw_ba_direct.yaml",
+  "detector_source_sha256": "2795ac2f65c090af154fa297a51af3aaf2eaa7f5780978c6df55b2d003682983",
+  "source_sha256": {
+    "scripts/scw_fresh_generate.py": "f949e926e676e6657530755d3f31e6197c66787b177ebbcd22c841ba784552a9",
+    "scripts/scw_detector.py": "2795ac2f65c090af154fa297a51af3aaf2eaa7f5780978c6df55b2d003682983",
+    "scripts/scw_common.py": "28189ff3e8a8db2999064b8254993dad624405b73f6ea0f5ce4735faec7ae53c",
+    "configs/distillation/scw_ba_direct.yaml": "e270371784a62ca2ff2270fb43317fabe321d72ae91248c475dc84c5d594d9fd",
+    "configs/watermark/scw_experiment_a2.yaml": "c5ba1302959a917044993e3077f4a612491982b1a62fb6da1c2675de855e437a",
+    "configs/watermark/scw_experiment_a_official.yaml": "3c57c1beb62e0f413dba3be40f627e36d54bd408866018e0a331ad222c574509",
+    "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "scripts/active_ba_trajectory_runner.py": "4867519bb3fd6d26d60622ed2b9ed1091980fef3b7a5458e4c37dfeb870bebee",
+    "scripts/active_ba_trajectory_detectors.py": "e730204c3c4f65605fa3d4bedb19116ffacf7e85bef32459ccd4d5b130fbccd6"
+  },
+  "native_metric_fields": [
+    "p_value",
+    "fingerprinted",
+    "query_count"
+  ],
+  "detector": {
+    "queries": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+    "query_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/manifest.json",
+    "protocol_config": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a2.yaml",
+    "official_config": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a_official.yaml",
+    "official_source": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source",
+    "canonical_base": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct"
+  },
+  "historical_reference_only": {
+    "base": {
+      "n_queries": 1000,
+      "p_value": 0.9199569225311279,
+      "fingerprinted": false,
+      "supplementary": false
+    },
+    "teacher": {
+      "n_queries": 1000,
+      "p_value": 0.0,
+      "fingerprinted": true,
+      "supplementary": false
+    },
+    "student": {
+      "n_queries": 1000,
+      "p_value": 0.8440861701965332,
+      "fingerprinted": false,
+      "supplementary": false
+    }
+  },
+  "auto_next_worker": false,
+  "auto_shutdown": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "wmkd.followup-trajectory.full-log.v1",
+  "identity": {
+    "project": "WMKD_Benchmark",
+    "method": "SCW",
+    "experiment": "Ba-trajectory-followup",
+    "run_id": "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+    "parent_dataset_origin": "protocol_faithful_reconstruction"
+  },
+  "status": "PREPARING",
+  "protocol": "protocol.json",
+  "protocol_sha256": "ec690e63d44b82d17409fa74ce0108159f2bebce210aa961f92b52d3c2c1c80d",
+  "checkpoint_measurements": [],
+  "training_started": false,
+  "historical_references_only": {
+    "base": {
+      "n_queries": 1000,
+      "p_value": 0.9199569225311279,
+      "fingerprinted": false,
+      "supplementary": false
+    },
+    "teacher": {
+      "n_queries": 1000,
+      "p_value": 0.0,
+      "fingerprinted": true,
+      "supplementary": false
+    },
+    "student": {
+      "n_queries": 1000,
+      "p_value": 0.8440861701965332,
+      "fingerprinted": false,
+      "supplementary": false
+    }
+  }
+}

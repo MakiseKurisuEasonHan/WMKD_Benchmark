@@ -1,0 +1,14 @@
+{
+  "pid": 27981,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/scw_ba_trajectory_continuation.py",
+    "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_ba_trajectory_followup/run_spec.json"
+  ],
+  "time": "2026-09-07T18:48:33.441916+00:00",
+  "resume_step": 50,
+  "script_sha256": "6a4fe2d186dcfb6fce62d5422c591fb906953183e2a34cf01f0e4aabda986409",
+  "classification": "GREEN_LOGGING_DIR_METADATA_FIX",
+  "previous_attempt_updates": 0
+}

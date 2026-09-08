@@ -1,0 +1,74 @@
+{
+  "observed_at": "2026-09-07T18:25:53.718981+00:00",
+  "status": "INTERRUPTION_UNDER_DIAGNOSIS",
+  "parent_pid": 24226,
+  "parent_present": false,
+  "remaining_generation_pid": 26083,
+  "last_training_step": 50,
+  "completed_detector_points": [
+    0,
+    25
+  ],
+  "cause": "UNKNOWN_NO_TRACEBACK_OBSERVED",
+  "cgroup_memory_events": "low 0\nhigh 0\nmax 567183\noom 0\noom_kill 0\n",
+  "checkpoint_50_files": [
+    {
+      "name": "chat_template.jinja",
+      "bytes": 3827
+    },
+    {
+      "name": "config.json",
+      "bytes": 874
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 184
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 4965799096
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 1459729952
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 20955
+    },
+    {
+      "name": "optimizer.pt",
+      "bytes": 12851221159
+    },
+    {
+      "name": "rng_state.pth",
+      "bytes": 14645
+    },
+    {
+      "name": "scheduler.pt",
+      "bytes": 1465
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 325
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 17210019
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 50554
+    },
+    {
+      "name": "trainer_state.json",
+      "bytes": 1499
+    },
+    {
+      "name": "training_args.bin",
+      "bytes": 5969
+    }
+  ],
+  "continuity_verified": false,
+  "action": "Preserve orphan generation; verify full checkpoint SHA and Trainer restore/sampler/RNG semantics before continuation. No from-scratch retraining. No other GPU task until child exits."
+}

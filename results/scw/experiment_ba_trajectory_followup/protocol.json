@@ -1,0 +1,78 @@
+{
+  "schema_version": "wmkd.active-ba-trajectory.protocol.v1",
+  "method": "SCW",
+  "experiment": "Ba checkpoint trajectory follow-up",
+  "run_id": "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+  "dataset": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+    "records": 20000,
+    "sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+    "parent_dataset_origin": "protocol_faithful_reconstruction",
+    "original_historical_dataset_unavailable": true,
+    "exact_replay": false,
+    "byte_identical_to_historical": false,
+    "sample_identical_to_historical": "NOT_CLAIMED"
+  },
+  "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "training": {
+    "seed": 42,
+    "epochs": 3,
+    "micro_batch": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "max_length": 1024,
+    "precision": "bf16",
+    "full_parameter": true,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "total_steps": 7500
+  },
+  "checkpoint_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "parent_dataset_origin": "protocol_faithful_reconstruction",
+  "detector": {
+    "frozen_script_chain": [
+      "scw_fresh_generate.py",
+      "scw_detector.py"
+    ],
+    "query_count": 1000,
+    "alpha": 0.001,
+    "permutation_seed": 42,
+    "query_asset": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+      "sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d"
+    },
+    "generation": {
+      "seed": 42,
+      "batch_size": 4,
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "max_new_tokens": 200,
+      "min_new_tokens": 25,
+      "repetition_penalty": 1.1
+    },
+    "official_commit": "15bc1929569357130f2dbc0b09f91bbf4f4bd947"
+  },
+  "sampling_semantics": "one continuous Trainer; isolated fresh-process detector; latest resumable state retained",
+  "utility": "NOT_RUN_NOT_IN_PROTOCOL",
+  "model_upload": false,
+  "auto_shutdown": false,
+  "next_method_gate": "SCW scientific closure before PNFP Bb",
+  "archive_policy": "Deferred necessary final preferred assessment after campaign; worker never uploads",
+  "historical_endpoint": "REFERENCE_ONLY_NOT_EXACT_REPLAY"
+}

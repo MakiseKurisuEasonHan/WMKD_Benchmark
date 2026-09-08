@@ -1,0 +1,74 @@
+{
+  "source": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/lib/python3.11/site-packages/transformers/trainer.py",
+  "excerpts": [
+    {
+      "line": 158,
+      "context": "                self._load_from_checkpoint(resume_from_checkpoint, self.model_wrapped)\n\n        # Check if saved optimizer or scheduler states exist\n        self._load_optimizer_and_scheduler(resume_from_checkpoint)\n        self._load_scaler(resume_from_checkpoint)\n\n        # important: at this point:\n        # self.model         is the Transformers Model\n        # self.model_wrapped is DDP(Transformers Model), Deepspeed(Transformers Model),"
+    },
+    {
+      "line": 181,
+      "context": "        self.state.epoch = 0\n        start_time = time.time()\n        epochs_trained = 0\n        steps_trained_in_current_epoch = 0\n        steps_trained_progress_bar = None\n\n        # Check if continuing training from a checkpoint\n        if resume_from_checkpoint is not None and os.path.isfile(\n            os.path.join(resume_from_checkpoint, TRAINER_STATE_NAME)"
+    },
+    {
+      "line": 193,
+      "context": "            self._load_callback_state()\n            epochs_trained = int(self.state.global_step // num_update_steps_per_epoch)\n            if not args.ignore_data_skip:\n                steps_trained_in_current_epoch = self.state.global_step % (num_update_steps_per_epoch)\n                steps_trained_in_current_epoch *= args.gradient_accumulation_steps\n            else:\n                steps_trained_in_current_epoch = 0\n\n            logger.info(\"  Continuing training from checkpoint, will skip to saved global_step\")"
+    },
+    {
+      "line": 196,
+      "context": "                steps_trained_in_current_epoch = self.state.global_step % (num_update_steps_per_epoch)\n                steps_trained_in_current_epoch *= args.gradient_accumulation_steps\n            else:\n                steps_trained_in_current_epoch = 0\n\n            logger.info(\"  Continuing training from checkpoint, will skip to saved global_step\")\n            logger.info(f\"  Continuing training from epoch {epochs_trained}\")\n            logger.info(f\"  Continuing training from global step {self.state.global_step}\")\n            if not args.ignore_data_skip:"
+    },
+    {
+      "line": 229,
+      "context": "\n        for epoch in range(epochs_trained, num_train_epochs):\n            epoch_dataloader = train_dataloader\n            if hasattr(epoch_dataloader, \"set_epoch\"):\n                epoch_dataloader.set_epoch(epoch)\n\n            # Reset the past mems state at the beginning of each epoch if necessary.\n            if args.past_index >= 0:\n                self._past = None"
+    },
+    {
+      "line": 230,
+      "context": "        for epoch in range(epochs_trained, num_train_epochs):\n            epoch_dataloader = train_dataloader\n            if hasattr(epoch_dataloader, \"set_epoch\"):\n                epoch_dataloader.set_epoch(epoch)\n\n            # Reset the past mems state at the beginning of each epoch if necessary.\n            if args.past_index >= 0:\n                self._past = None\n"
+    },
+    {
+      "line": 243,
+      "context": "            )\n            self.control = self.callback_handler.on_epoch_begin(args, self.state, self.control)\n\n            if epoch == epochs_trained and resume_from_checkpoint is not None and steps_trained_in_current_epoch == 0:\n                self._load_rng_state(resume_from_checkpoint)\n\n            rng_to_sync = False\n            steps_skipped = 0\n            if steps_trained_in_current_epoch > 0:"
+    },
+    {
+      "line": 244,
+      "context": "            self.control = self.callback_handler.on_epoch_begin(args, self.state, self.control)\n\n            if epoch == epochs_trained and resume_from_checkpoint is not None and steps_trained_in_current_epoch == 0:\n                self._load_rng_state(resume_from_checkpoint)\n\n            rng_to_sync = False\n            steps_skipped = 0\n            if steps_trained_in_current_epoch > 0:\n                epoch_dataloader = skip_first_batches(epoch_dataloader, steps_trained_in_current_epoch)"
+    },
+    {
+      "line": 246,
+      "context": "            if epoch == epochs_trained and resume_from_checkpoint is not None and steps_trained_in_current_epoch == 0:\n                self._load_rng_state(resume_from_checkpoint)\n\n            rng_to_sync = False\n            steps_skipped = 0\n            if steps_trained_in_current_epoch > 0:\n                epoch_dataloader = skip_first_batches(epoch_dataloader, steps_trained_in_current_epoch)\n                steps_skipped = steps_trained_in_current_epoch\n                steps_trained_in_current_epoch = 0"
+    },
+    {
+      "line": 249,
+      "context": "            rng_to_sync = False\n            steps_skipped = 0\n            if steps_trained_in_current_epoch > 0:\n                epoch_dataloader = skip_first_batches(epoch_dataloader, steps_trained_in_current_epoch)\n                steps_skipped = steps_trained_in_current_epoch\n                steps_trained_in_current_epoch = 0\n                rng_to_sync = True\n\n            step = -1"
+    },
+    {
+      "line": 251,
+      "context": "            if steps_trained_in_current_epoch > 0:\n                epoch_dataloader = skip_first_batches(epoch_dataloader, steps_trained_in_current_epoch)\n                steps_skipped = steps_trained_in_current_epoch\n                steps_trained_in_current_epoch = 0\n                rng_to_sync = True\n\n            step = -1\n            epoch_iterator = iter(epoch_dataloader)\n            # We chunkify the epoch iterator into gradient accumulation steps `n` batches"
+    },
+    {
+      "line": 252,
+      "context": "                epoch_dataloader = skip_first_batches(epoch_dataloader, steps_trained_in_current_epoch)\n                steps_skipped = steps_trained_in_current_epoch\n                steps_trained_in_current_epoch = 0\n                rng_to_sync = True\n\n            step = -1\n            epoch_iterator = iter(epoch_dataloader)\n            # We chunkify the epoch iterator into gradient accumulation steps `n` batches\n            remainder = steps_in_epoch % args.gradient_accumulation_steps"
+    },
+    {
+      "line": 289,
+      "context": "                            input_tokens = inputs[main_input_name].numel()\n                            input_tokens = torch.tensor(input_tokens, device=self.args.device, dtype=torch.int64)\n                            self.state.num_input_tokens_seen += self.accelerator.gather(input_tokens).sum().item()\n                    if rng_to_sync:\n                        self._load_rng_state(resume_from_checkpoint)\n                        rng_to_sync = False\n\n                    # Skip past any already trained steps if resuming training\n                    if steps_trained_in_current_epoch > 0:"
+    },
+    {
+      "line": 290,
+      "context": "                            input_tokens = torch.tensor(input_tokens, device=self.args.device, dtype=torch.int64)\n                            self.state.num_input_tokens_seen += self.accelerator.gather(input_tokens).sum().item()\n                    if rng_to_sync:\n                        self._load_rng_state(resume_from_checkpoint)\n                        rng_to_sync = False\n\n                    # Skip past any already trained steps if resuming training\n                    if steps_trained_in_current_epoch > 0:\n                        steps_trained_in_current_epoch -= 1"
+    },
+    {
+      "line": 291,
+      "context": "                            self.state.num_input_tokens_seen += self.accelerator.gather(input_tokens).sum().item()\n                    if rng_to_sync:\n                        self._load_rng_state(resume_from_checkpoint)\n                        rng_to_sync = False\n\n                    # Skip past any already trained steps if resuming training\n                    if steps_trained_in_current_epoch > 0:\n                        steps_trained_in_current_epoch -= 1\n                        if steps_trained_progress_bar is not None:"
+    },
+    {
+      "line": 298,
+      "context": "                        steps_trained_in_current_epoch -= 1\n                        if steps_trained_progress_bar is not None:\n                            steps_trained_progress_bar.update(1)\n                        if steps_trained_in_current_epoch == 0:\n                            self._load_rng_state(resume_from_checkpoint)\n                        continue\n                    elif steps_trained_progress_bar is not None:\n                        steps_trained_progress_bar.close()\n                        steps_trained_progress_bar = None"
+    },
+    {
+      "line": 299,
+      "context": "                        if steps_trained_progress_bar is not None:\n                            steps_trained_progress_bar.update(1)\n                        if steps_trained_in_current_epoch == 0:\n                            self._load_rng_state(resume_from_checkpoint)\n                        continue\n                    elif steps_trained_progress_bar is not None:\n                        steps_trained_progress_bar.close()\n                        steps_trained_progress_bar = None\n"
+    }
+  ],
+  "status": "REVIEW_PENDING"
+}

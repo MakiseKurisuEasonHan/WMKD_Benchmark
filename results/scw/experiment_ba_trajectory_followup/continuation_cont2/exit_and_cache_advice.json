@@ -1,0 +1,22 @@
+{
+  "time": "2026-09-07T18:50:58.655212+00:00",
+  "attempt": "cont2",
+  "pid": 27981,
+  "status": "EXITED_BEFORE_FIRST_UPDATE",
+  "traceback": false,
+  "cause": "UNKNOWN_MEMORY_PRESSURE_HYPOTHESIS_ONLY",
+  "memory_before": 114289680384,
+  "events": "low 0\nhigh 0\nmax 567183\noom 0\noom_kill 0\n",
+  "fadvise_paths": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/model-00001-of-00002.safetensors",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/model-00002-of-00002.safetensors",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/tokenizer.json",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/optimizer.pt",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-50/model-00001-of-00002.safetensors",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-50/model-00002-of-00002.safetensors",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-50/tokenizer.json",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-50/optimizer.pt"
+  ],
+  "memory_after": 77708324864,
+  "files_deleted": 0
+}

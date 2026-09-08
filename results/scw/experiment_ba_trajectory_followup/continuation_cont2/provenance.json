@@ -1,0 +1,13 @@
+{
+  "status": "CONTINUATION",
+  "source_script_sha256": "6a4fe2d186dcfb6fce62d5422c591fb906953183e2a34cf01f0e4aabda986409",
+  "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-50",
+  "restored_global_step": 50,
+  "original_run_id": "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+  "scientific_configuration_unchanged": true,
+  "original_in_memory_continuity_interrupted": true,
+  "training_continuity_basis": "Verified checkpoint plus Trainer restore and before-first-update gate",
+  "original_fetch_journal": "sample_fetch_order.jsonl",
+  "consumed_prefix_records": 400,
+  "unconsumed_lookahead_records": 8
+}

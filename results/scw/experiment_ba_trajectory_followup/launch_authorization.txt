@@ -1,0 +1,763 @@
+现在授权执行一次完整的 overnight active-watermark trajectory campaign。
+
+学校 VPN：关闭
+
+AutoDL:
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+项目：
+/root/autodl-tmp/WMKD_Benchmark
+
+大文件目录：
+/root/autodl-tmp/WMKD_Benchmark_data
+
+==================================================
+0. 今晚总目标
+==================================================
+
+用户明天早上查看结果。
+
+今晚不要停在单个方法之间等待用户批准。
+
+严格串行完成：
+
+PHASE 1 — 五个主动水印 Ba checkpoint trajectories
+1. PN-FP Ba          （已完成，不重复）
+2. EverTracer Ba     （当前正在运行，继续）
+3. CTCC Ba
+4. iSeal Ba
+5. SCW Ba
+
+PHASE 2 — 五个主动水印 Bb/Bb2 checkpoint trajectories
+6. PN-FP Bb
+7. EverTracer Bb
+8. CTCC Bb2
+9. iSeal Bb
+10. SCW Bb
+
+注意：
+- CTCC 使用 Bb2，绝对不要改名成 Bb。
+- PN-FP / SCW 若使用 reconstructed parent，必须保留 reconstructed provenance。
+- 不运行 Methods 11–15。
+- 不运行 passive watermarks。
+- 不运行 logit distillation Experiment C。
+- 不运行 200k data-scale experiments。
+- 今晚只完成 active 5 的 Ba/Bb trajectory campaign。
+
+==================================================
+1. 严格串行原则
+==================================================
+
+任何时刻最多 ONE 个大型 GPU scientific task。
+
+顺序必须严格：
+
+EverTracer Ba
+→ CTCC Ba
+→ iSeal Ba
+→ SCW Ba
+→ PN-FP Bb
+→ EverTracer Bb
+→ CTCC Bb2
+→ iSeal Bb
+→ SCW Bb
+
+当前 PN-FP Ba 已完成，不重复。
+
+每一条必须：
+
+TRAIN
+→ ALL TRAJECTORY POINTS
+→ FINAL DETECTOR
+→ FRESH RELOAD VALIDATION
+→ EVIDENCE INTEGRITY
+→ LOCAL CLOSURE
+
+完成后才能启动下一条。
+
+禁止：
+- 并行跑两个方法
+- 两个 GPU job 重叠
+- 提前启动下一方法
+- 因为 detector 慢而跳过 checkpoint
+- 自动修改科学参数
+
+==================================================
+2. 每条 trajectory 的统一采样点
+==================================================
+
+统一使用：
+
+step 0
+step 25
+step 50
+step 100
+step 250
+step 500
+step 1000
+step 2000
+step 4000
+step 6000
+step 7500
+
+若某方法历史正式总 step 不等于 7500：
+- 保留其历史正式 total steps
+- 最后一个点使用真实 final step
+- 不改变训练预算
+
+step 0：
+必须实际测 fresh clean canonical Student。
+
+Teacher / Reference：
+单独作为 reference，
+绝对不是 step 0。
+
+==================================================
+3. 必须是一条连续训练 trajectory
+==================================================
+
+每条实验必须是一条连续 trajectory：
+
+step 0
+↓
+25
+↓
+50
+↓
+100
+↓
+250
+↓
+500
+↓
+1000
+↓
+2000
+↓
+4000
+↓
+6000
+↓
+7500
+
+禁止变成多个独立短训练。
+
+必须保持：
+- optimizer continuity
+- scheduler continuity
+- RNG continuity
+- sampler/order continuity
+- scientific dataset continuity
+
+==================================================
+4. 数据集规则
+==================================================
+
+优先级：
+
+A. exact historical frozen dataset 本地存在且 SHA 匹配
+→ 直接复用
+
+B. exact historical frozen dataset 在 ModelScope / 已有归档中存在
+→ 恢复、验证 SHA 后复用
+
+C. historical frozen dataset 永久缺失
+→ 才允许 protocol-faithful reconstruction
+
+如果 reconstruction：
+必须记录：
+
+parent_dataset_origin = protocol_faithful_reconstruction
+original_historical_dataset_unavailable = true
+
+并明确：
+- NOT exact replay
+- NOT byte-identical
+- NOT sample-identical unless independently proven
+
+不要重新生成一个明明已经存在并验证过的历史 20k。
+
+==================================================
+5. Ba 与 Bb/Bb2 的科学定义
+==================================================
+
+Ba：
+Watermarked Teacher
+→ ordinary Teacher-generated QA
+→ fresh clean canonical Base Student
+→ hard-label behavioral distillation
+→ detector trajectory
+
+Bb/Bb2：
+same corresponding Teacher/parent protocol
+→ paraphrase Teacher answers
+→ fresh clean canonical Base Student
+→ hard-label behavioral distillation
+→ detector trajectory
+
+Bb/Bb2 Student：
+必须 fresh clean Base initialization。
+
+绝对不是从 Ba Student 接着训练。
+
+因此 Ba 和 Bb/Bb2 是两个独立攻击分支。
+
+==================================================
+6. 冻结训练配置
+==================================================
+
+每个方法复用它自己的历史正式 Ba/Bb scientific configuration。
+
+共同 canonical backbone：
+
+meta-llama/Llama-3.2-3B-Instruct
+
+revision:
+0cb88a4f764b7a12671c53f0838cd831a0843b95
+
+原则上保持：
+- fresh clean Base
+- full parameter
+- no LoRA
+- BF16
+- seed 42
+- 3 epochs
+- effective batch 8
+- LR 1e-5
+- historical formatter/template
+- historical dataset semantics
+
+如果某方法历史值不同：
+以该方法 frozen historical configuration 为准。
+
+严禁为了得到“好看的 trajectory”而：
+- 改 LR
+- 改 epoch
+- 改 seed
+- 改 detector
+- 改 threshold
+- 改数据
+- 改 prompt
+- 改 template
+
+==================================================
+7. 方法特定 frozen detector
+==================================================
+
+PN-FP
+- exact frozen 1024 fingerprint keys
+- detected / 1024
+- same one-token semantics
+- no recalibration
+
+EverTracer
+- frozen member/nonmember verification data
+- frozen reference model
+- frozen neighborhoods
+- exact detector direction/aggregation
+- record:
+  AUC
+  TPR at empirical FPR <= 0.05
+  FPR
+  threshold
+  errors / nonfinite
+
+CTCC
+- WMKD frozen operational detector:
+  generated_answer.strip() == "IAMALIVE"
+- case sensitive
+- record:
+  trigger activations
+  suppression activations
+  normal activations
+  combined negatives
+  generation errors
+- retain limitation:
+  operational WMKD equality detector is not official CTCC detector
+
+iSeal
+- exact registered-secret set
+- frozen BLEU semantics
+- frozen threshold
+- record:
+  success / total
+  success rate
+  mean BLEU
+  median BLEU
+  errors
+
+SCW
+- frozen statistical detector
+- same query set/order/permutation
+- alpha = 0.001
+- lower p-value = stronger evidence
+- record:
+  p-value
+  detected yes/no
+  query count
+  errors
+
+==================================================
+8. TRAJECTORY EVIDENCE 是永久科研 artifact
+==================================================
+
+这是今晚最高优先级之一。
+
+所有 trajectory evidence 永久保存。
+
+每条至少保存：
+
+full_experiment_log.json
+trajectory.json
+trajectory.csv
+trajectory_summary.json
+plotting_ready.csv
+provenance_manifest.json
+dataset_manifest.json
+detector_assets_manifest.json
+training_config_snapshot.json
+training_log.jsonl
+training_summary.json
+checkpoint_inventory.json
+
+每个 trajectory point 至少保存：
+
+detector_result.json
+detector_raw.json
+checkpoint_metadata.json
+
+永久记录：
+
+- step
+- epoch/fraction
+- timestamp
+- training elapsed seconds
+- nearest loss
+- LR
+- gradient norm if naturally available
+- detector native metric
+- detector decision
+- errors
+- dataset SHA
+- detector SHA
+- checkpoint/model SHA
+- tokenizer/template
+- seed
+- config SHA
+- Git HEAD
+
+所有 JSON/CSV：
+- parse check
+- non-empty check
+- SHA256
+- cross-check一致
+
+这些文件以后会直接用于论文 mechanistic analysis。
+
+绝对不能删除。
+
+==================================================
+9. 中间 checkpoint 本体
+==================================================
+
+完整 3B intermediate checkpoint 只是训练/评估时的临时模型存档。
+
+策略：
+
+到目标 step
+→ 保存 resumable checkpoint
+→ frozen detector evaluation
+→ trajectory evidence 落盘
+→ SHA / JSON / CSV 完整性验证
+→ 后续训练已成功继续
+→ 该旧 checkpoint 不再承担 resume/recovery 作用
+→ 才允许删除完整中间 checkpoint 以节省空间
+
+不要提前删除当前唯一可恢复 checkpoint。
+
+最终 Student：
+至少保留到完整 scientific closure 和上传完成。
+
+==================================================
+10. GPU 安全
+==================================================
+
+每条大型 GPU 任务前：
+
+nvidia-smi
+
+必须确认：
+- GPU 状态正常
+- 无其他 WMKD 大任务
+- 显存可用
+- 不存在异常 100% utilization 状态
+
+之前 GPU smoke 已恢复正常。
+
+如果再次出现：
+100% util + 0 MiB + no visible process
+
+则：
+- 当前实验不要启动
+- 做最小只读诊断
+- 不 kill 不明进程
+- 不 reset GPU
+- 不改变 driver
+
+如果 GPU 后续恢复正常：
+继续下一可运行任务。
+
+==================================================
+11. 故障处理与自动继续规则
+==================================================
+
+今晚授权自动完成整个 campaign，但不能掩盖科学错误。
+
+如果当前某一方法发生错误：
+
+先判断是否是 GREEN engineering failure，例如：
+- 路径错误
+- import/deployment error
+- 临时文件冲突
+- ModelScope transport error
+- recoverable disk/cache issue
+- 已知 restart-safe infrastructure issue
+
+如果能在不改变科学配置的情况下做最小修复：
+允许修复并从安全状态恢复。
+
+必须保留：
+- failure record
+- continuation lineage
+- previous evidence
+
+如果是 RED scientific blocker，例如：
+- dataset provenance 无法唯一确定
+- frozen detector assets 不完整且有多个非等价替代
+- scientific configuration 无法确定
+- trajectory continuity 已破坏且不能可靠恢复
+- detector semantics 无法复现
+
+则：
+当前方法标记 BLOCKED，
+不要伪造结果。
+
+然后：
+
+如果后面其他方法仍然科学上可独立运行：
+允许跳过这个 BLOCKED method，
+继续下一个方法。
+
+因此今晚目标不是“一个失败全部停机”，而是：
+
+尽可能完成所有仍然 scientifically runnable 的 active Ba/Bb trajectories。
+
+最终必须清楚列出：
+COMPLETE
+BLOCKED
+FAILED_ENGINEERING
+NOT_RUN
+等状态。
+
+==================================================
+12. 不允许做的事
+==================================================
+
+今晚禁止：
+
+- Methods 11–15
+- EaaW
+- passive watermark experiments
+- Experiment C logit KD
+- 200k experiments
+- data-scale ablation
+- new watermark methods
+- detector recalibration
+- threshold tuning
+- hyperparameter search
+- seed search
+- model substitution
+- silent dataset reconstruction
+- GPU并行
+- kill unrelated process
+- force push/reset/clean
+- 删除历史 canonical evidence
+
+==================================================
+13. 每条完成后的本地科研闭环
+==================================================
+
+每条完成后：
+
+1. fresh reload final Student
+2. final detector
+3. final detector 必须和 trajectory final point一致
+4. generation sanity
+5. trajectory 11/11 完整性
+6. CSV/JSON consistency
+7. SHA consistency
+8. full log
+9. provenance
+10. global index object
+
+Utility：
+今晚 trajectory campaign 的核心不是 utility trajectory。
+
+如果历史 protocol要求 final utility closure，并且运行成本合理：
+只在 FINAL Student 做一次 utility。
+
+绝对不要每个 checkpoint 都跑 ARC/TruthfulQA。
+
+==================================================
+14. Git 规则
+==================================================
+
+每条实验闭环后可保存 lightweight evidence。
+
+推荐：
+- 每条或每一小组做清晰 commit
+- push GitHub
+- 不覆盖历史 experiment
+- 不提交大模型权重
+- 不提交 cache/tmp
+
+已有无关 dirty changes：
+不要误包含进 trajectory commit。
+
+必须：
+- path-scoped staging
+- review staged diff
+- preserve unrelated changes
+
+==================================================
+15. 全部 trajectory 完成后：最终模型上传
+==================================================
+
+用户明确授权：
+
+全部 active Ba + Bb/Bb2 trajectory campaign 完成后，
+上传本轮新产生且值得永久保留的 FINAL Student 模型。
+
+永久 artifact policy：
+
+每个正式 follow-up experiment：
+最多上传 ONE 个 final preferred model artifact。
+
+禁止上传：
+- intermediate checkpoints
+- failed models
+- blocked models
+- temporary models
+- debug models
+
+如果该方法的新 trajectory final model只是历史模型的重复且没有必要生成新的永久 artifact：
+先根据 provenance 判断是否确实需要新上传。
+不要无意义重复上传相同内容。
+
+如果是新的正式 follow-up final model：
+允许上传到 PRIVATE ModelScope repository。
+
+上传必须：
+- manifest
+- SHA256
+- filename/size verification
+- independent redownload verification when feasible
+- fresh reload validation
+- provenance README / metadata
+- no secret/token leakage
+
+不要上传任何 access token。
+
+==================================================
+16. 新数据集上传
+==================================================
+
+如果今晚产生了新的正式 reconstructed dataset / paired dataset，
+且它是本轮科学结果未来可复现所必需：
+
+允许上传 PRIVATE ModelScope。
+
+例如：
+- newly reconstructed parent20k
+- newly generated canonical paired20k
+
+但如果 dataset 已经有 verified ModelScope archive：
+不要重复上传。
+
+每份新 dataset 上传：
+- README
+- manifest
+- SHA256SUMS
+- exact frozen data
+- provenance
+- source/processing status
+- independent redownload verification where feasible
+
+必须区分：
+original historical
+vs
+protocol-faithful reconstruction
+
+==================================================
+17. 最终五方法 Ba/Bb master analysis
+==================================================
+
+全部能运行的实验结束后生成：
+
+results/active_watermarks_trajectory_followup/
+    ba_trajectory_master_table.csv
+    ba_trajectory_master_table.json
+    bb_trajectory_master_table.csv
+    bb_trajectory_master_table.json
+    active_trajectory_all.csv
+    active_trajectory_all.json
+    plotting_ready_all.csv
+    active_watermarks_cross_method_trajectory_analysis.md
+    campaign_final_status.json
+
+最终分析至少包含：
+
+PN-FP
+EverTracer
+CTCC
+iSeal
+SCW
+
+分别：
+Teacher/reference
+Ba trajectory
+Bb/Bb2 trajectory
+
+并分类：
+
+- never acquired
+- weak gradual acquisition
+- rapid early acquisition then plateau
+- strong acquisition then forgetting
+- monotonic change
+- non-monotonic/noisy
+
+结合 dataset exposure audit，
+明确区分：
+
+MEASURED FACT
+BOUNDED INTERPRETATION
+UNSUPPORTED CAUSAL CLAIM
+
+==================================================
+18. 最终 campaign closure
+==================================================
+
+全部完成后检查：
+
+- all runnable trajectories closed
+- no trajectory evidence missing
+- no SHA mismatch
+- no active GPU worker
+- no upload still running
+- ModelScope final artifacts verified
+- Git lightweight evidence committed/pushed
+- local / GitHub / AutoDL HEAD relationship recorded
+- disk usage recorded
+- GPU state recorded
+- no Methods 11–15 task
+- no watcher/queue left behind except the temporary overnight controller itself
+
+临时 overnight controller 完成后必须删除。
+
+==================================================
+19. 关机授权
+==================================================
+
+用户明确授权本轮最终关机。
+
+满足以下任一条件后可以关机：
+
+CASE A — SUCCESS
+所有 scientifically runnable 的 Ba + Bb/Bb2 trajectory 已完成，
+最终模型/新数据集上传与验证完成，
+Git/scientific closure 完成，
+无任务运行。
+
+CASE B — EXHAUSTED BY BLOCKERS
+部分实验存在明确 blocker，
+但：
+- blocker 已完整记录
+- 没有其他 independently runnable active trajectory 可以继续
+- 没有上传/验证/Git closure 尚未完成
+- 没有任何可继续的 GREEN scientific task
+
+此时也允许完成最终报告后关机。
+
+关机前最终强制检查：
+
+1. ps / project process audit
+2. nvidia-smi
+3. no training
+4. no inference
+5. no detector
+6. no download
+7. no upload
+8. no Git write in progress
+9. all files flushed
+10. latest state/report saved locally and pushed where appropriate
+
+然后执行正常 AutoDL shutdown / poweroff mechanism。
+
+不要在有任务运行时关机。
+
+最终状态必须写入：
+
+campaign_final_status.json
+
+包括：
+- shutdown_reason
+- completed experiments
+- blocked experiments
+- failed experiments
+- uploaded models
+- uploaded datasets
+- Git commit
+- final disk
+- final GPU
+- shutdown_requested = true
+
+==================================================
+20. 今晚开始
+==================================================
+
+当前 EverTracer Ba 已经在运行。
+
+继续当前 EverTracer Ba，
+然后严格按顺序：
+
+EverTracer Ba
+→ CTCC Ba
+→ iSeal Ba
+→ SCW Ba
+→ PN-FP Bb
+→ EverTracer Bb
+→ CTCC Bb2
+→ iSeal Bb
+→ SCW Bb
+
+PN-FP Ba 已完成，不重复。
+
+不要在普通 GREEN 阶段等待用户。
+
+明早用户需要看到：
+- 五方法 Ba trajectory
+- 五方法 Bb/Bb2 trajectory
+- 完整 master tables
+- 所有 trajectory evidence
+- 新 final model / dataset 的 ModelScope 状态
+- Git closure
+- 最终关机状态
+
+最重要的要求：
+
+1. STRICT SERIAL
+2. TRAJECTORY EVIDENCE PERMANENTLY PRESERVED
+3. DO NOT SILENTLY CHANGE SCIENTIFIC CONFIG
+4. UPLOAD ONLY FINAL NECESSARY ARTIFACTS
+5. WHEN ALL POSSIBLE WORK IS FINISHED, CLOSE EVERYTHING AND SHUT DOWN

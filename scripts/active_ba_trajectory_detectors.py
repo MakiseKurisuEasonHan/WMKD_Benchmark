@@ -35,6 +35,8 @@ def run_detector(spec, model_path, target, project, python, env):
         return run_ctcc_detector(spec, model_path, target, project, python, env)
     if spec['method_key'] == 'iseal':
         return run_iseal_detector(spec, model_path, target, project, python, env)
+    if spec['method_key'] == 'scw':
+        return run_scw_detector(spec, model_path, target, project, python, env)
     if spec['method_key'] != 'evertracer':
         raise NotImplementedError('Method detector must be audited before launch')
     d = spec['detector']
@@ -174,3 +176,46 @@ def run_iseal_detector(spec, model_path, target, project, python, env):
         interpretation='Frozen iSeal registered-secret sentence BLEU >=50 per-sample rule; '
                        'registered200 and held-out100 ordered plaintext hashes verified. '
                        'No new model-level ownership threshold.')
+
+
+def run_scw_detector(spec, model_path, target, project, python, env):
+    from scw_common import fixed_permutation, classify_p_value, CURVE_QUERY_COUNTS
+    d = spec['detector']; generations = target/'generations.jsonl'
+    execute([python, '-B', str(project/'scripts/scw_fresh_generate.py'),
+             '--model', str(model_path), '--label', spec['run_id'],
+             '--output', str(generations), '--eval-jsonl', d['queries'],
+             '--eval-manifest', d['query_manifest']], target, 'generation', env)
+    rows = [json.loads(x) for x in generations.read_text().splitlines() if x.strip()]
+    frozen = [json.loads(x) for x in Path(d['queries']).read_text().splitlines() if x.strip()]
+    assert len(rows) == len(frozen) == 1000
+    for i, (row, original) in enumerate(zip(rows, frozen)):
+        assert row['index'] == i and row['sample_id'] == original['sample_id']
+        assert row['prompt'] == original['instruction']
+        assert hashlib.sha256(row['prompt'].encode()).hexdigest() == row['prompt_sha256']
+        assert row['completion'].strip()
+        assert hashlib.sha256(row['completion'].encode()).hexdigest() == row['completion_sha256']
+    child_env = env.copy()
+    child_env['PYTHONPATH'] = os.pathsep.join([d['official_source']+'/src', str(project/'scripts')])
+    raw_path = target/'detector_raw.json'
+    execute([python, '-B', str(project/'scripts/scw_detector.py'),
+             '--protocol-config', d['protocol_config'], '--official-config', d['official_config'],
+             '--generations', str(generations), '--model', d['canonical_base'],
+             '--output', str(raw_path)], target, 'verification', child_env)
+    raw = json.loads(raw_path.read_text())
+    assert raw['alpha'] == 0.001 and raw['permutation_seed'] == 42
+    assert raw['permutation_indices'] == fixed_permutation(1000, 42)
+    assert [r['n_queries'] for r in raw['curve']] == list(CURVE_QUERY_COUNTS)
+    for r in raw['curve']:
+        assert math.isfinite(r['p_value']) and 0 <= r['p_value'] <= 1
+        assert r['fingerprinted'] == classify_p_value(r['p_value'])
+    assert raw['primary'] == raw['curve'][-1]
+    metrics = dict(p_value=raw['primary']['p_value'], fingerprinted=raw['primary']['fingerprinted'],
+                   query_count=1000)
+    comparison = dict(generations=rows, detector=raw, native_metrics=metrics)
+    persist(target/'detector_comparison_payload.json', comparison)
+    persist(target/'detector_integrity.json', dict(query_count=1000, detector_errors=0,
+        nonfinite_scores=0, frozen_record_order_verified=True, frozen_permutation_verified=True))
+    return dict(native_metrics=metrics, comparison_payload=comparison,
+                detector_decision=metrics['fingerprinted'],
+                interpretation='Frozen SCW primary1000-query statistical detector, alpha0.001; '
+                               'lower p-value is stronger evidence. Historical sampling unchanged.')

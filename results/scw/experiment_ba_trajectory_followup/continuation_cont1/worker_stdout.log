@@ -1,0 +1,8 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 124.67it/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/scw_ba_trajectory_continuation.py", line 156, in <module>
+    main()
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/scw_ba_trajectory_continuation.py", line 100, in main
+    assert args.to_dict() == original, 'TrainingArguments changed'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: TrainingArguments changed

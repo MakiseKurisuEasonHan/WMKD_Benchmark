@@ -1,0 +1,78 @@
+{
+  "time": "2026-09-07T18:33:17.399442+00:00",
+  "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-50",
+  "status": "SHA_PASS_ONLY_RESUME_SEMANTICS_PENDING",
+  "files": [
+    {
+      "path": "chat_template.jinja",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "config.json",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "generation_config.json",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "optimizer.pt",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "rng_state.pth",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "scheduler.pt",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes_match": true,
+      "sha_match": true
+    },
+    {
+      "path": "training_args.bin",
+      "bytes_match": true,
+      "sha_match": true
+    }
+  ],
+  "global_step": 50
+}

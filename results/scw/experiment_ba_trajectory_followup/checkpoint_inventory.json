@@ -1,0 +1,84 @@
+[
+  {
+    "step": 25,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25",
+    "retained": true,
+    "evidence_manifest_sha256": "c0905413f14eeab8c76e3d4a1da28fa7e48cedc5aae95d909c66807f3231ca28"
+  },
+  {
+    "step": 50,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-50",
+    "retained": false,
+    "evidence_manifest_sha256": "78f91304f24f39f73322eb61d8fe6a3aa16e74f2a6ffdf55aeddf8095cff1146",
+    "recovered_after_parent_exit": true,
+    "deleted_at": "2026-09-07T19:09:49.641864+00:00",
+    "released_logical_bytes": 19294060523,
+    "reason": "Newer resumable checkpoint and permanent detector evidence verified"
+  },
+  {
+    "step": 100,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-100",
+    "retained": false,
+    "evidence_manifest_sha256": "0225a09e5acf2c258c0984ec149715178be562ae7a4b49652c3c223ffceaa5b8",
+    "deleted_at": "2026-09-07T19:23:04.817388+00:00",
+    "released_logical_bytes": 19294061241,
+    "reason": "Newer resumable checkpoint and permanent detector evidence verified"
+  },
+  {
+    "step": 250,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250",
+    "retained": true,
+    "evidence_manifest_sha256": "c909d65f1646052ab9dc9a7fea49336215f88df8fc182a13ea66fa82abadcccf"
+  },
+  {
+    "step": 500,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-500",
+    "retained": false,
+    "evidence_manifest_sha256": "b296080941cc2d7bc61d6f953ec6cc181eb563e431b7570336da33922b4e19ed",
+    "deleted_at": "2026-09-08T00:31:28.795294+00:00",
+    "released_logical_bytes": 19294067121,
+    "reason": "Newer resumable checkpoint and permanent detector evidence verified"
+  },
+  {
+    "step": 1000,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-1000",
+    "retained": false,
+    "evidence_manifest_sha256": "e44ba803710e115bce65f620ead7988e809f14f9d95856b91df71afae091e4b9",
+    "deleted_at": "2026-09-08T00:48:46.625628+00:00",
+    "released_logical_bytes": 19294074478,
+    "reason": "Newer resumable checkpoint and permanent detector evidence verified"
+  },
+  {
+    "step": 2000,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-2000",
+    "retained": false,
+    "evidence_manifest_sha256": "92df13ee8377fe2b527b84f7476cbf6faf37189aaf61c300c24344b7971f411c",
+    "deleted_at": "2026-09-08T01:10:22.643523+00:00",
+    "released_logical_bytes": 19294089279,
+    "reason": "Newer resumable checkpoint and permanent detector evidence verified"
+  },
+  {
+    "step": 4000,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-4000",
+    "retained": false,
+    "evidence_manifest_sha256": "fd6c1df5b7d893250341f9c66806100d563fff19a61d676a5f4e8c45068837bc",
+    "deleted_at": "2026-09-08T01:31:53.059578+00:00",
+    "released_logical_bytes": 19294119099,
+    "reason": "Newer resumable checkpoint and permanent detector evidence verified"
+  },
+  {
+    "step": 6000,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-6000",
+    "retained": false,
+    "evidence_manifest_sha256": "44824a4297af5fe1e01e1ca989c419731cf914ec6dbe07995e77195c9edbf1a4",
+    "deleted_at": "2026-09-08T01:51:09.427228+00:00",
+    "released_logical_bytes": 19294149346,
+    "reason": "Newer resumable checkpoint and permanent detector evidence verified"
+  },
+  {
+    "step": 7500,
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-7500",
+    "retained": true,
+    "evidence_manifest_sha256": "0ef0ca97fd6fed5e789a9b549839997687bddec42f1371c15d0154cdf2a51bc9"
+  }
+]

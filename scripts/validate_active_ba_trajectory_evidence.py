@@ -21,7 +21,7 @@ def sha(path):
 
 def validate(root, partial=False):
     spec = read(root / 'run_spec.json')
-    assert spec['method_key'] in ('evertracer', 'ctcc', 'iseal'), 'Method-specific validator must be audited first'
+    assert spec['method_key'] in ('evertracer', 'ctcc', 'iseal', 'scw'), 'Method-specific validator must be audited first'
     points = read(root / 'trajectory.json')
     steps = spec['checkpoint_steps'][:len(points)] if partial else spec['checkpoint_steps']
     assert [p['step'] for p in points] == steps and steps[0] == 0
@@ -50,6 +50,37 @@ def validate(root, partial=False):
             assert integrity['query_count'] == 300 and integrity['equality_rule_recomputed']
             assert p['detector_errors'] == p['invalid_samples'] == integrity['detector_errors'] == 0
             assert p['rng_unchanged_after_detector'] and p['continuous_in_memory_optimizer_scheduler']
+        elif spec['method_key'] == 'scw':
+            from scw_common import fixed_permutation, classify_p_value, CURVE_QUERY_COUNTS
+            raw = read(d / 'detector_raw.json')
+            rows = [json.loads(x) for x in (d / 'generations.jsonl').read_text().splitlines()]
+            baseline = [json.loads(x) for x in (root / 'checkpoints/step_000000/generations.jsonl').read_text().splitlines()]
+            assert len(rows) == len(baseline) == p['query_count'] == 1000
+            for i, (r, base) in enumerate(zip(rows, baseline)):
+                assert r['index'] == i
+                assert all(r[k] == base[k] for k in ('sample_id', 'prompt', 'prompt_sha256'))
+                assert hashlib.sha256(r['prompt'].encode()).hexdigest() == r['prompt_sha256']
+                assert r['completion'].strip()
+                assert hashlib.sha256(r['completion'].encode()).hexdigest() == r['completion_sha256']
+            assert raw['alpha'] == 0.001 and raw['permutation_seed'] == 42
+            assert raw['permutation_indices'] == fixed_permutation(1000, 42)
+            assert [x['n_queries'] for x in raw['curve']] == list(CURVE_QUERY_COUNTS)
+            for r in raw['curve']:
+                assert math.isfinite(r['p_value']) and 0 <= r['p_value'] <= 1
+                assert r['fingerprinted'] == classify_p_value(r['p_value'])
+            assert raw['primary'] == raw['curve'][-1]
+            assert raw['primary']['p_value'] == p['p_value']
+            assert raw['primary']['fingerprinted'] == p['fingerprinted'] == p['detector_decision']
+            integrity = read(d / 'detector_integrity.json')
+            assert p['detector_errors'] == p['invalid_samples'] == integrity['detector_errors'] == 0
+            if p['step'] in (50, 500):
+                assert p['rng_unchanged_after_detector'] is None
+                assert p['continuous_in_memory_optimizer_scheduler'] is False
+                assert p['continuity_note']
+                audit = 'continuation_cpu_audit.json' if p['step'] == 50 else 'step500_continuation_cpu_audit.json'
+                assert read(root / audit)['status'] == 'PASS_CPU_SAMPLER_CHECKPOINT_STATE'
+            else:
+                assert p['rng_unchanged_after_detector'] and p['continuous_in_memory_optimizer_scheduler']
         elif spec['method_key'] == 'iseal':
             raw = read(d / 'detector_raw.json')
             assert raw['detector']['threshold'] == 50.0
@@ -94,11 +125,24 @@ def validate(root, partial=False):
             root / f"checkpoints/step_{steps[-1]:06d}/detector_comparison_payload.json")
         summary = read(root / 'training_summary.json')
         assert summary['global_step'] == steps[-1] and summary['dataset_fetches'] == 60000
-        fetches = [json.loads(x) for x in (root / 'sample_fetch_order.jsonl').read_text().splitlines()]
+        order_path = root / summary.get('sample_order_file', 'sample_fetch_order.jsonl')
+        fetches = [json.loads(x) for x in order_path.read_text().splitlines()]
+        if spec['method_key'] == 'scw':
+            old = [json.loads(x) for x in (root / 'sample_fetch_order.jsonl').read_text().splitlines()]
+            cont3 = [json.loads(x) for x in (root / 'continuation_cont3/sample_fetch_order.jsonl').read_text().splitlines()]
+            cont4 = [json.loads(x) for x in (root / 'continuation_cont4/sample_fetch_order.jsonl').read_text().splitlines()]
+            assert len(old) == 408 and len(cont3) == 3608
+            assert fetches == old[:400] + cont3[:3600] + cont4
+            assert old[400:] == cont3[:8] and cont3[3600:] == cont4[:8]
+            for name, step in [('continuation_cont3', 50), ('continuation_cont4', 500)]:
+                gate = read(root / name / 'before_first_update_gate.json')
+                assert gate['status'] == 'PASS' and gate['global_step'] == step
+                assert gate['rng_exact'] and gate['optimizer_scheduler_restored'] and gate['sampler_prefix_exact']
+
         assert [x['fetch'] for x in fetches] == list(range(60000))
         for epoch in range(3):
             assert sorted(x['row_index'] for x in fetches[epoch * 20000:(epoch + 1) * 20000]) == list(range(20000))
-        assert sha(root / 'sample_fetch_order.jsonl') == summary['sample_order_sha256']
+        assert sha(order_path) == summary['sample_order_sha256']
         assert all(x['generated_text'].strip() and x['generated_ids'] for x in read(root / 'generation_sanity.json'))
     return {'status': 'PASS', 'method': spec['method'], 'partial': partial, 'steps': steps,
         'sha256': {name: sha(root / name) for name in ('trajectory.json', 'trajectory.csv', 'plotting_ready.csv')}}

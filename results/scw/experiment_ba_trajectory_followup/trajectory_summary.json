@@ -1,0 +1,51 @@
+{
+  "run_id": "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+  "required_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "measured_steps": [
+    0,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    6000,
+    7500
+  ],
+  "complete": true,
+  "historical_reference_only": {
+    "base": {
+      "n_queries": 1000,
+      "p_value": 0.9199569225311279,
+      "fingerprinted": false,
+      "supplementary": false
+    },
+    "teacher": {
+      "n_queries": 1000,
+      "p_value": 0.0,
+      "fingerprinted": true,
+      "supplementary": false
+    },
+    "student": {
+      "n_queries": 1000,
+      "p_value": 0.8440861701965332,
+      "fingerprinted": false,
+      "supplementary": false
+    }
+  },
+  "scientific_pattern": "PENDING_POST_RUN_ANALYSIS"
+}

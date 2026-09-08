@@ -1,0 +1,23 @@
+{
+  "time": "2026-09-07T19:43:31.620156+00:00",
+  "status": "BLOCKED_APPROVAL_REVIEW",
+  "step": 500,
+  "original_error": "torch.OutOfMemoryError: detector allocation24.13GiB,free22.54GiB; parent56.23GiB",
+  "worker_exit_code": 1,
+  "completed_points": [
+    0,
+    25,
+    50,
+    100,
+    250
+  ],
+  "step500_generations": 1000,
+  "checkpoint500_preserved": true,
+  "rejected_action": "Run unchanged frozen SCW statistical detector on existing1000 step500 generations after parent exit",
+  "rejection_count": 2,
+  "latest_authorization_presented": "overnight_authorization_20260907.txt lines418-432 and746",
+  "review_reason": "Reviewer continues to apply older detector-error no-auto-repair instruction",
+  "scientific_change_requested": false,
+  "no_retry_executed": true,
+  "requested_scope": "Approve existing-generation frozen detector retry; unused GPU cache release and verified checkpoint500 continuation only; no from-scratch retraining"
+}
