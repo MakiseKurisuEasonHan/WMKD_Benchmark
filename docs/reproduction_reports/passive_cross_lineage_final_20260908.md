@@ -1,6 +1,6 @@
 # Passive Cross-Lineage Ba/Bb final scientific comparison
 
-Ba and Bb each completed one fresh Qwen full-parameter training: 20k, 3 epochs, 7500 updates, BF16, LR1e-5, batch8, seed42. Bb uses frozen paraphrased_answer only; never resumed Ba. Qwen revision 8f4992eda43eea7c770690ddc0de8f732da246f5. Ba Git closed in 8a0871c8; Bb Git closure pending. Model uploads NOT_STARTED, preferred-retention classification not inferred from detector positives.
+Ba and Bb each completed one fresh Qwen full-parameter training: 20k, 3 epochs, 7500 updates, BF16, LR1e-5, batch8, seed42. Bb uses frozen paraphrased_answer only; never resumed Ba. Qwen revision 8f4992eda43eea7c770690ddc0de8f732da246f5. Ba Git closed in 8a0871c8; Bb scientific Git closure: 341884d3c874b3949699c13f2f1dd02f832d60cb. Both final Students are preferred retained artifacts by explicit user scientific decision; both PRIVATE ModelScope archives independently verified. This classification does not claim causal watermark transfer.
 
 ## Measured detectors
 
@@ -37,3 +37,10 @@ Ba and Bb each completed one fresh Qwen full-parameter training: 20k, 3 epochs, 
 Raw detector arrays/generations and utility samples permanently retained under results/passive_cross_lineage/bb and in evidence archive. ARC 1172 and MC2 817 raw samples verified. LLMPrint 200 pair order verified; ZeroPrint 200 unique input/repeat pairs and frozen seed/prompt order verified. Final weight SHA matches checkpoint7500. Same-lineage references come from results/passive5_shared_ba/detector_summary.json and results/passive5_shared_bb3/detector_summary.json with SHA in master JSON. Clean Llama was not separately reevaluated in this campaign; its column is explicitly unmeasured rather than copied from Teacher.
 
 Active Bb/Bb2 trajectories remain paused. No retraining, new watermark, cleanup or shutdown performed.
+
+## Verified final archives
+
+- ba: MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Ba-Student; immutable revision da51d39a060ec3ef15f1aa9b84ffc43288202050; 16 files, 6187855464 bytes; ARCHIVE_SHA256=cb622ff18928b69a4e811ec01bd0f7688afd1a929b668b166dc1b08dd93377ab. Fresh independent download: all sizes and SHA match.
+- bb: MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Bb-Student; immutable revision 5f8d9c36f1e127ea265368ebcd9aa567815f62da; 16 files, 6187855466 bytes; ARCHIVE_SHA256=77405117245d1654c84aff637b52be3f2449fa744095104223d945dfbafd35fb. Fresh independent download: all sizes and SHA match.
+
+ARCHIVE_SHA256 is the SHA256 of SHA256SUMS, which binds the individual files and provenance manifest. Original AutoDL final models remain retained. Account inventory before upload: 21 repositories and 47 weight files, no duplicate matching final weights. Exact utility deltas remain in comparison/final_utility_comparison.json and each archive manifest. No new experiment, cleanup or shutdown.

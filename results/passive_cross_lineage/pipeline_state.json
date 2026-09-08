@@ -1,18 +1,18 @@
 {
-  "status": "BB_SCIENTIFIC_COMPLETE_GIT_CLOSURE_PENDING",
+  "status": "ARCHIVES_VERIFIED_FINAL_GIT_PENDING",
   "active_bb_trajectories": "PAUSED_BY_USER",
   "auto_shutdown": false,
   "student": "Qwen/Qwen2.5-3B-Instruct",
   "authorization_sha256": "74593105b80abd97c656f33d38723ab0ebdf11a6abd1426cd776f6b7f23bead5",
   "scientific_execution_started": true,
-  "current_action": "FINAL_COMPARISON_AND_GIT_CLOSURE",
+  "current_action": "FINAL_ARCHIVE_RECEIPT_GIT_CLOSURE",
   "model_identity": "PASS",
   "modelscope_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
   "dataset_sha": "PASS_BA_AND_BB_EXACT_20000",
   "formatter": "PASS_ZERO_TRUNCATION_ZERO_EMPTY_SUPERVISION",
   "detector_applicability": "RUNTIME_VALIDATED_FIVE_BASELINE",
   "calibration_limitation": "Qwen included in frozen calibration negatives; baseline not held-out",
-  "next_action": "Lightweight Git closure; explicit preferred artifact classification before any model upload",
+  "next_action": "Git archive receipts then remove temporary follow-up; no new experiment or shutdown",
   "training_started": true,
   "active_worker": null,
   "llmprint_baseline": "COMPLETE_136_OF_200_NEGATIVE",
@@ -27,5 +27,15 @@
   "evidence_transfer": "VERIFIED",
   "ba_closure": "COMPLETE",
   "ba_git_commit": "8a0871c8af162503cb7073a87134e8b054a0512f",
-  "bb_science": "COMPLETE"
+  "bb_science": "COMPLETE",
+  "bb_closure": "COMPLETE",
+  "bb_git_commit": "341884d3c874b3949699c13f2f1dd02f832d60cb",
+  "preferred_final_models": {
+    "ba": true,
+    "bb": true
+  },
+  "modelscope": {
+    "ba": "COMPLETE",
+    "bb": "COMPLETE"
+  }
 }

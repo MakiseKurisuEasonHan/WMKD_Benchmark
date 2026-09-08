@@ -3,7 +3,10 @@
   "git_status": "PENDING",
   "detectors": "5_COMPLETE_VALIDATED",
   "utility": "COMPLETE_VALIDATED",
-  "modelscope": "NOT_STARTED",
-  "preferred_artifact_status": "AWAITING_EXPLICIT_RETENTION_CLASSIFICATION",
-  "no_causal_transfer_claim": true
+  "modelscope": "COMPLETE",
+  "no_causal_transfer_claim": true,
+  "preferred_final_model": true,
+  "archive_sha256": "77405117245d1654c84aff637b52be3f2449fa744095104223d945dfbafd35fb",
+  "remote_revision": "5f8d9c36f1e127ea265368ebcd9aa567815f62da",
+  "archive_receipt_git_status": "PENDING"
 }

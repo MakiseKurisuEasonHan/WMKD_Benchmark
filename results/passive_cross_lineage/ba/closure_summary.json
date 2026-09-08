@@ -59,9 +59,12 @@
     "arc_challenge_acc_norm": 0.07423208191126285,
     "truthfulqa_mc2_acc": -0.0798409393006182
   },
-  "preferred_final_artifact": "PENDING_CAMPAIGN_RETENTION_DECISION",
-  "modelscope": "NOT_STARTED",
+  "modelscope": "COMPLETE",
   "interpretation_boundary": "Cross-Lineage Ba changes some scores sufficiently to cross historical thresholds. Qwen participated in calibration; detector positive does not prove causal transfer.",
   "updated_at": "2026-09-08T04:58:22.345509+00:00",
-  "git_closure_gate": "Require containing commit pushed and AutoDL synced before Bb"
+  "git_closure_gate": "Require containing commit pushed and AutoDL synced before Bb",
+  "preferred_final_model": true,
+  "archive_sha256": "cb622ff18928b69a4e811ec01bd0f7688afd1a929b668b166dc1b08dd93377ab",
+  "remote_revision": "da51d39a060ec3ef15f1aa9b84ffc43288202050",
+  "archive_receipt_git_status": "PENDING"
 }

@@ -102,7 +102,7 @@
       "full_log_sha256": "6691fca531d7929c0fcb87c6cc7029425fc8bfe45b836dd5a1f5ce893a7c7303",
       "final_model_manifest": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb",
       "modelscope_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
-      "scientific_status": "A6 COMPLETE — PREFERRED TEACHER SELECTED",
+      "scientific_status": "A6 COMPLETE \u2014 PREFERRED TEACHER SELECTED",
       "watermark_evaluation_available": false,
       "utility_available": true,
       "checkpoint_localization_support": false,
@@ -739,10 +739,14 @@
       "experiment": "ba",
       "run_id": "passive_cross_lineage_ba_20260908",
       "full_log_path": "results/passive_cross_lineage/ba/full_experiment_log.json",
-      "full_log_sha256": "598df36853f0c792a0ea728077aed4dda8fde86d5a79f92aa159a2452e00a98a",
+      "full_log_sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
       "scientific_status": "COMPLETE",
       "watermark_evaluation_available": true,
-      "utility_available": true
+      "utility_available": true,
+      "preferred_final_model": true,
+      "modelscope_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Ba-Student",
+      "modelscope_revision": "da51d39a060ec3ef15f1aa9b84ffc43288202050",
+      "modelscope_verified": true
     },
     {
       "method": "Passive-5 Cross-Lineage",
@@ -750,10 +754,14 @@
       "experiment": "bb",
       "run_id": "passive_cross_lineage_bb_20260908",
       "full_log_path": "results/passive_cross_lineage/bb/full_experiment_log.json",
-      "full_log_sha256": "a0394bea5be054c638adebd48ffc2885b70701afab4ce3bc8fe7329bcb671d90",
+      "full_log_sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
       "scientific_status": "COMPLETE",
       "watermark_evaluation_available": true,
-      "utility_available": true
+      "utility_available": true,
+      "preferred_final_model": true,
+      "modelscope_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Bb-Student",
+      "modelscope_revision": "5f8d9c36f1e127ea265368ebcd9aa567815f62da",
+      "modelscope_verified": true
     }
   ]
 }
