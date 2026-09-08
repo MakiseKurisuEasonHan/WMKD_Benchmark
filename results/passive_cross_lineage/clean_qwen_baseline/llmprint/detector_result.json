@@ -1,0 +1,13 @@
+{
+  "method": "LLMPrint",
+  "role": "clean_qwen_baseline",
+  "status": "COMPLETE",
+  "matched_bits": 136,
+  "total": 200,
+  "bit_accuracy": 0.68,
+  "threshold": 0.7150049776126003,
+  "detected": false,
+  "errors": [],
+  "calibration": "frozen; Qwen belongs to historical calibration panel, not held-out",
+  "model_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5"
+}

@@ -1,0 +1,189 @@
+{
+  "initialization": {
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "transport": "ModelScope official existing local snapshot",
+    "modelscope_git_commit": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+    "resolved_by": "git ls-remote official repository plus pinned-commit files API SHA equality",
+    "local_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "files": [
+      {
+        "path": "config.json",
+        "pass": true,
+        "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+      },
+      {
+        "path": "configuration.json",
+        "pass": true,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "path": "generation_config.json",
+        "pass": true,
+        "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9"
+      },
+      {
+        "path": "LICENSE",
+        "pass": true,
+        "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9"
+      },
+      {
+        "path": "merges.txt",
+        "pass": true,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "pass": true,
+        "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "pass": true,
+        "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "pass": true,
+        "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56"
+      },
+      {
+        "path": "README.md",
+        "pass": true,
+        "sha256": "2c74693e6ae36ba878124d465195b4dad0f71035b54ece1c9fd1553cc497ef8c"
+      },
+      {
+        "path": "tokenizer.json",
+        "pass": true,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "pass": true,
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+      },
+      {
+        "path": "vocab.json",
+        "pass": true,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "status": "PASS",
+    "new_weight_download": false,
+    "quantized": false
+  },
+  "trained_final": {
+    "status": "PASS",
+    "checkpoint7500_weights_equal": true,
+    "files": [
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/added_tokens.json",
+        "bytes": 605,
+        "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/chat_template.jinja",
+        "bytes": 2507,
+        "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/config.json",
+        "bytes": 1500,
+        "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/generation_config.json",
+        "bytes": 243,
+        "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/merges.txt",
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/model-00001-of-00002.safetensors",
+        "bytes": 4957560304,
+        "sha256": "c6d07995704c38936fcfa204e46a9e25643c1b2de5fc31253cc060a47ff310df"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/model-00002-of-00002.safetensors",
+        "bytes": 1214366696,
+        "sha256": "9172a77162f9a0f9855320c9ecde2da112e07cd8aece91284f14ea86b8f372f3"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/model.safetensors.index.json",
+        "bytes": 35617,
+        "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/special_tokens_map.json",
+        "bytes": 499,
+        "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/tokenizer.json",
+        "bytes": 11421995,
+        "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/tokenizer_config.json",
+        "bytes": 4686,
+        "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/training_args.bin",
+        "bytes": 5969,
+        "sha256": "cda89ce485ebe296bb93cb8e9d616cbd8fac1d2c7ec32da5f4449435fc2aae11"
+      },
+      {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model/vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ]
+  },
+  "launch": {
+    "run_id": "passive_cross_lineage_ba_20260908",
+    "command": [
+      "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+      "-B",
+      "-u",
+      "/root/autodl-tmp/WMKD_Benchmark/scripts/train_distillation_student.py",
+      "--model-path",
+      "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+      "--dataset",
+      "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/dataset/frozen_qa.jsonl",
+      "--output-dir",
+      "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training",
+      "--batch-size",
+      "8",
+      "--epochs",
+      "3",
+      "--learning-rate",
+      "1e-5",
+      "--seed",
+      "42",
+      "--max-length",
+      "1024",
+      "--telemetry",
+      "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/ba/training_summary.json"
+    ],
+    "model_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+    "model_all_sha": "PASS",
+    "dataset_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+    "dataset_records": 20000,
+    "source_script_sha256": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+    "protocol_sha256": "b281583f5d75337d417dc654915c634055e7e5ffae968e4a5711efe4c87cc918",
+    "expected_optimizer_steps": 7500,
+    "fresh_initialization": true,
+    "resume": false,
+    "seed": 42,
+    "free_disk_bytes": 87913992192,
+    "storage_budget": "65GiB gate includes checkpoint rotation overlap and final6GiB; baseline output retained",
+    "created_at": "2026-09-08T03:39:18.124320+00:00",
+    "supervisor_pid": 46400
+  },
+  "full_parameter": true,
+  "no_resume_contamination": true,
+  "fresh_reload_evidence": "five detector result files and utility/evaluation_config.json"
+}

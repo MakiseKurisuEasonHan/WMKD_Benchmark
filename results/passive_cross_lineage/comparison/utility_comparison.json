@@ -1,0 +1,101 @@
+{
+  "clean_qwen": {
+    "status": "COMPLETE",
+    "role": "clean_qwen_baseline",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "fresh_process_reload": true,
+    "arc_challenge_acc_norm": 0.4402730375426621,
+    "truthfulqa_mc2_acc": 0.5712170418936038,
+    "raw_results": {
+      "arc_challenge": {
+        "alias": "arc_challenge",
+        "acc,none": 0.4274744027303754,
+        "acc_stderr,none": 0.014456862944650647,
+        "acc_norm,none": 0.4402730375426621,
+        "acc_norm_stderr,none": 0.014506769524804237
+      },
+      "truthfulqa_mc2": {
+        "alias": "truthfulqa_mc2",
+        "acc,none": 0.5712170418936038,
+        "acc_stderr,none": 0.016178694836353032
+      }
+    },
+    "errors": [],
+    "completed_at": "2026-09-08T04:49:21.457927+00:00"
+  },
+  "cross_lineage_ba": {
+    "status": "COMPLETE",
+    "role": "ba",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model",
+    "fresh_process_reload": true,
+    "arc_challenge_acc_norm": 0.514505119453925,
+    "truthfulqa_mc2_acc": 0.4913761025929856,
+    "raw_results": {
+      "arc_challenge": {
+        "alias": "arc_challenge",
+        "acc,none": 0.4786689419795222,
+        "acc_stderr,none": 0.014598087973127106,
+        "acc_norm,none": 0.514505119453925,
+        "acc_norm_stderr,none": 0.014605241081370053
+      },
+      "truthfulqa_mc2": {
+        "alias": "truthfulqa_mc2",
+        "acc,none": 0.4913761025929856,
+        "acc_stderr,none": 0.015396499199913706
+      }
+    },
+    "errors": [],
+    "completed_at": "2026-09-08T04:50:32.045175+00:00"
+  },
+  "ba_minus_clean": {
+    "arc_challenge_acc_norm": 0.07423208191126285,
+    "truthfulqa_mc2_acc": -0.0798409393006182
+  },
+  "canonical_llama_teacher_reference": {
+    "metrics": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+      "arc_challenge_acc_norm": 0.4462457337883959,
+      "truthfulqa_mc2_acc": 0.5056865097575013,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.44880546075085326,
+          "acc_stderr,none": 0.014534599585097566,
+          "acc_norm,none": 0.4462457337883959,
+          "acc_norm_stderr,none": 0.014526705548539947
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.5056865097575013,
+          "acc_stderr,none": 0.015803403918647336
+        }
+      }
+    },
+    "source": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_a_summary.json",
+    "source_sha256": "9755e128e4a7da52fd0475dc6226eec04ac1734ca1541c5e9a03d4ac0f98592d",
+    "note": "Canonical unmodified Llama Base is shared passive Teacher; not EverTracer watermarked Teacher"
+  },
+  "same_lineage_ba": {
+    "metrics": {
+      "arc_challenge_acc_norm": 0.4974402730375427,
+      "truthfulqa_mc2_acc": 0.4755413056783935,
+      "raw_results": {
+        "arc_challenge": {
+          "alias": "arc_challenge",
+          "acc,none": 0.4658703071672355,
+          "acc_stderr,none": 0.014577311315231106,
+          "acc_norm,none": 0.4974402730375427,
+          "acc_norm_stderr,none": 0.014611199329843784
+        },
+        "truthfulqa_mc2": {
+          "alias": "truthfulqa_mc2",
+          "acc,none": 0.4755413056783935,
+          "acc_stderr,none": 0.015230687782768966
+        }
+      }
+    },
+    "source": "/root/autodl-tmp/WMKD_Benchmark/results/passive5_shared_ba/utility_results.json",
+    "source_sha256": "9a33cb147aa87f77b27f1a39eddefdf6851fc0a3df8c754d39c429443c1d50df"
+  },
+  "interpretation": "ARC improves while TruthfulQA MC2 decreases by about7.98percentage points; do not claim unchanged utility or assign all score changes to collapse."
+}

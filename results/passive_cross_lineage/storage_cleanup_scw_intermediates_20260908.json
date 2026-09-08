@@ -1,0 +1,150 @@
+{
+  "status": "COMPLETE",
+  "timestamp": "2026-09-08T03:37:53.531615+00:00",
+  "authorization": "user explicitly approved storage cleanup and prior attachment section13",
+  "evidence_closure_sha": "PASS",
+  "final_retained": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-7500",
+  "final_verified_files": [
+    "config.json",
+    "generation_config.json",
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors",
+    "model.safetensors.index.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "trainer_state.json"
+  ],
+  "resume_dependency": false,
+  "reason": "SCW Ba fully COMPLETE at7500; obsolete intermediate25/250; no current training",
+  "inventory": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25",
+      "files": [
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/config.json",
+          "bytes": 874
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/generation_config.json",
+          "bytes": 184
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/model-00001-of-00002.safetensors",
+          "bytes": 4965799096
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/model-00002-of-00002.safetensors",
+          "bytes": 1459729952
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/model.safetensors.index.json",
+          "bytes": 20955
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/chat_template.jinja",
+          "bytes": 3827
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/tokenizer_config.json",
+          "bytes": 50554
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/special_tokens_map.json",
+          "bytes": 325
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/tokenizer.json",
+          "bytes": 17210019
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/training_args.bin",
+          "bytes": 5969
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/optimizer.pt",
+          "bytes": 12851221159
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/scheduler.pt",
+          "bytes": 1465
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/rng_state.pth",
+          "bytes": 14645
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-25/trainer_state.json",
+          "bytes": 1064
+        }
+      ],
+      "bytes": 19294060088
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250",
+      "files": [
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/config.json",
+          "bytes": 874
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/generation_config.json",
+          "bytes": 184
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/model-00001-of-00002.safetensors",
+          "bytes": 4965799096
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/model-00002-of-00002.safetensors",
+          "bytes": 1459729952
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/model.safetensors.index.json",
+          "bytes": 20955
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/chat_template.jinja",
+          "bytes": 3827
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/tokenizer_config.json",
+          "bytes": 50554
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/special_tokens_map.json",
+          "bytes": 325
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/tokenizer.json",
+          "bytes": 17210019
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/training_args.bin",
+          "bytes": 5969
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/optimizer.pt",
+          "bytes": 12851221159
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/scheduler.pt",
+          "bytes": 1465
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/rng_state.pth",
+          "bytes": 14645
+        },
+        {
+          "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_trajectory/scw_ba_trajectory_followup_20260907_reconstructed_parent/training/checkpoint-250/trainer_state.json",
+          "bytes": 4426
+        }
+      ],
+      "bytes": 19294063450
+    }
+  ],
+  "free_before": 49325793280,
+  "released_logical_bytes": 38588123538,
+  "free_after": 87913992192,
+  "completed_at": "2026-09-08T03:37:53.562152+00:00"
+}

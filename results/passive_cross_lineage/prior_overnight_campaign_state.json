@@ -1,0 +1,41 @@
+{
+  "status": "SCW_BA_RUNNING_CONT4",
+  "authorization": "overnight_authorization_20260907.txt",
+  "automation_id": "ba-trajectory",
+  "order": [
+    "evertracer_ba",
+    "ctcc_ba",
+    "iseal_ba",
+    "scw_ba",
+    "pnfp_bb",
+    "evertracer_bb",
+    "ctcc_bb2",
+    "iseal_bb",
+    "scw_bb"
+  ],
+  "completed": [
+    "pnfp_ba",
+    "evertracer_ba",
+    "ctcc_ba",
+    "iseal_ba"
+  ],
+  "current_run_id": "scw_ba_trajectory_followup_20260907_reconstructed_parent",
+  "strict_serial": true,
+  "green_repair": "MINIMAL_NO_SCIENTIFIC_CHANGE_RELIABLE_CONTINUATION_ONLY",
+  "red_blocker": "RECORD_AND_CONTINUE_INDEPENDENT_RUNNABLE",
+  "archive": "AFTER_ALL_RUNNABLE_TRAJECTORIES_FINAL_NECESSARY_PREFERRED_ONLY",
+  "shutdown_authorized": true,
+  "shutdown_gate": "ALL_RUNNABLE_CLOSED_OR_BLOCKERS_EXHAUSTED_AND_ARCHIVE_GIT_PROCESS_AUDIT_PASS",
+  "shutdown_requested": false,
+  "evertracer_independent_validation": "PASS_11_POINTS_FINAL_RELOAD_CSV_SHA_SAMPLER",
+  "evidence_sync": "COMPLETE_LOCAL_VALIDATION_PASS",
+  "next_action": "Finish SCW Ba11points and closure, then PNFP Bb",
+  "git_closure": "df3c87441224dc93f87988c5f9f548c4dde99b9f",
+  "worker_pid": 38358,
+  "active_runtime_state": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_ba_trajectory_followup/runtime_state.json",
+  "recovery": "FOUR_BA_CLOSED_NO_RESTART_SCW_NEW_AUTHORIZED_RUN",
+  "remaining_generation_pid": null,
+  "supervisor_pid": 38357,
+  "continuation_gate": "PASS_CHECKPOINT500_RNG_OPTIMIZER_SCHEDULER_SAMPLER",
+  "resume_authorization": "resume_authorization_20260908.json"
+}

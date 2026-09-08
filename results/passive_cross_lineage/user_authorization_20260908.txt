@@ -1,0 +1,649 @@
+现在调整 WMKD_Benchmark 的实验优先级。
+
+先暂停原计划中的 active-watermark Bb checkpoint trajectory。
+不要继续：
+- PN-FP Bb trajectory
+- EverTracer Bb trajectory
+- CTCC Bb2 trajectory
+- iSeal Bb trajectory
+- SCW Bb trajectory
+
+保留所有已经完成的 Ba trajectory 与当前 SCW Ba trajectory evidence，不删除、不覆盖。
+
+新的优先任务：
+
+==================================================
+PASSIVE CROSS-LINEAGE EXPERIMENT
+==================================================
+
+目标：
+
+验证 passive fingerprints 在原 same-lineage setting 下表现很强，
+是否主要来自 shared pretrained initialization / model lineage，
+而不是 Teacher fingerprint 通过 behavioral distillation 被真正传递。
+
+Teacher 仍使用 canonical：
+
+meta-llama/Llama-3.2-3B-Instruct
+
+revision:
+0cb88a4f764b7a12671c53f0838cd831a0843b95
+
+Student 改为不同源、近似同规模模型：
+
+Qwen/Qwen2.5-3B-Instruct
+
+要求：
+- 从 ModelScope 官方 Qwen repo 获取
+- full non-quantized Safetensors
+- 不使用 GGUF / GPTQ / AWQ / Int4 / quantized 版本
+- 记录 exact ModelScope revision / commit / file SHA
+- 下载前后做 manifest / SHA / tokenizer / config validation
+- 优先 ModelScope，不使用 Hugging Face，除非 ModelScope 无法可靠获得且需明确记录
+
+学校 VPN：关闭
+
+AutoDL:
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+项目：
+/root/autodl-tmp/WMKD_Benchmark
+
+数据：
+/root/autodl-tmp/WMKD_Benchmark_data
+
+==================================================
+1. 今次只训练两个 Qwen Student
+==================================================
+
+严格串行：
+
+A. Passive Cross-Lineage Ba
+B. Passive Cross-Lineage Bb
+
+不要为 5 个 passive detectors 分别训练 Student。
+
+一个 Ba Qwen Student 供全部 5 个 detector 共用。
+
+一个 Bb Qwen Student 供全部 5 个 detector 共用。
+
+即：
+
+Qwen Ba Student
+  ├─ LLMPrint
+  ├─ REEF
+  ├─ HuRef
+  ├─ AWM
+  └─ ZeroPrint
+
+Qwen Bb Student
+  ├─ LLMPrint
+  ├─ REEF
+  ├─ HuRef
+  ├─ AWM
+  └─ ZeroPrint
+
+==================================================
+2. Cross-Lineage Ba 定义
+==================================================
+
+Teacher:
+canonical watermarked / shared passive Teacher source protocol
+仍沿用原 passive shared Ba 使用的 Teacher-generated ordinary QA parent。
+
+Student initialization:
+fresh Qwen2.5-3B-Instruct
+
+Ba = direct hard-label behavioral distillation / model extraction
+
+流程：
+
+Llama Teacher
+→ ordinary Teacher-generated 20k QA
+→ fresh Qwen2.5-3B-Instruct
+→ full-parameter SFT
+→ Cross-Lineage Ba Student
+→ evaluate with 5 passive detectors
+
+优先复用已经存在、已经冻结、已经验证 SHA 的原 Shared Ba 20k dataset。
+
+不要重新生成数据，除非 exact frozen dataset 确认永久缺失。
+
+如果原 Shared Ba dataset 存在：
+- 直接复用
+- 验证 record count = 20000
+- 验证 SHA
+- 验证 schema
+- 不修改内容
+
+==================================================
+3. Cross-Lineage Bb 定义
+==================================================
+
+Bb = paraphrased behavioral distillation / model extraction
+
+流程：
+
+same parent ordinary Teacher QA
+→ paraphrased answers
+→ fresh Qwen2.5-3B-Instruct
+→ full-parameter SFT
+→ Cross-Lineage Bb Student
+→ evaluate with 5 passive detectors
+
+优先复用当前已经冻结并验证过的 passive Shared Bb/Bb3 paired20k。
+
+如果 passive-5 历史 Shared Bb 使用统一 paired dataset：
+直接复用该 exact frozen dataset。
+
+不要重新 paraphrase。
+
+如果不同 passive method 历史上使用的是同一个 Shared Bb3 Student：
+必须沿用这个统一 dataset 语义。
+
+注意：
+这次实验名称不要继续叫原 Bb3。
+
+建议新 canonical role：
+
+passive_cross_lineage_ba
+passive_cross_lineage_bb
+
+或：
+
+XBa
+XBb
+
+但不要覆盖现有 Ba/Bb3。
+
+==================================================
+4. Training configuration
+==================================================
+
+目标是尽量保持原 Shared Ba/Bb scientific training configuration，
+只改变 Student model lineage。
+
+原则上保持：
+
+- 20,000 records
+- 3 epochs
+- learning rate = 1e-5
+- effective batch size = 8
+- full-parameter training
+- BF16
+- seed = 42
+- no LoRA
+- no quantization
+- no resume from Llama Student
+- fresh Qwen initialization
+- same Ba/Bb dataset semantics
+
+如果 Qwen tokenizer / chat template 与 Llama 不同：
+必须使用 Qwen 官方 tokenizer / chat template，
+但 Student target answer 内容必须与 frozen dataset 保持一致。
+
+这属于必要 architecture-specific formatting，
+不是科学语义变更。
+
+必须记录：
+
+- Qwen tokenizer class
+- vocab size
+- chat template
+- BOS/EOS/PAD IDs
+- max sequence length
+- truncation count
+- zero-supervision count
+- target token count
+- formatter validation
+
+==================================================
+5. Before training: Cross-Lineage Step-0 baseline
+==================================================
+
+这是本实验非常重要的一部分。
+
+在任何 SFT 前，
+先直接对 fresh clean Qwen2.5-3B-Instruct 跑 passive-5 detectors：
+
+1. LLMPrint
+2. REEF
+3. HuRef
+4. AWM
+5. ZeroPrint
+
+这个 fresh Qwen 结果就是 cross-lineage step-0 baseline。
+
+必须永久保存。
+
+目标是回答：
+
+“一个完全不同 lineage 的 3B Student 在训练前，
+是否已经被这些 passive detectors 判为与 Llama Reference 高度相似？”
+
+特别注意：
+
+如果某 detector 技术上要求 identical architecture / layer shape / tensor dimension，
+不要擅自硬改公式去强行跑。
+
+必须分三类：
+
+SUPPORTED_CROSS_ARCH
+ADAPTABLE_WITH_OFFICIAL_SEMANTICS
+NOT_APPLICABLE_CROSS_ARCH
+
+如果 NOT_APPLICABLE：
+明确说明为什么，
+不要静默改 detector。
+
+==================================================
+6. Passive detector rules
+==================================================
+
+--------------------------------------------------
+LLMPrint
+--------------------------------------------------
+
+复用冻结 fingerprint prompts / suffixes / bits / threshold。
+
+输出：
+- matched bits / 200
+- bit accuracy
+- threshold
+- detected yes/no
+- errors
+
+如果 Qwen tokenizer/architecture 使某些 fingerprint prompt formatting 需要正常 chat adaptation：
+允许使用 Qwen 官方 template，
+但 fingerprint content 不变。
+
+--------------------------------------------------
+REEF
+--------------------------------------------------
+
+复用冻结 probe inputs 与 CKA semantics。
+
+如果 layer indexing 不同：
+必须先判断论文/当前实现是否允许 cross-architecture comparable layer selection。
+
+优先：
+- 最深 comparable normalized layer position
+或
+- 原 detector 明确支持的层定位方式
+
+不能凭感觉选层。
+
+如果 cross-architecture CKA 在现有 frozen detector 语义下不成立：
+标记 NOT_APPLICABLE_CROSS_ARCH。
+
+输出：
+- CKA
+- threshold
+- detected yes/no
+- exact layers used
+- shape alignment rule
+
+--------------------------------------------------
+HuRef
+--------------------------------------------------
+
+首先验证：
+Qwen 是否具有与 HuRef detector 要求一致/可映射的 Wq/Wk/Wv/Wo/Wu/Wd 等结构。
+
+如果官方/当前实现允许 generic Transformer projection mapping：
+按冻结 semantics 做。
+
+如果 HuRef 依赖 Llama-specific exact tensor topology：
+不要硬套 Qwen。
+
+必须明确：
+SUPPORTED / NOT_APPLICABLE
+
+输出：
+- ICS
+- threshold
+- selected layers
+- selected matrices
+- mapping rule
+
+--------------------------------------------------
+AWM
+--------------------------------------------------
+
+检查 Qwen attention projection 结构是否支持冻结 Wq/Wk weight geometry detector。
+
+如果 projection shapes 可合法比较：
+运行官方 CKA semantics。
+
+如果必须改变 detector 数学定义才能适配：
+不允许。
+
+输出：
+- Wq CKA
+- Wk CKA
+- aggregate score
+- threshold
+- detected yes/no
+
+--------------------------------------------------
+ZeroPrint
+--------------------------------------------------
+
+ZeroPrint 更偏 behavior/local-response fingerprint，
+原则上最适合 cross-architecture。
+
+复用：
+- frozen prompts
+- frozen perturbations
+- frozen scoring
+- frozen rescaling
+- frozen threshold
+
+输出：
+- raw Pearson
+- rescaled score
+- threshold
+- detected yes/no
+
+==================================================
+7. Ba training
+==================================================
+
+完成 fresh Qwen step-0 passive detector baseline 后：
+
+训练 Cross-Lineage Ba Student。
+
+必须：
+- fresh Qwen init
+- no resume
+- full parameter
+- frozen Ba20k
+- 3 epochs
+- 7500 optimizer steps if effective batch=8
+- same LR / seed semantics
+
+只运行一个大型 GPU task。
+
+保存：
+- training log
+- trainer state
+- final model
+- full provenance
+- dataset SHA
+- model revision
+- config SHA
+
+完成后 fresh reload。
+
+然后依次运行：
+
+LLMPrint
+REEF
+HuRef
+AWM
+ZeroPrint
+
+记录 final Cross-Lineage Ba results。
+
+==================================================
+8. Bb training
+==================================================
+
+Ba 完全闭环后：
+
+从 fresh clean Qwen2.5-3B-Instruct 重新初始化。
+
+绝对不能从 Cross-Lineage Ba Student 接着训。
+
+使用冻结 paraphrased paired20k 的 paraphrased_answer。
+
+训练 Cross-Lineage Bb Student。
+
+同样：
+- 3 epochs
+- LR 1e-5
+- effective batch 8
+- full parameter
+- BF16
+- seed42
+- fresh Qwen init
+
+完成后 fresh reload。
+
+依次跑：
+
+LLMPrint
+REEF
+HuRef
+AWM
+ZeroPrint
+
+==================================================
+9. Utility
+==================================================
+
+Ba 和 Bb final Student 都跑 final utility：
+
+- ARC-Challenge acc_norm
+- TruthfulQA MC2
+
+另外必须同时报告：
+
+Clean Qwen baseline
+Cross-Lineage Ba Qwen
+Cross-Lineage Bb Qwen
+
+如果已有 Teacher utility，也放入 comparison table。
+
+目的：
+区分 fingerprint变化与 Student utility崩坏。
+
+不要每个训练 checkpoint 跑 utility。
+
+==================================================
+10. Main scientific comparison table
+==================================================
+
+生成：
+
+results/passive_cross_lineage/
+    clean_qwen_baseline/
+    ba/
+    bb/
+    comparison/
+
+最终表：
+
+method
+same-lineage clean Base
+same-lineage Ba
+same-lineage Bb/Bb3
+cross-lineage clean Qwen
+cross-lineage Ba
+cross-lineage Bb
+threshold
+same-lineage detected?
+cross-lineage detected?
+cross-lineage applicability
+interpretation
+
+特别关注：
+
+1. cross-lineage clean Qwen 在训练前是否已经 positive
+2. Ba 后是否增加
+3. Bb 后是否增加
+4. same-lineage 高分是否在 cross-lineage 中消失
+5. 哪些 detector 本身只适用于同架构
+
+==================================================
+11. Scientific interpretation rules
+==================================================
+
+如果出现：
+
+same-lineage Base/high
+same-lineage Ba/high
+cross-lineage Qwen low
+cross-lineage Ba low
+
+则只能说：
+
+“Results support a strong shared-lineage / initialization contribution to passive fingerprint retention.”
+
+不要直接说：
+“证明 passive watermark 完全没被蒸馏传递。”
+
+如果：
+
+cross-lineage clean low
+cross-lineage Ba 显著升高
+
+则说明存在：
+
+“evidence consistent with behavioral distillation inducing partial cross-lineage fingerprint similarity.”
+
+仍不做 universal causal claim。
+
+==================================================
+12. ModelScope
+==================================================
+
+Qwen Base：
+优先 ModelScope 官方 Qwen repository。
+
+下载使用：
+- staging
+- exact revision
+- file manifest
+- SHA validation
+- tokenizer/config validation
+- redownload / provenance where practical
+
+Cross-Lineage Ba/Bb final Student：
+
+全部实验闭环后，
+允许上传 PRIVATE ModelScope。
+
+每个实验最多 ONE final preferred Student。
+
+不要上传：
+- intermediate checkpoint
+- failed model
+- debug model
+- duplicate model
+
+==================================================
+13. Disk management
+==================================================
+
+当前磁盘此前仅剩约 47 GiB。
+
+开始前必须先做 inventory。
+
+允许删除：
+- 已经闭环的 trajectory intermediate full checkpoints
+- cache/tmp
+- 明确可重建且非 canonical artifact
+
+前提：
+- detector trajectory evidence 已永久保存
+- final model 已保留
+- no resume dependency
+
+禁止删除：
+- canonical datasets
+- final models
+- detector assets
+- JSON/CSV evidence
+- provenance
+- reports
+- full logs
+
+Qwen Ba/Bb 训练前必须确保有足够空间。
+
+==================================================
+14. GPU safety
+==================================================
+
+学校 VPN：关闭
+
+每个大型任务前：
+nvidia-smi
+
+确认：
+- no other WMKD large task
+- GPU idle / available
+- no unrelated process conflict
+
+严格串行：
+
+Qwen baseline evaluation
+→ Qwen Ba training
+→ Ba passive-5 evaluation
+→ Qwen Bb training
+→ Bb passive-5 evaluation
+→ utility
+→ closure
+
+==================================================
+15. What NOT to run
+==================================================
+
+当前不要运行：
+
+- active Bb checkpoint trajectories
+- Methods 11–15
+- logit KD Experiment C
+- 200k scale
+- new watermark reproduction
+- passive same-lineage retraining
+- passive checkpoint trajectory
+
+这次只做：
+
+Passive-5 Cross-Lineage Ba + Bb
+
+==================================================
+16. Final closure
+==================================================
+
+完成后必须生成：
+
+full_experiment_log.json
+comparison.json
+comparison.csv
+utility_comparison.json
+detector_applicability_matrix.json
+model_provenance.json
+dataset_manifest.json
+training_summary.json
+cross_lineage_analysis.md
+
+并更新：
+
+results/experiment_full_logs_index.json
+
+Git：
+- lightweight evidence commit
+- push GitHub
+- no model weights in Git
+
+ModelScope：
+- Ba final Student
+- Bb final Student
+- only if complete and validated
+
+最后给用户汇报：
+
+1. Qwen exact ModelScope revision
+2. clean Qwen passive-5 baseline
+3. Cross-Lineage Ba passive-5 results
+4. Cross-Lineage Bb passive-5 results
+5. utility
+6. detector applicability
+7. same-lineage vs cross-lineage comparison
+8. scientific conclusion boundary
+9. Git commit
+10. ModelScope archive status
+
+现在开始。

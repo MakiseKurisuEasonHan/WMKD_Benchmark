@@ -1,0 +1,8 @@
+{
+  "classification": "GREEN_STORAGE_GUARD",
+  "old": "if freegb(art)<100:raise RuntimeError(\"GLOBAL_DISK_SAFETY_BLOCK\")",
+  "new": "if freegb(art)<2:raise RuntimeError(\"BASELINE_DISK_SAFETY_BLOCK_2_GIB\")",
+  "reason": "Inference only: 200 generations at max512 tokens, embeddings and 589824 float fingerprint. Expected output below100MiB; reserve2GiB on actual artifact filesystem. No checkpoints or models saved.",
+  "source_sha256": "638683c08061addc16983c426663ed2ca64b4e84d23f3af471293e8fd9f2f2d5",
+  "only_one_line_changed": true
+}

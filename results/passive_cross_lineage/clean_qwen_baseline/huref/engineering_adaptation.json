@@ -1,0 +1,8 @@
+{
+  "classification": "GREEN_STORAGE_GUARD",
+  "old": "if free_gb(output.parents[5]) < 100: raise RuntimeError(\"GLOBAL_DISK_SAFETY_BLOCK\")",
+  "new": "if free_gb(output.parent) < 2: raise RuntimeError(\"BASELINE_DISK_SAFETY_BLOCK_2_GIB\")",
+  "reason": "Inference only: feature is 512 float32 values; metadata and token manifest under 10 MiB. Reserve 2 GiB on actual output filesystem. No model/checkpoint saved. All detector arithmetic unchanged.",
+  "source_sha256": "132f73d4b9047e2a9082f0c048f2562f617288ce1d2271a1836b7c41b43ce940",
+  "only_one_line_changed": true
+}

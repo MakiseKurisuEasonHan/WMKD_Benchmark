@@ -1,0 +1,28 @@
+{
+  "status": "BA_SCIENTIFIC_COMPLETE_GIT_CLOSURE_PENDING",
+  "active_bb_trajectories": "PAUSED_BY_USER",
+  "auto_shutdown": false,
+  "student": "Qwen/Qwen2.5-3B-Instruct",
+  "authorization_sha256": "74593105b80abd97c656f33d38723ab0ebdf11a6abd1426cd776f6b7f23bead5",
+  "scientific_execution_started": true,
+  "current_action": "BA_LIGHTWEIGHT_GIT_CLOSURE",
+  "model_identity": "PASS",
+  "modelscope_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "dataset_sha": "PASS_BA_AND_BB_EXACT_20000",
+  "formatter": "PASS_ZERO_TRUNCATION_ZERO_EMPTY_SUPERVISION",
+  "detector_applicability": "RUNTIME_VALIDATED_FIVE_BASELINE",
+  "calibration_limitation": "Qwen included in frozen calibration negatives; baseline not held-out",
+  "next_action": "Commit/push/sync Ba evidence before fresh-Qwen Bb",
+  "training_started": true,
+  "active_worker": null,
+  "llmprint_baseline": "COMPLETE_136_OF_200_NEGATIVE",
+  "reef_baseline": "COMPLETE_NEGATIVE_TIE",
+  "huref_baseline": {
+    "status": "COMPLETE",
+    "ICS": -8.356179237365723,
+    "detected": false
+  },
+  "awm_baseline": "COMPLETE_NEGATIVE_TIE",
+  "baseline_integrity": "PASS",
+  "evidence_transfer": "VERIFIED"
+}

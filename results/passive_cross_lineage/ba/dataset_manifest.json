@@ -1,0 +1,16 @@
+{
+  "role": "ba",
+  "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/dataset/frozen_qa.jsonl",
+  "exists": true,
+  "expected_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+  "count": 20000,
+  "sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+  "keys": [
+    "input",
+    "instruction",
+    "sample_id",
+    "teacher_raw_answer"
+  ],
+  "unique_sample_ids": 20000,
+  "sha_pass": true
+}

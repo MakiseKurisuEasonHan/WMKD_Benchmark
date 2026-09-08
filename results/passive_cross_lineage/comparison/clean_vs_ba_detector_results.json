@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "method": "LLMPrint",
+      "clean_qwen": 0.68,
+      "ba": 0.68,
+      "delta": 0.0,
+      "threshold": 0.7150049776126003,
+      "ba_detected": false
+    },
+    {
+      "method": "REEF",
+      "clean_qwen": 0.4546738923165847,
+      "ba": 0.4712346890040632,
+      "delta": 0.016560796687478452,
+      "threshold": 0.4546738923165847,
+      "ba_detected": true
+    },
+    {
+      "method": "HuRef",
+      "clean_qwen": -8.356179237365723,
+      "ba": -8.41477108001709,
+      "delta": -0.05859184265136719,
+      "threshold": 4.119894027709961,
+      "ba_detected": false
+    },
+    {
+      "method": "AWM",
+      "clean_qwen": 0.0017953364917795106,
+      "ba": 0.0018811310743071122,
+      "delta": 8.579458252760161e-05,
+      "threshold": 0.0017953364917795106,
+      "ba_detected": true
+    },
+    {
+      "method": "ZeroPrint",
+      "clean_qwen": 0.6793505996465683,
+      "ba": 0.70185287296772,
+      "delta": 0.022502273321151733,
+      "threshold": 0.6793505996465683,
+      "ba_detected": true
+    }
+  ],
+  "interpretation": "Measured score changes and frozen-threshold decisions only; no universal causal claim",
+  "bb": "NOT_RUN"
+}

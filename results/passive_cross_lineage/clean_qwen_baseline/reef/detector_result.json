@@ -1,0 +1,33 @@
+{
+  "method": "REEF",
+  "role": "clean_qwen_baseline",
+  "status": "COMPLETE",
+  "CKA": 0.4546738923165847,
+  "threshold": 0.4546738923165847,
+  "detected": false,
+  "positive_rule": "strict greater than; tie negative",
+  "reference_layer": 27,
+  "reference_shape": [
+    200,
+    3072
+  ],
+  "extraction": {
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "hooked_module_path": "model.layers.35",
+    "layer_index": 35,
+    "block_class": "Qwen2DecoderLayer",
+    "semantics": "raw forward-hook output[0] at last token",
+    "token_position": "last token per unpadded single-sample input",
+    "shape": [
+      200,
+      2048
+    ],
+    "dtype": "float32",
+    "sample_count": 200,
+    "representation_path": "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/clean_qwen_baseline/reef/representation.npy",
+    "representation_sha256": "dc5d90abff9cae6a4a896826be384cc9297a799c5a148eb345805a0a6cda0600"
+  },
+  "errors": [],
+  "calibration_limitation": "Qwen included in historical calibration panel; not held-out",
+  "source_sha256": "bdfdf6959ac2df20a924e6954bbda7b66ed3339e53d2e9bdb8e229dc14655924"
+}

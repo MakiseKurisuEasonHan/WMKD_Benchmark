@@ -1,0 +1,226 @@
+{
+  "files": [
+    {
+      "name": "config.json",
+      "bytes": 661,
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+      "pass": true
+    },
+    {
+      "name": "configuration.json",
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "pass": true
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 242,
+      "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+      "pass": true
+    },
+    {
+      "name": "LICENSE",
+      "bytes": 7388,
+      "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+      "pass": true
+    },
+    {
+      "name": "merges.txt",
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "pass": true
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 3968658944,
+      "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "pass": true
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 2203268048,
+      "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "pass": true
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 35581,
+      "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+      "pass": true
+    },
+    {
+      "name": "README.md",
+      "bytes": 4930,
+      "sha256": "2c74693e6ae36ba878124d465195b4dad0f71035b54ece1c9fd1553cc497ef8c",
+      "pass": true
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "pass": true
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "pass": true
+    },
+    {
+      "name": "vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "config": {
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 2048,
+    "initializer_range": 0.02,
+    "intermediate_size": 11008,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 70,
+    "model_type": "qwen2",
+    "num_attention_heads": 16,
+    "num_hidden_layers": 36,
+    "num_key_value_heads": 2,
+    "rms_norm_eps": 1e-06,
+    "rope_theta": 1000000.0,
+    "sliding_window": 32768,
+    "tie_word_embeddings": true,
+    "torch_dtype": "bfloat16",
+    "transformers_version": "4.43.1",
+    "use_cache": true,
+    "use_sliding_window": false,
+    "vocab_size": 151936
+  },
+  "quantization_config_present": false,
+  "weight_index_complete": true,
+  "dtypes": [
+    "BF16"
+  ],
+  "projection_shapes": {
+    "model.layers.0.input_layernorm.weight": [
+      2048
+    ],
+    "model.layers.0.mlp.down_proj.weight": [
+      2048,
+      11008
+    ],
+    "model.layers.0.mlp.gate_proj.weight": [
+      11008,
+      2048
+    ],
+    "model.layers.0.mlp.up_proj.weight": [
+      11008,
+      2048
+    ],
+    "model.layers.0.post_attention_layernorm.weight": [
+      2048
+    ],
+    "model.layers.0.self_attn.k_proj.weight": [
+      256,
+      2048
+    ],
+    "model.layers.0.self_attn.o_proj.weight": [
+      2048,
+      2048
+    ],
+    "model.layers.0.self_attn.q_proj.weight": [
+      2048,
+      2048
+    ],
+    "model.layers.0.self_attn.v_proj.weight": [
+      256,
+      2048
+    ]
+  },
+  "existing_modelscope_manifest": {
+    "canonical_upstream": "Qwen/Qwen2.5-3B-Instruct",
+    "transport": "ModelScope official",
+    "platform_revision": "master",
+    "immutable_revision_available": false,
+    "revision_metadata": {
+      "CreatedAt": 1740595239
+    },
+    "files": {
+      "config.json": {
+        "size": 661,
+        "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "match": true
+      },
+      "configuration.json": {
+        "size": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "match": true
+      },
+      "generation_config.json": {
+        "size": 242,
+        "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "match": true
+      },
+      "LICENSE": {
+        "size": 7388,
+        "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+        "match": true
+      },
+      "merges.txt": {
+        "size": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "match": true
+      },
+      "model-00001-of-00002.safetensors": {
+        "size": 3968658944,
+        "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "match": true
+      },
+      "model-00002-of-00002.safetensors": {
+        "size": 2203268048,
+        "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "match": true
+      },
+      "model.safetensors.index.json": {
+        "size": 35581,
+        "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "match": true
+      },
+      "README.md": {
+        "size": 4930,
+        "sha256": "2c74693e6ae36ba878124d465195b4dad0f71035b54ece1c9fd1553cc497ef8c",
+        "match": true
+      },
+      "tokenizer.json": {
+        "size": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "match": true
+      },
+      "tokenizer_config.json": {
+        "size": 7305,
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "match": true
+      },
+      "vocab.json": {
+        "size": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "match": true
+      }
+    },
+    "config": {
+      "model_type": "qwen2",
+      "architectures": [
+        "Qwen2ForCausalLM"
+      ],
+      "torch_dtype": "torch.bfloat16"
+    },
+    "offline_tokenizer_load": true,
+    "offline_chat_template": true,
+    "offline_model_load": true
+  }
+}

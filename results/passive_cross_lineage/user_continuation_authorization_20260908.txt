@@ -1,0 +1,462 @@
+继续当前 WMKD_Benchmark passive cross-lineage serial experiment。
+
+当前状态：
+
+- active Bb/Bb2 trajectories：PAUSED
+- SCW Ba：已 closure
+- Clean Qwen baseline：已完成
+- Cross-Lineage Ba 五项 detector：已完成并核验
+- Cross-Lineage Ba utility：尚未完成
+- Cross-Lineage Ba closure：尚未完成
+- Cross-Lineage Bb：尚未启动
+
+Qwen ModelScope revision：
+
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+当前 Cross-Lineage Ba detector results：
+
+LLMPrint:
+136/200
+bit accuracy = 0.68
+NEGATIVE
+
+REEF:
+0.471235
+POSITIVE
+
+HuRef:
+-8.414771
+NEGATIVE
+
+AWM:
+0.00188113
+POSITIVE
+
+ZeroPrint:
+0.701853 rescaled
+POSITIVE
+
+重要解释限制：
+Qwen 曾参与历史 detector threshold calibration。
+因此 clean-Qwen 不能称为 independent held-out negative control。
+所有结果必须保留这一限制。
+
+==================================================
+1. 明确批准 evidence SCP
+==================================================
+
+现在明确批准以下科研证据同步：
+
+SOURCE:
+AutoDL:
+/tmp/passive_cross_lineage_ba_evidence_20260908.zip
+
+DESTINATION:
+local project:
+artifacts/passive_cross_lineage_ba_evidence_20260908.zip
+
+该包约 15.8 MB，112 个科研证据文件。
+
+用途：
+永久归档 Cross-Lineage Ba 的：
+- raw detector outputs
+- raw generations
+- detector arrays
+- logs
+- provenance / scientific evidence
+
+已知：
+- 不包含模型权重
+- credential pattern scan 无命中
+
+允许执行 SCP。
+
+同步完成后必须：
+1. 验证 destination 存在
+2. 比较 source / destination byte size
+3. 计算并比较 SHA256
+4. 不修改 zip 内容
+5. 不删除服务器 source zip，直到整个 Cross-Lineage Ba/Bb campaign 完整 closure 后再决定是否清理
+
+==================================================
+2. 完成 Cross-Lineage Ba utility
+==================================================
+
+学校 VPN：关闭
+
+AutoDL:
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+严格串行继续。
+
+对 Cross-Lineage Ba final Qwen Student fresh reload 后运行：
+
+- ARC-Challenge acc_norm
+- TruthfulQA MC2 acc
+
+同时整理 comparison：
+
+- Clean Qwen baseline utility
+- Cross-Lineage Ba utility
+- canonical Llama Teacher utility，如果已有正式结果则引用已有结果，不重复跑
+- same-lineage Ba utility，如果已有则引用正式归档
+
+不要运行无关 benchmark。
+
+保存：
+- raw evaluator outputs
+- summary JSON
+- exact model path/revision
+- evaluation config
+- errors
+- timestamp
+- fresh reload evidence
+
+==================================================
+3. Cross-Lineage Ba closure
+==================================================
+
+Ba utility 完成后，先完整 closure，再启动 Bb。
+
+必须生成/确认：
+
+results/passive_cross_lineage/ba/full_experiment_log.json
+results/passive_cross_lineage/ba/training_summary.json
+results/passive_cross_lineage/ba/detector_results.json
+results/passive_cross_lineage/ba/utility_results.json
+results/passive_cross_lineage/ba/model_provenance.json
+results/passive_cross_lineage/ba/dataset_manifest.json
+results/passive_cross_lineage/ba/closure_summary.json
+
+如果当前目录结构不同：
+使用项目已经建立的 canonical path，
+不要为了匹配上面名称而重复生成第二套对象。
+
+必须检查：
+- final Student fresh reload succeeds
+- detector result artifacts all present
+- utility artifacts present
+- dataset SHA still matches frozen Ba20k
+- Qwen revision recorded
+- training config recorded
+- no resume contamination
+- full-parameter SFT confirmed
+- final checkpoint/model complete
+- scientific logs preserved
+
+更新：
+results/experiment_full_logs_index.json
+
+==================================================
+4. Ba scientific comparison
+==================================================
+
+在 closure summary 中加入 clean-Qwen → Ba 的 delta。
+
+必须列：
+
+Detector
+Clean Qwen
+Ba Qwen
+absolute delta
+threshold
+clean detected?
+Ba detected?
+interpretation boundary
+
+特别注意：
+
+LLMPrint:
+clean = 136/200 = 0.68
+Ba = 136/200 = 0.68
+=> no measured change
+
+REEF:
+clean = 0.4546738923
+Ba = 0.471235
+=> calculate exact delta
+=> crossed frozen decision boundary
+
+HuRef:
+clean = -8.3561792374
+Ba = -8.414771
+=> calculate exact delta
+=> remains negative
+
+AWM:
+read exact clean-Qwen baseline from canonical evidence
+compare with 0.00188113
+
+ZeroPrint:
+read exact clean-Qwen baseline from canonical evidence
+compare with 0.701853
+
+Do not infer missing clean baseline values from memory or chat.
+Read them from canonical experiment artifacts.
+
+Interpretation wording must remain bounded.
+
+Allowed wording example:
+
+“Under this frozen detector setup, Cross-Lineage Ba changes some passive fingerprint scores sufficiently to cross their historical thresholds.”
+
+Do NOT write:
+
+“Ba successfully transfers three watermarks.”
+
+Because:
+- Qwen participated in historical threshold calibration
+- detector positive != proven causal watermark transfer
+- passive methods may measure heterogeneous properties
+
+==================================================
+5. Then start Cross-Lineage Bb
+==================================================
+
+Only after Ba closure is COMPLETE.
+
+Cross-Lineage Bb must initialize from:
+
+fresh clean Qwen2.5-3B-Instruct
+revision:
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+ABSOLUTELY DO NOT:
+- continue from Ba Student
+- resume Ba checkpoint
+- reuse Ba optimizer
+- inherit Ba trainer state
+
+Bb dataset:
+use exact frozen Shared Bb/Bb3 paired20k paraphrased targets already verified.
+
+Must verify again before training:
+- 20,000 records
+- expected SHA
+- same parent pairing
+- paraphrased_answer selected
+- zero truncation
+- zero empty supervision
+- Qwen official formatter
+- no scientific config drift
+
+==================================================
+6. Bb training config
+==================================================
+
+Keep cross-lineage Ba/Bb training semantics matched except target answers:
+
+- fresh Qwen2.5-3B-Instruct
+- full parameter
+- no LoRA
+- no quantization
+- BF16
+- 3 epochs
+- LR 1e-5
+- effective batch size 8
+- seed 42
+- 20k frozen records
+- expected 7500 optimizer steps if config still maps exactly
+- one large GPU task only
+
+Before GPU:
+nvidia-smi
+
+Strictly ensure:
+- no conflicting large process
+- sufficient disk
+- no unrelated task occupying GPU
+
+==================================================
+7. Bb final evaluation
+==================================================
+
+After Bb training:
+
+fresh reload final Bb Student.
+
+Run same five passive detectors with identical frozen semantics:
+
+- LLMPrint
+- REEF
+- HuRef
+- AWM
+- ZeroPrint
+
+Do not change:
+- threshold
+- probe set
+- fingerprint assets
+- scoring
+- aggregation
+- layer mapping rules already approved during cross-architecture audit
+
+Then run utility:
+
+- ARC-Challenge acc_norm
+- TruthfulQA MC2
+
+==================================================
+8. Final comparison
+==================================================
+
+After Bb complete, generate final table:
+
+method
+clean Qwen
+cross-lineage Ba
+cross-lineage Bb
+Ba-clean delta
+Bb-clean delta
+Bb-Ba delta
+threshold
+clean decision
+Ba decision
+Bb decision
+applicability
+interpretation
+
+Also compare against existing same-lineage results:
+
+LLMPrint
+REEF
+HuRef
+AWM
+ZeroPrint
+
+Columns should include:
+
+Teacher/Reference
+same-lineage clean Llama Base
+same-lineage Ba
+same-lineage Bb/Bb3
+cross-lineage clean Qwen
+cross-lineage Ba
+cross-lineage Bb
+
+Do not compare raw values across different detector families.
+
+==================================================
+9. Key scientific questions to answer
+==================================================
+
+At final closure, explicitly answer:
+
+1. Which passive detectors were already positive on clean Qwen?
+2. Which crossed threshold only after Ba?
+3. Which changed meaningfully after Ba even if they did not cross?
+4. Which changed after Bb?
+5. Does Bb weaken any Ba-induced similarity?
+6. Does same-lineage retention look substantially stronger than cross-lineage retention?
+7. Which findings support a shared-lineage / initialization confound?
+8. Which findings remain consistent with behavioral transfer?
+9. Which conclusions are limited because Qwen participated in historical threshold calibration?
+10. Are utility changes small enough that detector loss/gain cannot simply be attributed to Student collapse?
+
+Use bounded scientific wording.
+
+==================================================
+10. Preserve current priority
+==================================================
+
+Do NOT restart:
+
+- PN-FP Bb trajectory
+- EverTracer Bb trajectory
+- CTCC Bb2 trajectory
+- iSeal Bb trajectory
+- SCW Bb trajectory
+
+Do NOT start:
+- passive same-lineage trajectory
+- 50k/100k/200k scale experiments
+- logit KD
+- new watermark methods
+- Methods 11–15
+
+Current priority remains:
+
+Cross-Lineage Ba closure
+→ Cross-Lineage Bb
+→ detector + utility
+→ final cross-lineage closure
+
+==================================================
+11. Archival rules
+==================================================
+
+Scientific evidence:
+PERMANENTLY RETAIN.
+
+Especially retain:
+- raw generations
+- detector arrays
+- detector raw JSON
+- utility raw outputs
+- training logs
+- provenance
+- dataset manifests
+- exact model revision
+- final comparison CSV/JSON
+- full_experiment_log.json
+
+ModelScope:
+after each formal experiment is fully validated,
+at most ONE final preferred Student archive per formal experiment.
+
+No intermediate checkpoints to ModelScope.
+
+GitHub:
+lightweight code/config/results metadata/reports only.
+No model weights.
+
+==================================================
+12. Final report back to user
+==================================================
+
+When Ba closure + Bb complete, report:
+
+A. Evidence SCP
+- source
+- destination
+- size
+- SHA256
+- verified yes/no
+
+B. Ba
+- utility
+- all five detector scores
+- clean→Ba deltas
+- closure status
+- final Student archive status
+
+C. Bb
+- training completion
+- utility
+- all five detector scores
+- clean→Bb and Ba→Bb deltas
+- closure status
+- final Student archive status
+
+D. Same-lineage vs cross-lineage master comparison
+
+E. Scientific bounded conclusion
+
+F. Evidence paths
+
+G. Git commit
+
+H. ModelScope revision/archive
+
+Continue automatically in the authorized serial order unless a genuine scientific or infrastructure blocker occurs.
+
+Do not ask for approval again for:
+- the explicitly approved evidence SCP above
+- Ba utility
+- Ba closure
+- fresh-Qwen Bb training/evaluation
+- normal non-destructive evidence archival required for this campaign
+
+If a destructive action, protocol change, detector semantic change, dataset change, threshold change, or unplanned model substitution becomes necessary:
+STOP and ask first.

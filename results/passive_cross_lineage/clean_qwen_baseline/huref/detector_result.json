@@ -1,0 +1,223 @@
+{
+  "method": "HuRef",
+  "role": "clean_qwen_baseline",
+  "status": "COMPLETE",
+  "ICS": -8.356179237365723,
+  "threshold": 4.119894027709961,
+  "detected": false,
+  "positive_rule": "strict greater than",
+  "extraction": {
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "token_manifest_sha256": "cbab57e6aad459d9169c812dde4c90f01f9952572e970a8b702d8b6c04320d5d",
+    "layers": [
+      34,
+      35
+    ],
+    "K": 4096,
+    "term_order": [
+      "layer_-2_WqWk",
+      "layer_-2_WvWo",
+      "layer_-2_WuWd",
+      "layer_-1_WqWk",
+      "layer_-1_WvWo",
+      "layer_-1_WuWd"
+    ],
+    "terms": [
+      {
+        "order": 0,
+        "layer_index": 34,
+        "term": "WqWk",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "15fe96df558d25231489467787b839bccbd8f8ab123ffe98c06cf3f8ec5f208c"
+      },
+      {
+        "order": 1,
+        "layer_index": 34,
+        "term": "WvWo",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "391944aa19fe85caf17c279ab29031acb934a6d68c115e4a6f58d1005c57bdbf"
+      },
+      {
+        "order": 2,
+        "layer_index": 34,
+        "term": "WuWd",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "01db002f314d5a14d55b28f009366e7afa504ee9d0fa9e4a7ddf2209606f47d0"
+      },
+      {
+        "order": 3,
+        "layer_index": 35,
+        "term": "WqWk",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "efd305d7f4dfa406b0c35c25cd5560ec70498d8363a68f3ca17220bd332beea4"
+      },
+      {
+        "order": 4,
+        "layer_index": 35,
+        "term": "WvWo",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5c70db9522dfa4dc251dbc09824258e97db2121788da7478c11d7e15570b6f6f"
+      },
+      {
+        "order": 5,
+        "layer_index": 35,
+        "term": "WuWd",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cd81de3fbfdc1a09edabd1ff45a46175efd3a75152fff7d67964dd265c222b47"
+      }
+    ],
+    "architecture_mapping": [
+      {
+        "layer_index": 34,
+        "block_class": "Qwen2DecoderLayer",
+        "attention_class": "Qwen2Attention",
+        "mlp_class": "Qwen2MLP",
+        "attention_mode": "separate_q_k_v",
+        "mlp_mode": "separate_gate_up",
+        "paths": {
+          "attention": "model.layers[i].self_attn",
+          "output": "o_proj",
+          "mlp": "model.layers[i].mlp",
+          "down": "down_proj"
+        },
+        "hidden_size": 2048,
+        "q_heads": 16,
+        "kv_heads": 2,
+        "head_dim": 128,
+        "repeat_factor": 8,
+        "shapes": {
+          "q": [
+            2048,
+            2048
+          ],
+          "k_original": [
+            256,
+            2048
+          ],
+          "v_original": [
+            256,
+            2048
+          ],
+          "k_expanded": [
+            2048,
+            2048
+          ],
+          "v_expanded": [
+            2048,
+            2048
+          ],
+          "o": [
+            2048,
+            2048
+          ],
+          "gate": [
+            11008,
+            2048
+          ],
+          "up": [
+            11008,
+            2048
+          ],
+          "down": [
+            2048,
+            11008
+          ]
+        }
+      },
+      {
+        "layer_index": 35,
+        "block_class": "Qwen2DecoderLayer",
+        "attention_class": "Qwen2Attention",
+        "mlp_class": "Qwen2MLP",
+        "attention_mode": "separate_q_k_v",
+        "mlp_mode": "separate_gate_up",
+        "paths": {
+          "attention": "model.layers[i].self_attn",
+          "output": "o_proj",
+          "mlp": "model.layers[i].mlp",
+          "down": "down_proj"
+        },
+        "hidden_size": 2048,
+        "q_heads": 16,
+        "kv_heads": 2,
+        "head_dim": 128,
+        "repeat_factor": 8,
+        "shapes": {
+          "q": [
+            2048,
+            2048
+          ],
+          "k_original": [
+            256,
+            2048
+          ],
+          "v_original": [
+            256,
+            2048
+          ],
+          "k_expanded": [
+            2048,
+            2048
+          ],
+          "v_expanded": [
+            2048,
+            2048
+          ],
+          "o": [
+            2048,
+            2048
+          ],
+          "gate": [
+            11008,
+            2048
+          ],
+          "up": [
+            11008,
+            2048
+          ],
+          "down": [
+            2048,
+            11008
+          ]
+        }
+      }
+    ],
+    "feature": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/clean_qwen_baseline/huref/feature.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "cdd53b68fe0607994c032611de40438f7b0788177a2885e92f428f4f8b7cf1be"
+    },
+    "runtime_seconds": 3.3490707874298096,
+    "peak_vram_bytes": 6535864832
+  },
+  "errors": [],
+  "calibration_limitation": "Qwen included in historical calibration panel; not held-out"
+}

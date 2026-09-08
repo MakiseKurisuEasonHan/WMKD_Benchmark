@@ -1,0 +1,19 @@
+{
+  "schema_version": "wmkd.passive-cross-lineage.v1",
+  "project": "WMKD_Benchmark",
+  "role": "bb",
+  "run_id": "passive_cross_lineage_bb_20260908",
+  "status": "NOT_STARTED",
+  "model_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "training_started": false,
+  "detectors": {
+    "LLMPrint": "NOT_RUN",
+    "REEF": "NOT_RUN",
+    "HuRef": "NOT_RUN",
+    "AWM": "NOT_RUN",
+    "ZeroPrint": "NOT_RUN"
+  },
+  "utility": "NOT_RUN",
+  "protocol": "results/passive_cross_lineage/protocol.json",
+  "historical_objects_overwritten": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "role": "clean_qwen_baseline",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.4402730375426621,
+  "truthfulqa_mc2_acc": 0.5712170418936038,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.4274744027303754,
+      "acc_stderr,none": 0.014456862944650647,
+      "acc_norm,none": 0.4402730375426621,
+      "acc_norm_stderr,none": 0.014506769524804237
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.5712170418936038,
+      "acc_stderr,none": 0.016178694836353032
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T04:49:21.457927+00:00"
+}

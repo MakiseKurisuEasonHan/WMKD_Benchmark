@@ -1,0 +1,54 @@
+[
+  {
+    "role": "ba",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/dataset/frozen_qa.jsonl",
+    "exists": true,
+    "expected_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+    "count": 20000,
+    "sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+    "keys": [
+      "input",
+      "instruction",
+      "sample_id",
+      "teacher_raw_answer"
+    ],
+    "unique_sample_ids": 20000,
+    "sha_pass": true
+  },
+  {
+    "role": "bb",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/dataset/frozen_paired_qa.jsonl",
+    "exists": true,
+    "expected_sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88",
+    "count": 20000,
+    "sha256": "60bd4539b5d332b076a92072b86b51f8ddad3749a0a166f594233f5c1730dd88",
+    "keys": [
+      "attempt_count",
+      "error",
+      "failed_attempt_count",
+      "fallback_reason",
+      "finish_reason",
+      "generation_config_identity",
+      "identity_fallback",
+      "input",
+      "instruction",
+      "paraphrase_prompt_identity",
+      "paraphrased_answer",
+      "paraphrased_answer_sha256",
+      "paraphrased_answer_token_count",
+      "processing_mode",
+      "quality",
+      "qwen_non_special_token_count",
+      "rejected_attempts",
+      "sample_id",
+      "source_answer",
+      "source_answer_sha256",
+      "source_answer_token_count",
+      "source_question",
+      "status",
+      "truncated"
+    ],
+    "unique_sample_ids": 20000,
+    "sha_pass": true
+  }
+]

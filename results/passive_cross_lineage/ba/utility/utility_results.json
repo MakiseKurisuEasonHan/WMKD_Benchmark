@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "role": "ba",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.514505119453925,
+  "truthfulqa_mc2_acc": 0.4913761025929856,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.4786689419795222,
+      "acc_stderr,none": 0.014598087973127106,
+      "acc_norm,none": 0.514505119453925,
+      "acc_norm_stderr,none": 0.014605241081370053
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.4913761025929856,
+      "acc_stderr,none": 0.015396499199913706
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T04:50:32.045175+00:00"
+}

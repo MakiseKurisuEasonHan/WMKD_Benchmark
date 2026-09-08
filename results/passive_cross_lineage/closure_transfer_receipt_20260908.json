@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-09-08T05:09:42.449124+00:00",
+  "source": "root@connect.westd.seetacloud.com:/tmp/passive_cross_lineage_ba_closure_20260908.zip",
+  "destination": "artifacts/passive_cross_lineage_ba_closure_20260908.zip",
+  "source_bytes": 17348803,
+  "destination_bytes": 17348803,
+  "source_sha256": "4e3343b87d2b69c8944f465623459fbc83e0514704a6292c600f17254db1767a",
+  "destination_sha256": "4e3343b87d2b69c8944f465623459fbc83e0514704a6292c600f17254db1767a",
+  "zip_crc": "PASS",
+  "member_count": 136,
+  "zip_modified": false,
+  "remote_source_retained": true,
+  "old_evidence_zip_retained": true,
+  "old_evidence_zip_sha256": "44ac94e586cc99e7c428162fa2ce0323a92bb5140ec45cb1c6352b5354235d7a",
+  "extracted_manifest_validation": {
+    "ba": {
+      "files": 61,
+      "mismatch": 0
+    },
+    "clean_qwen_baseline": {
+      "files": 46,
+      "mismatch": 0
+    }
+  }
+}

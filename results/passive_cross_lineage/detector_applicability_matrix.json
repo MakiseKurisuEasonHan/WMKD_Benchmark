@@ -1,0 +1,83 @@
+{
+  "rows": [
+    {
+      "method": "LLMPrint",
+      "applicability": "SUPPORTED_CROSS_ARCH",
+      "implementation": "scripts/llmprint_evaluate_probability_sequence.py",
+      "rule": "200 frozen optimized prompts/suffixes; per-tokenizer first target token; unchanged primary paper bits",
+      "threshold": 0.7150049776126003,
+      "positive_rule": "accuracy >= threshold",
+      "format": "Frozen raw optimized prompt, add_special_tokens=False; historical Qwen path already supports this; no chat wrapper added",
+      "status": "RUNTIME_VALIDATED_CLEAN_QWEN",
+      "recalibration": false,
+      "evidence": "results/passive_cross_lineage/clean_qwen_baseline/llmprint/detector_result.json"
+    },
+    {
+      "method": "REEF",
+      "applicability": "ADAPTABLE_WITH_OFFICIAL_SEMANTICS",
+      "implementation": "scripts/reef_protocol_compliance.py:extract/cka",
+      "rule": "Final decoder block raw forward-hook last-token feature; paired200 inputs; centered linear CKA permits distinct feature widths",
+      "reference_layer": 27,
+      "qwen_layer": 35,
+      "reference_shape": [
+        200,
+        3072
+      ],
+      "qwen_shape": [
+        200,
+        2048
+      ],
+      "threshold": 0.4546738923165847,
+      "positive_rule": "score > threshold",
+      "format": "Frozen raw probe tokenization; no final normalization",
+      "status": "RUNTIME_VALIDATED_CLEAN_QWEN",
+      "recalibration": false,
+      "evidence": "results/passive_cross_lineage/clean_qwen_baseline/reef/detector_result.json"
+    },
+    {
+      "method": "HuRef",
+      "applicability": "ADAPTABLE_WITH_OFFICIAL_SEMANTICS",
+      "implementation": "scripts/huref_experiment_a2.py:build_token_manifest/projections/extract/ics",
+      "rule": "Same frozen corpus, independent tokenizer-specific deterministic top4096; last two blocks; original six invariant terms/GQA expansion/pooling512/ICS",
+      "reference_layers": [
+        26,
+        27
+      ],
+      "qwen_layers": [
+        34,
+        35
+      ],
+      "qwen_gqa_repeat": 8,
+      "threshold": 4.119894027709961,
+      "positive_rule": "score > threshold",
+      "mapping": "separate q_proj/k_proj/v_proj/o_proj and gate_proj/up_proj/down_proj; bias excluded as in frozen weight-only semantics",
+      "status": "RUNTIME_VALIDATED_CLEAN_QWEN",
+      "recalibration": false,
+      "evidence": "results/passive_cross_lineage/clean_qwen_baseline/huref/detector_result.json"
+    },
+    {
+      "method": "AWM",
+      "applicability": "SUPPORTED_CROSS_ARCH",
+      "implementation": "scripts/awm_protocol_cont1.py:extract/compare; pinned official similarity_metrics.py",
+      "rule": "Existing overlapping-vocabulary dimension LAP/sign, 28x36 layer LAP; unchanged Wq/Wk unbiased linear CKA",
+      "threshold": 0.0017953364917795106,
+      "positive_rule": "score > threshold",
+      "status": "RUNTIME_VALIDATED_CLEAN_QWEN",
+      "recalibration": false,
+      "evidence": "results/passive_cross_lineage/clean_qwen_baseline/awm/detector_result.json"
+    },
+    {
+      "method": "ZeroPrint",
+      "applicability": "SUPPORTED_CROSS_ARCH",
+      "implementation": "scripts/zeroprint_experiment_a2.py:run_model/score",
+      "rule": "Frozen10 prompts/perturbations,20 generations each,seeds,raw completion,MPNet/ridge/rescaling/Pearson",
+      "threshold": 0.6793505996465683,
+      "positive_rule": "rescaled > threshold",
+      "status": "RUNTIME_VALIDATED_CLEAN_QWEN",
+      "recalibration": false,
+      "evidence": "results/passive_cross_lineage/clean_qwen_baseline/zeroprint/detector_result.json"
+    }
+  ],
+  "limitation": "Qwen participated in historical calibration negative panel; fresh baseline is not held-out from threshold selection. No recalibration. Focus on pre/post-SFT score changes.",
+  "runtime_validation": "PASS_FIVE_CLEAN_QWEN_BASELINE"
+}
