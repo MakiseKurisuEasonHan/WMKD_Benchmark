@@ -1,0 +1,33 @@
+{
+  "method": "REEF",
+  "role": "bb",
+  "status": "COMPLETE",
+  "CKA": 0.47347651724262,
+  "threshold": 0.4546738923165847,
+  "detected": true,
+  "positive_rule": "strict greater than; tie negative",
+  "reference_layer": 27,
+  "reference_shape": [
+    200,
+    3072
+  ],
+  "extraction": {
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_bb/passive_cross_lineage_bb_20260908/training/final_model",
+    "hooked_module_path": "model.layers.35",
+    "layer_index": 35,
+    "block_class": "Qwen2DecoderLayer",
+    "semantics": "raw forward-hook output[0] at last token",
+    "token_position": "last token per unpadded single-sample input",
+    "shape": [
+      200,
+      2048
+    ],
+    "dtype": "float32",
+    "sample_count": 200,
+    "representation_path": "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/bb/reef/representation.npy",
+    "representation_sha256": "862760f285eafcb116444e4dbf99187c1e2926655e88335f3f3601fa9b083c8d"
+  },
+  "errors": [],
+  "calibration_limitation": "Qwen included in historical calibration panel; not held-out",
+  "source_sha256": "bdfdf6959ac2df20a924e6954bbda7b66ed3339e53d2e9bdb8e229dc14655924"
+}

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/llmprint_evaluate_probability_sequence.py",
+    "--model",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_bb/passive_cross_lineage_bb_20260908/training/final_model",
+    "--model-id",
+    "WMKD/Passive-Cross-Lineage-Bb-Qwen",
+    "--revision",
+    "passive_cross_lineage_bb_20260908",
+    "--fingerprint-dir",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints",
+    "--fingerprint-manifest",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/fingerprint_manifest.json",
+    "--output",
+    "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/bb/llmprint/probability_sequence.json",
+    "--dtype",
+    "float16"
+  ],
+  "model_revision": "passive_cross_lineage_bb_20260908",
+  "started_at": "2026-09-08T02:26:32.253986+00:00",
+  "gpu_before": "0, 0",
+  "training": false,
+  "automatic_advance_to_training": false,
+  "source_sha256": "c11ebef659297deed88ca0f3aacf3f8de34c3a25661b4af9dfccd20f64fa5283",
+  "supervisor_pid": 43109,
+  "initialization_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5"
+}

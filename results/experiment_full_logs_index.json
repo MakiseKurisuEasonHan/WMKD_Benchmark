@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
   "generated_at": "2026-09-08T02:14:20.853014+00:00",
-  "object_count": 49,
+  "object_count": 50,
   "objects": [
     {
       "method": "PN-FP",
@@ -740,6 +740,17 @@
       "run_id": "passive_cross_lineage_ba_20260908",
       "full_log_path": "results/passive_cross_lineage/ba/full_experiment_log.json",
       "full_log_sha256": "598df36853f0c792a0ea728077aed4dda8fde86d5a79f92aa159a2452e00a98a",
+      "scientific_status": "COMPLETE",
+      "watermark_evaluation_available": true,
+      "utility_available": true
+    },
+    {
+      "method": "Passive-5 Cross-Lineage",
+      "role": "bb",
+      "experiment": "bb",
+      "run_id": "passive_cross_lineage_bb_20260908",
+      "full_log_path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+      "full_log_sha256": "a0394bea5be054c638adebd48ffc2885b70701afab4ce3bc8fe7329bcb671d90",
       "scientific_status": "COMPLETE",
       "watermark_evaluation_available": true,
       "utility_available": true

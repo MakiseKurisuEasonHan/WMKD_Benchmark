@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "llmprint_records": 200,
+  "llmprint_matches": 139,
+  "zeroprint_records": 200,
+  "zeroprint_order_seed_prompt_sha_matches_frozen_ba": true,
+  "errors": [],
+  "raw_sha256": {
+    "llmprint/probability_sequence.json": "e6f5b469120fe933470c6885352198028ec62630c86732f60928808327c520d5",
+    "llmprint/detector_result.json": "811e7a87e495f7181c58396e51bc2617c8092bb9d55e10f22223bb0fb5cce158",
+    "reef/representation.npy": "862760f285eafcb116444e4dbf99187c1e2926655e88335f3f3601fa9b083c8d",
+    "reef/detector_result.json": "9c6ed6c35eb171b5344773d22fcfd23e84beaf2b4ce8d2ac3516d64268a7e6df",
+    "huref/feature.npy": "a21580950804e3b590469fabc4bc77a3173e627d51fa62e869bef9627f801554",
+    "huref/detector_result.json": "7b7902a7d2c00e19d4041ca582642632b929c980211fe6dd27dd2c3c2a955610",
+    "awm/detector_result.json": "3185a8aaaa99617b3c95a036758f8a3145bf2a7700eb7b7b66f0d5ab84762395",
+    "zeroprint/student_generations.jsonl": "91bca07379cceef1e4537196cc771713ae843d0fbf92fe97ea6e369de82c8f23",
+    "zeroprint/student_per_query.npy": "3b88c0e15671e6e51c52ae0bda4294e4c1262cf1e93a86f2df80870a249ebd49",
+    "zeroprint/student_fingerprint.npy": "fcccdce80acce0cdd9bb97c9c58daf866e3d3d14eee73bf3f387e4be87160c03",
+    "zeroprint/detector_result.json": "b8771c04faea67bc94a6ba46eeaed8016cb4fd3fb11175928aea1215114d30e3"
+  }
+}

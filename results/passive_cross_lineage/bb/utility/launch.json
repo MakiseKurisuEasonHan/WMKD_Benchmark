@@ -1,0 +1,14 @@
+{
+  "pid": 54779,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-B",
+    "-u",
+    "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/utility_worker.py",
+    "bb",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_bb/passive_cross_lineage_bb_20260908/training/final_model"
+  ],
+  "worker_sha256": "5d5c00b09a8c98b7fe15bbc5dc2ab05f42d94dbc1fd34c9a4bd74b2034f71e01",
+  "started_at": "2026-09-08T06:36:13.301152+00:00",
+  "same_evaluator_as_ba": true
+}

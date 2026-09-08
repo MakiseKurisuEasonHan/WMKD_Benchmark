@@ -1,0 +1,27 @@
+{
+  "pid": 51344,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-B",
+    "-u",
+    "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/bb/train_paired.py",
+    "--model-path",
+    "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "--dataset",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_bb3/passive5_shared_bb3_20260903_164929/dataset/frozen_paired_qa.jsonl",
+    "--output-dir",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_bb/passive_cross_lineage_bb_20260908/training",
+    "--batch-size",
+    "8",
+    "--epochs",
+    "3",
+    "--learning-rate",
+    "1e-5",
+    "--seed",
+    "42",
+    "--max-length",
+    "1024",
+    "--telemetry",
+    "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/bb/training_summary.json"
+  ]
+}

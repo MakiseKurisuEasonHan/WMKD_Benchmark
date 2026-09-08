@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "metric": "arc_challenge_acc_norm",
+      "clean": 0.4402730375426621,
+      "ba": 0.514505119453925,
+      "bb": 0.4948805460750853,
+      "ba_clean_delta": 0.07423208191126285,
+      "bb_clean_delta": 0.05460750853242319,
+      "bb_ba_delta": -0.01962457337883966
+    },
+    {
+      "metric": "truthfulqa_mc2_acc",
+      "clean": 0.5712170418936038,
+      "ba": 0.4913761025929856,
+      "bb": 0.5121567463246797,
+      "ba_clean_delta": -0.0798409393006182,
+      "bb_clean_delta": -0.059060295568924115,
+      "bb_ba_delta": 0.020780643731694082
+    }
+  ],
+  "historical_reference": "utility_comparison.json",
+  "sample_counts": {
+    "arc_challenge": 1172,
+    "truthfulqa_mc2": 817
+  },
+  "protocol": "Same frozen evaluator/settings; raw outputs preserved"
+}

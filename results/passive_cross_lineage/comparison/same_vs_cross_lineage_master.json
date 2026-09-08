@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "method": "LLMPrint",
+      "teacher_reference": 1.0,
+      "clean_llama_base": "NOT_SEPARATELY_MEASURED_IN_THIS_CAMPAIGN",
+      "same_lineage_ba": 0.82,
+      "same_lineage_bb3": 0.785,
+      "clean_qwen": 0.68,
+      "cross_lineage_ba": 0.68,
+      "cross_lineage_bb": 0.695,
+      "note": "Teacher/reference from historical scientific object; no new clean-Llama evaluation"
+    },
+    {
+      "method": "REEF",
+      "teacher_reference": 1.0,
+      "clean_llama_base": "NOT_SEPARATELY_MEASURED_IN_THIS_CAMPAIGN",
+      "same_lineage_ba": 0.9542220066305829,
+      "same_lineage_bb3": 0.9672861269249347,
+      "clean_qwen": 0.4546738923165847,
+      "cross_lineage_ba": 0.4712346890040632,
+      "cross_lineage_bb": 0.47347651724262,
+      "note": "Teacher/reference from historical scientific object; no new clean-Llama evaluation"
+    },
+    {
+      "method": "HuRef",
+      "teacher_reference": 99.99999237060547,
+      "clean_llama_base": "NOT_SEPARATELY_MEASURED_IN_THIS_CAMPAIGN",
+      "same_lineage_ba": 99.99898529052734,
+      "same_lineage_bb3": 99.99873352050781,
+      "clean_qwen": -8.356179237365723,
+      "cross_lineage_ba": -8.41477108001709,
+      "cross_lineage_bb": -8.33336067199707,
+      "note": "Teacher/reference from historical scientific object; no new clean-Llama evaluation"
+    },
+    {
+      "method": "AWM",
+      "teacher_reference": 1.0,
+      "clean_llama_base": "NOT_SEPARATELY_MEASURED_IN_THIS_CAMPAIGN",
+      "same_lineage_ba": 0.9999974135841643,
+      "same_lineage_bb3": 0.9999961065394538,
+      "clean_qwen": 0.0017953364917795106,
+      "cross_lineage_ba": 0.0018811310743071122,
+      "cross_lineage_bb": 0.0018529736315550899,
+      "note": "Teacher/reference from historical scientific object; no new clean-Llama evaluation"
+    },
+    {
+      "method": "ZeroPrint",
+      "teacher_reference": 1.0,
+      "clean_llama_base": "NOT_SEPARATELY_MEASURED_IN_THIS_CAMPAIGN",
+      "same_lineage_ba": 0.8399372696876526,
+      "same_lineage_bb3": 0.9170220196247101,
+      "clean_qwen": 0.6793505996465683,
+      "cross_lineage_ba": 0.70185287296772,
+      "cross_lineage_bb": 0.7015291452407837,
+      "note": "Teacher/reference from historical scientific object; no new clean-Llama evaluation"
+    }
+  ],
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/passive5_shared_ba/detector_summary.json",
+      "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/passive5_shared_bb3/detector_summary.json",
+      "sha256": "06db875528a7751eb371564b4b0d82101c2a2b92aeef5c44db1e9827c8f76257"
+    }
+  ]
+}
