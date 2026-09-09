@@ -1,0 +1,18 @@
+{
+  "status": "RUNNING",
+  "step": 100,
+  "target_steps": 100,
+  "latest": {
+    "ce_loss": 0.7252996563911438,
+    "kd_loss": 0.05674590542912483,
+    "scaled_kd_loss": 0.22698362171649933,
+    "total_loss": 0.47614163160324097,
+    "input_tokens": 787,
+    "response_tokens": 306,
+    "samples": 8,
+    "nan_inf": false,
+    "step": 100,
+    "seconds": 0.36909736692905426,
+    "lr": 4.4e-06
+  }
+}

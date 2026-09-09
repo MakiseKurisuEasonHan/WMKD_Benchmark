@@ -1,0 +1,96 @@
+{
+  "status": "COMPLETE_PILOT_ONLY_STOPPED",
+  "generated_at": "2026-09-09T18:15:12.212563+00:00",
+  "required_wording": [
+    "This Bc pilot uses the frozen protocol-faithful reconstructed PN-FP parent dataset because the original historical Ba dataset is permanently unavailable.",
+    "The appropriate hard-label comparator is the reconstructed-parent Ba trajectory run, not the original historical Ba endpoint."
+  ],
+  "dataset_identity": "RECONSTRUCTED_PARENT",
+  "dataset_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+  "hard_label_comparator": "pnfp_ba_trajectory_followup_20260907_reconstructed_parent",
+  "historical_ba_dataset_available": false,
+  "strict_comparability_to_historical_ba": false,
+  "strict_comparability_to_reconstructed_parent_ba": "YES, subject to unchanged training protocol except KD objective",
+  "smoke_status": "PASS",
+  "pilot_status": "PASS",
+  "teacher_frozen_check": "PASS_FULL_PARAMETER_BYTE_HASH",
+  "student_update_check": "PASS_FULL_PARAMETER_BYTE_HASH",
+  "fresh_init_match_smoke_vs_timing": true,
+  "mean_sec_per_step": 0.32777273907429644,
+  "median_sec_per_step": 0.31160248070955276,
+  "p95_sec_per_step": 0.4041655957698822,
+  "tokens_per_second": 2098.608531659332,
+  "samples_per_second": 24.40715485550687,
+  "peak_allocated_bytes": 38603240960,
+  "peak_reserved_bytes": 47590670336,
+  "training_loop_wall_seconds": 34.35695519670844,
+  "launch_receipt_to_result_mtime_bracket_seconds": 107.05290627479553,
+  "mean_first10_seconds": 0.42598268762230873,
+  "mean_steps11_100_seconds": 0.32777273907429644,
+  "original_historical_ba_sec_per_step": null,
+  "reconstructed_parent_ba_sec_per_step": 0.20699652452965578,
+  "median_kd_vs_reconstructed_ba_mean_speed_ratio": 1.5053512681799177,
+  "mean_kd_vs_reconstructed_ba_mean_speed_ratio": 1.5834697699348927,
+  "loss_start_end": {
+    "ce_loss": [
+      2.264690399169922,
+      0.7252996563911438
+    ],
+    "kd_loss": [
+      0.23447933793067932,
+      0.05674590542912483
+    ],
+    "scaled_kd_loss": [
+      0.9379173517227173,
+      0.22698362171649933
+    ],
+    "total_loss": [
+      1.6013038158416748,
+      0.47614163160324097
+    ]
+  },
+  "nan_inf_count": 0,
+  "oom_count": 0,
+  "forecast": {
+    "pnfp_7500_train_hours": 0.6491718348115683,
+    "six_run_train_hours": 3.8950310088694096,
+    "six_run_post_train_eval_hours_proxy": 0.3503073316666667,
+    "six_run_archive_hours_proxy": 1.1808488275,
+    "git_final_closure_hours_proxy": 0.7550254108333334,
+    "total_hours_proxy": 6.18121257886941,
+    "overhead_range_hours_proxy": [
+      2.0919444408333336,
+      3.9645206558333332
+    ],
+    "post_training_to_eval_seconds_observed": [
+      100.202855,
+      210.184399,
+      380.22655,
+      205.432466,
+      1207.63501
+    ],
+    "archive_seconds_observed": [
+      701.948563,
+      718.062137,
+      707.69761,
+      709.320983
+    ],
+    "proxy_source": "Active Cross-Lineage Bb actual training_exit/evaluation_exit/archive_pipeline_launch/archive_pipeline_exit and final gate timestamps",
+    "limitations": [
+      "Timing estimates extrapolate PNFP short-response workload; other five datasets may have different sequence lengths.",
+      "Overhead uses previous Qwen campaign as operational proxy, not measured Llama Bc detector/utility/archive runtime.",
+      "No model save/checkpoint write measured; future save/retention policy may add time.",
+      "All 100steps are within225step LRwarmup; ten timing burn-in steps are separate.",
+      "Original historical Ba timing unavailable; reconstructed trajectory comparison uses sum of on_step_begin/on_step_end durations, excludes detector checkpoints but includes different telemetry overhead.",
+      "Native dynamic-date template unchanged as code; rendered calendar date differs from prior trajectory.",
+      "No claim of exact numerical replay across software/hardware versions."
+    ]
+  },
+  "detector": "NOT_RUN",
+  "utility": "NOT_RUN",
+  "full7500": "NOT_RUN_NOT_AUTHORIZED",
+  "model_archive": "NOT_RUN",
+  "model_checkpoint_saved": false,
+  "next_action": "WAIT_FOR_USER_FULL_RUN_DECISION",
+  "auto_shutdown": false
+}

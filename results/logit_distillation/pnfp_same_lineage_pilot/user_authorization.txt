@@ -1,0 +1,441 @@
+开始 WMKD_Benchmark 新实验设计阶段：
+
+Bc = SAME-LINEAGE ONLINE LOGIT DISTILLATION
+
+当前只做：
+
+PN-FP Llama→Llama Logit-KD Pilot
+
+目标：
+先验证标准 same-tokenizer online logit distillation 是否在当前 RTX PRO 6000 96GB 上稳定可行，并实测训练速度，从而估算完整 Bc campaign 时间。
+
+本轮禁止直接跑完整7500步。
+先完成：
+2-step smoke
+→ 100-step timing/stability pilot
+→ report
+→ 等用户决定是否进入full run。
+
+==================================================
+1. SCIENTIFIC DEFINITION
+==================================================
+
+Method:
+PN-FP
+
+Teacher:
+已有正式 preferred PN-FP watermarked Llama Teacher。
+
+Student:
+fresh clean canonical
+meta-llama/Llama-3.2-3B-Instruct
+
+必须使用与原 same-lineage Ba 相同 canonical base/revision。
+
+Teacher 和 Student：
+same architecture
+same tokenizer
+same vocabulary
+same token IDs
+
+Experiment role:
+same_lineage_logit_distillation
+或：
+bc_same_lineage_logit_kd
+
+不要覆盖历史 Ba/Bb。
+
+==================================================
+2. DATASET
+==================================================
+
+使用 PN-FP 原 same-lineage Ba 的 canonical frozen ordinary 20k。
+
+不要重新生成 Teacher QA。
+不要重新 paraphrase。
+不要使用 Bb targets。
+
+目标是保证：
+
+Ba:
+same frozen 20k
+→ hard response CE only
+
+Bc:
+same frozen 20k
+→ hard response CE + teacher soft logits
+
+尽量让唯一核心变化为：
+logit supervision。
+
+启动前只做最小检查：
+
+- exactly 20,000 records
+- expected SHA
+- question/answer完整
+- source_answer为训练target
+- zero empty supervision
+- zero truncation under canonical Llama formatter
+- same Ba formatter/template
+- dataset provenance记录
+
+==================================================
+3. TRAINING OBJECTIVE
+==================================================
+
+只在 assistant response tokens 上计算loss。
+
+Prompt/system/user tokens：
+MASKED
+
+Assistant response tokens：
+CE + KD
+
+定义：
+
+L_total =
+0.5 * L_CE
++
+0.5 * T^2 * KL(
+    softmax(Teacher_logits / T)
+    ||
+    softmax(Student_logits / T)
+)
+
+Temperature:
+T = 2.0
+
+CE weight:
+0.5
+
+KD weight:
+0.5
+
+本轮只是pilot。
+不要调参寻找更强watermark transfer。
+
+不要改变：
+- T
+- CE/KD ratio
+除非出现明确数值/稳定性问题，并先报告。
+
+==================================================
+4. TEACHER EXECUTION
+==================================================
+
+Teacher必须：
+
+- eval mode
+- frozen parameters
+- requires_grad=False
+- torch.inference_mode() / no_grad
+- no optimizer
+- no backward
+- no parameter update
+
+Teacher只负责每个batch forward生成soft logits。
+
+禁止：
+- 保存20k full logits到磁盘
+- offline logit dump
+- teacher update
+
+==================================================
+5. STUDENT EXECUTION
+==================================================
+
+Student：
+
+fresh clean Llama initialization
+
+full-parameter training
+
+保持尽量与原Ba一致：
+
+- BF16
+- LR = 1e-5
+- effective batch size = 8
+- seed = 42
+- same scheduler/warmup semantics if historical Ba fixed
+- same max sequence length
+- same chat template
+- same answer masking
+- no LoRA
+- no quantization
+- no resume
+
+==================================================
+6. MEMORY-SAFE KL IMPLEMENTATION
+==================================================
+
+重点避免 full-vocab logits 导致显存爆炸。
+
+要求：
+
+- Teacher logits尽量BF16保存
+- Student logits正常BF16
+- KL计算可用FP32 accumulation
+- 仅对assistant response token positions做KD
+- prompt positions不要参与KL
+- Teacher logits用完立即释放
+- 必要时对sequence positions做chunked KL
+- 不要把整batch×seq×vocab长期复制成多个大tensor
+- 避免不必要clone/contiguous副本
+
+如果需要chunked KL：
+允许，只要数学结果等价于完整assistant-token KL。
+
+记录chunk size。
+
+==================================================
+7. FIRST STAGE — 2-STEP MEMORY SMOKE
+==================================================
+
+先运行2个optimizer steps。
+
+必须记录：
+
+GPU model
+VRAM total
+peak allocated
+peak reserved
+teacher load memory
+student load memory
+before forward memory
+after teacher forward memory
+after student forward memory
+after KL memory
+after backward memory
+after optimizer step memory
+
+同时记录每步：
+
+CE loss
+KD loss
+T^2-scaled KD loss
+total loss
+grad norm
+learning rate
+NaN/Inf
+step wall time
+
+Smoke成功条件：
+
+- no OOM
+- no NaN/Inf
+- gradients finite
+- teacher weights unchanged
+- student weights changed
+- loss finite
+- optimizer step succeeds
+- no accidental teacher gradient
+
+如果2-step失败：
+不要直接full retry。
+先定位root cause。
+
+==================================================
+8. SECOND STAGE — 100-STEP TIMING/STABILITY PILOT
+==================================================
+
+只有2-step smoke PASS后才运行100-step pilot。
+
+从 fresh initialization重新开始100-step pilot，
+不要从2-step smoke continuation作为正式timing基准。
+
+保持同一个protocol。
+
+100-step pilot记录：
+
+- total wall time
+- warmup前/后 sec per step
+- median sec/step
+- mean sec/step
+- p95 sec/step if available
+- tokens/sec
+- samples/sec
+- peak VRAM
+- CE loss trajectory
+- KD loss trajectory
+- total loss trajectory
+- grad norm
+- lr
+- NaN/Inf count
+- OOM count
+- teacher checksum before/after
+- student checksum before/after
+
+前10步可以作为warmup，
+正式速度报告优先用：
+steps 11–100。
+
+==================================================
+9. TIME ESTIMATION
+==================================================
+
+100-step完成后计算：
+
+estimated_7500_step_train_hours =
+median_sec_per_step * 7500 / 3600
+
+同时给：
+
+estimated_6_run_train_hours =
+estimated_7500_step_train_hours * 6
+
+另外给一个合理 overhead 估算：
+
+detector
+utility
+archive
+Git
+final closure
+
+不要凭聊天猜时间。
+必须以本次实测 sec/step 为依据。
+
+最终输出：
+
+PNFP_BC_PILOT_SEC_PER_STEP =
+PNFP_BC_ESTIMATED_7500H =
+ESTIMATED_6_RUN_TRAIN_H =
+ESTIMATED_TOTAL_CAMPAIGN_H =
+
+==================================================
+10. COMPARE TO HISTORICAL Ba SPEED
+==================================================
+
+从 canonical PN-FP Ba full log读取：
+
+- historical training wall time
+- historical sec/step if recoverable
+
+比较：
+
+LOGIT_KD / HARD_LABEL_SFT speed ratio
+
+例如：
+
+SPEED_RATIO =
+1.42x
+
+不要从记忆猜。
+
+如果历史Ba没有精确wall timing：
+明确写unavailable。
+
+==================================================
+11. DO NOT RUN DETECTOR YET
+==================================================
+
+本轮pilot结束后不要自动：
+
+- 跑PN-FP detector
+- 跑utility
+- 跑7500 full training
+- 上传ModelScope
+- 创建preferred archive
+
+当前目的只是：
+
+feasibility
+memory
+stability
+speed
+
+==================================================
+12. ARTIFACTS
+==================================================
+
+建议保存：
+
+results/logit_distillation/pnfp_same_lineage_pilot/
+
+至少包括：
+
+protocol.json
+dataset_manifest.json
+teacher_provenance.json
+student_provenance.json
+memory_smoke.json
+timing_100step.json
+loss_trace.csv
+memory_trace.csv
+pilot_summary.json
+full_experiment_log.json
+
+以及报告：
+
+docs/reproduction_reports/pnfp_same_lineage_logit_kd_pilot.md
+
+==================================================
+13. IMPORTANT SCIENTIFIC CHECKS
+==================================================
+
+必须验证：
+
+Teacher 和 Student tokenizer完全一致
+vocab size一致
+token IDs一致
+assistant token mask一致
+Teacher logits和Student logits在同一token positions对齐
+KL方向固定为：
+Teacher || Student
+
+不要误写成反向KL。
+
+Teacher不更新。
+
+Student fresh init。
+
+==================================================
+14. GIT
+==================================================
+
+本轮pilot结束后，
+轻量code/config/report可以按当前长期授权正常commit/push private GitHub。
+
+不要push：
+
+- weights
+- full checkpoints
+- model files
+
+==================================================
+15. STOP CONDITION
+==================================================
+
+100-step pilot完成并生成时间估算后：
+
+停止。
+
+不要自动进入7500-step full PN-FP Bc。
+
+向用户汇报：
+
+SMOKE_STATUS =
+PEAK_VRAM =
+TEACHER_FROZEN_CHECK =
+STUDENT_UPDATE_CHECK =
+
+PILOT_STATUS =
+MEAN_SEC_PER_STEP =
+MEDIAN_SEC_PER_STEP =
+P95_SEC_PER_STEP =
+TOKENS_PER_SEC =
+PEAK_VRAM_100STEP =
+
+CE_LOSS_START_END =
+KD_LOSS_START_END =
+TOTAL_LOSS_START_END =
+
+HISTORICAL_BA_SEC_PER_STEP =
+SPEED_RATIO_VS_BA =
+
+ESTIMATED_PNFP_FULL_7500_HOURS =
+ESTIMATED_6_RUN_TRAIN_HOURS =
+ESTIMATED_FULL_BC_CAMPAIGN_HOURS =
+
+RECOMMENDED_NEXT_ACTION =
+
+不要启动full run，等待用户决策。

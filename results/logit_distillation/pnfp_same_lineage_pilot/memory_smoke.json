@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "steps": 2,
+  "teacher_checksum_before": "66f9bac1a5d09ff94db4bd4b2368971590a1a59534753ca1b95a362606fb82bb",
+  "teacher_checksum_after": "66f9bac1a5d09ff94db4bd4b2368971590a1a59534753ca1b95a362606fb82bb",
+  "student_checksum_before": "42ce8b214dae220bcc05622a040433e51385d1784c747628b26966f10a63f837",
+  "student_checksum_after": "15e625a5500d5b36edc492f90bd2364c15abdc0dfe444f6cc0b8d5325dcc6256",
+  "teacher_frozen": true,
+  "student_updated": true,
+  "no_teacher_gradient": true,
+  "wall_seconds": 1.533399861305952,
+  "peak_allocated": 38574599680,
+  "peak_reserved": 39871053824,
+  "load_memory": [
+    {
+      "point": "teacher_load",
+      "allocated": 6426024448
+    },
+    {
+      "point": "student_load",
+      "allocated": 12852048896
+    }
+  ],
+  "rows": [
+    {
+      "ce_loss": 2.264690399169922,
+      "kd_loss": 0.23447933793067932,
+      "scaled_kd_loss": 0.9379173517227173,
+      "total_loss": 1.6013038158416748,
+      "input_tokens": 583,
+      "response_tokens": 105,
+      "samples": 8,
+      "nan_inf": false,
+      "step": 1,
+      "seconds": 0.946789376437664,
+      "lr": 0.0,
+      "grad_norm": 62.0
+    },
+    {
+      "ce_loss": 1.9550114870071411,
+      "kd_loss": 0.4020603597164154,
+      "scaled_kd_loss": 1.6082414388656616,
+      "total_loss": 1.7816264629364014,
+      "input_tokens": 664,
+      "response_tokens": 94,
+      "samples": 8,
+      "nan_inf": false,
+      "step": 2,
+      "seconds": 0.3665428012609482,
+      "lr": 4.444444444444445e-08,
+      "grad_norm": 87.5
+    }
+  ],
+  "mean_sec_per_step": 0.6566660888493061,
+  "median_sec_per_step": 0.6566660888493061,
+  "p95_sec_per_step": 0.9177770614624023,
+  "tokens_per_second": 949.4932212695436,
+  "samples_per_second": 12.182751836658138,
+  "lr_schedule_horizon": 7500,
+  "warmup_steps": 225,
+  "nan_inf_count": 0,
+  "oom_count": 0,
+  "post_lr_warmup_timing": "NOT_OBSERVED",
+  "timing_burn_in_steps": 10,
+  "chunk_positions": 32,
+  "trainable_parameters": 3212749824
+}

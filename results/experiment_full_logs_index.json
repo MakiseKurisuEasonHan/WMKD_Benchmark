@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-09T16:58:00.595271+00:00",
-  "object_count": 61,
+  "generated_at": "2026-09-09T18:15:12.212563+00:00",
+  "object_count": 62,
   "objects": [
     {
       "method": "PN-FP",
@@ -932,6 +932,20 @@
       "watermark_evaluation_available": true,
       "utility_available": true,
       "checkpoint_localization_support": false
+    },
+    {
+      "method": "PN-FP",
+      "role": "same_lineage_logit_distillation_pilot",
+      "experiment": "Bc pilot",
+      "run_id": "pnfp_bc_reconstructed_parent_pilot_20260910",
+      "full_log_path": "results/logit_distillation/pnfp_same_lineage_pilot/full_experiment_log.json",
+      "full_log_sha256": "c211b4050319107f451c2370aba2ac497042d54db33ee0c8d1fabba8205fce5c",
+      "scientific_status": "PILOT_FEASIBILITY_COMPLETE",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "telemetry_records": 102,
+      "modelscope_repo": null,
+      "final_model_manifest": null
     }
   ]
 }

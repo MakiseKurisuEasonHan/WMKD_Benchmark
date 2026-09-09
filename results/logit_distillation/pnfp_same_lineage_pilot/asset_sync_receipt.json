@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "role": "teacher",
+      "name": "config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/config.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/config.json",
+      "bytes": 966,
+      "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "teacher",
+      "name": "generation_config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/generation_config.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/generation_config.json",
+      "bytes": 184,
+      "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "teacher",
+      "name": "model-00001-of-00002.safetensors",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/model-00001-of-00002.safetensors",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "teacher",
+      "name": "model-00002-of-00002.safetensors",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/model-00002-of-00002.safetensors",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "teacher",
+      "name": "model.safetensors.index.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/model.safetensors.index.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/model.safetensors.index.json",
+      "bytes": 20919,
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "teacher",
+      "name": "special_tokens_map.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/special_tokens_map.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/special_tokens_map.json",
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "teacher",
+      "name": "tokenizer.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/tokenizer.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/tokenizer.json",
+      "bytes": 9085754,
+      "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "teacher",
+      "name": "tokenizer_config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/tokenizer_config.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/restored/pnfp_a2_teacher_for_reconstruction/tokenizer_config.json",
+      "bytes": 54557,
+      "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/config.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/config.json",
+      "bytes": 878,
+      "sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "receiver_result": "EXISTING_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "generation_config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/generation_config.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/generation_config.json",
+      "bytes": 189,
+      "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "model-00001-of-00002.safetensors",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00001-of-00002.safetensors",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "13cbd6d16e927a0c5bad54102514e6e18b4a47b3a6eb911e39d678d328d19f55",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "model-00002-of-00002.safetensors",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00002-of-00002.safetensors",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "7b770216613ac5c34d7c54bdff1fa616bc4e338a9d0b20af6303e48c295ee23c",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "model.safetensors.index.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model.safetensors.index.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/model.safetensors.index.json",
+      "bytes": 20919,
+      "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "special_tokens_map.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/special_tokens_map.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/special_tokens_map.json",
+      "bytes": 296,
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "receiver_result": "EXISTING_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "tokenizer.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer.json",
+      "bytes": 9085657,
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "receiver_result": "EXISTING_SHA_PASS"
+    },
+    {
+      "role": "base",
+      "name": "tokenizer_config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer_config.json",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer_config.json",
+      "bytes": 54528,
+      "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "receiver_result": "EXISTING_SHA_PASS"
+    },
+    {
+      "role": "dataset",
+      "name": "frozen_qa.jsonl",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "destination": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "bytes": 6388554,
+      "sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+      "receiver_result": "DESTINATION_SHA_PASS"
+    }
+  ]
+}
