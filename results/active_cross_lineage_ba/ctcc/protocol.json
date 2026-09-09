@@ -1,0 +1,90 @@
+{
+  "project": "WMKD_Benchmark",
+  "campaign": "ACTIVE_CROSS_LINEAGE_BA",
+  "method": "CTCC",
+  "experiment": "XBa",
+  "run_id": "ctcc_xba_20260908",
+  "status": "PREPARED_NOT_STARTED",
+  "student": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "initialization": "fresh_clean_Qwen_not_other_student",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+  "dataset": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+    "records": 20000,
+    "bytes": 5810753,
+    "sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+    "canonical_records_sha256": "621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484",
+    "parent_dataset_origin": "exact_historical_frozen_dataset"
+  },
+  "training": {
+    "epochs": 3,
+    "records": 20000,
+    "sample_exposures": 60000,
+    "micro_batch": 8,
+    "gradient_accumulation": 1,
+    "effective_batch": 8,
+    "optimizer_steps": 7500,
+    "learning_rate": 1e-05,
+    "seed": 42,
+    "precision": "bf16",
+    "full_parameter": true,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "max_length": 1024,
+    "gradient_checkpointing": true,
+    "formatter": "native_Qwen_chat_template",
+    "supervision": "teacher_raw_answer",
+    "save_strategy": "no_intermediate_checkpoints_final_model_only",
+    "interruption_policy": "No automatic replay from Base if no resumable checkpoint exists"
+  },
+  "runner": "scripts/train_active_cross_lineage_endpoint.py",
+  "output_dir": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908",
+  "detector": "scripts/ctcc_ba_evaluate.py",
+  "detector_secret": "Unchanged frozen trigger95/suppression100/normal105; case-sensitive stripped IAMALIVE exact equality; WMKD operational detector",
+  "clean_qwen_detector": {
+    "status": "COMPLETE",
+    "integrity": "PASS",
+    "categories": {
+      "trigger": {
+        "count": 95,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      },
+      "suppression": {
+        "count": 100,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      },
+      "normal": {
+        "count": 105,
+        "activations": 0,
+        "activation_rate": 0.0,
+        "generation_errors": 0
+      }
+    },
+    "combined_negatives": {
+      "count": 205,
+      "false_activations": 0,
+      "false_activation_rate": 0.0
+    }
+  },
+  "clean_qwen_utility_source": "results/passive_cross_lineage/clean_qwen_baseline/utility",
+  "clean_qwen_arc": 0.4402730375426621,
+  "clean_qwen_mc2": 0.5712170418936038,
+  "launch_gates": [
+    "all applicable clean-Qwen baselines complete incl SCW statistical aggregation",
+    "canonical12-file SHA PASS",
+    "dataset20k SHA/zero truncation/zero empty supervision PASS",
+    "runner exact engineering diff PASS",
+    "GPU truly idle and no other worker",
+    "fresh output path absent",
+    "free disk > final_weights+4GiB"
+  ],
+  "archive_status": "NOT_STARTED",
+  "shutdown_armed": false
+}

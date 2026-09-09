@@ -1,0 +1,433 @@
+{
+  "checked_at": "2026-09-09T06:12:16.723692+00:00",
+  "mode": "CPU_ONLY",
+  "methods": {
+    "pnfp": {
+      "model_files": [
+        {
+          "name": "added_tokens.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "chat_template.jinja",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "generation_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "merges.txt",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "special_tokens_map.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "training_args.bin",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "vocab.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        }
+      ],
+      "dataset_sha_match": true,
+      "fresh_reload_evidence": "FRESH_RELOAD_VERIFIED"
+    },
+    "ctcc": {
+      "model_files": [
+        {
+          "name": "added_tokens.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "chat_template.jinja",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "generation_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "merges.txt",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "special_tokens_map.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "training_args.bin",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "vocab.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        }
+      ],
+      "dataset_sha_match": true,
+      "fresh_reload_evidence": "FRESH_RELOAD_VERIFIED"
+    },
+    "evertracer": {
+      "model_files": [
+        {
+          "name": "added_tokens.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "chat_template.jinja",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "generation_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "merges.txt",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "special_tokens_map.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "training_args.bin",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "vocab.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        }
+      ],
+      "dataset_sha_match": true,
+      "fresh_reload_evidence": "FRESH_RELOAD_VERIFIED"
+    },
+    "iseal": {
+      "model_files": [
+        {
+          "name": "added_tokens.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "chat_template.jinja",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "generation_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "merges.txt",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "special_tokens_map.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "training_args.bin",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "vocab.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        }
+      ],
+      "dataset_sha_match": true,
+      "fresh_reload_evidence": "FRESH_RELOAD_VERIFIED"
+    },
+    "scw": {
+      "model_files": [
+        {
+          "name": "added_tokens.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "chat_template.jinja",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "generation_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "merges.txt",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "special_tokens_map.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "tokenizer_config.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "training_args.bin",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        },
+        {
+          "name": "vocab.json",
+          "exists": true,
+          "size_match": true,
+          "sha_match": true
+        }
+      ],
+      "dataset_sha_match": true,
+      "fresh_reload_evidence": "FRESH_RELOAD_VERIFIED"
+    }
+  },
+  "disk": {
+    "total": 536870912000,
+    "used": 529490956288,
+    "free": 7379955712
+  },
+  "gpu": "No devices were found\n",
+  "processes": "   PID   PPID ELAPSED COMMAND\n     1      0    1095 bash /init/boot/boot.sh\n   708      1    1092 /bin/supervisord -c /init/supervisor/supervisor.ini\n   723    708    1092 /root/miniconda3/bin/python /root/miniconda3/bin/jupyter-lab --allow-root --config=/init/jupyter/jupyter_config.py\n   726    708    1092 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups\n   729    708    1092 /root/miniconda3/bin/python /root/miniconda3/bin/tensorboard --host 0.0.0.0 --port 6007 --logdir /root/tf-logs\n   730    708    1092 autopanel serve --work-dir=/root/autodl-tmp --cache-dir=/root/autodl-tmp\n   731    708    1092 proxy -c /init/proxy/proxy-hot-backup.ini\n   734    708    1092 proxy -c /init/proxy/proxy.ini\n   776    729    1089 /root/miniconda3/lib/python3.12/site-packages/tensorboard_data_server/bin/server --logdir=/root/tf-logs --reload=5 --samples-per-plugin= --port=0 --port-file=/tmp/tensorboard_data_server_7cxvwg26/port --die-after-stdin --error-file=/tmp/tensorboard_data_server_7cxvwg26/startup_error\n  1752    726     107 sshd: root@notty\n  1765   1752     103 /root/autodl-tmp/WMKD_Benchmark_data/artifacts/modelscope_cli_env/bin/python -B -c import sys,base64;exec(base64.b64decode(sys.stdin.read()))\n  1812   1765       0 ps -eo pid,ppid,etimes,args\n"
+}

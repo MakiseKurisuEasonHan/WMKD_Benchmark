@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "role": "ctcc",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.4684300341296928,
+  "truthfulqa_mc2_acc": 0.4480919802572382,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.4598976109215017,
+      "acc_stderr,none": 0.014564318856924848,
+      "acc_norm,none": 0.4684300341296928,
+      "acc_norm_stderr,none": 0.014582236460866978
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.4480919802572382,
+      "acc_stderr,none": 0.01449954696713532
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T11:37:01.902780+00:00"
+}

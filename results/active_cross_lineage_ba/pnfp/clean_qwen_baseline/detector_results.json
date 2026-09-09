@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "model": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+  "detected": 43,
+  "total": 1024,
+  "detection_rate": 0.0419921875,
+  "evaluation_errors": 0,
+  "invalid_samples": 0,
+  "elapsed_seconds": 27.901982307434082,
+  "secret_sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+  "secret_regenerated": false,
+  "rule": "Official full encoded signature equality; immutable historical Llama key/target strings; no Qwen truncation",
+  "raw_sha256": "fee99b2f0e0a1866672046897b772311e06909474092b5d91aded70e341a1fa3"
+}

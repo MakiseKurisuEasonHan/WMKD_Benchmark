@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "role": "evertracer",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/evertracer_xba_20260908/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.5162116040955631,
+  "truthfulqa_mc2_acc": 0.4509746503062132,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.4658703071672355,
+      "acc_stderr,none": 0.0145773113152311,
+      "acc_norm,none": 0.5162116040955631,
+      "acc_norm_stderr,none": 0.014603708567414938
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.4509746503062132,
+      "acc_stderr,none": 0.014629963410993147
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T12:27:05.602015+00:00"
+}

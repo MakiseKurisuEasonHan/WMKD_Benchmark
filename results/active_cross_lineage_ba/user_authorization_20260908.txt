@@ -1,0 +1,930 @@
+开始新的 WMKD_Benchmark campaign：
+
+ACTIVE CROSS-LINEAGE BEHAVIORAL EXTRACTION — Ba
+
+目标：
+把前 5 个主动水印方法全部使用不同源 Qwen Student 做一遍 behavioral distillation / model extraction。
+
+Methods:
+1. PN-FP
+2. EverTracer
+3. CTCC
+4. iSeal
+5. SCW
+
+==================================================
+A. Scientific definition
+==================================================
+
+Canonical Teacher family:
+meta-llama/Llama-3.2-3B-Instruct
+
+Teacher:
+每个方法各自已经正式复现并归档的 watermarked Llama Teacher。
+
+Student:
+Qwen/Qwen2.5-3B-Instruct
+
+Qwen revision:
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+Local Qwen model:
+使用 passive cross-lineage campaign 已验证通过的 canonical local model。
+不要重新下载，除非 canonical model 确实不存在或完整性失败。
+
+Experiment role:
+active_cross_lineage_ba
+
+核心流程：
+
+Watermarked Llama Teacher
+    ↓
+existing frozen ordinary Teacher QA20k
+    ↓
+fresh clean Qwen2.5-3B-Instruct
+    ↓
+full-parameter SFT
+    ↓
+method-specific Qwen XBa Student
+    ↓
+original method detector
+    ↓
+ARC-Challenge + TruthfulQA MC2
+
+这不是：
+- Teacher continuation
+- LoRA
+- Qwen→Qwen self distillation
+- same-lineage distillation
+
+这是：
+Llama watermarked Teacher → Qwen fresh Student
+cross-lineage behavioral extraction.
+
+==================================================
+B. Important execution policy
+==================================================
+
+这是一个长时间自动串行 campaign。
+
+学校 VPN：关闭
+
+AutoDL:
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+严格执行：
+
+- 一次只允许一个大型 GPU 任务
+- 不并行训练
+- 不抢占
+- 不终止其他用户进程
+- 每次 GPU 任务前必须 nvidia-smi
+- 只使用明确空闲 GPU
+- 不关机直到整个 campaign 已经无可继续任务
+- 某一个方法失败，不终止整个 campaign
+- 记录 blocker 后继续下一个方法
+- 不因为 detector 不适用而强行修改 detector
+- 不修改 frozen scientific config 以“让实验成功”
+
+==================================================
+C. FIRST: minimal applicability + clean-Qwen baseline audit
+==================================================
+
+不要先训练。
+
+先对 5 个 active detector 做最小、关键、read-only applicability audit。
+
+目标：
+
+判断每个 detector 对 Qwen 是否属于：
+
+SUPPORTED
+ADAPTABLE_WITHOUT_SEMANTIC_CHANGE
+NOT_APPLICABLE
+
+必须优先读取：
+- 当前项目已有正式代码
+- 原实验 detector 实现
+- frozen detector assets/config
+- 原论文/官方代码中已经归档的 detector semantics
+
+不要为了跨架构人为修改公式。
+
+逐方法检查：
+
+--------------------------------------------------
+1. PN-FP
+--------------------------------------------------
+
+重点确认：
+- fingerprint key 是否文本级 / token-string 级
+- expected target 是否依赖固定 Llama token IDs
+- Qwen tokenizer 是否能在不改变科学语义的情况下执行同一 detector
+
+如果原 detector 可以对生成文本按同一 secret fingerprint 判定：
+SUPPORTED / ADAPTABLE_WITHOUT_SEMANTIC_CHANGE
+
+如果 detector 根本绑定 Llama-only token IDs，且必须重新定义 secret：
+NOT_APPLICABLE
+
+绝对不要重新生成 PN-FP secret fingerprint。
+
+--------------------------------------------------
+2. EverTracer
+--------------------------------------------------
+
+确认 detector 是否只依赖：
+- query
+- output behavior
+- perturbation/output comparison
+
+如果需要 architecture-specific hidden-state hooks：
+判断是否存在原定义允许的跨架构执行方式。
+
+不要重新定义 detector。
+
+--------------------------------------------------
+3. CTCC
+--------------------------------------------------
+
+优先按原 frozen detector：
+
+trigger prompt
+→ generated_answer.strip() == "IAMALIVE"
+
+case-sensitive exact match。
+
+同时跑 frozen negatives。
+
+预期大概率 SUPPORTED。
+
+不要改：
+- trigger set
+- exact string
+- threshold
+- generation rule
+
+--------------------------------------------------
+4. iSeal
+--------------------------------------------------
+
+重点检查原 verification interface：
+
+inputs_embeds
+embedding dimension
+tokenizer
+embedding matrix
+registered plaintext
+registered secret
+
+如果原 detector 依赖 Llama embedding topology，
+且无法在 Qwen 上保持原科学语义：
+NOT_APPLICABLE
+
+绝对不要为了 Qwen：
+- 投影 embedding
+- 改 dimension
+- 重新注册 watermark
+- 重新训练 detector
+- 改 threshold
+
+如果官方定义本身允许文本级验证，才允许执行。
+
+--------------------------------------------------
+5. SCW
+--------------------------------------------------
+
+确认原冻结 detector 是否能基于 Qwen 输出执行完全相同的统计检验。
+
+保持：
+- frozen eval prompts
+- original statistic
+- original significance alpha
+- original detection rule
+
+==================================================
+D. Clean Qwen baseline
+==================================================
+
+对所有 SUPPORTED / ADAPTABLE 的 active detector，
+先在 fresh clean Qwen 上运行 baseline。
+
+必须保存：
+
+method
+applicability
+clean_Qwen_native_score
+clean_Qwen_detection_decision
+threshold / alpha / decision rule
+raw evidence path
+errors
+
+注意：
+
+不能默认 clean Qwen 应该是 0。
+必须真实运行。
+
+iSeal 如果 NOT_APPLICABLE：
+明确写 N/A，不运行伪 baseline。
+
+这批 clean-Qwen baseline 必须冻结下来，
+后面和 XBa Student 对比。
+
+==================================================
+E. Reuse existing frozen Ba20k
+==================================================
+
+不要重新生成 Teacher QA。
+
+每个方法使用自己原来正式 Ba campaign 的 frozen ordinary QA20k：
+
+PN-FP → PN-FP frozen Ba20k
+EverTracer → EverTracer frozen Ba20k
+CTCC → CTCC frozen Ba20k
+iSeal → iSeal frozen Ba20k
+SCW → SCW frozen Ba20k
+
+注意：
+
+PN-FP 和 SCW 的历史 parent identity 存在 reconstructed != original Ba 的已知限制。
+继续使用当前 canonical frozen scientific artifact。
+不要静默重建或替换。
+
+启动每个方法前只做最小必要检查：
+
+- exactly 20,000 records
+- expected SHA
+- source_answer selected
+- question/answer non-empty
+- Qwen official formatter
+- zero empty supervision
+- zero truncation under active Qwen training formatter
+- no accidental paraphrased_answer
+- frozen provenance matches method
+
+不要重新做大规模审计。
+
+==================================================
+F. Training configuration
+==================================================
+
+所有 5 个 XBa Student 尽可能共享相同 cross-lineage training protocol：
+
+Student:
+fresh clean Qwen2.5-3B-Instruct
+
+revision:
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+Training:
+- full parameter
+- no LoRA
+- no quantization
+- BF16
+- 20k records
+- 3 epochs
+- learning rate = 1e-5
+- effective batch size = 8
+- seed = 42
+- official Qwen chat template
+- fresh initialization for EVERY method
+- expected ~7500 optimizer steps if runtime config maps identically
+
+每个方法都必须从同一 fresh clean Qwen checkpoint 开始。
+
+绝对禁止：
+
+PN-FP Qwen Student
+→ 再继续训练成 EverTracer Student
+
+每个方法都是独立：
+
+fresh Qwen
+→ PN-FP data
+
+fresh Qwen
+→ EverTracer data
+
+fresh Qwen
+→ CTCC data
+
+fresh Qwen
+→ iSeal data
+
+fresh Qwen
+→ SCW data
+
+==================================================
+G. Serial order
+==================================================
+
+严格按：
+
+1. PN-FP XBa
+2. EverTracer XBa
+3. CTCC XBa
+4. iSeal XBa
+5. SCW XBa
+
+某个方法如果遇到 blocker：
+
+- 保存所有日志
+- 记录 blocker category
+- 记录最后成功阶段
+- 不反复无限重试
+- 不修改科学协议
+- 跳到下一个方法
+
+Blocker 分类至少包括：
+
+INFRASTRUCTURE_BLOCKED
+TRAINING_FAILED
+DETECTOR_NOT_APPLICABLE
+DETECTOR_RUNTIME_BLOCKED
+DATA_INTEGRITY_BLOCKED
+SCIENTIFIC_PROTOCOL_BLOCKED
+
+如果只是 transient infra error：
+允许有限、restart-safe 重试。
+
+如果同一个确定性 error 重复 2 次：
+停止该方法，记录 blocker，继续下一个。
+
+==================================================
+H. Per-method execution
+==================================================
+
+每个 method 都执行以下阶段：
+
+STAGE 0
+preflight
+
+STAGE 1
+fresh Qwen training
+
+STAGE 2
+final checkpoint/model validation
+
+STAGE 3
+fresh reload
+
+STAGE 4
+method-native detector
+
+STAGE 5
+utility
+
+STAGE 6
+scientific closure
+
+STAGE 7
+evidence archive decision/preparation
+
+==================================================
+I. Detector rules
+==================================================
+
+PN-FP
+--------------------------------------------------
+
+必须报告至少：
+
+registered fingerprints detected / total
+native detection rate
+errors
+
+如果原 detector 允许：
+保留 per-key raw result。
+
+重点比较：
+
+Watermarked Teacher
+Clean Llama
+Same-lineage Ba
+Clean Qwen
+Cross-lineage Qwen Ba
+
+不要把 detected rate 称为概率。
+
+--------------------------------------------------
+EverTracer
+--------------------------------------------------
+
+保持原 frozen protocol。
+
+至少报告：
+
+member/non-member AUC
+TPR @ original frozen FPR criterion
+raw score arrays
+
+比较：
+
+Teacher
+Base Llama
+same-lineage Ba
+clean Qwen
+cross-lineage Ba
+
+AUC≈0.5 表示接近随机，不是“50% watermark”。
+
+--------------------------------------------------
+CTCC
+--------------------------------------------------
+
+保持：
+
+seen/official trigger sets
+negative sets
+exact:
+generated_answer.strip()=="IAMALIVE"
+
+至少报告：
+
+trigger exact activation count
+negative activation count
+generation errors
+
+--------------------------------------------------
+iSeal
+--------------------------------------------------
+
+如果 applicability = NOT_APPLICABLE：
+
+不要训练后硬跑伪 detector。
+
+仍然允许训练 XBa Student，
+但 detector result 标记：
+
+N/A_CROSS_ARCHITECTURE
+
+并解释原因。
+
+如果 detector 可以合法运行：
+保持原 BLEU/registered semantics/threshold。
+
+--------------------------------------------------
+SCW
+--------------------------------------------------
+
+保持：
+
+original frozen French eval set
+original statistical test
+original alpha = 0.001
+original detection rule
+
+报告：
+p-value
+detected yes/no
+raw evidence
+
+lower p = stronger watermark evidence。
+
+==================================================
+J. Utility
+==================================================
+
+每个成功训练并 fresh reload 的 XBa Student 都运行：
+
+ARC-Challenge acc_norm
+TruthfulQA MC2 acc
+
+同时引用：
+
+Clean Qwen baseline utility:
+ARC = 0.440273
+TruthfulQA MC2 = 0.571217
+
+如果已有 canonical raw artifact：
+直接复用，不重复跑 clean Qwen。
+
+每个方法报告：
+
+clean Qwen
+XBa Student
+delta
+
+不要仅凭单个 benchmark 下降就叫 utility collapse。
+
+==================================================
+K. Trajectory
+==================================================
+
+这轮先不要做 11-checkpoint detector trajectory。
+
+目标优先完成 5 个 cross-lineage endpoint。
+
+不要自动启动：
+step0/25/50/100/... trajectory
+
+除非已有训练过程 checkpoint 被自然保留，
+可以记录，但不要为了 trajectory 额外重复训练或 detector。
+
+==================================================
+L. Results structure
+==================================================
+
+建议 canonical root：
+
+results/active_cross_lineage_ba/
+
+下面：
+
+pnfp/
+evertracer/
+ctcc/
+iseal/
+scw/
+comparison/
+
+每个成功/blocked method 至少有：
+
+full_experiment_log.json
+training_summary.json
+model_provenance.json
+dataset_manifest.json
+detector_applicability.json
+detector_results.json
+utility_results.json
+closure_summary.json
+
+如果项目已有 canonical naming：
+遵守现有结构，不重复创造第二套。
+
+必须更新：
+
+results/experiment_full_logs_index.json
+
+==================================================
+M. Full scientific logs
+==================================================
+
+项目规则继续严格执行：
+
+每个正式实验必须有：
+
+full_experiment_log.json
+
+完整记录：
+
+- environment
+- GPU
+- base model
+- revision
+- teacher identity
+- dataset SHA
+- tokenizer/template
+- training config
+- effective runtime config
+- start/end
+- checkpoints
+- detector config
+- detector raw result
+- utility
+- errors
+- final scientific status
+- provenance
+- archive status
+
+不允许只保留 terminal summary。
+
+==================================================
+N. Final master comparison
+==================================================
+
+5 个方法都进入 terminal state 后生成：
+
+results/active_cross_lineage_ba/comparison/active_cross_lineage_ba_master.json
+results/active_cross_lineage_ba/comparison/active_cross_lineage_ba_master.csv
+
+以及正式 markdown report。
+
+至少包含：
+
+Method
+Teacher native score
+Clean Llama
+Same-lineage Ba
+Clean Qwen
+Cross-lineage Ba
+Cross-lineage delta vs Clean Qwen
+Detector applicability
+Detection threshold/rule
+Same-lineage decision
+Cross-lineage decision
+Utility ARC
+Utility MC2
+Final status
+Interpretation
+
+不同 detector raw scores 不允许跨方法直接比较。
+
+==================================================
+O. Scientific questions
+==================================================
+
+最终报告必须回答：
+
+1. 哪些 active watermark detector 可以合法跨架构使用？
+2. 哪些 detector 本身 architecture-bound？
+3. Clean Qwen 上是否存在自然误触发/背景信号？
+4. PN-FP same-lineage 的部分 transfer 在 Qwen 上是否仍存在？
+5. EverTracer 是否仍接近 random？
+6. CTCC 是否会在跨 lineage ordinary behavioral extraction 下获得 IAMALIVE trigger behavior？
+7. iSeal 是 transfer failure，还是 detector 本身不支持 cross-architecture？
+8. SCW 是否仍保持 non-detected？
+9. 与 same-lineage Ba 相比，cross-lineage 是否进一步削弱 active watermark acquisition？
+10. active watermark failure 是否仍主要表现为 acquisition failure，而不是 forgetting？
+
+使用 bounded scientific wording。
+
+==================================================
+P. Important interpretation boundary
+==================================================
+
+不要把：
+
+detector negative
+
+自动写成：
+
+watermark completely erased
+
+应该区分：
+
+- no detectable transfer
+- detector not applicable
+- weak partial acquisition
+- non-detection under frozen rule
+- runtime failure
+
+也不要因为 Qwen Student 没有水印就说：
+“distillation removed the watermark”
+
+因为 Student 是 fresh Qwen，
+更准确的是：
+
+“the watermark was not acquired / did not transfer under cross-lineage behavioral extraction.”
+
+==================================================
+Q. Git
+==================================================
+
+每个方法 closure 后可以暂不单独 commit，
+但整个 campaign 必须最终完成 Git closure。
+
+最终：
+
+- git status
+- review diff
+- no weights
+- no checkpoints
+- no credentials
+- no huge raw model file
+
+commit + push canonical private GitHub repo。
+
+禁止：
+
+force push
+history rewrite
+reset --hard
+git clean
+
+==================================================
+R. ModelScope
+==================================================
+
+不要每个中间阶段就上传。
+
+只有每个方法 final Student：
+
+training complete
+fresh reload verified
+detector complete or legitimately N/A
+utility complete
+scientific closure complete
+
+才有资格考虑 preferred archive。
+
+每个 formal method：
+
+最多 ONE final preferred ModelScope archive。
+
+如果方法 training itself failed：
+不要上传。
+
+如果 detector NOT_APPLICABLE 但 Student training/utility 完整：
+保留本地模型，
+是否上传 final Student 由 campaign 最终 closure 统一决定，
+不要擅自上传。
+
+==================================================
+S. Long-run failure handling
+==================================================
+
+本 campaign 要自动持续运行。
+
+原则：
+
+单个方法失败：
+→ 记录
+→ 跳过
+→ 下一个
+
+不要因为 PN-FP 失败就停掉剩下四个。
+
+如果网络中断：
+restart-safe 恢复。
+
+如果 SSH 控制连接断开但服务器任务仍运行：
+不要重复启动。
+
+必须通过：
+PID
+logs
+checkpoint
+nvidia-smi
+artifact
+确认真实状态。
+
+==================================================
+T. AUTO SHUTDOWN AUTHORIZATION
+==================================================
+
+用户明确授权：
+
+当且仅当整个 Active Cross-Lineage Ba campaign 已经达到 terminal state 后，
+可以自动安全关闭当前 AutoDL 实例。
+
+Terminal state 定义：
+
+5 个方法中的每一个都已经满足以下之一：
+
+A. COMPLETE
+- training complete
+- detector complete or formally N/A
+- utility complete
+- scientific closure complete
+- evidence/log complete
+
+或
+
+B. TERMINAL_BLOCKED
+- blocker 已明确定位
+- 已保存完整日志和当前证据
+- 不存在不改变科学协议即可继续推进的合理动作
+
+只有当：
+
+PN-FP = COMPLETE or TERMINAL_BLOCKED
+AND
+EverTracer = COMPLETE or TERMINAL_BLOCKED
+AND
+CTCC = COMPLETE or TERMINAL_BLOCKED
+AND
+iSeal = COMPLETE or TERMINAL_BLOCKED
+AND
+SCW = COMPLETE or TERMINAL_BLOCKED
+
+并且：
+
+- 所有 full_experiment_log 已落盘
+- master comparison 已生成
+- Git closure 已完成并 push
+- 必要本地 evidence 已同步
+- 不存在正在运行的 GPU/process worker
+- 没有未完成的写文件/上传/同步操作
+- 所有 filesystem buffers/sync 完成
+
+才允许自动关机。
+
+==================================================
+U. Shutdown safety procedure
+==================================================
+
+关机前必须：
+
+1. 最后一次 nvidia-smi
+2. ps 检查 WMKD worker
+3. 确认无 training/eval/upload/SCP/git worker
+4. git status
+5. 确认 latest commit 已 push
+6. 确认 full logs 已保存
+7. 确认 local evidence sync 完成
+8. 执行 sync
+9. 保存 final_campaign_status.json
+10. 保存 shutdown_receipt.txt，至少包含：
+   - timestamp
+   - hostname
+   - git HEAD
+   - method statuses
+   - reason for shutdown
+   - GPU state
+   - active worker count
+11. 再执行系统关机
+
+可以使用正常系统 shutdown/poweroff。
+
+不要删除：
+- final models
+- checkpoints needed for reproducibility
+- scientific evidence
+- raw detector arrays
+- logs
+- dataset
+- canonical base models
+
+不要在关机前做 destructive cleanup。
+
+==================================================
+V. Do NOT shutdown early
+==================================================
+
+以下任何情况禁止关机：
+
+- 某个方法仍正在训练
+- 某个方法只是临时网络错误
+- 某个方法仍可以 restart-safe 继续
+- evidence 尚未同步
+- Git 尚未 push
+- ModelScope 上传正在进行
+- SCP 正在进行
+- evaluator 仍运行
+- 某个 blocker 还没有明确性质
+- final report/master comparison 尚未生成
+
+==================================================
+W. No unrelated experiments
+==================================================
+
+不要启动：
+
+- active cross-lineage Bb
+- active same-lineage Bb trajectories
+- passive experiments
+- data scale ablations
+- logit KD
+- Methods 11–15
+- 新 watermark
+- new model family
+
+本轮只完成：
+
+Active Cross-Lineage Ba for:
+PN-FP
+EverTracer
+CTCC
+iSeal
+SCW
+
+==================================================
+X. Final response before shutdown
+==================================================
+
+在准备 shutdown 时必须把最终状态写入本地 artifact。
+
+如果当前交互仍可回报，则输出：
+
+CAMPAIGN =
+ACTIVE_CROSS_LINEAGE_BA
+
+PNFP_STATUS =
+PNFP_CLEAN_QWEN =
+PNFP_XBA =
+
+EVERTRACER_STATUS =
+EVERTRACER_CLEAN_QWEN =
+EVERTRACER_XBA =
+
+CTCC_STATUS =
+CTCC_CLEAN_QWEN =
+CTCC_XBA =
+
+ISEAL_STATUS =
+ISEAL_APPLICABILITY =
+ISEAL_CLEAN_QWEN =
+ISEAL_XBA =
+
+SCW_STATUS =
+SCW_CLEAN_QWEN =
+SCW_XBA =
+
+UTILITY_SUMMARY =
+
+MASTER_REPORT =
+FULL_LOG_INDEX =
+GIT_HEAD =
+GIT_PUSH =
+EVIDENCE_SYNC =
+MODELSCOPE_STATUS =
+
+SHUTDOWN_ELIGIBLE =
+SHUTDOWN_REASON =
+
+如果 SHUTDOWN_ELIGIBLE = YES：
+完成安全关机。
+
+不要等待用户再次批准 shutdown。
+本 prompt 已明确授权满足全部条件后的安全关机。

@@ -1,0 +1,23 @@
+{
+  "pid": 72929,
+  "method": "ctcc",
+  "run_id": "ctcc_xba_20260908",
+  "stage": "detector",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/ctcc_ba_evaluate.py",
+    "--config",
+    "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_ba_direct.yaml",
+    "--student",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908/final_model",
+    "--training-run",
+    "ctcc_xba_20260908",
+    "--output",
+    "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/ctcc/final_detector.json"
+  ],
+  "log": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/ctcc/final_detector.log",
+  "started_at": "2026-09-08T11:42:25.325007+00:00",
+  "frozen_hash_checks": "PASS"
+}

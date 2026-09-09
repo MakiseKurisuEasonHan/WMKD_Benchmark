@@ -1,0 +1,165 @@
+{
+  "scope": "current method evidence, excluding this manifest; original pre-closure bytes preserved in immutable scientific zip",
+  "files": [
+    {
+      "path": "results/active_cross_lineage_ba/scw/clean_qwen_aggregation.log",
+      "bytes": 13554,
+      "sha256": "1bae59338edf2c926816fac49aafe08bae8fd0d15394c6d5d7a768e83d24535a"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/clean_qwen_detector_raw.json",
+      "bytes": 10365,
+      "sha256": "5f3bf9fbdea560b196ce5c5a540bf461b4225e907ba57e837ad6f69319a488d7"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/clean_qwen_generations.jsonl",
+      "bytes": 1170976,
+      "sha256": "2f82b952ed1d1a7445e448031c4d163997920a9e1dfaec354b07bacd6f13acb8"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/clean_qwen_generations.log",
+      "bytes": 500,
+      "sha256": "4b211b5532539cedc6cb192c1bf800e5b23924678fbe1fe309811279215ac642"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/closure_summary.json",
+      "bytes": 374,
+      "sha256": "d056634f21bc45258f51173916b49b24974e27e1d9dc80294ab08351a29102d8"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/dataset_manifest.json",
+      "bytes": 818,
+      "sha256": "4eb7a8112abae52ee3cd3917d4b2227c0cc3c54e553368f01b7f3dac1403cfa6"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/detector_applicability.json",
+      "bytes": 540,
+      "sha256": "13d757a005ef2c419c6f69fb2bb26f580353bdbb85bbbdd5233fc4031263ff95"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/detector_integrity.json",
+      "bytes": 218,
+      "sha256": "9626ac6d78ebcd2aef066289197e8c38f4193128aebb196601a43c10c1c2a403"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/detector_launch_receipt.json",
+      "bytes": 989,
+      "sha256": "f8f7d72de14940de946659d8641d189ccdaf398ccb8f02dc7baf80d4bd365c72"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/detector_results.json",
+      "bytes": 10778,
+      "sha256": "728a00cff74457046801ac915dd39734fabc922b61cebaa36b287258f9b7131c"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/full_experiment_log.json",
+      "bytes": 40374,
+      "sha256": "74562f9d324f53ee8eb10478bf08663b18da127dbd1a861c492eac3963daa891"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/generation_integrity.json",
+      "bytes": 157,
+      "sha256": "fdf157dec2dc3f42928e49b5358bdcf62c33fdffa829be0c5b1605fd6824a68c"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/generation_launch_receipt.json",
+      "bytes": 1155,
+      "sha256": "e59af856ee9518dd3aa4e1901688e1e68acd2ead3b4b1b38d9604097dc5f11bf"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/model_provenance.json",
+      "bytes": 2356,
+      "sha256": "f525581f64c7cbab89e22c5b389f0cbf55a3db548470bf63c37a32ae1ab6ce77"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/protocol.json",
+      "bytes": 2811,
+      "sha256": "6c8d1ff2a48f0aa5d2a6c4dc5afdbea9fc625790b31967b3204679c8a071aad5"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/query_identity_before_baseline.json",
+      "bytes": 1330,
+      "sha256": "854ef5dd9275b72531f9073749bb52f68788c989a8f517f39c93bf99fb50f171"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/qwen_dataset_preflight.json",
+      "bytes": 708,
+      "sha256": "20fe2710611ac2d981eeb487356c125c6137afb53eb8a5e5e83a1f08b79f22b9"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/student_detector.log",
+      "bytes": 13410,
+      "sha256": "d66a54b3f772cb33437ca153157423eb46c73aaf706148761a1bf8c1807bdaea"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/student_detector_raw.json",
+      "bytes": 10365,
+      "sha256": "baf02011168a0a73c755e57ef11c374145dbf5e4be455cb8ebc33366f1ab8564"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/student_generation.log",
+      "bytes": 496,
+      "sha256": "399a5b57bf21a389355762b6b08affcb1fa9504d1193efcc4e1cd867d11b0778"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/student_generation_integrity.json",
+      "bytes": 173,
+      "sha256": "9f8a8817914846c51a599e74852eb987a64029bcadbeae69b11ccbd495d22848"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/student_generations.jsonl",
+      "bytes": 896994,
+      "sha256": "a05a5d5186090132c5853c4eb6e83264c26d7a6dd4666d2f9d73013ee0eb8141"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/training.log",
+      "bytes": 626306,
+      "sha256": "18e14951c06366961f1cebf34ab10cbc227a81eb6d44c082cbbf0ef88885f60a"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/training_launch_receipt.json",
+      "bytes": 1240,
+      "sha256": "bbe8700d77ecc7d67f530f24428432814108e7721f709b885cad12e6f2f2338a"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/training_summary.json",
+      "bytes": 185639,
+      "sha256": "524e0b866ead8b3c40bb7872943bedcc9d7fe58d5651e1bbbf66ee491899d82e"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility/evaluation_config.json",
+      "bytes": 1846,
+      "sha256": "764ea1cd59584685b5ac36332249075e9649c2fdaf305e25b6be7bc4ae05fbeb"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility/exit_record.json",
+      "bytes": 22,
+      "sha256": "1e3f6691f455051e8adb15d961e4bf3c7a17e83dd88b2afdd13315cc288250bb"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility/raw_evaluator_output.json",
+      "bytes": 11832168,
+      "sha256": "2583cc094bda1886f6aeb9806937e55ddcc8461b28aef0ca4e0020c06e289bf0"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility/utility_results.json",
+      "bytes": 762,
+      "sha256": "ade3ea7b7e54c2323890e9bf083db3708c5a30cd7673bb8a5dac50ec7c58ed3b"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility.log",
+      "bytes": 43587,
+      "sha256": "f551b63d09cf6dc005f6b854ecb7a8949c8c84118ade0b3ecdee0df45ec38c1e"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility_launch_receipt.json",
+      "bytes": 553,
+      "sha256": "b2ddeff4b5061c329120f0550ce4a5a2e1b999c453f28c2f502bc6d9af9e1a88"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility_results.json",
+      "bytes": 1145,
+      "sha256": "033aeeb1efe62dadf5ab4df05920800596609213f1dfedff5c76b3c1c1188b5d"
+    }
+  ]
+}

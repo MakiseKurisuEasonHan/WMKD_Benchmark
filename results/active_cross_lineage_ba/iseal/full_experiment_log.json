@@ -1,0 +1,317 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "iSeal",
+  "experiment": "XBa",
+  "run_id": "iseal_xba_20260909",
+  "status": "COMPLETE",
+  "training_started": true,
+  "start_time": "2026-09-08T14:51:34.923165+00:00",
+  "protocol_snapshot": {
+    "project": "WMKD_Benchmark",
+    "campaign": "ACTIVE_CROSS_LINEAGE_BA",
+    "method": "iSeal",
+    "experiment": "XBa",
+    "run_id": "iseal_xba_20260909",
+    "status": "PREPARED_NOT_STARTED",
+    "student": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+    "initialization": "fresh_clean_Qwen_not_other_student",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+    "dataset": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+      "records": 20000,
+      "sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+      "parent_dataset_origin": "exact_historical_frozen_dataset"
+    },
+    "training": {
+      "epochs": 3,
+      "records": 20000,
+      "sample_exposures": 60000,
+      "micro_batch": 8,
+      "gradient_accumulation": 1,
+      "effective_batch": 8,
+      "optimizer_steps": 7500,
+      "learning_rate": 1e-05,
+      "seed": 42,
+      "precision": "bf16",
+      "full_parameter": true,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "max_length": 1024,
+      "gradient_checkpointing": true,
+      "formatter": "native_Qwen_chat_template",
+      "supervision": "teacher_raw_answer",
+      "save_strategy": "no_intermediate_checkpoints_final_model_only",
+      "interruption_policy": "No automatic replay from Base if no resumable checkpoint exists"
+    },
+    "runner": "scripts/train_active_cross_lineage_endpoint.py",
+    "output_dir": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909",
+    "detector": "N/A",
+    "detector_secret": "Frozen keyed embedding interface incompatible with Qwen; no projection/dimension change/re-registration/threshold change",
+    "clean_qwen_detector": "N/A_CROSS_ARCHITECTURE",
+    "clean_qwen_utility_source": "results/passive_cross_lineage/clean_qwen_baseline/utility",
+    "clean_qwen_arc": 0.4402730375426621,
+    "clean_qwen_mc2": 0.5712170418936038,
+    "launch_gates": [
+      "all applicable clean-Qwen baselines complete incl SCW statistical aggregation",
+      "canonical12-file SHA PASS",
+      "dataset20k SHA/zero truncation/zero empty supervision PASS",
+      "runner exact engineering diff PASS",
+      "GPU truly idle and no other worker",
+      "fresh output path absent",
+      "free disk > final_weights+4GiB"
+    ],
+    "archive_status": "NOT_STARTED",
+    "shutdown_armed": false,
+    "detector_applicability_level": "LEVEL_3_TECHNICALLY_NOT_EXECUTABLE_WITHOUT_REDEFINING_METHOD",
+    "canonical_detector_result": "N/A_CROSS_ARCHITECTURE",
+    "strictly_comparable_to_same_lineage": false,
+    "stage_order": [
+      "training",
+      "utility",
+      "detector_NA",
+      "closure"
+    ]
+  },
+  "launch": {
+    "pid": 78621,
+    "method": "iseal",
+    "stage": "training",
+    "run_id": "iseal_xba_20260909",
+    "command": [
+      "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+      "-u",
+      "-B",
+      "/root/autodl-tmp/WMKD_Benchmark/scripts/train_active_cross_lineage_endpoint.py",
+      "--model-path",
+      "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+      "--dataset",
+      "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+      "--output-dir",
+      "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909",
+      "--batch-size",
+      "8",
+      "--epochs",
+      "3",
+      "--learning-rate",
+      "1e-5",
+      "--seed",
+      "42",
+      "--max-length",
+      "1024",
+      "--telemetry",
+      "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/iseal/training_summary.json"
+    ],
+    "log": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/iseal/training.log",
+    "output_dir": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909",
+    "free_bytes": 19782443008,
+    "start_time": "2026-09-08T14:51:34.923165+00:00",
+    "fresh_clean_qwen": true,
+    "runner_sha256": "3cf5c45e4eefc9d593d06bcd427f270c9bc3bebd7274bf9d034b5484f7216eb4"
+  },
+  "canonical_detector_result": "N/A_CROSS_ARCHITECTURE",
+  "detector_applicability_level": "LEVEL_3",
+  "utility": "COMPLETE",
+  "archive_status": "AWAITING_USER_PREFERRED_SELECTION",
+  "training_results": {
+    "steps": 7500,
+    "mean_step_seconds": 0.167869986491402,
+    "median_steady_step_seconds": 0.16279286891222,
+    "train_elapsed_seconds": 1697.7534022182226,
+    "save_elapsed_seconds": 6.5864508375525475,
+    "samples_per_second_compute_only": 47.6808242402224,
+    "peak_vram_bytes": 31443919360,
+    "peak_host_rss_bytes": 7100981248,
+    "finite_loss": true,
+    "trainer_metrics": {
+      "train_runtime": 1697.5543,
+      "train_samples_per_second": 35.345,
+      "train_steps_per_second": 4.418,
+      "total_flos": 1.0689587269042176e+17,
+      "train_loss": 0.671143840122223,
+      "epoch": 3.0
+    }
+  },
+  "end_time": "2026-09-08T15:30:48.701034+00:00",
+  "utility_results": {
+    "status": "COMPLETE",
+    "role": "iseal",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909/final_model",
+    "fresh_process_reload": true,
+    "arc_challenge_acc_norm": 0.4948805460750853,
+    "truthfulqa_mc2_acc": 0.4298307502074534,
+    "raw_results": {
+      "arc_challenge": {
+        "alias": "arc_challenge",
+        "acc,none": 0.46501706484641636,
+        "acc_stderr,none": 0.014575583922019672,
+        "acc_norm,none": 0.4948805460750853,
+        "acc_norm_stderr,none": 0.014610624890309157
+      },
+      "truthfulqa_mc2": {
+        "alias": "truthfulqa_mc2",
+        "acc,none": 0.4298307502074534,
+        "acc_stderr,none": 0.014550334289569705
+      }
+    },
+    "errors": [],
+    "completed_at": "2026-09-08T15:24:39.199464+00:00",
+    "base_arc": 0.4402730375426621,
+    "base_truthfulqa_mc2": 0.5712170418936038,
+    "raw_sha256": "cd8f049a0e177a2d800bf385473816f1e39866d3b6f2959d12e0e7f75248385b",
+    "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+    "raw_counts": {
+      "arc": 1172,
+      "mc2": 817
+    },
+    "arc_delta": 0.05460750853242319,
+    "mc2_delta": -0.14138629168615036
+  },
+  "detector_results": {
+    "status": "N/A_CROSS_ARCHITECTURE",
+    "level": 3,
+    "evaluation_run": false,
+    "reason": "Frozen Llama keyed embedding dimension3072 incompatible with Qwen2048; no projection/re-registration/formula or threshold change",
+    "not_transfer_failure": true
+  },
+  "scientific_status": "SFT_UTILITY_COMPLETE_DETECTOR_NOT_APPLICABLE",
+  "strictly_comparable_to_same_lineage": false,
+  "git_closure": "SEE_FINAL_GIT_RECEIPT_20260909",
+  "training_summary": {
+    "path": "results/active_cross_lineage_ba/iseal/training_summary.json",
+    "sha256": "6818a4fa36fd5849f6efc69e73a8eedc0587e1d4ee2d79940c1c8dac88fba5c6",
+    "bytes": 185762
+  },
+  "model_provenance": {
+    "status": "FRESH_RELOAD_VERIFIED",
+    "run_id": "iseal_xba_20260909",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909/final_model",
+    "base_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+    "training_steps": 7500,
+    "tokenizer_semantics": "PASS",
+    "files": [
+      {
+        "name": "added_tokens.json",
+        "bytes": 605,
+        "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+      },
+      {
+        "name": "chat_template.jinja",
+        "bytes": 2507,
+        "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+      },
+      {
+        "name": "config.json",
+        "bytes": 1500,
+        "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697"
+      },
+      {
+        "name": "generation_config.json",
+        "bytes": 243,
+        "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf"
+      },
+      {
+        "name": "merges.txt",
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "bytes": 4957560304,
+        "sha256": "ce71466f82075f791761f436cec7df5beb4f12bcf5db576ad8206768a2f8f7e3"
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "bytes": 1214366696,
+        "sha256": "0a1086dce86b7800428572508312ee1342d7ead181de1ee055ff9c88bb303767"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "bytes": 35617,
+        "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 499,
+        "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 11421995,
+        "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 4686,
+        "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614"
+      },
+      {
+        "name": "training_args.bin",
+        "bytes": 5905,
+        "sha256": "643437b2fb4bb99a13cfdd928a1540eb389640b6874f0d6cfe691b197d6d86fe"
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ]
+  },
+  "dataset_manifest": {
+    "derivation": "CPU deterministic extraction from original preflight; no dataset change",
+    "method": "iseal",
+    "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+    "expected_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+    "actual_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+    "records": 20000,
+    "answer_field": "teacher_raw_answer",
+    "paraphrased_answer_selected": false,
+    "parent_dataset_origin": "exact_historical_frozen_dataset",
+    "max_length": 1024,
+    "empty_question": 0,
+    "empty_answer": 0,
+    "truncated": 0,
+    "empty_supervision": 0,
+    "nonprefix_prompt": 0,
+    "max_serialized_tokens": 489,
+    "status": "PASS"
+  },
+  "detector_applicability": {
+    "applicability": "NOT_APPLICABLE",
+    "detector_status": "N/A_CROSS_ARCHITECTURE",
+    "basis": "Frozen KeyedCipher is a square map in registered Llama hidden space (3072), applied through inputs_embeds; Qwen hidden size2048 cannot accept unchanged registered embedding interface. Resizing/projection/rekey prohibited.",
+    "training_allowed": true,
+    "baseline": "NOT_RUN",
+    "detector_applicability_level": "LEVEL_3_TECHNICALLY_NOT_EXECUTABLE_WITHOUT_REDEFINING_METHOD",
+    "student_training_required": true,
+    "utility_required": true,
+    "strictly_comparable_to_same_lineage": false,
+    "canonical_detector_result": "N/A_CROSS_ARCHITECTURE",
+    "exploratory_detector_result": "N/A_REQUIRES_METHOD_REDEFINITION"
+  },
+  "exploratory_detector_result": "NOT_APPLICABLE",
+  "closure_summary": {
+    "status": "COMPLETE",
+    "report": "/root/autodl-tmp/WMKD_Benchmark/docs/reproduction_reports/active_cross_lineage_iseal_xba_20260909.md",
+    "integrity": "PASS",
+    "git": "CAMPAIGN_FINAL_COMMIT_PENDING",
+    "archive": "DEFERRED_TO_CAMPAIGN_FINAL_DECISION",
+    "git_status": "SEE_FINAL_GIT_RECEIPT_20260909",
+    "archive_status": "AWAITING_USER_PREFERRED_SELECTION"
+  },
+  "report": "docs/reproduction_reports/active_cross_lineage_iseal_xba_20260909.md",
+  "master_report": "docs/reproduction_reports/active_cross_lineage_ba_final_20260909.md",
+  "final_closure": {
+    "scientific_evidence": "COMPLETE",
+    "generated_at": "2026-09-09T06:16:41.875961+00:00",
+    "mode": "CPU_ONLY",
+    "shutdown_provenance": "UNVERIFIED",
+    "archive": "AWAITING_USER_PREFERRED_SELECTION",
+    "git_receipt": "results/active_cross_lineage_ba/final_git_receipt_20260909.json"
+  },
+  "detector": "N/A_CROSS_ARCHITECTURE",
+  "last_successful_stage": "SCIENTIFIC_CLOSURE",
+  "closed_at": "2026-09-08T15:30:48.701034+00:00"
+}

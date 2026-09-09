@@ -1,0 +1,323 @@
+更新今晚 Active Cross-Lineage Ba campaign 的自动关机规则。
+
+用户现在准备睡觉，主要目标：
+正常实验能够继续自动串行运行；
+但如果服务器进入“只能等待用户授权、无法继续科研任务”的空闲状态，不要整夜空烧 AutoDL 费用。
+
+==================================================
+1. NORMAL EXECUTION CONTINUES
+==================================================
+
+当前 iSeal 正常运行时：
+
+不要关机。
+不要中断。
+不要暂停。
+不要因为用户暂时不在线而停止正常实验。
+
+继续既定串行计划：
+
+iSeal
+→ utility
+→ closure
+→ disk recheck
+→ SCW
+→ utility
+→ detector
+→ closure
+→ campaign final closure
+
+只要存在：
+- 正常 training worker
+- utility worker
+- detector worker
+- 合法的 restart-safe 下一步
+
+都继续自动推进。
+
+==================================================
+2. NEW USER-WAIT SHUTDOWN AUTHORIZATION
+==================================================
+
+用户现在明确新增授权：
+
+如果 campaign 因为必须获得用户新的明确批准而无法继续，
+且没有任何正常 scientific worker 正在运行，
+允许进入 WAITING_FOR_USER 状态。
+
+典型情况包括：
+
+A. 磁盘不足：
+- free space 低于下一任务安全启动门槛
+- 已授权的非破坏性动作不足以解决
+- 下一步需要删除额外文件并重新获得用户批准
+
+B. destructive cleanup 需要用户批准
+
+C. scientific protocol change 需要用户批准
+
+D. detector semantic change / threshold change / dataset substitution / model substitution 需要用户批准
+
+E. 其他按照项目规则必须等待用户明确决定的 blocker
+
+如果进入上述状态后：
+
+连续 30 分钟没有获得新的用户授权，
+
+则无需继续保持 AutoDL 开机等待。
+
+允许执行安全关机。
+
+==================================================
+3. 30-MINUTE TIMER RULE
+==================================================
+
+只有当以下条件全部满足时才开始计时：
+
+WAITING_FOR_USER = YES
+AND
+ACTIVE_TRAINING_WORKER = NONE
+AND
+ACTIVE_UTILITY_WORKER = NONE
+AND
+ACTIVE_DETECTOR_WORKER = NONE
+AND
+ACTIVE_UPLOAD/SCP/GIT_WORKER = NONE
+AND
+NO_ALREADY_AUTHORIZED_NEXT_ACTION = YES
+
+记录：
+
+WAIT_STARTED_AT =
+WAIT_REASON =
+REQUIRED_USER_DECISION =
+
+每 5 分钟检查一次。
+
+如果期间用户提供新授权：
+立即取消等待关机计时，
+按新授权继续。
+
+如果 30 分钟过去仍无新授权：
+SHUTDOWN_ELIGIBLE = YES
+reason =
+USER_APPROVAL_TIMEOUT
+
+==================================================
+4. IMPORTANT: DO NOT SHUT DOWN DURING HEALTHY WORK
+==================================================
+
+以下情况绝对不能因为“30分钟没收到用户回复”而关机：
+
+- iSeal 正常训练
+- SCW 正常训练
+- utility 正常评估
+- detector 正常运行
+- Git push / evidence sync 正常进行
+- 合法的自动串行下一步已经得到授权
+- transient error 可以 restart-safe 自动恢复
+- 当前只是任务运行时间较长
+
+30 分钟规则只适用于：
+
+“实验已经停下，没有 worker，唯一下一步必须等用户新的明确授权。”
+
+==================================================
+5. DISK-SPECIFIC RULE
+==================================================
+
+当前已知：
+
+数据盘 free space ≈ 18.424 GiB
+
+iSeal 完成后预计约：
+12.66 GiB
+
+SCW start threshold：
+9.748 GiB
+
+备用低风险 cleanup candidate：
+
+/root/autodl-tmp/WMKD_Benchmark_data/cache/pip_py311
+
+约 3.871 GiB。
+
+但当前没有授权删除该 cache。
+
+因此：
+
+iSeal 完成后先实测磁盘。
+
+如果 free >= 9.748 GiB：
+直接启动 SCW。
+不要等待用户。
+
+如果 free < 9.748 GiB：
+不要擅自删除 pip_py311 或任何其他对象。
+
+进入：
+
+WAITING_FOR_USER_STORAGE_APPROVAL
+
+保存：
+- current free space
+- required threshold
+- exact proposed cleanup path
+- size
+- expected free space after cleanup
+
+然后等待用户。
+
+如果 30 分钟仍没有获得批准：
+安全关机。
+
+==================================================
+6. OTHER APPROVAL BLOCKERS
+==================================================
+
+同理，如果遇到任何必须用户决定的：
+
+- destructive deletion
+- new model substitution
+- scientific protocol change
+- detector semantic modification
+- threshold modification
+- new dataset
+- unexpected ModelScope archival decision
+- other non-authorized consequential action
+
+不要绕过。
+
+记录 blocker。
+
+如果无 active worker 且只能等待用户：
+启动 30 分钟 user-wait timer。
+
+30 分钟无回复：
+安全关机。
+
+==================================================
+7. BEFORE USER-WAIT SHUTDOWN
+==================================================
+
+即使是因为等待授权超时，也必须先安全收口。
+
+关机前：
+
+1. nvidia-smi
+2. ps 检查所有 WMKD worker
+3. 确认没有 active training/eval/detector/upload/SCP/Git worker
+4. 保存所有已经产生的科研日志
+5. flush current full_experiment_log
+6. 保存当前 queue/campaign state
+7. 保存 blocker 信息
+8. 保存 WAIT_STARTED_AT / timeout 信息
+9. git status
+
+如果当前存在已经完成且安全可提交的 lightweight scientific metadata：
+按现有授权完成 Git closure/push。
+
+但不要为了关机强行提交不完整或错误结果。
+
+10. 执行 sync
+
+11. 创建：
+
+results/active_cross_lineage_ba/overnight_shutdown_receipt.json
+
+至少包含：
+
+timestamp
+hostname
+git_head
+campaign
+completed_methods
+running_methods
+pending_methods
+blocker
+wait_started_at
+wait_duration
+shutdown_reason
+free_disk
+gpu_status
+active_worker_count
+next_required_user_decision
+
+shutdown_reason 必须明确写：
+
+USER_APPROVAL_TIMEOUT
+
+或：
+
+CAMPAIGN_COMPLETE
+
+==================================================
+8. SAFE SHUTDOWN
+==================================================
+
+确认无 active worker 后：
+
+sync
+
+然后正常 shutdown / poweroff。
+
+不要：
+- kill 正常科研任务后关机
+- 删除 final model
+- 删除 scientific evidence
+- 删除 canonical dataset
+- 删除 base model
+- 为了达到关机条件做 destructive cleanup
+
+==================================================
+9. EXISTING FINAL-CAMPAIGN SHUTDOWN STILL APPLIES
+==================================================
+
+此前授权仍然有效：
+
+如果 PN-FP / EverTracer / CTCC / iSeal / SCW
+全部达到 COMPLETE 或合法 terminal state，
+并完成最终 evidence/Git/campaign closure，
+
+则不需要等待30分钟，
+直接按照此前完整 closure 规则安全关机。
+
+因此现在有两种合法自动关机场景：
+
+A. CAMPAIGN_COMPLETE
+→ 正常完成全部工作后关机
+
+B. USER_APPROVAL_TIMEOUT
+→ 没有 active worker
+→ 唯一 blocker 需要用户授权
+→ 连续30分钟没有回复
+→ 保存状态后关机
+
+==================================================
+10. TEMPORARY FOLLOW-UP
+==================================================
+
+现有 Active Cross-Lineage Ba 每5分钟 follow-up 继续。
+
+如果最终关机原因是：
+CAMPAIGN_COMPLETE
+或
+USER_APPROVAL_TIMEOUT
+
+在关机前把 follow-up 状态标记为 terminal / stop，
+不要留下一个永久等待任务。
+
+==================================================
+11. CURRENT IMMEDIATE ACTION
+==================================================
+
+当前 iSeal PID 78621 若仍健康：
+
+继续 iSeal。
+不要因为本 prompt 而重启或干扰。
+
+今晚不需要用户持续在线。
+
+正常能跑的全部自动跑；
+真正只能等用户授权时最多等待30分钟；
+30分钟无回复则安全关机以节省费用。

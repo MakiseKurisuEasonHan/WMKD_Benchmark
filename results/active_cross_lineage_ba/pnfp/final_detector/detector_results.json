@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/pnfp_xba_20260908/final_model",
+  "detected": 84,
+  "total": 1024,
+  "detection_rate": 0.08203125,
+  "evaluation_errors": 0,
+  "invalid_samples": 0,
+  "elapsed_seconds": 20.833927392959595,
+  "secret_sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+  "secret_regenerated": false,
+  "rule": "Official full encoded signature equality; immutable historical Llama key/target strings; no Qwen truncation",
+  "raw_sha256": "a675b5b405ef3a2a98a6f4ab111f350309c7127fd8780c642285c4d69eaaf1bb"
+}

@@ -1,0 +1,16 @@
+{
+  "pid": 72532,
+  "method": "ctcc",
+  "run_id": "ctcc_xba_20260908",
+  "stage": "utility",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_utility_worker.py",
+    "ctcc",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908/final_model"
+  ],
+  "log": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/ctcc/utility.log",
+  "started_at": "2026-09-08T11:35:53.744235+00:00"
+}

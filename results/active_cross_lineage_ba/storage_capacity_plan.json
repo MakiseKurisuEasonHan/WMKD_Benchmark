@@ -1,0 +1,16 @@
+{
+  "observed_unix_time": 1788860545.3858907,
+  "free_bytes": 26016759808,
+  "qwen_weight_bytes": 6171926992,
+  "five_final_weights_bytes": 30859634960,
+  "four_final_weights_bytes": 24687707968,
+  "five_final_weights_fit_now": false,
+  "checkpoint_policy_proposal": "Endpoint-only campaign: save no intermediate training checkpoints, only final model and trainer logs/state. This changes storage schedule only, not optimizer updates. Requires explicit implementation and source audit before training; not implemented yet.",
+  "proposed_per_run_disk_gate_bytes": 10466894288,
+  "next_final_only_run_capacity_pass": true,
+  "no_deletion_performed": true,
+  "destructive_cleanup_authorized": false,
+  "interruption_limitation": "Without resumable optimizer checkpoint, an interrupted training cannot be silently replayed; record blocker, preserve evidence, follow bounded continuation rules.",
+  "cumulative_gate": "Recheck before every run; do not assume five final artifacts fit. If protected artifact deletion becomes necessary, STOP and request exact-path approval.",
+  "gpu_job": "SCW clean-Qwen generation continues, untouched"
+}

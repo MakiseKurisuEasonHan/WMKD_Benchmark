@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "loaded_backend_semantics_equal": true,
+    "vocabulary_equal": true,
+    "special_ids_equal": true,
+    "special_tokens_equal": true,
+    "native_chat_template_equal": true
+  },
+  "status": "PASS",
+  "raw_file_sha_equal": false,
+  "explanation": "save_pretrained serializes merges/default ignore_merges and current truncation state; chat_template moved to chat_template.jinja. Compare loaded tokenizer backend with runtime padding/truncation disabled, not raw serialization. No artifact modification."
+}

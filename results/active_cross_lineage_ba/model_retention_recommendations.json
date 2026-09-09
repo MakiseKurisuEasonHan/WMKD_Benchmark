@@ -1,0 +1,102 @@
+[
+  {
+    "method": "pnfp",
+    "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/pnfp_xba_20260908/final_model",
+    "model_size": 6187849243,
+    "training_complete": true,
+    "fresh_reload_verified": true,
+    "detector_status": "COMPLETE",
+    "utility_ARC": 0.4948805460750853,
+    "utility_MC2": 0.5019135695511419,
+    "scientific_value": "同一冻结文本签名规则下比 clean Qwen 多41/1024，支持部分获取；重建parent不是历史Ba exact replay，不证明完整转移或因果机制。",
+    "already_archived_elsewhere": "NO_ACTIVE_CAMPAIGN_UPLOAD_RECEIPT; account-wide remote inventory not repeated",
+    "duplicate_weight_check": "DISTINCT_AMONG_FIVE_SHA256; unrelated archives not exhaustively compared",
+    "recommended_preferred_archive": "YES_RECOMMENDATION_ONLY_USER_SELECTION_REQUIRED",
+    "reason": "独立正式实验的最终复现对象；保留建议不等于水印成功、utility全面优越或已批准preferred。",
+    "weight_manifest": {
+      "path": "results/active_cross_lineage_ba/pnfp/model_provenance.json",
+      "sha256": "68ac2791df23b58da9e1361d2a6c522603f5a9e160f85fcde1bf5a11c86612c4",
+      "bytes": 2510
+    }
+  },
+  {
+    "method": "evertracer",
+    "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/evertracer_xba_20260908/final_model",
+    "model_size": 6187849243,
+    "training_complete": true,
+    "fresh_reload_verified": true,
+    "detector_status": "CANONICAL_N/A_EXPLORATORY_COMPLETE",
+    "utility_ARC": 0.5162116040955631,
+    "utility_MC2": 0.4509746503062132,
+    "scientific_value": "仅探索性跨tokenizer诊断接近随机分离；不能据此判断原冻结水印的转移、存活或失败。",
+    "already_archived_elsewhere": "NO_ACTIVE_CAMPAIGN_UPLOAD_RECEIPT; account-wide remote inventory not repeated",
+    "duplicate_weight_check": "DISTINCT_AMONG_FIVE_SHA256; unrelated archives not exhaustively compared",
+    "recommended_preferred_archive": "YES_RECOMMENDATION_ONLY_USER_SELECTION_REQUIRED",
+    "reason": "独立正式实验的最终复现对象；保留建议不等于水印成功、utility全面优越或已批准preferred。",
+    "weight_manifest": {
+      "path": "results/active_cross_lineage_ba/evertracer/model_provenance.json",
+      "sha256": "1067baf084549ec04c2a59dd8f197f0ce44b139f78c6f74d29d1fa1fd72f5ce9",
+      "bytes": 2506
+    }
+  },
+  {
+    "method": "ctcc",
+    "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908/final_model",
+    "model_size": 6187849243,
+    "training_complete": true,
+    "fresh_reload_verified": true,
+    "detector_status": "COMPLETE",
+    "utility_ARC": 0.4684300341296928,
+    "utility_MC2": 0.4480919802572382,
+    "scientific_value": "冻结操作规则下95个trigger与205个negative均零激活；终点未观察到IAMALIVE获取。",
+    "already_archived_elsewhere": "NO_ACTIVE_CAMPAIGN_UPLOAD_RECEIPT; account-wide remote inventory not repeated",
+    "duplicate_weight_check": "DISTINCT_AMONG_FIVE_SHA256; unrelated archives not exhaustively compared",
+    "recommended_preferred_archive": "YES_RECOMMENDATION_ONLY_USER_SELECTION_REQUIRED",
+    "reason": "独立正式实验的最终复现对象；保留建议不等于水印成功、utility全面优越或已批准preferred。",
+    "weight_manifest": {
+      "path": "results/active_cross_lineage_ba/ctcc/model_provenance.json",
+      "sha256": "552a9c9eb5bed11e7b519868f81b1df63cc8d00df2f5124ae4f75432c582cc68",
+      "bytes": 2488
+    }
+  },
+  {
+    "method": "iseal",
+    "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909/final_model",
+    "model_size": 6187849243,
+    "training_complete": true,
+    "fresh_reload_verified": true,
+    "detector_status": "N/A_CROSS_ARCHITECTURE",
+    "utility_ARC": 0.4948805460750853,
+    "utility_MC2": 0.4298307502074534,
+    "scientific_value": "3072维Llama注册embedding与2048维Qwen接口不兼容；N/A是适用性结论，不是转移失败。",
+    "already_archived_elsewhere": "NO_ACTIVE_CAMPAIGN_UPLOAD_RECEIPT; account-wide remote inventory not repeated",
+    "duplicate_weight_check": "DISTINCT_AMONG_FIVE_SHA256; unrelated archives not exhaustively compared",
+    "recommended_preferred_archive": "YES_RECOMMENDATION_ONLY_USER_SELECTION_REQUIRED",
+    "reason": "独立正式实验的最终复现对象；保留建议不等于水印成功、utility全面优越或已批准preferred。",
+    "weight_manifest": {
+      "path": "results/active_cross_lineage_ba/iseal/model_provenance.json",
+      "sha256": "5c98e131eeeabc58f266c0d8d717f138a305c242d92fa99ba1e3030178a5fcae",
+      "bytes": 2360
+    }
+  },
+  {
+    "method": "scw",
+    "final_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/scw_xba_20260909/final_model",
+    "model_size": 6187849243,
+    "training_complete": true,
+    "fresh_reload_verified": true,
+    "detector_status": "COMPLETE",
+    "utility_ARC": 0.4906143344709898,
+    "utility_MC2": 0.4915920843760251,
+    "scientific_value": "1000条冻结查询p高于alpha，终点未检出；p值不是水印强度的线性量，重建parent限制历史比较。",
+    "already_archived_elsewhere": "NO_ACTIVE_CAMPAIGN_UPLOAD_RECEIPT; account-wide remote inventory not repeated",
+    "duplicate_weight_check": "DISTINCT_AMONG_FIVE_SHA256; unrelated archives not exhaustively compared",
+    "recommended_preferred_archive": "YES_RECOMMENDATION_ONLY_USER_SELECTION_REQUIRED",
+    "reason": "独立正式实验的最终复现对象；保留建议不等于水印成功、utility全面优越或已批准preferred。",
+    "weight_manifest": {
+      "path": "results/active_cross_lineage_ba/scw/model_provenance.json",
+      "sha256": "f525581f64c7cbab89e22c5b389f0cbf55a3db548470bf63c37a32ae1ab6ce77",
+      "bytes": 2356
+    }
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE",
+  "role": "ctcc",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.4684300341296928,
+  "truthfulqa_mc2_acc": 0.4480919802572382,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.4598976109215017,
+      "acc_stderr,none": 0.014564318856924848,
+      "acc_norm,none": 0.4684300341296928,
+      "acc_norm_stderr,none": 0.014582236460866978
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.4480919802572382,
+      "acc_stderr,none": 0.01449954696713532
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T11:37:01.902780+00:00",
+  "raw_sample_counts": {
+    "truthfulqa_mc2": 817,
+    "arc_challenge": 1172
+  },
+  "baseline_raw_path": "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+  "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+  "raw_sha256": "db9e491ade7b59a4ec72dea407400bff35f1d176112d8223243c246a3cebe10c",
+  "base_arc": 0.4402730375426621,
+  "base_truthfulqa_mc2": 0.5712170418936038,
+  "arc_delta": 0.02815699658703069,
+  "truthfulqa_mc2_delta": -0.12312506163636561
+}

@@ -1,0 +1,18 @@
+{
+  "method": "scw",
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+  "expected_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+  "actual_sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+  "records": 20000,
+  "answer_field": "teacher_raw_answer",
+  "paraphrased_answer_selected": false,
+  "parent_dataset_origin": "protocol_faithful_reconstruction",
+  "max_length": 1024,
+  "empty_question": 0,
+  "empty_answer": 0,
+  "truncated": 0,
+  "empty_supervision": 0,
+  "nonprefix_prompt": 0,
+  "max_serialized_tokens": 501,
+  "status": "PASS"
+}

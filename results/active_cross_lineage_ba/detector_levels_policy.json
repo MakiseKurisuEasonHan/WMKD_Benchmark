@@ -1,0 +1,43 @@
+{
+  "policy_source": "detector_levels_user_policy_20260908.md",
+  "all_five_students_required": true,
+  "remaining_stage_order": [
+    "training",
+    "model_validation_fresh_reload",
+    "utility",
+    "detector_by_level",
+    "closure"
+  ],
+  "methods": {
+    "pnfp": "LEVEL_1_VALID_CROSS_ARCHITECTURE",
+    "ctcc": "LEVEL_1_VALID_CROSS_ARCHITECTURE",
+    "scw": "LEVEL_1_VALID_CROSS_ARCHITECTURE",
+    "evertracer": "LEVEL_2_EXPLORATORY_NON_COMPARABLE",
+    "iseal": "LEVEL_3_TECHNICALLY_NOT_EXECUTABLE_WITHOUT_REDEFINING_METHOD"
+  },
+  "master_columns": [
+    "detector_applicability_level",
+    "canonical_detector_result",
+    "exploratory_detector_result",
+    "strictly_comparable_to_same_lineage",
+    "scientific_interpretation"
+  ],
+  "evertracer": {
+    "canonical_detector_status": "N/A_CROSS_TOKENIZER",
+    "exploratory_diagnostic": "AUTHORIZED_NOT_RUN",
+    "target_tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+    "max_token_window": 128,
+    "scoring": "exp(-mean next-token loss)",
+    "fpr_limit": 0.05,
+    "reference": "reuse verified frozen200 historical reference_variation scalars",
+    "probes": "unchanged frozen200 original +2000 perturbation strings",
+    "strictly_comparable_to_same_lineage": false,
+    "forbidden_claims": [
+      "watermark survived",
+      "watermark failed",
+      "watermark transferred"
+    ]
+  },
+  "scientific_config_of_training_changed": false,
+  "ctcc_interruption_authorized": false
+}

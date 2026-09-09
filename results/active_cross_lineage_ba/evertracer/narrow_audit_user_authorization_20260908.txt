@@ -1,0 +1,275 @@
+现在优先处理 Active Cross-Lineage Ba 的 EverTracer detector applicability。
+
+重要：
+CTCC fresh-Qwen training 当前正在正常运行。
+不要停止、暂停、重启或干扰 CTCC。
+本轮 EverTracer 工作仅允许 CPU-only / read-only / lightweight static audit。
+不要启动新的 GPU worker。
+
+当前 EverTracer 状态此前被标记为：
+TERMINAL_BLOCKED
+原因：
+“冻结校准 detector 的跨-tokenizer语义无法确认”。
+
+现在要求重新做一次非常窄的 semantic applicability audit。
+在完成下面审计前，不要把 EverTracer 永久视为科学上无法跨架构。
+
+目标只有一个：
+
+明确 EverTracer frozen detector 中
+Llama tokenizer 到底是：
+
+A. 仅仅用于把已经冻结的 textual queries / perturbations 编码给模型；
+
+还是
+
+B. tokenizer/token IDs/token boundaries 本身参与了 fingerprint definition、
+perturbation generation、calibration 或 scoring semantics。
+
+==================================================
+1. 查原实现，不要猜
+==================================================
+
+优先读取：
+
+- WMKD_Benchmark 当前 EverTracer detector source
+- EverTracer reproduction configs
+- frozen calibration artifacts
+- historical A / Ba detector logs
+- official EverTracer code already vendored/referenced by project
+- relevant README/report/provenance
+
+不要根据聊天记忆推断。
+
+给出实际 repo-relative file paths 和关键函数名。
+
+==================================================
+2. 数据流逐步追踪
+==================================================
+
+从 detector 输入开始完整追踪：
+
+frozen verification samples
+→ tokenizer involvement
+→ perturbation construction
+→ model input
+→ generated/model outputs
+→ feature/statistic computation
+→ member/non-member scores
+→ ROC-AUC / TPR decision
+
+明确记录每一个 tokenizer 使用点。
+
+对每个 tokenizer 使用点分类：
+
+ENCODING_ONLY
+or
+SEMANTIC_DEFINITION
+
+定义：
+
+ENCODING_ONLY =
+同一个已经冻结的文本，只需要用被测模型自己的 tokenizer 编码；
+文本语义、probe、fingerprint、scoring 完全不变。
+
+SEMANTIC_DEFINITION =
+token IDs、token segmentation、token substitution、
+token probability positions、token-space perturbations、
+token-index alignment 等本身属于 detector 定义。
+
+==================================================
+3. 检查能否冻结成文本
+==================================================
+
+重点检查历史 EverTracer calibration / verification 中的：
+
+- member queries
+- non-member queries
+- perturbations
+- prompt variants
+- detector inputs
+
+是否已经存在可复现的最终 textual form。
+
+如果 historical detector 在 Llama 上先生成 perturbations，
+但这些 perturbations 最终已经形成固定字符串，
+检查是否可以：
+
+1. 严格复现历史 textual perturbation set；
+2. 对每条字符串做 SHA；
+3. 在 Qwen 上只换“模型输入编码器”，不重新生成 perturbation；
+4. scoring/calibration/threshold 完全沿用 frozen artifacts。
+
+如果这样做不会改变 detector scientific object，
+则考虑：
+
+ADAPTABLE_WITHOUT_SEMANTIC_CHANGE
+
+特别注意：
+“Qwen tokenizer 编码同一个固定字符串”
+本身不等于改变 detector semantics。
+
+==================================================
+4. 禁止的做法
+==================================================
+
+绝对不要：
+
+- 用 Qwen tokenizer 重新生成一套新的 perturbations
+- 重新采样 fingerprint
+- 重新做 calibration
+- 改 member/non-member split
+- 改 threshold
+- 改 scoring formula
+- 改 FPR criterion
+- 改 probe数量
+- 改随机种子来追求可运行
+- 把 Llama token IDs 机械映射到 Qwen token IDs
+- 为了兼容而重新训练 detector
+
+==================================================
+5. 特别检查 historical calibration
+==================================================
+
+EverTracer historical decision主要报告：
+
+- member/non-member ROC-AUC
+- TPR @ original frozen FPR criterion
+
+确认 threshold/calibration 是否依赖：
+
+A. 已冻结的 scalar score distributions / thresholds
+还是
+B. Llama-token-space feature distribution
+
+如果只是冻结 scalar decision rule，而 Qwen 上可以用相同 textual probes
+得到同定义的 scalar score：
+可能仍然合法。
+
+如果 score 本身数学上依赖对应 Llama token position/token identity：
+则不合法。
+
+==================================================
+6. 最终只允许三种结论
+==================================================
+
+结论 1：
+
+SUPPORTED
+
+含义：
+detector 完全是文本/行为级，
+Qwen 可直接执行原冻结 detector。
+
+结论 2：
+
+ADAPTABLE_WITHOUT_SEMANTIC_CHANGE
+
+含义：
+需要把模型输入编码从 Llama tokenizer 换成 Qwen tokenizer，
+但所有以下对象保持 byte/text-level identical：
+
+- verification prompts
+- perturbations
+- member/non-member labels
+- detector statistic
+- calibration
+- threshold/FPR rule
+
+这种情况下允许继续：
+Clean Qwen baseline
+→ EverTracer XBa training
+→ XBa detector
+→ utility
+
+结论 3：
+
+NOT_APPLICABLE_CROSS_TOKENIZER
+
+只有在确认：
+tokenizer/token IDs/token boundaries 本身属于原 detector scientific definition，
+且不存在保持冻结文本/score semantics 的执行路径时才能使用。
+
+==================================================
+7. 如果可以适配
+==================================================
+
+如果结论为 SUPPORTED 或 ADAPTABLE_WITHOUT_SEMANTIC_CHANGE：
+
+先不要立刻启动 EverTracer GPU training，
+因为 CTCC 仍在运行。
+
+先准备并执行 CPU/lightweight static validation。
+
+如果 Clean Qwen baseline 本身需要 GPU：
+排入 CTCC 后的串行队列，
+不要与 CTCC 并行。
+
+必须生成：
+
+results/active_cross_lineage_ba/evertracer/detector_applicability.json
+
+至少记录：
+
+status
+source_files
+key_functions
+tokenizer_use_sites
+historical_tokenizer
+target_tokenizer
+textual_probe_identity_preserved
+perturbation_identity_preserved
+calibration_preserved
+scoring_preserved
+threshold_preserved
+reasoning
+scientific_limitations
+
+==================================================
+8. 如果最终仍不适用
+==================================================
+
+如果最终确认 NOT_APPLICABLE_CROSS_TOKENIZER：
+
+不要把整个 EverTracer XBa 实验取消。
+
+仍然允许后续：
+
+fresh Qwen
+→ frozen EverTracer Ba20k
+→ full SFT
+→ utility
+
+但 detector result 写：
+
+N/A_CROSS_TOKENIZER
+
+并明确区分：
+
+TRAINING = COMPLETE
+UTILITY = COMPLETE
+DETECTOR = N/A
+
+不能写成：
+“EverTracer watermark failed to transfer”。
+
+==================================================
+9. 现在先报告，不做破坏性动作
+==================================================
+
+完成审计后先回报：
+
+EVERTRACER_APPLICABILITY =
+ROOT_CAUSE =
+TOKENIZER_ROLE =
+TEXT_PROBES_CAN_BE_FROZEN =
+PERTURBATIONS_CAN_BE_FROZEN =
+CALIBRATION_CAN_BE_PRESERVED =
+SCORING_CAN_BE_PRESERVED =
+CROSS_QWEN_BASELINE_LEGITIMATE =
+NEXT_ACTION =
+
+同时报告具体文件和函数路径。
+
+不要修改 CTCC。
+不要启动第二个大型 GPU 任务。

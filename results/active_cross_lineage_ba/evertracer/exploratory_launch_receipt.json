@@ -1,0 +1,14 @@
+{
+  "pid": 75031,
+  "method": "evertracer",
+  "run_id": "evertracer_xba_20260908",
+  "stage": "exploratory_detector",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/evertracer_cross_lineage_exploratory.py"
+  ],
+  "log": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/evertracer/exploratory_detector.log",
+  "started_at": "2026-09-08T12:33:42.805169+00:00"
+}

@@ -60,3 +60,8 @@ scripts/diagnostics/** text eol=lf
 # Preserve EaaW A2 audit evidence byte-for-byte.
 results/methods_11_15/eaaw/experiment_a2/** -text
 results/methods_11_15/eaaw/experiment_a2/official_*.txt -whitespace
+
+# Active Cross-Lineage Ba immutable scientific evidence.
+results/active_cross_lineage_ba/** -text
+results/active_cross_lineage_ba/**/*.log -whitespace
+results/active_cross_lineage_ba/** -whitespace

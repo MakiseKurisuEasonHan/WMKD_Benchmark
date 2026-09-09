@@ -1,0 +1,19 @@
+{
+  "derivation": "CPU deterministic extraction from original preflight; no dataset change",
+  "method": "iseal",
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+  "expected_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+  "actual_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+  "records": 20000,
+  "answer_field": "teacher_raw_answer",
+  "paraphrased_answer_selected": false,
+  "parent_dataset_origin": "exact_historical_frozen_dataset",
+  "max_length": 1024,
+  "empty_question": 0,
+  "empty_answer": 0,
+  "truncated": 0,
+  "empty_supervision": 0,
+  "nonprefix_prompt": 0,
+  "max_serialized_tokens": 489,
+  "status": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "project": "WMKD_Benchmark",
+  "method": "EverTracer",
+  "experiment": "XBa",
+  "run_id": "evertracer_xba_20260908",
+  "status": "TERMINAL_BLOCKED",
+  "category": "SCIENTIFIC_PROTOCOL_BLOCKED",
+  "last_successful_stage": "APPLICABILITY_AUDIT",
+  "applicability": {
+    "applicability": "NOT_APPLICABLE",
+    "blocker": "SCIENTIFIC_PROTOCOL_BLOCKED",
+    "basis": "Frozen calibrated implementation and official attack_model.py llm_eval use one tokenized sequence for suspect and Llama reference. Qwen IDs have different meaning. No native separate-tokenizer calibrated implementation established in pinned code/README. Replacing the token unit or reference/calibration has unproven equivalence and is not approved. This is a limitation of the frozen protocol, not a claim all possible EverTracer variants cannot cross architectures.",
+    "official_commit": "70b402f7b7456c6d94e1fae2de554d77dd6cd921",
+    "baseline": "NOT_RUN"
+  },
+  "training_started": false,
+  "detector": "NOT_RUN",
+  "utility": "NOT_RUN",
+  "archive": "NOT_STARTED",
+  "scientific_change": false,
+  "closed_at": "2026-09-08T10:50:39.807218+00:00"
+}

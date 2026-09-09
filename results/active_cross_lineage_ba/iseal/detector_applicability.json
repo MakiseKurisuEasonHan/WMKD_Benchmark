@@ -1,0 +1,13 @@
+{
+  "applicability": "NOT_APPLICABLE",
+  "detector_status": "N/A_CROSS_ARCHITECTURE",
+  "basis": "Frozen KeyedCipher is a square map in registered Llama hidden space (3072), applied through inputs_embeds; Qwen hidden size2048 cannot accept unchanged registered embedding interface. Resizing/projection/rekey prohibited.",
+  "training_allowed": true,
+  "baseline": "NOT_RUN",
+  "detector_applicability_level": "LEVEL_3_TECHNICALLY_NOT_EXECUTABLE_WITHOUT_REDEFINING_METHOD",
+  "student_training_required": true,
+  "utility_required": true,
+  "strictly_comparable_to_same_lineage": false,
+  "canonical_detector_result": "N/A_CROSS_ARCHITECTURE",
+  "exploratory_detector_result": "N/A_REQUIRES_METHOD_REDEFINITION"
+}

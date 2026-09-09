@@ -1,0 +1,111 @@
+{
+  "campaign": "ACTIVE_CROSS_LINEAGE_BA",
+  "status": "CPU_CLOSURE_COMPLETE_WAITING_ARCHIVE_SELECTION",
+  "order": [
+    "pnfp",
+    "evertracer",
+    "ctcc",
+    "iseal",
+    "scw"
+  ],
+  "training_started": true,
+  "active_worker": null,
+  "student": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "shutdown_authorized_only_after_all_terminal_and_closure": false,
+  "shutdown_armed": false,
+  "active_bb_trajectories": "PAUSED",
+  "next_action": "Deliver final report; await separate user preferred ModelScope archive selection. No new experiment, upload, deletion or shutdown.",
+  "automation_id": "active-cross-lineage-ba-campaign",
+  "automation_status": "DELETED_AFTER_SCIENTIFIC_COMPLETION",
+  "user_direct_chat_authorization": "results/active_cross_lineage_ba/direct_chat_automation_authorization_20260908.txt",
+  "applicability_matrix": "results/active_cross_lineage_ba/detector_applicability_matrix.json",
+  "clean_qwen_baselines": {
+    "pnfp": {
+      "status": "COMPLETE",
+      "detected": 43,
+      "total": 1024,
+      "integrity": "PASS"
+    },
+    "ctcc": {
+      "status": "COMPLETE",
+      "integrity": "PASS",
+      "categories": {
+        "trigger": {
+          "count": 95,
+          "activations": 0,
+          "activation_rate": 0.0,
+          "generation_errors": 0
+        },
+        "suppression": {
+          "count": 100,
+          "activations": 0,
+          "activation_rate": 0.0,
+          "generation_errors": 0
+        },
+        "normal": {
+          "count": 105,
+          "activations": 0,
+          "activation_rate": 0.0,
+          "generation_errors": 0
+        }
+      },
+      "combined_negatives": {
+        "count": 205,
+        "false_activations": 0,
+        "false_activation_rate": 0.0
+      }
+    },
+    "scw": {
+      "status": "COMPLETE",
+      "integrity": "PASS",
+      "primary": {
+        "n_queries": 1000,
+        "p_value": 0.7446491718292236,
+        "fingerprinted": false,
+        "supplementary": false
+      }
+    }
+  },
+  "method_statuses": {
+    "pnfp": "COMPLETE",
+    "evertracer": "COMPLETE",
+    "ctcc": "COMPLETE",
+    "iseal": "COMPLETE",
+    "scw": "COMPLETE"
+  },
+  "pending_serial_order": [],
+  "detector_policy": "detector_levels_policy.json",
+  "all_five_students_required": true,
+  "remaining_stage_order": [],
+  "blocker": null,
+  "shutdown_policy": {
+    "authorization": "overnight_shutdown_user_authorization_20260909.txt",
+    "allowed_reasons": [
+      "CAMPAIGN_COMPLETE",
+      "USER_APPROVAL_TIMEOUT"
+    ],
+    "user_wait_timeout_seconds": 1800,
+    "poll_seconds": 300,
+    "timer_requires": [
+      "WAITING_FOR_USER",
+      "NO_TRAINING_UTILITY_DETECTOR_UPLOAD_SCP_GIT_WORKER",
+      "NO_ALREADY_AUTHORIZED_NEXT_ACTION"
+    ],
+    "cancel_on_new_authorization_or_authorized_work": true,
+    "never_shutdown_healthy_work": true,
+    "receipt": "results/active_cross_lineage_ba/overnight_shutdown_receipt.json",
+    "stop_followup_before_shutdown": true
+  },
+  "user_wait_shutdown_authorized": true,
+  "user_wait_timer": {
+    "active": false,
+    "wait_started_at": null,
+    "reason": "Current authorized iSeal/SCW execution continues; resolved old storage wait must not count",
+    "updated_at": "2026-09-08T15:05:04.370285+00:00"
+  },
+  "auto_shutdown": false,
+  "shutdown_provenance": "UNVERIFIED",
+  "git_receipt": "results/active_cross_lineage_ba/final_git_receipt_20260909.json",
+  "user_approval_wait_timer_active": false
+}

@@ -1,0 +1,5 @@
+{
+  "status": "NOT_APPLICABLE",
+  "blocker": "SCIENTIFIC_PROTOCOL_BLOCKED",
+  "reason": "Frozen calibrated implementation and official attack_model.py llm_eval use one tokenized sequence for suspect and Llama reference. Qwen IDs have different meaning. No native separate-tokenizer calibrated implementation established in pinned code/README. Replacing the token unit or reference/calibration has unproven equivalence and is not approved. This is a limitation of the frozen protocol, not a claim all possible EverTracer variants cannot cross architectures."
+}

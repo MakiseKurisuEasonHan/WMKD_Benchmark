@@ -1,0 +1,64 @@
+{
+  "status": "DELETED",
+  "authorization": "Explicit user exact-path permanent deletion approval; only two remote verification copies",
+  "entries": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_ba_remote_verify_20260908",
+      "bytes": 6187855464,
+      "file_count": 16,
+      "timestamp": "2026-09-08T14:50:19.384138+00:00",
+      "sha_size_matches": 16
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_bb_remote_verify_20260908",
+      "bytes": 6187855466,
+      "file_count": 16,
+      "timestamp": "2026-09-08T14:50:24.369599+00:00",
+      "sha_size_matches": 16
+    }
+  ],
+  "space_before": 7406653440,
+  "space_after": 19782443008,
+  "deleted": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_ba_remote_verify_20260908",
+      "absent": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_bb_remote_verify_20260908",
+      "absent": true
+    }
+  ],
+  "retained": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model",
+      "exists": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_bb/passive_cross_lineage_bb_20260908/training/final_model",
+      "exists": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_ba_preferred_archive_20260908",
+      "exists": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_bb_preferred_archive_20260908",
+      "exists": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/pnfp_xba_20260908/final_model",
+      "exists": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908/final_model",
+      "exists": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/evertracer_xba_20260908/final_model",
+      "exists": true
+    }
+  ],
+  "actual_space_freed": 12375789568,
+  "sync": "COMPLETE"
+}

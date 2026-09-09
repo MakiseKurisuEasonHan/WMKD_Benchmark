@@ -1,0 +1,16 @@
+{
+  "pid": 74611,
+  "method": "evertracer",
+  "run_id": "evertracer_xba_20260908",
+  "stage": "utility",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_utility_worker.py",
+    "evertracer",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/evertracer_xba_20260908/final_model"
+  ],
+  "log": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/evertracer/utility.log",
+  "started_at": "2026-09-08T12:25:56.745011+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETE",
+  "run_id": "pnfp_xba_20260908",
+  "completed_at": "2026-09-08T10:50:39.807218+00:00",
+  "training_steps": 7500,
+  "fresh_reload_verified": true,
+  "detector": {
+    "detected": 84,
+    "total": 1024,
+    "clean_qwen_detected": 43,
+    "delta_count": 41,
+    "delta_rate": 0.0400390625
+  },
+  "utility": {
+    "status": "COMPLETE",
+    "role": "pnfp",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/pnfp_xba_20260908/final_model",
+    "fresh_process_reload": true,
+    "arc_challenge_acc_norm": 0.4948805460750853,
+    "truthfulqa_mc2_acc": 0.5019135695511419,
+    "raw_results": {
+      "arc_challenge": {
+        "alias": "arc_challenge",
+        "acc,none": 0.46501706484641636,
+        "acc_stderr,none": 0.014575583922019672,
+        "acc_norm,none": 0.4948805460750853,
+        "acc_norm_stderr,none": 0.01461062489030916
+      },
+      "truthfulqa_mc2": {
+        "alias": "truthfulqa_mc2",
+        "acc,none": 0.5019135695511419,
+        "acc_stderr,none": 0.015355037984657094
+      }
+    },
+    "errors": [],
+    "completed_at": "2026-09-08T10:41:44.232878+00:00",
+    "clean_qwen_arc": 0.4402730375426621,
+    "clean_qwen_mc2": 0.5712170418936038,
+    "arc_delta": 0.05460750853242319,
+    "mc2_delta": -0.06930347234246192,
+    "raw_counts": {
+      "arc": 1172,
+      "mc2": 817
+    },
+    "raw_sha256": "bee38f652ad042fcfbda0ed8c377bb457a06eb0e0132adb1bf80c4b8fd15d2fb",
+    "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+  },
+  "scientific_interpretation": "Higher registered matches than clean Qwen under the same frozen text-signature detector; weak partial acquisition. Does not prove all watermark information transferred or a causal mechanism. Reconstructed parent is not historical Ba exact replay.",
+  "archive_status": "AWAITING_USER_PREFERRED_SELECTION",
+  "model_retention": "LOCAL_FINAL_PRESERVED",
+  "git_status": "SEE_FINAL_GIT_RECEIPT_20260909"
+}

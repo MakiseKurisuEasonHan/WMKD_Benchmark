@@ -1,0 +1,34 @@
+{
+  "status": "COMPLETE",
+  "role": "iseal",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.4948805460750853,
+  "truthfulqa_mc2_acc": 0.4298307502074534,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.46501706484641636,
+      "acc_stderr,none": 0.014575583922019672,
+      "acc_norm,none": 0.4948805460750853,
+      "acc_norm_stderr,none": 0.014610624890309157
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.4298307502074534,
+      "acc_stderr,none": 0.014550334289569705
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T15:24:39.199464+00:00",
+  "base_arc": 0.4402730375426621,
+  "base_truthfulqa_mc2": 0.5712170418936038,
+  "raw_sha256": "cd8f049a0e177a2d800bf385473816f1e39866d3b6f2959d12e0e7f75248385b",
+  "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+  "raw_counts": {
+    "arc": 1172,
+    "mc2": 817
+  },
+  "arc_delta": 0.05460750853242319,
+  "mc2_delta": -0.14138629168615036
+}

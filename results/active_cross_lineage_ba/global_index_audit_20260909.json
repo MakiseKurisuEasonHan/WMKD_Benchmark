@@ -1,0 +1,15 @@
+{
+  "objects": 55,
+  "unique_paths": 55,
+  "new_campaign_full_logs": 5,
+  "new_campaign_sha_mismatches": 0,
+  "preexisting_unrelated_worktree_differences": [
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/full_experiment_log.json",
+      "worktree_sha_match": false,
+      "committed_blob_sha_match": true,
+      "outside_current_campaign": true
+    }
+  ],
+  "scope": "Historical index entries unchanged; existing EaaW worktree edit deliberately excluded."
+}

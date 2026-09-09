@@ -1,0 +1,26 @@
+{
+  "status": "IMPLEMENTED_NOT_EXECUTED",
+  "source": "scripts/train_distillation_student.py",
+  "source_sha256": "677b8b92c069aebec3fece6c2f1e0c825b8143544b30daa24d953bfec3675b16",
+  "derived_script": "scripts/train_active_cross_lineage_endpoint.py",
+  "derived_sha256": "3cf5c45e4eefc9d593d06bcd427f270c9bc3bebd7274bf9d034b5484f7216eb4",
+  "changes": [
+    "save_strategy epoch -> no; only final model saved",
+    "trainer.save_state after successful train retains log_history and optimizer step count without optimizer weights"
+  ],
+  "unchanged": [
+    "dataset/formatter",
+    "epochs3",
+    "batch8/accum1",
+    "seed42",
+    "LR1e-5",
+    "AdamW",
+    "cosine/warmup0.03",
+    "BF16/full FT",
+    "gradient checkpointing",
+    "7500 updates"
+  ],
+  "training_started": false,
+  "limitation": "No intermediate resumable checkpoint. Any interruption is evidence-preserving blocker, not permission to start over.",
+  "disk_gate": "Require final weights plus4GiB available before each run; reassess cumulative final retention; no cleanup authorized."
+}

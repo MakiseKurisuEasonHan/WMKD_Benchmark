@@ -1,0 +1,18 @@
+{
+  "method": "pnfp",
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+  "expected_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+  "actual_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+  "records": 20000,
+  "answer_field": "teacher_raw_answer",
+  "paraphrased_answer_selected": false,
+  "parent_dataset_origin": "protocol_faithful_reconstruction",
+  "max_length": 1024,
+  "empty_question": 0,
+  "empty_answer": 0,
+  "truncated": 0,
+  "empty_supervision": 0,
+  "nonprefix_prompt": 0,
+  "max_serialized_tokens": 501,
+  "status": "PASS"
+}

@@ -1,0 +1,11 @@
+{
+  "applicability": "ADAPTABLE_WITHOUT_SEMANTIC_CHANGE",
+  "basis": "Official check_fingerprints.py eval_backdoor_acc uses full encoded signature equality with gen_len=len(encoded signature). Freeze historical Llama-derived key/target strings BEFORE Qwen encoding; never Qwen-truncate the secret. All 1024 keys and targets roundtrip exactly; 1018 targets use 1 Qwen token, 4 use 2, 2 use 3; zero special/empty/replacement targets.",
+  "official_commit": "fdceaba14bd3e89340916a6a40e27c945d48460e",
+  "evidence": "pnfp_string_roundtrip_audit.json",
+  "rule": "Greedy full signature equality; count/1024; model-native chat serialization; seed42; no threshold recalibration",
+  "detector_applicability_level": "LEVEL_1_VALID_CROSS_ARCHITECTURE",
+  "student_training_required": true,
+  "utility_required": true,
+  "strictly_comparable_to_same_lineage": true
+}

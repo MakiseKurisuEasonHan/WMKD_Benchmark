@@ -1,0 +1,9 @@
+{
+  "applicability": "ADAPTABLE_WITHOUT_SEMANTIC_CHANGE",
+  "basis": "Qwen produces completion text; original frozen Llama detector tokenizer/statistic operates on that text unchanged. Never replace statistical detector tokenizer with Qwen.",
+  "rule": "Frozen French1000/order/permutation; alpha0.001; lower p stronger; original generation seed/settings",
+  "detector_applicability_level": "LEVEL_1_VALID_CROSS_ARCHITECTURE",
+  "student_training_required": true,
+  "utility_required": true,
+  "strictly_comparable_to_same_lineage": true
+}

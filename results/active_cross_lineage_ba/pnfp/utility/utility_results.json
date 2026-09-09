@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "role": "pnfp",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/pnfp_xba_20260908/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.4948805460750853,
+  "truthfulqa_mc2_acc": 0.5019135695511419,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.46501706484641636,
+      "acc_stderr,none": 0.014575583922019672,
+      "acc_norm,none": 0.4948805460750853,
+      "acc_norm_stderr,none": 0.01461062489030916
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.5019135695511419,
+      "acc_stderr,none": 0.015355037984657094
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T10:41:44.232878+00:00"
+}

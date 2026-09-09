@@ -1,0 +1,149 @@
+{
+  "status": "NOT_APPLICABLE_CROSS_TOKENIZER",
+  "applicability": "NOT_APPLICABLE_CROSS_TOKENIZER",
+  "scope": "current frozen WMKD detector, not a universal claim about EverTracer",
+  "source_files": [
+    {
+      "path": "scripts/evertracer_verify.py",
+      "sha256": "50c6dd3330abf9f6f2ee07e56222d74c36c7c2500207d694732b001d12259716"
+    },
+    {
+      "path": "scripts/evertracer_perturb.py",
+      "sha256": "3941c8b50c44e30620cea50b6ccc943c2e28b9fa45e29fca912ba8d6c1e6d34f"
+    },
+    {
+      "path": "scripts/evertracer_common.py",
+      "sha256": "41cad2dae6c3100909dae13c55005e8eca52dcfbbbaeb056babcc560380dde3d"
+    },
+    {
+      "path": "scripts/evertracer_aggregate_verification.py",
+      "sha256": "14c8175d505e8bc4ab21575077fb63bdd25dc398473f8a849a19fdaddd8aad54"
+    },
+    {
+      "path": "configs/watermark/evertracer_experiment_a.yaml",
+      "sha256": "4ea927b9ac123c6088e8e327840d29deda882fd7a0dd92981897fb3cfb9ff921"
+    },
+    {
+      "path": "configs/distillation/evertracer_ba_direct.yaml",
+      "sha256": "67a0a7a87951b275a7be0fc29e83282b09c1a128bd533d1f4fd32f1e21243219"
+    },
+    {
+      "path": "results/evertracer/experiment_a_summary.json",
+      "sha256": "9755e128e4a7da52fd0475dc6226eec04ac1734ca1541c5e9a03d4ac0f98592d"
+    },
+    {
+      "path": "results/evertracer/experiment_ba_summary.json",
+      "sha256": "e7ac789b64dc420b997a478d7ebe490c63ca35365b121f4ceec1093811b5d6b3"
+    }
+  ],
+  "official_source": {
+    "path": "../WMKD_Benchmark_data/sources/EverTracer/Fingerprinting/attack/attack_model.py",
+    "commit": "70b402f7b7456c6d94e1fae2de554d77dd6cd921"
+  },
+  "key_functions": [
+    "sequence_probability",
+    "main",
+    "mask_text",
+    "extract",
+    "corrected_detector_metrics",
+    "empirical_fsr",
+    "AttackModel.llm_eval",
+    "AttackModel.feat_prepare",
+    "AttackModel.eval_attack"
+  ],
+  "tokenizer_use_sites": [
+    {
+      "file": "scripts/evertracer_perturb.py",
+      "function": "main/source_tok",
+      "classification": "SEMANTIC_DEFINITION",
+      "role": "Historical128-token source selection; already frozen, not regenerated"
+    },
+    {
+      "file": "scripts/evertracer_perturb.py",
+      "function": "mask_text/extract/main T5 tokenizer",
+      "classification": "SEMANTIC_DEFINITION",
+      "role": "Whitespace masks and T5 sentinel infilling during historical construction; outputs now frozen strings"
+    },
+    {
+      "file": "scripts/evertracer_verify.py",
+      "function": "main tokenizer loading",
+      "classification": "ENCODING_ONLY",
+      "role": "Basic encoding alone is not proof of incompatibility"
+    },
+    {
+      "file": "scripts/evertracer_verify.py",
+      "function": "sequence_probability",
+      "classification": "SEMANTIC_DEFINITION",
+      "role": "128-token scoring window, token labels and mean token cross-entropy; exp(-loss)"
+    },
+    {
+      "file": "../WMKD_Benchmark_data/sources/EverTracer/Fingerprinting/attack/attack_model.py",
+      "function": "AttackModel.llm_eval/feat_prepare",
+      "classification": "SEMANTIC_DEFINITION",
+      "role": "Shared scored token IDs/labels; exp(-mean loss) variation minus reference variation"
+    }
+  ],
+  "historical_tokenizer": "meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "target_tokenizer": "Qwen/Qwen2.5-3B-Instruct@8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "textual_probe_identity_preserved": true,
+  "perturbation_identity_preserved": true,
+  "effective_scoring_text_preserved_by_naive_swap": false,
+  "calibration_preserved": true,
+  "calibration_preserved_scope": "historical reference scalar vector and subtraction; 200/200 teacher/base/Ba exact identical",
+  "scoring_preserved": false,
+  "threshold_preserved": true,
+  "threshold_note": "Frozen FPR<=0.05 rule/direction/tie handling; historical per-model ROC thresholds are outputs, not one reusable scalar",
+  "reasoning": "Text is frozen, but encoder-only substitution changes effective128-token text for1477/2200 inputs. Even historical Llama-visible text exceeds Qwen128 in1262 cases. Mean-token-loss events/normalization also change. No frozen-score-equivalent encoder-only path established; cannot silently alter window, probability normalization or calibration.",
+  "static_evidence": {
+    "cpu_only": true,
+    "inference_run": false,
+    "frozen_source_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+    "records": 200,
+    "member": 100,
+    "nonmember": 100,
+    "originals": 200,
+    "variants": 2000,
+    "total_scored_strings": 2200,
+    "same_effective_text_count": 723,
+    "different_effective_text_count": 1477,
+    "different_scored_position_count": 552,
+    "llama_truncated_count": 1467,
+    "qwen_truncated_count": 1627,
+    "historical_visible_text_qwen_exceeds128_count": 1262,
+    "teacher_base_reference_scalar_exact_equal_count": 200,
+    "teacher_ba_reference_scalar_exact_equal_count": 200
+  },
+  "scientific_limitations": [
+    "No Qwen probability/model evaluation performed",
+    "Not a claim EverTracer can never support other architectures",
+    "No transfer-failure inference from detector N/A"
+  ],
+  "report": "docs/reproduction_reports/evertracer_cross_tokenizer_semantic_audit_20260908.md",
+  "experiment_disposition": "QUEUED_AFTER_CTCC_FOR_SFT_UTILITY_EXPLORATORY_DIAGNOSTIC",
+  "training_allowed": true,
+  "detector_result": "N/A_CROSS_TOKENIZER",
+  "cpu_only": true,
+  "gpu_worker_started": false,
+  "detector_applicability_level": "LEVEL_2_EXPLORATORY_NON_COMPARABLE",
+  "student_training_required": true,
+  "utility_required": true,
+  "strictly_comparable_to_same_lineage": false,
+  "canonical_detector_result": "N/A_CROSS_TOKENIZER",
+  "exploratory_detector_result": "AUTHORIZED_NOT_RUN",
+  "exploratory_policy": {
+    "canonical_detector_status": "N/A_CROSS_TOKENIZER",
+    "exploratory_diagnostic": "AUTHORIZED_NOT_RUN",
+    "target_tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+    "max_token_window": 128,
+    "scoring": "exp(-mean next-token loss)",
+    "fpr_limit": 0.05,
+    "reference": "reuse verified frozen200 historical reference_variation scalars",
+    "probes": "unchanged frozen200 original +2000 perturbation strings",
+    "strictly_comparable_to_same_lineage": false,
+    "forbidden_claims": [
+      "watermark survived",
+      "watermark failed",
+      "watermark transferred"
+    ]
+  }
+}

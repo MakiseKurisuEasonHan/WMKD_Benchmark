@@ -1,0 +1,18 @@
+{
+  "method": "evertracer",
+  "source_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl",
+  "expected_sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+  "actual_sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+  "records": 20000,
+  "answer_field": "teacher_raw_answer",
+  "paraphrased_answer_selected": false,
+  "parent_dataset_origin": "exact_historical_frozen_dataset",
+  "max_length": 1024,
+  "empty_question": 0,
+  "empty_answer": 0,
+  "truncated": 0,
+  "empty_supervision": 0,
+  "nonprefix_prompt": 0,
+  "max_serialized_tokens": 727,
+  "status": "PASS"
+}

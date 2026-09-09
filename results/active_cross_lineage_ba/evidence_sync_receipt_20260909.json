@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-09-09T06:24:59.344706+00:00",
+  "scientific_source_package": {
+    "local": "artifacts/active_cross_lineage_ba_scientific_evidence_20260909.zip",
+    "remote": "/tmp/active_cross_lineage_ba_scientific_evidence_20260909.zip",
+    "bytes": 6347746,
+    "sha256": "6686e48da898e929969d8ba2a7c393ee101c8abe750c5812eb27d14b81bf9c6a",
+    "file_count": 164,
+    "source_destination_match": true
+  },
+  "final_closure_package": {
+    "local": "artifacts/active_cross_lineage_ba_final_closure_20260909.zip",
+    "remote": "/tmp/active_cross_lineage_ba_final_closure_20260909.zip",
+    "bytes": 6541227,
+    "sha256": "bd56b6c43eee689792ae22e486126e681f4b87cf6404694b12e6beaee31089e7",
+    "file_count": 185,
+    "source_destination_match": true
+  },
+  "raw_evidence_present_locally": true,
+  "source_packages_retained": true,
+  "model_weights_transferred": false,
+  "subsequent_git_receipt": "final_git_receipt_20260909.json",
+  "note": "Final Git attributes include an additional whitespace-only validation setting after immutable closure ZIP was built; scientific bytes unchanged."
+}

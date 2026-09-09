@@ -1,0 +1,48 @@
+{
+  "disclaimer": "EXPLORATORY_NON_COMPARABLE: NOT DIRECTLY COMPARABLE TO HISTORICAL LLAMA DETECTOR; cannot establish watermark survival, failure or transfer.",
+  "canonical_detector_result": "N/A_CROSS_TOKENIZER",
+  "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/evertracer_xba_20260908/final_model",
+  "max_token_window": 128,
+  "scoring": "exp(-mean next-token loss)",
+  "reference": "frozen historical reference_variation; no recalibration",
+  "frozen_probe_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+  "script_sha256": "28841d073bf80dcadf7f4a94915642b3609ff8b3dcd0254c0d850ef509586899",
+  "aggregation_sha256": "41cad2dae6c3100909dae13c55005e8eca52dcfbbbaeb056babcc560380dde3d",
+  "visible_text_audit_sha256": "836240faf56ac623cd95cbfd743f55751ed4f5aacc3456b2405539642f7e0490",
+  "reference_artifacts": {
+    "teacher": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/teacher_verification.json",
+      "sha256": "6c6ce9b9c97f6761589ca9117b863d91eebb7ffef94f6668e70a12e340eee459"
+    },
+    "base": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/base_verification.json",
+      "sha256": "b6b40d1f395ab11e07be4c0e8a185a672ad7bbd714c90d4f8ce6981ce3f69dce"
+    },
+    "ba": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/metrics/student_verification_raw.json",
+      "sha256": "947d7b9653fa6bc7bfa6ca23d4213911c1b89ecc5d6d0f2c9710084b13f4d192"
+    }
+  },
+  "visible_text_differences": {
+    "cpu_only": true,
+    "inference_run": false,
+    "frozen_source_sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+    "records": 200,
+    "member": 100,
+    "nonmember": 100,
+    "originals": 200,
+    "variants": 2000,
+    "total_scored_strings": 2200,
+    "same_effective_text_count": 723,
+    "different_effective_text_count": 1477,
+    "different_scored_position_count": 552,
+    "llama_truncated_count": 1467,
+    "qwen_truncated_count": 1627,
+    "historical_visible_text_qwen_exceeds128_count": 1262,
+    "teacher_base_reference_scalar_exact_equal_count": 200,
+    "teacher_ba_reference_scalar_exact_equal_count": 200
+  },
+  "fpr_limit": 0.05
+}

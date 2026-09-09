@@ -1,0 +1,16 @@
+{
+  "pid": 81526,
+  "method": "scw",
+  "run_id": "scw_xba_20260909",
+  "stage": "utility",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_utility_worker.py",
+    "scw",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/scw_xba_20260909/final_model"
+  ],
+  "log": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/scw/utility.log",
+  "started_at": "2026-09-08T16:05:26.914980+00:00"
+}

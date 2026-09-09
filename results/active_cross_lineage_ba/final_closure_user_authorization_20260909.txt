@@ -1,0 +1,535 @@
+继续 WMKD_Benchmark：
+
+ACTIVE CROSS-LINEAGE BEHAVIORAL EXTRACTION — Ba
+
+当前进入：
+FINAL CAMPAIGN CLOSURE
+
+重要：
+当前 AutoDL 为 CPU_ONLY / 无卡模式。
+五个方法的科研训练/评估均已完成。
+本轮不要启动任何 GPU 任务，不要重新训练，不要重跑 detector 或 utility。
+
+==================================================
+A. CURRENT VERIFIED SCIENTIFIC STATE
+==================================================
+
+PN-FP:
+STATUS = COMPLETE
+TRAINING = 7500/7500
+Detector:
+84/1024
+rate = 0.08203125
+Clean Qwen baseline = 43/1024
+errors = 0
+
+Utility:
+ARC = 0.4948805461 approximately / use canonical raw artifact
+TruthfulQA MC2 = 0.501914 approximately / use canonical raw artifact
+
+Use exact canonical values from artifacts, not chat-rounded values.
+
+--------------------------------------------------
+
+CTCC:
+STATUS = COMPLETE
+TRAINING = 7500/7500
+
+Detector:
+trigger = 0/95
+suppression = 0/100
+normal = 0/105
+combined negatives = 0/205
+errors = 0
+
+Utility:
+ARC = 0.468430 approximately
+TruthfulQA MC2 = 0.448092 approximately
+
+Use exact canonical values from artifacts.
+
+--------------------------------------------------
+
+EverTracer:
+STATUS = COMPLETE
+TRAINING = 7500/7500
+
+Canonical detector status:
+N/A_CROSS_TOKENIZER
+
+Reason:
+frozen detector semantics depend on tokenizer/token segmentation,
+128-token scoring window,
+and exp(-mean next-token loss).
+
+Exploratory diagnostic:
+AUC = 0.523
+TPR = 0.07
+FPR = 0.05
+operating threshold = 0.011513830561923802
+
+Must remain explicitly:
+EXPLORATORY_NON_COMPARABLE
+NON_COMPARABLE_TO_FROZEN_LLAMA_DETECTOR
+
+Utility:
+ARC = 0.516212 approximately
+TruthfulQA MC2 = 0.450975 approximately
+
+Use exact canonical values from artifacts.
+
+--------------------------------------------------
+
+iSeal:
+STATUS = COMPLETE
+TRAINING = 7500/7500
+
+Detector applicability:
+LEVEL 3
+N/A_CROSS_ARCHITECTURE
+
+Do not invent Student detector score.
+
+Utility:
+ARC = 0.4948805461
+TruthfulQA MC2 = 0.4298307502
+
+Final model saved and fresh reload verified.
+
+--------------------------------------------------
+
+SCW:
+STATUS = COMPLETE
+TRAINING = 7500/7500
+
+Detector:
+1000 samples
+p = 0.9158855080604553
+alpha = 0.001
+detected = NO
+
+Utility:
+ARC = 0.4906143345
+TruthfulQA MC2 = 0.4915920844
+
+Final model saved and fresh reload verified.
+
+==================================================
+B. CLEAN QWEN BASELINES
+==================================================
+
+Use canonical clean-Qwen artifacts.
+
+Known utility baseline:
+
+ARC = 0.440273037543
+TruthfulQA MC2 = 0.571217041894
+
+Detector baselines include:
+
+PN-FP:
+43/1024
+
+SCW:
+p = 0.7446491718292236
+detected = NO
+alpha = 0.001
+
+For CTCC and any other valid Level-1 detector:
+read exact clean-Qwen baseline from canonical artifacts.
+
+Do not infer or invent missing values.
+
+==================================================
+C. DETECTOR APPLICABILITY POLICY
+==================================================
+
+Final classification:
+
+PN-FP:
+LEVEL 1
+VALID_CROSS_ARCHITECTURE
+
+CTCC:
+LEVEL 1
+VALID_CROSS_ARCHITECTURE
+
+SCW:
+LEVEL 1
+VALID_CROSS_ARCHITECTURE
+
+EverTracer:
+LEVEL 2
+CANONICAL = N/A_CROSS_TOKENIZER
+EXPLORATORY = measured separately
+strictly comparable = NO
+
+iSeal:
+LEVEL 3
+TECHNICALLY_NOT_EXECUTABLE_WITHOUT_REDEFINING_METHOD
+CANONICAL = N/A
+strictly comparable = NO
+
+This classification must appear in final master artifacts/report.
+
+==================================================
+D. FINAL MASTER COMPARISON
+==================================================
+
+Generate canonical master artifacts under existing project structure.
+
+Suggested objects:
+
+results/active_cross_lineage_ba/comparison/active_cross_lineage_ba_master.json
+results/active_cross_lineage_ba/comparison/active_cross_lineage_ba_master.csv
+
+and final report:
+
+docs/reproduction_reports/active_cross_lineage_ba_final_20260909.md
+
+If canonical existing names already exist:
+update them instead of creating duplicates.
+
+Master table columns should include at least:
+
+method
+teacher_native_score
+clean_llama_score
+same_lineage_ba_score
+clean_qwen_score
+cross_lineage_ba_score
+cross_lineage_delta_vs_clean_qwen
+detector_applicability_level
+canonical_detector_result
+exploratory_detector_result
+strictly_comparable_to_same_lineage
+threshold_or_rule
+clean_qwen_decision
+cross_lineage_decision
+ARC_clean_qwen
+ARC_xba
+ARC_delta
+MC2_clean_qwen
+MC2_xba
+MC2_delta
+training_status
+detector_status
+utility_status
+final_scientific_status
+bounded_interpretation
+
+Do not compare raw values across detector families.
+
+==================================================
+E. SCIENTIFIC INTERPRETATION
+==================================================
+
+Final report must explicitly answer:
+
+1. Which active watermark detectors remain valid under cross-lineage Qwen evaluation?
+
+2. Which detectors become architecture/tokenizer-bound?
+
+3. Does PN-FP show cross-lineage acquisition above clean Qwen background?
+   Use:
+   Clean Qwen = 43/1024
+   XBa = 84/1024
+   Teacher and same-lineage values from canonical artifacts.
+
+4. Does CTCC acquire the IAMALIVE trigger behavior?
+   Expected current observation:
+   0/95 trigger activations.
+
+5. What does EverTracer exploratory AUC=0.523 show?
+   Use bounded language:
+   near-random exploratory separation under adapted cross-tokenizer diagnostic,
+   but not strictly comparable to frozen Llama detector.
+
+6. Why can iSeal not be used for a valid Qwen Student detector result?
+   Explain architecture/embedding binding.
+
+7. Does SCW remain non-detected?
+   Report p=0.9158855 > alpha=0.001.
+
+8. Compared with same-lineage Ba,
+   does cross-lineage extraction weaken active watermark acquisition?
+
+9. Is the dominant active-watermark failure mode still:
+   transfer/acquisition failure
+   rather than
+   watermark first strongly learned then forgotten?
+
+10. Does utility collapse explain the detector outcomes?
+    Compare ARC and MC2 individually.
+    Do not claim overall utility unchanged.
+
+==================================================
+F. REQUIRED BOUNDED LANGUAGE
+==================================================
+
+Preferred wording:
+
+“Under cross-lineage behavioral extraction, active watermark signals are generally weak or absent under valid frozen detectors.”
+
+“PN-FP exhibits partial acquisition relative to the clean-Qwen baseline.”
+
+“CTCC and SCW show no detectable acquisition under their frozen cross-architecture-valid rules.”
+
+“EverTracer cannot be evaluated under the original frozen detector semantics across tokenizers; an exploratory adapted diagnostic is reported separately.”
+
+“iSeal verification is architecture-bound under the current frozen implementation, so no valid cross-architecture Student detector score is reported.”
+
+Avoid:
+
+“distillation erased all active watermarks”
+
+“EverTracer failed to transfer”
+
+“iSeal failed to transfer”
+
+because those conclusions are not supported when detector applicability is N/A.
+
+==================================================
+G. FULL LOG / INDEX CLOSURE
+==================================================
+
+Verify all five formal experiments have:
+
+full_experiment_log.json
+training_summary
+model_provenance
+dataset_manifest
+detector_applicability
+detector_results or N/A reason
+utility_results
+closure_summary
+report
+
+Then update:
+
+results/experiment_full_logs_index.json
+
+All five methods must be indexed.
+
+Also update project status / TODO / experiment log / decisions only if this project normally requires them for final closure.
+
+Do not fabricate missing historical values.
+
+==================================================
+H. EVIDENCE INTEGRITY
+==================================================
+
+CPU-only verify:
+
+- all final model manifests exist
+- all final tokenizer/config files exist
+- fresh reload evidence exists
+- detector raw evidence exists where applicable
+- EverTracer exploratory raw arrays exist
+- iSeal N/A applicability evidence exists
+- utility raw samples/results exist
+- full logs exist
+- dataset SHA/provenance recorded
+- final weight SHA/checkpoint identity recorded where already available
+
+Do not re-run inference.
+
+If a lightweight evidence file is missing but can be reconstructed deterministically from already-existing raw evidence:
+allowed.
+
+If reconstruction would require inference/training:
+do not do it.
+
+==================================================
+I. OVERNIGHT SHUTDOWN PROVENANCE
+==================================================
+
+Current facts:
+
+overnight_shutdown_receipt.json = absent
+
+final_campaign_status.json = absent
+
+Last durable pipeline state:
+SCIENTIFIC_COMPLETE_FINAL_CLOSURE_PENDING
+
+Do not claim that the previous shutdown was:
+CAMPAIGN_COMPLETE
+or
+USER_APPROVAL_TIMEOUT.
+
+Record:
+
+shutdown_provenance = UNVERIFIED
+
+This is an engineering provenance limitation only,
+not a scientific result issue.
+
+==================================================
+J. EVIDENCE SYNC
+==================================================
+
+Verify that all lightweight/raw scientific evidence required for permanent retention is present locally.
+
+If new final evidence package is needed:
+prepare it in CPU-only mode.
+
+Do not upload model weights yet.
+
+Do not delete AutoDL final models.
+
+If SCP/local sync is already authorized under existing non-destructive archival policy:
+complete it.
+
+For any new destructive action:
+stop and ask.
+
+==================================================
+K. GIT CLOSURE
+==================================================
+
+After evidence/report/index are complete:
+
+git status
+git diff
+review staged content
+
+Commit only:
+
+- code
+- config
+- lightweight scientific results
+- reports
+- provenance
+- logs/index metadata suitable for Git
+
+Do NOT commit:
+
+- model weights
+- checkpoints
+- huge raw model artifacts
+- caches
+- credentials
+- temporary archives inappropriate for Git
+
+Then:
+
+commit
+push canonical private GitHub repo
+
+No:
+force push
+history rewrite
+reset --hard
+git clean
+
+Report exact final Git SHA.
+
+==================================================
+L. MODEL ARCHIVE DECISION — DO NOT UPLOAD YET
+==================================================
+
+Do not automatically upload any of the five Active Cross-Lineage Ba final Students to ModelScope yet.
+
+Instead, after final scientific/Git closure, prepare a preferred-retention decision table:
+
+method
+final_model_path
+model_size
+training_complete
+fresh_reload_verified
+detector_status
+utility_ARC
+utility_MC2
+scientific_value
+already_archived_elsewhere?
+duplicate_weight_check
+recommended_preferred_archive
+reason
+
+We will decide separately which final Students should be uploaded.
+
+Important:
+a detector N/A does not automatically mean the Student is scientifically unimportant.
+
+EverTracer and iSeal final Students may still be useful reproducibility artifacts because:
+- training completed
+- utility completed
+- detector applicability itself is a benchmark finding
+
+But do not upload without explicit approval.
+
+==================================================
+M. NO GPU / NO NEW EXPERIMENT
+==================================================
+
+Current mode is CPU_ONLY.
+
+Do NOT:
+
+- switch back to GPU
+- start training
+- rerun utility
+- rerun detector
+- start Active Cross-Lineage Bb
+- resume same-lineage Bb trajectories
+- start new watermark
+- start data-scale ablation
+- start logit KD
+
+This turn is closure only.
+
+==================================================
+N. FINAL REPORT TO USER
+==================================================
+
+When CPU/Git closure is complete, report:
+
+CAMPAIGN =
+ACTIVE_CROSS_LINEAGE_BA
+
+FINAL_SCIENTIFIC_STATUS =
+
+PNFP =
+- detector
+- clean baseline
+- delta
+- utility
+
+CTCC =
+- detector
+- clean baseline
+- utility
+
+EVERTRACER =
+- canonical applicability
+- exploratory diagnostic
+- utility
+
+ISEAL =
+- applicability
+- utility
+
+SCW =
+- detector
+- clean baseline
+- utility
+
+MASTER_REPORT =
+MASTER_JSON =
+MASTER_CSV =
+
+FULL_LOG_INDEX =
+EVIDENCE_SYNC =
+GIT_HEAD =
+GIT_PUSH_STATUS =
+
+SHUTDOWN_PROVENANCE =
+
+MODEL_ARCHIVE_RECOMMENDATIONS =
+<one line per method>
+
+REQUIRES_USER_DECISION =
+preferred final ModelScope archive selection
+
+Do not shut down the CPU-only instance automatically until this closure report is delivered, unless another explicit shutdown rule is currently active and requires it.

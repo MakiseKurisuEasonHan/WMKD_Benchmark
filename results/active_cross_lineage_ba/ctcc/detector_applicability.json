@@ -1,0 +1,9 @@
+{
+  "applicability": "SUPPORTED",
+  "basis": "Model-native generated text is evaluated by unchanged case-sensitive stripped IAMALIVE equality; frozen trigger95/suppression100/normal105, existing generation settings.",
+  "rule": "WMKD operational detector: generated_answer.strip()==IAMALIVE; not claimed official CTCC detector",
+  "detector_applicability_level": "LEVEL_1_VALID_CROSS_ARCHITECTURE",
+  "student_training_required": true,
+  "utility_required": true,
+  "strictly_comparable_to_same_lineage": true
+}

@@ -1,0 +1,37 @@
+{
+  "status": "RESOLVED_BY_EXPLICIT_EXACT_PATH_CLEANUP",
+  "free_bytes": 7406657536,
+  "required_gate_bytes": 10466894288,
+  "candidates": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_ba_remote_verify_20260908",
+      "files": 16,
+      "bytes": 6187855464,
+      "allocated_bytes": 6187892736,
+      "single_link_all": true,
+      "verified_manifest_matches": 16,
+      "manifest_file_count": 16,
+      "archive_status": "COMPLETE",
+      "remote_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Ba-Student",
+      "remote_revision": "da51d39a060ec3ef15f1aa9b84ffc43288202050",
+      "scientific_value": "Redownload verification copy; archive evidence and original final models must remain",
+      "deletion_authorized": false
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/passive_cross_lineage_bb_remote_verify_20260908",
+      "files": 16,
+      "bytes": 6187855466,
+      "allocated_bytes": 6187892736,
+      "single_link_all": true,
+      "verified_manifest_matches": 16,
+      "manifest_file_count": 16,
+      "archive_status": "COMPLETE",
+      "remote_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Bb-Student",
+      "remote_revision": "5f8d9c36f1e127ea265368ebcd9aa567815f62da",
+      "scientific_value": "Redownload verification copy; archive evidence and original final models must remain",
+      "deletion_authorized": false
+    }
+  ],
+  "no_files_deleted": true,
+  "receipt": "approved_verification_copy_cleanup_20260909.json"
+}

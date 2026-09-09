@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-09-09T06:16:41.875961+00:00",
+  "mode": "CPU_ONLY",
+  "methods": {
+    "pnfp": {
+      "training_steps": 7500,
+      "raw_utility_counts": {
+        "arc_challenge": 1172,
+        "truthfulqa_mc2": 817
+      },
+      "utility_sha": "PASS",
+      "existing_fresh_reload_evidence": "PASS",
+      "dataset_preflight_sha": "PASS",
+      "raw_evidence": "PASS",
+      "new_inference": false
+    },
+    "evertracer": {
+      "training_steps": 7500,
+      "raw_utility_counts": {
+        "arc_challenge": 1172,
+        "truthfulqa_mc2": 817
+      },
+      "utility_sha": "PASS",
+      "existing_fresh_reload_evidence": "PASS",
+      "dataset_preflight_sha": "PASS",
+      "raw_evidence": "PASS",
+      "new_inference": false
+    },
+    "ctcc": {
+      "training_steps": 7500,
+      "raw_utility_counts": {
+        "arc_challenge": 1172,
+        "truthfulqa_mc2": 817
+      },
+      "utility_sha": "PASS",
+      "existing_fresh_reload_evidence": "PASS",
+      "dataset_preflight_sha": "PASS",
+      "raw_evidence": "PASS",
+      "new_inference": false
+    },
+    "iseal": {
+      "training_steps": 7500,
+      "raw_utility_counts": {
+        "arc_challenge": 1172,
+        "truthfulqa_mc2": 817
+      },
+      "utility_sha": "PASS",
+      "existing_fresh_reload_evidence": "PASS",
+      "dataset_preflight_sha": "PASS",
+      "raw_evidence": "PASS",
+      "new_inference": false
+    },
+    "scw": {
+      "training_steps": 7500,
+      "raw_utility_counts": {
+        "arc_challenge": 1172,
+        "truthfulqa_mc2": 817
+      },
+      "utility_sha": "PASS",
+      "existing_fresh_reload_evidence": "PASS",
+      "dataset_preflight_sha": "PASS",
+      "raw_evidence": "PASS",
+      "new_inference": false
+    }
+  },
+  "duplicate_weight_check": "FIVE_DISTINCT",
+  "shutdown_provenance": "UNVERIFIED"
+}

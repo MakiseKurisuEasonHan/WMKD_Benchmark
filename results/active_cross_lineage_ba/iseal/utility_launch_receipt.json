@@ -1,0 +1,16 @@
+{
+  "pid": 79867,
+  "method": "iseal",
+  "run_id": "iseal_xba_20260909",
+  "stage": "utility",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/env_py311/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_utility_worker.py",
+    "iseal",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909/final_model"
+  ],
+  "log": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/iseal/utility.log",
+  "started_at": "2026-09-08T15:23:30.879193+00:00"
+}

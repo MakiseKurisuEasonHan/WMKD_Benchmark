@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "role": "scw",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/scw_xba_20260909/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.4906143344709898,
+  "truthfulqa_mc2_acc": 0.4915920843760251,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.46501706484641636,
+      "acc_stderr,none": 0.014575583922019669,
+      "acc_norm,none": 0.4906143344709898,
+      "acc_norm_stderr,none": 0.014608816322065
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.4915920843760251,
+      "acc_stderr,none": 0.015322551401142664
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-08T16:06:37.051847+00:00"
+}

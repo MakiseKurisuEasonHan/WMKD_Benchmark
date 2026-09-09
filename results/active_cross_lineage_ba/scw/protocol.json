@@ -1,0 +1,76 @@
+{
+  "project": "WMKD_Benchmark",
+  "campaign": "ACTIVE_CROSS_LINEAGE_BA",
+  "method": "SCW",
+  "experiment": "XBa",
+  "run_id": "scw_xba_20260909",
+  "status": "PREPARED_NOT_STARTED",
+  "student": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "initialization": "fresh_clean_Qwen_not_other_student",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+  "dataset": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+    "records": 20000,
+    "sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+    "parent_dataset_origin": "protocol_faithful_reconstruction"
+  },
+  "training": {
+    "epochs": 3,
+    "records": 20000,
+    "sample_exposures": 60000,
+    "micro_batch": 8,
+    "gradient_accumulation": 1,
+    "effective_batch": 8,
+    "optimizer_steps": 7500,
+    "learning_rate": 1e-05,
+    "seed": 42,
+    "precision": "bf16",
+    "full_parameter": true,
+    "optimizer": "adamw_torch",
+    "scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "max_length": 1024,
+    "gradient_checkpointing": true,
+    "formatter": "native_Qwen_chat_template",
+    "supervision": "teacher_raw_answer",
+    "save_strategy": "no_intermediate_checkpoints_final_model_only",
+    "interruption_policy": "No automatic replay from Base if no resumable checkpoint exists"
+  },
+  "runner": "scripts/train_active_cross_lineage_endpoint.py",
+  "output_dir": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/scw_xba_20260909",
+  "detector": "scripts/scw_detector.py",
+  "detector_secret": "Frozen1000 French queries; original Llama statistical tokenizer/permutation42; alpha0.001 lower p stronger",
+  "clean_qwen_detector": {
+    "status": "COMPLETE",
+    "integrity": "PASS",
+    "primary": {
+      "n_queries": 1000,
+      "p_value": 0.7446491718292236,
+      "fingerprinted": false,
+      "supplementary": false
+    }
+  },
+  "clean_qwen_utility_source": "results/passive_cross_lineage/clean_qwen_baseline/utility",
+  "clean_qwen_arc": 0.4402730375426621,
+  "clean_qwen_mc2": 0.5712170418936038,
+  "launch_gates": [
+    "all applicable clean-Qwen baselines complete incl SCW statistical aggregation",
+    "canonical12-file SHA PASS",
+    "dataset20k SHA/zero truncation/zero empty supervision PASS",
+    "runner exact engineering diff PASS",
+    "GPU truly idle and no other worker",
+    "fresh output path absent",
+    "free disk > final_weights+4GiB"
+  ],
+  "archive_status": "NOT_STARTED",
+  "shutdown_armed": false,
+  "detector_applicability_level": "LEVEL_1_VALID_CROSS_ARCHITECTURE",
+  "stage_order": [
+    "training",
+    "utility",
+    "detector",
+    "closure"
+  ]
+}
