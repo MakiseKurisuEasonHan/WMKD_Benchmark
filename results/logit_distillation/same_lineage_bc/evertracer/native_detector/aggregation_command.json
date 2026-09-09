@@ -1,0 +1,13 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/evertracer_aggregate_verification.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+  "--input",
+  "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/evertracer/native_detector/detector_raw.json",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/evertracer/native_detector/detector_aggregate.json",
+  "--source-run-id",
+  "evertracer_bc_20260910"
+]

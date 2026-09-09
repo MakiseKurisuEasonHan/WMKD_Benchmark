@@ -13,6 +13,9 @@ D = Path(str(P) + '_data')
 
 
 def main():
+    if os.environ.get('SSH_ORIGINAL_COMMAND', '').startswith('bc-receive '):
+        from bc_frozen_asset_transfer import receive
+        return receive()
     args = os.environ.get('SSH_ORIGINAL_COMMAND', '').split()
     assert len(args) == 3
     method, name, offset_text = args

@@ -1,0 +1,80 @@
+{
+  "status": "COMPLETE",
+  "run_id": "evertracer_bc_20260910",
+  "steps": 7500,
+  "epochs": 3,
+  "teacher_frozen": true,
+  "student_updated": true,
+  "teacher_checksum_before": "6483862ee8ab1edf069210590edbc51e31703a50d402487f80555395727efdf0",
+  "teacher_checksum_after": "6483862ee8ab1edf069210590edbc51e31703a50d402487f80555395727efdf0",
+  "student_checksum_before": "42ce8b214dae220bcc05622a040433e51385d1784c747628b26966f10a63f837",
+  "student_checksum_after": "c3725894ef2a811f87fa49d5e4a9dd1165147e7759ba3620807c8b92294707f1",
+  "started_at": "2026-09-09T21:43:48.627348+00:00",
+  "completed_at": "2026-09-09T22:28:54.486308+00:00",
+  "train_wall_seconds": 2658.6262657940388,
+  "save_seconds": 6.332369949668646,
+  "warmup_wall_seconds": 77.65577945113182,
+  "post_warmup_mean_sec_per_step": 0.3362314496611811,
+  "post_warmup_median_sec_per_step": 0.31108439341187477,
+  "all_step_mean_seconds": 0.3364986100981633,
+  "all_step_median_seconds": 0.31108970381319523,
+  "tokens_per_second": 1931.6325169137033,
+  "samples_per_second": 23.79313418795762,
+  "peak_allocated": 38605852160,
+  "peak_reserved": 56935579648,
+  "nan_inf_count": 0,
+  "oom_count": 0,
+  "final_model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/evertracer_bc_20260910/final_model",
+  "final_files": [
+    {
+      "name": "chat_template.jinja",
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    {
+      "name": "config.json",
+      "bytes": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "0dd9e4acf27b368355e10cae1ed1f03b5db0c9b149286bb2a030f77dd9ef8fdd"
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "5f65ce9dc251d0d7c6dd5da157f5dc6e8ddb681a8655da486c3a452206784a86"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    {
+      "name": "training_args.bin",
+      "bytes": 5905,
+      "sha256": "2772cc0ab89e7f49f87f9a4587718b8e99738f5ae1e8f60d9edf56c6a2cebafa"
+    }
+  ]
+}

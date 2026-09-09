@@ -1,0 +1,17 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/evertracer_verify.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+  "--suspect",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/evertracer_bc_20260910/final_model",
+  "--reference",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+  "--neighborhoods",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/evertracer/native_detector/detector_raw.json",
+  "--label",
+  "evertracer_bc_20260910:native_detector"
+]

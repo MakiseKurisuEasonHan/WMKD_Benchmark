@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
   "generated_at": "2026-09-09T18:15:12.212563+00:00",
-  "object_count": 63,
+  "object_count": 64,
   "objects": [
     {
       "method": "PN-FP",
@@ -958,6 +958,18 @@
       "watermark_evaluation_available": true,
       "utility_available": true,
       "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-PNFP-Same-Lineage-Bc-Student"
+    },
+    {
+      "method": "EverTracer",
+      "role": "same_lineage_logit_distillation_student",
+      "experiment": "Bc",
+      "run_id": "evertracer_bc_20260910",
+      "full_log_path": "results/logit_distillation/same_lineage_bc/evertracer/full_experiment_log.json",
+      "full_log_sha256": "6ed5ab1f7eaf589612f78e1d7fe4e0ea53daa044ea796f4161943bd13ed82c7f",
+      "scientific_status": "COMPLETED_MEASURED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-EverTracer-Same-Lineage-Bc-Student"
     }
   ]
 }

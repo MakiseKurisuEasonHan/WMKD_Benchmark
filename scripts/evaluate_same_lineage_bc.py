@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import sys
 import traceback
+import time
 
 P=Path(__file__).resolve().parents[1];D=Path(str(P)+'_data');E=P/'results/logit_distillation/same_lineage_bc'
 def read(p):return json.loads(p.read_text())
@@ -17,8 +18,14 @@ def main(m):
     assert summary['status']=='COMPLETE' and summary['steps']==7500 and summary['teacher_frozen']
     model=Path(summary['final_model']);assert model.resolve().is_relative_to(D/'runs/same_lineage_bc')
     lock=(E/'gpu_serial.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-    gpu=subprocess.check_output(['nvidia-smi','--query-gpu=memory.used,utilization.gpu','--format=csv,noheader,nounits'],text=True).strip().split(',')
-    assert int(gpu[0])<100 and int(gpu[1])<=5
+    idle_samples=[]
+    for attempt in range(30):
+        gpu=subprocess.check_output(['nvidia-smi','--query-gpu=memory.used,utilization.gpu','--format=csv,noheader,nounits'],text=True).strip().split(',')
+        idle_samples.append({'memory_mib':int(gpu[0]),'utilization':int(gpu[1])})
+        if int(gpu[0])<100 and int(gpu[1])<=5:break
+        if attempt<29:time.sleep(2)
+    save(q/'evaluation_gpu_idle_gate.json',{'samples':idle_samples,'passed':int(gpu[0])<100 and int(gpu[1])<=5})
+    assert int(gpu[0])<100 and int(gpu[1])<=5,'GPU_IDLE_GATE_TIMEOUT'
     env=dict(os.environ,HF_HUB_OFFLINE='1',HF_DATASETS_OFFLINE='1',TRANSFORMERS_OFFLINE='1',TOKENIZERS_PARALLELISM='false')
     def run(stage,cmd,result):
         exitfile=q/(stage+'_exit.json')

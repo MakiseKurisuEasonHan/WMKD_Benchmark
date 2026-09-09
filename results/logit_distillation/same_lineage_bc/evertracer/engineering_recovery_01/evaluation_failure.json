@@ -1,0 +1,4 @@
+{
+  "error": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/evaluate_same_lineage_bc.py\", line 50, in <module>\n    try:main(m)\n        ^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/evaluate_same_lineage_bc.py\", line 21, in main\n    assert int(gpu[0])<100 and int(gpu[1])<=5\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "status": "STOP_FOR_ENGINEERING_REVIEW"
+}

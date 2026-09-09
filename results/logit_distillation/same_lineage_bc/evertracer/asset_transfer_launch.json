@@ -1,0 +1,21 @@
+{
+  "status": "RUNNING_PENDING_SHA_VERIFICATION",
+  "local_exec_session": 22791,
+  "transport": "scp -3 via existing local SSH aliases; no credential transfer",
+  "source_host": "6002",
+  "destination_host": "6000bb",
+  "sequence": [
+    "runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged",
+    "runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+    "runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl"
+  ],
+  "next": "Let existing reference+dataset SCP finish. Then transfer restored Teacher missing two safetensor shards (initial target directory copy preceded restoration); verify destination all assets SHA before preflight.",
+  "pnfp_git_closure_commit": "d5bbb81",
+  "remote_git_sync_pending": true,
+  "teacher_source_weights_present": true,
+  "teacher_metadata_present": true,
+  "required_recovery": "Restore original Teacher shards from existing PRIVATE MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher on old CPU; match frozen target_merge_manifest SHA. No substitute/retraining.",
+  "reference_transfer": "ACTIVE; first shard measured 565968896 bytes at 20:05 UTC",
+  "historical_archive_receipt": "results/archive_remediation/evidence/evertracer_a_teacher_strong_remote_20260905_091738.json",
+  "teacher_restore_status": "PASS_9_OF_9_SHA"
+}

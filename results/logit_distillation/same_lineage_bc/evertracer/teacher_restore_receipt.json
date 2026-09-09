@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+  "retrieval_ref": "master",
+  "identity_basis": "original frozen per-file SHA256, not mutable branch name",
+  "pid": 5378,
+  "files": [
+    {
+      "path": "chat_template.jinja",
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "verified": true
+    },
+    {
+      "path": "config.json",
+      "bytes": 873,
+      "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50",
+      "verified": true
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "verified": true
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "a30c9eb48ae98d12467c2bd9ef68264836b72f23e6b2048dd609522a898fa7aa",
+      "verified": true
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "4399cdd4c42dc445dad6a373d43354d1c0a99e95ad66bd7815def952d3ec968a",
+      "verified": true
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "verified": true
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 296,
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "verified": true
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 17209920,
+      "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "verified": true
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 50525,
+      "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94",
+      "verified": true
+    }
+  ],
+  "current_file": null,
+  "received_bytes": 1365245952
+}

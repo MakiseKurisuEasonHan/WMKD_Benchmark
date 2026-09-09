@@ -1,8 +1,8 @@
 {
   "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
   "status": "ACTIVE",
-  "current_method": "evertracer",
-  "current_stage": "EVERTRACER_ASSET_PREPARATION",
+  "current_method": "ctcc",
+  "current_stage": "CTCC_ASSET_PREPARATION",
   "serial_order": [
     "pnfp",
     "evertracer",
@@ -23,12 +23,20 @@
       "utility": "COMPLETE",
       "scientific_closure": "COMPLETE",
       "archive": "COMPLETE",
-      "archive_chain_pid": 4006,
       "verification": "FULL_INDEPENDENT_DOWNLOAD"
     },
     "evertracer": {
-      "status": "NOT_STARTED",
-      "stage": "FROZEN_ASSET_RESTORATION"
+      "status": "COMPLETE",
+      "stage": "COMPLETE",
+      "supervisor_pid": 11167,
+      "run_id": "evertracer_bc_20260910",
+      "training": "COMPLETE",
+      "training_steps": 7500,
+      "detector": "COMPLETE",
+      "utility": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive": "COMPLETE",
+      "archive_chain_pid": 9326
     },
     "ctcc": {
       "status": "NOT_STARTED"
@@ -50,5 +58,6 @@
   "auto_shutdown_armed": false,
   "shutdown_gate": "6terminal+scientific/evidence/archive/Git closure+no workers+sync",
   "timeout_gate": "only genuinely new high-risk approval AND no authorized action/workers,30minutes",
-  "no_repeated_pilot": true
+  "no_repeated_pilot": true,
+  "state_sync_timestamp": "2026-09-10T08:58:57.564395+10:00"
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "scripts/evertracer_verify.py",
+    "expected": "50c6dd3330abf9f6f2ee07e56222d74c36c7c2500207d694732b001d12259716",
+    "actual": "50c6dd3330abf9f6f2ee07e56222d74c36c7c2500207d694732b001d12259716",
+    "match": true
+  },
+  {
+    "path": "scripts/evertracer_aggregate_verification.py",
+    "expected": "14c8175d505e8bc4ab21575077fb63bdd25dc398473f8a849a19fdaddd8aad54",
+    "actual": "14c8175d505e8bc4ab21575077fb63bdd25dc398473f8a849a19fdaddd8aad54",
+    "match": true
+  },
+  {
+    "path": "scripts/evertracer_common.py",
+    "expected": "41cad2dae6c3100909dae13c55005e8eca52dcfbbbaeb056babcc560380dde3d",
+    "actual": "41cad2dae6c3100909dae13c55005e8eca52dcfbbbaeb056babcc560380dde3d",
+    "match": true
+  },
+  {
+    "path": "configs/distillation/evertracer_ba_direct.yaml",
+    "expected": "67a0a7a87951b275a7be0fc29e83282b09c1a128bd533d1f4fd32f1e21243219",
+    "actual": "67a0a7a87951b275a7be0fc29e83282b09c1a128bd533d1f4fd32f1e21243219",
+    "match": true
+  }
+]
