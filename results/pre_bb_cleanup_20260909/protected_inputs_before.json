@@ -1,0 +1,128 @@
+[
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/config.json",
+    "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+    "bytes": 661,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/configuration.json",
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/generation_config.json",
+    "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+    "bytes": 242,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/LICENSE",
+    "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+    "bytes": 7388,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/merges.txt",
+    "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "bytes": 1671839,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/model-00001-of-00002.safetensors",
+    "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+    "bytes": 3968658944,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/model-00002-of-00002.safetensors",
+    "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+    "bytes": 2203268048,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/model.safetensors.index.json",
+    "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+    "bytes": 35581,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/README.md",
+    "sha256": "2c74693e6ae36ba878124d465195b4dad0f71035b54ece1c9fd1553cc497ef8c",
+    "bytes": 4930,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/tokenizer.json",
+    "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "bytes": 7031645,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/tokenizer_config.json",
+    "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "bytes": 7305,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct/vocab.json",
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "bytes": 2776833,
+    "role": "CANONICAL_QWEN_BASE"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+    "sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+    "bytes": 35754179,
+    "role": "PNFP_BB_FROZEN"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+    "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+    "bytes": 921885,
+    "role": "PNFP_DETECTOR_ASSET"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/frozen_paired_qa.jsonl",
+    "sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853",
+    "bytes": 34672364,
+    "role": "EVERTRACER_BB_FROZEN"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.jsonl",
+    "sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+    "bytes": 34869189,
+    "role": "CTCC_BB2_FROZEN"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set_annotated.json",
+    "sha256": "48596b707de9d73cef625e7ec1e58afe6a7f176b6aeb59f393455818fdcb0f15",
+    "bytes": 310646,
+    "role": "CTCC_DETECTOR_ASSET"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+    "sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+    "bytes": 32294755,
+    "role": "ISEAL_BB_FROZEN"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/manifests/dataset_manifest.json",
+    "sha256": "a65e25c445c154083e9bb6848e40a2fefb4633f2f8f2bc9dc7d2488d8bcfdf4b",
+    "bytes": 46557,
+    "role": "ISEAL_DETECTOR_ASSET"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+    "sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+    "bytes": 34020672,
+    "role": "SCW_BB_FROZEN"
+  },
+  {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+    "sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d",
+    "bytes": 718092,
+    "role": "SCW_DETECTOR_ASSET"
+  }
+]

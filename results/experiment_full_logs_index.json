@@ -857,6 +857,16 @@
       "modelscope_revision": "b35c7451410c5f85d16f5120eeea9d154524e278",
       "modelscope_archive_sha256": "455828d36760064879f9d9bcca3ebdb733860afff7200407677ae6159e49ce16",
       "preferred_final_model": true
+    },
+    {
+      "method": "Passive-5 Shared",
+      "role": "shared_training_scientific_object",
+      "experiment": "Bb3",
+      "run_id": "passive5_shared_bb3_20260903_164929",
+      "full_log_path": "results/passive5_shared_bb3/full_experiment_log.json",
+      "full_log_sha256": "4e6f9a7bb4c0d2167be28e5d306d1d1113905471f29ef4c822ae34bc1625ed25",
+      "scientific_status": "COMPLETED",
+      "note": "Existing shared run supporting five already indexed per-method views; index repair only"
     }
   ]
 }

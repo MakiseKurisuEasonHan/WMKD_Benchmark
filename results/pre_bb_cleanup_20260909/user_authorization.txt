@@ -1,0 +1,737 @@
+开始 WMKD_Benchmark 的：
+
+PRE-BB FINAL INTEGRITY AUDIT + AUTODL LARGE CLEANUP
+
+目标：
+
+1. 在开始 Active Cross-Lineage Bb 前，
+   完整检查当前项目的代码、配置、科研结果、full logs、报告、trajectory、归档 receipt 等是否已经同步/上传/闭环。
+
+2. 特别检查之前做过的 checkpoint trajectory，
+   确保论文分析需要的所有 trajectory 科研证据永久保留。
+
+3. 所有需要保留的对象确认安全后，
+   对 AutoDL 做一次大规模 destructive cleanup。
+
+4. 尽可能释放磁盘，
+   但不能破坏 WMKD_Benchmark 的科研复现、论文证据和正式归档。
+
+5. 清理完成后，
+   为下一阶段 Active Cross-Lineage Bb 做空间和配置准备。
+
+==================================================
+A. CONNECTION
+==================================================
+
+学校 VPN：关闭
+
+AutoDL:
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+当前优先 CPU-only 完成审计和清理。
+
+不要为了审计重新开 GPU。
+
+==================================================
+B. FIRST — NO DELETION YET
+==================================================
+
+先进行完整 read-only integrity audit。
+
+在任何删除前，检查：
+
+LOCAL PROJECT
+GitHub
+AutoDL
+ModelScope receipts / archive manifests
+local evidence archives
+
+三端当前 Git 应以已闭环 revision 为基准：
+
+b98c1b2ba50d4d21a06dda925911308505ce847d
+
+先确认真实 HEAD，
+不要只相信聊天记录。
+
+==================================================
+C. AUDIT ALL FORMAL EXPERIMENTS
+==================================================
+
+当前正式 benchmark 相关对象至少包括：
+
+1. PN-FP
+2. EverTracer
+3. CTCC
+4. iSeal
+5. SCW
+6. LLMPrint
+7. REEF
+8. HuRef
+9. AWM
+10. ZeroPrint
+
+以及：
+
+- same-lineage Ba
+- same-lineage Bb / Bb2 / Bb3 where applicable
+- active Ba checkpoint trajectories
+- passive shared Ba/Bb3
+- passive cross-lineage Qwen Ba/Bb
+- active cross-lineage Qwen Ba
+
+不要处理旧 WaterBench / WaterBenchV2 / WaterBenchV3 为正式 WMKD 科研对象，
+除非只是为了识别并删除旧项目残留。
+
+==================================================
+D. CRITICAL — CHECKPOINT TRAJECTORY AUDIT
+==================================================
+
+这是本轮重点。
+
+系统性检查之前已经完成的 active Ba checkpoint trajectory。
+
+Methods:
+
+PN-FP
+EverTracer
+CTCC
+iSeal
+SCW
+
+已知 trajectory checkpoints：
+
+0
+25
+50
+100
+250
+500
+1000
+2000
+4000
+6000
+7500
+
+必须检查每个方法是否永久保存了：
+
+1. trajectory master JSON
+2. trajectory CSV
+3. plotting-ready CSV
+4. 每个 checkpoint 的 raw detector result
+5. detector native metric
+6. detection decision
+7. errors
+8. checkpoint/step identity
+9. model/checkpoint provenance
+10. detector config
+11. dataset SHA
+12. seed
+13. tokenizer/template where relevant
+14. raw arrays / generations where detector需要
+15. trajectory runner log
+16. trajectory full_experiment_log 或 equivalent indexed object
+17. report / scientific interpretation
+
+特别检查：
+
+PN-FP:
+每一步 detected / 1024 的完整记录。
+
+EverTracer:
+每一步 AUC / TPR / raw score arrays。
+
+CTCC:
+每一步 trigger / negative activation counts。
+
+iSeal:
+每一步 registered/heldout results、BLEU summary及必要 raw evidence。
+
+SCW:
+必须把此前缺少上下文的后期 checkpoint：
+4000
+6000
+7500
+
+从正式 artifact 中真实读取并确认。
+
+不要从聊天记忆补数。
+
+==================================================
+E. TRAJECTORY COMPLETENESS TABLE
+==================================================
+
+生成：
+
+results/pre_bb_cleanup_20260909/trajectory_integrity_audit.json
+results/pre_bb_cleanup_20260909/trajectory_integrity_audit.csv
+
+至少包含：
+
+method
+expected_steps
+present_steps
+missing_steps
+raw_detector_evidence
+trajectory_json
+trajectory_csv
+plotting_csv
+full_log
+provenance
+local_copy
+github_copy
+archive_copy
+safe_to_delete_checkpoint_weights
+notes
+
+如果任何重要 trajectory evidence 缺失：
+
+先修复证据闭环，
+不要删除相关 checkpoint。
+
+==================================================
+F. CHECK ALL FULL LOGS
+==================================================
+
+检查：
+
+results/experiment_full_logs_index.json
+
+确认：
+
+- 所有正式实验均有 full_experiment_log.json
+- index 不存在 dangling path
+- 不存在未 indexed 的正式实验
+- 不存在 index 指向已删除 artifact
+- Active Cross-Lineage Ba 5个对象已加入
+- Passive Cross-Lineage Ba/Bb 已加入
+- trajectory 正式对象如项目规则要求，也已正确 indexed
+
+输出：
+
+TOTAL_INDEXED =
+MISSING_FULL_LOG =
+DANGLING_INDEX =
+UNINDEXED_FORMAL_EXPERIMENTS =
+
+==================================================
+G. REPORT / RESULT AUDIT
+==================================================
+
+检查：
+
+docs/reproduction_reports/
+
+确保正式报告至少覆盖：
+
+- 10 methods reproduction / Ba / Bb states
+- passive cross-lineage final
+- active cross-lineage Ba final
+- dataset exposure audit
+- trajectory analysis
+- detector applicability audits
+- archive receipts / provenance where needed
+
+检查 master JSON/CSV 与报告数字一致。
+
+不要重新运行科学实验。
+
+==================================================
+H. GITHUB AUDIT
+==================================================
+
+检查 GitHub 中应长期保留的：
+
+- source code
+- scripts
+- configs
+- lightweight JSON/CSV
+- reports
+- provenance
+- scientific summaries
+- full log index
+- experiment state metadata
+- trajectory JSON/CSV
+
+禁止把以下 push Git：
+
+- model weights
+- checkpoints
+- giant raw model files
+- caches
+- temporary full downloads
+
+如果发现 lightweight 科研文件尚未 push：
+
+先完成审计
+→ commit
+→ push private GitHub
+
+如果审批系统要求新的明确 push approval，
+先回报 exact file count/size；
+不要绕过。
+
+==================================================
+I. LOCAL EVIDENCE ARCHIVE AUDIT
+==================================================
+
+确保本地项目永久保留重要科研 evidence。
+
+重点确认：
+
+artifacts/
+
+或项目 canonical evidence archive 中已有：
+
+- passive cross-lineage evidence
+- active cross-lineage Ba evidence
+- raw detector evidence
+- utility evidence
+- trajectory evidence where needed
+
+如果 trajectory 尚无独立本地 evidence package：
+
+创建一个轻量/科研证据包：
+
+artifacts/active_ba_checkpoint_trajectory_evidence_20260909.zip
+
+只包含科研证据：
+
+- trajectory JSON/CSV
+- raw detector outputs
+- logs
+- provenance
+- configs/manifests
+- reports
+
+不要包含 checkpoint weights，
+除非发现某方法后续无法从证据复现 trajectory 判定。
+
+生成：
+size
+SHA256
+file count
+manifest
+
+同步本地并验证 SHA。
+
+==================================================
+J. MODEL ARCHIVE AUDIT
+==================================================
+
+确认已经作为 preferred final artifact 上传 ModelScope 的模型：
+
+Passive cross-lineage:
+Ba Qwen
+Bb Qwen
+
+Active cross-lineage Ba:
+PN-FP
+CTCC
+EverTracer
+iSeal
+SCW
+
+以及之前项目已有正式 preferred models。
+
+对每个确认：
+
+remote repo
+immutable revision
+archive SHA
+verification mode
+receipt exists
+
+不要重新下载完整模型。
+
+只读检查已有 receipt/provenance。
+
+==================================================
+K. CLASSIFY AUTODL STORAGE
+==================================================
+
+完成所有科研审计后，对 AutoDL 全盘分类：
+
+CATEGORY A — MUST KEEP
+
+例如：
+
+- canonical base models needed for Bb
+- Qwen2.5-3B-Instruct clean base
+- frozen Ba/Bb datasets needed for future work
+- active Bb paired/paraphrased datasets
+- source code
+- final scientific evidence
+- full logs
+- detector assets required for Bb
+- watermark Teacher artifacts required to evaluate Bb
+- unique files not archived elsewhere
+
+CATEGORY B — ARCHIVED / RECOVERABLE / SAFE TO DELETE
+
+例如：
+
+- ModelScope 已验证的 final Student local duplicates
+- preferred archive staging directories
+- remote verification copies
+- completed upload staging dirs
+- intermediate training checkpoints
+- optimizer states
+- old full download copies
+- regenerated cache
+- temporary extracted archives
+- pip/model download caches
+- duplicated model directories
+- stale experiment tmp dirs
+
+CATEGORY C — OLD PROJECT / UNRELATED
+
+例如：
+
+- WaterBench
+- WaterBenchV2
+- WaterBenchV3
+- abandoned Methods 11–15 artifacts
+- obsolete failed experiment working dirs
+- old download staging
+- superseded reconstructed temporary objects
+
+只要确认不属于 WMKD_Benchmark 当前科研依赖，
+可以作为强清理候选。
+
+==================================================
+L. SPECIAL RULE — CHECKPOINT WEIGHTS
+==================================================
+
+之前 active Ba trajectory 的中间 checkpoints：
+
+不要因为 trajectory 很重要就默认永久保留所有 checkpoint 权重。
+
+如果已经确认：
+
+- 每个 checkpoint detector raw result 已保存
+- trajectory JSON/CSV 完整
+- provenance/step identity完整
+- final model 已归档
+- checkpoint本身不再需要继续 inference
+
+则允许删除：
+
+checkpoint-25
+checkpoint-50
+checkpoint-100
+checkpoint-250
+checkpoint-500
+checkpoint-1000
+checkpoint-2000
+checkpoint-4000
+checkpoint-6000
+
+以及其他 intermediate checkpoint weights。
+
+Step0 是 clean base，不作为 checkpoint重复保留。
+
+Step7500 final 如果已有：
+- canonical final model
+- verified ModelScope archive
+
+则 AutoDL 上的额外 duplicate final copy也可以删除。
+
+但是至少保留：
+科研 trajectory evidence，而不是所有权重。
+
+==================================================
+M. USER EXPLICITLY AUTHORIZES LARGE DESTRUCTIVE CLEANUP
+==================================================
+
+用户现在明确授权：
+
+在上述完整 integrity audit、sync、archive verification 通过之后，
+可以对 AutoDL 做大规模 destructive cleanup。
+
+允许删除所有被严格判定为：
+
+REDUNDANT
+RECOVERABLE
+TEMPORARY
+CACHE
+ARCHIVED_REMOTE_COPY
+INTERMEDIATE_CHECKPOINT
+OLD_PROJECT_RESIDUE
+SUPERSEDED_ARTIFACT
+
+的对象。
+
+不需要对每一个安全候选再次逐项征求批准。
+
+这是本轮明确的大删除授权。
+
+==================================================
+N. ABSOLUTELY DO NOT DELETE
+==================================================
+
+无论如何禁止删除唯一版本：
+
+- 未同步的科研证据
+- 未归档的 raw detector data
+- 唯一 full_experiment_log
+- 唯一 trajectory JSON/CSV
+- 唯一 dataset
+- upcoming Bb 必需数据
+- detector secret/assets
+- watermark Teacher 必需文件
+- clean Qwen base
+- upcoming Bb training config
+- 尚未永久保存的 source code
+- 唯一 provenance
+- 未验证 archive 的唯一模型
+
+如果不确定是否唯一：
+KEEP。
+
+==================================================
+O. CLEANUP PRIORITY
+==================================================
+
+按以下优先级删除：
+
+1. remote verification full-download copies
+2. completed upload staging dirs
+3. redundant preferred archive staging copies
+4. pip/download caches
+5. intermediate checkpoints / optimizer state
+6. duplicated final Student models already archived and verified
+7. obsolete temporary data
+8. old project residues
+9. failed/abandoned experiment working directories
+10. other independently proven recoverable objects
+
+不要先动 canonical datasets / detector assets。
+
+==================================================
+P. HARDLINK AWARENESS
+==================================================
+
+删除前继续检查：
+
+- hardlink count
+- symlink
+- filesystem blocks
+
+不要把 6 GiB hardlink directory 错算成一定释放 6 GiB。
+
+记录：
+
+logical_size
+estimated_blocks_freed
+hardlink_count
+
+最终以 df 实际变化为准。
+
+==================================================
+Q. CLEANUP RECEIPT
+==================================================
+
+生成：
+
+results/pre_bb_cleanup_20260909/autodl_large_cleanup_receipt.json
+
+至少记录每个删除对象：
+
+path
+classification
+reason
+logical_size
+estimated_blocks
+actual deletion timestamp
+recoverability_source
+remote_revision if applicable
+scientific_dependency_check
+deleted
+
+同时记录：
+
+SPACE_BEFORE
+SPACE_AFTER
+ACTUAL_SPACE_FREED
+
+==================================================
+R. AFTER CLEANUP — VERIFY CRITICAL BB INPUTS
+==================================================
+
+清理完成后必须重新核验：
+
+1. repo完整
+2. clean Qwen base完整
+3. Qwen revision：
+   8f4992eda43eea7c770690ddc0de8f732da246f5
+4. active 5 Bb frozen datasets仍存在
+5. dataset SHA全部正确
+6. Teacher/detector assets仍存在
+7. Qwen tokenizer/template仍存在
+8. disk空间足够
+9. no stale worker
+10. Git clean or only expected closure state
+
+==================================================
+S. UPCOMING EXPERIMENT
+==================================================
+
+下一阶段是：
+
+ACTIVE CROSS-LINEAGE Bb
+
+不是 same-lineage Bb trajectory。
+
+实验：
+
+Watermarked Llama Teacher
+→ existing frozen paraphrased Bb dataset
+→ fresh clean Qwen2.5-3B-Instruct
+→ full-parameter SFT
+→ detector
+→ utility
+
+五个方法：
+
+PN-FP
+EverTracer
+CTCC
+iSeal
+SCW
+
+每个方法都重新从 fresh clean Qwen开始。
+
+不能从 XBa Student继续训练。
+
+==================================================
+T. Bb DATASET SEMANTICS
+==================================================
+
+使用已有 canonical frozen paraphrased datasets。
+
+不要重新 paraphrase。
+
+注意：
+
+CTCC 使用其已经明确标记的 Bb2 数据语义；
+不要把 Bb2静默改名为历史 Bb。
+
+PN-FP / SCW 仍保留此前 parent reconstruction limitation。
+
+所有 provenance继续记录。
+
+==================================================
+U. DETECTOR POLICY FOR XBb
+==================================================
+
+沿用刚完成 XBa 的三级规则：
+
+PN-FP:
+LEVEL 1
+
+CTCC:
+LEVEL 1
+
+SCW:
+LEVEL 1
+
+EverTracer:
+canonical = N/A_CROSS_TOKENIZER
+exploratory diagnostic = run and clearly mark NON_COMPARABLE
+
+iSeal:
+LEVEL 3
+canonical detector = N/A
+training + utility still required
+
+==================================================
+V. DO NOT START Bb UNTIL CLEANUP REPORT IS READY
+==================================================
+
+本轮先完成：
+
+AUDIT
+→ SYNC
+→ TRAJECTORY CHECK
+→ GIT/LOCAL EVIDENCE CLOSURE
+→ LARGE CLEANUP
+→ POST-CLEANUP INTEGRITY CHECK
+
+然后先向用户汇报：
+
+AUDIT_STATUS =
+TRAJECTORY_STATUS =
+MISSING_EVIDENCE =
+LOCAL_SYNC =
+GITHUB_SYNC =
+MODELSCOPE_RECEIPTS =
+SPACE_BEFORE =
+SPACE_AFTER =
+SPACE_FREED =
+DELETED_MAJOR_OBJECTS =
+BB_REQUIRED_FILES_STATUS =
+BB_READY =
+
+如果：
+
+BB_READY = YES
+
+则可以按现有授权直接准备 Active Cross-Lineage Bb runner/config。
+
+如果开始 GPU training 需要重新切换 AutoDL 到有卡模式：
+不要假设当前无卡实例可以自己获得 GPU。
+先明确报告：
+
+GPU_REQUIRED = YES
+READY_FOR_GPU_START = YES
+
+等待用户切换/开启 GPU 模式后再启动。
+
+==================================================
+W. IMPORTANT SCIENTIFIC PRINCIPLE
+==================================================
+
+清理的目标是删除：
+
+“可恢复的大文件”
+
+而不是删除：
+
+“不可恢复的科研证据”。
+
+对于 trajectory：
+
+优先永久保留：
+数据和 detector evidence
+
+不要求永久保留：
+每一个数 GB checkpoint 权重。
+
+对于 archived final Students：
+
+优先永久保留：
+ModelScope immutable revision + manifest + SHA + provenance + receipt
+
+AutoDL 上的重复权重在确认 archive 完整后可以删除。
+
+==================================================
+X. FINAL REPORT
+==================================================
+
+完成后给用户一份简洁但完整的报告：
+
+1. 是否发现需要补传/补同步的文件
+2. checkpoint trajectory 是否全部完整
+3. SCW 4000/6000/7500 的真实记录
+4. full logs/index 是否完整
+5. GitHub 是否同步
+6. 本地 evidence 是否完整
+7. ModelScope receipts 是否完整
+8. 删除了哪些主要大对象
+9. 实际释放多少空间
+10. 剩余磁盘空间
+11. 是否保留所有 Bb 必需对象
+12. 是否已经 READY_FOR_ACTIVE_CROSS_LINEAGE_BB
+
+本轮允许执行大规模删除，
+但必须严格遵守上述完整性边界。

@@ -1,0 +1,51 @@
+[
+  {
+    "method": "pnfp",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+    "key": "path",
+    "exists": true,
+    "type": "file"
+  },
+  {
+    "method": "evertracer",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+    "key": "neighborhoods",
+    "exists": true,
+    "type": "file"
+  },
+  {
+    "method": "evertracer",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/reference_merged",
+    "key": "reference_model",
+    "exists": true,
+    "type": "directory"
+  },
+  {
+    "method": "evertracer",
+    "path": "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/evertracer_ba_direct.yaml",
+    "key": "config",
+    "exists": true,
+    "type": "file"
+  },
+  {
+    "method": "ctcc",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set_annotated.json",
+    "key": "path",
+    "exists": true,
+    "type": "file"
+  },
+  {
+    "method": "iseal",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/manifests/dataset_manifest.json",
+    "key": "path",
+    "exists": true,
+    "type": "file"
+  },
+  {
+    "method": "scw",
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+    "key": "path",
+    "exists": true,
+    "type": "file"
+  }
+]
