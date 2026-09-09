@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-09T10:27:30.019626+00:00",
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "transformers": "4.55.2",
+    "tokenizers": "0.21.4",
+    "accelerate": "1.10.0",
+    "datasets": "3.6.0",
+    "lm_eval": "0.4.9.1",
+    "numpy": "2.3.2",
+    "scipy": "1.16.2",
+    "scikit-learn": "1.9.0",
+    "peft": "0.17.1",
+    "pandas": "3.0.5",
+    "pyarrow": "21.0.0",
+    "pydantic": "2.11.9",
+    "sentencepiece": "0.2.1",
+    "PyYAML": "6.0.2"
+  },
+  "source_version_matches": true,
+  "cuda_runtime": "12.8",
+  "cuda_available": true,
+  "imports": "Trainer/AutoTokenizer/AutoModelForCausalLM/datasets/accelerate/lm_eval PASS",
+  "model_loaded": false,
+  "scientific_tasks_started": false
+}

@@ -1,0 +1,15 @@
+{
+  "returncode": 0,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_pnfp_detector.py",
+    "--model",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/pnfp_xbb_20260909/final_model",
+    "--output",
+    "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/pnfp/final_detector"
+  ],
+  "result": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/pnfp/final_detector/detector_results.json",
+  "ended_at": "2026-09-09T11:35:27.445659+00:00"
+}

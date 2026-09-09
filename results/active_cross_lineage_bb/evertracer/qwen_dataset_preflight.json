@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "method": "evertracer",
+  "dataset_sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853",
+  "records": 20000,
+  "target_field": "paraphrased_answer",
+  "max_tokens": 683,
+  "max_length": 1024,
+  "failures": [],
+  "scope": "CPU dataset and native tokenizer only; model identity and GPU gate are separate"
+}

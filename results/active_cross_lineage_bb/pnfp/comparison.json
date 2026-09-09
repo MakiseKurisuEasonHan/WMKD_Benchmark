@@ -1,0 +1,36 @@
+{
+  "references": {
+    "clean_qwen": {
+      "arc": 0.4402730375426621,
+      "mc2": 0.5712170418936038,
+      "detected": 43,
+      "utility_raw_path": "results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+      "utility_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+    },
+    "xba": {
+      "arc": 0.4948805460750853,
+      "mc2": 0.5019135695511419,
+      "detected": 84,
+      "utility_raw_path": "results/active_cross_lineage_ba/pnfp/utility/raw_evaluator_output.json",
+      "utility_raw_sha256": "bee38f652ad042fcfbda0ed8c377bb457a06eb0e0132adb1bf80c4b8fd15d2fb"
+    }
+  },
+  "xbb": {
+    "detected": 67,
+    "total": 1024,
+    "detection_rate": 0.0654296875,
+    "arc": 0.4684300341296928,
+    "mc2": 0.4917632470586235
+  },
+  "delta_vs_clean": {
+    "detected": 24,
+    "arc": 0.02815699658703069,
+    "mc2": -0.07945379483498027
+  },
+  "delta_vs_xba": {
+    "detected": -17,
+    "arc": -0.026450511945392496,
+    "mc2": -0.010150322492518349
+  },
+  "interpretation": "Measured XBb endpoint lies above clean Qwen and below XBa under the frozen full-signature rule. One run supports a weaker measured endpoint for the paraphrased condition, not causal proof or complete watermark transfer. PNFP reconstructed-parent limitations retained."
+}

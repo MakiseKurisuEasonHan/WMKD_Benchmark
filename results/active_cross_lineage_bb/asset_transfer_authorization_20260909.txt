@@ -1,0 +1,311 @@
+继续 WMKD Active Cross-Lineage Bb 新实例部署。
+
+当前决定：
+不在新实例配置或传递 ModelScope token。
+使用旧 AutoDL CPU-only 实例作为已验证科研资产来源，
+直接把 XBb 必需冻结资产同步到新 AutoDL。
+
+学校 VPN：关闭
+
+SOURCE OLD AUTODL:
+ssh 6002
+等价：
+ssh -p 32514 root@connect.westd.seetacloud.com
+
+TARGET NEW AUTODL:
+ssh 6000bb
+等价：
+ssh -p 49453 root@connect.westd.seetacloud.com
+
+==================================================
+1. FIRST: READ-ONLY CONNECTIVITY CHECK
+==================================================
+
+先确认：
+
+OLD_SSH_STATUS =
+NEW_SSH_STATUS =
+
+并确认旧实例无 GPU 科研 worker；
+新实例当前 Qwen 下载和 environment installation worker 不要中断。
+
+当前新实例已有：
+
+QWEN download PID = 2722
+ENV install PID = 2772
+
+不要重启或重复启动它们。
+
+==================================================
+2. DO NOT COPY OLD INSTANCE WHOLE DISK
+==================================================
+
+只恢复 Active Cross-Lineage Bb 所需最小资产。
+
+严禁：
+
+- rsync 整个 /root/autodl-tmp
+- 复制旧 Students
+- 复制 trajectory checkpoints
+- 复制 ModelScope upload staging
+- 复制 caches
+- 复制 WaterBench/V2/V3
+- 复制 abandoned Methods 11–15
+- 复制无关历史模型
+
+==================================================
+3. REQUIRED DATASETS
+==================================================
+
+从旧实例 canonical WMKD_Benchmark_data 中找到并同步：
+
+PN-FP frozen Bb paraphrased 20k
+EverTracer frozen Bb paraphrased 20k
+CTCC frozen Bb2 20k
+iSeal frozen Bb paraphrased 20k
+SCW frozen Bb paraphrased 20k
+
+同时同步：
+
+- dataset manifests
+- SHA256 records
+- provenance
+- paired parent identity metadata
+
+目标新实例使用 canonical XBb data root。
+
+同步完成后逐份验证：
+
+record_count = 20000
+SHA256 = expected
+target = paraphrased_answer
+no accidental source_answer selection
+
+不要重新生成或重新 paraphrase。
+
+==================================================
+4. REQUIRED DETECTOR ASSETS
+==================================================
+
+只同步运行 XBb detector 所必需资产。
+
+PN-FP:
+- frozen secret/signature assets
+- key/target text assets
+- detector manifests
+
+EverTracer:
+- frozen 200 originals
+- frozen 2000 perturbations
+- historical applicability audit所需 scoring assets
+- exploratory diagnostic inputs
+- 不需要为 canonical detector恢复不必要的大模型副本
+
+CTCC:
+- trigger set
+- suppression set
+- normal/negative set
+- exact detector config
+
+iSeal:
+- applicability evidence / registered assets only as needed for closure
+- 不需要为了 Level3 N/A 强行恢复可执行 detector环境
+
+SCW:
+- frozen 1000 eval queries
+- permutation/statistic assets
+- seed/config
+
+==================================================
+5. REQUIRED TEACHER / REFERENCE ASSETS
+==================================================
+
+注意：
+
+XBb Student training 使用已经冻结的 paraphrased dataset，
+因此训练阶段本身不需要重新运行 Teacher generation。
+
+只恢复 detector/evaluation 真正需要的 Teacher/reference assets。
+
+不要因为“Teacher”名字出现就把所有 watermarked Teacher 6GB 权重全部复制过去。
+
+逐方法判断：
+
+TRAINING_REQUIRES_TEACHER_MODEL = NO
+unless actual existing runner proves otherwise.
+
+DETECTOR_REQUIRES_REFERENCE_MODEL =
+read current canonical implementation and copy only what is actually required.
+
+目标：
+最小化大模型传输。
+
+==================================================
+6. TRANSFER METHOD
+==================================================
+
+优先使用服务器间直接传输或本地已验证中转方式。
+
+要求：
+
+- restart-safe
+- preserve exact bytes
+- transfer log
+- source/destination size
+- SHA256 verification
+
+如果服务器之间不能直接 SSH：
+允许通过本地 Windows 中转，
+但不要重新从 ModelScope 下载已有私有资产。
+
+不要暴露 SSH private keys、ModelScope token 或密码到日志/聊天。
+
+==================================================
+7. NEW INSTANCE REPO
+==================================================
+
+新实例 repo 已部署：
+
+GIT_HEAD =
+2e236d133590a789a54e15d9f43f348d15082f59
+
+检查 GitHub 当前 main 是否已有更新 commit。
+如果新实例落后于 canonical private GitHub：
+只做正常 fast-forward pull。
+
+不要 reset --hard。
+不要丢弃本地部署状态。
+
+==================================================
+8. QWEN
+==================================================
+
+当前新实例 Qwen download PID 2722 继续。
+
+下载完成后验证：
+
+Qwen/Qwen2.5-3B-Instruct
+revision =
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+必须核对：
+
+- expected files
+- size
+- SHA / provenance
+- tokenizer load
+- model config
+- offline reload
+
+不要因为旧实例可用就再复制第二份 Qwen，
+除非当前下载失败或完整性不通过。
+
+==================================================
+9. ENVIRONMENT
+==================================================
+
+当前 environment installation PID 2772 继续。
+
+完成后验证：
+
+Python 3.12.x
+PyTorch 2.8.0+cu128
+CUDA runtime 12.8
+CUDA available = True
+
+以及项目正式依赖。
+
+==================================================
+10. STORAGE
+==================================================
+
+新实例约 194G 空间。
+
+部署完成后回报：
+
+REPO_SIZE =
+QWEN_SIZE =
+BB_DATASETS_SIZE =
+DETECTOR_ASSETS_SIZE =
+REFERENCE_ASSETS_SIZE =
+FREE_DISK =
+
+不要把旧服务器历史大文件迁移导致新服务器再次膨胀。
+
+==================================================
+11. MINIMAL PRE-FLIGHT
+==================================================
+
+全部资产就绪后，仅做必须检查：
+
+- Qwen revision正确
+- 5/5 datasets SHA正确
+- detector assets存在
+- Bb/Bb2语义正确
+- Qwen official template
+- zero empty supervision
+- zero truncation
+- fresh initialization
+- LR 1e-5
+- 3 epochs
+- effective batch 8
+- seed42
+- no resume contamination
+- GPU idle
+
+不要重新做之前已经完成的大规模科研审计。
+
+==================================================
+12. CONTINUE AUTOMATICALLY
+==================================================
+
+如果：
+
+QWEN = PASS
+ENV = PASS
+BB_DATASETS = 5/5 PASS
+DETECTOR_ASSETS = PASS
+REQUIRED_REFERENCE_ASSETS = PASS
+DISK = SAFE
+GPU = IDLE
+
+则：
+
+READY_TO_START_PNFP = YES
+
+按之前已授权 Active Cross-Lineage Bb campaign 自动开始：
+
+PN-FP
+→ EverTracer
+→ CTCC Bb2
+→ iSeal
+→ SCW
+
+不需要再等待用户逐方法批准。
+
+==================================================
+13. FIRST STATUS REPORT
+==================================================
+
+先回报：
+
+OLD_SSH_STATUS =
+NEW_SSH_STATUS =
+
+QWEN_DOWNLOAD =
+ENV_INSTALL =
+
+BB_DATASETS_TRANSFER =
+DETECTOR_ASSETS_TRANSFER =
+REFERENCE_ASSETS_TRANSFER =
+
+TOTAL_TRANSFERRED_BYTES =
+SHA_VERIFICATION =
+
+NEW_DISK_FREE =
+
+READY_TO_START_PNFP =
+BLOCKERS =
+
+然后若 READY_TO_START_PNFP = YES，
+直接按既定授权推进。

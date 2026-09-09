@@ -1,0 +1,23 @@
+{
+  "returncode": 0,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/scw_fresh_generate.py",
+    "--model",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/scw_xbb_20260909/final_model",
+    "--label",
+    "scw_xbb_student",
+    "--output",
+    "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/scw/student_generations.jsonl",
+    "--eval-jsonl",
+    "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+    "--eval-manifest",
+    "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/manifest.json",
+    "--batch-size",
+    "4"
+  ],
+  "result": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/scw/student_generations.jsonl",
+  "ended_at": "2026-09-09T16:38:40.580285+00:00"
+}

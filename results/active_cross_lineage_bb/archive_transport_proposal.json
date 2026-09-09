@@ -1,0 +1,16 @@
+{
+  "status": "PROPOSED_NOT_ACTIVATED",
+  "old_ssh": "6002",
+  "new_ssh": "6000bb",
+  "existing_old_public_key_fingerprint": "SHA256:3jJaeiAASRrTDwlSX/6ZXFS9R9CgNf399VVBbH6mh4I",
+  "private_key_stays_on_old": true,
+  "modelscope_token_stays_on_old": true,
+  "proposed_new_authorized_keys_options": "restrict,command=\"/root/miniconda3/bin/python -B /root/autodl-tmp/WMKD_Benchmark/scripts/export_xbb_preferred_file.py\"",
+  "export_scope": "Only final-model filenames already in FRESH_RELOAD_VERIFIED provenance for five XBb methods, only after scientific_closure COMPLETE and preferred_final_model true",
+  "no_shell": true,
+  "no_forwarding": true,
+  "no_write_access": true,
+  "remove_scoped_entry_after_campaign": true,
+  "exporter_local": "scripts/export_xbb_preferred_file.py",
+  "new_authorized_keys_modified": false
+}

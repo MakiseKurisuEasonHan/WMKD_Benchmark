@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "method": "iseal",
+  "dataset_sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+  "records": 20000,
+  "target_field": "paraphrased_answer",
+  "max_tokens": 378,
+  "max_length": 1024,
+  "failures": [],
+  "scope": "CPU dataset and native tokenizer only; model identity and GPU gate are separate"
+}

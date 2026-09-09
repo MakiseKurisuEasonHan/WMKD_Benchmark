@@ -1,0 +1,13 @@
+{
+  "returncode": 0,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_bb_utility_worker.py",
+    "scw",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/scw_xbb_20260909/final_model"
+  ],
+  "result": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/scw/utility/utility_results.json",
+  "ended_at": "2026-09-09T16:24:48.605786+00:00"
+}

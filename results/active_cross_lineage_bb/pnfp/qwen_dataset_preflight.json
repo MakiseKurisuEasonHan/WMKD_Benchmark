@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "method": "pnfp",
+  "dataset_sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+  "records": 20000,
+  "target_field": "paraphrased_answer",
+  "max_tokens": 506,
+  "max_length": 1024,
+  "failures": [],
+  "scope": "CPU dataset and native tokenizer only; model identity and GPU gate are separate"
+}

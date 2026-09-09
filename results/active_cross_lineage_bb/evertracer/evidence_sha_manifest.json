@@ -1,0 +1,191 @@
+{
+  "status": "PASS",
+  "phase": "FINAL_SCIENCE_AND_ARCHIVE",
+  "files": [
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/archive_pipeline.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/archive_pipeline.py",
+      "bytes": 703,
+      "sha256": "64b888110c6d9d2525cc2eaabbe842584d26144cf321267e9f9ed7e110679ee5"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/archive_pipeline_exit.json",
+      "bytes": 65,
+      "sha256": "23dd9cc220744d589eec5004436b3869354da66ee8fb7fcf97642ae28081b1ec"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/archive_pipeline_launch.json",
+      "bytes": 202,
+      "sha256": "b062d643e357409bb885301292eab240ea10c583b3137ec8d54b105d572b9c30"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/archive_transfer_receipt.json",
+      "bytes": 2819,
+      "sha256": "bb370dcdbf131b4616f9db55f476ab161724031cf1507a23bdfe2c1872c33d3d"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/archive_transfer_ssh.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/closure_summary.json",
+      "bytes": 649,
+      "sha256": "cb0b9058344bfc9e6f54e759e1011d2272acfcbbe19df12eaa2c11f6c72a4b16"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/detector_results.json",
+      "bytes": 48976,
+      "sha256": "bfd8d5314f77dcb05d9aeadd74f3fd46aa0870290fa06fdbb3ab1542277f3c51"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/evaluation_exit.json",
+      "bytes": 76,
+      "sha256": "9a6f11125af7bce2bf039e4dafba527da236f288ddf789f082c690ec604da01c"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/evaluation_launch.json",
+      "bytes": 163,
+      "sha256": "2c89717f8dc116eeb8f4c39bae52906d006665fb4a6ea81a8060a90a2d7b2b8f"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/evaluation_progress.json",
+      "bytes": 405,
+      "sha256": "3bbfc0edca6dfc25a9c64aa7a4662380c6eddce10ff7adc5f225e3ab1f002f1f"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/evaluation_supervisor.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/exploratory_detector.log",
+      "bytes": 6627,
+      "sha256": "6e02d06203d9dfeb91b975b735c966182758f8a433968b8d9edde71922d3fb44"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/exploratory_detector_exit.json",
+      "bytes": 522,
+      "sha256": "2f76d04daff7e527c264576a8c837cae178b46096b353c580aee96df85302525"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+      "bytes": 279922,
+      "sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/modelscope_archive.json",
+      "bytes": 8287,
+      "sha256": "31caee2b416e3eb4dab3678766a8e5ca34e335a5493cefccfd3267678fca9823"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/model_provenance.json",
+      "bytes": 2426,
+      "sha256": "b344ed003e0c713b639be9ccbc31c59969296493bc80bb9c97ffa6c9669d28d6"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/protocol.json",
+      "bytes": 1952,
+      "sha256": "c852024f47e03318fde6ee7f17e29779b9ece8b34d721ee6a7e7d692ed57e61f"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/qwen_dataset_preflight.json",
+      "bytes": 352,
+      "sha256": "824dabe1c927b8423cae0a43857d8d55d630e8a59514a372e30cb141db31e5e2"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/supervisor.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/training.log",
+      "bytes": 626073,
+      "sha256": "5879690926d3892f2d46dd25f222e7f2d5ea3119095501c754b8ccf089f0c3d0"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/training_exit.json",
+      "bytes": 95,
+      "sha256": "25b670d21e289abb8158c7c3caccb89518bca21ad03ad1b43382ec65a80e096f"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/training_launch.json",
+      "bytes": 1521,
+      "sha256": "0eefc8da38c8c221b6c770b74a659baccd31d12dd4a1f598eb506575a719f3a2"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/training_summary.json",
+      "bytes": 185343,
+      "sha256": "3b45d1705dbbdb41a38bb69fb3726a3af5a9af75eb031e4813bef21f25c55c1b"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/training_supervisor.py",
+      "bytes": 1248,
+      "sha256": "a836aa4dbfb95a1dda5d09c3112abd89acd94a5a806dcc7e8ad2659d5b15a14b"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/utility.log",
+      "bytes": 42408,
+      "sha256": "db6e259e4790224762e63c46d45805201dd7de2f8610d1aee6e0ed7b74a3118f"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/utility_exit.json",
+      "bytes": 510,
+      "sha256": "60605841c03b0e410324a326fe7c881404c94be45c04a7c16b6a05416c45aeff"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/utility_results.json",
+      "bytes": 782,
+      "sha256": "00edc44a7dd288e6c1fed266ea78be8d961323188fb502b52eb35c570dd3dcc3"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/exploratory_detector/detector_results.json",
+      "bytes": 48976,
+      "sha256": "bfd8d5314f77dcb05d9aeadd74f3fd46aa0870290fa06fdbb3ab1542277f3c51"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/exploratory_detector/provenance.json",
+      "bytes": 2427,
+      "sha256": "dcaaf60c6a3de192ad11777051a6b5e6e090338c47bddd0e9f7a65040a289c95"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/exploratory_detector/raw_scores.jsonl",
+      "bytes": 4477035,
+      "sha256": "a1ccc4a4a6b2fef9bfecdc18cffc933aabf5152fd81dcd20f5136c064ce753c2"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/exploratory_detector/roc.json",
+      "bytes": 16360,
+      "sha256": "9094554e3d106bb8dfa8f0aa88afe76598ce7a7718b77f60210bdf640c9e1592"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/utility/evaluation_config.json",
+      "bytes": 1867,
+      "sha256": "8861f668dfb905e9927cedf81ffdc85a0742f487ea4e7e953a6dcaa9a66595f7"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/utility/exit_record.json",
+      "bytes": 22,
+      "sha256": "1e3f6691f455051e8adb15d961e4bf3c7a17e83dd88b2afdd13315cc288250bb"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/utility/raw_evaluator_output.json",
+      "bytes": 11823175,
+      "sha256": "11621152e25b577a128179f1496699da8cdb36f40217ef0989b924f89da8a816"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/utility/utility_results.json",
+      "bytes": 782,
+      "sha256": "00edc44a7dd288e6c1fed266ea78be8d961323188fb502b52eb35c570dd3dcc3"
+    },
+    {
+      "path": "docs/reproduction_reports/evertracer_cross_lineage_bb_20260909.md",
+      "bytes": 1434,
+      "sha256": "818c4b74591fa1d32b9c0108d402263373be776c333f9f14e31166de8db4b774"
+    }
+  ]
+}

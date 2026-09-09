@@ -1,0 +1,13 @@
+{
+  "returncode": 0,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_bb_utility_worker.py",
+    "evertracer",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/evertracer_xbb_20260909/final_model"
+  ],
+  "result": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/evertracer/utility/utility_results.json",
+  "ended_at": "2026-09-09T13:33:42.275973+00:00"
+}

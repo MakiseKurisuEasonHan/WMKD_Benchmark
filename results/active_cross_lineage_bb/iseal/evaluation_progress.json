@@ -1,0 +1,13 @@
+{
+  "stage": "utility",
+  "supervisor_pid": 16147,
+  "worker_pid": 16148,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_bb_utility_worker.py",
+    "iseal",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/iseal_xbb_20260909/final_model"
+  ]
+}

@@ -1,0 +1,286 @@
+新 AutoDL 实例已确认可用，继续执行之前已经授权的：
+
+ACTIVE CROSS-LINEAGE BEHAVIORAL EXTRACTION — Bb
+
+连接：
+
+学校 VPN：关闭
+ssh 6000bb
+
+等价：
+ssh -p 49453 root@connect.westd.seetacloud.com
+
+当前实测：
+
+SSH_STATUS = PASS
+HOSTNAME = autodl-container-e3ll76182f-7ba50cae
+GPU = NVIDIA RTX PRO 6000 Blackwell Server Edition
+GPU_MEMORY = 0 / 97887 MiB
+GPU_UTIL = 0%
+GPU_PROCESSES = NONE
+
+DISK =
+/root/autodl-tmp
+total = 194G
+free = 194G
+
+PYTHON =
+3.12.3
+/root/miniconda3/bin/python
+
+PYTORCH =
+2.8.0+cu128
+
+CUDA_RUNTIME =
+12.8
+
+CUDA_AVAILABLE =
+True
+
+DRIVER =
+580.95.05
+
+nvidia-smi host CUDA capability =
+13.0
+
+==================================================
+NOW CONTINUE MINIMAL DEPLOYMENT
+==================================================
+
+不要重复做大审计。
+
+只部署 Active Cross-Lineage Bb 必需资产：
+
+1. canonical WMKD_Benchmark repo
+2. current canonical Git main
+3. clean Qwen2.5-3B-Instruct
+4. Qwen revision:
+   8f4992eda43eea7c770690ddc0de8f732da246f5
+5. five frozen Bb/Bb2 datasets
+6. dataset SHA manifests
+7. detector assets/scripts
+8. required Teacher/reference assets
+9. training runner/config
+10. utility evaluator
+11. provenance/full-log infrastructure
+
+不要整盘复制旧 AutoDL。
+
+不要搬：
+- XBa archived Students
+- old trajectory checkpoints
+- passive historical Students
+- old upload staging
+- old verification downloads
+- WaterBench / V2 / V3
+- Methods 11–15
+- unnecessary caches
+
+==================================================
+DOWNLOAD / SYNC POLICY
+==================================================
+
+优先：
+
+ModelScope / 国内可靠源
+
+需要保持：
+- exact revision
+- exact file list
+- SHA/size provenance
+
+能从 GitHub / 本地项目直接同步的 lightweight files：
+优先同步。
+
+大模型不要重复下载已有不必要版本。
+
+==================================================
+ACTIVE CROSS-LINEAGE Bb ORDER
+==================================================
+
+严格串行：
+
+1. PN-FP XBb
+2. EverTracer XBb
+3. CTCC XBb2
+4. iSeal XBb
+5. SCW XBb
+
+每个方法都必须：
+
+fresh clean Qwen
+→ frozen paraphrased dataset
+→ full-parameter SFT
+→ detector / exploratory / N/A
+→ ARC
+→ TruthfulQA MC2
+→ closure
+→ preferred private ModelScope archive
+→ remote verification
+
+==================================================
+TRAINING CONFIG
+==================================================
+
+保持与 XBa 一致：
+
+- Qwen2.5-3B-Instruct
+- revision 8f4992eda43eea7c770690ddc0de8f732da246f5
+- full parameter
+- BF16
+- no LoRA
+- no quantization
+- 20k records
+- 3 epochs
+- LR 1e-5
+- effective batch size 8
+- seed 42
+- official Qwen chat template
+- fresh initialization for every method
+- paraphrased target only
+- expected ~7500 steps
+
+==================================================
+DETECTOR POLICY
+==================================================
+
+PN-FP:
+LEVEL 1
+
+CTCC:
+LEVEL 1
+CTCC 使用 Bb2 semantics
+
+SCW:
+LEVEL 1
+
+EverTracer:
+canonical = N/A_CROSS_TOKENIZER
+run exploratory diagnostic separately
+mark NON_COMPARABLE
+
+iSeal:
+LEVEL 3
+canonical detector = N/A
+training + utility still required
+
+==================================================
+MINIMAL PRE-FLIGHT
+==================================================
+
+每个方法启动前只检查：
+
+- dataset 20,000
+- expected SHA
+- correct target field
+- zero empty supervision
+- zero truncation
+- fresh Qwen
+- correct revision
+- LR
+- batch
+- seed
+- no resume contamination
+- nvidia-smi confirms GPU idle before starting
+
+不要过度审计。
+
+==================================================
+AUTO EXECUTION
+==================================================
+
+正常授权步骤自动连续执行。
+
+某个方法 transient failure：
+restart-safe retry。
+
+同一个 deterministic error 连续两次：
+记录 terminal blocker，
+继续下一个方法。
+
+不要因为单个方法失败停止整个 campaign。
+
+==================================================
+STORAGE
+==================================================
+
+当前 194G 几乎全空。
+
+优先保持空间干净：
+
+archive verified 后可以删除：
+- redundant upload staging
+- verification chunks
+- remote download copies
+- safe temporary cache
+- already-archived local Student duplicate if needed
+
+但不要删除：
+- clean Qwen
+- upcoming datasets
+- detector assets
+- unique evidence
+-未归档唯一模型
+
+==================================================
+ARCHIVE VERIFICATION
+==================================================
+
+默认：
+
+MANIFEST_PLUS_SEGMENT
+
+large shards:
+5 fixed positions × 2 MiB
+
+small files:
+full SHA
+
+异常才升级：
+FULL_INDEPENDENT_DOWNLOAD
+
+==================================================
+LONG-RUN / SHUTDOWN
+==================================================
+
+继续沿用此前授权：
+
+五个方法全部 COMPLETE 或合法 TERMINAL_BLOCKED，
+并完成：
+- scientific closure
+- evidence
+- archive
+- Git closure
+- sync
+- no worker
+
+则安全关机。
+
+如果完全卡在必须等待用户新授权的 blocker，
+且无任何 active worker / authorized next action，
+连续等待30分钟无回复：
+保存状态和 receipt 后安全关机省钱。
+
+健康训练/上传期间绝不能关机。
+
+==================================================
+FIRST REPORT
+==================================================
+
+先完成最小部署并汇报：
+
+NEW_INSTANCE_READY =
+REPO =
+GIT_HEAD =
+QWEN =
+QWEN_SHA =
+BB_DATASETS =
+DETECTOR_ASSETS =
+TEACHER_ASSETS =
+DISK_FREE =
+GPU_STATUS =
+READY_TO_START_PNFP =
+
+如果 READY_TO_START_PNFP = YES，
+按既定授权直接开始 PN-FP XBb，
+不需要再等待用户逐步批准。

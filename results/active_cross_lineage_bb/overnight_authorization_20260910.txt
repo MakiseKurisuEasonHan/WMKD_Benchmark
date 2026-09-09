@@ -1,0 +1,341 @@
+更新今晚 WMKD_Benchmark：
+
+ACTIVE CROSS-LINEAGE Bb
+
+自动长跑与自动关机授权。
+
+用户准备睡觉，不需要夜间持续人工确认。
+
+==================================================
+1. CONTINUE CURRENT CAMPAIGN
+==================================================
+
+继续当前已经批准的：
+
+Active Cross-Lineage Bb
+
+严格串行：
+
+1. PN-FP XBb
+2. EverTracer XBb
+3. CTCC XBb2
+4. iSeal XBb
+5. SCW XBb
+
+不要启动任何其他实验。
+
+==================================================
+2. NORMAL AUTHORIZED WORK MUST CONTINUE
+==================================================
+
+只要存在正常可推进步骤，就继续自动执行，不要因为用户不在线而停。
+
+包括：
+
+- training
+- detector
+- exploratory diagnostic
+- utility
+- fresh reload
+- scientific closure
+- evidence generation
+- local sync
+- PRIVATE ModelScope archive
+- manifest + segment verification
+- archive receipt
+- Git closure
+- next-method transition
+- restart-safe transient retry
+
+不要逐步骤询问用户。
+
+==================================================
+3. SCIENTIFIC RULES REMAIN FROZEN
+==================================================
+
+PN-FP:
+LEVEL 1
+
+EverTracer:
+canonical = N/A_CROSS_TOKENIZER
+exploratory diagnostic必须运行
+标记 NON_COMPARABLE
+
+CTCC:
+LEVEL 1
+使用 Bb2 semantics
+
+iSeal:
+LEVEL 3
+detector = N/A
+training + utility必须完成
+
+SCW:
+LEVEL 1
+
+所有方法：
+fresh clean Qwen initialization
+
+禁止：
+- 从前一个 Student继续
+- resume其他方法
+- 改 dataset
+- 改 threshold
+- 改 detector formula
+- 改 model revision
+- 改 LR/epochs/batch/seed
+- 为结果调参
+
+==================================================
+4. ARCHIVE POLICY
+==================================================
+
+每个完成方法：
+
+scientific closure
+→ preferred PRIVATE ModelScope archive
+→ remote verification
+→ receipt
+→ next method
+
+默认快速验证：
+
+MANIFEST_PLUS_SEGMENT
+
+large shard:
+5 fixed positions × 2 MiB
+
+small files:
+full SHA
+
+只有异常才升级：
+FULL_INDEPENDENT_DOWNLOAD
+
+不要默认完整重新下载 6GB 模型。
+
+==================================================
+5. FAILURE HANDLING
+==================================================
+
+如果 transient infra/network error：
+restart-safe retry。
+
+如果同一个 deterministic error 连续2次：
+记录完整 blocker 和日志。
+
+如果不改变科学协议仍有已授权恢复路径：
+继续恢复。
+
+如果该方法达到 terminal blocker：
+标记 TERMINAL_BLOCKED，
+继续下一个方法。
+
+单个方法失败不能终止整个 campaign。
+
+==================================================
+6. CAMPAIGN COMPLETE CONDITION
+==================================================
+
+当且仅当五个方法全部满足：
+
+COMPLETE
+或合法 TERMINAL_BLOCKED
+
+并且完成：
+
+- full_experiment_log
+- detector / N/A / exploratory evidence
+- utility
+- provenance
+- closure summary
+- master comparison
+- evidence sync
+- archive receipt
+- Git closure / push
+- no active worker
+- filesystem sync
+
+则：
+
+FINAL_CAMPAIGN_STATUS = COMPLETE
+
+==================================================
+7. AUTO SHUTDOWN ON SUCCESS
+==================================================
+
+如果 FINAL_CAMPAIGN_STATUS = COMPLETE：
+
+无需等待用户再次批准。
+
+关机前：
+
+1. nvidia-smi
+2. ps检查所有 WMKD worker
+3. 确认无 training/eval/detector/upload/SCP/Git worker
+4. 保存 final campaign state
+5. 保存 final shutdown receipt
+6. 记录：
+   - timestamp
+   - hostname
+   - Git HEAD
+   - five method statuses
+   - ModelScope archive statuses
+   - free disk
+   - GPU state
+   - active worker count
+   - shutdown reason = CAMPAIGN_COMPLETE
+7. sync
+8. 停止/删除临时 follow-up
+9. 正常 shutdown / poweroff
+
+不要做 destructive cleanup 作为关机前置条件。
+
+==================================================
+8. USER-APPROVAL TIMEOUT SHUTDOWN
+==================================================
+
+如果出现真正必须用户新授权才能继续的 blocker，例如：
+
+- 新的 destructive cleanup
+- 科学协议修改
+- detector semantic change
+- dataset substitution
+- model substitution
+- 唯一科研资产删除
+- force/history-destructive Git
+
+并且：
+
+ACTIVE_TRAINING_WORKER = NONE
+ACTIVE_DETECTOR_WORKER = NONE
+ACTIVE_UTILITY_WORKER = NONE
+ACTIVE_UPLOAD_WORKER = NONE
+ACTIVE_SCP_GIT_WORKER = NONE
+NO_AUTHORIZED_NEXT_ACTION = YES
+
+则进入：
+
+WAITING_FOR_USER = YES
+
+记录：
+WAIT_STARTED_AT
+WAIT_REASON
+REQUIRED_USER_DECISION
+
+每5分钟检查一次。
+
+如果30分钟内用户没有新授权：
+
+保存当前所有科研状态和 blocker
+→ sync
+→ 保存 shutdown receipt
+
+shutdown reason =
+USER_APPROVAL_TIMEOUT
+
+→ 停止临时 follow-up
+→ 安全关机省钱
+
+==================================================
+9. DO NOT SHUT DOWN DURING HEALTHY WORK
+==================================================
+
+绝对不能因为用户睡觉而关掉正在正常运行的：
+
+- training
+- detector
+- utility
+- upload
+- remote verification
+- SCP
+- Git push
+- restart-safe recovery
+
+只要任务健康：
+继续跑。
+
+==================================================
+10. COST-SAVING PRINCIPLE
+==================================================
+
+今晚目标：
+
+能自动完成的全部完成。
+
+不要因为用户不在线而闲置收费 GPU。
+
+只有两种最终合法关机原因：
+
+A.
+CAMPAIGN_COMPLETE
+
+B.
+USER_APPROVAL_TIMEOUT
+
+其他情况下不要随意关机。
+
+==================================================
+11. FINAL ARTIFACTS
+==================================================
+
+campaign结束前必须生成最终汇总：
+
+method
+Clean Qwen
+XBa
+XBb
+detector applicability
+canonical detector result
+exploratory detector result
+ARC
+MC2
+archive repo
+remote revision
+archive SHA
+verification mode
+final status
+
+并明确比较：
+
+PN-FP:
+Clean Qwen 43/1024
+XBa 84/1024
+XBb final
+
+CTCC:
+XBa 0/95
+XBb final
+
+EverTracer:
+XBa exploratory AUC 0.523
+XBb exploratory final
+canonical remains N/A
+
+iSeal:
+XBa/XBb detector canonical N/A
+
+SCW:
+Clean Qwen p=0.7446491718292236
+XBa p=0.9158855080604553
+XBb final
+
+==================================================
+12. CURRENT IMMEDIATE ACTION
+==================================================
+
+继续当前正在进行的 PN-FP archive/verification。
+
+完成后立即进入：
+
+EverTracer
+→ CTCC
+→ iSeal
+→ SCW
+
+保持每5分钟轻量跟进。
+
+如果全部完成：
+自动闭环并关机。
+
+如果只能等用户新批准：
+30分钟无回复后安全关机。

@@ -1,0 +1,333 @@
+{
+  "status": "SCIENTIFIC_AND_ARCHIVE_COMPLETE",
+  "methods": [
+    {
+      "method": "pnfp",
+      "run_id": "pnfp_xbb_20260909",
+      "detector_applicability": "LEVEL_1",
+      "canonical_detector_result": {
+        "status": "COMPLETE",
+        "model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/pnfp_xbb_20260909/final_model",
+        "detected": 67,
+        "total": 1024,
+        "detection_rate": 0.0654296875,
+        "evaluation_errors": 0,
+        "invalid_samples": 0,
+        "elapsed_seconds": 17.909167051315308,
+        "secret_sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+        "secret_regenerated": false,
+        "rule": "Official full encoded signature equality; immutable historical Llama key/target strings; no Qwen truncation",
+        "raw_sha256": "c64ca87b681cac9b553614a97aca36cd1cdc0de91b9a4838c9788a94882a9d05"
+      },
+      "exploratory_detector_result": null,
+      "training_steps": 7500,
+      "archive_status": "COMPLETE",
+      "scientific_status": "COMPLETED_MEASURED_PARTIAL_ACQUISITION",
+      "ARC": {
+        "clean_qwen": 0.4402730375426621,
+        "XBa": 0.4948805460750853,
+        "XBb": 0.4684300341296928,
+        "delta_vs_clean": 0.02815699658703069,
+        "delta_vs_XBa": -0.026450511945392496
+      },
+      "MC2": {
+        "clean_qwen": 0.5712170418936038,
+        "XBa": 0.5019135695511419,
+        "XBb": 0.4917632470586235,
+        "delta_vs_clean": -0.07945379483498027,
+        "delta_vs_XBa": -0.010150322492518349
+      },
+      "utility_provenance": [
+        {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+          "sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+        },
+        {
+          "path": "results/active_cross_lineage_ba/pnfp/utility/raw_evaluator_output.json",
+          "sha256": "bee38f652ad042fcfbda0ed8c377bb457a06eb0e0132adb1bf80c4b8fd15d2fb"
+        },
+        {
+          "path": "results/active_cross_lineage_bb/pnfp/utility/raw_evaluator_output.json",
+          "sha256": "342a96d3fe2c665ee5fa677e982430b88663d7ca0d38ed663e4e723f43a967ef"
+        }
+      ],
+      "archive": {
+        "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Bb-Student",
+        "revision": "e1d1d250b12130c10f305e67f3539a227629ce80",
+        "archive_sha256": "f81f6d6d477dfb6a5aa95be9080e813a21acb829fa08b31d3c128647d1a47240",
+        "verification_mode": "MANIFEST_PLUS_SEGMENT",
+        "verification_status": "PASS"
+      },
+      "status": "COMPLETE",
+      "git_closure": "INCLUDED_IN_CAMPAIGN_CLOSURE_COMMIT"
+    },
+    {
+      "method": "evertracer",
+      "run_id": "evertracer_xbb_20260909",
+      "detector_applicability": "LEVEL_2_EXPLORATORY_NON_COMPARABLE",
+      "canonical_detector_result": "N/A_CROSS_TOKENIZER",
+      "exploratory_detector_result": {
+        "official_definition": {
+          "member_label": 0,
+          "nonmember_label": 1,
+          "score": "C = suspect_variation - reference_variation",
+          "positive_threshold": "C >= gamma predicts non-member"
+        },
+        "official_auc_nonmember_positive": 0.5227,
+        "member_oriented_definition": {
+          "member_label": 1,
+          "nonmember_label": 0,
+          "score": "member_score = -C",
+          "positive_threshold": "member_score >= gamma predicts member",
+          "note": "Equivalent reparameterization of the official detector for benchmark readability."
+        },
+        "member_oriented_auc": 0.5227,
+        "member_oriented_tpr_at_fpr_limit": 0.07,
+        "member_oriented_fpr": 0.05,
+        "member_oriented_threshold": 0.012412685095459581,
+        "fpr_limit": 0.05,
+        "member_count": 100,
+        "nonmember_count": 100
+      },
+      "training_steps": 7500,
+      "archive_status": "COMPLETE",
+      "scientific_status": "COMPLETED_EXPLORATORY_NON_COMPARABLE",
+      "ARC": {
+        "clean_qwen": 0.4402730375426621,
+        "XBa": 0.5162116040955631,
+        "XBb": 0.46075085324232085,
+        "delta_vs_clean": 0.02047781569965873,
+        "delta_vs_XBa": -0.05546075085324226
+      },
+      "MC2": {
+        "clean_qwen": 0.5712170418936038,
+        "XBa": 0.4509746503062132,
+        "XBb": 0.46907694275763584,
+        "delta_vs_clean": -0.10214009913596794,
+        "delta_vs_XBa": 0.01810229245142264
+      },
+      "utility_provenance": [
+        {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+          "sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+        },
+        {
+          "path": "results/active_cross_lineage_ba/evertracer/utility/raw_evaluator_output.json",
+          "sha256": "74713aa93cd85878cd9d31ff9fc49eae5b06e5ad4c7cb176b5b18a2f00e208b4"
+        },
+        {
+          "path": "results/active_cross_lineage_bb/evertracer/utility/raw_evaluator_output.json",
+          "sha256": "11621152e25b577a128179f1496699da8cdb36f40217ef0989b924f89da8a816"
+        }
+      ],
+      "archive": {
+        "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Bb-Student",
+        "revision": "eb1d3b656577259d59445e5e1362e1697ff3655a",
+        "archive_sha256": "de3b8805d1ac286f0d9edd18af150659adbb7877d90b22ecd9422caf74073979",
+        "verification_mode": "MANIFEST_PLUS_SEGMENT",
+        "verification_status": "PASS"
+      },
+      "status": "COMPLETE",
+      "git_closure": "INCLUDED_IN_CAMPAIGN_CLOSURE_COMMIT"
+    },
+    {
+      "method": "ctcc",
+      "run_id": "ctcc_xbb2_20260909",
+      "detector_applicability": "LEVEL_1",
+      "canonical_detector_result": {
+        "role": "student",
+        "fresh_process_reload": true,
+        "detector": "WMKD operational: generated_answer.strip() == IAMALIVE (case-sensitive)",
+        "categories": {
+          "trigger": {
+            "count": 95,
+            "activations": 0,
+            "activation_rate": 0.0,
+            "generation_errors": 0
+          },
+          "suppression": {
+            "count": 100,
+            "activations": 0,
+            "activation_rate": 0.0,
+            "generation_errors": 0
+          },
+          "normal": {
+            "count": 105,
+            "activations": 0,
+            "activation_rate": 0.0,
+            "generation_errors": 0
+          }
+        },
+        "combined_negatives": {
+          "count": 205,
+          "false_activations": 0,
+          "false_activation_rate": 0.0
+        },
+        "elapsed_seconds": 33.24491095542908,
+        "raw_generation_count": 300,
+        "generation_errors": 0,
+        "artifact_manifest": {
+          "training_run_id": "ctcc_xbb2_20260909",
+          "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/ctcc_xbb2_20260909/final_model",
+          "file_count": 13,
+          "total_bytes": 6187849243,
+          "model_index_sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "shards": [
+            {
+              "name": "model-00001-of-00002.safetensors",
+              "bytes": 4957560304,
+              "sha256": "dab23dd5c28a41f81e184759a69fc13ae2778324a5df5afd8978c22e967789b8"
+            },
+            {
+              "name": "model-00002-of-00002.safetensors",
+              "bytes": 1214366696,
+              "sha256": "44151e38dd37789fd83d4a0e3896ab7bd159ad1483188b02420ab559a57ebb16"
+            }
+          ]
+        }
+      },
+      "exploratory_detector_result": null,
+      "training_steps": 7500,
+      "archive_status": "COMPLETE",
+      "scientific_status": "COMPLETED_NO_OBSERVED_TRIGGER_ACQUISITION",
+      "ARC": {
+        "clean_qwen": 0.4402730375426621,
+        "XBa": 0.4684300341296928,
+        "XBb": 0.439419795221843,
+        "delta_vs_clean": -0.0008532423208191253,
+        "delta_vs_XBa": -0.029010238907849817
+      },
+      "MC2": {
+        "clean_qwen": 0.5712170418936038,
+        "XBa": 0.4480919802572382,
+        "XBb": 0.45344106594056727,
+        "delta_vs_clean": -0.11777597595303652,
+        "delta_vs_XBa": 0.005349085683329091
+      },
+      "utility_provenance": [
+        {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+          "sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+        },
+        {
+          "path": "results/active_cross_lineage_ba/ctcc/utility/raw_evaluator_output.json",
+          "sha256": "db9e491ade7b59a4ec72dea407400bff35f1d176112d8223243c246a3cebe10c"
+        },
+        {
+          "path": "results/active_cross_lineage_bb/ctcc/utility/raw_evaluator_output.json",
+          "sha256": "561bbc7c99782506b8aa16d4e1d39bda3edd79c6ac73baff64a8a5ad8ccfbf41"
+        }
+      ],
+      "archive": {
+        "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Bb2-Student",
+        "revision": "a2535f62042ed67e13918ba0c99fef0996f41041",
+        "archive_sha256": "66c664b14775149656d816d60f221b7a5a44f78dffc8fe33fa14ead88e1aabbd",
+        "verification_mode": "MANIFEST_PLUS_SEGMENT",
+        "verification_status": "PASS"
+      },
+      "status": "COMPLETE",
+      "git_closure": "INCLUDED_IN_CAMPAIGN_CLOSURE_COMMIT"
+    },
+    {
+      "method": "iseal",
+      "run_id": "iseal_xbb_20260909",
+      "detector_applicability": "LEVEL_3_NA",
+      "canonical_detector_result": "N/A_CROSS_ARCHITECTURE",
+      "exploratory_detector_result": null,
+      "training_steps": 7500,
+      "archive_status": "COMPLETE",
+      "scientific_status": "COMPLETED_DETECTOR_NOT_APPLICABLE_CROSS_ARCHITECTURE",
+      "ARC": {
+        "clean_qwen": 0.4402730375426621,
+        "XBa": 0.4948805460750853,
+        "XBb": 0.49402730375426623,
+        "delta_vs_clean": 0.05375426621160412,
+        "delta_vs_XBa": -0.0008532423208190698
+      },
+      "MC2": {
+        "clean_qwen": 0.5712170418936038,
+        "XBa": 0.4298307502074534,
+        "XBb": 0.46736380064984684,
+        "delta_vs_clean": -0.10385324124375694,
+        "delta_vs_XBa": 0.03753305044239341
+      },
+      "utility_provenance": [
+        {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+          "sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+        },
+        {
+          "path": "results/active_cross_lineage_ba/iseal/utility/raw_evaluator_output.json",
+          "sha256": "cd8f049a0e177a2d800bf385473816f1e39866d3b6f2959d12e0e7f75248385b"
+        },
+        {
+          "path": "results/active_cross_lineage_bb/iseal/utility/raw_evaluator_output.json",
+          "sha256": "f6e48cd4e9b4fad5dcaf8a97593c84b3c1dd649f3c04712c88c3beb43e2e7a9e"
+        }
+      ],
+      "archive": {
+        "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Bb-Student",
+        "revision": "fa4baa48e2a8754ad317552c8cbc8ace73cee971",
+        "archive_sha256": "882fa722eee80a941a56d994f8a911a016b810b98a70c5a8eb99238bd69e4e92",
+        "verification_mode": "MANIFEST_PLUS_SEGMENT",
+        "verification_status": "PASS"
+      },
+      "status": "COMPLETE",
+      "git_closure": "INCLUDED_IN_CAMPAIGN_CLOSURE_COMMIT"
+    },
+    {
+      "method": "scw",
+      "run_id": "scw_xbb_20260909",
+      "detector_applicability": "LEVEL_1",
+      "canonical_detector_result": {
+        "n_queries": 1000,
+        "p_value": 0.9841499328613281,
+        "fingerprinted": false,
+        "supplementary": false
+      },
+      "exploratory_detector_result": null,
+      "training_steps": 7500,
+      "archive_status": "COMPLETE",
+      "scientific_status": "COMPLETED_FROZEN_DETECTOR_NOT_DETECTED",
+      "ARC": {
+        "clean_qwen": 0.4402730375426621,
+        "XBa": 0.4906143344709898,
+        "XBb": 0.4974402730375427,
+        "delta_vs_clean": 0.057167235494880564,
+        "delta_vs_XBa": 0.0068259385665528916
+      },
+      "MC2": {
+        "clean_qwen": 0.5712170418936038,
+        "XBa": 0.4915920843760251,
+        "XBb": 0.48478352312750794,
+        "delta_vs_clean": -0.08643351876609584,
+        "delta_vs_XBa": -0.006808561248517142
+      },
+      "utility_provenance": [
+        {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+          "sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+        },
+        {
+          "path": "results/active_cross_lineage_ba/scw/utility/raw_evaluator_output.json",
+          "sha256": "2583cc094bda1886f6aeb9806937e55ddcc8461b28aef0ca4e0020c06e289bf0"
+        },
+        {
+          "path": "results/active_cross_lineage_bb/scw/utility/raw_evaluator_output.json",
+          "sha256": "82ed91a88a04518d5e9c613b70f8c52d3fb00e20505f47ebe737110a28e47b23"
+        }
+      ],
+      "archive": {
+        "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Bb-Student",
+        "revision": "dc6da8daec0104ac24bc4b004cde5bd32a06d178",
+        "archive_sha256": "cd7c9c3b7d6510b12a4b117eddff8709a0479ce729d24a28fe3e4ced4d3a25ff",
+        "verification_mode": "MANIFEST_PLUS_SEGMENT",
+        "verification_status": "PASS"
+      },
+      "status": "COMPLETE",
+      "git_closure": "INCLUDED_IN_CAMPAIGN_CLOSURE_COMMIT"
+    }
+  ],
+  "utility_values": "Canonical raw evaluator outputs; exact deltas",
+  "interpretation_boundary": "Endpoint measurements do not prove forgetting or causal mechanisms; EverTracer exploratory non-comparable; iSeal N/A is not failure."
+}

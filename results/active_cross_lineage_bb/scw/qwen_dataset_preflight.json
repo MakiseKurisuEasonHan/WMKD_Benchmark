@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "method": "scw",
+  "dataset_sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+  "records": 20000,
+  "target_field": "paraphrased_answer",
+  "max_tokens": 465,
+  "max_length": 1024,
+  "failures": [],
+  "scope": "CPU dataset and native tokenizer only; model identity and GPU gate are separate"
+}

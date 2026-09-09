@@ -1,0 +1,19 @@
+{
+  "returncode": 0,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/ctcc_ba_evaluate.py",
+    "--config",
+    "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_ba_direct.yaml",
+    "--student",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/ctcc_xbb2_20260909/final_model",
+    "--training-run",
+    "ctcc_xbb2_20260909",
+    "--output",
+    "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/ctcc/final_detector.json"
+  ],
+  "result": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/ctcc/final_detector.json",
+  "ended_at": "2026-09-09T14:32:54.106602+00:00"
+}

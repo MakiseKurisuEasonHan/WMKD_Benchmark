@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "method": "ctcc",
+  "dataset_sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+  "records": 20000,
+  "target_field": "paraphrased_answer",
+  "max_tokens": 442,
+  "max_length": 1024,
+  "failures": [],
+  "scope": "CPU dataset and native tokenizer only; model identity and GPU gate are separate"
+}

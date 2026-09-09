@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-09T08:14:59.577071+00:00",
-  "object_count": 55,
+  "generated_at": "2026-09-09T16:58:00.595271+00:00",
+  "object_count": 61,
   "objects": [
     {
       "method": "PN-FP",
@@ -867,6 +867,71 @@
       "full_log_sha256": "4e6f9a7bb4c0d2167be28e5d306d1d1113905471f29ef4c822ae34bc1625ed25",
       "scientific_status": "COMPLETED",
       "note": "Existing shared run supporting five already indexed per-method views; index repair only"
+    },
+    {
+      "method": "pnfp",
+      "role": "cross_lineage_bb_student",
+      "experiment": "XBb",
+      "run_id": "pnfp_xbb_20260909",
+      "full_log_path": "results/active_cross_lineage_bb/pnfp/full_experiment_log.json",
+      "full_log_sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede",
+      "modelscope_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Bb-Student",
+      "scientific_status": "COMPLETED_MEASURED_PARTIAL_ACQUISITION",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "checkpoint_localization_support": false
+    },
+    {
+      "method": "evertracer",
+      "role": "cross_lineage_bb_student",
+      "experiment": "XBb",
+      "run_id": "evertracer_xbb_20260909",
+      "full_log_path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+      "full_log_sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10",
+      "modelscope_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Bb-Student",
+      "scientific_status": "COMPLETED_EXPLORATORY_NON_COMPARABLE",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "checkpoint_localization_support": false
+    },
+    {
+      "method": "ctcc",
+      "role": "cross_lineage_bb_student",
+      "experiment": "XBb2",
+      "run_id": "ctcc_xbb2_20260909",
+      "full_log_path": "results/active_cross_lineage_bb/ctcc/full_experiment_log.json",
+      "full_log_sha256": "374f262eadcb4eab3b97d8a8011708cae2d8146873286fe06080636d562bee8b",
+      "modelscope_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Bb2-Student",
+      "scientific_status": "COMPLETED_NO_OBSERVED_TRIGGER_ACQUISITION",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "checkpoint_localization_support": false
+    },
+    {
+      "method": "iseal",
+      "role": "cross_lineage_bb_student",
+      "experiment": "XBb",
+      "run_id": "iseal_xbb_20260909",
+      "full_log_path": "results/active_cross_lineage_bb/iseal/full_experiment_log.json",
+      "full_log_sha256": "2b3a81f73581a83c279ea686e0fc5fcfaf25097ebf64bac229e1917843a13bd5",
+      "modelscope_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Bb-Student",
+      "scientific_status": "COMPLETED_DETECTOR_NOT_APPLICABLE_CROSS_ARCHITECTURE",
+      "watermark_evaluation_available": false,
+      "utility_available": true,
+      "checkpoint_localization_support": false
+    },
+    {
+      "method": "scw",
+      "role": "cross_lineage_bb_student",
+      "experiment": "XBb",
+      "run_id": "scw_xbb_20260909",
+      "full_log_path": "results/active_cross_lineage_bb/scw/full_experiment_log.json",
+      "full_log_sha256": "2a312f24fe203faa3f5203599c7430e6454be02ac452d082eb7d41b4b9a9cf26",
+      "modelscope_repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Bb-Student",
+      "scientific_status": "COMPLETED_FROZEN_DETECTOR_NOT_DETECTED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "checkpoint_localization_support": false
     }
   ]
 }

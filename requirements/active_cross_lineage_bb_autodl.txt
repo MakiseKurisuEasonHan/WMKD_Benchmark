@@ -1,0 +1,16 @@
+# Exact source XBa package versions observed on ssh6002, 2026-09-09.
+# Reuse image torch/torchvision; Python 3.12 approved for the new instance.
+transformers==4.55.2
+tokenizers==0.21.4
+accelerate==1.10.0
+datasets==3.6.0
+lm-eval==0.4.9.1
+numpy==2.3.2
+scipy==1.16.2
+scikit-learn==1.9.0
+peft==0.17.1
+pandas==3.0.5
+pyarrow==21.0.0
+pydantic==2.11.9
+sentencepiece==0.2.1
+PyYAML==6.0.2

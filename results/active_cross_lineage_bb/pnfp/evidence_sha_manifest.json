@@ -1,0 +1,176 @@
+{
+  "status": "PASS",
+  "phase": "FINAL_SCIENCE_AND_ARCHIVE",
+  "files": [
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/archive_transfer.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/archive_transfer_receipt.json",
+      "bytes": 2801,
+      "sha256": "6a5eb4548e35f6ae1a3d00c092b38222aa6624b9882c50d344a51482fbb68afe"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/archive_transfer_ssh.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/closure_summary.json",
+      "bytes": 612,
+      "sha256": "f3ffb3cd095ad740ee21665fe7f17a9d7710ed83f9373e03eeabc8288c056451"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/comparison.json",
+      "bytes": 1318,
+      "sha256": "3b77bf1216e396424098e9f0e46fb77f105f3f6164b07dcc2793e65439b735ab"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/detector.log",
+      "bytes": 157994,
+      "sha256": "ff243164ebb23bcc75fd407bfad756c15a339a68ba9484c976ff8cbdb48125e4"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/detector_exit.json",
+      "bytes": 606,
+      "sha256": "681945a21c3a975c26451775a163234623338b074362fabdac945a0e0781c24c"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/detector_results.json",
+      "bytes": 620,
+      "sha256": "d84407233441314169dbfd2001a2e95b569edd0107b5d2da9847f75d932250e2"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/evaluation_exit.json",
+      "bytes": 76,
+      "sha256": "076aa6e587f1e74c435c74e44326e508d0e90c571613405a0f8bc87a25b4daee"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/evaluation_launch.json",
+      "bytes": 137,
+      "sha256": "2191bd72a1eb7c7ab11f203495d06ab6b38c89cd1ecb0bc9e28d1011e9dc1de3"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/evaluation_progress.json",
+      "bytes": 380,
+      "sha256": "55c3f8fa15a424b1c0996f532f804f9b06bbc649812a9b97eef6cbbbad60e889"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/evaluation_supervisor.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/evaluation_supervisor_exit.json",
+      "bytes": 72,
+      "sha256": "177f4842406fd2f0ce9e97f377626fae97a1e3bd070888ac2005426492baf583"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/evaluation_waiter.py",
+      "bytes": 1018,
+      "sha256": "4caedfe25865c1843ae46e0b265eb8b379f153724b86c83d71511852c2869170"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/full_experiment_log.json",
+      "bytes": 228254,
+      "sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/modelscope_archive.json",
+      "bytes": 8281,
+      "sha256": "ca1542b891f6c5ef3f9985809de8e3745d5038ff7951af755ff6287e410f1b07"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/model_provenance.json",
+      "bytes": 2420,
+      "sha256": "32f9d76c4a4e9560f8f8ed766943368b82f120074ab77e870ee746d47abe86d4"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/protocol.json",
+      "bytes": 1906,
+      "sha256": "084b9042f8795d2c197cff012b12bd4a31665960c1974af6db1cf6c5e33280d7"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/qwen_dataset_preflight.json",
+      "bytes": 346,
+      "sha256": "69db1d99a3234cfc7e1748dc8e222da8adeeecc9b49d46191d540d731cbbc712"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/supervisor.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/training.log",
+      "bytes": 626273,
+      "sha256": "e6453e56bc07a911aff422052c4128f11dde224f732c24465d3b7b016ddcaaa4"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/training_exit.json",
+      "bytes": 94,
+      "sha256": "bebc64fb2e768bc89a198c3edccc91e30b86db865ab50ae0c4389f3163368f02"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/training_launch.json",
+      "bytes": 1477,
+      "sha256": "af335cec4fe0b11d86468cebdb07f48be0179b6b7e47566638064d7e7f2b30ef"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/training_summary.json",
+      "bytes": 185583,
+      "sha256": "5ce685cbaf8e260bc5fa361df0f81fd23dd3907bc309917181201cec05b09c0d"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/training_supervisor.py",
+      "bytes": 1248,
+      "sha256": "a836aa4dbfb95a1dda5d09c3112abd89acd94a5a806dcc7e8ad2659d5b15a14b"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/utility.log",
+      "bytes": 42499,
+      "sha256": "816f09222c269a5f93fb0fc6ce5768503073a322bfb638dbca426091d0c9c0cc"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/utility_exit.json",
+      "bytes": 492,
+      "sha256": "fff2e6ecd6072453069b4ceb8d821ce270472384a788d8dd0ca7b61e2ebb88d1"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/final_detector/detector_results.json",
+      "bytes": 620,
+      "sha256": "d84407233441314169dbfd2001a2e95b569edd0107b5d2da9847f75d932250e2"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/final_detector/raw.jsonl",
+      "bytes": 220454,
+      "sha256": "c64ca87b681cac9b553614a97aca36cd1cdc0de91b9a4838c9788a94882a9d05"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/utility/evaluation_config.json",
+      "bytes": 1848,
+      "sha256": "ceabe782790ce82bd50c74ec0eac3f1a1fee564f05b166f9ef90d6e84d4494f9"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/utility/exit_record.json",
+      "bytes": 22,
+      "sha256": "1e3f6691f455051e8adb15d961e4bf3c7a17e83dd88b2afdd13315cc288250bb"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/utility/raw_evaluator_output.json",
+      "bytes": 11828829,
+      "sha256": "342a96d3fe2c665ee5fa677e982430b88663d7ca0d38ed663e4e723f43a967ef"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/utility/utility_results.json",
+      "bytes": 765,
+      "sha256": "cb2f894693b3d30ed149a12d0e15fd99ba6b68e3419f6a57bd93f05f0913a574"
+    },
+    {
+      "path": "docs/reproduction_reports/pnfp_cross_lineage_bb_20260909.md",
+      "bytes": 2106,
+      "sha256": "023cf8894ebd6cd18317c2575dcdf60dd59f8137cec03ff0b2e044b63e97f1db"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "returncode": 0,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/scw_detector.py",
+    "--protocol-config",
+    "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a2.yaml",
+    "--official-config",
+    "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/scw_experiment_a_official.yaml",
+    "--generations",
+    "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/scw/student_generations.jsonl",
+    "--model",
+    "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+    "--output",
+    "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/scw/student_detector_raw.json"
+  ],
+  "result": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_bb/scw/student_detector_raw.json",
+  "ended_at": "2026-09-09T16:39:07.638046+00:00"
+}

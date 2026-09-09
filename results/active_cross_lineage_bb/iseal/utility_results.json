@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "role": "iseal",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/iseal_xbb_20260909/final_model",
+  "fresh_process_reload": true,
+  "arc_challenge_acc_norm": 0.49402730375426623,
+  "truthfulqa_mc2_acc": 0.46736380064984684,
+  "raw_results": {
+    "arc_challenge": {
+      "alias": "arc_challenge",
+      "acc,none": 0.4590443686006826,
+      "acc_stderr,none": 0.01456229107360112,
+      "acc_norm,none": 0.49402730375426623,
+      "acc_norm_stderr,none": 0.014610348300255798
+    },
+    "truthfulqa_mc2": {
+      "alias": "truthfulqa_mc2",
+      "acc,none": 0.46736380064984684,
+      "acc_stderr,none": 0.01535779584625988
+    }
+  },
+  "errors": [],
+  "completed_at": "2026-09-09T15:27:27.588737+00:00"
+}

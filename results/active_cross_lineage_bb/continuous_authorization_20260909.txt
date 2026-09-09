@@ -1,0 +1,407 @@
+更新当前 WMKD_Benchmark 的长期执行授权。
+
+目标：
+减少不必要的重复审批。
+只要动作属于已经批准的实验/归档/同步/部署/闭环范围，并且不改变科学语义、不破坏唯一科研资产，就允许自行执行，不要每个小步骤都向用户确认。
+
+==================================================
+1. GENERAL CONTINUOUS AUTHORIZATION
+==================================================
+
+从现在开始，以下类型动作在 WMKD_Benchmark 当前已批准 campaign 范围内，
+默认视为持续授权，不需要逐次询问：
+
+- SSH 登录、SSH host key / known_hosts 更新
+- 已知服务器 alias / port 的正常连接
+- 新实例首次 trust host key
+- 创建 ~/.ssh、authorized_keys、权限修复
+- 非敏感 SSH 连接修复
+- restart-safe SSH / SCP / rsync
+- 本地 ↔ AutoDL ↔ 学校服务器之间的科研文件同步
+- 已批准私有 GitHub repo 的普通 git pull / fetch / commit / push
+- 不带 force 的 fast-forward 同步
+- 新建/更新轻量科研结果、日志、报告、provenance、manifest
+- full_experiment_log / index 更新
+- ModelScope private preferred archive 上传
+- ModelScope immutable revision / manifest / segment verification
+- temporary upload staging
+- temporary verification chunk 创建与删除
+- download cache / pip cache 的安全清理
+- 已明确验证为 redundant / recoverable 的临时文件删除
+- trainer / runner 的 restart-safe 恢复
+- transient network / timeout / SSH 失败重试
+- transient upload/download retry
+- experiment worker / detector / utility worker 的正常串行推进
+- 环境安装、依赖安装、缺失 package 安装
+- 国内镜像 / ModelScope 加速下载
+- 轻量 CPU-only audit
+- SHA / size / file-count 核验
+- exact-path cleanup receipt
+- temporary follow-up / scheduled monitor 的创建和删除
+- campaign 状态和 queue 状态维护
+- 已授权条件满足后的安全关机
+
+==================================================
+2. SSH / HOST TRUST AUTHORIZATION
+==================================================
+
+对于当前以及后续已明确租用的 AutoDL /学校服务器：
+
+允许自行处理：
+
+- known_hosts 新增
+- host key 变化核验
+- StrictHostKeyChecking 合理配置
+- BatchMode / ConnectTimeout
+- server alias 配置
+- authorized_keys 配置
+- chmod/chown 修复
+- SSH trust establishment
+
+如果 host key 因为：
+- 新实例
+- 新端口
+- AutoDL container replacement
+而变化，
+
+只要 HostName/Port 与用户明确提供的一致，
+可以核验后自行更新 known_hosts。
+
+不要因为这种常规 SSH trust 问题反复询问。
+
+==================================================
+3. GIT CONTINUOUS AUTHORIZATION
+==================================================
+
+对于私有仓库：
+
+MakiseKurisuEasonHan/WMKD_Benchmark
+
+在当前项目范围内，以下默认授权：
+
+- git fetch
+- git pull --ff-only
+- git add expected lightweight files
+- git commit
+- git push origin main
+
+前提：
+
+- 不含 model weights
+- 不含 checkpoint
+- 不含大型 binary
+- 不含 credentials
+- 不含 SSH keys/tokens
+- 不包含明显无关个人文件
+
+如果只是：
+- 科研报告
+- JSON/CSV
+- scripts
+- configs
+- provenance
+- full logs
+- receipts
+- project status
+- experiment index
+- lightweight evidence metadata
+
+可以自行 commit + push，不必每次等待用户批准。
+
+==================================================
+4. GIT ACTIONS STILL REQUIRE STOP
+==================================================
+
+以下仍然禁止自动做：
+
+- force push
+- push --force-with-lease
+- history rewrite
+- rebase 已推送历史
+- reset --hard
+- git clean -fd / -fdx
+- 删除远端 branch/tag
+- 覆盖用户未审计的无关本地工作
+- 修改 GitHub account identity/email
+- 改 remote 到另一个仓库
+- 公开 private repo
+
+遇到这些必须停并报告。
+
+==================================================
+5. FILE DELETION / CLEANUP AUTHORIZATION
+==================================================
+
+允许自行删除以下对象：
+
+- tmp
+- cache
+- pip cache
+- HF/ModelScope 可重建 cache
+- upload staging
+- download verification copies
+- remote verification chunks
+- stale temporary extracted archives
+- duplicate final model copies 已有：
+  - canonical retained copy
+  - verified private ModelScope archive
+  - immutable revision
+  - SHA / receipt
+- intermediate checkpoints 已永久保存对应科研结果且不再需要继续 inference
+- optimizer state 已完成正式实验且不需要 resume
+- failed / abandoned run 的明显临时文件
+
+前提：
+
+必须已经证明：
+REDUNDANT / RECOVERABLE / NON-UNIQUE
+
+并记录 cleanup receipt。
+
+==================================================
+6. DELETION STILL REQUIRES STOP
+==================================================
+
+以下禁止自动删除：
+
+- 唯一 final model 且尚未归档
+- 唯一 Teacher
+- clean canonical base model，若后续实验还依赖
+- 唯一 frozen dataset
+- detector secret
+- detector asset
+- raw scientific evidence 唯一副本
+- full_experiment_log 唯一副本
+- trajectory JSON/CSV/raw detector 唯一副本
+- 未同步的新实验结果
+- 尚未验证的 archive唯一源
+- 用户个人非项目文件
+- 任何无法明确确认 recoverable 的对象
+
+不确定就 KEEP，不要反复要求用户批准小范围保守保留。
+
+==================================================
+7. SCIENTIFIC EXECUTION AUTHORIZATION
+==================================================
+
+对于当前已经批准的：
+
+ACTIVE CROSS-LINEAGE Bb
+
+正常串行执行全部允许：
+
+- deployment
+- training
+- detector
+- exploratory diagnostic
+- utility
+- closure
+- evidence
+- archive
+- remote verification
+- Git closure
+- cleanup
+- next method transition
+
+不需要逐阶段向用户申请。
+
+五个方法：
+PN-FP
+EverTracer
+CTCC
+iSeal
+SCW
+
+保持既定：
+fresh Qwen
+frozen Bb/Bb2
+full SFT
+detector policy
+utility
+archive
+closure
+
+==================================================
+8. DETECTOR / SCIENTIFIC BOUNDARIES
+==================================================
+
+以下属于科学协议变化，仍必须停：
+
+- 改 dataset
+- 重新生成 frozen QA
+- 重新 paraphrase
+- 改 threshold
+- 改 secret
+- 改 detector formula
+- 改 applicability classification
+- 改 Teacher / Student model family
+- 改 model revision
+- 改 LR / epoch / effective batch / seed
+- 从 fresh init 改成 resume
+- 从 full parameter 改成 LoRA
+- 为了“让结果更好”调参
+- 新增未经用户批准的新实验类型
+
+正常 bug fix 如果不改变 scientific semantics：
+可以修复、记录并继续。
+
+==================================================
+9. MODELSCOPE AUTHORIZATION
+==================================================
+
+对于用户已经批准为 preferred 的正式 Student：
+
+允许：
+
+- create PRIVATE ModelScope repo
+- upload final model
+- upload provenance/README/SHA256SUMS
+- obtain immutable revision
+- manifest verification
+- segment verification
+- 异常时 full verification
+- 保存 receipt
+- 删除验证后冗余 temporary copy
+
+不要每个模型单独再问一次。
+
+禁止：
+
+- public repo
+- 覆盖已有不同模型
+- 删除远端 preferred archive
+- 修改账号凭据
+- 暴露 ModelScope token
+
+==================================================
+10. NETWORK / DOWNLOAD AUTHORIZATION
+==================================================
+
+允许自动：
+
+- ModelScope 下载
+- 国内镜像下载
+- official source 下载
+- restart/resume
+- 分片下载
+- checksum verify
+
+如果 source 很慢：
+优先切换已确认等价的国内镜像。
+
+不要因为普通下载慢反复询问。
+
+只有：
+- 找不到等价 revision
+- 必须换模型
+- provenance 不可确认
+才停。
+
+==================================================
+11. AUTO RECOVERY
+==================================================
+
+遇到：
+
+- SSH timeout
+- transient network error
+- SCP interrupted
+- download interrupted
+- ModelScope retry
+- worker crash caused by明确 infrastructure原因
+- container restart
+
+允许 restart-safe 恢复。
+
+同一个 deterministic scientific/runtime error 连续2次仍失败：
+记录 blocker，然后按 campaign 规则跳下一个方法或停。
+
+不要无限循环。
+
+==================================================
+12. APPROVAL TIMEOUT / COST SAVING
+==================================================
+
+如果唯一剩余动作确实属于“仍必须用户批准”的高风险范围，
+而且：
+
+- 无 training worker
+- 无 detector worker
+- 无 utility worker
+- 无 upload worker
+- 无 Git/SCP worker
+- 没有其他已授权动作
+
+进入 WAITING_FOR_USER。
+
+30分钟无回复：
+保存 state/receipt
+sync
+安全关机省钱。
+
+正常可继续动作不允许因为用户不在线而停住。
+
+==================================================
+13. WHAT CODEX SHOULD NOT ASK ABOUT AGAIN
+==================================================
+
+除非出现异常，不要再次询问：
+
+- “是否允许普通 SCP”
+- “是否允许更新 known_hosts”
+- “是否允许添加 SSH 公钥”
+- “是否允许上传已经批准的 preferred model”
+- “是否允许普通 Git push”
+- “是否允许删除已经核验的 remote verification copy”
+- “是否允许继续下一个已批准 method”
+- “是否允许跑 utility”
+- “是否允许 detector”
+- “是否允许生成 full log”
+- “是否允许 archive receipt”
+- “是否允许 ModelScope segment verification”
+- “是否允许正常 restart-safe retry”
+- “是否允许创建/删除临时 follow-up”
+
+这些现在都明确属于持续授权范围。
+
+==================================================
+14. ONLY ESCALATE THESE
+==================================================
+
+以后只在以下情况下询问用户：
+
+1. 改科学协议
+2. 删除唯一科研资产
+3. force/history-destructive Git
+4. 改账号/远端身份
+5. 暴露或替换凭据
+6. 换 Teacher / Student 模型
+7. 换 frozen dataset
+8. 改 threshold/secret
+9. 新增未授权实验
+10. 无法判断是否会造成不可逆科研损失
+
+除此之外：
+自行推进，不要反复请求批准。
+
+==================================================
+15. CURRENT IMMEDIATE CONTEXT
+==================================================
+
+当前正在执行：
+
+ACTIVE CROSS-LINEAGE Bb
+
+如果当前 blocker只是：
+新实例没有旧实例 SSH trust / host key / authorized_keys等常规问题，
+
+现在明确允许自行修复并继续。
+
+不要再因为这类 SSH 信任问题停下来等待用户。
+
+完成 PN-FP archive 后：
+直接 EverTracer
+→ CTCC
+→ iSeal
+→ SCW
+按现有串行授权继续。

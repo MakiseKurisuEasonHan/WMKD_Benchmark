@@ -1,0 +1,913 @@
+开始新的 WMKD_Benchmark campaign：
+
+ACTIVE CROSS-LINEAGE BEHAVIORAL EXTRACTION — Bb
+
+使用新的 AutoDL GPU 实例。
+
+==================================================
+A. NEW AUTODL INSTANCE
+==================================================
+
+学校 VPN：关闭
+
+SSH：
+
+ssh -p 49453 root@connect.westd.seetacloud.com
+
+目标：
+只在这台新实例上部署并运行 Active Cross-Lineage Bb。
+
+不要把旧 AutoDL 整盘复制过来。
+只同步 Bb 必需的最小资产。
+
+==================================================
+B. SCIENTIFIC DEFINITION
+==================================================
+
+Teacher family:
+meta-llama/Llama-3.2-3B-Instruct
+
+Student:
+Qwen/Qwen2.5-3B-Instruct
+
+Qwen revision:
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+Experiment role:
+active_cross_lineage_bb
+
+核心流程：
+
+Watermarked Llama Teacher
+→ existing frozen paraphrased Bb/Bb2 dataset
+→ fresh clean Qwen2.5-3B-Instruct
+→ full-parameter SFT
+→ detector
+→ ARC-Challenge + TruthfulQA MC2
+→ scientific closure
+
+五个方法：
+
+1. PN-FP
+2. EverTracer
+3. CTCC
+4. iSeal
+5. SCW
+
+每个方法必须独立从 fresh clean Qwen 初始化。
+
+绝对禁止：
+- 从 XBa Student 继续训练
+- 从前一个 XBb Student 继续训练
+- resume 其他方法 checkpoint
+- reuse optimizer/trainer state
+
+==================================================
+C. Bb DATASET SEMANTICS
+==================================================
+
+使用已经冻结并通过 SHA 核验的 canonical paraphrased datasets。
+
+不要重新生成 Teacher QA。
+不要重新 paraphrase。
+
+注意：
+
+PN-FP:
+使用 canonical frozen Bb paraphrased dataset。
+
+EverTracer:
+使用 canonical frozen Bb paraphrased dataset。
+
+CTCC:
+使用明确标记的 Bb2 dataset semantics。
+不要把 CTCC Bb2 静默改名为历史 Bb。
+
+iSeal:
+使用 canonical frozen Bb paraphrased dataset。
+
+SCW:
+使用 canonical frozen Bb paraphrased dataset。
+
+PN-FP / SCW 的 parent reconstruction limitation 必须继续写入 provenance。
+
+==================================================
+D. DETECTOR POLICY
+==================================================
+
+完全沿用刚刚完成的 Active Cross-Lineage Ba detector applicability policy。
+
+PN-FP:
+LEVEL 1
+VALID_CROSS_ARCHITECTURE
+
+CTCC:
+LEVEL 1
+VALID_CROSS_ARCHITECTURE
+
+SCW:
+LEVEL 1
+VALID_CROSS_ARCHITECTURE
+
+EverTracer:
+canonical detector =
+N/A_CROSS_TOKENIZER
+
+但额外运行：
+
+EXPLORATORY_CROSS_TOKENIZER_DIAGNOSTIC
+
+必须明确标记：
+
+EXPLORATORY_NON_COMPARABLE
+NON_COMPARABLE_TO_FROZEN_LLAMA_DETECTOR
+
+iSeal:
+LEVEL 3
+N/A_CROSS_ARCHITECTURE
+
+iSeal 仍必须完成：
+training + utility
+
+不要为了得到 iSeal detector 数字：
+- 改 embedding dimension
+- 加 projection
+- 重新注册 watermark
+- 改 secret
+- 改 threshold
+- 改 detector formula
+
+==================================================
+E. MINIMAL DEPLOYMENT ONLY
+==================================================
+
+旧实例已经完成完整 readiness audit。
+
+新实例只做最小必要检查。
+
+需要部署/同步：
+
+1. WMKD_Benchmark repo
+2. canonical Git revision / current main
+3. clean Qwen2.5-3B-Instruct
+4. Qwen revision manifest
+5. 5份 frozen Bb/Bb2 datasets
+6. dataset SHA manifests
+7. detector scripts/assets
+8. required Teacher/reference assets
+9. training runner/config
+10. utility evaluator
+11. provenance templates
+
+不要同步：
+- 已归档 XBa final Students
+- trajectory checkpoints
+- passive historical Students
+- old verification download copies
+- obsolete upload staging
+- old WaterBench/V2/V3 data
+- Methods 11–15
+- unnecessary caches
+
+==================================================
+F. DOWNLOAD SOURCE POLICY
+==================================================
+
+如果新实例缺少模型/数据/依赖：
+
+优先使用：
+ModelScope
+或其他可靠国内镜像/国内可用源。
+
+只有在国内源无法确认等价或不可用时，
+再使用 Hugging Face / official overseas source。
+
+任何镜像替代必须：
+
+- revision一致
+- file list一致
+- SHA/size可核验
+- provenance记录完整
+
+不要因为下载方便静默换模型版本。
+
+==================================================
+G. SOFTWARE ENVIRONMENT
+==================================================
+
+尽量复用 XBa 软件环境：
+
+PyTorch 2.8.0
+Python 3.12
+Ubuntu 22.04
+CUDA runtime 12.8
+BF16
+
+主机 driver/CUDA display 可以更高，
+但实验 runtime 尽量保持 XBa 一致。
+
+部署后核验：
+
+python
+torch
+transformers
+datasets
+accelerate
+tokenizer
+CUDA availability
+
+==================================================
+H. DISK POLICY
+==================================================
+
+这是新实例，空间优先用于 XBb。
+
+不要长期保留 5 个未归档 Student。
+
+每个方法完成后：
+
+training
+→ detector/utility
+→ scientific closure
+→ preferred archive
+→ remote verification
+→ 允许清理已安全归档的冗余本地 Student duplicate
+
+但必须至少保留：
+- scientific evidence
+- logs
+- provenance
+- archive receipt
+- immutable remote revision
+- SHA
+
+不要删除当前方法仍需使用的唯一 final model，
+直到 archive 完整通过。
+
+==================================================
+I. TRAINING CONFIG
+==================================================
+
+五个方法统一：
+
+Student:
+fresh Qwen2.5-3B-Instruct
+
+revision:
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+Training:
+- full parameter
+- no LoRA
+- no quantization
+- BF16
+- 20,000 records
+- 3 epochs
+- LR = 1e-5
+- effective batch size = 8
+- seed = 42
+- official Qwen chat template
+- paraphrased_answer target
+- expected ~7500 optimizer steps
+
+每个方法启动前必须确认 runtime 实际读取的是：
+
+paraphrased target
+
+而不是 source_answer。
+
+==================================================
+J. MINIMAL RUNTIME CHECK
+==================================================
+
+每个正式训练前只做必须检查：
+
+- dataset exactly 20,000
+- SHA correct
+- target field correct
+- zero empty supervision
+- zero truncation
+- fresh Qwen initialization
+- correct revision
+- correct template
+- effective batch size
+- LR
+- seed
+- output directory clean/new
+- no resume contamination
+
+不要做过度前置审计。
+
+==================================================
+K. GPU POLICY
+==================================================
+
+每次大型 GPU 任务前：
+
+nvidia-smi
+
+只使用明确空闲的一张 GPU。
+
+一次只允许一个大型 GPU task。
+
+禁止并行：
+
+- 两个训练
+- 训练 + 另一个大 detector
+- 两个大上传验证
+
+串行优先。
+
+==================================================
+L. SERIAL ORDER
+==================================================
+
+按以下顺序一口气跑完：
+
+1. PN-FP XBb
+2. EverTracer XBb
+3. CTCC XBb2
+4. iSeal XBb
+5. SCW XBb
+
+某个方法如果出现 terminal blocker：
+
+- 保存完整日志
+- 明确 blocker
+- 不修改科学协议强行绕过
+- 自动继续下一个方法
+
+单个方法失败不能终止整个 campaign。
+
+==================================================
+M. PER-METHOD STAGES
+==================================================
+
+每个方法：
+
+STAGE 0
+preflight
+
+STAGE 1
+fresh Qwen full SFT
+
+STAGE 2
+final model validation
+
+STAGE 3
+fresh reload
+
+STAGE 4
+detector / exploratory / N/A
+
+STAGE 5
+utility
+
+STAGE 6
+scientific closure
+
+STAGE 7
+preferred archive
+
+STAGE 8
+remote verification
+
+STAGE 9
+method receipt
+
+==================================================
+N. PN-FP
+==================================================
+
+Detector使用：
+官方完整 signature 判定。
+
+必须保留 historical secret。
+不得重新定义 key/target。
+
+报告：
+
+detected / 1024
+rate
+errors
+per-key raw evidence
+
+Clean Qwen baseline引用：
+
+43/1024
+
+XBa参考：
+84/1024
+
+最终 XBb 要比较：
+
+Clean Qwen
+XBa
+XBb
+
+不要把 rate 称为概率。
+
+==================================================
+O. EVERTRACER
+==================================================
+
+Canonical detector：
+
+N/A_CROSS_TOKENIZER
+
+原因继续沿用已完成 semantic audit：
+
+- 128-token window
+- tokenizer segmentation
+- exp(-mean next-token loss)
+- scoring semantics不可严格跨tokenizer保持
+
+XBb training 和 utility照常完成。
+
+另外运行 exploratory diagnostic：
+
+- frozen original texts
+- frozen perturbation texts
+- Qwen tokenizer
+- same Qwen-side 128-token cap
+- same formula
+- same member direction
+- same ROC/AUC procedure
+- FPR <= 0.05 operating rule
+
+必须明确：
+
+NON_COMPARABLE_TO_FROZEN_LLAMA_DETECTOR
+
+报告：
+
+AUC
+TPR
+FPR
+operating threshold
+raw arrays
+full disclaimer
+
+==================================================
+P. CTCC
+==================================================
+
+CTCC XBb 使用 Bb2 dataset semantics。
+
+Detector保持：
+
+generated_answer.strip() == "IAMALIVE"
+
+case-sensitive exact match。
+
+报告：
+
+trigger activations / 95
+suppression / 100
+normal / 105
+combined negatives / 205
+errors
+
+Clean Qwen 和 XBa 参考都从 canonical artifacts读取。
+
+==================================================
+Q. iSeal
+==================================================
+
+训练必须完成。
+
+Utility必须完成。
+
+Detector：
+
+N/A_CROSS_ARCHITECTURE
+
+Level 3。
+
+不要造 exploratory score，
+除非已有审计明确确认可在不重新定义方法的情况下合法执行。
+
+默认：
+NO detector number。
+
+==================================================
+R. SCW
+==================================================
+
+使用 frozen original statistical test。
+
+保持：
+
+alpha = 0.001
+frozen eval set
+same p-value calculation
+same decision rule
+
+报告：
+
+p-value
+detected yes/no
+raw evidence
+
+Clean Qwen baseline：
+
+p = 0.7446491718292236
+detected = NO
+
+XBa：
+
+p = 0.9158855080604553
+detected = NO
+
+最终比较：
+Clean Qwen
+XBa
+XBb
+
+==================================================
+S. UTILITY
+==================================================
+
+每个成功训练的 XBb Student 都运行：
+
+ARC-Challenge acc_norm
+TruthfulQA MC2 acc
+
+Clean Qwen baseline：
+
+ARC =
+0.4402730375426621
+
+TruthfulQA MC2 =
+0.5712170418936038
+
+必须保存 raw evaluator evidence。
+
+比较：
+
+Clean Qwen
+XBa
+XBb
+
+不要仅凭单一 benchmark下降写 utility collapse。
+
+==================================================
+T. NO TRAJECTORY THIS ROUND
+==================================================
+
+这次只做 endpoint。
+
+不要自动运行：
+
+0/25/50/100/250/500/1000/2000/4000/6000/7500 detector trajectory。
+
+除非未来单独批准。
+
+目标是快速完成五个 XBb endpoint。
+
+==================================================
+U. FULL LOGS
+==================================================
+
+每个方法必须：
+
+full_experiment_log.json
+
+记录：
+
+- environment
+- GPU
+- Teacher identity
+- Qwen revision
+- dataset SHA
+- Bb/Bb2 semantics
+- tokenizer/template
+- training config
+- effective runtime config
+- start/end
+- final checkpoint
+- detector applicability
+- detector result
+- utility
+- errors
+- provenance
+- archive status
+- final scientific status
+
+必须更新：
+
+results/experiment_full_logs_index.json
+
+==================================================
+V. RESULT ROOT
+==================================================
+
+使用 canonical root：
+
+results/active_cross_lineage_bb/
+
+建议：
+
+pnfp/
+evertracer/
+ctcc/
+iseal/
+scw/
+comparison/
+
+如果项目已有既定命名：
+遵守现有 canonical naming。
+
+CTCC 必须在 provenance 中明确写：
+Bb2 semantics。
+
+==================================================
+W. MASTER COMPARISON
+==================================================
+
+五个 terminal 后生成：
+
+active_cross_lineage_bb_master.json
+active_cross_lineage_bb_master.csv
+final markdown report
+
+至少比较：
+
+Method
+Teacher
+Clean Llama
+Same-lineage Ba
+Same-lineage Bb/Bb2
+Clean Qwen
+XBa
+XBb
+Detector applicability
+Threshold/rule
+XBa decision
+XBb decision
+ARC
+MC2
+Final status
+Interpretation
+
+不同 detector raw metric 不跨方法比较。
+
+==================================================
+X. KEY SCIENTIFIC QUESTIONS
+==================================================
+
+最终回答：
+
+1. XBb 相比 XBa 是否进一步削弱 PN-FP partial acquisition？
+2. CTCC paraphrased cross-lineage SFT 后是否仍 0 trigger？
+3. SCW 是否仍 non-detected？
+4. EverTracer exploratory diagnostic 是否发生明显变化？
+5. iSeal architecture applicability限制是否仍成立？
+6. paraphrasing 对 active watermark acquisition 是否具有一致方向的影响？
+7. cross-lineage Bb 与 same-lineage Bb 的差异多大？
+8. active watermark的主要问题仍是 acquisition failure，还是出现了其他模式？
+9. utility如何变化？
+10. 是否存在任何一个 active watermark在 XBb 下出现比 XBa 更强的 detector signal？
+
+使用 bounded scientific wording。
+
+==================================================
+Y. PREFERRED MODEL ARCHIVE
+==================================================
+
+每个方法 scientific closure 后，
+允许归档 ONE final preferred XBb Student 到 PRIVATE ModelScope。
+
+用户现在明确批准：
+
+PN-FP XBb preferred final model = YES
+EverTracer XBb preferred final model = YES
+CTCC XBb2 preferred final model = YES
+iSeal XBb preferred final model = YES
+SCW XBb preferred final model = YES
+
+每个方法最多一个。
+
+严格串行上传。
+
+==================================================
+Z. ARCHIVE VERIFICATION
+==================================================
+
+沿用新的快速验证策略。
+
+默认：
+
+MANIFEST_PLUS_SEGMENT
+
+大 shard：
+
+5 fixed positions × 2 MiB
+
+小文件：
+full SHA
+
+必须核验：
+
+- remote PRIVATE
+- immutable revision
+- file list
+- count
+- size
+- manifest
+- provenance
+- segment SHA
+
+只有异常才升级：
+
+FULL_INDEPENDENT_DOWNLOAD
+
+例如：
+
+- size mismatch
+- file mismatch
+- upload retry/partial
+- segment mismatch
+- remote anomaly
+
+不要每个模型都完整重下。
+
+==================================================
+AA. GIT CLOSURE
+==================================================
+
+每个方法 evidence可逐步落盘。
+
+整个 campaign结束后：
+
+- master report
+- full logs
+- provenance
+- archive receipts
+- global index
+- project status if required
+
+完成 Git audit。
+
+只提交：
+
+text/code/config/lightweight scientific artifacts
+
+不提交：
+
+weights
+checkpoints
+large archives
+cache
+credentials
+
+如果 push需要明确审批：
+报告 exact commit/files/size，
+等待用户批准。
+
+==================================================
+AB. FAILURE HANDLING
+==================================================
+
+某个方法：
+
+如果 transient infra error：
+允许有限 restart-safe retry。
+
+同一 deterministic error 连续2次：
+记录 terminal blocker，
+跳到下一方法。
+
+不要无限重试。
+
+不要为了让结果出来而：
+
+- 改 dataset
+- 改 threshold
+- 改 detector
+- 换 Student model
+- 改 secret
+- 改 Bb/Bb2 semantics
+
+==================================================
+AC. STORAGE HANDLING
+==================================================
+
+新实例空间有限。
+
+每个方法 archive远端验证完成后，
+如果空间不足：
+
+优先清理：
+
+- 已验证的 remote download copies
+- upload staging
+- temporary chunks
+- pip/download cache
+- 已安全归档且有 receipt 的本地 Student duplicate
+
+不得删除：
+
+- clean Qwen
+- 当前尚未完成方法的数据
+- detector assets
+- unique scientific evidence
+- full logs
+-未归档唯一模型
+
+如果新 destructive cleanup超出已验证安全范围：
+停止并报告。
+
+==================================================
+AD. AUTO SHUTDOWN
+==================================================
+
+这是长时间自动串行 campaign。
+
+用户明确授权：
+
+当五个方法全部达到：
+
+COMPLETE
+或合法 TERMINAL_BLOCKED
+
+并且：
+
+- scientific closure完成
+- evidence完成
+- archives完成或明确 terminal archive blocker
+- Git closure完成或等待唯一外部审批
+- 无 worker
+- sync完成
+- final campaign status保存
+
+如果不再有已授权可继续动作，
+允许安全关机。
+
+另外：
+
+如果因为必须获得用户新授权而完全停住，
+且：
+
+- 无 training worker
+- 无 detector/utility worker
+- 无 upload/SCP/Git worker
+- 无已授权下一步
+
+连续等待30分钟无用户回复：
+
+保存 blocker / state / receipt
+→ sync
+→ 安全关机省钱。
+
+不要在健康训练/上传期间关机。
+
+==================================================
+AE. CURRENT FIRST ACTION
+==================================================
+
+连接新实例：
+
+ssh -p 49453 root@connect.westd.seetacloud.com
+
+先只读核验：
+
+- hostname
+- GPU
+- nvidia-smi
+- disk
+- RAM
+- Python/PyTorch/CUDA
+- repo是否存在
+- data盘路径
+
+然后部署最小 Bb 环境。
+
+不要从旧实例整盘复制。
+
+准备完成后，
+先做 minimal preflight，
+然后按：
+
+PN-FP
+→ EverTracer
+→ CTCC
+→ iSeal
+→ SCW
+
+严格串行一口气跑完。
+
+如果当前新实例还是全新空环境，
+先报告一次：
+
+NEW_INSTANCE_READY =
+GPU =
+DISK =
+ENV =
+REPO =
+QWEN =
+BB_DATASETS =
+DETECTOR_ASSETS =
+READY_TO_START_PNFP =
+
+然后继续自动推进，不需要等待用户逐步批准正常部署。

@@ -1,0 +1,591 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-09-09T10:33:57.045832+00:00",
+  "source": "ssh6002",
+  "target": "ssh6000bb",
+  "package_sha256": "3599a2988301c34a8a86af32b2aa685d807909dab8b51352605c854c3d0aba18",
+  "package_bytes": 28082896,
+  "files": [
+    {
+      "role": "dataset_pnfp",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "relative": "WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "bytes": 35754179,
+      "sha256": "dc5e55e434a8dc05d89def2303ceb781a30b0f5bccac97a7e616d88c376b5c9c",
+      "records": 20000,
+      "target_field": "paraphrased_answer",
+      "destination_sha_verified": true,
+      "destination_records": 20000
+    },
+    {
+      "role": "dataset_manifest_pnfp",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.manifest.json",
+      "relative": "WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/dataset/frozen_paired_qa.manifest.json",
+      "bytes": 648,
+      "sha256": "77ff5763fb25bfeb186edb03724f0c2fbf294cc2fb9efe72d9f16af8506e30b3",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_provenance_pnfp",
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/experiment_bb/full_experiment_log.json",
+      "relative": "WMKD_Benchmark/results/pnfp/experiment_bb/full_experiment_log.json",
+      "bytes": 11756,
+      "sha256": "17fe43b0d6c9f7c9a65750798c9addc354f115d47b0a4ed2861dd4c26d03aae1",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_evertracer",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/frozen_paired_qa.jsonl",
+      "relative": "WMKD_Benchmark_data/runs/evertracer_bb/evertracer_bb_20260903_130000/dataset/frozen_paired_qa.jsonl",
+      "bytes": 34672364,
+      "sha256": "41a44ffc153c5df78485037f154c4004f1b6f04b2451deac3c1c7ca9af6e6853",
+      "records": 20000,
+      "target_field": "paraphrased_answer",
+      "destination_sha_verified": true,
+      "destination_records": 20000
+    },
+    {
+      "role": "dataset_provenance_evertracer",
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/evertracer/experiment_bb/full_experiment_log.json",
+      "relative": "WMKD_Benchmark/results/evertracer/experiment_bb/full_experiment_log.json",
+      "bytes": 19916,
+      "sha256": "a2adc5639815d50e6b820bfacf989c9a6cd0f24992f2abbb91017f992cba3a62",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_ctcc",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.jsonl",
+      "relative": "WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.jsonl",
+      "bytes": 34869189,
+      "sha256": "db5928b0684cc3904da6430d561374154e022599335bb69a8e2f09b3e93f52ed",
+      "records": 20000,
+      "target_field": "paraphrased_answer",
+      "destination_sha_verified": true,
+      "destination_records": 20000
+    },
+    {
+      "role": "dataset_manifest_ctcc",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.manifest.json",
+      "relative": "WMKD_Benchmark_data/runs/ctcc_bb2/ctcc_bb2_20260905_011104/dataset/frozen_paired_qa.manifest.json",
+      "bytes": 648,
+      "sha256": "701896fb159fe396f81201e6df33fde13b549d4e2b494ca1ccc6b90df4ca3725",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_provenance_ctcc",
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/ctcc/experiment_bb2/full_experiment_log.json",
+      "relative": "WMKD_Benchmark/results/ctcc/experiment_bb2/full_experiment_log.json",
+      "bytes": 9218,
+      "sha256": "20f8bda8edfd14e2d73589edfe568def78c2ece444ef4f1d53e98235543a9904",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_iseal",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "relative": "WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "bytes": 32294755,
+      "sha256": "098f932e91c87a964cee31f076918c2b7bc0610cf56c98a51065cebdd24aa5cb",
+      "records": 20000,
+      "target_field": "paraphrased_answer",
+      "destination_sha_verified": true,
+      "destination_records": 20000
+    },
+    {
+      "role": "dataset_manifest_iseal",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.manifest.json",
+      "relative": "WMKD_Benchmark_data/runs/iseal_bb/iseal_bb_20260904_055000/dataset/frozen_paired_qa.manifest.json",
+      "bytes": 648,
+      "sha256": "c2b267b0231d29a30066502cbc0e8a2f516fc91ae6bf6cf736a9086bc294dc9a",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_provenance_iseal",
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/iseal/experiment_bb/full_experiment_log.json",
+      "relative": "WMKD_Benchmark/results/iseal/experiment_bb/full_experiment_log.json",
+      "bytes": 117783,
+      "sha256": "cc300bd34ce57a464eb8d7395b2a5463fc878d99190f6a368cd7f1b485d15db6",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_scw",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "relative": "WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.jsonl",
+      "bytes": 34020672,
+      "sha256": "73073ec1a3bf6cb0a41c6a374b453cb282a89903a1f2ec84f5d79e5cb4eaece0",
+      "records": 20000,
+      "target_field": "paraphrased_answer",
+      "destination_sha_verified": true,
+      "destination_records": 20000
+    },
+    {
+      "role": "dataset_manifest_scw",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.manifest.json",
+      "relative": "WMKD_Benchmark_data/runs/scw_bb/scw_bb_20260904_055000/dataset/frozen_paired_qa.manifest.json",
+      "bytes": 648,
+      "sha256": "1b6722738d7af26576a822cd84f9f6bd24afde751a04337fd4d916d467d8d8d4",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "dataset_provenance_scw",
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/scw/experiment_bb/full_experiment_log.json",
+      "relative": "WMKD_Benchmark/results/scw/experiment_bb/full_experiment_log.json",
+      "bytes": 12939,
+      "sha256": "5cd88c53942f741fff009bbec63fa3bbc830706e3231add5d87a9b1034592151",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "pnfp_manifest",
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/experiment_ba_trajectory_followup/detector_assets_manifest.json",
+      "relative": "WMKD_Benchmark/results/pnfp/experiment_ba_trajectory_followup/detector_assets_manifest.json",
+      "bytes": 1143,
+      "sha256": "502dab2d32dd450c2f6a93137d7397a54fd7fd3b131d631624befce238f2e0f5",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "pnfp_secret",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+      "relative": "WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+      "bytes": 921885,
+      "sha256": "922d3aec3b6bbac62dcdcf617b41e08a1384e7875db77aa6c4f9a278e03a8612",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "evertracer_probes",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+      "relative": "WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/artifacts/frozen_neighborhoods.jsonl",
+      "bytes": 1360933,
+      "sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "evertracer_audit",
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/active_cross_lineage_ba/evertracer/static_probe_tokenizer_audit.json",
+      "relative": "WMKD_Benchmark/results/active_cross_lineage_ba/evertracer/static_probe_tokenizer_audit.json",
+      "bytes": 1777110,
+      "sha256": "836240faf56ac623cd95cbfd743f55751ed4f5aacc3456b2405539642f7e0490",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "evertracer_scalar_reference",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/teacher_verification.json",
+      "relative": "WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/teacher_verification.json",
+      "bytes": 48035,
+      "sha256": "6c6ce9b9c97f6761589ca9117b863d91eebb7ffef94f6668e70a12e340eee459",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "evertracer_scalar_reference",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/base_verification.json",
+      "relative": "WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont1/metrics/base_verification.json",
+      "bytes": 48011,
+      "sha256": "b6b40d1f395ab11e07be4c0e8a185a672ad7bbd714c90d4f8ce6981ce3f69dce",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "evertracer_scalar_reference",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/metrics/student_verification_raw.json",
+      "relative": "WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/metrics/student_verification_raw.json",
+      "bytes": 48054,
+      "sha256": "947d7b9653fa6bc7bfa6ca23d4213911c1b89ecc5d6d0f2c9710084b13f4d192",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "ctcc_detector_queries",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set_annotated.json",
+      "relative": "WMKD_Benchmark_data/datasets/ctcc/experiment_a/test_set_annotated.json",
+      "bytes": 310646,
+      "sha256": "48596b707de9d73cef625e7ec1e58afe6a7f176b6aeb59f393455818fdcb0f15",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_detector_queries",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+      "relative": "WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+      "bytes": 718092,
+      "sha256": "c60cd7d03acbd3535c5564eafe521f88179833761924953fa599237c5082a69d",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_detector_queries",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/manifest.json",
+      "relative": "WMKD_Benchmark_data/evaluation/scw/a2_french_eval/manifest.json",
+      "bytes": 1149,
+      "sha256": "e178179e8d46bdc8c555f820ca027c5eddf813d3db4b6b0467deb830305e8f28",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "llama_reference_tokenizer_only",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer.json",
+      "relative": "WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer.json",
+      "bytes": 9085657,
+      "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "llama_reference_tokenizer_only",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer_config.json",
+      "relative": "WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/tokenizer_config.json",
+      "bytes": 54528,
+      "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "llama_reference_tokenizer_only",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/special_tokens_map.json",
+      "relative": "WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/special_tokens_map.json",
+      "bytes": 296,
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "llama_reference_tokenizer_only",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/config.json",
+      "relative": "WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct/config.json",
+      "bytes": 878,
+      "sha256": "39fb36dc5416f445ebc4e71cb71fbcf6727e80a35836d8ba1a1474c318467b7a",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/__init__.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/__init__.py",
+      "bytes": 185,
+      "sha256": "326ccf635e91d2dda2d66693ab00c80560a950495c29ee4fa7733e6c900e2b5e",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/config.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/config.py",
+      "bytes": 11290,
+      "sha256": "af7996e65a71bffce49cd9c57aec4a92d9d313a68f61ca492163c4973d5e3719",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval_vllm.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval_vllm.py",
+      "bytes": 6185,
+      "sha256": "71e86de0195cf85450db52f69226ed487af86b1c8971026868f571e094b6a2cc",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/train.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/train.py",
+      "bytes": 2102,
+      "sha256": "e2a94ec2d7e474de8b61ead8bdbad855760ee63722bd49e9cf5ead9437e5451d",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/utils.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/utils.py",
+      "bytes": 5362,
+      "sha256": "5a226110a000f6bdcf3a2555bc7b3b70106700c424d5b2ce9b3dda7adc549cb0",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/__init__.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/__init__.py",
+      "bytes": 184,
+      "sha256": "d8b4d404149adb7756b4fdf3a6f3a534ac3d8be3fabb88aeb0809aeceeae9539",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/dataset.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/dataset.py",
+      "bytes": 4299,
+      "sha256": "9538443ab866cf94c3330a17c6bf07ee6b5f7b7487d563f02186c04fd73114b3",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/finetuning_robustness.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/finetuning_robustness.py",
+      "bytes": 4457,
+      "sha256": "f87ace044ee0342ebf6065adf6635ef0c8467e25eda97bf955faf54b3f3a7d66",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/finetuning_robustness_slow.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/finetuning_robustness_slow.py",
+      "bytes": 4576,
+      "sha256": "ab2e7870b85e7272ff7493d1ed79585309137151dbd52622225aedd7f5eb7b28",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/generation_time_wm.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/generation_time_wm.py",
+      "bytes": 3280,
+      "sha256": "acde3f24c3ece3dccd045bc5878499bb513afa418cc1a2eeedb37f232f0f9b01",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/paraphrasers.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/paraphrasers.py",
+      "bytes": 2012,
+      "sha256": "ada49be972837401b3943d3406aa48a39655f3011839d51c73741496c4491957",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/stealth_judges.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/stealth_judges.py",
+      "bytes": 4132,
+      "sha256": "4b65bc2a4ed62f5924c68c827b50563a2b81a2d2036972d5c679aece2ae4a6b3",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/system_prompts.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/system_prompts.py",
+      "bytes": 9055,
+      "sha256": "648b5d0a9ce0211ea95b9e3dd95f225eb2bf9f2da36ca23684183824dd57488a",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/text_editors.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/text_editors.py",
+      "bytes": 4499,
+      "sha256": "1c6a73e444491a7331c2a60f96fcfb5da51933a767eeb46c4789a8c90010525a",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/translaters.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/eval/translaters.py",
+      "bytes": 2071,
+      "sha256": "19840a0b3ce3984a37ab17d6844d8bb1f6c9e1a4356713c9061f86e577d510ac",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/__init__.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/__init__.py",
+      "bytes": 184,
+      "sha256": "1e033931b195cdeeb70771034da92021e2331bdc9b60a38bea64de5d16341a70",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/data_utils.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/data_utils.py",
+      "bytes": 2483,
+      "sha256": "0592001b8c86ecadf26e015e07772e6aaf7677d5f39aacd72c848fab5c1b182c",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/dataset.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/dataset.py",
+      "bytes": 6275,
+      "sha256": "0c59b1e566d24450f33fda6f0ad12be7a753f33b89e29223820e34b91aa8e899",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/dmwm_trainer.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/dmwm_trainer.py",
+      "bytes": 3983,
+      "sha256": "ee8c9653906ffa633c1ddfa492094fb40fd44a5f9bb00aa24933fdb12485f542",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/finetune.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/finetune.py",
+      "bytes": 6425,
+      "sha256": "5c62b574ca9cab70079872d8723836e8d505f18c980f7837b7fffe411d15ede6",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/losses.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/losses.py",
+      "bytes": 4164,
+      "sha256": "57704346e8c496f7388c0341ec9f84d9f92ec8822dcbd0efec8f0220ccefb24c",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/model_utils.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/finetuning/model_utils.py",
+      "bytes": 1106,
+      "sha256": "97e31774990d25deaabb9c1ac2eee9d07d9ba1e8f71a15215df4bc766d8f0841",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/quality/__init__.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/quality/__init__.py",
+      "bytes": 192,
+      "sha256": "56f01581c6f48518116075ed7adde5d363eecd6f7a9cd2256562e83df2eec71c",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/quality/llm_judge.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/quality/llm_judge.py",
+      "bytes": 9317,
+      "sha256": "ede8962ae8a890cf7f7fa62d518ac3b79b5276fd765a85f6b2e2d4b096347289",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/quality/ppl.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/quality/ppl.py",
+      "bytes": 2481,
+      "sha256": "aeefa8007cc68afb21dfe4fabf1c67f65b4c51df5b4aa5b22717147e718ba78c",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/__init__.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/__init__.py",
+      "bytes": 147,
+      "sha256": "e2e76e6081cf00e8fe7e1557651e65617e176a3569446df67b57b00203525c8f",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/scheme_config.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/scheme_config.py",
+      "bytes": 317,
+      "sha256": "a5fd67f40a51530232b129c92152a01263da389611dd942cc6e6d7e1c16b176a",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/text_editor.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/text_editor.py",
+      "bytes": 18473,
+      "sha256": "071453cee00692a5c61d4660ceb8d9d433c02b8604c67843ba0a37d65ce8333b",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/watermark_detector.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/watermark_detector.py",
+      "bytes": 2363,
+      "sha256": "b63c2ce72981033b8b3f22d2d5b3a1e81cc4c0be7a890193bb391d18642eac8b",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/watermark_types.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/watermark_types.py",
+      "bytes": 220,
+      "sha256": "10a6944293c0a22dacf2625c7021fbc69e255589a8a59f26fd7a199866696fcd",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/__init__.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/__init__.py",
+      "bytes": 147,
+      "sha256": "e2e76e6081cf00e8fe7e1557651e65617e176a3569446df67b57b00203525c8f",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/alternative_prf_schemes.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/alternative_prf_schemes.py",
+      "bytes": 7353,
+      "sha256": "001b70677405627a08cc9dbc317ec93127047fe8b6dd291a152ea27d111505f9",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyphs.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyphs.py",
+      "bytes": 8527,
+      "sha256": "fda15946e60308ef07a187cb3eb4e8f2052ab41087a513079ba168250ac21909",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/kgw_watermark.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/kgw_watermark.py",
+      "bytes": 11554,
+      "sha256": "aa76e0baaf4e52486c6825f1864521b0bd7a6d10f7f4df379f2cce15a1c2fe9f",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/normalizers.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/normalizers.py",
+      "bytes": 9174,
+      "sha256": "26e637e3523da1b47c5524df1c9c5dd7679153cf183fca8c571344f9b70796d0",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/requirements.txt",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/requirements.txt",
+      "bytes": 162,
+      "sha256": "f25f90d5eecf13d1a682f594932c9f6493a81f3fea8d53cf3b1ab2aae486d185",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/watermark_processor.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/watermark_processor.py",
+      "bytes": 30518,
+      "sha256": "d27439470a87793dbcb8cb6ca215f503a2c32db23b0574324e3f6414d4de612b",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/__init__.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/__init__.py",
+      "bytes": 1581,
+      "sha256": "2d8f53680a1e143a047d2b27672516502660c9dc4e648d993c54177216095b3e",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/categories.json",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/categories.json",
+      "bytes": 113862,
+      "sha256": "16ab92ae763c16ac399521e3ec11a52a3c5d40112015ecd5d4783019099e53a5",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/confusables_sept2022.json",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/confusables_sept2022.json",
+      "bytes": 425088,
+      "sha256": "3f5484a6efe0347dbc4f308913b87e70f59028e0bfe0b2100e10ddbf0996b056",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_frozen_detector_source",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/languages.json",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/watermarks/kgw/homoglyph_data/languages.json",
+      "bytes": 3474,
+      "sha256": "11639ddfc89da62f816f4f7f48a49edc837c19543d659f503f60b101de678d99",
+      "destination_sha_verified": true
+    },
+    {
+      "role": "scw_source_metadata",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/setup.py",
+      "relative": "WMKD_Benchmark_data/artifacts/scw/source/setup.py",
+      "bytes": 545,
+      "sha256": "34d71230d124ceae0005ca119f382da09f206810bc830185215ffa97e61bcc9f",
+      "destination_sha_verified": true
+    }
+  ],
+  "file_count": 70,
+  "source_uncompressed_bytes": 186895584,
+  "token_transferred": false,
+  "weights_transferred": false,
+  "local_package_sha_verified": true,
+  "network_payload_bytes_two_legs": 56165792
+}

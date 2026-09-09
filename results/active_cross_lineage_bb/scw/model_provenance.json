@@ -1,0 +1,74 @@
+{
+  "status": "FRESH_RELOAD_VERIFIED",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/scw_xbb_20260909/final_model",
+  "base_revision": "8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "initialization": "fresh_clean_Qwen_no_resume",
+  "evidence": "detector and/or utility in separate fresh processes; utility fresh_process_reload=True",
+  "files": [
+    {
+      "name": "added_tokens.json",
+      "bytes": 605,
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+    },
+    {
+      "name": "chat_template.jinja",
+      "bytes": 2507,
+      "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+    },
+    {
+      "name": "config.json",
+      "bytes": 1500,
+      "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 243,
+      "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf"
+    },
+    {
+      "name": "merges.txt",
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 4957560304,
+      "sha256": "778edd2c4bfad655402e654d3b43d44612386af8bc32fb2e3293116cc513da6f"
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 1214366696,
+      "sha256": "2c65be546c767432a5b9e96802784ce88081657b488dbdf572ecfacdcdccc75d"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 35617,
+      "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 499,
+      "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 11421995,
+      "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 4686,
+      "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614"
+    },
+    {
+      "name": "training_args.bin",
+      "bytes": 5905,
+      "sha256": "602edc1d7a4191a6e662a994c5655766afba158bc70c6e7508394afc21eacc58"
+    },
+    {
+      "name": "vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  ]
+}

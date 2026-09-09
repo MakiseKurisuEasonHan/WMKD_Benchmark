@@ -1,0 +1,134 @@
+{
+  "campaign": "ACTIVE_CROSS_LINEAGE_BEHAVIORAL_EXTRACTION_Bb",
+  "status": "FINAL_GIT_CLOSURE_IN_PROGRESS",
+  "target_ssh": "ssh -p 49453 root@connect.westd.seetacloud.com",
+  "old_host_execution_allowed": false,
+  "current_stage": "FINAL_EVIDENCE_GIT_SYNC",
+  "last_error": null,
+  "new_instance_ready": "READY",
+  "gpu": {
+    "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "memory_total_mib": 97887,
+    "memory_used_mib": 0,
+    "utilization_percent": 0
+  },
+  "disk": {
+    "available_display": "194G"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "cuda_runtime": "12.8",
+    "dependencies": "PASS_SOURCE_VERSION_MATCHED"
+  },
+  "repo": {
+    "status": "DEPLOYED_SPARSE_CHECKOUT",
+    "head": "2e236d133590a789a54e15d9f43f348d15082f59",
+    "bundle_sha256": "a3cf611a956a914ca24c9ac4e22043c3e00d10b8faa70684e51ad2a9706a6180"
+  },
+  "qwen": "FIXED_REVISION_SHA_AND_OFFLINE_RELOAD_PASS",
+  "datasets": "5/5 SHA_RECORD_TARGET_PASS",
+  "methods": {
+    "pnfp": {
+      "status": "COMPLETE",
+      "training_started": true,
+      "run_id": "pnfp_xbb_20260909",
+      "supervisor_pid": 6445,
+      "training_status": "COMPLETE",
+      "utility_status": "COMPLETE",
+      "detector_status": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive_status": "COMPLETE_PRIVATE_REMOTE_VERIFIED"
+    },
+    "evertracer": {
+      "status": "COMPLETE",
+      "training_started": true,
+      "run_id": "evertracer_xbb_20260909",
+      "supervisor_pid": 10417,
+      "archive_status": "COMPLETE_PRIVATE_REMOTE_VERIFIED",
+      "training_status": "COMPLETE",
+      "utility_status": "COMPLETE",
+      "scientific_closure": "COMPLETE"
+    },
+    "ctcc": {
+      "status": "COMPLETE",
+      "training_started": true,
+      "training_status": "COMPLETE",
+      "detector_status": "COMPLETE",
+      "utility_status": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive_status": "COMPLETE_PRIVATE_REMOTE_VERIFIED",
+      "run_id": "ctcc_xbb2_20260909"
+    },
+    "iseal": {
+      "status": "COMPLETE",
+      "training_started": true,
+      "training_status": "COMPLETE",
+      "detector_status": "N/A",
+      "utility_status": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive_status": "COMPLETE_PRIVATE_REMOTE_VERIFIED",
+      "run_id": "iseal_xbb_20260909"
+    },
+    "scw": {
+      "status": "COMPLETE",
+      "training_started": true,
+      "training_status": "COMPLETE",
+      "detector_status": "COMPLETE",
+      "utility_status": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive_status": "COMPLETE_PRIVATE_REMOTE_VERIFIED",
+      "run_id": "scw_xbb_20260909"
+    }
+  },
+  "auto_shutdown_armed": false,
+  "shutdown_note": "Authorized conditional shutdown; final Git/sync/no-worker checks not yet complete",
+  "updated_at": "2026-09-09T17:11:21.366413+00:00",
+  "asset_restore_blocker": null,
+  "follow_up": {
+    "automation_id": "wmkd-xbb",
+    "status": "ACTIVE",
+    "interval_minutes": 5
+  },
+  "deployment_workers": {
+    "qwen_download_pid": 2722,
+    "environment_install_pid": 2772,
+    "environment_alignment_pid": 3695
+  },
+  "environment_requirements_source": "requirements/evertracer_autodl.txt",
+  "next_safe_action": "Commit/push verified lightweight evidence, synchronize hosts, verify no workers, save shutdown receipt and apply authorized shutdown gate",
+  "old_source_ssh": "6002",
+  "old_source_status": "CONNECTED_CPU_ONLY_NO_SCIENTIFIC_WORKER",
+  "new_instance_modelscope_token_allowed": false,
+  "asset_transfer": "70/70 SHA_PASS",
+  "current_method": null,
+  "utility_assets": "OFFLINE_VALIDATION_AND_PNFP_UTILITY_PASS",
+  "archive_transfer": {
+    "host": "6002",
+    "pid": 5141,
+    "receipt": "results/active_cross_lineage_bb/pnfp/archive_transfer_receipt.json",
+    "status": "PASS_13_OF_13_SHA"
+  },
+  "approval_wait_resolved": true,
+  "continuous_authorization": "results/active_cross_lineage_bb/continuous_authorization_20260909.txt",
+  "archive_worker": {
+    "host": "6002",
+    "pid": 5412,
+    "script": "scripts/archive_active_cross_lineage_bb.py",
+    "runtime": "results/active_cross_lineage_bb/archive/runtime.json"
+  },
+  "shutdown_policy": {
+    "authorization": "results/active_cross_lineage_bb/overnight_authorization_20260910.txt",
+    "allowed_reasons": [
+      "CAMPAIGN_COMPLETE",
+      "USER_APPROVAL_TIMEOUT"
+    ],
+    "approval_timeout_minutes": 30,
+    "require_no_active_workers": true,
+    "require_no_authorized_next_action_for_timeout": true,
+    "healthy_work_must_continue": true,
+    "requires_git_push_evidence_sync_and_archive_closure_for_complete": true,
+    "no_shutdown_scheduled": true
+  },
+  "overnight_followup_interval_minutes": 5
+}

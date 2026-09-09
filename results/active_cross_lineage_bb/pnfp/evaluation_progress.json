@@ -1,0 +1,13 @@
+{
+  "stage": "utility",
+  "supervisor_pid": 7732,
+  "worker_pid": 7912,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/active_cross_lineage_bb_utility_worker.py",
+    "pnfp",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/pnfp_xbb_20260909/final_model"
+  ]
+}
