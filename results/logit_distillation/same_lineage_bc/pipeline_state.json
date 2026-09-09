@@ -1,8 +1,8 @@
 {
   "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
   "status": "ACTIVE",
-  "current_method": "pnfp",
-  "current_stage": "PNFP_FORMAL_TRAINING",
+  "current_method": "evertracer",
+  "current_stage": "EVERTRACER_ASSET_PREPARATION",
   "serial_order": [
     "pnfp",
     "evertracer",
@@ -13,12 +13,22 @@
   ],
   "methods": {
     "pnfp": {
-      "status": "RUNNING",
-      "supervisor_pid": 4239,
-      "run_id": "pnfp_bc_reconstructed_parent_20260910"
+      "status": "COMPLETE",
+      "run_id": "pnfp_bc_reconstructed_parent_20260910",
+      "training": "COMPLETE",
+      "training_steps": 7500,
+      "engineering_retry": 2,
+      "detector": "COMPLETE",
+      "detected": 110,
+      "utility": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive": "COMPLETE",
+      "archive_chain_pid": 4006,
+      "verification": "FULL_INDEPENDENT_DOWNLOAD"
     },
     "evertracer": {
-      "status": "NOT_STARTED"
+      "status": "NOT_STARTED",
+      "stage": "FROZEN_ASSET_RESTORATION"
     },
     "ctcc": {
       "status": "NOT_STARTED"

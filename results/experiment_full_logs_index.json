@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
   "generated_at": "2026-09-09T18:15:12.212563+00:00",
-  "object_count": 62,
+  "object_count": 63,
   "objects": [
     {
       "method": "PN-FP",
@@ -946,6 +946,18 @@
       "telemetry_records": 102,
       "modelscope_repo": null,
       "final_model_manifest": null
+    },
+    {
+      "method": "PN-FP",
+      "role": "same_lineage_logit_distillation_student",
+      "experiment": "Bc",
+      "run_id": "pnfp_bc_reconstructed_parent_20260910",
+      "full_log_path": "results/logit_distillation/same_lineage_bc/pnfp/full_experiment_log.json",
+      "full_log_sha256": "0b304a8dee7d8c15a9992fd35d0e852282728f41726588f98b211827742d9afb",
+      "scientific_status": "COMPLETED_MEASURED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-PNFP-Same-Lineage-Bc-Student"
     }
   ]
 }

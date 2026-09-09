@@ -69,6 +69,7 @@ def run(m):
         result=api.upload_folder(pre['repo'],'model',Path(pre['package']),path_in_repo='',allow_patterns=list(pre['files']),ignore_patterns=['.ms_upload_cache'],use_cache=False,disable_tqdm=True,sync_remote_repo=False,commit_message='Archive ONE approved preferred Same-Lineage Bc Student')
         assert re.fullmatch('[0-9a-f]{40}',result['commit_id'])
         engine.put(up,{'repo':pre['repo'],'revision':result['commit_id'],'uploaded_at':engine.now(),'upload_result':result})
+    engine.state(m,'INDEPENDENT_VERIFY')
     subprocess.run([sys.executable,'-B',__file__,'verify',m],check=True)
     receipt=engine.get(E/m/'modelscope_archive.json');assert receipt['status']=='COMPLETE'
     full=engine.get(E/m/'full_experiment_log.json');full.update(modelscope_archive=receipt,archive_status='COMPLETE_PRIVATE_REMOTE_VERIFIED');engine.put(E/m/'full_experiment_log.json',full)
@@ -79,6 +80,7 @@ if __name__=='__main__':
     engine.E=E;engine.O=E/'archive';engine.O.mkdir(parents=True,exist_ok=True)
     engine.ORDER=ORDER;engine.GIT=engine.get(E/m/'full_experiment_log.json')['source_git_commit']
     engine.REV='0cb88a4f764b7a12671c53f0838cd831a0843b95';engine.__file__=__file__
+    engine.UPLOAD_LOG_PATH=E/m/'archive_chain.log'
     engine.CARDS={k:'PRIVATE Same-Lineage Bc preferred Llama Student for reproducibility.' for k in ORDER};engine.prepare_one=prepare
     if mode=='run':run(m)
     elif mode=='verify':engine.verify_segment(m)

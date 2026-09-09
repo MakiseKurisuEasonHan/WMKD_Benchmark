@@ -86,8 +86,7 @@ def verify_segment(m):
   remote=files(api,repo,rev);byname={f['path']:f for f in remote};extras=set(byname)-set(expected)
   assert len(byname)==len(remote) and set(expected)<=set(byname) and extras<={'.gitattributes','.mdlignore'},'REMOTE_FILE_LIST_MISMATCH'
   # Preserve upload anomaly evidence; do not silently sample a retried upload.
-  log=O/'worker.log'
-  if not log.exists():log=O/'worker.log'
+  log=pathlib.Path(globals().get('UPLOAD_LOG_PATH',O/'worker.log'))
   if log.exists():
    body=log.read_text(errors='replace');start=body.rfind(m+' UPLOAD_PRIVATE');end=body.find(m+' INDEPENDENT_VERIFY',start)
    assert start>=0 and end>=start,'UPLOAD_LOG_WINDOW_UNCONFIRMED'

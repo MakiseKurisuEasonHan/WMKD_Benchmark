@@ -1,0 +1,29 @@
+{
+  "returncode": 0,
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+    "-u",
+    "-B",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_evaluate.py",
+    "--model-path",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/pnfp_bc_reconstructed_parent_20260910/final_model",
+    "--fingerprints",
+    "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_bb/pnfp_bb_20260904_055000/evaluation/detector_input/fingerprint_keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-models-base-Llama-3.2-3B-Instruct-nucleus_threshold-0.8-response_length-16-use_chat_template-True.json",
+    "--output",
+    "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/pnfp/detector_results.json",
+    "--label",
+    "pnfp_bc_reconstructed_parent_20260910",
+    "--count",
+    "1024",
+    "--key-length",
+    "16",
+    "--generation-response-length",
+    "16",
+    "--training-response-length",
+    "1",
+    "--seed",
+    "42",
+    "--use-chat-template"
+  ],
+  "completed_at": "2026-09-09T19:18:15.175728+00:00"
+}
