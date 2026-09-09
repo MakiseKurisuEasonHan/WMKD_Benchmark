@@ -1,10 +1,10 @@
 {
-  "scope": "current method evidence, excluding this manifest; original pre-closure bytes preserved in immutable scientific zip",
+  "scope": "After user-approved preferred model archival; excludes self",
   "files": [
     {
       "path": "results/active_cross_lineage_ba/iseal/closure_summary.json",
-      "bytes": 376,
-      "sha256": "d2f03173240eb7cdbe6ec5be99b46c775eb8158a07bcbdd7847195f1968bb6ad"
+      "bytes": 9170,
+      "sha256": "bbed85965ef58882a0b7c6604fce0f34a989280ab581f9c23e281bafdfa372e4"
     },
     {
       "path": "results/active_cross_lineage_ba/iseal/dataset_manifest.json",
@@ -23,13 +23,18 @@
     },
     {
       "path": "results/active_cross_lineage_ba/iseal/full_experiment_log.json",
-      "bytes": 12837,
-      "sha256": "b363be6fa290207ec8149f0c3211c4e1f67c327c4cb185d1878e923c80939e4c"
+      "bytes": 39972,
+      "sha256": "8e6df7721fa3d28754e2d0058c7d23c83105bd45b5aa87288518a275e2d1e9f2"
     },
     {
       "path": "results/active_cross_lineage_ba/iseal/model_provenance.json",
-      "bytes": 2360,
-      "sha256": "5c98e131eeeabc58f266c0d8d717f138a305c242d92fa99ba1e3030178a5fcae"
+      "bytes": 11220,
+      "sha256": "fba1a0f1092a3119e5d2a68f7e11e634875365a77fc914822607e4d280f6cfab"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/iseal/modelscope_archive.json",
+      "bytes": 8304,
+      "sha256": "e9dbf42f79020f15b8c5dfed8fba20c75256c1c36ca6f197b95f36902742c57b"
     },
     {
       "path": "results/active_cross_lineage_ba/iseal/protocol.json",

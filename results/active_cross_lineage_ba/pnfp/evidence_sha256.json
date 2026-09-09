@@ -1,5 +1,5 @@
 {
-  "scope": "current method evidence, excluding this manifest; original pre-closure bytes preserved in immutable scientific zip",
+  "scope": "After user-approved preferred model archival; excludes self",
   "files": [
     {
       "path": "results/active_cross_lineage_ba/pnfp/clean_qwen_baseline/detector_results.json",
@@ -23,8 +23,8 @@
     },
     {
       "path": "results/active_cross_lineage_ba/pnfp/closure_summary.json",
-      "bytes": 2035,
-      "sha256": "926735e27c2f4587128c443bad6f60b302ca167e1f56b373d05cd300168bbc5c"
+      "bytes": 6189,
+      "sha256": "ed6b82ae0640879f2e6cd24e1ec912dd224fde60ca5dfa4bfbc5a591098a075d"
     },
     {
       "path": "results/active_cross_lineage_ba/pnfp/dataset_manifest.json",
@@ -58,13 +58,18 @@
     },
     {
       "path": "results/active_cross_lineage_ba/pnfp/full_experiment_log.json",
-      "bytes": 16644,
-      "sha256": "de43a57e0c54dd9adcea5461ff3c3fd66729ac99f11ad46cf0cd758bd3f06461"
+      "bytes": 29478,
+      "sha256": "9fc670ebed7ac325066aeca9172aa0e75c3c6fac8345a3510d48f7af2d114ddd"
     },
     {
       "path": "results/active_cross_lineage_ba/pnfp/model_provenance.json",
-      "bytes": 2510,
-      "sha256": "68ac2791df23b58da9e1361d2a6c522603f5a9e160f85fcde1bf5a11c86612c4"
+      "bytes": 6773,
+      "sha256": "6994bf5afeaee8d87adc654bd5234bbef00e930ea21d7ec1a4913d3b863be4d8"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/pnfp/modelscope_archive.json",
+      "bytes": 3919,
+      "sha256": "756fa01009209a389cc785917d43cb72a433a5f0fedb8552e69e07fc54dc6ff2"
     },
     {
       "path": "results/active_cross_lineage_ba/pnfp/protocol.json",

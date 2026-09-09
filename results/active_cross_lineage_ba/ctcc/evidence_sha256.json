@@ -1,5 +1,5 @@
 {
-  "scope": "current method evidence, excluding this manifest; original pre-closure bytes preserved in immutable scientific zip",
+  "scope": "After user-approved preferred model archival; excludes self",
   "files": [
     {
       "path": "results/active_cross_lineage_ba/ctcc/clean_qwen_detector.json",
@@ -18,8 +18,8 @@
     },
     {
       "path": "results/active_cross_lineage_ba/ctcc/closure_summary.json",
-      "bytes": 440,
-      "sha256": "a11d5d0494406b4e7669af73c3782009540c2c7606f57ff228ba0602625171dc"
+      "bytes": 4657,
+      "sha256": "fa2cd6c0947f939ed4de8864da509ded2607112cdef04269254c4fbd17aafcf4"
     },
     {
       "path": "results/active_cross_lineage_ba/ctcc/dataset_manifest.json",
@@ -53,13 +53,18 @@
     },
     {
       "path": "results/active_cross_lineage_ba/ctcc/full_experiment_log.json",
-      "bytes": 16755,
-      "sha256": "c93061ce06121fff9754c6871d1040cb8b048433f0c0e1211e8ffade82900170"
+      "bytes": 29622,
+      "sha256": "a007869ea6f92602577e31d3206d0360e2766d701b28bd58c1e31e2bc5a42206"
     },
     {
       "path": "results/active_cross_lineage_ba/ctcc/model_provenance.json",
-      "bytes": 2488,
-      "sha256": "552a9c9eb5bed11e7b519868f81b1df63cc8d00df2f5124ae4f75432c582cc68"
+      "bytes": 6772,
+      "sha256": "3559ad58807fa6acce86897d9d60f7dc16b28dbf36b123f594b5f59d025a3612"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/ctcc/modelscope_archive.json",
+      "bytes": 3940,
+      "sha256": "3c9abcc30b24cafdb69cc1a6064394667492be00d6a5b2ad1e3d251d04c71d24"
     },
     {
       "path": "results/active_cross_lineage_ba/ctcc/protocol.json",

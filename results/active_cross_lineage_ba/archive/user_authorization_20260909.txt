@@ -1,0 +1,414 @@
+明确批准本次 Active Cross-Lineage Ba 五个 final Qwen Student 的 private ModelScope preferred archive。
+
+CAMPAIGN:
+ACTIVE_CROSS_LINEAGE_BA
+
+最终 scientific + evidence + Git closure 已完成。
+
+Canonical Git HEAD:
+d8a445735c1625ada4440eb7b2e8ae7b43eac703
+
+五个方法：
+1. PN-FP
+2. CTCC
+3. EverTracer
+4. iSeal
+5. SCW
+
+本次明确批准：
+每个正式实验最多上传 ONE 个 final preferred model archive 到 PRIVATE ModelScope。
+
+也就是说：
+
+PN-FP:
+PREFERRED_FINAL_MODEL = YES
+
+CTCC:
+PREFERRED_FINAL_MODEL = YES
+
+EverTracer:
+PREFERRED_FINAL_MODEL = YES
+
+iSeal:
+PREFERRED_FINAL_MODEL = YES
+
+SCW:
+PREFERRED_FINAL_MODEL = YES
+
+==================================================
+1. Scientific reason for retention
+==================================================
+
+PN-FP:
+- Cross-lineage Qwen Student training complete
+- detector valid
+- Clean Qwen = 43/1024
+- XBa = 84/1024
+- provides reproducible partial acquisition result
+
+CTCC:
+- training complete
+- detector valid
+- trigger = 0/95
+- negatives = 0/205
+- provides reproducible cross-lineage non-acquisition result
+
+EverTracer:
+- training complete
+- utility complete
+- canonical detector = N/A_CROSS_TOKENIZER
+- exploratory diagnostic complete
+- AUC = 0.523
+- TPR = 0.07
+- FPR = 0.05
+- model is still important for reproducing cross-tokenizer applicability limitation and exploratory analysis
+
+iSeal:
+- training complete
+- utility complete
+- detector = N/A_CROSS_ARCHITECTURE / Level 3
+- model remains scientifically useful for reproducibility of the architecture-bound applicability finding
+
+SCW:
+- training complete
+- detector valid
+- p = 0.9158855080604553
+- alpha = 0.001
+- detected = NO
+- provides reproducible cross-lineage endpoint
+
+Detector N/A does NOT disqualify EverTracer or iSeal from final model retention.
+
+==================================================
+2. Archive uniqueness policy
+==================================================
+
+Before any upload:
+
+For each method independently verify:
+
+- exact final model path
+- exact final weight SHA
+- tokenizer/config files
+- fresh-reload verification
+- training completed 7500/7500
+- model corresponds to correct method-specific frozen Ba20k
+- model initialized from fresh clean Qwen
+- no accidental continuation from another XBa Student
+
+Then search existing ModelScope/account archive inventory for duplicate final weights.
+
+Each formal experiment is allowed:
+AT MOST ONE preferred final archive.
+
+If an identical final model already exists remotely:
+do NOT upload duplicate.
+Record existing repo/revision instead.
+
+==================================================
+3. Archive contents
+==================================================
+
+Each preferred archive may contain only final reproducibility materials appropriate for a model archive, including:
+
+- final model weights
+- config.json
+- tokenizer files
+- generation/config files required for reload
+- provenance manifest
+- SHA256SUMS
+- minimal README / model card
+- license if required and already valid for redistribution/archive
+- experiment identity metadata
+
+Do NOT include:
+
+- optimizer state
+- intermediate checkpoints
+- trainer_state from intermediate runs unless explicitly required for final reload
+- caches
+- temporary files
+- raw detector arrays
+- raw utility evidence
+- large scientific logs already archived elsewhere
+- credentials
+- SSH keys
+- tokens
+
+Scientific raw evidence stays in the project evidence archive, not inside the model archive unless already part of canonical model packaging policy.
+
+==================================================
+4. Naming
+==================================================
+
+Use clear private ModelScope repository names that identify:
+
+Qwen2.5-3B
+WMKD
+Active
+Cross-Lineage
+Ba
+Method
+Student
+
+Suggested pattern:
+
+MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Ba-Student
+
+MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Ba-Student
+
+MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Ba-Student
+
+MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Ba-Student
+
+MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Ba-Student
+
+If existing project naming conventions differ:
+follow canonical naming convention,
+but preserve unambiguous method + cross-lineage + Ba identity.
+
+==================================================
+5. Serialization order
+==================================================
+
+Uploads must be strictly serial.
+
+Order:
+
+1. PN-FP
+2. CTCC
+3. EverTracer
+4. iSeal
+5. SCW
+
+For each method:
+
+A. build preferred archive
+B. local SHA verification
+C. upload PRIVATE ModelScope
+D. obtain immutable remote revision
+E. independently download/verify remote archive
+F. compare file count, byte sizes and SHA
+G. record receipt
+H. only then continue to next method
+
+Do NOT upload multiple large models concurrently.
+
+==================================================
+6. Remote verification
+==================================================
+
+For each uploaded model:
+
+perform independent verification.
+
+Must verify:
+
+- remote repo exists
+- repo is PRIVATE
+- immutable revision recorded
+- expected file list present
+- every file size matches
+- every file SHA matches
+- SHA256SUMS itself verified
+- model can be identified as correct experiment artifact from provenance
+
+If an independent download verification copy is created:
+it may be deleted only after:
+- 100% SHA/size verification
+- canonical local final model remains
+- preferred source archive remains
+- remote immutable revision is recorded
+- deletion is separately safe under existing cleanup rules
+
+Do not silently delete final models.
+
+==================================================
+7. Scientific labels in model cards
+==================================================
+
+Each model card / README must use bounded wording.
+
+PN-FP:
+“Cross-lineage Ba Student reproducing partial PN-FP detector acquisition relative to clean Qwen baseline.”
+
+CTCC:
+“Cross-lineage Ba Student with no observed CTCC IAMALIVE trigger acquisition under the frozen detector.”
+
+EverTracer:
+“Cross-lineage Ba Student for which the canonical EverTracer detector is not cross-tokenizer comparable; exploratory diagnostic is reported separately.”
+
+iSeal:
+“Cross-lineage Ba Student with iSeal detector not applicable under the frozen cross-architecture implementation.”
+
+SCW:
+“Cross-lineage Ba Student remaining non-detected under the frozen SCW statistical test.”
+
+Do NOT write:
+
+- watermark successfully transferred
+- watermark erased
+- detector failure proves no watermark
+- EverTracer failed
+- iSeal failed
+
+==================================================
+8. Provenance
+==================================================
+
+Each archive must record:
+
+Base Student:
+Qwen/Qwen2.5-3B-Instruct
+
+Revision:
+8f4992eda43eea7c770690ddc0de8f732da246f5
+
+Training:
+- full parameter
+- BF16
+- 20k frozen method-specific Ba data
+- 3 epochs
+- LR 1e-5
+- effective batch size 8
+- seed 42
+- fresh Qwen initialization
+- 7500 updates
+
+Also record:
+
+- method
+- dataset SHA
+- final model SHA
+- Git closure SHA:
+  d8a445735c1625ada4440eb7b2e8ae7b43eac703
+- detector applicability level
+- utility summary
+- final scientific status
+
+==================================================
+9. CPU-only / storage awareness
+==================================================
+
+Current instance is CPU_ONLY.
+
+No GPU is required for archive upload/verification unless reload verification unexpectedly requires GPU.
+
+Do not switch back to paid GPU mode just for ModelScope archival.
+
+Current local final models must remain preserved.
+
+If disk space becomes insufficient because of independent remote verification downloads:
+
+- do not delete canonical models
+- do not delete scientific evidence
+- prefer deleting only fully verified redundant download copies
+- if a new destructive cleanup decision is required outside already authorized scope, stop and ask
+
+==================================================
+10. Update project records
+==================================================
+
+After each successful archive:
+
+update corresponding:
+
+- model provenance
+- archive receipt
+- full_experiment_log
+- closure summary
+
+After all five complete:
+
+update:
+
+- active_cross_lineage_ba master report
+- model retention table
+- experiment_full_logs_index if archive metadata is indexed there
+- PROJECT_STATUS / EXPERIMENT_LOG / DECISIONS only if project convention requires it
+
+Then create one final archive summary file, e.g.:
+
+results/active_cross_lineage_ba/model_archive_summary.json
+
+containing:
+
+method
+private repo
+immutable revision
+archive SHA256
+file count
+total size
+remote verification
+uniqueness result
+upload timestamp
+final status
+
+==================================================
+11. Git receipt after archive metadata
+==================================================
+
+Once the five archive receipts/model provenance updates are complete:
+
+perform final lightweight Git audit.
+
+If only expected archive metadata/report changes exist:
+commit and push to the same private canonical GitHub repo.
+
+No weights in Git.
+
+Report final Git SHA.
+
+If push approval is required again by policy:
+stop and request explicit approval rather than bypassing it.
+
+==================================================
+12. Final status report
+==================================================
+
+After all five preferred archives are complete, report:
+
+PNFP_MODELSCOPE_STATUS =
+PNFP_REMOTE_REPO =
+PNFP_REMOTE_REVISION =
+PNFP_ARCHIVE_SHA256 =
+PNFP_REMOTE_VERIFICATION =
+
+CTCC_MODELSCOPE_STATUS =
+CTCC_REMOTE_REPO =
+CTCC_REMOTE_REVISION =
+CTCC_ARCHIVE_SHA256 =
+CTCC_REMOTE_VERIFICATION =
+
+EVERTRACER_MODELSCOPE_STATUS =
+EVERTRACER_REMOTE_REPO =
+EVERTRACER_REMOTE_REVISION =
+EVERTRACER_ARCHIVE_SHA256 =
+EVERTRACER_REMOTE_VERIFICATION =
+
+ISEAL_MODELSCOPE_STATUS =
+ISEAL_REMOTE_REPO =
+ISEAL_REMOTE_REVISION =
+ISEAL_ARCHIVE_SHA256 =
+ISEAL_REMOTE_VERIFICATION =
+
+SCW_MODELSCOPE_STATUS =
+SCW_REMOTE_REPO =
+SCW_REMOTE_REVISION =
+SCW_ARCHIVE_SHA256 =
+SCW_REMOTE_VERIFICATION =
+
+UNIQUENESS_CHECK =
+MODEL_ARCHIVE_SUMMARY =
+FINAL_GIT_HEAD =
+FINAL_CAMPAIGN_STATUS =
+
+Expected final campaign state:
+
+ACTIVE_CROSS_LINEAGE_BA
+SCIENTIFIC = COMPLETE
+EVIDENCE = COMPLETE
+GIT = COMPLETE
+MODEL_ARCHIVAL = COMPLETE
+
+Do not start Active Cross-Lineage Bb or any new experiment after this.

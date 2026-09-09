@@ -1,5 +1,5 @@
 {
-  "scope": "current method evidence, excluding this manifest; original pre-closure bytes preserved in immutable scientific zip",
+  "scope": "After user-approved preferred model archival; excludes self",
   "files": [
     {
       "path": "results/active_cross_lineage_ba/evertracer/applicability_before_narrow_audit_20260908.json",
@@ -8,8 +8,8 @@
     },
     {
       "path": "results/active_cross_lineage_ba/evertracer/closure_summary.json",
-      "bytes": 381,
-      "sha256": "0f2892a23bc2eaab3d4b66006c7702f4fae473149aab56eb87e67be72f133cf7"
+      "bytes": 9180,
+      "sha256": "b57c356cc1a38fd0ed47cea79b0dd0016b36ec2f7c33ce49d5f24f45c9628578"
     },
     {
       "path": "results/active_cross_lineage_ba/evertracer/dataset_manifest.json",
@@ -63,8 +63,8 @@
     },
     {
       "path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
-      "bytes": 21069,
-      "sha256": "0ca77262601a3fc317f2da4f0e50f1f973c015b8083dac58b496595f1f07ff0d"
+      "bytes": 48055,
+      "sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc"
     },
     {
       "path": "results/active_cross_lineage_ba/evertracer/history_before_narrow_audit_20260908/closure_summary.json",
@@ -88,8 +88,13 @@
     },
     {
       "path": "results/active_cross_lineage_ba/evertracer/model_provenance.json",
-      "bytes": 2506,
-      "sha256": "1067baf084549ec04c2a59dd8f197f0ce44b139f78c6f74d29d1fa1fd72f5ce9"
+      "bytes": 11371,
+      "sha256": "888aca04d4133d260cdd0b0aa4bbc372c220b72d7e02d8e2ee2bb29ee4764625"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/evertracer/modelscope_archive.json",
+      "bytes": 8309,
+      "sha256": "83ebd6a586ee5256808716b8f51eab503a28318b990ff3beb864a13f9220cea6"
     },
     {
       "path": "results/active_cross_lineage_ba/evertracer/narrow_audit_user_authorization_20260908.txt",

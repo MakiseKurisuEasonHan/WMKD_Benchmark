@@ -1,0 +1,258 @@
+pnfp BUILD_PACKAGE
+pnfp UPLOAD_PRIVATE
+2026-09-09 14:53:19,611 | INFO    | modelscope_hub.upload | Preparing files to upload ...
+2026-09-09 14:53:19,616 | INFO    | modelscope_hub.upload | Prepared 16 files for upload.
+2026-09-09 14:53:19,616 | INFO    | modelscope_hub.upload | Checking 16 files to upload ...
+2026-09-09 14:53:19,671 | INFO    | modelscope_hub.upload | Adaptive batch size: 16 (for 16 files)
+2026-09-09 14:53:19,672 | INFO    | modelscope_hub.upload | Scan complete: 16 total, 0 committed (skip), 16 to process.
+2026-09-09 14:53:19,672 | INFO    | modelscope_hub.upload | Uploading 16 file(s) in 1 batch(es) of size 16 (pipeline mode).
+2026-09-09 14:53:19,958 | INFO    | modelscope_hub.upload | Blob 8831e4f1 already exists globally, reuse.
+2026-09-09 14:53:20,221 | INFO    | modelscope_hub.upload | Blob ca10d7e9 already exists globally, reuse.
+2026-09-09 14:53:20,245 | INFO    | modelscope_hub.upload | Blob 145191e3 already exists globally, reuse.
+2026-09-09 15:02:14,400 | INFO    | modelscope_hub.upload | Batch 1/1: committed 16 file(s).
+============================================================
+Upload Report
+------------------------------------------------------------
+  Total files       : 16
+  Skipped (cached)  : 0
+  Normal committed  : 11
+  LFS existed       : 3
+  LFS uploaded PUT  : 2
+  Failed            : 0
+  Committed         : 16
+  Deleted (sync)    : 0
+  Elapsed           : 534.8s
+============================================================
+pnfp INDEPENDENT_VERIFY
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_STREAM_VERIFY
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp REMOTE_FILE_VERIFIED
+pnfp COMPLETE
+ctcc BUILD_PACKAGE
+ctcc UPLOAD_PRIVATE
+2026-09-09 15:15:22,603 | INFO    | modelscope_hub.upload | Preparing files to upload ...
+2026-09-09 15:15:22,606 | INFO    | modelscope_hub.upload | Prepared 16 files for upload.
+2026-09-09 15:15:22,606 | INFO    | modelscope_hub.upload | Checking 16 files to upload ...
+2026-09-09 15:15:22,667 | INFO    | modelscope_hub.upload | Adaptive batch size: 16 (for 16 files)
+2026-09-09 15:15:22,668 | INFO    | modelscope_hub.upload | Scan complete: 16 total, 0 committed (skip), 16 to process.
+2026-09-09 15:15:22,668 | INFO    | modelscope_hub.upload | Uploading 16 file(s) in 1 batch(es) of size 16 (pipeline mode).
+2026-09-09 15:15:22,964 | INFO    | modelscope_hub.upload | Blob 8831e4f1 already exists globally, reuse.
+2026-09-09 15:15:23,126 | INFO    | modelscope_hub.upload | Blob 145191e3 already exists globally, reuse.
+2026-09-09 15:15:23,215 | INFO    | modelscope_hub.upload | Blob ca10d7e9 already exists globally, reuse.
+2026-09-09 15:24:29,715 | INFO    | modelscope_hub.upload | Batch 1/1: committed 16 file(s).
+============================================================
+Upload Report
+------------------------------------------------------------
+  Total files       : 16
+  Skipped (cached)  : 0
+  Normal committed  : 11
+  LFS existed       : 3
+  LFS uploaded PUT  : 2
+  Failed            : 0
+  Committed         : 16
+  Deleted (sync)    : 0
+  Elapsed           : 547.1s
+============================================================
+ctcc INDEPENDENT_VERIFY
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_STREAM_VERIFY
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc REMOTE_FILE_VERIFIED
+ctcc COMPLETE
+evertracer BUILD_PACKAGE
+evertracer UPLOAD_PRIVATE
+2026-09-09 15:44:25,531 | INFO    | modelscope_hub.upload | Preparing files to upload ...
+2026-09-09 15:44:25,532 | INFO    | modelscope_hub.upload | Prepared 16 files for upload.
+2026-09-09 15:44:25,532 | INFO    | modelscope_hub.upload | Checking 16 files to upload ...
+2026-09-09 15:44:25,589 | INFO    | modelscope_hub.upload | Adaptive batch size: 16 (for 16 files)
+2026-09-09 15:44:25,589 | INFO    | modelscope_hub.upload | Scan complete: 16 total, 0 committed (skip), 16 to process.
+2026-09-09 15:44:25,589 | INFO    | modelscope_hub.upload | Uploading 16 file(s) in 1 batch(es) of size 16 (pipeline mode).
+2026-09-09 15:44:25,925 | INFO    | modelscope_hub.upload | Blob 8831e4f1 already exists globally, reuse.
+2026-09-09 15:44:26,001 | INFO    | modelscope_hub.upload | Blob 145191e3 already exists globally, reuse.
+2026-09-09 15:44:26,164 | INFO    | modelscope_hub.upload | Blob ca10d7e9 already exists globally, reuse.
+2026-09-09 15:53:27,764 | INFO    | modelscope_hub.upload | Batch 1/1: committed 16 file(s).
+============================================================
+Upload Report
+------------------------------------------------------------
+  Total files       : 16
+  Skipped (cached)  : 0
+  Normal committed  : 11
+  LFS existed       : 3
+  LFS uploaded PUT  : 2
+  Failed            : 0
+  Committed         : 16
+  Deleted (sync)    : 0
+  Elapsed           : 542.2s
+============================================================
+evertracer INDEPENDENT_VERIFY
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer REMOTE_SEGMENT_VERIFIED
+evertracer COMPLETE
+iseal BUILD_PACKAGE
+iseal UPLOAD_PRIVATE
+2026-09-09 15:54:46,326 | INFO    | modelscope_hub.upload | Preparing files to upload ...
+2026-09-09 15:54:46,328 | INFO    | modelscope_hub.upload | Prepared 16 files for upload.
+2026-09-09 15:54:46,328 | INFO    | modelscope_hub.upload | Checking 16 files to upload ...
+2026-09-09 15:54:46,386 | INFO    | modelscope_hub.upload | Adaptive batch size: 16 (for 16 files)
+2026-09-09 15:54:46,387 | INFO    | modelscope_hub.upload | Scan complete: 16 total, 0 committed (skip), 16 to process.
+2026-09-09 15:54:46,387 | INFO    | modelscope_hub.upload | Uploading 16 file(s) in 1 batch(es) of size 16 (pipeline mode).
+2026-09-09 15:54:46,725 | INFO    | modelscope_hub.upload | Blob 8831e4f1 already exists globally, reuse.
+2026-09-09 15:54:46,775 | INFO    | modelscope_hub.upload | Blob 145191e3 already exists globally, reuse.
+2026-09-09 15:54:46,908 | INFO    | modelscope_hub.upload | Blob ca10d7e9 already exists globally, reuse.
+2026-09-09 16:03:43,132 | INFO    | modelscope_hub.upload | Batch 1/1: committed 16 file(s).
+============================================================
+Upload Report
+------------------------------------------------------------
+  Total files       : 16
+  Skipped (cached)  : 0
+  Normal committed  : 11
+  LFS existed       : 3
+  LFS uploaded PUT  : 2
+  Failed            : 0
+  Committed         : 16
+  Deleted (sync)    : 0
+  Elapsed           : 536.8s
+============================================================
+iseal INDEPENDENT_VERIFY
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal REMOTE_SEGMENT_VERIFIED
+iseal COMPLETE
+scw BUILD_PACKAGE
+scw UPLOAD_PRIVATE
+2026-09-09 16:04:59,957 | INFO    | modelscope_hub.upload | Preparing files to upload ...
+2026-09-09 16:04:59,958 | INFO    | modelscope_hub.upload | Prepared 16 files for upload.
+2026-09-09 16:04:59,958 | INFO    | modelscope_hub.upload | Checking 16 files to upload ...
+2026-09-09 16:05:00,013 | INFO    | modelscope_hub.upload | Adaptive batch size: 16 (for 16 files)
+2026-09-09 16:05:00,013 | INFO    | modelscope_hub.upload | Scan complete: 16 total, 0 committed (skip), 16 to process.
+2026-09-09 16:05:00,013 | INFO    | modelscope_hub.upload | Uploading 16 file(s) in 1 batch(es) of size 16 (pipeline mode).
+2026-09-09 16:05:00,313 | INFO    | modelscope_hub.upload | Blob 8831e4f1 already exists globally, reuse.
+2026-09-09 16:05:00,526 | INFO    | modelscope_hub.upload | Blob 145191e3 already exists globally, reuse.
+2026-09-09 16:05:00,609 | INFO    | modelscope_hub.upload | Blob ca10d7e9 already exists globally, reuse.
+2026-09-09 16:13:58,118 | INFO    | modelscope_hub.upload | Batch 1/1: committed 16 file(s).
+============================================================
+Upload Report
+------------------------------------------------------------
+  Total files       : 16
+  Skipped (cached)  : 0
+  Normal committed  : 11
+  LFS existed       : 3
+  LFS uploaded PUT  : 2
+  Failed            : 0
+  Committed         : 16
+  Deleted (sync)    : 0
+  Elapsed           : 538.2s
+============================================================
+scw INDEPENDENT_VERIFY
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw REMOTE_SEGMENT_VERIFIED
+scw COMPLETE
+ALL ARCHIVAL_COMPLETE

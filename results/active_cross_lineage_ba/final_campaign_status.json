@@ -1,7 +1,7 @@
 {
   "campaign": "ACTIVE_CROSS_LINEAGE_BA",
   "recorded_at": "2026-09-09T06:17:32.799070+00:00",
-  "status": "SCIENTIFIC_AND_CPU_EVIDENCE_COMPLETE",
+  "status": "MODEL_ARCHIVAL_COMPLETE_GIT_METADATA_CLOSURE_PENDING",
   "methods": {
     "pnfp": "COMPLETE",
     "evertracer": "COMPLETE",
@@ -14,5 +14,14 @@
   "shutdown_provenance": "UNVERIFIED",
   "git_receipt": "results/active_cross_lineage_ba/final_git_receipt_20260909.json",
   "archive": "WAITING_USER_SELECTION",
-  "new_experiments_authorized": false
+  "new_experiments_authorized": false,
+  "campaign_closure_status": "COMPLETE",
+  "final_git_sha": "d8a445735c1625ada4440eb7b2e8ae7b43eac703",
+  "git_push_status": "SUCCESS",
+  "three_way_sync": "PASS",
+  "auto_shutdown": false,
+  "shutdown_armed": false,
+  "next_action": "Archive metadata Git closure only; no new experiment.",
+  "model_archival": "COMPLETE",
+  "preferred_model_selection": "APPROVED_ALL_FIVE"
 }

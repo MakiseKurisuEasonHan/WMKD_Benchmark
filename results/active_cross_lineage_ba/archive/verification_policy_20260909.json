@@ -1,0 +1,42 @@
+{
+  "policy_date": "2026-09-09",
+  "scope": "Archive integrity only; scientific results and preferred decisions unchanged",
+  "order": [
+    "ctcc",
+    "evertracer",
+    "iseal",
+    "scw"
+  ],
+  "pnfp": "Retain existing full independent verification; no rerun",
+  "ctcc": "Do not interrupt/restart/change current full verifier",
+  "remaining_default": "MANIFEST_PLUS_SEGMENT",
+  "chunk_bytes": 2097152,
+  "positions": [
+    "beginning",
+    "quarter centered",
+    "middle centered",
+    "three-quarter centered",
+    "ending"
+  ],
+  "required": [
+    "source file list/count/bytes/per-file SHA256",
+    "SHA256SUMS and provenance",
+    "private remote repository",
+    "immutable revision",
+    "matching payload list/count/size/identity",
+    "metadata and small files fully fetched with SHA verification"
+  ],
+  "managed_extras": "Platform .gitattributes/.mdlignore separately enumerated and fully verified; payload count must match source",
+  "full_download_triggers": [
+    "file list/size mismatch",
+    "upload retry/interruption/partial failure",
+    "segment SHA mismatch",
+    "revision/metadata/API inconsistency",
+    "integrity cannot be confirmed",
+    "explicit user request"
+  ],
+  "segment_label": "REMOTE_MANIFEST_AND_SEGMENT_VERIFICATION=PASS",
+  "full_label": "FULL_INDEPENDENT_DOWNLOAD_SHA_VERIFIED=PASS",
+  "source_models_preserved": true,
+  "parallel_large_transfers": false
+}

@@ -62,3 +62,104 @@ shutdown_provenance=UNVERIFIED。旧overnight_shutdown_receipt.json与final_camp
 五份final model均暂存原路径，SHA彼此不同。均建议作为独立正式实验的复现对象进入后续preferred选择（详见model_retention_recommendations.json），只是建议，不是已批准preferred或已上传。EverTracer/iSeal的适用性本身有科学价值。此次未重复查询全ModelScope账户，已归档与否只依据当前campaign缺少上传receipt，不能据此断言全账户绝无副本。
 
 下一步仅等待用户选择最终ModelScope preferred archives；不启动新实验、不自动上传/删除模型、不在本报告交付前关机。
+
+## 五个 preferred model 的最终私有归档（2026-09-09）
+
+用户已独立批准五个final Student为preferred reproducibility artifact；该批准不改变detector结论。此前“等待模型选择/未上传”文字是归档前历史状态，现由本节覆盖。
+| 方法 | PRIVATE repo | immutable revision | SHA256(SHA256SUMS) | files | bytes |
+|---|---|---|---|---:|---:|
+| pnfp | MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Ba-Student | 4d7a589c21c927773876b2776e3eb794f1444b49 | d7b026ce9bc01975cac7d5b110929781861c4b2ce1bd26546dbe4a32d67d56ad | 16 | 6187856918 |
+| ctcc | MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Ba-Student | 62ccf1df246568fd50ecbbf787eac3ab92568b94 | d152dda37fd85ceb854316d9e2ebed87adaf443ae3ed7717c6ac474734307168 | 16 | 6187856979 |
+| evertracer | MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Ba-Student | 5768251299ef75850c207344a06f4807c9c6800e | d4b5e3a20181fb9a3ad8f8793e8ec0dc3c67d6ed8b16281e14fc72c30b0ccfaa | 16 | 6187857250 |
+| iseal | MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Ba-Student | 79fb30ab4d77f8be620dfa9cbc4d6a4953d92860 | 6c2ebe329ac75b07a1061b215bafed3cef54792708a19df369c219a2c40871a9 | 16 | 6187856908 |
+| scw | MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Ba-Student | b35c7451410c5f85d16f5120eeea9d154524e278 | 455828d36760064879f9d9bcca3ebdb733860afff7200407677ae6159e49ce16 | 16 | 6187856917 |
+
+各模型证据等级见 verification_mode：PNFP/CTCC 保留完整独立下载逐文件 SHA 验证；后续模型默认 manifest 加固定位置 segment 验证，异常才升级 full download。分段验证不代表100%远端字节经过独立重下载。源final model和硬链接源包均保留。没有落地大型验证副本，没有删除任何模型。
+账户23个model仓库在上传前无匹配权重分片；每个实验只创建一个preferred archive。远端自动生成的.gitattributes/.mdlignore如存在，也另行下载验证并记录。
+模型来源Git为d8a445735c1625ada4440eb7b2e8ae7b43eac703；归档metadata Git闭环SHA见archive/final_git_receipt.json。shutdown_provenance仍UNVERIFIED。
+
+Verification details:
+```json
+{
+  "pnfp": {
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Ba-Student",
+    "revision": "4d7a589c21c927773876b2776e3eb794f1444b49",
+    "archive_sha256": "d7b026ce9bc01975cac7d5b110929781861c4b2ce1bd26546dbe4a32d67d56ad",
+    "file_count": 16,
+    "total_bytes": 6187856918,
+    "remote_verification": "PASS_ALL_FILES_SIZE_AND_SHA",
+    "uploaded_at": "2026-09-09T07:02:14.402703+00:00",
+    "verified_at": "2026-09-09T07:14:15.878172+00:00",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "PASS",
+    "segment_count": 0,
+    "segment_matches": 0,
+    "full_remote_download_performed": true,
+    "reason_if_full_download_triggered": "Existing full verification retained"
+  },
+  "ctcc": {
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Ba-Student",
+    "revision": "62ccf1df246568fd50ecbbf787eac3ab92568b94",
+    "archive_sha256": "d152dda37fd85ceb854316d9e2ebed87adaf443ae3ed7717c6ac474734307168",
+    "file_count": 16,
+    "total_bytes": 6187856979,
+    "remote_verification": "PASS_ALL_FILES_SIZE_AND_SHA",
+    "uploaded_at": "2026-09-09T07:24:29.716373+00:00",
+    "verified_at": "2026-09-09T07:43:17.591784+00:00",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "PASS",
+    "segment_count": 0,
+    "segment_matches": 0,
+    "full_remote_download_performed": true,
+    "reason_if_full_download_triggered": "Existing full verification retained; user CTCC exception"
+  },
+  "evertracer": {
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Ba-Student",
+    "revision": "5768251299ef75850c207344a06f4807c9c6800e",
+    "archive_sha256": "d4b5e3a20181fb9a3ad8f8793e8ec0dc3c67d6ed8b16281e14fc72c30b0ccfaa",
+    "file_count": 16,
+    "total_bytes": 6187857250,
+    "remote_verification": "REMOTE_MANIFEST_AND_SEGMENT_VERIFICATION_PASS",
+    "uploaded_at": "2026-09-09T07:53:27.766168+00:00",
+    "verified_at": "2026-09-09T07:53:41.609894+00:00",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "segment_count": 10,
+    "segment_matches": 10,
+    "full_remote_download_performed": false,
+    "reason_if_full_download_triggered": null
+  },
+  "iseal": {
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Ba-Student",
+    "revision": "79fb30ab4d77f8be620dfa9cbc4d6a4953d92860",
+    "archive_sha256": "6c2ebe329ac75b07a1061b215bafed3cef54792708a19df369c219a2c40871a9",
+    "file_count": 16,
+    "total_bytes": 6187856908,
+    "remote_verification": "REMOTE_MANIFEST_AND_SEGMENT_VERIFICATION_PASS",
+    "uploaded_at": "2026-09-09T08:03:43.134097+00:00",
+    "verified_at": "2026-09-09T08:03:55.147228+00:00",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "segment_count": 10,
+    "segment_matches": 10,
+    "full_remote_download_performed": false,
+    "reason_if_full_download_triggered": null
+  },
+  "scw": {
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Ba-Student",
+    "revision": "b35c7451410c5f85d16f5120eeea9d154524e278",
+    "archive_sha256": "455828d36760064879f9d9bcca3ebdb733860afff7200407677ae6159e49ce16",
+    "file_count": 16,
+    "total_bytes": 6187856917,
+    "remote_verification": "REMOTE_MANIFEST_AND_SEGMENT_VERIFICATION_PASS",
+    "uploaded_at": "2026-09-09T08:13:58.119973+00:00",
+    "verified_at": "2026-09-09T08:14:11.593356+00:00",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "segment_count": 10,
+    "segment_matches": 10,
+    "full_remote_download_performed": false,
+    "reason_if_full_download_triggered": null
+  }
+}
+```

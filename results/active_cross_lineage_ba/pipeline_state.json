@@ -1,6 +1,6 @@
 {
   "campaign": "ACTIVE_CROSS_LINEAGE_BA",
-  "status": "CPU_CLOSURE_COMPLETE_WAITING_ARCHIVE_SELECTION",
+  "status": "MODEL_ARCHIVAL_COMPLETE_GIT_METADATA_CLOSURE_PENDING",
   "order": [
     "pnfp",
     "evertracer",
@@ -15,7 +15,7 @@
   "shutdown_authorized_only_after_all_terminal_and_closure": false,
   "shutdown_armed": false,
   "active_bb_trajectories": "PAUSED",
-  "next_action": "Deliver final report; await separate user preferred ModelScope archive selection. No new experiment, upload, deletion or shutdown.",
+  "next_action": "Archive metadata Git closure only; no new experiment.",
   "automation_id": "active-cross-lineage-ba-campaign",
   "automation_status": "DELETED_AFTER_SCIENTIFIC_COMPLETION",
   "user_direct_chat_authorization": "results/active_cross_lineage_ba/direct_chat_automation_authorization_20260908.txt",
@@ -107,5 +107,19 @@
   "auto_shutdown": false,
   "shutdown_provenance": "UNVERIFIED",
   "git_receipt": "results/active_cross_lineage_ba/final_git_receipt_20260909.json",
-  "user_approval_wait_timer_active": false
+  "user_approval_wait_timer_active": false,
+  "campaign_closure_status": "COMPLETE",
+  "final_git_sha": "d8a445735c1625ada4440eb7b2e8ae7b43eac703",
+  "git_push_status": "SUCCESS",
+  "three_way_sync": "PASS",
+  "model_archival": "COMPLETE",
+  "preferred_model_selection": "APPROVED_ALL_FIVE",
+  "archive_runtime": "results/active_cross_lineage_ba/archive/runtime.json",
+  "archive_order": [
+    "pnfp",
+    "ctcc",
+    "evertracer",
+    "iseal",
+    "scw"
+  ]
 }

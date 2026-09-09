@@ -1,0 +1,15 @@
+{
+  "pid": 3383,
+  "started_at": "2026-09-09T06:52:54.318101+00:00",
+  "order": [
+    "pnfp",
+    "ctcc",
+    "evertracer",
+    "iseal",
+    "scw"
+  ],
+  "mode": "CPU_ONLY_SERIAL_PRIVATE_UPLOAD_AND_INDEPENDENT_VERIFY",
+  "script": "scripts/archive_active_cross_lineage_ba.py",
+  "model_deletion": false,
+  "gpu_tasks": false
+}
