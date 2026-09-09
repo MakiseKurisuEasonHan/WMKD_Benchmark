@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-09-09T17:38:48.024973+00:00",
+  "hostname": "autodl-container-e3ll76182f-7ba50cae",
+  "git_head": "5bec2cd9ae224d7889600d30b87dcb79564bc749",
+  "free_bytes": 169870733312,
+  "process_listing": "   PID   PPID     ELAPSED COMMAND\n     1      0    08:19:13 bash /init/boot/boot.sh\n   882      1    08:19:06 /bin/supervisord -c /init/supervisor/supervisor.ini\n   902    882    08:19:06 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups\n   903    882    08:19:06 /root/miniconda3/bin/python /root/miniconda3/bin/jupyter-lab --allow-root --config=/init/jupyter/jupyter_config.py\n   904    882    08:19:06 /root/miniconda3/bin/python /root/miniconda3/bin/tensorboard --host 0.0.0.0 --port 6007 --logdir /root/tf-logs\n   905    882    08:19:06 proxy -c /init/proxy/proxy-hot-backup.ini\n   907    882    08:19:06 autopanel serve --work-dir=/root/autodl-tmp --cache-dir=/root/autodl-tmp\n   908    882    08:19:06 proxy -c /init/proxy/proxy.ini\n   965    904    08:19:06 /root/miniconda3/lib/python3.12/site-packages/tensorboard_data_server/bin/server --logdir=/root/tf-logs --reload=5 --samples-per-plugin= --port=0 --port-file=/tmp/tensorboard_data_server_jhs41zym/port --die-after-stdin --error-file=/tmp/tensorboard_data_server_jhs41zym/startup_error\n 21170    902       00:03 sshd: root@notty\n 21183  21170       00:00 /root/miniconda3/bin/python -B -c import sys,base64;exec(base64.b64decode(sys.stdin.read()))\n 21184  21183       00:00 ps -eo pid,ppid,etime,args\n",
+  "methods": {
+    "pnfp": {
+      "archive_status": "COMPLETE",
+      "revision": "e1d1d250b12130c10f305e67f3539a227629ce80",
+      "full_log_sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede"
+    },
+    "evertracer": {
+      "archive_status": "COMPLETE",
+      "revision": "eb1d3b656577259d59445e5e1362e1697ff3655a",
+      "full_log_sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10"
+    },
+    "ctcc": {
+      "archive_status": "COMPLETE",
+      "revision": "a2535f62042ed67e13918ba0c99fef0996f41041",
+      "full_log_sha256": "374f262eadcb4eab3b97d8a8011708cae2d8146873286fe06080636d562bee8b"
+    },
+    "iseal": {
+      "archive_status": "COMPLETE",
+      "revision": "fa4baa48e2a8754ad317552c8cbc8ace73cee971",
+      "full_log_sha256": "2b3a81f73581a83c279ea686e0fc5fcfaf25097ebf64bac229e1917843a13bd5"
+    },
+    "scw": {
+      "archive_status": "COMPLETE",
+      "revision": "dc6da8daec0104ac24bc4b004cde5bd32a06d178",
+      "full_log_sha256": "2a312f24fe203faa3f5203599c7430e6454be02ac452d082eb7d41b4b9a9cf26"
+    }
+  },
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB, 0 %\n"
+}

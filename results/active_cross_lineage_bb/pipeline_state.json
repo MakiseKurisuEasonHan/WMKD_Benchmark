@@ -1,9 +1,9 @@
 {
   "campaign": "ACTIVE_CROSS_LINEAGE_BEHAVIORAL_EXTRACTION_Bb",
-  "status": "FINAL_GIT_CLOSURE_IN_PROGRESS",
+  "status": "COMPLETE",
   "target_ssh": "ssh -p 49453 root@connect.westd.seetacloud.com",
   "old_host_execution_allowed": false,
-  "current_stage": "FINAL_EVIDENCE_GIT_SYNC",
+  "current_stage": "AWAITING_FINAL_RECEIPT_PUSH_AND_SHUTDOWN",
   "last_error": null,
   "new_instance_ready": "READY",
   "gpu": {
@@ -22,8 +22,8 @@
     "dependencies": "PASS_SOURCE_VERSION_MATCHED"
   },
   "repo": {
-    "status": "DEPLOYED_SPARSE_CHECKOUT",
-    "head": "2e236d133590a789a54e15d9f43f348d15082f59",
+    "status": "THREE_HOSTS_SYNCED",
+    "head": "5bec2cd9ae224d7889600d30b87dcb79564bc749",
     "bundle_sha256": "a3cf611a956a914ca24c9ac4e22043c3e00d10b8faa70684e51ad2a9706a6180"
   },
   "qwen": "FIXED_REVISION_SHA_AND_OFFLINE_RELOAD_PASS",
