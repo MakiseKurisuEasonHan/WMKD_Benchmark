@@ -1,0 +1,44 @@
+{
+  "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
+  "status": "ACTIVE",
+  "current_method": "pnfp",
+  "current_stage": "PNFP_FORMAL_TRAINING",
+  "serial_order": [
+    "pnfp",
+    "evertracer",
+    "ctcc",
+    "iseal",
+    "scw",
+    "passive_shared"
+  ],
+  "methods": {
+    "pnfp": {
+      "status": "RUNNING",
+      "supervisor_pid": 4239,
+      "run_id": "pnfp_bc_reconstructed_parent_20260910"
+    },
+    "evertracer": {
+      "status": "NOT_STARTED"
+    },
+    "ctcc": {
+      "status": "NOT_STARTED"
+    },
+    "iseal": {
+      "status": "NOT_STARTED"
+    },
+    "scw": {
+      "status": "NOT_STARTED"
+    },
+    "passive_shared": {
+      "status": "NOT_STARTED"
+    }
+  },
+  "gpu_host": "6000bb",
+  "asset_archive_host": "6002",
+  "modelscope_token_on_gpu": false,
+  "auto_shutdown_authorized": true,
+  "auto_shutdown_armed": false,
+  "shutdown_gate": "6terminal+scientific/evidence/archive/Git closure+no workers+sync",
+  "timeout_gate": "only genuinely new high-risk approval AND no authorized action/workers,30minutes",
+  "no_repeated_pilot": true
+}

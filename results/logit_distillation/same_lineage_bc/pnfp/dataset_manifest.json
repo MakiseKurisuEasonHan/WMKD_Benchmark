@@ -1,0 +1,16 @@
+{
+  "status": "SOURCE_DESTINATION_SHA_VERIFIED",
+  "required_wording": [
+    "This Bc pilot uses the frozen protocol-faithful reconstructed PN-FP parent dataset because the original historical Ba dataset is permanently unavailable.",
+    "The appropriate hard-label comparator is the reconstructed-parent Ba trajectory run, not the original historical Ba endpoint."
+  ],
+  "dataset_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/pnfp_ba_parent_reconstruction/pnfp_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+  "record_count": 20000,
+  "dataset_sha256": "32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87",
+  "provenance": "results/pnfp/experiment_ba_trajectory_followup/dataset_manifest.json",
+  "reconstruction_reason": "original historical Ba dataset permanently unavailable",
+  "trajectory_comparator_run_id": "pnfp_ba_trajectory_followup_20260907_reconstructed_parent",
+  "runtime_actual_file_check": "20000 records,17/17 files SHA match",
+  "source_destination_sha_match": true,
+  "target_field": "teacher_raw_answer; unchanged historical SFTDataset; source_answer concept is not a literal field in this frozen file"
+}

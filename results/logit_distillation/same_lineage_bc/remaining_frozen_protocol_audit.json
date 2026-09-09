@@ -1,0 +1,164 @@
+[
+  {
+    "method": "evertracer",
+    "dataset": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/dataset/frozen_qa.jsonl",
+      "records": 20000,
+      "file_sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca",
+      "canonical_records_sha256": "ca1aa9c991ae58e1d5bbf32275f1738786db15c337bc4bb80fdc0813aa447142",
+      "parent_dataset_origin": "exact_historical_frozen_dataset",
+      "sha256": "a60da148b77f1f5992cef97797be7a5548be72865686dffbbc6478cd8ca477ca"
+    },
+    "training": {
+      "seed": 42,
+      "epochs": 3,
+      "micro_batch": 8,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_length": 1024,
+      "precision": "bf16",
+      "full_parameter": true,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "total_steps": 7500
+    },
+    "source": "results\\evertracer\\experiment_ba_trajectory_followup",
+    "teacher_runtime_sha": "PENDING",
+    "status": "FROZEN_DATA_IDENTITY_AND_SCHEDULE_RECOVERED"
+  },
+  {
+    "method": "ctcc",
+    "dataset": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/ctcc_ba/ctcc_ba_generation_20260829_195943_cont1/dataset/frozen_qa.jsonl",
+      "records": 20000,
+      "bytes": 5810753,
+      "sha256": "4cc5943dbce69d5b0574b8534895afd4f8b158a473c5110c70fd1c22c991f4c6",
+      "canonical_records_sha256": "621c9aedcf3a4a1db86a4848bbf93fa893d18022f15b913e8aeeb28739412484",
+      "parent_dataset_origin": "exact_historical_frozen_dataset"
+    },
+    "training": {
+      "seed": 42,
+      "epochs": 3,
+      "micro_batch": 8,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_length": 1024,
+      "precision": "bf16",
+      "full_parameter": true,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "total_steps": 7500
+    },
+    "source": "results\\ctcc\\experiment_ba_trajectory_followup",
+    "teacher_runtime_sha": "PENDING",
+    "status": "FROZEN_DATA_IDENTITY_AND_SCHEDULE_RECOVERED"
+  },
+  {
+    "method": "iseal",
+    "dataset": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+      "records": 20000,
+      "sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+      "canonical_records_sha256": "d51c22b9d33d4aa79b5cd733dd6bcb910ecd6378f1ffe2a40328e64cb085aacf",
+      "parent_dataset_origin": "exact_historical_frozen_dataset"
+    },
+    "training": {
+      "seed": 42,
+      "epochs": 3,
+      "micro_batch": 8,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_length": 1024,
+      "precision": "bf16",
+      "full_parameter": true,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "total_steps": 7500
+    },
+    "source": "results\\iseal\\experiment_ba_trajectory_followup",
+    "teacher_runtime_sha": "PENDING",
+    "status": "FROZEN_DATA_IDENTITY_AND_SCHEDULE_RECOVERED"
+  },
+  {
+    "method": "scw",
+    "dataset": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/scw_ba_parent_reconstruction/scw_ba_parent_reconstruction_20260904_055000/dataset/frozen_qa.jsonl",
+      "records": 20000,
+      "sha256": "ad579f137a08654c011053ed803450d4c545454ba7b74396225a5d6f535517ed",
+      "parent_dataset_origin": "protocol_faithful_reconstruction",
+      "original_historical_dataset_unavailable": true,
+      "exact_replay": false,
+      "byte_identical_to_historical": false,
+      "sample_identical_to_historical": "NOT_CLAIMED"
+    },
+    "training": {
+      "seed": 42,
+      "epochs": 3,
+      "micro_batch": 8,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_length": 1024,
+      "precision": "bf16",
+      "full_parameter": true,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "total_steps": 7500
+    },
+    "source": "results\\scw\\experiment_ba_trajectory_followup",
+    "teacher_runtime_sha": "PENDING",
+    "status": "FROZEN_DATA_IDENTITY_AND_SCHEDULE_RECOVERED"
+  },
+  {
+    "method": "passive_shared",
+    "dataset": {
+      "role": "ba",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive5_shared_ba/passive5_shared_ba_20260902_114500_cont1/dataset/frozen_qa.jsonl",
+      "exists": true,
+      "expected_sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+      "count": 20000,
+      "sha256": "408053fef5fa42b3a203e70ac049f43b73f9b0fccb06189363d0643c3633cbed",
+      "keys": [
+        "input",
+        "instruction",
+        "sample_id",
+        "teacher_raw_answer"
+      ],
+      "unique_sample_ids": 20000,
+      "sha_pass": true
+    },
+    "training": {
+      "epochs": 3,
+      "learning_rate": 1e-05,
+      "precision": "bf16",
+      "full_parameter": true,
+      "lora": false,
+      "per_device_batch_size": 8,
+      "gradient_accumulation_steps": 1,
+      "effective_batch_size": 8,
+      "max_length": 1024,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "expected_steps": 7500,
+      "checkpoint_retention": {
+        "save_total_limit": 1,
+        "keep_final_model": true
+      }
+    },
+    "teacher": {
+      "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct"
+    },
+    "status": "FROZEN_METADATA_RECOVERED"
+  }
+]

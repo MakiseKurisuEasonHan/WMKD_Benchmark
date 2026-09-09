@@ -1,0 +1,914 @@
+开始完整 WMKD_Benchmark：
+
+Bc = SAME-LINEAGE ONLINE LOGIT DISTILLATION
+
+本次一次性完成全部 Llama→Llama Bc。
+
+正式训练对象：
+
+1. PN-FP Bc
+2. EverTracer Bc
+3. CTCC Bc
+4. iSeal Bc
+5. SCW Bc
+6. Passive-5 Shared Bc
+   - LLMPrint
+   - REEF
+   - HuRef
+   - AWM
+   - ZeroPrint
+
+这是一个长时间自动串行 campaign。
+
+用户明确授权：
+正常可推进步骤全部自动执行；
+单个方法遇到 terminal blocker 后继续下一个；
+全部完成或全部进入 terminal state 后完成闭环并自动安全关机。
+
+==================================================
+A. CORE SCIENTIFIC DEFINITION
+==================================================
+
+Experiment family:
+Bc
+
+Name:
+Same-Lineage Online Logit Distillation
+
+Teacher:
+method-specific watermarked Llama Teacher
+或 Passive-5 canonical Llama reference
+
+Student:
+fresh canonical clean
+meta-llama/Llama-3.2-3B-Instruct
+
+Teacher / Student:
+same architecture
+same tokenizer
+same vocabulary
+same token IDs
+
+Training signal:
+hard-label CE
++
+online Teacher soft-logit KD
+
+No offline full-logit dump.
+
+==================================================
+B. TRAINING COUNT
+==================================================
+
+Active 1–5：
+
+PN-FP
+EverTracer
+CTCC
+iSeal
+SCW
+
+每个独立 Teacher
+→ 各训练一个 fresh Llama Bc Student
+
+Passive 6–10：
+
+LLMPrint
+REEF
+HuRef
+AWM
+ZeroPrint
+
+这五个 fingerprint 不修改 reference model，
+因此只训练一个：
+
+Passive-5 Shared Bc Student
+
+然后在这个 Shared Student 上运行五个 detector。
+
+总训练数：
+
+6
+
+总 method-level detector result：
+10
+
+==================================================
+C. DATA POLICY
+==================================================
+
+Bc 默认使用对应 Ba 的 frozen ordinary 20k。
+
+目标：
+
+Ba:
+hard-label CE only
+
+Bc:
+same parent data
++ same hard response
++ soft-logit KD
+
+尽量让核心变化仅为 distillation signal。
+
+重要方法级限制：
+
+PN-FP：
+原历史 Ba dataset 永久缺失。
+
+使用已批准：
+
+frozen reconstructed-parent 20k
+
+SHA:
+32eb7f85845f29438f5b406b5fbbd9358b251a6c1854bf332c7cc028f155fb87
+
+PN-FP 主 hard-label comparator：
+
+reconstructed-parent Ba trajectory endpoint =
+99/1024
+
+历史 original Ba =
+98/1024
+
+两者严禁混同。
+
+SCW：
+如历史原 Ba parent同样存在 reconstructed limitation，
+继续使用已批准、已冻结的 canonical reconstructed parent，
+并在 provenance 写清。
+
+EverTracer / CTCC / iSeal：
+优先使用已正式冻结并核验的 Ba ordinary 20k。
+
+Passive-5 Shared：
+使用 canonical shared ordinary Teacher QA20k，
+保持与 passive shared Ba 的数据身份尽可能一致。
+
+如果某方法原 Ba dataset真实缺失：
+不要静默生成新数据。
+先使用项目已经批准的 canonical reconstructed/frozen parent；
+若不存在合法 frozen parent，则该方法标记 SCIENTIFIC_DATA_BLOCKED。
+
+不要为了跑完而自行新造数据。
+
+==================================================
+D. UNIVERSAL LOGIT-KD OBJECTIVE
+==================================================
+
+对所有 6 个 run 使用完全相同的 KD protocol。
+
+只在 assistant response tokens 上计算 loss。
+
+system/user/prompt tokens:
+MASKED
+
+assistant response tokens:
+CE + KD
+
+Temperature:
+T = 2.0
+
+Loss:
+
+L_total =
+0.5 * L_CE
++
+0.5 * T^2 * KL(
+    Teacher_distribution || Student_distribution
+)
+
+KL direction：
+Teacher || Student
+
+不得反向。
+
+不要针对不同 watermark 单独调：
+
+- T
+- CE/KD weight
+- LR
+- epochs
+- batch
+- seed
+
+==================================================
+E. TRAINING CONFIG
+==================================================
+
+保持与既有 same-lineage Ba 尽量一致：
+
+- full-parameter
+- BF16
+- LR = 1e-5
+- 3 epochs
+- effective batch size = 8
+- seed = 42
+- same canonical Llama tokenizer
+- same template
+- same max length
+- same answer masking
+- no LoRA
+- no quantization
+- fresh clean Llama initialization
+- no resume from Ba/Bb/Bc predecessor
+
+Warmup:
+沿用 historical/reconstructed Ba schedule。
+
+PN-FP pilot 已验证：
+225-step LR warmup
+
+其他方法读取其 canonical Ba config，
+不要凭 PN-FP 猜。
+
+如果为了 cross-method fairness 项目已有统一 Ba schedule：
+保持统一。
+
+==================================================
+F. TEACHER RULES
+==================================================
+
+Teacher：
+
+- eval()
+- frozen
+- requires_grad=False
+- torch.inference_mode()
+- no optimizer
+- no backward
+- no update
+
+每个正式 run：
+
+Teacher checksum before
+Teacher checksum after
+
+必须一致。
+
+如果 Teacher 参数发生任何变化：
+该 run scientific failure，停止该方法并记录。
+
+==================================================
+G. STUDENT RULES
+==================================================
+
+每个 run 都必须：
+
+fresh canonical clean Llama
+
+绝对禁止：
+
+PN-FP Bc Student
+→继续训练成 EverTracer Bc
+
+或：
+
+前一个 Bc checkpoint
+→下一个方法
+
+每个方法完全独立 fresh init。
+
+Passive Shared Bc 也从 fresh clean Llama开始。
+
+==================================================
+H. MEMORY-SAFE IMPLEMENTATION
+==================================================
+
+使用此前 PN-FP pilot 已验证的 online KD 实现。
+
+Pilot已通过：
+
+Smoke peak allocated ≈ 35.92 GiB
+100-step peak allocated ≈ 35.95 GiB
+reserved ≈ 44.32 GiB
+
+继续使用：
+
+- Teacher logits BF16 where appropriate
+- FP32 loss accumulation
+- assistant-token mask
+- memory-safe KL
+- Teacher logits及时释放
+- 避免不必要clone
+- 如已有等价 chunked KL实现，保持已验证实现
+
+不要为了“优化速度”改科学 objective。
+
+==================================================
+I. PN-FP PILOT RESULT IS ALREADY APPROVED
+==================================================
+
+PN-FP 2-step smoke = PASS
+PN-FP 100-step fresh-init pilot = PASS
+
+实测：
+
+mean sec/step steps 11–100 =
+0.327773
+
+median =
+0.311602
+
+p95 =
+0.404166
+
+peak allocated =
+35.95 GiB
+
+NaN / Inf / OOM =
+0 / 0 / 0
+
+Teacher frozen =
+PASS
+
+Student updated =
+PASS
+
+不要重复跑 smoke / 100-step pilot。
+
+直接开始 PN-FP full 7500-step Bc。
+
+==================================================
+J. SERIAL ORDER
+==================================================
+
+严格串行：
+
+1. PN-FP Bc
+2. EverTracer Bc
+3. CTCC Bc
+4. iSeal Bc
+5. SCW Bc
+6. Passive-5 Shared Bc
+
+一次只允许一个大型 GPU training/eval task。
+
+每个 GPU task 前：
+nvidia-smi
+
+只用明确空闲单卡。
+
+==================================================
+K. PER-RUN STAGES
+==================================================
+
+每个 formal run：
+
+STAGE 0
+minimal preflight
+
+STAGE 1
+fresh-init full 7500-step Bc training
+
+STAGE 2
+final model validation
+
+STAGE 3
+fresh-process reload
+
+STAGE 4
+native detector(s)
+
+STAGE 5
+utility
+
+STAGE 6
+scientific closure
+
+STAGE 7
+preferred PRIVATE ModelScope archive
+
+STAGE 8
+remote verification
+
+STAGE 9
+full log / receipt / next method
+
+==================================================
+L. DETECTOR POLICY — ACTIVE 1–5
+==================================================
+
+PN-FP:
+运行原 native detector
+
+报告：
+detected / 1024
+errors
+per-key evidence
+
+比较：
+
+Teacher
+Clean Llama
+Historical Ba 98/1024
+Reconstructed-parent Ba 99/1024
+Bc
+
+主 same-data对照：
+99/1024 reconstructed-parent Ba
+
+--------------------------------------------------
+
+EverTracer:
+这是 same-tokenizer Llama→Llama，
+因此使用 canonical frozen EverTracer detector。
+
+不再有 Qwen cross-tokenizer N/A 问题。
+
+报告：
+
+member AUC
+TPR @ frozen FPR criterion
+raw score arrays
+
+比较：
+Teacher
+Clean Llama
+Ba
+Bb
+Bc
+
+--------------------------------------------------
+
+CTCC:
+保持 exact operational rule：
+
+generated_answer.strip() == "IAMALIVE"
+
+case-sensitive
+
+报告：
+
+trigger / 95
+suppression / 100
+normal / 105
+combined negatives / 205
+errors
+
+--------------------------------------------------
+
+iSeal:
+same-architecture Llama Student，
+因此使用 canonical iSeal detector。
+
+报告：
+
+registered success / 200
+heldout where applicable
+mean/median BLEU
+threshold
+raw evidence
+
+--------------------------------------------------
+
+SCW:
+使用 canonical frozen SCW detector。
+
+报告：
+
+p-value
+alpha=0.001
+detected yes/no
+raw evidence
+
+lower p = stronger evidence。
+
+==================================================
+M. PASSIVE-5 SHARED Bc
+==================================================
+
+只训练 ONE Shared Bc Student。
+
+Teacher/reference：
+canonical Llama reference used by passive fingerprint package。
+
+Student：
+fresh clean Llama
+
+训练：
+同一 Bc objective
+
+完成后在同一个 Shared Bc Student 上依次运行：
+
+LLMPrint
+REEF
+HuRef
+AWM
+ZeroPrint
+
+保持各自 frozen detector semantics。
+
+不要训练 5 个重复 passive Bc Students。
+
+==================================================
+N. UTILITY
+==================================================
+
+每个 active Bc Student运行：
+
+ARC-Challenge acc_norm
+TruthfulQA MC2
+
+Passive Shared Bc Student也运行一次：
+
+ARC
+MC2
+
+不要五个 passive detector重复跑5次 utility。
+
+比较：
+
+Clean Llama
+Ba
+Bb
+Bc
+
+使用 canonical已有 utility；
+缺失值不要猜。
+
+==================================================
+O. NO Bc TRAJECTORY FOR NOW
+==================================================
+
+本轮只做 endpoint。
+
+不要自动做：
+
+0/25/50/100/250/500/1000/2000/4000/6000/7500 detector trajectory
+
+PN-FP已有 hard-label trajectory，
+本轮不额外产生 Bc trajectory。
+
+如果以后需要再单独批准。
+
+==================================================
+P. RUNTIME TIMING
+==================================================
+
+每个 run 必须记录：
+
+- total wall time
+- warmup wall time
+- post-warmup sec/step
+- mean/median sec/step
+- tokens/sec
+- samples/sec
+- peak VRAM
+- CE loss trace
+- KL trace
+- total loss trace
+- grad norm
+- LR
+- NaN/Inf/OOM
+- teacher checksum
+- student checksum
+
+PN-FP完成后更新真实 runtime estimate。
+
+不要因为 PN-FP pilot预计0.65h就假设其他方法相同。
+
+每个方法实际序列长度不同。
+
+==================================================
+Q. FAILURE HANDLING
+==================================================
+
+Transient infra error：
+允许 restart-safe retry。
+
+同一个 deterministic error 连续2次：
+记录 root cause。
+
+如果不改变科学 protocol 有合法修复：
+修复并继续。
+
+如果继续必须：
+
+- 改 dataset
+- 改 Teacher
+- 改 Student
+- 改 KD objective
+- 改 T
+- 改 weights
+- 改 LR/epoch/batch/seed
+- 删除唯一科研资产
+
+则：
+
+该方法标记 TERMINAL_BLOCKED
+保存证据
+继续下一个方法。
+
+不要让一个方法卡死整个 campaign。
+
+==================================================
+R. FULL LOGS
+==================================================
+
+每个 formal run 必须生成：
+
+full_experiment_log.json
+
+至少记录：
+
+- Teacher identity
+- Student identity
+- model revisions
+- dataset SHA
+- reconstructed limitation if any
+- KD formula
+- T
+- CE/KD weights
+- assistant mask
+- training config
+- effective runtime config
+- timing
+- loss traces
+- Teacher frozen verification
+- Student update verification
+- detector
+- utility
+- archive
+- errors
+- final status
+
+更新：
+
+results/experiment_full_logs_index.json
+
+==================================================
+S. RESULT STRUCTURE
+==================================================
+
+建议：
+
+results/logit_distillation/same_lineage_bc/
+
+pnfp/
+evertracer/
+ctcc/
+iseal/
+scw/
+passive_shared/
+comparison/
+
+不要覆盖：
+pilot
+Ba
+Bb
+trajectory
+
+==================================================
+T. MASTER COMPARISON
+==================================================
+
+全部 terminal后生成：
+
+same_lineage_bc_master.json
+same_lineage_bc_master.csv
+正式 markdown report
+
+表至少包含：
+
+Method
+Type active/passive
+Teacher
+Clean Llama
+Ba
+Bb/Bb2/Bb3
+Bc
+Bc-Ba delta where meaningful
+detector rule
+decision
+ARC
+MC2
+dataset identity
+strict comparability
+final status
+bounded interpretation
+
+不同 detector raw scores不跨方法比较。
+
+==================================================
+U. KEY SCIENTIFIC QUESTIONS
+==================================================
+
+最终回答：
+
+1. PN-FP Bc是否明显高于同 reconstructed-parent hard-label Ba 99/1024？
+2. EverTracer soft logits是否提高member separation？
+3. CTCC是否会在ordinary-data logit KD下获得IAMALIVE behavior？
+4. iSeal是否比hard-label Ba获得更高registered similarity？
+5. SCW soft-logit KD是否产生更强统计信号？
+6. Passive fingerprints在Bc后是否比Ba/Bb更接近Teacher/reference？
+7. Rich soft distributions是否整体比hard labels更容易传递 watermark/fingerprint signal？
+8. active vs passive是否呈现不同规律？
+9. utility是否显著改变？
+10. 是否仍然存在方法依赖，而不是统一“logit KD更强”？
+
+使用 bounded scientific wording。
+
+==================================================
+V. MODEL ARCHIVE
+==================================================
+
+用户明确批准：
+
+每个 formal Bc Student最多上传一个 preferred PRIVATE ModelScope archive。
+
+包括：
+
+PN-FP
+EverTracer
+CTCC
+iSeal
+SCW
+Passive-5 Shared
+
+总计最多6个。
+
+归档前：
+scientific closure完成
+fresh reload完成
+detector完成
+utility完成
+
+默认使用：
+
+MANIFEST_PLUS_SEGMENT
+
+大 shard：
+5 fixed positions × 2 MiB
+
+小文件：
+full SHA
+
+异常才升级 full independent download。
+
+==================================================
+W. STORAGE
+==================================================
+
+不要保存 full teacher logits。
+
+不要生成 TB-scale offline logit data。
+
+允许删除：
+
+- temporary KL/debug dump
+- upload staging after verified archive
+- verification chunks
+- cache
+- redundant archived Student local duplicate if space需要
+
+不得删除：
+
+- frozen datasets
+- Teachers while later runs still need them
+- clean Llama base
+- detector assets
+- unique evidence
+- unarchived final Student
+
+==================================================
+X. GIT
+==================================================
+
+长期授权继续有效。
+
+正常：
+
+git add expected lightweight files
+commit
+push private canonical repo
+
+不需要逐次问。
+
+禁止：
+
+force
+history rewrite
+reset --hard
+git clean
+weights in Git
+
+==================================================
+Y. AUTO FOLLOW-UP
+==================================================
+
+建立临时自动跟进。
+
+健康 worker期间：
+轻量监控。
+
+阶段完成后：
+零不必要idle gap进入下一stage/方法。
+
+不要频繁重SHA大文件。
+
+==================================================
+Z. AUTO SHUTDOWN — USER EXPLICIT AUTHORIZATION
+==================================================
+
+用户明确授权：
+
+当6个run全部满足：
+
+COMPLETE
+或合法 TERMINAL_BLOCKED
+
+并且：
+
+- detector/utility完成或有合法N/A/blocker
+- scientific closure完成
+- full logs/index完成
+- evidence同步完成
+- archive完成或terminal archive blocker
+- Git closure完成
+- no active worker
+- sync完成
+- final campaign status保存
+
+则：
+
+无需再次询问，
+自动安全关机。
+
+关机前：
+
+1. nvidia-smi
+2. ps检查WMKD worker
+3. 确认无training/eval/detector/upload/Git/SCP worker
+4. 保存final_campaign_status
+5. 保存shutdown_receipt
+6. 记录：
+   timestamp
+   hostname
+   Git HEAD
+   six run statuses
+   archive statuses
+   free disk
+   GPU state
+   worker count
+   shutdown_reason=CAMPAIGN_COMPLETE
+7. sync
+8. 删除临时follow-up
+9. shutdown -h now / poweroff
+
+==================================================
+AA. APPROVAL-TIMEOUT SHUTDOWN
+==================================================
+
+如果campaign完全卡在必须用户新增高风险授权：
+
+例如：
+
+- 改科学protocol
+- 删除唯一资产
+- 换数据
+- 换Teacher/Student
+- force Git
+- credential/account change
+
+并且：
+
+无任何 active worker
+无任何已授权 next action
+
+则进入 WAITING_FOR_USER。
+
+连续30分钟没有用户回复：
+
+保存状态/日志/blocker
+sync
+保存 shutdown receipt
+
+shutdown_reason =
+USER_APPROVAL_TIMEOUT
+
+然后安全关机省钱。
+
+健康任务绝不能因用户不在线而关机。
+
+==================================================
+AB. CURRENT IMMEDIATE ACTION
+==================================================
+
+不要再停在 PN-FP 单方法等待。
+
+直接：
+
+PN-FP full Bc
+→ EverTracer Bc
+→ CTCC Bc
+→ iSeal Bc
+→ SCW Bc
+→ Passive-5 Shared Bc
+
+自动完成整个 Llama→Llama Bc campaign。
+
+全部做完或跑不动进入terminal state后：
+完成闭环并自动关机。
+
+最终只需向用户汇报完整结果。

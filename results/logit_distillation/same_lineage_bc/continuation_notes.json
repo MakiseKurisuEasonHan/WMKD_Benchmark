@@ -1,0 +1,20 @@
+{
+  "current_run": "PNFP full started, supervisor4239 worker4240; healthy step1055 last seen",
+  "automatic_followup_id": "wmkd-same-lineage-bc-run",
+  "source_git_before_launch": "b91cec46b2ef7e6490237b9941f6b585edbe1c93",
+  "scripts_status": {
+    "train_same_lineage_bc.py": "PNFP deployed/running; imports pinned pilot objective; future teacher loader may need preserving native PEFT wrapper for CTCC",
+    "evaluate_same_lineage_bc.py": "PNFP native detector+utility implemented; other active via bc_native_detector_worker after native_detector_assets_verified flag; passive shared adapter still to implement",
+    "archive_same_lineage_bc.py": "oldCPU wrapper around proven manifest+segment verifier; needs completed full log/scientific_closure/preferred flag and source->oldCPU final-file transfer before execution"
+  },
+  "remaining_assets": {
+    "evertracer": "old target_merged and reference_merged exist; target_merge_manifest.json records fixed per-file SHA; verify/copy both target and detector reference",
+    "ctcc": "original adapter exists. Historical generate_teacher_qa_formal.py uses frozen PeftModel without merge. Preserve same teacher computation; do NOT silently merge/change Teacher. Full Student stays non-PEFT.",
+    "iseal": "old teacher_merged exists; registered detector assets/cache and ISEAL secret require scoped verified restore. Never print secret or commit it.",
+    "scw": "old root and checkpoint2500 model weight files absent; teacher_artifact_manifest exists. Restore exact existing private preferred archive on oldCPU and check original SHAs; not new Teacher.",
+    "passive_shared": "canonical Teacher is clean Llama Base; one student/five native detectors/one utility. Frozen data SHA408053f...cbed per protocol_draft."
+  },
+  "scope": "Do not classify lack of prepared code/assets as terminal until authorized equivalent recovery is exhausted. No new approval needed for routine authorized work.",
+  "archive_transfer": "Need new scoped read-only export on GPU; previous pilot transfer key removed. OldCPU private key/token remain old only. Can use explicit exact-file transfer consistent with existing methods.",
+  "disk": "NewGPU147GiB afterpilot, enough first run; oldCPU verify before receiving archives; only authorized new verified redundant staging/transfer copies eligible cleanup if needed."
+}

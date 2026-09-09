@@ -1,0 +1,131 @@
+{
+  "method": "iSeal",
+  "method_key": "iseal",
+  "run_id": "iseal_bc_20260910",
+  "experiment": "Bc",
+  "required_wording": [
+    "Frozen exact_historical_frozen_dataset dataset; no regeneration or substitution."
+  ],
+  "dataset_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal_ba/iseal_ba_generation_20260830_134058/dataset/frozen_qa.jsonl",
+  "dataset_sha256": "04b02863bbec70b731bbb79471e5be9364ddd89d3b9b51fe5c5c3bb441ec40cc",
+  "dataset_identity": "exact_historical_frozen_dataset",
+  "teacher_path": "PENDING_VERIFIED_TEACHER_LOCATION",
+  "base_model": "meta-llama/Llama-3.2-3B-Instruct",
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "epochs": 3,
+  "optimizer_steps": 7500,
+  "batch_size": 8,
+  "gradient_accumulation_steps": 1,
+  "lr": 1e-05,
+  "temperature": 2,
+  "ce_weight": 0.5,
+  "kd_weight": 0.5,
+  "kl_direction": "Teacher || Student",
+  "assistant_response_tokens_only": true,
+  "optimizer": "adamw_torch",
+  "scheduler": "cosine",
+  "warmup_ratio": 0.03,
+  "warmup_steps": 225,
+  "weight_decay": 0.0,
+  "max_length": 1024,
+  "seed": 42,
+  "comparator": "iseal_ba_trajectory_followup_20260907_historical_parent",
+  "pilot_repeated": false,
+  "fresh_init": true,
+  "no_detector_trajectory": true,
+  "native_detector_spec": {
+    "method": "iSeal",
+    "method_key": "iseal",
+    "run_id": "iseal_ba_trajectory_followup_20260907_historical_parent",
+    "evidence_relative": "results/iseal/experiment_ba_trajectory_followup",
+    "checkpoint_steps": [
+      0,
+      25,
+      50,
+      100,
+      250,
+      500,
+      1000,
+      2000,
+      4000,
+      6000,
+      7500
+    ],
+    "training": {
+      "seed": 42,
+      "epochs": 3,
+      "micro_batch": 8,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_length": 1024,
+      "precision": "bf16",
+      "full_parameter": true,
+      "optimizer": "adamw_torch",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "total_steps": 7500
+    },
+    "historical_config": "configs/distillation/iseal_ba_direct.yaml",
+    "detector_source_sha256": "28861a38b9d3ed41f454f8f30c4875463ba14a181c38f4fcbd7fdb7c143c4387",
+    "source_sha256": {
+      "scripts/iseal_a2_evaluate.py": "28861a38b9d3ed41f454f8f30c4875463ba14a181c38f4fcbd7fdb7c143c4387",
+      "scripts/iseal_trainability_audit.py": "0729a098fcc6dee835f877a29b12409f443090e41b089a5f70ca5a8720eb4301",
+      "configs/watermark/iseal_experiment_a6.yaml": "d7bfbd4678a5154dfc3a05cbd8cf63e119a2656ba8c0b3fe9147460856c0cabd",
+      "configs/distillation/iseal_ba_direct.yaml": "b71f2237174bc18c75213efb002661e462b7b13bf526dfd63c2f1cf82f6a7985",
+      "scripts/train_distillation_student.py": "a84862abd1dbda88be8ec311ce617029d75c7424e2d3faa1832836377240a824",
+      "scripts/active_ba_trajectory_runner.py": "4867519bb3fd6d26d60622ed2b9ed1091980fef3b7a5458e4c37dfeb870bebee",
+      "scripts/active_ba_trajectory_detectors.py": "a81c9f878dabc42d646b899fc3e6838ee29edd8c4877258e58263d6a01a37fb7"
+    },
+    "native_metric_fields": [
+      "registered_success",
+      "registered_total",
+      "registered_success_rate",
+      "registered_mean_bleu",
+      "registered_median_bleu",
+      "held_out_success",
+      "held_out_total",
+      "held_out_success_rate",
+      "held_out_mean_bleu",
+      "held_out_median_bleu"
+    ],
+    "detector": {
+      "config": "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a6.yaml",
+      "key_env_path": "/root/autodl-tmp/WMKD_Benchmark_data/credentials/iseal_secret_key.env",
+      "key_sha256": "8399db2b1e89eb03da1a1a6a4f9cd66d541f36c3695bd899e06613e06d75ffcf",
+      "registered_manifest": "/root/autodl-tmp/WMKD_Benchmark_data/runs/iseal/a6/iseal_a6_20260830_132300/manifests/dataset_manifest.json",
+      "registered_manifest_semantic_sha256": "a68fff13eb0add1f64634e50235a232c3f00fcdcf5d543db942e40a5f3b7bbe9",
+      "hf_home": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface",
+      "dataset_cache": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets"
+    },
+    "historical_reference_only": {
+      "registered_200": {
+        "base": {
+          "mean_bleu": 2.332514,
+          "median_bleu": 2.009208,
+          "success": 0
+        },
+        "teacher": {
+          "mean_bleu": 69.171651,
+          "median_bleu": 69.276665,
+          "success": 179
+        },
+        "student": {
+          "mean_bleu": 2.589326,
+          "median_bleu": 2.288691,
+          "success": 0
+        },
+        "threshold": 50,
+        "teacher_to_student_absolute_success_rate_drop": 0.895,
+        "thresholded_registered_success_retention": 0.0
+      },
+      "held_out_100": {
+        "base_success": 0,
+        "teacher_success": 0,
+        "student_success": 0
+      }
+    },
+    "auto_next_worker": false,
+    "auto_shutdown": false
+  }
+}
