@@ -1,6 +1,6 @@
 {
   "campaign": "ACTIVE_CROSS_LINEAGE_BA",
-  "status": "MODEL_ARCHIVAL_COMPLETE_GIT_METADATA_CLOSURE_PENDING",
+  "status": "COMPLETE",
   "order": [
     "pnfp",
     "evertracer",
@@ -15,7 +15,7 @@
   "shutdown_authorized_only_after_all_terminal_and_closure": false,
   "shutdown_armed": false,
   "active_bb_trajectories": "PAUSED",
-  "next_action": "Archive metadata Git closure only; no new experiment.",
+  "next_action": "STOP; no new experiments or shutdown",
   "automation_id": "active-cross-lineage-ba-campaign",
   "automation_status": "DELETED_AFTER_SCIENTIFIC_COMPLETION",
   "user_direct_chat_authorization": "results/active_cross_lineage_ba/direct_chat_automation_authorization_20260908.txt",
@@ -121,5 +121,8 @@
     "evertracer",
     "iseal",
     "scw"
-  ]
+  ],
+  "git_metadata_closure": "COMPLETE",
+  "archive_evidence_commit": "6b0e2149762a86521cb44751a7d1c184c5e6255d",
+  "archive_git_receipt": "results/active_cross_lineage_ba/archive/final_git_receipt.json"
 }

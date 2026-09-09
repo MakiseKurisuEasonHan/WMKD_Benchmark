@@ -1,7 +1,7 @@
 {
   "campaign": "ACTIVE_CROSS_LINEAGE_BA",
   "recorded_at": "2026-09-09T06:17:32.799070+00:00",
-  "status": "MODEL_ARCHIVAL_COMPLETE_GIT_METADATA_CLOSURE_PENDING",
+  "status": "COMPLETE",
   "methods": {
     "pnfp": "COMPLETE",
     "evertracer": "COMPLETE",
@@ -21,7 +21,10 @@
   "three_way_sync": "PASS",
   "auto_shutdown": false,
   "shutdown_armed": false,
-  "next_action": "Archive metadata Git closure only; no new experiment.",
+  "next_action": "STOP; no new experiments or shutdown",
   "model_archival": "COMPLETE",
-  "preferred_model_selection": "APPROVED_ALL_FIVE"
+  "preferred_model_selection": "APPROVED_ALL_FIVE",
+  "git_metadata_closure": "COMPLETE",
+  "archive_evidence_commit": "6b0e2149762a86521cb44751a7d1c184c5e6255d",
+  "archive_git_receipt": "results/active_cross_lineage_ba/archive/final_git_receipt.json"
 }

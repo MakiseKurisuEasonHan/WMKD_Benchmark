@@ -901,7 +901,7 @@
     }
   },
   "completed_at": "2026-09-09T08:14:11.622535+00:00",
-  "git_metadata_closure": "PENDING",
+  "git_metadata_closure": "COMPLETE",
   "archives": {
     "pnfp": {
       "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Ba-Student",
@@ -987,5 +987,10 @@
   "scientific": "COMPLETE",
   "evidence": "COMPLETE",
   "model_archival": "COMPLETE",
-  "no_models_deleted": true
+  "no_models_deleted": true,
+  "archive_evidence_commit": "6b0e2149762a86521cb44751a7d1c184c5e6255d",
+  "archive_git_receipt": "results/active_cross_lineage_ba/archive/final_git_receipt.json",
+  "next_action": "STOP; no new experiments or shutdown",
+  "auto_shutdown": false,
+  "shutdown_armed": false
 }
