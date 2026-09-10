@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-iSeal-Same-Lineage-Bc-Student",
+  "package": "/tmp/WMKD_Bc_archive_stage/same_lineage_bc_iseal_preferred_archive_20260910",
+  "files": {
+    "chat_template.jinja": {
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    "config.json": {
+      "bytes": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    "generation_config.json": {
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 4965799096,
+      "sha256": "49117161953e75addc3a78ba12245c520390f45945993921ad782ee1c1bafa49"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1459729952,
+      "sha256": "a72889a9ac5f4a2abe7c66013a2013a410134887a143d565b1864b3249ad0a5d"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    "special_tokens_map.json": {
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    "tokenizer.json": {
+      "bytes": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    "tokenizer_config.json": {
+      "bytes": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    "LICENSE.txt": {
+      "bytes": 7712,
+      "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+    },
+    "manifest.json": {
+      "bytes": 111422,
+      "sha256": "cc24dd8d4fdfeb72e838fb7c10f1efd71e4f33c3c001c7d1c34b6adcd1e91d92"
+    },
+    "README.md": {
+      "bytes": 222,
+      "sha256": "035f6dcc1cc9ce68a68f74722795e8f9998585a152227146021fac64f1ab308f"
+    },
+    "SHA256SUMS": {
+      "bytes": 1039,
+      "sha256": "2a02c1966fd29a3601b6cb22bb8457596c4832f9737d9c5e9207458dadeaed73"
+    }
+  },
+  "archive_sha256": "2a02c1966fd29a3601b6cb22bb8457596c4832f9737d9c5e9207458dadeaed73",
+  "archive_sha256_definition": "SHA256 of SHA256SUMS; binds package files",
+  "run_id": "iseal_bc_20260910",
+  "source_preserved": true
+}

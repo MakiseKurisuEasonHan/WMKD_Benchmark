@@ -70,7 +70,9 @@ def main(method):
         assert teacher.get_output_embeddings().weight.shape==student.get_output_embeddings().weight.shape
         assert not hasattr(student,'peft_config')
     else:
-        assert {n:tuple(p.shape) for n,p in teacher.named_parameters()}=={n:tuple(p.shape) for n,p in student.named_parameters()}
+        # state_dict includes both embedding/head names even when Student ties them.
+        # Keep the original Teacher tying unchanged (iSeal's native Teacher is untied).
+        assert {n:tuple(p.shape) for n,p in teacher.state_dict().items()}=={n:tuple(p.shape) for n,p in student.state_dict().items()}
     tb=pilot.weight_hash(teacher);sb=pilot.weight_hash(student)
     pilot.put(q/'initial_parameter_checksums.json',{'teacher':tb,'student':sb,'timestamp':now(),'fresh_base_revision':cfg['base_revision']})
     args=TrainingArguments(output_dir=str(output),num_train_epochs=3,learning_rate=1e-5,per_device_train_batch_size=8,gradient_accumulation_steps=1,bf16=True,fp16=False,save_strategy='epoch',save_total_limit=1,logging_steps=1,logging_nan_inf_filter=False,report_to=[],seed=42,data_seed=42,remove_unused_columns=False,gradient_checkpointing=True,optim=cfg['optimizer'],lr_scheduler_type=cfg['scheduler'],warmup_ratio=cfg['warmup_ratio'],weight_decay=cfg['weight_decay'],max_steps=-1)

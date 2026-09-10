@@ -13,6 +13,9 @@ D = Path(str(P) + '_data')
 
 
 def main():
+    if os.environ.get('SSH_ORIGINAL_COMMAND', '').startswith('bc-restore '):
+        from restore_bc_teacher_stream import receive
+        return receive()
     if os.environ.get('SSH_ORIGINAL_COMMAND', '').startswith('bc-receive '):
         from bc_frozen_asset_transfer import receive
         return receive()

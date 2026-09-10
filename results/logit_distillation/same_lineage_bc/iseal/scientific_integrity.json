@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "detector_integrity": "native adapter verified ordered plaintext hashes, finite BLEU and unchanged per-sample threshold",
+  "registered": 200,
+  "held_out": 100,
+  "arc_samples": 1172,
+  "mc2_samples": 817,
+  "teacher_frozen": true,
+  "native_metrics": {
+    "registered_success": 0,
+    "registered_total": 200,
+    "registered_success_rate": 0.0,
+    "registered_mean_bleu": 2.543812221050849,
+    "registered_median_bleu": 2.264080875533373,
+    "held_out_success": 0,
+    "held_out_total": 100,
+    "held_out_success_rate": 0.0,
+    "held_out_mean_bleu": 2.6634217938107203,
+    "held_out_median_bleu": 2.468145622444567
+  },
+  "utility": {
+    "status": "COMPLETE",
+    "fresh_process_reload": true,
+    "arc_challenge_acc_norm": 0.44368600682593856,
+    "truthfulqa_mc2_acc": 0.456499231887167,
+    "completed_at": "2026-09-10T01:32:57.532881+00:00"
+  }
+}

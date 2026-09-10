@@ -1,0 +1,13 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/iseal_a2_evaluate.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/watermark/iseal_experiment_a6.yaml",
+  "--teacher",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/iseal_bc_20260910/final_model",
+  "--dataset-cache",
+  "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/iseal/native_detector/detector_raw.json"
+]

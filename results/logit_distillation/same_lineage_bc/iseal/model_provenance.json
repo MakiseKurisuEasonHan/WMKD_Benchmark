@@ -1,0 +1,59 @@
+{
+  "status": "FRESH_RELOAD_VERIFIED",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/iseal_bc_20260910/final_model",
+  "files": [
+    {
+      "name": "chat_template.jinja",
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    {
+      "name": "config.json",
+      "bytes": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "49117161953e75addc3a78ba12245c520390f45945993921ad782ee1c1bafa49"
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "a72889a9ac5f4a2abe7c66013a2013a410134887a143d565b1864b3249ad0a5d"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    {
+      "name": "training_args.bin",
+      "bytes": 5905,
+      "sha256": "7acf610f37e28a6db2cc50ba3a0572f3bbb0d2b993ff3f56d8c948df85b3fe2e"
+    }
+  ],
+  "base_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "run_id": "iseal_bc_20260910",
+  "source_git_commit": "7b1be3962de4f08b26a24ef17f38b7a412bd8d41"
+}

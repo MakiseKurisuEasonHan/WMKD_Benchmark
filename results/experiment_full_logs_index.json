@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
   "generated_at": "2026-09-09T18:15:12.212563+00:00",
-  "object_count": 65,
+  "object_count": 66,
   "objects": [
     {
       "method": "PN-FP",
@@ -982,6 +982,18 @@
       "watermark_evaluation_available": true,
       "utility_available": true,
       "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-CTCC-Same-Lineage-Bc-Student"
+    },
+    {
+      "method": "iSeal",
+      "role": "same_lineage_logit_distillation_student",
+      "experiment": "Bc",
+      "run_id": "iseal_bc_20260910",
+      "full_log_path": "results/logit_distillation/same_lineage_bc/iseal/full_experiment_log.json",
+      "full_log_sha256": "6ec5f5ad9825eb423a3e44f290ece7a2960a1484a71f819104920485d5fff54a",
+      "scientific_status": "COMPLETED_MEASURED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-iSeal-Same-Lineage-Bc-Student"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
   "status": "ACTIVE",
-  "current_method": "iseal",
+  "current_method": "scw",
   "current_stage": "ASSET_RECOVERY",
   "serial_order": [
     "pnfp",
@@ -57,9 +57,26 @@
       "verification": "MANIFEST_PLUS_SEGMENT"
     },
     "iseal": {
-      "status": "NOT_STARTED",
-      "stage": "ASSET_RECOVERY",
-      "asset_note": "Original Teacher weight shards absent on old source; restore exact archived Teacher, no substitution."
+      "status": "COMPLETE",
+      "stage": "COMPLETE",
+      "asset_note": "Original Teacher weight shards absent on old source; restore exact archived Teacher, no substitution.",
+      "teacher_restore_pid": 12713,
+      "teacher_restore_status": "PASS",
+      "teacher_restore_mode": "old CPU authenticated stream to new GPU; exact historical SHA; no token transfer",
+      "verified_teacher_files": 15,
+      "current_restore_file": null,
+      "restore_log_timestamp": "2026-09-10T00:42:42.503895+00:00",
+      "supervisor_pid": 19727,
+      "run_id": "iseal_bc_20260910",
+      "training": "COMPLETE",
+      "worker_pid": null,
+      "training_steps": 7500,
+      "log_timestamp": "2026-09-10T01:27:23.991079+00:00",
+      "detector": "COMPLETE",
+      "utility": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive": "COMPLETE",
+      "archive_chain_pid": 15484
     },
     "scw": {
       "status": "NOT_STARTED"
@@ -76,5 +93,5 @@
   "shutdown_gate": "6terminal+scientific/evidence/archive/Git closure+no workers+sync",
   "timeout_gate": "only genuinely new high-risk approval AND no authorized action/workers,30minutes",
   "no_repeated_pilot": true,
-  "state_sync_timestamp": "2026-09-10T10:22:02.067723+10:00"
+  "state_sync_timestamp": "2026-09-10T12:38:36.927214+10:00"
 }
