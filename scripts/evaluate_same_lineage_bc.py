@@ -46,6 +46,9 @@ def main(m):
     elif m in ('evertracer','ctcc','iseal','scw'):
         assert cfg.get('native_detector_assets_verified') is True,'Frozen native detector assets must be verified'
         run('detector',[sys.executable,'-u','-B',str(P/'scripts/bc_native_detector_worker.py'),m,str(model)],q/'detector_results.json')
+    elif m=='passive_shared':
+        assert cfg.get('native_detector_assets_verified') is True
+        run('detector',[sys.executable,'-u','-B',str(P/'scripts/bc_passive_detector_worker.py'),str(model)],q/'detector_results.json')
     else:
         raise RuntimeError('Native detector asset/spec audit must be completed before enabling this method')
     run('utility',[sys.executable,'-u','-B',str(P/'scripts/bc_utility_worker.py'),m,str(model)],q/'utility/utility_results.json')

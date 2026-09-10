@@ -75,10 +75,12 @@ def main(method):
         assert {n:tuple(p.shape) for n,p in teacher.state_dict().items()}=={n:tuple(p.shape) for n,p in student.state_dict().items()}
     tb=pilot.weight_hash(teacher);sb=pilot.weight_hash(student)
     pilot.put(q/'initial_parameter_checksums.json',{'teacher':tb,'student':sb,'timestamp':now(),'fresh_base_revision':cfg['base_revision']})
-    args=TrainingArguments(output_dir=str(output),num_train_epochs=3,learning_rate=1e-5,per_device_train_batch_size=8,gradient_accumulation_steps=1,bf16=True,fp16=False,save_strategy='epoch',save_total_limit=1,logging_steps=1,logging_nan_inf_filter=False,report_to=[],seed=42,data_seed=42,remove_unused_columns=False,gradient_checkpointing=True,optim=cfg['optimizer'],lr_scheduler_type=cfg['scheduler'],warmup_ratio=cfg['warmup_ratio'],weight_decay=cfg['weight_decay'],max_steps=-1)
+    final_only=cfg.get('checkpoint_storage_policy')=='final_only_no_resume'
+    assert not final_only or (method=='passive_shared' and cfg['fresh_init'] and cfg['no_detector_trajectory'])
+    args=TrainingArguments(output_dir=str(output),num_train_epochs=3,learning_rate=1e-5,per_device_train_batch_size=8,gradient_accumulation_steps=1,bf16=True,fp16=False,save_strategy='no' if final_only else 'epoch',save_total_limit=1,logging_steps=1,logging_nan_inf_filter=False,report_to=[],seed=42,data_seed=42,remove_unused_columns=False,gradient_checkpointing=True,optim=cfg['optimizer'],lr_scheduler_type=cfg['scheduler'],warmup_ratio=cfg['warmup_ratio'],weight_decay=cfg['weight_decay'],max_steps=-1)
     ref={};cb=pilot.Telemetry(7500,ref,'training')
     trainer=FormalTrainer(model=student,teacher=teacher,stage='training',args=args,train_dataset=ds,data_collator=pilot.Collator(tok),processing_class=tok,callbacks=[cb]);ref['trainer']=trainer
-    pilot.put(q/'effective_runtime_config.json',{'training_arguments':args.to_dict(),'gpu_before':gpu,'runner_sha256':pilot.sha(__file__),'pilot_objective_source_sha256':pilot.sha(P/'scripts/pnfp_bc_pilot.py'),'checkpoint_policy':'epoch resumable latest only, no detector trajectory','sampler_class':type(trainer._get_train_sampler()).__name__})
+    pilot.put(q/'effective_runtime_config.json',{'training_arguments':args.to_dict(),'gpu_before':gpu,'runner_sha256':pilot.sha(__file__),'pilot_objective_source_sha256':pilot.sha(P/'scripts/pnfp_bc_pilot.py'),'checkpoint_policy':'final_only_no_resume' if final_only else 'epoch resumable latest only, no detector trajectory','sampler_class':type(trainer._get_train_sampler()).__name__})
     wall=time.perf_counter();trainer.train();torch.cuda.synchronize();elapsed=time.perf_counter()-wall
     assert trainer.state.global_step==7500 and len(cb.rows)==7500
     ta=pilot.weight_hash(teacher);sa=pilot.weight_hash(student);assert tb==ta and sb!=sa

@@ -4,6 +4,11 @@ from pathlib import Path
 P=Path('/root/autodl-tmp/WMKD_Benchmark')
 Q=P/'results/logit_distillation/same_lineage_bc/evertracer'
 M=Q/'transfer_recovery_manifest.json'
+def select_method(method):
+ global Q,M
+ assert method in ('evertracer','passive_shared')
+ Q=P/'results/logit_distillation/same_lineage_bc'/method
+ M=Q/'transfer_recovery_manifest.json'
 def digest(p,limit=None):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -15,6 +20,7 @@ def digest(p,limit=None):
  return h.hexdigest()
 def receive():
  a=os.environ['SSH_ORIGINAL_COMMAND'].split();assert a[0]=='bc-receive'
+ if a[1]=='passive_shared':select_method(a.pop(1))
  op,i=a[1:3];x=json.loads(M.read_text())['files'][int(i)];p=Path(x['path'])
  assert p.resolve().is_relative_to(Path(str(P)+'_data')) and not p.is_symlink()
  size=p.stat().st_size if p.exists() else 0;assert size<=x['bytes']
@@ -35,11 +41,12 @@ def send():
  save()
  try:
   for i,x in enumerate(rows):
-   p=Path(x['path']);assert p.stat().st_size==x['bytes'] and digest(p)==x['sha256']
-   st=json.loads(subprocess.check_output(ssh+[f'bc-receive status {i}'],text=True));offset=st['bytes'];assert offset<=x['bytes'] and digest(p,offset)==st['sha256']
+   p=Path(x.get('source',x['path']));assert p.stat().st_size==x['bytes'] and digest(p)==x['sha256']
+   prefix='bc-receive passive_shared' if Q.name=='passive_shared' else 'bc-receive'
+   st=json.loads(subprocess.check_output(ssh+[f'{prefix} status {i}'],text=True));offset=st['bytes'];assert offset<=x['bytes'] and digest(p,offset)==st['sha256']
    r.update(current_file=str(p),starting_offset=offset);save()
    if offset<x['bytes']:
-    child=subprocess.Popen(ssh+[f"bc-receive append {i} {offset} {st['sha256']}"],stdin=subprocess.PIPE,stdout=subprocess.PIPE)
+    child=subprocess.Popen(ssh+[f"{prefix} append {i} {offset} {st['sha256']}"],stdin=subprocess.PIPE,stdout=subprocess.PIPE)
     with p.open('rb') as f:
      f.seek(offset)
      while b:=f.read(2<<20):child.stdin.write(b)
@@ -48,5 +55,6 @@ def send():
   r.update(status='PASS',current_file=None);save()
  except Exception as exc:r.update(status='ERROR_REVIEW_REQUIRED',error=str(exc));save();raise
 if __name__=='__main__':
+ if len(sys.argv)>2:select_method(sys.argv[2])
  if sys.argv[1]=='receive':receive()
  else:send()
