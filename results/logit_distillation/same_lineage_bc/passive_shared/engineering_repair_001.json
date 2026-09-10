@@ -1,0 +1,25 @@
+{
+  "classification": "GREEN_CAPACITY_GATE",
+  "error": "HuRef GLOBAL_DISK_SAFETY_BLOCK, historical 100GiB reserve",
+  "repair": "Explicit Bc-only 2GB reserve for small detector outputs; default other calls100GB; no math/threshold/probe/model changes",
+  "checks": [
+    {
+      "file": "scripts\\huref_experiment_a2.py",
+      "function": "extract",
+      "mathematical_body_ast_unchanged": true,
+      "new_sha256": "7cb65a14457f10a27d38eac85ff85ca2e3aa473a06858640459ab4ab88009c5e"
+    },
+    {
+      "file": "scripts\\zeroprint_experiment_a2.py",
+      "function": "run_model",
+      "mathematical_body_ast_unchanged": true,
+      "new_sha256": "7499c7ef0c32e41d04938dc532595c1b9ec0c091fc4e1033f80dd3ec1a94500e"
+    }
+  ],
+  "reuse_completed": [
+    "LLMPrint",
+    "REEF"
+  ],
+  "training_rerun": false,
+  "at": "2026-09-10T06:54:33.130638+00:00"
+}

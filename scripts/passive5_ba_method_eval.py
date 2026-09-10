@@ -207,6 +207,7 @@ def huref(args: argparse.Namespace) -> None:
     student_feature, extraction = protocol.extract(
         args.student, ids, student_feature_path, student_label(args),
         rebuilt_manifest["manifest_content_sha256"],
+        minimum_free_gb=2 if args.experiment == "Bc" else 100,
     )
     score = protocol.ics(reference, student_feature)
     threshold = 4.119894027709961
@@ -338,6 +339,7 @@ def zeroprint(args: argparse.Namespace) -> None:
     student_fingerprint, generation = protocol.run_model(
         args.student, student_label(args), "student",
         prompts, input_embeddings, mpnet, method_dir,
+        minimum_free_gb=2 if args.experiment == "Bc" else 100,
     )
     detector_score = protocol.score(reference, student_fingerprint)
     threshold = 0.6793505996465683

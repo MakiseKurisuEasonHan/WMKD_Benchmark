@@ -179,8 +179,9 @@ def unit_tests(data_root, manifests):
     return {"status": "PASS" if all(x["pass"] for x in tests.values()) else "FAIL", "tests": tests}
 
 
-def extract(path, ids, output, model_id, token_manifest_sha):
-    if free_gb(output.parents[5]) < 100: raise RuntimeError("GLOBAL_DISK_SAFETY_BLOCK")
+def extract(path, ids, output, model_id, token_manifest_sha, *, minimum_free_gb=100):
+    if minimum_free_gb not in (2, 100): raise ValueError("Unsupported disk reserve")
+    if free_gb(output.parent) < minimum_free_gb: raise RuntimeError("GLOBAL_DISK_SAFETY_BLOCK")
     started = time.time(); torch.cuda.reset_peak_memory_stats()
     cfg = AutoConfig.from_pretrained(path, local_files_only=True, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(path, local_files_only=True, trust_remote_code=True,

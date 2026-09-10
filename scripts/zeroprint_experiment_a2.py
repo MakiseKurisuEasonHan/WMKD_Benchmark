@@ -75,8 +75,9 @@ def units(project,data,queries,panel,glove,mp,pert1,pert2,words,index,matrix):
  tests={"HumanEval_parser":{"pass":bool(parser)},"panel_integrity":{"pass":bool(pn)},"GloVe_neighbors":{"pass":bool(gloveok),"words":gn},"perturbation_determinism":{"pass":pert1["manifest_content_sha256"]==pert2["manifest_content_sha256"],"sha256":pert1["manifest_content_sha256"]},"MPNet_determinism":{"pass":mpdiff==0,"max_abs_diff":mpdiff,"dimension":int(e.shape[1])},"ridge_Jacobian":{"pass":float(np.max(np.abs(off-wm)))==0,"max_abs_diff":float(np.max(np.abs(off-wm))),"alpha":ALPHA,"orientation":"J=solve(X.T X+alpha I,X.T Y).T"},"Pearson_rescaling":{"pass":pearsonok,"test":sc},"tiny_end_to_end":{"pass":bool(smoke),"scientific_result":False}}
  return {"marker":"ZEROPRINT_A2_PROTOCOL_UNIT_TESTS=PASS" if all(v["pass"] for v in tests.values()) else "ZEROPRINT_A2_PROTOCOL_UNIT_TESTS=FAIL","status":"PASS" if all(v["pass"] for v in tests.values()) else "FAIL","tests":tests}
 
-def run_model(path,mid,role,prompts,input_emb,mp,art):
- if freegb(art)<100:raise RuntimeError("GLOBAL_DISK_SAFETY_BLOCK")
+def run_model(path,mid,role,prompts,input_emb,mp,art,*,minimum_free_gb=100):
+ if minimum_free_gb not in (2,100):raise ValueError("Unsupported disk reserve")
+ if freegb(art)<minimum_free_gb:raise RuntimeError("GLOBAL_DISK_SAFETY_BLOCK")
  seeds();tok=AutoTokenizer.from_pretrained(path,local_files_only=True,trust_remote_code=True);tok.padding_side="left";m=AutoModelForCausalLM.from_pretrained(path,local_files_only=True,trust_remote_code=True,torch_dtype=torch.float16,device_map="cuda:0").eval();torch.cuda.reset_peak_memory_stats();start=time.time();logs=[];texts=[];lengths=[]
  logp=art/f"{role}_generations.jsonl";f=logp.open("w",encoding="utf-8")
  for pi,prompt in enumerate(prompts):
