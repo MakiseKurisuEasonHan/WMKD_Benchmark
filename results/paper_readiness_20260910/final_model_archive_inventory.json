@@ -1,0 +1,1840 @@
+[
+  {
+    "experiment": "A2",
+    "method": "PN-FP",
+    "repo": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+    "receipt_path": "results/archive_remediation/evidence/pnfp_a2_teacher_20260905_083623.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "11b80d3d9bff7419d0c16445decf30953acdf335d8d57c7bd88d69d5032150cd",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "PASS",
+    "file_count": 14,
+    "total_bytes": 6436795518,
+    "receipt_sha256": "5b019323c28efa4367d6fbf069df011ae1ab640f819dfb940927767367f898c7",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2227,
+        "sha256": "d5f454f08b61ccecfe7937fd662c33ecf0a21f8924e8032659c9e3150e674ec2"
+      },
+      {
+        "path": "config.json",
+        "size": 966,
+        "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d"
+      },
+      {
+        "path": "configuration.json",
+        "size": 26,
+        "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20919,
+        "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+      },
+      {
+        "path": "transfer_tests/modelscope_upload_test_20260828T081723Z.txt",
+        "size": 2097152,
+        "sha256": "817d7a671093175350ec48ddd75ab3045e2b77eeb12d0f57c1a63ae0e04bd0b7"
+      },
+      {
+        "path": "README.md",
+        "size": 1557,
+        "sha256": "020431ef4a2d34894c7c0c3a5808055c8688461db8739da24181096097a0f369"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 719,
+        "sha256": "11b80d3d9bff7419d0c16445decf30953acdf335d8d57c7bd88d69d5032150cd"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 9085754,
+        "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 54557,
+        "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 2084,
+        "sha256": "d7be31a8093e6a61e84e193c883accd2bcec3ad0db56eff00a55e884970e6dd8"
+      }
+    ]
+  },
+  {
+    "experiment": "Ba",
+    "method": "PN-FP",
+    "repo": "MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student",
+    "receipt_path": "results/archive_remediation/evidence/pnfp_ba_student_20260905_083803.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "cdeeee61df6c1d20121c7dfe88f6211637d04156902cd77c048662967efe1bb0",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6434698504,
+    "receipt_sha256": "5df71bde49f4fa49901035111cd88570dba34058f6a9547468e91e70bb00f49b",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "config.json",
+        "size": 967,
+        "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189"
+      },
+      {
+        "path": "configuration.json",
+        "size": 26,
+        "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "0ba6e341774beccaf530d7c02d4a10c44fcdb89467b03c2d24edfadf7a28c941"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "0c306af6f96bf5018c795de4a74eaeeba062a9150255b35972a1ab67844c436a"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20919,
+        "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+      },
+      {
+        "path": "README.md",
+        "size": 1557,
+        "sha256": "3024ec76ba4269e1194196c9a412ac804d277d305412dea4ad641a2f026a6e29"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 719,
+        "sha256": "cdeeee61df6c1d20121c7dfe88f6211637d04156902cd77c048662967efe1bb0"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 9085756,
+        "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 54557,
+        "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 2317,
+        "sha256": "57b9c1ed7d19061040f22de0cfda02d0c98db0b0a7978eecb5fef8a8173bc400"
+      }
+    ]
+  },
+  {
+    "experiment": "A",
+    "method": "EverTracer",
+    "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+    "receipt_path": "results/archive_remediation/evidence/evertracer_a_teacher_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "b4bada96c0a9eecedfbe2b0981b9efc057a47a0047e07ebf5e7c4d8e12b0d248",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 14,
+    "total_bytes": 6442822650,
+    "receipt_sha256": "585c886961cb13010ae31d635f3882971374ddf428da3c2e0161bb4c35e7a443",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 873,
+        "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50"
+      },
+      {
+        "path": "configuration.json",
+        "size": 26,
+        "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "a30c9eb48ae98d12467c2bd9ef68264836b72f23e6b2048dd609522a898fa7aa"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "4399cdd4c42dc445dad6a373d43354d1c0a99e95ad66bd7815def952d3ec968a"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "README.md",
+        "size": 1567,
+        "sha256": "99d95005b644705c9e89433d5d834016b452a39e8bad54713553508013aa20be"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 805,
+        "sha256": "b4bada96c0a9eecedfbe2b0981b9efc057a47a0047e07ebf5e7c4d8e12b0d248"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 296,
+        "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17209920,
+        "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50525,
+        "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 2495,
+        "sha256": "805148309e62bccd0dd3fc05fcc71f5e09416c0594e4888fb635b95167fe750e"
+      }
+    ]
+  },
+  {
+    "experiment": "Ba",
+    "method": "EverTracer",
+    "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+    "receipt_path": "results/archive_remediation/evidence/evertracer_ba_student_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "94fb0e18e8ca638982b0d946906f30c3c011362affaa736b0350c9394bfd315e",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 14,
+    "total_bytes": 6442822948,
+    "receipt_sha256": "ab7f227150e42d929c25902c0c429032e2e0bfcf7a57fd396665ff6ae02d6dd2",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "configuration.json",
+        "size": 26,
+        "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "README.md",
+        "size": 1569,
+        "sha256": "be473f0bf6adf3c8d883900f8f4ecce270327d2a018c3be9b89b3980c7be946c"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 805,
+        "sha256": "94fb0e18e8ca638982b0d946906f30c3c011362affaa736b0350c9394bfd315e"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 2633,
+        "sha256": "b193dceb0a0b7754f54113b967d1e64a3b03f93956f53e115cbb286d8de5f703"
+      }
+    ]
+  },
+  {
+    "experiment": "A",
+    "method": "CTCC",
+    "repo": "MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher",
+    "receipt_path": "results/archive_remediation/evidence/ctcc_a_teacher_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "920719140376653716528c81368f5d1c1e693060933d310c3f4e1e08d1c10e22",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 11,
+    "total_bytes": 65951003,
+    "receipt_sha256": "d5a347eb77d30f254fc8e52a4cca3a197a8f70f894aef75bcc30b02040700e79",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "adapter_config.json",
+        "size": 980,
+        "sha256": "0bcb81b7e9cb7210e9eae7e30a2e14b1c596b1282a673422500ace1b1759fed9"
+      },
+      {
+        "path": "adapter_model.safetensors",
+        "size": 48679352,
+        "sha256": "36957869183ee2581c7377ba973de0aef4d162c7caa3a2353684cf931ae429cd"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "configuration.json",
+        "size": 26,
+        "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+      },
+      {
+        "path": "README.md",
+        "size": 767,
+        "sha256": "6be1b2d6c7e594bf918ef7a1a13fd5b4e20ddb5e28990a490856814fdb59e723"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 675,
+        "sha256": "920719140376653716528c81368f5d1c1e693060933d310c3f4e1e08d1c10e22"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17209920,
+        "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 2448,
+        "sha256": "789fbb9c28300c1c199baac348ee62585005f6c57616aeab79e80e7e78865b1f"
+      }
+    ]
+  },
+  {
+    "experiment": "Ba",
+    "method": "CTCC",
+    "repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+    "receipt_path": "results/archive_remediation/evidence/ctcc_ba_student_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "264db884727f8caf035cde1dac14b0a3078ef3773d252e2f34a000cbda5a921c",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 14,
+    "total_bytes": 6442823027,
+    "receipt_sha256": "b3512ea8097db3e6e4c537364a60223f09563c26c7deaf7c73c215c809791615",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "configuration.json",
+        "size": 26,
+        "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "c18a0a6fe7f5967816a606e47cbf18921a936b1fdeca9be15fb05abe2453fe97"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "3890801cec48101dcdf5462d107c6c4ac81e9f415e3a237f72520a85e096cee1"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "README.md",
+        "size": 1036,
+        "sha256": "e6e8a9347db7d12b611af53b2f1e21fc4f59d8ede736f1709a9e206ff047b6c6"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 965,
+        "sha256": "264db884727f8caf035cde1dac14b0a3078ef3773d252e2f34a000cbda5a921c"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 3085,
+        "sha256": "969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc"
+      }
+    ]
+  },
+  {
+    "experiment": "A6",
+    "method": "iSeal",
+    "repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+    "receipt_path": "results/archive_remediation/evidence/iseal_a6_teacher_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "a829c254df3e3907e14ec34731f8e903c12878cf931c67d7e483bb8300d2116d",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 19,
+    "total_bytes": 7230829128,
+    "receipt_sha256": "08e34915bfa5b939c7e9c308e11156f3639a8b6372b930ee97cee73db4f29d0d",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "cd882c352586d862ec921530ba719cf82a2b64687a3f40aa17ad60925df5bca0"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "model-00001-of-00008.safetensors",
+        "size": 989344904,
+        "sha256": "6f751f3ba16cbfa69153e50b241b40fb208498b7864afd9923ddbf7eab0fdf7f"
+      },
+      {
+        "path": "model-00002-of-00008.safetensors",
+        "size": 956355256,
+        "sha256": "3ccd5683db48c181fd01ac5578d78d1e1a899154a19f037ed9b828c62b4a5219"
+      },
+      {
+        "path": "model-00003-of-00008.safetensors",
+        "size": 956367776,
+        "sha256": "528c1b9290c20ea5102330f8bfd6abe06a70a89179aeea17221d380fcdd8407f"
+      },
+      {
+        "path": "model-00004-of-00008.safetensors",
+        "size": 956367816,
+        "sha256": "5cf4cf6d17de555b2d396100328c49d7c455374ee9a367ef733fe569963e1f77"
+      },
+      {
+        "path": "model-00005-of-00008.safetensors",
+        "size": 987825088,
+        "sha256": "760d7789edbe51eb288b2038419327fda2f3405a7963ef43aa140e9e5bfe2324"
+      },
+      {
+        "path": "model-00006-of-00008.safetensors",
+        "size": 994116432,
+        "sha256": "c4063274bb2290c4d93c53ea52ad9306b36ca23ced687784a4bb3141bfa7fbf2"
+      },
+      {
+        "path": "model-00007-of-00008.safetensors",
+        "size": 585151504,
+        "sha256": "6e0f3a8b910f9563576a0ec0210d36f13bbfbd0ad4f62d950028ae8dcced017c"
+      },
+      {
+        "path": "model-00008-of-00008.safetensors",
+        "size": 788004992,
+        "sha256": "c2f66b322db0bcb4f1942ac5426ea4791e508f8d57589243df11b050ae0322d3"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 21013,
+        "sha256": "313ae27e5e043d72fbc3753d92e5a80023024bc4404fe759880aafcc1189e20b"
+      },
+      {
+        "path": "README.md",
+        "size": 810,
+        "sha256": "d6217c02a9107105fe97eb263dfa5aa7a9595c76f08ced1c9861f3201e1c4abf"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 1475,
+        "sha256": "a829c254df3e3907e14ec34731f8e903c12878cf931c67d7e483bb8300d2116d"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210195,
+        "sha256": "fbe07b35a61be0ec850f12e9379be8ca47b4ef845b20f0d146a8a2bfdb0e7e3e"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 3974,
+        "sha256": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb"
+      }
+    ]
+  },
+  {
+    "experiment": "Ba",
+    "method": "iSeal",
+    "repo": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+    "receipt_path": "results/archive_remediation/evidence/iseal_ba_student_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "e6d41a7ac493cf1d1a570776310afbd7811e92bb490b5de6bf1be9ad74cc48af",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6442822836,
+    "receipt_sha256": "1c8734152b0a943a3114b19a0655345d034a68eaf715a0135c0adf6ca1c3bb9a",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "README.md",
+        "size": 877,
+        "sha256": "23c8497e923117745f207f87c1b2bab907ba80a05d876bce9e0ff4710ca47135"
+      },
+      {
+        "path": "wmkd_metadata/SHA256SUMS",
+        "size": 965,
+        "sha256": "e6d41a7ac493cf1d1a570776310afbd7811e92bb490b5de6bf1be9ad74cc48af"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+        "size": 3079,
+        "sha256": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a"
+      }
+    ]
+  },
+  {
+    "experiment": "A2",
+    "method": "SCW",
+    "repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+    "receipt_path": "results/archive_remediation/evidence/scw_a2_teacher_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "NOT_RECORDED",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 11,
+    "total_bytes": 6442819180,
+    "receipt_sha256": "364ea7d0eddfcb4ed43decd71076a153add485301e72b9af56996c0fab5783f6",
+    "metadata_gaps": [
+      "immutable_revision",
+      "SHA256SUMS"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 873,
+        "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "c3fcc784e06feaad7ef82ad43ec270f8cc20f23351c0054e7f99e3821e85189c"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "81f390ad9cc6f61a832ca87f0cf4efb455a425198c5ab9ad523e12dac9247e08"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "README.md",
+        "size": 1397,
+        "sha256": "e7222c65a4ae4a766c7e0160496d0b63c49b9577f5d273e7aa05883ea5c0b05f"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 296,
+        "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17209920,
+        "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50551,
+        "sha256": "08c3286c8f1d3bb85c14a68fdfd113400ce2d915f40478d32b28d55a3c1bc2bc"
+      }
+    ]
+  },
+  {
+    "experiment": "Ba",
+    "method": "SCW",
+    "repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+    "receipt_path": "results/archive_remediation/evidence/scw_ba_student_strong_remote_20260905_091738.json",
+    "legacy_classification": "ARCHIVED_STRONGLY_VERIFIED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "NOT_RECORDED",
+    "verification_mode": "HISTORICAL_REMOTE_METADATA_AND_LOCAL_HASH",
+    "verification_status": "PASS",
+    "file_count": 11,
+    "total_bytes": 6442819312,
+    "receipt_sha256": "5df36df2de127847f5caed48c2665eb64e728973e8b99f99ceccb6a7cfb2e512",
+    "metadata_gaps": [
+      "immutable_revision",
+      "SHA256SUMS"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "1215059dfa4530a850f205c0ec82b96ea5e2b992e62240654dba576309d71ce4"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "f1feff447b5324c0f72586d6dc33307de1c87edcd70aa198f5bc5cece3812880"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "README.md",
+        "size": 1397,
+        "sha256": "8d76d4657f65ff6ce8411cb63f6962bf330c5d13d5793df1f340cd54806feb25"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      }
+    ]
+  },
+  {
+    "experiment": "Bb",
+    "method": "PN-FP",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-PNFP-Bb-Student",
+    "receipt_path": "results/pnfp/experiment_bb/student_archive.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "9a9ed61439d6e43f4804e63bfa604d0f8042e19f103efa5f670aaaca3043436e",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETED",
+    "file_count": 17,
+    "total_bytes": 6442831472,
+    "receipt_sha256": "c2a957e7e9179d86714f019e9768f51cc95fbb527f045a16208cce4672b54427",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "LICENSE.txt",
+        "size": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+      },
+      {
+        "path": "manifest.json",
+        "size": 1986,
+        "sha256": "4bb055b157b08542035a262309feecad956327159660dd6cac362c3a480298e1"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "136a7cf59a56d5acf68d49e2929886ae2c6a364eb8fa49660b36d5acf686f5bc"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "9e8f94011ab9d5aae82c35099573b3076dcf246a3b50a84f92fe63307ffae49c"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "NOTICE",
+        "size": 116,
+        "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+      },
+      {
+        "path": "README.md",
+        "size": 202,
+        "sha256": "8cd5bde0483b8df7a17368b5d292bd3296477bd7b2cb2108c9a36250f0d0bd94"
+      },
+      {
+        "path": "RELOAD_VALIDATION.json",
+        "size": 783,
+        "sha256": "4ffa73cf4e5edc28de64d5e0cfeb5469cc089d5f0c37b49da652954ac6164936"
+      },
+      {
+        "path": "SHA256SUMS",
+        "size": 1294,
+        "sha256": "9a9ed61439d6e43f4804e63bfa604d0f8042e19f103efa5f670aaaca3043436e"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "WMKD_STUDENT_MANIFEST.json",
+        "size": 1464,
+        "sha256": "9b8d002f37668f00bc42475a8616385626c9a93ac0559da2ce2904cd241408d3"
+      }
+    ]
+  },
+  {
+    "experiment": "Bb",
+    "method": "EverTracer",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+    "receipt_path": "results/evertracer/experiment_bb/evidence/student_modelscope_archive.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": "{'ChineseName': '', 'CreatedAt': 1788496693, 'Revision': 'master', 'ShowName': ''}",
+    "sha256_sha256sums": "baff5534f73f1988742123d4e41bb695b662138411d29bbd74d810f5d8e1ac0e",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETED",
+    "file_count": 19,
+    "total_bytes": 6434721487,
+    "receipt_sha256": "9a01363a190d6dadcba1bd4382b0f91bf2e0e2e28b74d9c010a3e90b2d2225e7",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "config.json",
+        "size": 967,
+        "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53"
+      },
+      {
+        "path": "LICENSE.txt",
+        "size": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+      },
+      {
+        "path": "manifest.json",
+        "size": 2632,
+        "sha256": "37c8e012cf80a03f77962814b0e0d6547d25125799385c7dff6d14f55c409911"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "545cd3354f9c447a7e01f0a5c5e1ea32f3fafe0038cb8b6c88274b563dfe18ca"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "8114659537d0460cd0122c1b5c4858cad9093fe515fd39403dd3670aefeba739"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20919,
+        "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c"
+      },
+      {
+        "path": "NOTICE",
+        "size": 116,
+        "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+      },
+      {
+        "path": "PROVENANCE.json",
+        "size": 3164,
+        "sha256": "a56ed5f27a5feb65f74ceebd96b37bafa7657326235cc238b5791b8589660beb"
+      },
+      {
+        "path": "README.md",
+        "size": 736,
+        "sha256": "3bd2bafa110d91b727f2f95667ee4c8f998570bd48eb9055e9d25c0439f52dda"
+      },
+      {
+        "path": "RELOAD_VALIDATION.json",
+        "size": 937,
+        "sha256": "3d73bc273a619774f9c065df12195dd318e87a6d1cda163dcf60314588faf5b9"
+      },
+      {
+        "path": "SHA256SUMS",
+        "size": 1462,
+        "sha256": "baff5534f73f1988742123d4e41bb695b662138411d29bbd74d810f5d8e1ac0e"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 9085756,
+        "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 54557,
+        "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6"
+      },
+      {
+        "path": "TRAINING_CONFIG.json",
+        "size": 8254,
+        "sha256": "3c068ac6dda2214d2f9534948491d12deac623cc251014e4924eb74f8a7bc24f"
+      },
+      {
+        "path": "TRAINING_EXIT.json",
+        "size": 1146,
+        "sha256": "e01a74db8941818525ff8b1a927c83df81746674e47438ea0868f3cf9f10ff72"
+      },
+      {
+        "path": "WMKD_STUDENT_MANIFEST.json",
+        "size": 1443,
+        "sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102"
+      }
+    ]
+  },
+  {
+    "experiment": "Bb",
+    "method": "iSeal",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-iSeal-Bb-Student",
+    "receipt_path": "results/iseal/experiment_bb/student_archive.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "99fcef07ea86f344b1e13efd9da89474ff0853c3a35dd4bf16c6e9e67e535aa5",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETED",
+    "file_count": 17,
+    "total_bytes": 6442831481,
+    "receipt_sha256": "227e252e1248061733b3b98252ab64aefbd267725d4f9ee4ab4b39a0d4551a4a",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "LICENSE.txt",
+        "size": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+      },
+      {
+        "path": "manifest.json",
+        "size": 1989,
+        "sha256": "2f7ed59b3b6d053ef32644545b8de54a701d06fa37555215d30f7aca4adec566"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "7358f863a97186f3815e262a3a691453faea1d0895687f30355f8dbefcd0126b"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "08926fc3d4efabb47db837dd604f3ba00bf9b7c15d19a6ecfa97b96e349ca31a"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "NOTICE",
+        "size": 116,
+        "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+      },
+      {
+        "path": "README.md",
+        "size": 203,
+        "sha256": "802b20042833630e755ac70814c1bd1f3d6d8cdf92372d4ec41924d80db1ed1a"
+      },
+      {
+        "path": "RELOAD_VALIDATION.json",
+        "size": 786,
+        "sha256": "0ba2d9f9b265026f940cfa5710eb7ce072db22819ed495d2051350efd7295119"
+      },
+      {
+        "path": "SHA256SUMS",
+        "size": 1294,
+        "sha256": "99fcef07ea86f344b1e13efd9da89474ff0853c3a35dd4bf16c6e9e67e535aa5"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "WMKD_STUDENT_MANIFEST.json",
+        "size": 1466,
+        "sha256": "6292b7dc9b2fdfa94db391a2190c2eb519a761f1b2f77ca89018b7b517d6ec77"
+      }
+    ]
+  },
+  {
+    "experiment": "Bb",
+    "method": "SCW",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-SCW-Bb-Student",
+    "receipt_path": "results/scw/experiment_bb/student_archive.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "9eef2e3e265f892bc711c6d30abcb59ac7ce06cbfe2aa1b6c9c2379312c24450",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETED",
+    "file_count": 17,
+    "total_bytes": 6442831464,
+    "receipt_sha256": "c0e655db63cd4afd5f878948a7d347d378d82f83fffbca522e464dbd4eb6b518",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "LICENSE.txt",
+        "size": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+      },
+      {
+        "path": "manifest.json",
+        "size": 1983,
+        "sha256": "f4b40914343f7937c669899c2b5c2e87786f31c866a0bac8c57d20f71e82839b"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "7dc05dea4c0a6e13c01a53a24da4c99653cefecb1a53b79b7ea076d58d089e29"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "ee45c8e4148996250ff8f5f6ee384881131679eae7ba8c132aba6d4ec622039a"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "NOTICE",
+        "size": 116,
+        "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+      },
+      {
+        "path": "README.md",
+        "size": 201,
+        "sha256": "f40287243133f4ef7d4a14cf63af819e6fe5bb7eb5ef7d232dd74b630b299c4a"
+      },
+      {
+        "path": "RELOAD_VALIDATION.json",
+        "size": 781,
+        "sha256": "f0666a559ee7fd9caeec61289da203afec7106cfaf24238b42dd11517d430063"
+      },
+      {
+        "path": "SHA256SUMS",
+        "size": 1294,
+        "sha256": "9eef2e3e265f892bc711c6d30abcb59ac7ce06cbfe2aa1b6c9c2379312c24450"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "WMKD_STUDENT_MANIFEST.json",
+        "size": 1462,
+        "sha256": "784922d1d023aa98b60e5fd0c5dcecafc5bef2c1f31bc13b7b8b6b25c7f6543a"
+      }
+    ]
+  },
+  {
+    "experiment": "Bb2",
+    "method": "CTCC",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-CTCC-Bb2-Student",
+    "receipt_path": "results/ctcc/experiment_bb2/student_archive.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": null,
+    "sha256_sha256sums": "fb71f11a8d971996ff73f8123b726134ff0465c8f847e2f07a30f8e20030f290",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETED",
+    "file_count": 17,
+    "total_bytes": 6442831532,
+    "receipt_sha256": "161400e83a9cba03f0acc45a13852f5247436e8bb07826ac2112dca31042d04b",
+    "metadata_gaps": [
+      "immutable_revision"
+    ],
+    "supplemental_metadata_source": {
+      "path": "results/cross_method_audit_20260907/modelscope_inventory.json",
+      "bytes": 60915,
+      "sha256": "adc11897326895d08522ff32fc72e8f306499b3cda7467af8b04929cc4037cac",
+      "git_tracked": true
+    },
+    "remote_manifest_files": [
+      {
+        "path": ".gitattributes",
+        "size": 2129,
+        "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b"
+      },
+      {
+        "path": "chat_template.jinja",
+        "size": 3827,
+        "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+      },
+      {
+        "path": "config.json",
+        "size": 874,
+        "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 184,
+        "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+      },
+      {
+        "path": "LICENSE.txt",
+        "size": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+      },
+      {
+        "path": "manifest.json",
+        "size": 1988,
+        "sha256": "25565c5e7f130216503db6a83beba743718fa81ae0846ceb5c0e0c6862774d60"
+      },
+      {
+        "path": "model-00001-of-00002.safetensors",
+        "size": 4965799096,
+        "sha256": "867e640c81da6a9a412bdb6f3abbd1f843578dd838a4bb9ae67ebfb43413a9bd"
+      },
+      {
+        "path": "model-00002-of-00002.safetensors",
+        "size": 1459729952,
+        "sha256": "340f8217609da605d8eb977c8b0c3970d31d943a292e563ada59aa2c54506d02"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "size": 20955,
+        "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+      },
+      {
+        "path": "NOTICE",
+        "size": 116,
+        "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025"
+      },
+      {
+        "path": "README.md",
+        "size": 202,
+        "sha256": "86a68b8aab9ab96f917e7fa6cb99ec193aa56b04b43f89284b1d655602ec7a09"
+      },
+      {
+        "path": "RELOAD_VALIDATION.json",
+        "size": 839,
+        "sha256": "91f7a270bd007994bdfb424b63da6f059f61d537e0596281b11aa598776ba91b"
+      },
+      {
+        "path": "SHA256SUMS",
+        "size": 1294,
+        "sha256": "fb71f11a8d971996ff73f8123b726134ff0465c8f847e2f07a30f8e20030f290"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 325,
+        "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 17210019,
+        "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 50554,
+        "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+      },
+      {
+        "path": "WMKD_STUDENT_MANIFEST.json",
+        "size": 1466,
+        "sha256": "d7ad737a7245d08854e284a6a16f409d83619766588377c40c6476009c002b5b"
+      }
+    ]
+  },
+  {
+    "experiment": "Ba",
+    "method": "Passive-5 Shared",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Ba-Student",
+    "receipt_path": "results/passive5_shared_ba/modelscope_student_archive.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": "{'ChineseName': '', 'CreatedAt': 1788406261, 'Revision': 'master', 'ShowName': ''}",
+    "sha256_sha256sums": "aaa10693d624843db848209352861ce6c6e7e8df98bb88d74994baf3bd403f83",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETED",
+    "file_count": 10,
+    "total_bytes": 6442834743,
+    "receipt_sha256": "37a083d8e09fb6ca6590472eb486970f13f64efdf4e056f65050aaaf9d7a1244",
+    "metadata_gaps": [
+      "immutable_revision"
+    ]
+  },
+  {
+    "experiment": "Bb3",
+    "method": "Passive-5 Shared",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Bb3-Student",
+    "receipt_path": "results/passive5_shared_bb3/modelscope_student_archive.json",
+    "legacy_classification": "VERIFIED_ARCHIVED",
+    "visibility": "PRIVATE",
+    "immutable_revision": "NOT_RECORDED",
+    "historical_revision_field": "{'ChineseName': '', 'CreatedAt': 1788431383, 'Revision': 'master', 'ShowName': ''}",
+    "sha256_sha256sums": "a470419e00ca52758281e5f9a8305fa364c6dc4984f79cf4e6be911e513c3066",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETED",
+    "file_count": 9,
+    "total_bytes": 6434712283,
+    "receipt_sha256": "f15a8dab639ac062b2eeda3c4642cdaf18e1d1053720359ebbae707bd7426791",
+    "metadata_gaps": [
+      "immutable_revision"
+    ]
+  },
+  {
+    "experiment": "XBa",
+    "method": "PN-FP",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Ba-Student",
+    "receipt_path": "results/active_cross_lineage_ba/pnfp/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "4d7a589c21c927773876b2776e3eb794f1444b49",
+    "historical_revision_field": "4d7a589c21c927773876b2776e3eb794f1444b49",
+    "sha256_sha256sums": "d7b026ce9bc01975cac7d5b110929781861c4b2ce1bd26546dbe4a32d67d56ad",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856918,
+    "receipt_sha256": "9fc670ebed7ac325066aeca9172aa0e75c3c6fac8345a3510d48f7af2d114ddd",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBa",
+    "method": "EverTracer",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Ba-Student",
+    "receipt_path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "5768251299ef75850c207344a06f4807c9c6800e",
+    "historical_revision_field": "5768251299ef75850c207344a06f4807c9c6800e",
+    "sha256_sha256sums": "d4b5e3a20181fb9a3ad8f8793e8ec0dc3c67d6ed8b16281e14fc72c30b0ccfaa",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187857250,
+    "receipt_sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBa",
+    "method": "CTCC",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Ba-Student",
+    "receipt_path": "results/active_cross_lineage_ba/ctcc/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "62ccf1df246568fd50ecbbf787eac3ab92568b94",
+    "historical_revision_field": "62ccf1df246568fd50ecbbf787eac3ab92568b94",
+    "sha256_sha256sums": "d152dda37fd85ceb854316d9e2ebed87adaf443ae3ed7717c6ac474734307168",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856979,
+    "receipt_sha256": "a007869ea6f92602577e31d3206d0360e2766d701b28bd58c1e31e2bc5a42206",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBa",
+    "method": "iSeal",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Ba-Student",
+    "receipt_path": "results/active_cross_lineage_ba/iseal/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "79fb30ab4d77f8be620dfa9cbc4d6a4953d92860",
+    "historical_revision_field": "79fb30ab4d77f8be620dfa9cbc4d6a4953d92860",
+    "sha256_sha256sums": "6c2ebe329ac75b07a1061b215bafed3cef54792708a19df369c219a2c40871a9",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856908,
+    "receipt_sha256": "8e6df7721fa3d28754e2d0058c7d23c83105bd45b5aa87288518a275e2d1e9f2",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBa",
+    "method": "SCW",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Ba-Student",
+    "receipt_path": "results/active_cross_lineage_ba/scw/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "b35c7451410c5f85d16f5120eeea9d154524e278",
+    "historical_revision_field": "b35c7451410c5f85d16f5120eeea9d154524e278",
+    "sha256_sha256sums": "455828d36760064879f9d9bcca3ebdb733860afff7200407677ae6159e49ce16",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856917,
+    "receipt_sha256": "1ca7719a112aecd00ed6b7594eb367048d8cccb59a606ccb52dc4c8f98590790",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBb",
+    "method": "PN-FP",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Bb-Student",
+    "receipt_path": "results/active_cross_lineage_bb/pnfp/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "e1d1d250b12130c10f305e67f3539a227629ce80",
+    "historical_revision_field": "e1d1d250b12130c10f305e67f3539a227629ce80",
+    "sha256_sha256sums": "f81f6d6d477dfb6a5aa95be9080e813a21acb829fa08b31d3c128647d1a47240",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187857942,
+    "receipt_sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBb",
+    "method": "EverTracer",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Bb-Student",
+    "receipt_path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "eb1d3b656577259d59445e5e1362e1697ff3655a",
+    "historical_revision_field": "eb1d3b656577259d59445e5e1362e1697ff3655a",
+    "sha256_sha256sums": "de3b8805d1ac286f0d9edd18af150659adbb7877d90b22ecd9422caf74073979",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856629,
+    "receipt_sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBb2",
+    "method": "CTCC",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Bb2-Student",
+    "receipt_path": "results/active_cross_lineage_bb/ctcc/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "a2535f62042ed67e13918ba0c99fef0996f41041",
+    "historical_revision_field": "a2535f62042ed67e13918ba0c99fef0996f41041",
+    "sha256_sha256sums": "66c664b14775149656d816d60f221b7a5a44f78dffc8fe33fa14ead88e1aabbd",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856569,
+    "receipt_sha256": "374f262eadcb4eab3b97d8a8011708cae2d8146873286fe06080636d562bee8b",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBb",
+    "method": "iSeal",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Bb-Student",
+    "receipt_path": "results/active_cross_lineage_bb/iseal/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "fa4baa48e2a8754ad317552c8cbc8ace73cee971",
+    "historical_revision_field": "fa4baa48e2a8754ad317552c8cbc8ace73cee971",
+    "sha256_sha256sums": "882fa722eee80a941a56d994f8a911a016b810b98a70c5a8eb99238bd69e4e92",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856586,
+    "receipt_sha256": "2b3a81f73581a83c279ea686e0fc5fcfaf25097ebf64bac229e1917843a13bd5",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBb",
+    "method": "SCW",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Bb-Student",
+    "receipt_path": "results/active_cross_lineage_bb/scw/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "dc6da8daec0104ac24bc4b004cde5bd32a06d178",
+    "historical_revision_field": "dc6da8daec0104ac24bc4b004cde5bd32a06d178",
+    "sha256_sha256sums": "cd7c9c3b7d6510b12a4b117eddff8709a0479ce729d24a28fe3e4ced4d3a25ff",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 16,
+    "total_bytes": 6187856553,
+    "receipt_sha256": "2a312f24fe203faa3f5203599c7430e6454be02ac452d082eb7d41b4b9a9cf26",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBa",
+    "method": "Passive-5 Shared",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Ba-Student",
+    "receipt_path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "da51d39a060ec3ef15f1aa9b84ffc43288202050",
+    "historical_revision_field": "da51d39a060ec3ef15f1aa9b84ffc43288202050",
+    "sha256_sha256sums": "cb622ff18928b69a4e811ec01bd0f7688afd1a929b668b166dc1b08dd93377ab",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETE",
+    "file_count": 16,
+    "total_bytes": 6187855464,
+    "receipt_sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "XBb",
+    "method": "Passive-5 Shared",
+    "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Bb-Student",
+    "receipt_path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "5f8d9c36f1e127ea265368ebcd9aa567815f62da",
+    "historical_revision_field": "5f8d9c36f1e127ea265368ebcd9aa567815f62da",
+    "sha256_sha256sums": "77405117245d1654c84aff637b52be3f2449fa744095104223d945dfbafd35fb",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "COMPLETE",
+    "file_count": 16,
+    "total_bytes": 6187855466,
+    "receipt_sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "Bc",
+    "method": "PN-FP",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-PNFP-Same-Lineage-Bc-Student",
+    "receipt_path": "results/logit_distillation/same_lineage_bc/pnfp/modelscope_archive.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "57f5571e340d0c37d31599f1086c13b9e63ece13",
+    "historical_revision_field": "57f5571e340d0c37d31599f1086c13b9e63ece13",
+    "sha256_sha256sums": "e30420c69473abc0562e14c0965d89e0df038003affd8958f7c87085b5528c52",
+    "verification_mode": "FULL_INDEPENDENT_DOWNLOAD",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6443052844,
+    "receipt_sha256": "91b4e677584dafc1aec4e665ceb9e735d8a458be6951407a3a1273a717f10d6b",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "Bc",
+    "method": "EverTracer",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-EverTracer-Same-Lineage-Bc-Student",
+    "receipt_path": "results/logit_distillation/same_lineage_bc/evertracer/modelscope_archive.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "36874ab4da4463e20bcba0756c6e79e0e842341b",
+    "historical_revision_field": "36874ab4da4463e20bcba0756c6e79e0e842341b",
+    "sha256_sha256sums": "97d3fcf5ed776182764622f364897d8cbf511cc36b4fd3965cfd4e20c6e359f5",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6442887077,
+    "receipt_sha256": "f884ee28029675951c31920ecf5cbc2a8331ba5113713be76fe58073538963fb",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "Bc",
+    "method": "CTCC",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-CTCC-Same-Lineage-Bc-Student",
+    "receipt_path": "results/logit_distillation/same_lineage_bc/ctcc/modelscope_archive.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "5d7065e289d466cc5aa2c8aea3a405b90a3ed884",
+    "historical_revision_field": "5d7065e289d466cc5aa2c8aea3a405b90a3ed884",
+    "sha256_sha256sums": "92b692ca7ada2dbba2e13574487ecb081938050f8747a4f047e927f9b46bf715",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6443136617,
+    "receipt_sha256": "c87135b84d6e44b050b7788b294da0e1715d32b312aa00082eea72466c5654a3",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "Bc",
+    "method": "iSeal",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-iSeal-Same-Lineage-Bc-Student",
+    "receipt_path": "results/logit_distillation/same_lineage_bc/iseal/modelscope_archive.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "bad960f2acee8dbf9ad5145b68408f079ebd780f",
+    "historical_revision_field": "bad960f2acee8dbf9ad5145b68408f079ebd780f",
+    "sha256_sha256sums": "2a02c1966fd29a3601b6cb22bb8457596c4832f9737d9c5e9207458dadeaed73",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6442936181,
+    "receipt_sha256": "822fc2bb36b1d53c81a4f3ad72e41db1aba2f727a868ce8cf6373316ce4baf9f",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "Bc",
+    "method": "SCW",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-SCW-Same-Lineage-Bc-Student",
+    "receipt_path": "results/logit_distillation/same_lineage_bc/scw/modelscope_archive.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "b1fb90332c4e251ff4a4ff068d0327981c2ae542",
+    "historical_revision_field": "b1fb90332c4e251ff4a4ff068d0327981c2ae542",
+    "sha256_sha256sums": "89019602e3385b908866595f7333a9b8616ecc22c72e8c94a0e22b00e7eb9f0b",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6444150337,
+    "receipt_sha256": "b22d7147c15bdd4cdd6070ee90dd2d71a5372e9f279fe7f39d70e7cd80f5c078",
+    "metadata_gaps": []
+  },
+  {
+    "experiment": "Bc",
+    "method": "Passive-5 Shared",
+    "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-Passive5-Shared-Same-Lineage-Bc-Student",
+    "receipt_path": "results/logit_distillation/same_lineage_bc/passive_shared/modelscope_archive.json",
+    "visibility": "PRIVATE",
+    "immutable_revision": "eb5eb289c36667012c7a45cbbdc2af4c9c344f9a",
+    "historical_revision_field": "eb5eb289c36667012c7a45cbbdc2af4c9c344f9a",
+    "sha256_sha256sums": "de777a52960c82fc4deeb8f203d783de2a7ed9c5821fa1985cd74e3bf0e2f978",
+    "verification_mode": "MANIFEST_PLUS_SEGMENT",
+    "verification_status": "PASS",
+    "file_count": 13,
+    "total_bytes": 6443016314,
+    "receipt_sha256": "bd1691659d9f2f41e005859761760e6e46a8aa0ede583d17008b9586c6e1530b",
+    "metadata_gaps": []
+  }
+]

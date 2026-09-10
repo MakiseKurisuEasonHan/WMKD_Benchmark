@@ -1,0 +1,37 @@
+{
+  "at": "2026-09-10T08:23:25.378357+00:00",
+  "hostname": "autodl-container-e3ll76182f-7ba50cae",
+  "head": "0d43d192b9895eab79c84ef0e9b0ec58a560b3f1",
+  "disk_free_bytes": 20205228032,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 %, 0 MiB, 97887 MiB",
+  "gpu_returncode": 0,
+  "compute_processes": "",
+  "process_listing": "   PID   PPID USER     ELAPSED STAT COMMAND\n     1      0 root       52484 Ss   bash /init/boot/boot.sh\n   880      1 root       52483 Sl   /bin/supervisord -c /init/supervisor/supervisor.ini\n   898    880 root       52483 S    /root/miniconda3/bin/python /root/miniconda3/bin/jupyter-lab --allow-root --config=/init/jupyter/jupyter_config.py\n   901    880 root       52483 S    sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups\n   903    880 root       52483 Sl   proxy -c /init/proxy/proxy-hot-backup.ini\n   904    880 root       52483 Sl   /root/miniconda3/bin/python /root/miniconda3/bin/tensorboard --host 0.0.0.0 --port 6007 --logdir /root/tf-logs\n   905    880 root       52483 Sl   proxy -c /init/proxy/proxy.ini\n   906    880 root       52483 Sl   autopanel serve --work-dir=/root/autodl-tmp --cache-dir=/root/autodl-tmp\n   974    904 root       52482 Sl   /root/miniconda3/lib/python3.12/site-packages/tensorboard_data_server/bin/server --logdir=/root/tf-logs --reload=5 --samples-per-plugin= --port=0 --port-file=/tmp/tensorboard_data_server_0wiqiqvj/port --die-after-stdin --error-file=/tmp/tensorboard_data_server_0wiqiqvj/startup_error\n 42038    901 root           3 Ss   sshd: root@notty\n 42049  42038 root           0 Ss   /root/miniconda3/bin/python -B -c import sys,base64;exec(base64.b64decode(sys.stdin.read()))\n 42052  42049 root           0 R    ps -eo pid,ppid,user,etimes,stat,args\n",
+  "models": {
+    "pnfp": {
+      "exists": true,
+      "weight_bytes": 6425529048
+    },
+    "evertracer": {
+      "exists": true,
+      "weight_bytes": 6425529048
+    },
+    "ctcc": {
+      "exists": true,
+      "weight_bytes": 6425529048
+    },
+    "iseal": {
+      "exists": true,
+      "weight_bytes": 6425529048
+    },
+    "scw": {
+      "exists": true,
+      "weight_bytes": 6425529048
+    },
+    "passive_shared": {
+      "exists": true,
+      "weight_bytes": 6425529048
+    }
+  },
+  "audit_pid": 42049
+}

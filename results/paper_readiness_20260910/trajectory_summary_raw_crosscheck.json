@@ -1,0 +1,610 @@
+{
+  "status": "PASS",
+  "points": [
+    {
+      "method": "pnfp",
+      "step": 0,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 25,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 50,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 100,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 250,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 500,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 1000,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 2000,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 4000,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 6000,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "pnfp",
+      "step": 7500,
+      "fields": {
+        "step": true,
+        "detected": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 0,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 25,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 50,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 100,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 250,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 500,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 1000,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 2000,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 4000,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 6000,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "evertracer",
+      "step": 7500,
+      "fields": {
+        "step": true,
+        "member_oriented_auc": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 0,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 25,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 50,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 100,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 250,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 500,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 1000,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 2000,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 4000,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 6000,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "ctcc",
+      "step": 7500,
+      "fields": {
+        "step": true,
+        "trigger_activations": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 0,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 25,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 50,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 100,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 250,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 500,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 1000,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 2000,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 4000,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 6000,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "iseal",
+      "step": 7500,
+      "fields": {
+        "step": true,
+        "registered_success": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 0,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 25,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 50,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 100,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 250,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 500,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 1000,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 2000,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 4000,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 6000,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    },
+    {
+      "method": "scw",
+      "step": 7500,
+      "fields": {
+        "step": true,
+        "p_value": true,
+        "dataset_sha256": true,
+        "seed": true,
+        "checkpoint_manifest_sha256": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "campaign": "Bc",
+    "method": "pnfp",
+    "steps": 7500,
+    "teacher_frozen": true,
+    "student_updated": true,
+    "scientific_closure": "COMPLETE",
+    "utility": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/full_experiment_log.json",
+      "bytes": 246500,
+      "sha256": "0b304a8dee7d8c15a9992fd35d0e852282728f41726588f98b211827742d9afb",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "Bc",
+    "method": "evertracer",
+    "steps": 7500,
+    "teacher_frozen": true,
+    "student_updated": true,
+    "scientific_closure": "COMPLETE",
+    "utility": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/full_experiment_log.json",
+      "bytes": 75995,
+      "sha256": "6ed5ab1f7eaf589612f78e1d7fe4e0ea53daa044ea796f4161943bd13ed82c7f",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "Bc",
+    "method": "ctcc",
+    "steps": 7500,
+    "teacher_frozen": true,
+    "student_updated": true,
+    "scientific_closure": "COMPLETE",
+    "utility": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/full_experiment_log.json",
+      "bytes": 324118,
+      "sha256": "25f7f4b49c0743e7e509916693764cae52324f3a78b8877299aa3abc484bfc27",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "Bc",
+    "method": "iseal",
+    "steps": 7500,
+    "teacher_frozen": true,
+    "student_updated": true,
+    "scientific_closure": "COMPLETE",
+    "utility": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/full_experiment_log.json",
+      "bytes": 122962,
+      "sha256": "6ec5f5ad9825eb423a3e44f290ece7a2960a1484a71f819104920485d5fff54a",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "Bc",
+    "method": "scw",
+    "steps": 7500,
+    "teacher_frozen": true,
+    "student_updated": true,
+    "scientific_closure": "COMPLETE",
+    "utility": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/logit_distillation/same_lineage_bc/scw/full_experiment_log.json",
+      "bytes": 1335335,
+      "sha256": "2b22f581eb62f68e185fccecc2d8eaab6c6a5a0f17d65dcaa4e93b9e5ce3c511",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "Bc",
+    "method": "passive_shared",
+    "steps": 7500,
+    "teacher_frozen": true,
+    "student_updated": true,
+    "scientific_closure": "COMPLETE",
+    "utility": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+      "bytes": 201470,
+      "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_ba",
+    "method": "pnfp",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_ba/pnfp/full_experiment_log.json",
+      "bytes": 29478,
+      "sha256": "9fc670ebed7ac325066aeca9172aa0e75c3c6fac8345a3510d48f7af2d114ddd",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_ba",
+    "method": "evertracer",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
+      "bytes": 48055,
+      "sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_ba",
+    "method": "ctcc",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_ba/ctcc/full_experiment_log.json",
+      "bytes": 29622,
+      "sha256": "a007869ea6f92602577e31d3206d0360e2766d701b28bd58c1e31e2bc5a42206",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_ba",
+    "method": "iseal",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_ba/iseal/full_experiment_log.json",
+      "bytes": 39972,
+      "sha256": "8e6df7721fa3d28754e2d0058c7d23c83105bd45b5aa87288518a275e2d1e9f2",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_ba",
+    "method": "scw",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_ba/scw/full_experiment_log.json",
+      "bytes": 65355,
+      "sha256": "1ca7719a112aecd00ed6b7594eb367048d8cccb59a606ccb52dc4c8f98590790",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_bb",
+    "method": "pnfp",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_bb/pnfp/full_experiment_log.json",
+      "bytes": 228254,
+      "sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_bb",
+    "method": "evertracer",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+      "bytes": 279922,
+      "sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_bb",
+    "method": "ctcc",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_bb/ctcc/full_experiment_log.json",
+      "bytes": 496368,
+      "sha256": "374f262eadcb4eab3b97d8a8011708cae2d8146873286fe06080636d562bee8b",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_bb",
+    "method": "iseal",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_bb/iseal/full_experiment_log.json",
+      "bytes": 225711,
+      "sha256": "2b3a81f73581a83c279ea686e0fc5fcfaf25097ebf64bac229e1917843a13bd5",
+      "git_tracked": true
+    }
+  },
+  {
+    "campaign": "active_cross_lineage_bb",
+    "method": "scw",
+    "status": "COMPLETE",
+    "archive": "COMPLETE",
+    "source": {
+      "path": "results/active_cross_lineage_bb/scw/full_experiment_log.json",
+      "bytes": 239050,
+      "sha256": "2a312f24fe203faa3f5203599c7430e6454be02ac452d082eb7d41b4b9a9cf26",
+      "git_tracked": true
+    }
+  }
+]

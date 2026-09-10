@@ -1,0 +1,33 @@
+{
+  "at": "20260910T082631Z",
+  "before": "0d43d192b9895eab79c84ef0e9b0ec58a560b3f1",
+  "after": "5456ead21d3e79e02cb337a942759fea8ff5dd68",
+  "mode": "FAST_FORWARD_ONLY",
+  "backup": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/bc_git_preimages_20260910T082631Z.tar.gz",
+  "backup_sha256": "9c17f9c7af917dd2c6130d34e749a3c6ca4703c3079933ca0349d14de2e98bb6",
+  "preimages": [
+    {
+      "path": "PROJECT_STATUS.md",
+      "bytes": 58771,
+      "sha256": "0a1374cdc8547fa95284befdea22cca2ff791c7d373b479d9fdf1bbb85626a28"
+    },
+    {
+      "path": "TODO.md",
+      "bytes": 48132,
+      "sha256": "dba92fcd1a2f1b59901b0bbd60f4567af5ba680e2e36637ae02b28d3d937b02d"
+    },
+    {
+      "path": "docs/CURRENT_STATE.md",
+      "bytes": 22159,
+      "sha256": "f35ce174b389ba2fdd8778ab816b984c7c6e9ac40e7d491f0bfd217b0a403e8d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pipeline_state.json",
+      "bytes": 4675,
+      "sha256": "28c954d66c5bc6d8dc2be2c7aac5e4aa9bbf59877fc0073099ea17dd4caa1405"
+    }
+  ],
+  "preserved_stash": null,
+  "stash_not_dropped": false,
+  "unrelated_worktree_changes_preserved": true
+}

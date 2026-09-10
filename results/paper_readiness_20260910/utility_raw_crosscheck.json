@@ -1,0 +1,139 @@
+{
+  "checked_raw_pairs": 19,
+  "checks": [
+    {
+      "method": "PN-FP",
+      "condition": "Bc",
+      "raw_path": "results/logit_distillation/same_lineage_bc/pnfp/utility/raw_evaluator_output.json",
+      "sha256": "d9fd589f6df632efed6a298ac228bc7777e98e9684fb1d6c4fe84343ff705894",
+      "match": true
+    },
+    {
+      "method": "PN-FP",
+      "condition": "XBa",
+      "raw_path": "results/active_cross_lineage_ba/pnfp/utility/raw_evaluator_output.json",
+      "sha256": "bee38f652ad042fcfbda0ed8c377bb457a06eb0e0132adb1bf80c4b8fd15d2fb",
+      "match": true
+    },
+    {
+      "method": "PN-FP",
+      "condition": "XBb",
+      "raw_path": "results/active_cross_lineage_bb/pnfp/utility/raw_evaluator_output.json",
+      "sha256": "342a96d3fe2c665ee5fa677e982430b88663d7ca0d38ed663e4e723f43a967ef",
+      "match": true
+    },
+    {
+      "method": "EverTracer",
+      "condition": "Bc",
+      "raw_path": "results/logit_distillation/same_lineage_bc/evertracer/utility/raw_evaluator_output.json",
+      "sha256": "0a787c57d25018e023ba44b7bb02da4e6a8527b773df66e85fc22c78b9955b4f",
+      "match": true
+    },
+    {
+      "method": "EverTracer",
+      "condition": "XBa",
+      "raw_path": "results/active_cross_lineage_ba/evertracer/utility/raw_evaluator_output.json",
+      "sha256": "74713aa93cd85878cd9d31ff9fc49eae5b06e5ad4c7cb176b5b18a2f00e208b4",
+      "match": true
+    },
+    {
+      "method": "EverTracer",
+      "condition": "XBb",
+      "raw_path": "results/active_cross_lineage_bb/evertracer/utility/raw_evaluator_output.json",
+      "sha256": "11621152e25b577a128179f1496699da8cdb36f40217ef0989b924f89da8a816",
+      "match": true
+    },
+    {
+      "method": "CTCC",
+      "condition": "Bc",
+      "raw_path": "results/logit_distillation/same_lineage_bc/ctcc/utility/raw_evaluator_output.json",
+      "sha256": "dfff1797b649666b237667137f9835fb69384f4aaf70b2bb7f0b49d7b2b8ee28",
+      "match": true
+    },
+    {
+      "method": "CTCC",
+      "condition": "XBa",
+      "raw_path": "results/active_cross_lineage_ba/ctcc/utility/raw_evaluator_output.json",
+      "sha256": "db9e491ade7b59a4ec72dea407400bff35f1d176112d8223243c246a3cebe10c",
+      "match": true
+    },
+    {
+      "method": "CTCC",
+      "condition": "XBb2",
+      "raw_path": "results/active_cross_lineage_bb/ctcc/utility/raw_evaluator_output.json",
+      "sha256": "561bbc7c99782506b8aa16d4e1d39bda3edd79c6ac73baff64a8a5ad8ccfbf41",
+      "match": true
+    },
+    {
+      "method": "iSeal",
+      "condition": "Bc",
+      "raw_path": "results/logit_distillation/same_lineage_bc/iseal/utility/raw_evaluator_output.json",
+      "sha256": "2b14e1b737e7a7dbf60f4b81501e94174a54b0604954c411343630fc0655167d",
+      "match": true
+    },
+    {
+      "method": "iSeal",
+      "condition": "XBa",
+      "raw_path": "results/active_cross_lineage_ba/iseal/utility/raw_evaluator_output.json",
+      "sha256": "cd8f049a0e177a2d800bf385473816f1e39866d3b6f2959d12e0e7f75248385b",
+      "match": true
+    },
+    {
+      "method": "iSeal",
+      "condition": "XBb",
+      "raw_path": "results/active_cross_lineage_bb/iseal/utility/raw_evaluator_output.json",
+      "sha256": "f6e48cd4e9b4fad5dcaf8a97593c84b3c1dd649f3c04712c88c3beb43e2e7a9e",
+      "match": true
+    },
+    {
+      "method": "SCW",
+      "condition": "Bc",
+      "raw_path": "results/logit_distillation/same_lineage_bc/scw/utility/raw_evaluator_output.json",
+      "sha256": "adb0d546b613d9987ad359e37888a3e4546265f7502d6e446e050afcfc4a2cd1",
+      "match": true
+    },
+    {
+      "method": "SCW",
+      "condition": "XBa",
+      "raw_path": "results/active_cross_lineage_ba/scw/utility/raw_evaluator_output.json",
+      "sha256": "2583cc094bda1886f6aeb9806937e55ddcc8461b28aef0ca4e0020c06e289bf0",
+      "match": true
+    },
+    {
+      "method": "SCW",
+      "condition": "XBb",
+      "raw_path": "results/active_cross_lineage_bb/scw/utility/raw_evaluator_output.json",
+      "sha256": "82ed91a88a04518d5e9c613b70f8c52d3fb00e20505f47ebe737110a28e47b23",
+      "match": true
+    },
+    {
+      "method": "Passive-5 Shared",
+      "condition": "Bc",
+      "raw_path": "results/logit_distillation/same_lineage_bc/passive_shared/utility/raw_evaluator_output.json",
+      "sha256": "8e09a8af4aa58790accaed27301f25efd1444f0a9c19f8f4f0cd495348748e77",
+      "match": true
+    },
+    {
+      "method": "Clean Qwen",
+      "condition": "Clean Qwen",
+      "raw_path": "results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+      "sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+      "match": true
+    },
+    {
+      "method": "Passive-5 Shared",
+      "condition": "XBa",
+      "raw_path": "results/passive_cross_lineage/ba/utility/raw_evaluator_output.json",
+      "sha256": "610cd8ec53fffd25339d6840ab9c9986d9b47664d2d72f18faaebc714d463d00",
+      "match": true
+    },
+    {
+      "method": "Passive-5 Shared",
+      "condition": "XBb",
+      "raw_path": "results/passive_cross_lineage/bb/utility/raw_evaluator_output.json",
+      "sha256": "6df81539322673dac3d338719b5b4a0f29f7a0f5e8494918456bea2db8cb1a28",
+      "match": true
+    }
+  ],
+  "other_rows": "Canonical recorded summary with source SHA/pointer; no missing raw precision inferred."
+}

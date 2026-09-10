@@ -1,0 +1,26 @@
+{
+  "scope": "CPU import only; no model loaded or detector executed",
+  "checked_at": "2026-09-09T10:40:46.033109+00:00",
+  "checks": {
+    "active_cross_lineage_pnfp_detector": {
+      "status": "PASS"
+    },
+    "ctcc_ba_evaluate": {
+      "status": "PASS"
+    },
+    "evertracer_cross_lineage_exploratory": {
+      "status": "PASS"
+    },
+    "scw_fresh_generate": {
+      "status": "PASS"
+    },
+    "scw_detector": {
+      "status": "PASS"
+    },
+    "robust_fp.config": {
+      "status": "ERROR",
+      "error": "No module named 'strenum'",
+      "traceback": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"/root/autodl-tmp/WMKD_Benchmark_data/artifacts/scw/source/src/robust_fp/config.py\", line 11, in <module>\n    from strenum import StrEnum\nModuleNotFoundError: No module named 'strenum'\n"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "figure": 1,
+    "title": "Benchmark overview / threat models",
+    "optional": false,
+    "source": "results/paper_readiness_20260910/final_experiment_matrix.json",
+    "methods": "All 10",
+    "x": "condition",
+    "y": "method / data / model flow",
+    "metric_semantics": "Design diagram, not a measured scalar plot",
+    "limitations_file": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+    "generated": false
+  },
+  {
+    "figure": 2,
+    "title": "Active Ba checkpoint trajectories",
+    "optional": false,
+    "source": "results/paper_readiness_20260910/final_trajectory_inventory.json",
+    "methods": "Active 5",
+    "x": "optimizer step",
+    "y": "native detector metric",
+    "metric_semantics": "Separate axes/panels per detector; Teacher separate from step0",
+    "limitations_file": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+    "generated": false
+  },
+  {
+    "figure": 3,
+    "title": "Same-lineage Ba vs Bb vs Bc",
+    "optional": false,
+    "source": "results/paper_readiness_20260910/final_master_detector_table.csv",
+    "methods": "All 10",
+    "x": "Ba / Bb2/Bb3 / Bc",
+    "y": "native detector metric",
+    "metric_semantics": "PN-FP Bc comparator reconstructed-parent Ba99, not historical98",
+    "limitations_file": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+    "generated": false
+  },
+  {
+    "figure": 4,
+    "title": "Active same-lineage vs cross-lineage",
+    "optional": false,
+    "source": "results/paper_readiness_20260910/final_master_detector_table.csv",
+    "methods": "Active 5",
+    "x": "lineage / condition",
+    "y": "native metric or N/A",
+    "metric_semantics": "EverTracer exploratory separately; iSeal Qwen N/A",
+    "limitations_file": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+    "generated": false
+  },
+  {
+    "figure": 5,
+    "title": "Passive lineage comparison",
+    "optional": false,
+    "source": "results/paper_readiness_20260910/final_master_detector_table.csv",
+    "methods": "Passive 5",
+    "x": "lineage / condition",
+    "y": "native metric",
+    "metric_semantics": "Shared Students; calibrated Qwen and lineage confounds",
+    "limitations_file": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+    "generated": false
+  },
+  {
+    "figure": 6,
+    "title": "Utility ARC / MC2",
+    "optional": false,
+    "source": "results/paper_readiness_20260910/final_utility_master.csv",
+    "methods": "Independent active + shared passive runs",
+    "x": "condition",
+    "y": "ARC acc_norm / MC2 acc",
+    "metric_semantics": "Historical protocol and precision flags retained",
+    "limitations_file": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+    "generated": false
+  },
+  {
+    "figure": 7,
+    "title": "Detector applicability matrix",
+    "optional": true,
+    "source": "results/paper_readiness_20260910/final_experiment_matrix.csv",
+    "methods": "All 10",
+    "x": "architecture / condition",
+    "y": "applicability category",
+    "metric_semantics": "Optional; N/A is not a negative numeric result",
+    "limitations_file": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+    "generated": false
+  }
+]

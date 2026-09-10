@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-09T11:21:50.628574+00:00",
+  "offline_fresh_process_check": "evertracer_utility.py --check-local-data-only exited 0",
+  "arc_splits": {
+    "train": 1119,
+    "test": 1172,
+    "validation": 299
+  },
+  "truthfulqa_validation": 817,
+  "historical_snapshot_sha_match": true,
+  "model_evaluation_performed": false
+}

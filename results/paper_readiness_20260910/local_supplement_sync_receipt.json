@@ -1,0 +1,660 @@
+{
+  "path": "artifacts\\paper_readiness_local_supplement_20260910.zip",
+  "bytes": 12238048,
+  "sha256": "0ac2047af750f313443e100f86cf73b6bd31ff5b08bfdc71753c12940838db74",
+  "files": [
+    {
+      "path": "docs/reproduction_reports/FINAL_MASTER_EXPERIMENT_SUMMARY_20260910.md",
+      "bytes": 8438,
+      "sha256": "4c535cd1f88fb17793842ce1b14a9204418a303d4f5874fe300e8afb5405b5f9",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "docs/reproduction_reports/FINAL_PAPER_LIMITATIONS_20260910.md",
+      "bytes": 2918,
+      "sha256": "9b0f7f32f20abdbc105be7fc6475cec0225257d23179e305886a13f0c3f49af9",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "docs/reproduction_reports/active_watermarks_trajectory_followup_initial_gate.md",
+      "bytes": 2860,
+      "sha256": "8953122d1d606fab1b29adb3f668dc6d3721142ccdc4b86c2010a115a28a1bf7",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "docs/reproduction_reports/eaaw_a2_final_report_20260907.md",
+      "bytes": 12447,
+      "sha256": "4406cf2ff3163ede5523e7706a8a18478a0fb39244c89ecc13548f9c877011a0",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "docs/reproduction_reports/project_process_closeout_20260907.md",
+      "bytes": 5800,
+      "sha256": "1488241f6d1be40dbcdc2b2b2dbaefc82115a38b35abbd723f3208b4e358926b",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_ba/ctcc/utility/raw_evaluator_output.json",
+      "bytes": 11828442,
+      "sha256": "db9e491ade7b59a4ec72dea407400bff35f1d176112d8223243c246a3cebe10c",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_ba/evertracer/utility/raw_evaluator_output.json",
+      "bytes": 11836759,
+      "sha256": "74713aa93cd85878cd9d31ff9fc49eae5b06e5ad4c7cb176b5b18a2f00e208b4",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_ba/final_git_receipt_20260909.json",
+      "bytes": 708,
+      "sha256": "c8a87a873ba736dc20599f00286a6a19de0aa6bc0e58fdd6c82a14e166240ffc",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_ba/iseal/utility/raw_evaluator_output.json",
+      "bytes": 11832943,
+      "sha256": "cd8f049a0e177a2d800bf385473816f1e39866d3b6f2959d12e0e7f75248385b",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_ba/pnfp/utility/raw_evaluator_output.json",
+      "bytes": 11830360,
+      "sha256": "bee38f652ad042fcfbda0ed8c377bb457a06eb0e0132adb1bf80c4b8fd15d2fb",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/utility/raw_evaluator_output.json",
+      "bytes": 11832168,
+      "sha256": "2583cc094bda1886f6aeb9806937e55ddcc8461b28aef0ca4e0020c06e289bf0",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/ctcc_evidence_package_receipt.json",
+      "bytes": 200,
+      "sha256": "f785a1e9e8d060a43033ce9783e500d4848c204de70d6e3cc14b3874d0ade260",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/detector_import_validation.json",
+      "bytes": 856,
+      "sha256": "5de66b9fab1f0e7293d5043f749cf034acb1da2fa991748faef6ebc251093ed3",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer_evidence_package_receipt.json",
+      "bytes": 205,
+      "sha256": "f164fa3e3723cad01133e818a2174c2095b72102c8ab400da2cd28ca9f83261f",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/final_host_audit.json",
+      "bytes": 2656,
+      "sha256": "83fdea140ef4793e73630516b353dc0abad56643beb0b016aec27a3f9b342a3c",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/git_sync_progress.json",
+      "bytes": 790,
+      "sha256": "22aecdd89121a8ab2121c3245b759a82c820ac223acf6bb465aa29192ec67fe7",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/iseal_evidence_package_receipt.json",
+      "bytes": 199,
+      "sha256": "dd1feeca8d6806eace8561372f6416db040cf5ff6e6617801b349f70e8d84df2",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/master_comparison_draft.json",
+      "bytes": 12906,
+      "sha256": "b090a317536a95784bd7aed14249e050273bf761e510262134c99facff0e15e4",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/public_utility_restore.json",
+      "bytes": 2335,
+      "sha256": "ea9e3a87941c3e155f40c4b6584f51d866c133f20e46fa834a5aa9aae1998c72",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/scw_dependency_validation.json",
+      "bytes": 128,
+      "sha256": "436d69687b177e0393eb05bf1887a29d8df8d2bdfb3dc276bac58506180d4656",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/scw_evidence_package_receipt.json",
+      "bytes": 198,
+      "sha256": "cd9ffa6b6867d715ec6145f9094cc54f1c77ebc0c65c96ca81b703f2f118406e",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/shutdown_execution_receipt.json",
+      "bytes": 1787,
+      "sha256": "56542c21f8568ce13a110ef4ac32d3c820bce859a81c5ab7444b5dfcc4d4a982",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/ssh_deployment_payload.json",
+      "bytes": 16989,
+      "sha256": "e172343d3794f0b1835820316222b498718f1f89a9a03c4d351ef3c3f016c5bb",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/ssh_transport_receipt.json",
+      "bytes": 281,
+      "sha256": "73327014a37984db6218b4879ae235dab0770918bffe84c0e0e859b0139f42e1",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_cross_lineage_bb/utility_offline_validation.json",
+      "bytes": 360,
+      "sha256": "1acac70d13f800df250111c0a72bd62506320362d687a5e8051dbd75692dae1a",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/eaaw_scope_termination_record.json",
+      "bytes": 726,
+      "sha256": "5433d36cd31df7961aa337f80c8900845380e034dd2d93da933f5e66396c16d7",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/four_ba_serial_state.json",
+      "bytes": 1005,
+      "sha256": "0b1de8ef66da41844aabb4b2bb0336805cbc7d1ab9ebc2025603b5d3cfd6b995",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/initial_runtime_check.json",
+      "bytes": 4150,
+      "sha256": "319544486a0ee64d835b486dbb86019aa7527053176a5dc371e2bba97f1d5513",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/overnight_campaign_state.json",
+      "bytes": 1557,
+      "sha256": "7c912106f65b125668821a076b55e284b2d5def5fef471c8789695f0f824df38",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/pipeline_state.json",
+      "bytes": 3291,
+      "sha256": "4f69784c27aeec5b5723fb80239a13a2ac192160d37d73c3242ee6bc6fb2c63e",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/pnfp_asset_verification.json",
+      "bytes": 4137,
+      "sha256": "8ac59c384726eaadd2d218ab588d4fbbb486ed3c87c501f1b897f4da91f8ba2a",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/pnfp_ba_trajectory_followup_20260907_reconstructed_parent/full_experiment_log.json",
+      "bytes": 653,
+      "sha256": "374611c19cd66d9945f47cdf680f46914e107ce66df6da3e6eb20ba7f23c2089",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/pnfp_ba_trajectory_followup_20260907_reconstructed_parent/protocol.json",
+      "bytes": 3175,
+      "sha256": "9eb16aded1d65a5cb37951f37069055ae9d16fe5ca9795e8e68b2f0ff7b576c8",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/pnfp_bb_trajectory_followup_20260907_reconstructed_parent/full_experiment_log.json",
+      "bytes": 653,
+      "sha256": "03a46099b53b59cefac1c9477833b7fe072801df5e5adc309d266c41b9b994e8",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/pnfp_bb_trajectory_followup_20260907_reconstructed_parent/protocol.json",
+      "bytes": 3137,
+      "sha256": "a2fb282a80e9e323dafad50d686411431f5b63da3ec8d484a74fb40cfbec443f",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/active_watermarks_trajectory_followup/resume_authorization_20260908.json",
+      "bytes": 867,
+      "sha256": "a3509267d03f5b39d885d757aed99e517ea4007cf7b904f4613905fd592e4bc0",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/gpu_smoke_20260907/post_smoke.json",
+      "bytes": 2042,
+      "sha256": "13fdbad383b8d75edae35eea475c8c4d32547d7ca497ade11c24181b43d37fa2",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/gpu_smoke_20260907/smoke.json",
+      "bytes": 4336,
+      "sha256": "7b3128f57e98ea9f34ae2d4ce6c194430409fb18e369030e442f1d6306d2c12e",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/final_closure_progress.json",
+      "bytes": 831,
+      "sha256": "15eef4db230717dcd6b226681b032390398dd3c40f7076b0094cf7c75df5b917",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/final_git_push_receipt.json",
+      "bytes": 548,
+      "sha256": "1761c26c83d65399ff3d14970ef1805b0054aba02a20d980e6a49a780a4fa48e",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/final_host_audit.json",
+      "bytes": 2281,
+      "sha256": "38d3673f7acb6e62647ccd40541b5e61bbcc35b3e03cb3d529b681530f45bde7",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/final_remote_git_sync.json",
+      "bytes": 1133,
+      "sha256": "ce4f72cfa2f31923cd5e5139065121e821e56ea3bf2fd4b7792c6826fdd04158",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/final_shutdown_gate.json",
+      "bytes": 246,
+      "sha256": "16efe390811702b9203343ac608610897b0dc41454a9aebbf3804648fafe8cc3",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/archive_chain_runner.py",
+      "bytes": 1496,
+      "sha256": "0fd180cd09789bf011614a53c5c30f0ce2abc29b8e23db1bbffa22766141d51f",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/huref/student_feature.npy",
+      "bytes": 2176,
+      "sha256": "2ff083fe049ee984399ef1b3b284085c4419dd99db3b5e4ef186935b423a9123",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/reef/student_representation.npy",
+      "bytes": 2457728,
+      "sha256": "2b9e29fdb93f34e7361dca6c2a849a207f0e7bd11cbd4b544008f5f1de690348",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/zeroprint/student_fingerprint.npy",
+      "bytes": 2359424,
+      "sha256": "3ebb73a1008856f38d34c01733e7f8bd326d5d2e8d60cc80770eee424b22029c",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/zeroprint/student_per_query.npy",
+      "bytes": 4718720,
+      "sha256": "70a7bc1ae178e1ae92eb57d1231675f6952e1bc16f3ece66104af0312624dfeb",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/native_detector/generations.jsonl",
+      "bytes": 1107840,
+      "sha256": "1ea4c6df36eb830091e39521405cf098bba970ecd6702f433306bab656906f44",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/shutdown_execution_receipt.json",
+      "bytes": 831,
+      "sha256": "15eef4db230717dcd6b226681b032390398dd3c40f7076b0094cf7c75df5b917",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/adaptation_gate.json",
+      "bytes": 268,
+      "sha256": "e6832058ee870e00f5a7c8c54216dc7e40586ecd741790ed6d043a801511e8a3",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/compatibility.json",
+      "bytes": 652,
+      "sha256": "75e6f7919a50ef049464bb5ad39de7c92283dc68e242608925d398b074515cc4",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/compatibility.patch",
+      "bytes": 7110,
+      "sha256": "4a3c03c99d24a0219b86e7810fffd1f37cc43a72302152e5ced0f20a46535ff4",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/compatibility_patch_status.json",
+      "bytes": 741,
+      "sha256": "2c5afcc48b194f9edd2181f2895a0fda0490d3f403cc91755d4b4666ba735e8f",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/data_counts.json",
+      "bytes": 76,
+      "sha256": "aa2edbc839cf2dabd7ff4e675c9011f35002487b4517f0fb1f9310df1a7e25f2",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/detector_results.json",
+      "bytes": 191,
+      "sha256": "b39d6078aaa17bc3798e3b5a3368fd85293b5069c7fa65630ad6f3eb8eb42acd",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/evidence_sha_manifest.json",
+      "bytes": 4387,
+      "sha256": "78ed529fa1ca2ada8c897cf5050b2eb24c98bbeb518fcfbf959b95d26d01ce3c",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/formal_launch.json",
+      "bytes": 359,
+      "sha256": "326a919617c27437918a88b8de11ae95945654d77791861d25817a55b3f6f9f8",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/full_experiment_log.json",
+      "bytes": 29885,
+      "sha256": "6c0b1e17b85fe229882489e528ccf8f02a814215f097352b0929ed0e29c3835f",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/history_mask_gate/adaptation_gate.json",
+      "bytes": 529,
+      "sha256": "4d91e3daa77e0c8392695229f5dd400ffd393b5fe764194788b1c0bc12861638",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/history_mask_gate/audit_report.md",
+      "bytes": 11932,
+      "sha256": "f8d2f4a231f1c53b94b77abf80325558821f2996b1bec2e351f7b2bf05fa8edc",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/history_mask_gate/evidence_sha_manifest.json",
+      "bytes": 2116,
+      "sha256": "66f13c0c73383b245966a8824210b47a023aa2728ec1ef4933ca542e8dd09d42",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/history_mask_gate/full_experiment_log.json",
+      "bytes": 24570,
+      "sha256": "259cb2629c9616670fd5f3520c73848962d0732bce495749453ba679f2216fc6",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/history_mask_gate/training_config.json",
+      "bytes": 2498,
+      "sha256": "9edea46edc0a66cb9c85a674810f98c8aa4a454158cfcc3e33061c5b8c37354f",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/identity_verified_before_preflight.json",
+      "bytes": 198,
+      "sha256": "9a670b815ef7d825eb284f9ed33a67ce2b9b7a4793b90bd659e429b309f5ceeb",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/independent_trigger.json",
+      "bytes": 3458,
+      "sha256": "d78f38d3336561bc7d3fdd4cbc313ce7d2e543dc630b42637bedb347299dc71d",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/preflight_launch.json",
+      "bytes": 239,
+      "sha256": "ae03dfb415595911d4fcb71fae93f3f88ebad80e97d08e9f5de5e2cb0f780217",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/preflight_result.json",
+      "bytes": 467,
+      "sha256": "db20ab9a5c91a71fcc1ec01465de3bc8370921954b0eeb82e8eddd5dd91eb381",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/preflight_stdout.txt",
+      "bytes": 5757,
+      "sha256": "de7797328f38e454aa8a82e82ac9546bffbf82262b7be0099f01eb61b73559f2",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/resolved_args.json",
+      "bytes": 1682,
+      "sha256": "95a74aed97c3431ca9bd47a87a766f8055d2a607ac7f9e538631b8ca5afb9a2e",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/training_config.json",
+      "bytes": 4101,
+      "sha256": "8e2431d314fbac676c16b49c5a680954cf1195929e6385aa6f2b2a0dcca250c8",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/training_progress_snapshot.json",
+      "bytes": 303,
+      "sha256": "f0254cc83e9218cf7798339b6cd8bb66d39eee778eda605a042eed2173201356",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/trigger.json",
+      "bytes": 3474,
+      "sha256": "826125a22ea512fe9f5eb220860580b916ab1c2214eff935a32d9e0d3116cbe1",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/watermark_payload.txt",
+      "bytes": 310,
+      "sha256": "a60c79a1010fae5694597ad5e2b47dcc5c789d4d31c6c401fbca8713b5d01f43",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/methods_11_15_pipeline_state.json",
+      "bytes": 27378,
+      "sha256": "2029789b395eab428e4fbdc89115e6b3775cb159d9deb8173916433bf1bd9451",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/passive_cross_lineage/archive/final_git_receipt.json",
+      "bytes": 268,
+      "sha256": "1e7d8e055ed469eab87bcad09ee7f0cf0433c0e8e755f60b9c56558bf48a5f5d",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/passive_cross_lineage/pipeline_state.json",
+      "bytes": 1490,
+      "sha256": "fd496260cb62af16cbc049e584366c557b22cef52229b198617085d421f806de",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pnfp/experiment_ba_trajectory_followup_git_receipt_20260907.json",
+      "bytes": 3412,
+      "sha256": "8351b60d608ca139491699c000c3f1628e5369429be7dacd6b9e948b675d282c",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pre_bb_cleanup_20260909/active_cross_lineage_bb_readiness.json",
+      "bytes": 2439,
+      "sha256": "9a06ba73b803a0e80988e010ac6ac5992f644eab027b68c9398c25c32ae1ca4a",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pre_bb_cleanup_20260909/autodl_large_cleanup_receipt.json",
+      "bytes": 350179,
+      "sha256": "04874724b0abb9cc88702b7e448892f6689ac79f30fe8ab0b31444ba637f5b3b",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pre_bb_cleanup_20260909/deletion_gate.json",
+      "bytes": 252,
+      "sha256": "9d5e8c5d7a0ccb69ca4e3b98ab7b79bf356b13c70a90a3ad27f323feab613915",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pre_bb_cleanup_20260909/git_push_receipt.json",
+      "bytes": 375,
+      "sha256": "489181975d8df01e1b905a3eb499d1a3c93b09983e861d4bed1579a9e506dd1a",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pre_bb_cleanup_20260909/non_target_large_files_before.json",
+      "bytes": 30505,
+      "sha256": "41a1a690a1ad417b33acf8e499f6b2684a6ad96c345c772d33ab2d1ac5d01b1a",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pre_bb_cleanup_20260909/post_cleanup_integrity.json",
+      "bytes": 6023,
+      "sha256": "a0a709812a15c743423b1a1f01ccda5794a3bbd3642b412c5363b1ae5162a355",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/pre_bb_cleanup_20260909/post_cleanup_process_listing.txt",
+      "bytes": 1320,
+      "sha256": "374a1f10bcc68322617d698146bd047e9aed8b7d95ab5ec33cf99798c8171f47",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/project_process_closeout_20260907/closeout_summary.json",
+      "bytes": 3803,
+      "sha256": "76abda51f77e27caf04416d90aa6f7cc8f4152c6dd4b7853c14ad884e004e853",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/project_process_closeout_20260907/gpu_10_samples_and_final_processes.json",
+      "bytes": 18848,
+      "sha256": "4d18092cc59cc9d83c98f1ab2466a4b427383eb53d01cc5e6c62d84c20763468",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/project_process_closeout_20260907/process_classification.json",
+      "bytes": 8385,
+      "sha256": "e799ac440dda5a5cbdf7fc90a07cbf9a4942f3b37201f8e426809edd639410d6",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/project_process_closeout_20260907/process_inventory_before.json",
+      "bytes": 12214,
+      "sha256": "07a90d3689738c53c503f4d8bfdc5a80c4ebdcdde4b5739104e64bcfbbbdb0f3",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "results/project_process_closeout_20260907/sha_manifest.json",
+      "bytes": 415,
+      "sha256": "a2369aaf071e06b2d72ff33d3f8fc0851baf4c52f246f1f280b69b8e639f25d0",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "scripts/methods_11_15/eaaw_a2_detector.py",
+      "bytes": 4036,
+      "sha256": "d7c7b434900301c7b4b8fc9a27003c5fd5a763515768c0810ca23645fbcd72eb",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "scripts/methods_11_15/eaaw_a2_prepare.py",
+      "bytes": 3953,
+      "sha256": "9c1ebb5b2dac979ec6c580e2effdf4a9c227c0f1d360e7f60b00827ddc3b7601",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    },
+    {
+      "path": "scripts/methods_11_15/eaaw_a2_runtime.py",
+      "bytes": 4608,
+      "sha256": "c12a2a1f256c15e30134f2fc387c696db7dfe79a7d0c897fb22f7fa2a38ae633",
+      "scientific_role": "Preserved scientific evidence, runtime closure record or historical draft/version; not automatically a canonical experiment",
+      "needs_sync": true
+    }
+  ],
+  "purpose": "Non-destructive second-host backup of existing local-only/dirty scientific evidence; original canonical objects not overwritten",
+  "remote_sync": "PENDING"
+}

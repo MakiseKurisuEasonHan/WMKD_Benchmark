@@ -1,0 +1,1270 @@
+[
+  {
+    "method": "PN-FP",
+    "type_active_or_passive": "active",
+    "native_metric": "detected/1024",
+    "teacher_reference": 956,
+    "clean_llama": 1,
+    "same_lineage_ba": 98,
+    "same_lineage_bc": 110,
+    "same_lineage_bb": 72,
+    "ba_trajectory_endpoint": 99,
+    "trajectory_clean_base_step0": 1,
+    "cross_lineage_ba": 84,
+    "cross_lineage_bb": 67,
+    "clean_qwen": 43,
+    "detector_threshold_or_rule": "Frozen 1024 key/target signatures; exact full signature equality; no aggregate cutoff invented",
+    "detector_applicability": "frozen cross-architecture detector applicable",
+    "canonical_or_exploratory": "canonical or explicit N/A",
+    "exploratory_qwen_xba": null,
+    "exploratory_qwen_xbb": null,
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SEE_FINAL_MODEL_ARCHIVE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED_OR_APPLICABILITY_NA",
+    "limitations": "Single seed; historical Ba and new trajectory endpoint are separate; no causal isolation of tokenizer/architecture/lineage. Original Ba data permanently missing; reconstructed parent is not byte/sample-identical. Bc comparator is reconstructed-parent trajectory.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 956,
+        "source": {
+          "path": "results/pnfp/ba_student/full_experiment_log.json",
+          "bytes": 15076,
+          "sha256": "1ea9f5df709710995ab445de6453a8c4a2348c8e783a27c3dfc059dad24f68db",
+          "git_tracked": true
+        },
+        "json_pointer": "/watermark_evaluation/method_specific_recorded_evidence/0/value/a2_teacher/detected",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 1,
+        "source": {
+          "path": "results/pnfp/ba_student/full_experiment_log.json",
+          "bytes": 15076,
+          "sha256": "1ea9f5df709710995ab445de6453a8c4a2348c8e783a27c3dfc059dad24f68db",
+          "git_tracked": true
+        },
+        "json_pointer": "/watermark_evaluation/method_specific_recorded_evidence/0/value/canonical_base/detected",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 98,
+        "source": {
+          "path": "results/pnfp/ba_student/full_experiment_log.json",
+          "bytes": 15076,
+          "sha256": "1ea9f5df709710995ab445de6453a8c4a2348c8e783a27c3dfc059dad24f68db",
+          "git_tracked": true
+        },
+        "json_pointer": "/watermark_evaluation/method_specific_recorded_evidence/0/value/ba_student/detected",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 110,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/pnfp/full_experiment_log.json",
+          "bytes": 246500,
+          "sha256": "0b304a8dee7d8c15a9992fd35d0e852282728f41726588f98b211827742d9afb",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/detected",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 72,
+        "source": {
+          "path": "results/pnfp/experiment_bb/full_experiment_log.json",
+          "bytes": 11756,
+          "sha256": "17fe43b0d6c9f7c9a65750798c9addc354f115d47b0a4ed2861dd4c26d03aae1",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector",
+        "derivation": "native result extraction; iSeal sums registered row teacher_positive"
+      },
+      "ba_trajectory_endpoint": {
+        "value": 99,
+        "source": {
+          "path": "results/pnfp/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 15657,
+          "sha256": "3533b780be160b0ae21599b906f7f51adb6f6747dfaf818cb34a521b670aae9f",
+          "git_tracked": true
+        },
+        "json_pointer": "/10/detected",
+        "derivation": null
+      },
+      "trajectory_clean_base_step0": {
+        "value": 1,
+        "source": {
+          "path": "results/pnfp/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 15657,
+          "sha256": "3533b780be160b0ae21599b906f7f51adb6f6747dfaf818cb34a521b670aae9f",
+          "git_tracked": true
+        },
+        "json_pointer": "/0/detected",
+        "derivation": null
+      },
+      "cross_lineage_ba": {
+        "value": 84,
+        "source": {
+          "path": "results/active_cross_lineage_ba/pnfp/full_experiment_log.json",
+          "bytes": 29478,
+          "sha256": "9fc670ebed7ac325066aeca9172aa0e75c3c6fac8345a3510d48f7af2d114ddd",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector_results",
+        "derivation": "native detector result extraction"
+      },
+      "cross_lineage_bb": {
+        "value": 67,
+        "source": {
+          "path": "results/active_cross_lineage_bb/pnfp/full_experiment_log.json",
+          "bytes": 228254,
+          "sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector_results",
+        "derivation": "native detector result extraction"
+      },
+      "clean_qwen": {
+        "value": 43,
+        "source": {
+          "path": "results/active_cross_lineage_ba/pnfp/clean_qwen_baseline/detector_results.json",
+          "bytes": 601,
+          "sha256": "edf2c7504c131f15bd527eee7d91b850e73478b154d973348a502d0499a003f4",
+          "git_tracked": true
+        },
+        "json_pointer": "/detected",
+        "derivation": null
+      }
+    },
+    "exploratory_sources": {}
+  },
+  {
+    "method": "EverTracer",
+    "type_active_or_passive": "active",
+    "native_metric": "member-oriented ROC-AUC",
+    "teacher_reference": 1.0,
+    "clean_llama": 0.4417,
+    "same_lineage_ba": 0.4987,
+    "same_lineage_bc": 0.59,
+    "same_lineage_bb": 0.4757,
+    "ba_trajectory_endpoint": 0.5016,
+    "trajectory_clean_base_step0": 0.4417,
+    "cross_lineage_ba": "N/A_CROSS_TOKENIZER",
+    "cross_lineage_bb": "N/A_CROSS_TOKENIZER",
+    "clean_qwen": "N/A_CROSS_TOKENIZER",
+    "detector_threshold_or_rule": "Frozen member direction and ROC procedure; TPR at FPR<=0.05",
+    "detector_applicability": "Qwen LEVEL_2 exploratory only",
+    "canonical_or_exploratory": "canonical; Qwen exploratory separate",
+    "exploratory_qwen_xba": 0.523,
+    "exploratory_qwen_xbb": 0.5227,
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SEE_FINAL_MODEL_ARCHIVE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED_OR_APPLICABILITY_NA",
+    "limitations": "Single seed; historical Ba and new trajectory endpoint are separate; no causal isolation of tokenizer/architecture/lineage. Qwen canonical N/A; exploratory AUC cannot support survival/failure/transfer verdict.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 1.0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/evertracer/protocol.json",
+          "bytes": 4715,
+          "sha256": "f553a3b479b752d604c13cf42a45d15a8883001a713bfb3f5a1b3bae26d31d79",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/teacher/member_oriented_auc",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 0.4417,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/evertracer/protocol.json",
+          "bytes": 4715,
+          "sha256": "f553a3b479b752d604c13cf42a45d15a8883001a713bfb3f5a1b3bae26d31d79",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/base/member_oriented_auc",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0.4987,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/evertracer/protocol.json",
+          "bytes": 4715,
+          "sha256": "f553a3b479b752d604c13cf42a45d15a8883001a713bfb3f5a1b3bae26d31d79",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/student/member_oriented_auc",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0.59,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/evertracer/full_experiment_log.json",
+          "bytes": 75995,
+          "sha256": "6ed5ab1f7eaf589612f78e1d7fe4e0ea53daa044ea796f4161943bd13ed82c7f",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_metrics/member_oriented_auc",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0.4757,
+        "source": {
+          "path": "results/evertracer/experiment_bb/full_experiment_log.json",
+          "bytes": 19916,
+          "sha256": "a2adc5639815d50e6b820bfacf989c9a6cd0f24992f2abbb91017f992cba3a62",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector",
+        "derivation": "native result extraction; iSeal sums registered row teacher_positive"
+      },
+      "ba_trajectory_endpoint": {
+        "value": 0.5016,
+        "source": {
+          "path": "results/evertracer/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 19447,
+          "sha256": "515537a427005f90f455785f33dce7fde5403a183e5bc5401a2cf67f2133ae49",
+          "git_tracked": true
+        },
+        "json_pointer": "/10/member_oriented_auc",
+        "derivation": null
+      },
+      "trajectory_clean_base_step0": {
+        "value": 0.4417,
+        "source": {
+          "path": "results/evertracer/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 19447,
+          "sha256": "515537a427005f90f455785f33dce7fde5403a183e5bc5401a2cf67f2133ae49",
+          "git_tracked": true
+        },
+        "json_pointer": "/0/member_oriented_auc",
+        "derivation": null
+      },
+      "cross_lineage_ba": {
+        "value": "N/A_CROSS_TOKENIZER",
+        "source": {
+          "path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
+          "bytes": 48055,
+          "sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "formal applicability, not a zero detector score"
+      },
+      "cross_lineage_bb": {
+        "value": "N/A_CROSS_TOKENIZER",
+        "source": {
+          "path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+          "bytes": 279922,
+          "sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "formal applicability, not a zero detector score"
+      },
+      "clean_qwen": {
+        "value": "N/A_CROSS_TOKENIZER",
+        "source": {
+          "path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
+          "bytes": 48055,
+          "sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "applicability restriction"
+      }
+    },
+    "exploratory_sources": {
+      "cross_lineage_ba": {
+        "value": 0.523,
+        "source": {
+          "path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
+          "bytes": 48055,
+          "sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "EXPLORATORY_NON_COMPARABLE member-oriented AUC"
+      },
+      "cross_lineage_bb": {
+        "value": 0.5227,
+        "source": {
+          "path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+          "bytes": 279922,
+          "sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "EXPLORATORY_NON_COMPARABLE member-oriented AUC"
+      }
+    }
+  },
+  {
+    "method": "CTCC",
+    "type_active_or_passive": "active",
+    "native_metric": "trigger activations/95",
+    "teacher_reference": 95,
+    "clean_llama": 0,
+    "same_lineage_ba": 0,
+    "same_lineage_bc": 0,
+    "same_lineage_bb": 0,
+    "ba_trajectory_endpoint": 0,
+    "trajectory_clean_base_step0": 0,
+    "cross_lineage_ba": 0,
+    "cross_lineage_bb": 0,
+    "clean_qwen": 0,
+    "detector_threshold_or_rule": "WMKD operational: generated_answer.strip()==\"IAMALIVE\" (case-sensitive)",
+    "detector_applicability": "frozen cross-architecture detector applicable",
+    "canonical_or_exploratory": "canonical or explicit N/A",
+    "exploratory_qwen_xba": null,
+    "exploratory_qwen_xbb": null,
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SEE_FINAL_MODEL_ARCHIVE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED_OR_APPLICABILITY_NA",
+    "limitations": "Single seed; historical Ba and new trajectory endpoint are separate; no causal isolation of tokenizer/architecture/lineage. WMKD operational detector, not a claim of native CTCC equivalence; use Bb2.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 95,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/ctcc/protocol.json",
+          "bytes": 4573,
+          "sha256": "40ca645d0b8c595ad2ee2990f7e3ee8786697fda283f0386e9ef8102031ea7bd",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/teacher_trigger/0",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/ctcc/protocol.json",
+          "bytes": 4573,
+          "sha256": "40ca645d0b8c595ad2ee2990f7e3ee8786697fda283f0386e9ef8102031ea7bd",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/base_trigger/0",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/ctcc/protocol.json",
+          "bytes": 4573,
+          "sha256": "40ca645d0b8c595ad2ee2990f7e3ee8786697fda283f0386e9ef8102031ea7bd",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/student_trigger/0",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/ctcc/full_experiment_log.json",
+          "bytes": 324118,
+          "sha256": "25f7f4b49c0743e7e509916693764cae52324f3a78b8877299aa3abc484bfc27",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_metrics/trigger_activations",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0,
+        "source": {
+          "path": "results/ctcc/experiment_bb2/full_experiment_log.json",
+          "bytes": 9218,
+          "sha256": "20f8bda8edfd14e2d73589edfe568def78c2ece444ef4f1d53e98235543a9904",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector",
+        "derivation": "native result extraction; iSeal sums registered row teacher_positive"
+      },
+      "ba_trajectory_endpoint": {
+        "value": 0,
+        "source": {
+          "path": "results/ctcc/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 19188,
+          "sha256": "f0ce331bf2021c199d19301f3049af54d71f95a5918addf7a3cb88e4b47f2c91",
+          "git_tracked": true
+        },
+        "json_pointer": "/10/trigger_activations",
+        "derivation": null
+      },
+      "trajectory_clean_base_step0": {
+        "value": 0,
+        "source": {
+          "path": "results/ctcc/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 19188,
+          "sha256": "f0ce331bf2021c199d19301f3049af54d71f95a5918addf7a3cb88e4b47f2c91",
+          "git_tracked": true
+        },
+        "json_pointer": "/0/trigger_activations",
+        "derivation": null
+      },
+      "cross_lineage_ba": {
+        "value": 0,
+        "source": {
+          "path": "results/active_cross_lineage_ba/ctcc/full_experiment_log.json",
+          "bytes": 29622,
+          "sha256": "a007869ea6f92602577e31d3206d0360e2766d701b28bd58c1e31e2bc5a42206",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector_results",
+        "derivation": "native detector result extraction"
+      },
+      "cross_lineage_bb": {
+        "value": 0,
+        "source": {
+          "path": "results/active_cross_lineage_bb/ctcc/full_experiment_log.json",
+          "bytes": 496368,
+          "sha256": "374f262eadcb4eab3b97d8a8011708cae2d8146873286fe06080636d562bee8b",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector_results",
+        "derivation": "native detector result extraction"
+      },
+      "clean_qwen": {
+        "value": 0,
+        "source": {
+          "path": "results/active_cross_lineage_ba/ctcc/clean_qwen_detector.json",
+          "bytes": 451423,
+          "sha256": "0f1d5375bb99bb8de2bcd50a6d9ef255881ba594ac8a09fca10c0f5a9895fbb1",
+          "git_tracked": true
+        },
+        "json_pointer": "/summary/categories/trigger/activations",
+        "derivation": null
+      }
+    },
+    "exploratory_sources": {}
+  },
+  {
+    "method": "iSeal",
+    "type_active_or_passive": "active",
+    "native_metric": "registered success/200",
+    "teacher_reference": 179,
+    "clean_llama": 0,
+    "same_lineage_ba": 0,
+    "same_lineage_bc": 0,
+    "same_lineage_bb": 0,
+    "ba_trajectory_endpoint": 0,
+    "trajectory_clean_base_step0": 0,
+    "cross_lineage_ba": "N/A_CROSS_ARCHITECTURE",
+    "cross_lineage_bb": "N/A_CROSS_ARCHITECTURE",
+    "clean_qwen": "N/A_CROSS_ARCHITECTURE",
+    "detector_threshold_or_rule": "registered sentence BLEU>=50",
+    "detector_applicability": "Qwen LEVEL_3 N/A",
+    "canonical_or_exploratory": "canonical or explicit N/A",
+    "exploratory_qwen_xba": null,
+    "exploratory_qwen_xbb": null,
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SEE_FINAL_MODEL_ARCHIVE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED_OR_APPLICABILITY_NA",
+    "limitations": "Single seed; historical Ba and new trajectory endpoint are separate; no causal isolation of tokenizer/architecture/lineage. Qwen embedding interface incompatible; no projected/re-registered substitute.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 179,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/iseal/protocol.json",
+          "bytes": 5074,
+          "sha256": "3ea9b230d9a514f47123b4750528e08cfb46b09f8e8f9bd3df15e4947fe6246e",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/registered_200/teacher/success",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/iseal/protocol.json",
+          "bytes": 5074,
+          "sha256": "3ea9b230d9a514f47123b4750528e08cfb46b09f8e8f9bd3df15e4947fe6246e",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/registered_200/base/success",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/iseal/protocol.json",
+          "bytes": 5074,
+          "sha256": "3ea9b230d9a514f47123b4750528e08cfb46b09f8e8f9bd3df15e4947fe6246e",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/registered_200/student/success",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/iseal/full_experiment_log.json",
+          "bytes": 122962,
+          "sha256": "6ec5f5ad9825eb423a3e44f290ece7a2960a1484a71f819104920485d5fff54a",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_metrics/registered_success",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0,
+        "source": {
+          "path": "results/iseal/experiment_bb/full_experiment_log.json",
+          "bytes": 117783,
+          "sha256": "cc300bd34ce57a464eb8d7395b2a5463fc878d99190f6a368cd7f1b485d15db6",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector",
+        "derivation": "native result extraction; iSeal sums registered row teacher_positive"
+      },
+      "ba_trajectory_endpoint": {
+        "value": 0,
+        "source": {
+          "path": "results/iseal/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 20516,
+          "sha256": "c6acdae6c8ce9f916244eb9bc197c93c4ddea72aea2b3f9b6d05e57858929348",
+          "git_tracked": true
+        },
+        "json_pointer": "/10/registered_success",
+        "derivation": null
+      },
+      "trajectory_clean_base_step0": {
+        "value": 0,
+        "source": {
+          "path": "results/iseal/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 20516,
+          "sha256": "c6acdae6c8ce9f916244eb9bc197c93c4ddea72aea2b3f9b6d05e57858929348",
+          "git_tracked": true
+        },
+        "json_pointer": "/0/registered_success",
+        "derivation": null
+      },
+      "cross_lineage_ba": {
+        "value": "N/A_CROSS_ARCHITECTURE",
+        "source": {
+          "path": "results/active_cross_lineage_ba/iseal/full_experiment_log.json",
+          "bytes": 39972,
+          "sha256": "8e6df7721fa3d28754e2d0058c7d23c83105bd45b5aa87288518a275e2d1e9f2",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "formal applicability, not a zero detector score"
+      },
+      "cross_lineage_bb": {
+        "value": "N/A_CROSS_ARCHITECTURE",
+        "source": {
+          "path": "results/active_cross_lineage_bb/iseal/full_experiment_log.json",
+          "bytes": 225711,
+          "sha256": "2b3a81f73581a83c279ea686e0fc5fcfaf25097ebf64bac229e1917843a13bd5",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "formal applicability, not a zero detector score"
+      },
+      "clean_qwen": {
+        "value": "N/A_CROSS_ARCHITECTURE",
+        "source": {
+          "path": "results/active_cross_lineage_ba/iseal/full_experiment_log.json",
+          "bytes": 39972,
+          "sha256": "8e6df7721fa3d28754e2d0058c7d23c83105bd45b5aa87288518a275e2d1e9f2",
+          "git_tracked": true
+        },
+        "json_pointer": "/",
+        "derivation": "applicability restriction"
+      }
+    },
+    "exploratory_sources": {}
+  },
+  {
+    "method": "SCW",
+    "type_active_or_passive": "active",
+    "native_metric": "p-value",
+    "teacher_reference": 0.0,
+    "clean_llama": 0.9199569225311279,
+    "same_lineage_ba": 0.8440861701965332,
+    "same_lineage_bc": 0.8819239735603333,
+    "same_lineage_bb": 0.9529914855957031,
+    "ba_trajectory_endpoint": 0.895175039768219,
+    "trajectory_clean_base_step0": 0.5813101530075073,
+    "cross_lineage_ba": 0.9158855080604553,
+    "cross_lineage_bb": 0.9841499328613281,
+    "clean_qwen": 0.7446491718292236,
+    "detector_threshold_or_rule": "p<0.001; lower p is stronger",
+    "detector_applicability": "frozen cross-architecture detector applicable",
+    "canonical_or_exploratory": "canonical or explicit N/A",
+    "exploratory_qwen_xba": null,
+    "exploratory_qwen_xbb": null,
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SEE_FINAL_MODEL_ARCHIVE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED_OR_APPLICABILITY_NA",
+    "limitations": "Single seed; historical Ba and new trajectory endpoint are separate; no causal isolation of tokenizer/architecture/lineage. Original Ba data permanently missing; reconstructed parent is not byte/sample-identical. Bc comparator is reconstructed-parent trajectory.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 0.0,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/scw/protocol.json",
+          "bytes": 4685,
+          "sha256": "2fee6a2e3da9c499b819d806c4cc2ffca3684ecca44c13506a18a8d846849818",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/teacher/p_value",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 0.9199569225311279,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/scw/protocol.json",
+          "bytes": 4685,
+          "sha256": "2fee6a2e3da9c499b819d806c4cc2ffca3684ecca44c13506a18a8d846849818",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/base/p_value",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0.8440861701965332,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/scw/protocol.json",
+          "bytes": 4685,
+          "sha256": "2fee6a2e3da9c499b819d806c4cc2ffca3684ecca44c13506a18a8d846849818",
+          "git_tracked": true
+        },
+        "json_pointer": "/native_detector_spec/historical_reference_only/student/p_value",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0.8819239735603333,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/scw/full_experiment_log.json",
+          "bytes": 1335335,
+          "sha256": "2b22f581eb62f68e185fccecc2d8eaab6c6a5a0f17d65dcaa4e93b9e5ce3c511",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_metrics/p_value",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0.9529914855957031,
+        "source": {
+          "path": "results/scw/experiment_bb/full_experiment_log.json",
+          "bytes": 12939,
+          "sha256": "5cd88c53942f741fff009bbec63fa3bbc830706e3231add5d87a9b1034592151",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector",
+        "derivation": "native result extraction; iSeal sums registered row teacher_positive"
+      },
+      "ba_trajectory_endpoint": {
+        "value": 0.895175039768219,
+        "source": {
+          "path": "results/scw/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 17342,
+          "sha256": "4320c18ffc4809bc69cc53c99d2467f550655779b95e959094d3c304b6f164c0",
+          "git_tracked": true
+        },
+        "json_pointer": "/10/p_value",
+        "derivation": null
+      },
+      "trajectory_clean_base_step0": {
+        "value": 0.5813101530075073,
+        "source": {
+          "path": "results/scw/experiment_ba_trajectory_followup/trajectory.json",
+          "bytes": 17342,
+          "sha256": "4320c18ffc4809bc69cc53c99d2467f550655779b95e959094d3c304b6f164c0",
+          "git_tracked": true
+        },
+        "json_pointer": "/0/p_value",
+        "derivation": null
+      },
+      "cross_lineage_ba": {
+        "value": 0.9158855080604553,
+        "source": {
+          "path": "results/active_cross_lineage_ba/scw/full_experiment_log.json",
+          "bytes": 65355,
+          "sha256": "1ca7719a112aecd00ed6b7594eb367048d8cccb59a606ccb52dc4c8f98590790",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector_results",
+        "derivation": "native detector result extraction"
+      },
+      "cross_lineage_bb": {
+        "value": 0.9841499328613281,
+        "source": {
+          "path": "results/active_cross_lineage_bb/scw/full_experiment_log.json",
+          "bytes": 239050,
+          "sha256": "2a312f24fe203faa3f5203599c7430e6454be02ac452d082eb7d41b4b9a9cf26",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector_results",
+        "derivation": "native detector result extraction"
+      },
+      "clean_qwen": {
+        "value": 0.7446491718292236,
+        "source": {
+          "path": "results/active_cross_lineage_ba/scw/clean_qwen_detector_raw.json",
+          "bytes": 10365,
+          "sha256": "5f3bf9fbdea560b196ce5c5a540bf461b4225e907ba57e837ad6f69319a488d7",
+          "git_tracked": true
+        },
+        "json_pointer": "/primary/p_value",
+        "derivation": null
+      }
+    },
+    "exploratory_sources": {}
+  },
+  {
+    "method": "LLMPrint",
+    "type_active_or_passive": "passive",
+    "native_metric": "primary paper-style bit accuracy",
+    "teacher_reference": 1.0,
+    "clean_llama": 1.0,
+    "same_lineage_ba": 0.82,
+    "same_lineage_bb": 0.785,
+    "same_lineage_bc": 0.86,
+    "clean_qwen": 0.68,
+    "cross_lineage_ba": 0.68,
+    "cross_lineage_bb": 0.695,
+    "detector_threshold_or_rule": "score >= threshold; threshold=0.7150049776126003",
+    "detector_applicability": "method-defined cross-architecture mapping; Qwen calibration limitation",
+    "canonical_or_exploratory": "canonical frozen operational result; not independent held-out evidence",
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SHARED_STUDENT_SEE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED",
+    "limitations": "One shared Student per Ba/Bb3/Bc/XBa/XBb; not five trainings. Qwen calibration participation and same-lineage/init confound; raw metrics not cross-family comparable.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/0/reference_score",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/0/reference_score",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0.82,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/0/student_score",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0.785,
+        "source": {
+          "path": "results/passive5_shared_bb3/detector_summary.json",
+          "bytes": 3267,
+          "sha256": "06db875528a7751eb371564b4b0d82101c2a2b92aeef5c44db1e9827c8f76257",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/0/score",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0.86,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+          "bytes": 201470,
+          "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_results/llmprint",
+        "derivation": "native scalar score; ZeroPrint rescaled Pearson"
+      },
+      "clean_qwen": {
+        "value": 0.68,
+        "source": {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/full_experiment_log.json",
+          "bytes": 148847,
+          "sha256": "588a678275d7f8054ea4d2073f2a5fa5b77346e83cf6b339f2537831b0853841",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/LLMPrint",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_ba": {
+        "value": 0.68,
+        "source": {
+          "path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+          "bytes": 370097,
+          "sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/LLMPrint",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_bb": {
+        "value": 0.695,
+        "source": {
+          "path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+          "bytes": 354255,
+          "sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/llmprint",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      }
+    }
+  },
+  {
+    "method": "REEF",
+    "type_active_or_passive": "passive",
+    "native_metric": "centered linear CKA",
+    "teacher_reference": 1.0,
+    "clean_llama": 1.0,
+    "same_lineage_ba": 0.9542220066305829,
+    "same_lineage_bb": 0.9672861269249347,
+    "same_lineage_bc": 0.9859362800187441,
+    "clean_qwen": 0.4546738923165847,
+    "cross_lineage_ba": 0.4712346890040632,
+    "cross_lineage_bb": 0.47347651724262,
+    "detector_threshold_or_rule": "score > threshold; threshold=0.4546738923165847",
+    "detector_applicability": "method-defined cross-architecture mapping; Qwen calibration limitation",
+    "canonical_or_exploratory": "canonical frozen operational result; not independent held-out evidence",
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SHARED_STUDENT_SEE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED",
+    "limitations": "One shared Student per Ba/Bb3/Bc/XBa/XBb; not five trainings. Qwen calibration participation and same-lineage/init confound; raw metrics not cross-family comparable.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/1/reference_score",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/1/reference_score",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0.9542220066305829,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/1/student_score",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0.9672861269249347,
+        "source": {
+          "path": "results/passive5_shared_bb3/detector_summary.json",
+          "bytes": 3267,
+          "sha256": "06db875528a7751eb371564b4b0d82101c2a2b92aeef5c44db1e9827c8f76257",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/1/score",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0.9859362800187441,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+          "bytes": 201470,
+          "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_results/reef",
+        "derivation": "native scalar score; ZeroPrint rescaled Pearson"
+      },
+      "clean_qwen": {
+        "value": 0.4546738923165847,
+        "source": {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/full_experiment_log.json",
+          "bytes": 148847,
+          "sha256": "588a678275d7f8054ea4d2073f2a5fa5b77346e83cf6b339f2537831b0853841",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/REEF",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_ba": {
+        "value": 0.4712346890040632,
+        "source": {
+          "path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+          "bytes": 370097,
+          "sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/REEF",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_bb": {
+        "value": 0.47347651724262,
+        "source": {
+          "path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+          "bytes": 354255,
+          "sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/reef",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      }
+    }
+  },
+  {
+    "method": "HuRef",
+    "type_active_or_passive": "passive",
+    "native_metric": "ICS",
+    "teacher_reference": 99.99999237060547,
+    "clean_llama": 99.99999237060547,
+    "same_lineage_ba": 99.99898529052734,
+    "same_lineage_bb": 99.99873352050781,
+    "same_lineage_bc": 99.99800872802734,
+    "clean_qwen": -8.356179237365723,
+    "cross_lineage_ba": -8.41477108001709,
+    "cross_lineage_bb": -8.33336067199707,
+    "detector_threshold_or_rule": "score > threshold; threshold=4.119894027709961",
+    "detector_applicability": "method-defined cross-architecture mapping; Qwen calibration limitation",
+    "canonical_or_exploratory": "canonical frozen operational result; not independent held-out evidence",
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SHARED_STUDENT_SEE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED",
+    "limitations": "One shared Student per Ba/Bb3/Bc/XBa/XBb; not five trainings. Qwen calibration participation and same-lineage/init confound; raw metrics not cross-family comparable.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 99.99999237060547,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/2/reference_score",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 99.99999237060547,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/2/reference_score",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 99.99898529052734,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/2/student_score",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 99.99873352050781,
+        "source": {
+          "path": "results/passive5_shared_bb3/detector_summary.json",
+          "bytes": 3267,
+          "sha256": "06db875528a7751eb371564b4b0d82101c2a2b92aeef5c44db1e9827c8f76257",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/2/score",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 99.99800872802734,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+          "bytes": 201470,
+          "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_results/huref",
+        "derivation": "native scalar score; ZeroPrint rescaled Pearson"
+      },
+      "clean_qwen": {
+        "value": -8.356179237365723,
+        "source": {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/full_experiment_log.json",
+          "bytes": 148847,
+          "sha256": "588a678275d7f8054ea4d2073f2a5fa5b77346e83cf6b339f2537831b0853841",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/HuRef",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_ba": {
+        "value": -8.41477108001709,
+        "source": {
+          "path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+          "bytes": 370097,
+          "sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/HuRef",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_bb": {
+        "value": -8.33336067199707,
+        "source": {
+          "path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+          "bytes": 354255,
+          "sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/huref",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      }
+    }
+  },
+  {
+    "method": "AWM",
+    "type_active_or_passive": "passive",
+    "native_metric": "official mean Wq/Wk unbiased linear CKA",
+    "teacher_reference": 1.0,
+    "clean_llama": 1.0,
+    "same_lineage_ba": 0.9999974135841643,
+    "same_lineage_bb": 0.9999961065394538,
+    "same_lineage_bc": 0.9999972975679806,
+    "clean_qwen": 0.0017953364917795106,
+    "cross_lineage_ba": 0.0018811310743071122,
+    "cross_lineage_bb": 0.0018529736315550899,
+    "detector_threshold_or_rule": "score > threshold; threshold=0.0017953364917795106",
+    "detector_applicability": "method-defined cross-architecture mapping; Qwen calibration limitation",
+    "canonical_or_exploratory": "canonical frozen operational result; not independent held-out evidence",
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SHARED_STUDENT_SEE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED",
+    "limitations": "One shared Student per Ba/Bb3/Bc/XBa/XBb; not five trainings. Qwen calibration participation and same-lineage/init confound; raw metrics not cross-family comparable.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/3/reference_score",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/3/reference_score",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0.9999974135841643,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/3/student_score",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0.9999961065394538,
+        "source": {
+          "path": "results/passive5_shared_bb3/detector_summary.json",
+          "bytes": 3267,
+          "sha256": "06db875528a7751eb371564b4b0d82101c2a2b92aeef5c44db1e9827c8f76257",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/3/score",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0.9999972975679806,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+          "bytes": 201470,
+          "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_results/awm",
+        "derivation": "native scalar score; ZeroPrint rescaled Pearson"
+      },
+      "clean_qwen": {
+        "value": 0.0017953364917795106,
+        "source": {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/full_experiment_log.json",
+          "bytes": 148847,
+          "sha256": "588a678275d7f8054ea4d2073f2a5fa5b77346e83cf6b339f2537831b0853841",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/AWM",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_ba": {
+        "value": 0.0018811310743071122,
+        "source": {
+          "path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+          "bytes": 370097,
+          "sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/AWM",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_bb": {
+        "value": 0.0018529736315550899,
+        "source": {
+          "path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+          "bytes": 354255,
+          "sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/awm",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      }
+    }
+  },
+  {
+    "method": "ZeroPrint",
+    "type_active_or_passive": "passive",
+    "native_metric": "rescaled Pearson correlation",
+    "teacher_reference": 1.0,
+    "clean_llama": 1.0,
+    "same_lineage_ba": 0.8399372696876526,
+    "same_lineage_bb": 0.9170220196247101,
+    "same_lineage_bc": 0.927045077085495,
+    "clean_qwen": 0.6793505996465683,
+    "cross_lineage_ba": 0.70185287296772,
+    "cross_lineage_bb": 0.7015291452407837,
+    "detector_threshold_or_rule": "score > threshold; threshold=0.6793505996465683",
+    "detector_applicability": "method-defined cross-architecture mapping; Qwen calibration limitation",
+    "canonical_or_exploratory": "canonical frozen operational result; not independent held-out evidence",
+    "utility_available": true,
+    "full_log_available": true,
+    "archive_available": "SHARED_STUDENT_SEE_INVENTORY",
+    "scientific_status": "COMPLETED_MEASURED",
+    "limitations": "One shared Student per Ba/Bb3/Bc/XBa/XBb; not five trainings. Qwen calibration participation and same-lineage/init confound; raw metrics not cross-family comparable.",
+    "source_artifact": {
+      "teacher_reference": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/4/reference_score",
+        "derivation": null
+      },
+      "clean_llama": {
+        "value": 1.0,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/4/reference_score",
+        "derivation": null
+      },
+      "same_lineage_ba": {
+        "value": 0.8399372696876526,
+        "source": {
+          "path": "results/passive5_shared_ba/detector_summary.json",
+          "bytes": 3841,
+          "sha256": "f6efc6d57cfac90d8e46dee51f6f7d21439affae7be914c7739e7673073b2cf1",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/4/student_score",
+        "derivation": null
+      },
+      "same_lineage_bb": {
+        "value": 0.9170220196247101,
+        "source": {
+          "path": "results/passive5_shared_bb3/detector_summary.json",
+          "bytes": 3267,
+          "sha256": "06db875528a7751eb371564b4b0d82101c2a2b92aeef5c44db1e9827c8f76257",
+          "git_tracked": true
+        },
+        "json_pointer": "/methods/4/score",
+        "derivation": null
+      },
+      "same_lineage_bc": {
+        "value": 0.927045077085495,
+        "source": {
+          "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+          "bytes": 201470,
+          "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+          "git_tracked": true
+        },
+        "json_pointer": "/detector/native_results/zeroprint",
+        "derivation": "native scalar score; ZeroPrint rescaled Pearson"
+      },
+      "clean_qwen": {
+        "value": 0.6793505996465683,
+        "source": {
+          "path": "results/passive_cross_lineage/clean_qwen_baseline/full_experiment_log.json",
+          "bytes": 148847,
+          "sha256": "588a678275d7f8054ea4d2073f2a5fa5b77346e83cf6b339f2537831b0853841",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/ZeroPrint",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_ba": {
+        "value": 0.70185287296772,
+        "source": {
+          "path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+          "bytes": 370097,
+          "sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/ZeroPrint",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      },
+      "cross_lineage_bb": {
+        "value": 0.7015291452407837,
+        "source": {
+          "path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+          "bytes": 354255,
+          "sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+          "git_tracked": true
+        },
+        "json_pointer": "/detectors/zeroprint",
+        "derivation": "native scalar result; Qwen participated in calibration"
+      }
+    }
+  }
+]

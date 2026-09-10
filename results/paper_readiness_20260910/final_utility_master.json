@@ -1,0 +1,1340 @@
+[
+  {
+    "method_or_shared_run": "PN-FP",
+    "condition": "Bb",
+    "arc_challenge_acc_norm": 0.4906143344709898,
+    "truthfulqa_mc2": 0.48613790979493243,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.4906143344709898,
+        "truthfulqa_mc2": 0.48613790979493243
+      },
+      "source": {
+        "path": "results/pnfp/experiment_bb/full_experiment_log.json",
+        "bytes": 11756,
+        "sha256": "17fe43b0d6c9f7c9a65750798c9addc354f115d47b0a4ed2861dd4c26d03aae1",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/bb",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "PN-FP",
+    "condition": "Ba historical",
+    "arc_challenge_acc_norm": 0.478668942,
+    "truthfulqa_mc2": 0.463479842,
+    "availability": "MEASURED",
+    "precision": "LIMITED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.478668942,
+        "truthfulqa_mc2": 0.463479842
+      },
+      "source": {
+        "path": "results/pnfp/experiment_bb/full_experiment_log.json",
+        "bytes": 11756,
+        "sha256": "17fe43b0d6c9f7c9a65750798c9addc354f115d47b0a4ed2861dd4c26d03aae1",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/ba",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "PN-FP",
+    "condition": "Bc",
+    "arc_challenge_acc_norm": 0.4786689419795222,
+    "truthfulqa_mc2": 0.46854952594042604,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "BC_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4786689419795222,
+        "truthfulqa_mc2_acc": 0.46854952594042604,
+        "completed_at": "2026-09-09T19:19:23.518647+00:00"
+      },
+      "source": {
+        "path": "results/logit_distillation/same_lineage_bc/pnfp/full_experiment_log.json",
+        "bytes": 246500,
+        "sha256": "0b304a8dee7d8c15a9992fd35d0e852282728f41726588f98b211827742d9afb",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "PN-FP",
+    "condition": "XBa",
+    "arc_challenge_acc_norm": 0.4948805460750853,
+    "truthfulqa_mc2": 0.5019135695511419,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "pnfp",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/pnfp_xba_20260908/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4948805460750853,
+        "truthfulqa_mc2_acc": 0.5019135695511419,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.46501706484641636,
+            "acc_stderr,none": 0.014575583922019672,
+            "acc_norm,none": 0.4948805460750853,
+            "acc_norm_stderr,none": 0.01461062489030916
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.5019135695511419,
+            "acc_stderr,none": 0.015355037984657094
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T10:41:44.232878+00:00",
+        "clean_qwen_arc": 0.4402730375426621,
+        "clean_qwen_mc2": 0.5712170418936038,
+        "arc_delta": 0.05460750853242319,
+        "mc2_delta": -0.06930347234246192,
+        "raw_counts": {
+          "arc": 1172,
+          "mc2": 817
+        },
+        "raw_sha256": "bee38f652ad042fcfbda0ed8c377bb457a06eb0e0132adb1bf80c4b8fd15d2fb",
+        "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3"
+      },
+      "source": {
+        "path": "results/active_cross_lineage_ba/pnfp/full_experiment_log.json",
+        "bytes": 29478,
+        "sha256": "9fc670ebed7ac325066aeca9172aa0e75c3c6fac8345a3510d48f7af2d114ddd",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "PN-FP",
+    "condition": "XBb",
+    "arc_challenge_acc_norm": 0.4684300341296928,
+    "truthfulqa_mc2": 0.4917632470586235,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "pnfp",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/pnfp_xbb_20260909/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4684300341296928,
+        "truthfulqa_mc2_acc": 0.4917632470586235,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4598976109215017,
+            "acc_stderr,none": 0.01456431885692496,
+            "acc_norm,none": 0.4684300341296928,
+            "acc_norm_stderr,none": 0.014582236460866985
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.4917632470586235,
+            "acc_stderr,none": 0.015191262073397816
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-09T11:36:33.986842+00:00"
+      },
+      "source": {
+        "path": "results/active_cross_lineage_bb/pnfp/full_experiment_log.json",
+        "bytes": 228254,
+        "sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "EverTracer",
+    "condition": "Bb",
+    "arc_challenge_acc_norm": 0.49829351535836175,
+    "truthfulqa_mc2": 0.47559656098277925,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "schema_version": "wmkd.evertracer-bb-utility-result.v1",
+        "method": "EverTracer",
+        "experiment": "Bb",
+        "status": "COMPLETED",
+        "student_run_id": "evertracer_bb_student_20260904_033837",
+        "utility_run_id": "evertracer_bb_utility_20260904_061500",
+        "student_model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_student/evertracer_bb_student_20260904_033837/student/final_model",
+        "git_head_at_launch": "0dc47eb9cb146ba84720f8363083bbc0d0d005de",
+        "runtime_root": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_bb_utility/evertracer_bb_utility_20260904_061500",
+        "execution": {
+          "start": "2026-09-04T05:31:29Z",
+          "utility_end": "2026-09-04T05:32:40Z",
+          "end": "2026-09-04T05:32:50Z",
+          "utility_runtime_seconds": 71,
+          "generation_runtime_seconds": 5.384786430746317,
+          "exit_code": 0,
+          "errors": 0,
+          "silent_drops": 0
+        },
+        "protocol": {
+          "exact_reuse_from_ba": true,
+          "offline": true,
+          "batch_size": 8,
+          "dtype": "bfloat16",
+          "apply_chat_template": true,
+          "scoring_harness": "lm_eval.simple_evaluate",
+          "tasks": [
+            "arc_challenge",
+            "truthfulqa_mc2"
+          ],
+          "dataset_provenance": {
+            "arc_challenge": {
+              "id": "allenai/ai2_arc",
+              "config": "ARC-Challenge",
+              "revision": "210d026faf9955653af8916fad021475a3f00453",
+              "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--allenai--ai2_arc/snapshots/210d026faf9955653af8916fad021475a3f00453",
+              "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453"
+            },
+            "truthfulqa_mc2": {
+              "id": "truthful_qa",
+              "config": "multiple_choice",
+              "revision": "741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+              "snapshot": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/hub/datasets--truthful_qa/snapshots/741b8276f2d1982aa3d5b832d3ee81ed3b896490",
+              "prepared": "/root/autodl-tmp/WMKD_Benchmark_data/cache/huggingface/datasets/truthful_qa/multiple_choice/0.0.0/741b8276f2d1982aa3d5b832d3ee81ed3b896490"
+            }
+          },
+          "immutable_a_summary": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155_cont2/reports/summary.json",
+          "generation_script": "scripts/evertracer_sanity.py",
+          "generation_max_new_tokens": 96,
+          "generation_decoding": "greedy"
+        },
+        "arc_challenge": {
+          "expected_samples": 1172,
+          "completed_samples": 1172,
+          "errors": 0,
+          "metric": "acc_norm",
+          "value": 0.49829351535836175,
+          "stderr": 0.014611305705057077
+        },
+        "truthfulqa_mc2": {
+          "expected_samples": 817,
+          "completed_samples": 817,
+          "errors": 0,
+          "metric": "MC2",
+          "value": 0.47559656098277925,
+          "stderr": 0.014861620246277872
+        },
+        "generation_sanity": {
+          "status": "PASS",
+          "expected": 5,
+          "completed": 5,
+          "errors": 0,
+          "empty_outputs": 0,
+          "artifact": "results/evertracer/experiment_bb/utility/generation_sanity.json"
+        },
+        "historical": {
+          "base": {
+            "arc_challenge_acc_norm": 0.4462457337883959,
+            "truthfulqa_mc2": 0.5056865097575013
+          },
+          "teacher": {
+            "arc_challenge_acc_norm": 0.42150170648464164,
+            "truthfulqa_mc2": 0.5147979684440541
+          },
+          "ba_student": {
+            "arc_challenge_acc_norm": 0.5051194539249146,
+            "truthfulqa_mc2": 0.493714619952569
+          },
+          "bb_student": {
+            "arc_challenge_acc_norm": 0.49829351535836175,
+            "truthfulqa_mc2": 0.47559656098277925
+          }
+        },
+        "bb_minus_ba": {
+          "arc_challenge_acc_norm": -0.0068259385665528916,
+          "truthfulqa_mc2": -0.01811805896978974
+        },
+        "artifacts": {
+          "utility": {
+            "sha256": "90ed21012725c8cba17bb3b9cee4d25f4e04b9fcfd6a2d26e885d1965e1dd06a",
+            "size": 3431
+          },
+          "generation_sanity": {
+            "sha256": "2690dc738b28546ca598b83280d2ba5c0fd6728e7ec59bf7b3c71a5462bc7488",
+            "size": 2393
+          }
+        },
+        "bounded_interpretation": "Under the frozen standardized utility setting, the Bb Student retained broadly comparable downstream utility to the Ba Student: ARC-Challenge acc_norm was 0.006826 lower and TruthfulQA MC2 was 0.018118 lower. These single-run results cover only the specified benchmarks and do not establish universal model-quality preservation or statistical significance."
+      },
+      "source": {
+        "path": "results/evertracer/experiment_bb/full_experiment_log.json",
+        "bytes": 19916,
+        "sha256": "a2adc5639815d50e6b820bfacf989c9a6cd0f24992f2abbb91017f992cba3a62",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    }
+  },
+  {
+    "method_or_shared_run": "EverTracer",
+    "condition": "Ba",
+    "arc_challenge_acc_norm": 0.5051194539249146,
+    "truthfulqa_mc2": 0.493714619952569,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer_ba/evertracer_ba_20260829_124055/checkpoints/student/final_model",
+        "arc_challenge_acc_norm": 0.5051194539249146,
+        "truthfulqa_mc2_acc": 0.493714619952569,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.47952218430034127,
+            "acc_stderr,none": 0.014599131353034981,
+            "acc_norm,none": 0.5051194539249146,
+            "acc_norm_stderr,none": 0.014610624890309135
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.493714619952569,
+            "acc_stderr,none": 0.015247860529592242
+          }
+        }
+      },
+      "source": {
+        "path": "results/evertracer/ba_student/full_experiment_log.json",
+        "bytes": 853952,
+        "sha256": "24975823b33b49c48d4ee38fb28b252ea9b93939c09beeb93baa539ac5c3de35",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/recorded_evidence/0/value/student",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "EverTracer",
+    "condition": "Clean Llama (EverTracer historical protocol)",
+    "arc_challenge_acc_norm": 0.4462457337883959,
+    "truthfulqa_mc2": 0.5056865097575013,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/base/Llama-3.2-3B-Instruct",
+        "arc_challenge_acc_norm": 0.4462457337883959,
+        "truthfulqa_mc2_acc": 0.5056865097575013,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.44880546075085326,
+            "acc_stderr,none": 0.014534599585097566,
+            "acc_norm,none": 0.4462457337883959,
+            "acc_norm_stderr,none": 0.014526705548539947
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.5056865097575013,
+            "acc_stderr,none": 0.015803403918647336
+          }
+        }
+      },
+      "source": {
+        "path": "results/evertracer/ba_student/full_experiment_log.json",
+        "bytes": 853952,
+        "sha256": "24975823b33b49c48d4ee38fb28b252ea9b93939c09beeb93baa539ac5c3de35",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/recorded_evidence/0/value/base",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "EverTracer",
+    "condition": "Teacher",
+    "arc_challenge_acc_norm": 0.42150170648464164,
+    "truthfulqa_mc2": 0.5147979684440541,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/evertracer/evertracer_a_20260828_223155/checkpoints/target_merged",
+        "arc_challenge_acc_norm": 0.42150170648464164,
+        "truthfulqa_mc2_acc": 0.5147979684440541,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4232081911262799,
+            "acc_stderr,none": 0.014438036220848015,
+            "acc_norm,none": 0.42150170648464164,
+            "acc_norm_stderr,none": 0.014430197069326089
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.5147979684440541,
+            "acc_stderr,none": 0.01638478520663922
+          }
+        }
+      },
+      "source": {
+        "path": "results/evertracer/ba_student/full_experiment_log.json",
+        "bytes": 853952,
+        "sha256": "24975823b33b49c48d4ee38fb28b252ea9b93939c09beeb93baa539ac5c3de35",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/recorded_evidence/0/value/teacher",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "EverTracer",
+    "condition": "Bc",
+    "arc_challenge_acc_norm": 0.4974402730375427,
+    "truthfulqa_mc2": 0.5007002980392387,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "BC_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4974402730375427,
+        "truthfulqa_mc2_acc": 0.5007002980392387,
+        "completed_at": "2026-09-09T22:34:19.531169+00:00"
+      },
+      "source": {
+        "path": "results/logit_distillation/same_lineage_bc/evertracer/full_experiment_log.json",
+        "bytes": 75995,
+        "sha256": "6ed5ab1f7eaf589612f78e1d7fe4e0ea53daa044ea796f4161943bd13ed82c7f",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "EverTracer",
+    "condition": "XBa",
+    "arc_challenge_acc_norm": 0.5162116040955631,
+    "truthfulqa_mc2": 0.4509746503062132,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "evertracer",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/evertracer_xba_20260908/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.5162116040955631,
+        "truthfulqa_mc2_acc": 0.4509746503062132,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4658703071672355,
+            "acc_stderr,none": 0.0145773113152311,
+            "acc_norm,none": 0.5162116040955631,
+            "acc_norm_stderr,none": 0.014603708567414938
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.4509746503062132,
+            "acc_stderr,none": 0.014629963410993147
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T12:27:05.602015+00:00",
+        "raw_sample_counts": {
+          "truthfulqa_mc2": 817,
+          "arc_challenge": 1172
+        },
+        "baseline_raw_path": "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+        "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+        "raw_sha256": "74713aa93cd85878cd9d31ff9fc49eae5b06e5ad4c7cb176b5b18a2f00e208b4",
+        "base_arc": 0.4402730375426621,
+        "base_truthfulqa_mc2": 0.5712170418936038,
+        "arc_delta": 0.07593856655290099,
+        "truthfulqa_mc2_delta": -0.12024239158739058
+      },
+      "source": {
+        "path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
+        "bytes": 48055,
+        "sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "EverTracer",
+    "condition": "XBb",
+    "arc_challenge_acc_norm": 0.46075085324232085,
+    "truthfulqa_mc2": 0.46907694275763584,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "evertracer",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/evertracer_xbb_20260909/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.46075085324232085,
+        "truthfulqa_mc2_acc": 0.46907694275763584,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4641638225255973,
+            "acc_stderr,none": 0.014573813664735622,
+            "acc_norm,none": 0.46075085324232085,
+            "acc_norm_stderr,none": 0.014566303676636534
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.46907694275763584,
+            "acc_stderr,none": 0.015008291539312374
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-09T13:33:41.477784+00:00"
+      },
+      "source": {
+        "path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+        "bytes": 279922,
+        "sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "CTCC",
+    "condition": "Bb2",
+    "arc_challenge_acc_norm": 0.48976109215017066,
+    "truthfulqa_mc2": 0.44850679576156427,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.48976109215017066,
+        "truthfulqa_mc2": 0.44850679576156427
+      },
+      "source": {
+        "path": "results/ctcc/experiment_bb2/full_experiment_log.json",
+        "bytes": 9218,
+        "sha256": "20f8bda8edfd14e2d73589edfe568def78c2ece444ef4f1d53e98235543a9904",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/bb2",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "CTCC",
+    "condition": "Ba historical",
+    "arc_challenge_acc_norm": 0.48378839590443684,
+    "truthfulqa_mc2": 0.4506136480297226,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.48378839590443684,
+        "truthfulqa_mc2": 0.4506136480297226
+      },
+      "source": {
+        "path": "results/ctcc/experiment_bb2/full_experiment_log.json",
+        "bytes": 9218,
+        "sha256": "20f8bda8edfd14e2d73589edfe568def78c2ece444ef4f1d53e98235543a9904",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/ba",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "CTCC",
+    "condition": "Bc",
+    "arc_challenge_acc_norm": 0.4641638225255973,
+    "truthfulqa_mc2": 0.4680824775764402,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "BC_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4641638225255973,
+        "truthfulqa_mc2_acc": 0.4680824775764402,
+        "completed_at": "2026-09-09T23:59:55.842148+00:00"
+      },
+      "source": {
+        "path": "results/logit_distillation/same_lineage_bc/ctcc/full_experiment_log.json",
+        "bytes": 324118,
+        "sha256": "25f7f4b49c0743e7e509916693764cae52324f3a78b8877299aa3abc484bfc27",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "CTCC",
+    "condition": "XBa",
+    "arc_challenge_acc_norm": 0.4684300341296928,
+    "truthfulqa_mc2": 0.4480919802572382,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "ctcc",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/ctcc_xba_20260908/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4684300341296928,
+        "truthfulqa_mc2_acc": 0.4480919802572382,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4598976109215017,
+            "acc_stderr,none": 0.014564318856924848,
+            "acc_norm,none": 0.4684300341296928,
+            "acc_norm_stderr,none": 0.014582236460866978
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.4480919802572382,
+            "acc_stderr,none": 0.01449954696713532
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T11:37:01.902780+00:00",
+        "raw_sample_counts": {
+          "truthfulqa_mc2": 817,
+          "arc_challenge": 1172
+        },
+        "baseline_raw_path": "/root/autodl-tmp/WMKD_Benchmark/results/passive_cross_lineage/clean_qwen_baseline/utility/raw_evaluator_output.json",
+        "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+        "raw_sha256": "db9e491ade7b59a4ec72dea407400bff35f1d176112d8223243c246a3cebe10c",
+        "base_arc": 0.4402730375426621,
+        "base_truthfulqa_mc2": 0.5712170418936038,
+        "arc_delta": 0.02815699658703069,
+        "truthfulqa_mc2_delta": -0.12312506163636561
+      },
+      "source": {
+        "path": "results/active_cross_lineage_ba/ctcc/full_experiment_log.json",
+        "bytes": 29622,
+        "sha256": "a007869ea6f92602577e31d3206d0360e2766d701b28bd58c1e31e2bc5a42206",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "CTCC",
+    "condition": "XBb2",
+    "arc_challenge_acc_norm": 0.439419795221843,
+    "truthfulqa_mc2": 0.45344106594056727,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "ctcc",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/ctcc_xbb2_20260909/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.439419795221843,
+        "truthfulqa_mc2_acc": 0.45344106594056727,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.44197952218430037,
+            "acc_stderr,none": 0.014512682523128238,
+            "acc_norm,none": 0.439419795221843,
+            "acc_norm_stderr,none": 0.014503747823580137
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.45344106594056727,
+            "acc_stderr,none": 0.014966945271945321
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-09T14:32:13.304706+00:00"
+      },
+      "source": {
+        "path": "results/active_cross_lineage_bb/ctcc/full_experiment_log.json",
+        "bytes": 496368,
+        "sha256": "374f262eadcb4eab3b97d8a8011708cae2d8146873286fe06080636d562bee8b",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "iSeal",
+    "condition": "Bb",
+    "arc_challenge_acc_norm": 0.48976109215017066,
+    "truthfulqa_mc2": 0.46152410492343565,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.48976109215017066,
+        "truthfulqa_mc2": 0.46152410492343565
+      },
+      "source": {
+        "path": "results/iseal/experiment_bb/full_experiment_log.json",
+        "bytes": 117783,
+        "sha256": "cc300bd34ce57a464eb8d7395b2a5463fc878d99190f6a368cd7f1b485d15db6",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/bb",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "iSeal",
+    "condition": "Ba historical",
+    "arc_challenge_acc_norm": 0.4812286689419795,
+    "truthfulqa_mc2": 0.4498178809933709,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.4812286689419795,
+        "truthfulqa_mc2": 0.4498178809933709
+      },
+      "source": {
+        "path": "results/iseal/experiment_bb/full_experiment_log.json",
+        "bytes": 117783,
+        "sha256": "cc300bd34ce57a464eb8d7395b2a5463fc878d99190f6a368cd7f1b485d15db6",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/ba",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "iSeal",
+    "condition": "Bc",
+    "arc_challenge_acc_norm": 0.44368600682593856,
+    "truthfulqa_mc2": 0.456499231887167,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "BC_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.44368600682593856,
+        "truthfulqa_mc2_acc": 0.456499231887167,
+        "completed_at": "2026-09-10T01:32:57.532881+00:00"
+      },
+      "source": {
+        "path": "results/logit_distillation/same_lineage_bc/iseal/full_experiment_log.json",
+        "bytes": 122962,
+        "sha256": "6ec5f5ad9825eb423a3e44f290ece7a2960a1484a71f819104920485d5fff54a",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "iSeal",
+    "condition": "XBa",
+    "arc_challenge_acc_norm": 0.4948805460750853,
+    "truthfulqa_mc2": 0.4298307502074534,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "iseal",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/iseal_xba_20260909/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4948805460750853,
+        "truthfulqa_mc2_acc": 0.4298307502074534,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.46501706484641636,
+            "acc_stderr,none": 0.014575583922019672,
+            "acc_norm,none": 0.4948805460750853,
+            "acc_norm_stderr,none": 0.014610624890309157
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.4298307502074534,
+            "acc_stderr,none": 0.014550334289569705
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T15:24:39.199464+00:00",
+        "base_arc": 0.4402730375426621,
+        "base_truthfulqa_mc2": 0.5712170418936038,
+        "raw_sha256": "cd8f049a0e177a2d800bf385473816f1e39866d3b6f2959d12e0e7f75248385b",
+        "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+        "raw_counts": {
+          "arc": 1172,
+          "mc2": 817
+        },
+        "arc_delta": 0.05460750853242319,
+        "mc2_delta": -0.14138629168615036
+      },
+      "source": {
+        "path": "results/active_cross_lineage_ba/iseal/full_experiment_log.json",
+        "bytes": 39972,
+        "sha256": "8e6df7721fa3d28754e2d0058c7d23c83105bd45b5aa87288518a275e2d1e9f2",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "iSeal",
+    "condition": "XBb",
+    "arc_challenge_acc_norm": 0.49402730375426623,
+    "truthfulqa_mc2": 0.46736380064984684,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "iseal",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/iseal_xbb_20260909/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.49402730375426623,
+        "truthfulqa_mc2_acc": 0.46736380064984684,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4590443686006826,
+            "acc_stderr,none": 0.01456229107360112,
+            "acc_norm,none": 0.49402730375426623,
+            "acc_norm_stderr,none": 0.014610348300255798
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.46736380064984684,
+            "acc_stderr,none": 0.01535779584625988
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-09T15:27:27.588737+00:00"
+      },
+      "source": {
+        "path": "results/active_cross_lineage_bb/iseal/full_experiment_log.json",
+        "bytes": 225711,
+        "sha256": "2b3a81f73581a83c279ea686e0fc5fcfaf25097ebf64bac229e1917843a13bd5",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "SCW",
+    "condition": "Bb",
+    "arc_challenge_acc_norm": 0.5042662116040956,
+    "truthfulqa_mc2": 0.4861866050235854,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.5042662116040956,
+        "truthfulqa_mc2": 0.4861866050235854
+      },
+      "source": {
+        "path": "results/scw/experiment_bb/full_experiment_log.json",
+        "bytes": 12939,
+        "sha256": "5cd88c53942f741fff009bbec63fa3bbc830706e3231add5d87a9b1034592151",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/bb",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "SCW",
+    "condition": "Ba historical",
+    "arc_challenge_acc_norm": 0.48976109215017066,
+    "truthfulqa_mc2": 0.4747341900819149,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.48976109215017066,
+        "truthfulqa_mc2": 0.4747341900819149
+      },
+      "source": {
+        "path": "results/scw/experiment_bb/full_experiment_log.json",
+        "bytes": 12939,
+        "sha256": "5cd88c53942f741fff009bbec63fa3bbc830706e3231add5d87a9b1034592151",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility/ba",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "SCW",
+    "condition": "Bc",
+    "arc_challenge_acc_norm": 0.4948805460750853,
+    "truthfulqa_mc2": 0.49111074033404445,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "BC_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4948805460750853,
+        "truthfulqa_mc2_acc": 0.49111074033404445,
+        "completed_at": "2026-09-10T04:21:16.933665+00:00"
+      },
+      "source": {
+        "path": "results/logit_distillation/same_lineage_bc/scw/full_experiment_log.json",
+        "bytes": 1335335,
+        "sha256": "2b22f581eb62f68e185fccecc2d8eaab6c6a5a0f17d65dcaa4e93b9e5ce3c511",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "SCW",
+    "condition": "XBa",
+    "arc_challenge_acc_norm": 0.4906143344709898,
+    "truthfulqa_mc2": 0.4915920843760251,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "scw",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_ba/scw_xba_20260909/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4906143344709898,
+        "truthfulqa_mc2_acc": 0.4915920843760251,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.46501706484641636,
+            "acc_stderr,none": 0.014575583922019669,
+            "acc_norm,none": 0.4906143344709898,
+            "acc_norm_stderr,none": 0.014608816322065
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.4915920843760251,
+            "acc_stderr,none": 0.015322551401142664
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T16:06:37.051847+00:00",
+        "base_arc": 0.4402730375426621,
+        "base_truthfulqa_mc2": 0.5712170418936038,
+        "raw_sha256": "2583cc094bda1886f6aeb9806937e55ddcc8461b28aef0ca4e0020c06e289bf0",
+        "baseline_raw_sha256": "9182a4eeeec5ac4b706c1d0a4f6f80a936a8e4c877589f038d68776f68523bb3",
+        "raw_counts": {
+          "arc": 1172,
+          "mc2": 817
+        },
+        "arc_delta": 0.05034129692832767,
+        "mc2_delta": -0.0796249575175787
+      },
+      "source": {
+        "path": "results/active_cross_lineage_ba/scw/full_experiment_log.json",
+        "bytes": 65355,
+        "sha256": "1ca7719a112aecd00ed6b7594eb367048d8cccb59a606ccb52dc4c8f98590790",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "SCW",
+    "condition": "XBb",
+    "arc_challenge_acc_norm": 0.4974402730375427,
+    "truthfulqa_mc2": 0.48478352312750794,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "scw",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/active_cross_lineage_bb/scw_xbb_20260909/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4974402730375427,
+        "truthfulqa_mc2_acc": 0.48478352312750794,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.45307167235494883,
+            "acc_stderr,none": 0.014546892052005678,
+            "acc_norm,none": 0.4974402730375427,
+            "acc_norm_stderr,none": 0.014611199329843819
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.48478352312750794,
+            "acc_stderr,none": 0.015337060198487606
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-09T16:24:47.768925+00:00"
+      },
+      "source": {
+        "path": "results/active_cross_lineage_bb/scw/full_experiment_log.json",
+        "bytes": 239050,
+        "sha256": "2a312f24fe203faa3f5203599c7430e6454be02ac452d082eb7d41b4b9a9cf26",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility_results",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "Passive-5 Shared",
+    "condition": "Ba",
+    "arc_challenge_acc_norm": 0.4974402730375427,
+    "truthfulqa_mc2": 0.4755413056783935,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.4974402730375427,
+        "truthfulqa_mc2_acc": 0.4755413056783935,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4658703071672355,
+            "acc_stderr,none": 0.014577311315231106,
+            "acc_norm,none": 0.4974402730375427,
+            "acc_norm_stderr,none": 0.014611199329843784
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.4755413056783935,
+            "acc_stderr,none": 0.015230687782768966
+          }
+        }
+      },
+      "source": {
+        "path": "results/passive5_shared_ba/utility_results.json",
+        "bytes": 929,
+        "sha256": "9a33cb147aa87f77b27f1a39eddefdf6851fc0a3df8c754d39c429443c1d50df",
+        "git_tracked": true
+      },
+      "json_pointer": "/student",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "Passive-5 Shared",
+    "condition": "Bb3",
+    "arc_challenge_acc_norm": 0.4906143344709898,
+    "truthfulqa_mc2": 0.45441620416416634,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.4906143344709898,
+        "truthfulqa_mc2_acc": 0.45441620416416634,
+        "raw_results": {
+          "truthfulqa_mc2": {
+            "acc,none": 0.45441620416416634,
+            "acc_stderr,none": 0.01498170384477929,
+            "alias": "truthfulqa_mc2"
+          },
+          "arc_challenge": {
+            "acc,none": 0.47696245733788395,
+            "acc_stderr,none": 0.014595873205358269,
+            "acc_norm,none": 0.4906143344709898,
+            "acc_norm_stderr,none": 0.014608816322065003,
+            "alias": "arc_challenge"
+          }
+        }
+      },
+      "source": {
+        "path": "results/passive5_shared_bb3/utility_results.json",
+        "bytes": 11680,
+        "sha256": "8273a4ac549f0df31ef0d9f9baa8852a27b15c626cbc695974f440e53a24e356",
+        "git_tracked": true
+      },
+      "json_pointer": "/student",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "Passive-5 Shared",
+    "condition": "Bc",
+    "arc_challenge_acc_norm": 0.5110921501706485,
+    "truthfulqa_mc2": 0.50010974239234,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "BC_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.5110921501706485,
+        "truthfulqa_mc2_acc": 0.50010974239234,
+        "completed_at": "2026-09-10T07:12:55.477181+00:00"
+      },
+      "source": {
+        "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+        "bytes": 201470,
+        "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": false
+  },
+  {
+    "method_or_shared_run": "Clean Llama",
+    "condition": "Shared Bb3 baseline context",
+    "arc_challenge_acc_norm": 0.44880546075085326,
+    "truthfulqa_mc2": 0.505450760153828,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "NON_UNIFIED_PROTOCOL_ACROSS_HISTORICAL_BASE_RUNS",
+    "source_artifact": {
+      "value": {
+        "arc_challenge_acc_norm": 0.44880546075085326,
+        "truthfulqa_mc2_acc": 0.505450760153828,
+        "raw_results": {
+          "truthfulqa_mc2": {
+            "acc,none": 0.505450760153828,
+            "acc_stderr,none": 0.015602814964389472,
+            "alias": "truthfulqa_mc2"
+          },
+          "arc_challenge": {
+            "acc,none": 0.447098976109215,
+            "acc_stderr,none": 0.014529380160526848,
+            "acc_norm,none": 0.44880546075085326,
+            "acc_norm_stderr,none": 0.014534599585097664,
+            "alias": "arc_challenge"
+          }
+        }
+      },
+      "source": {
+        "path": "results/passive5_shared_bb3/utility_results.json",
+        "bytes": 11680,
+        "sha256": "8273a4ac549f0df31ef0d9f9baa8852a27b15c626cbc695974f440e53a24e356",
+        "git_tracked": true
+      },
+      "json_pointer": "/base",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "Clean Qwen",
+    "condition": "Clean Qwen",
+    "arc_challenge_acc_norm": 0.4402730375426621,
+    "truthfulqa_mc2": 0.5712170418936038,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "clean_qwen_baseline",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/paraphrasers/Qwen2.5-3B-Instruct",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4402730375426621,
+        "truthfulqa_mc2_acc": 0.5712170418936038,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4274744027303754,
+            "acc_stderr,none": 0.014456862944650647,
+            "acc_norm,none": 0.4402730375426621,
+            "acc_norm_stderr,none": 0.014506769524804237
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.5712170418936038,
+            "acc_stderr,none": 0.016178694836353032
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T04:49:21.457927+00:00"
+      },
+      "source": {
+        "path": "results/passive_cross_lineage/clean_qwen_baseline/full_experiment_log.json",
+        "bytes": 148847,
+        "sha256": "588a678275d7f8054ea4d2073f2a5fa5b77346e83cf6b339f2537831b0853841",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "Passive-5 Shared",
+    "condition": "XBa",
+    "arc_challenge_acc_norm": 0.514505119453925,
+    "truthfulqa_mc2": 0.4913761025929856,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "ba",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_ba/passive_cross_lineage_ba_20260908/training/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.514505119453925,
+        "truthfulqa_mc2_acc": 0.4913761025929856,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.4786689419795222,
+            "acc_stderr,none": 0.014598087973127106,
+            "acc_norm,none": 0.514505119453925,
+            "acc_norm_stderr,none": 0.014605241081370053
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.4913761025929856,
+            "acc_stderr,none": 0.015396499199913706
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T04:50:32.045175+00:00"
+      },
+      "source": {
+        "path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+        "bytes": 370097,
+        "sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": true
+  },
+  {
+    "method_or_shared_run": "Passive-5 Shared",
+    "condition": "XBb",
+    "arc_challenge_acc_norm": 0.4948805460750853,
+    "truthfulqa_mc2": 0.5121567463246797,
+    "availability": "MEASURED",
+    "precision": "FULL_RECORDED_PRECISION",
+    "protocol_status": "CROSS_LINEAGE_FROZEN_CHAT_BF16_PROTOCOL",
+    "source_artifact": {
+      "value": {
+        "status": "COMPLETE",
+        "role": "bb",
+        "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/passive_cross_lineage_bb/passive_cross_lineage_bb_20260908/training/final_model",
+        "fresh_process_reload": true,
+        "arc_challenge_acc_norm": 0.4948805460750853,
+        "truthfulqa_mc2_acc": 0.5121567463246797,
+        "raw_results": {
+          "arc_challenge": {
+            "alias": "arc_challenge",
+            "acc,none": 0.47696245733788395,
+            "acc_stderr,none": 0.014595873205358269,
+            "acc_norm,none": 0.4948805460750853,
+            "acc_norm_stderr,none": 0.01461062489030916
+          },
+          "truthfulqa_mc2": {
+            "alias": "truthfulqa_mc2",
+            "acc,none": 0.5121567463246797,
+            "acc_stderr,none": 0.01552353633633034
+          }
+        },
+        "errors": [],
+        "completed_at": "2026-09-08T06:37:24.515416+00:00"
+      },
+      "source": {
+        "path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+        "bytes": 354255,
+        "sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+        "git_tracked": true
+      },
+      "json_pointer": "/utility",
+      "derivation": null
+    },
+    "raw_results_present": true
+  }
+]
