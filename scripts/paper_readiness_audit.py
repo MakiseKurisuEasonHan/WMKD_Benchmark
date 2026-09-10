@@ -125,7 +125,7 @@ write('final_experiment_matrix.json',matrix);write('final_master_detector_table.
 
 # Utility is one observation per actual Student, with baseline contexts retained.
 utility=[]
-def util(method,condition,path,pointer='',precision='FULL_RECORDED_PRECISION',protocol='RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED'):
+def util(method,condition,path,pointer='',precision='FULL_RECORDED_PRECISION',protocol='NON_UNIFIED_PROTOCOL'):
     d=at(path,pointer)
     arc=d.get('arc_challenge_acc_norm');mc=d.get('truthfulqa_mc2_acc',d.get('truthfulqa_mc2'))
     if isinstance(mc,dict):mc=mc.get('acc,none',mc.get('accuracy'))
@@ -136,7 +136,7 @@ for m,label in ACTIVE.items():
     b=f'results/{m}/experiment_'+('bb2' if m=='ctcc' else 'bb')+'/full_experiment_log.json'
     if m=='evertracer':
         u=at(b,'utility');arc=u['arc_challenge'];mc=u['truthfulqa_mc2']
-        utility.append({'method_or_shared_run':label,'condition':'Bb','arc_challenge_acc_norm':arc['value'],'truthfulqa_mc2':mc['value'],'availability':'MEASURED','precision':'FULL_RECORDED_PRECISION','protocol_status':'RECORDED_PROTOCOL_NOT_ASSUMED_UNIFIED','source_artifact':cell(b,'utility')})
+        utility.append({'method_or_shared_run':label,'condition':'Bb','arc_challenge_acc_norm':arc['value'],'truthfulqa_mc2':mc['value'],'availability':'MEASURED','precision':'FULL_RECORDED_PRECISION','protocol_status':'NON_UNIFIED_PROTOCOL','source_artifact':cell(b,'utility')})
         hp=f'results/{m}/ba_student/full_experiment_log.json';records=at(hp,'utility/recorded_evidence');i=next(i for i,x in enumerate(records) if x['field']=='utility')
         for role,cond in [('student','Ba'),('base','Clean Llama (EverTracer historical protocol)'),('teacher','Teacher')]:util(label,cond,hp,f'utility/recorded_evidence/{i}/value/{role}')
     else:

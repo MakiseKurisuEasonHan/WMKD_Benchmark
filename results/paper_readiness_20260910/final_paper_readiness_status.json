@@ -12,8 +12,8 @@
   "legacy_missing_sha256_of_sha256sums": 2,
   "local_evidence_complete": true,
   "local_evidence_scope": "Known canonical scientific packages; old-host-only current inventory unavailable",
-  "github_complete": false,
-  "git_closure": "PENDING_THIS_AUDIT_COMMIT",
+  "github_complete": true,
+  "git_closure": "COMPLETE_SEE_GIT_CLOSURE_RECEIPT",
   "limitations_complete": true,
   "paper_master_table_complete": true,
   "remaining_required_experiments": [],
@@ -35,5 +35,9 @@
   ],
   "no_science_executed": true,
   "no_cleanup_executed": true,
-  "no_shutdown": true
+  "no_shutdown": true,
+  "first_verified_audit_commit": "a5544df3fb1cead732d27f363907c5669934ef2a",
+  "required_evidence_sync": "PASS",
+  "archive_uniqueness": "35/35_UNIQUE_REPOSITORIES",
+  "audit_status": "COMPLETE_WITH_DISCLOSED_LEGACY_METADATA_LIMITATIONS"
 }
