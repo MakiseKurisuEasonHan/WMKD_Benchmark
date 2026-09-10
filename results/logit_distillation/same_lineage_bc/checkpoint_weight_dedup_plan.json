@@ -1,0 +1,93 @@
+{
+  "scope": "byte-identical final/checkpoint weight storage dedup; all paths and optimizer/RNG retained",
+  "files": [
+    {
+      "method": "pnfp",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/pnfp_bc_reconstructed_parent_20260910/final_model/model-00001-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/pnfp_bc_reconstructed_parent_20260910/checkpoint-7500/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "f47a89052515c4c42839637e12475430b038dcd46516e9195f497713ae5ebe49",
+      "source_inode": 5385024518,
+      "checkpoint_inode": 4300427725,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    },
+    {
+      "method": "pnfp",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/pnfp_bc_reconstructed_parent_20260910/final_model/model-00002-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/pnfp_bc_reconstructed_parent_20260910/checkpoint-7500/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "1b1d5a157aaf24d93b0e835ed6a72251a7c52e01417c181b8deeae32bada91ec",
+      "source_inode": 5385024569,
+      "checkpoint_inode": 4300427726,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    },
+    {
+      "method": "evertracer",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/evertracer_bc_20260910/final_model/model-00001-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/evertracer_bc_20260910/checkpoint-7500/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "0dd9e4acf27b368355e10cae1ed1f03b5db0c9b149286bb2a030f77dd9ef8fdd",
+      "source_inode": 19332090379,
+      "checkpoint_inode": 18258865621,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    },
+    {
+      "method": "evertracer",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/evertracer_bc_20260910/final_model/model-00002-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/evertracer_bc_20260910/checkpoint-7500/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "5f65ce9dc251d0d7c6dd5da157f5dc6e8ddb681a8655da486c3a452206784a86",
+      "source_inode": 19332090380,
+      "checkpoint_inode": 18258865622,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    },
+    {
+      "method": "ctcc",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/ctcc_bc_20260910/final_model/model-00001-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/ctcc_bc_20260910/checkpoint-7500/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "691d5b8772904702861e597b9dea1eb1fe22d489366742946b5147f99498136a",
+      "source_inode": 4299950016,
+      "checkpoint_inode": 2156834384,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    },
+    {
+      "method": "ctcc",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/ctcc_bc_20260910/final_model/model-00002-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/ctcc_bc_20260910/checkpoint-7500/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "bbc27f25554edec2e50195387d8f294da7accda885c493f2cd62c15131b57af3",
+      "source_inode": 4299950034,
+      "checkpoint_inode": 2156834385,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    },
+    {
+      "method": "iseal",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/iseal_bc_20260910/final_model/model-00001-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/iseal_bc_20260910/checkpoint-7500/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "49117161953e75addc3a78ba12245c520390f45945993921ad782ee1c1bafa49",
+      "source_inode": 4300427744,
+      "checkpoint_inode": 3226408227,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    },
+    {
+      "method": "iseal",
+      "final": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/iseal_bc_20260910/final_model/model-00002-of-00002.safetensors",
+      "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/iseal_bc_20260910/checkpoint-7500/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "a72889a9ac5f4a2abe7c66013a2013a410134887a143d565b1864b3249ad0a5d",
+      "source_inode": 4300427745,
+      "checkpoint_inode": 3226410799,
+      "same_inode": false,
+      "checkpoint_nlink": 1
+    }
+  ]
+}
