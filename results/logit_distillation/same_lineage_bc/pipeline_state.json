@@ -1,8 +1,8 @@
 {
   "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
   "status": "ACTIVE",
-  "current_method": "ctcc",
-  "current_stage": "CTCC_ASSET_PREPARATION",
+  "current_method": "iseal",
+  "current_stage": "ASSET_RECOVERY",
   "serial_order": [
     "pnfp",
     "evertracer",
@@ -39,10 +39,27 @@
       "archive_chain_pid": 9326
     },
     "ctcc": {
-      "status": "NOT_STARTED"
+      "status": "COMPLETE",
+      "stage": "COMPLETE",
+      "supervisor_pid": 14987,
+      "run_id": "ctcc_bc_20260910",
+      "training": "COMPLETE",
+      "worker_pid": null,
+      "training_steps": 7500,
+      "log_timestamp": "2026-09-09T23:55:41.225238+00:00",
+      "detector": "COMPLETE",
+      "utility": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive": "COMPLETE",
+      "archive_chain_pid": 11760,
+      "archive_worker_pid": 11826,
+      "archive_transfer": "PASS",
+      "verification": "MANIFEST_PLUS_SEGMENT"
     },
     "iseal": {
-      "status": "NOT_STARTED"
+      "status": "NOT_STARTED",
+      "stage": "ASSET_RECOVERY",
+      "asset_note": "Original Teacher weight shards absent on old source; restore exact archived Teacher, no substitution."
     },
     "scw": {
       "status": "NOT_STARTED"
@@ -59,5 +76,5 @@
   "shutdown_gate": "6terminal+scientific/evidence/archive/Git closure+no workers+sync",
   "timeout_gate": "only genuinely new high-risk approval AND no authorized action/workers,30minutes",
   "no_repeated_pilot": true,
-  "state_sync_timestamp": "2026-09-10T08:58:57.564395+10:00"
+  "state_sync_timestamp": "2026-09-10T10:22:02.067723+10:00"
 }

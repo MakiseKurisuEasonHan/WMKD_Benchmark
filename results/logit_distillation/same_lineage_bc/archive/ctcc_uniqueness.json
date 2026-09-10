@@ -1,0 +1,4387 @@
+{
+  "inventory": [
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-PNFP-A2-Teacher",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2227,
+          "sha256": "d5f454f08b61ccecfe7937fd662c33ecf0a21f8924e8032659c9e3150e674ec2",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 966,
+          "sha256": "6b0bd17990e72a5d56a917d472142b20bbcf6d946692da18c141c3780efa5c6d",
+          "lfs": null
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "23b0fec0e334470b082efd3fc8b81b423afb780ecc200d628c7d918eb571949c",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "9d3b6783e9ae09ddc9eed395efd51f47b6036297293c705dcfb77c4f8238eeaa",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+          "lfs": null
+        },
+        {
+          "path": "transfer_tests/modelscope_upload_test_20260828T081723Z.txt",
+          "size": 2097152,
+          "sha256": "817d7a671093175350ec48ddd75ab3045e2b77eeb12d0f57c1a63ae0e04bd0b7",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1557,
+          "sha256": "020431ef4a2d34894c7c0c3a5808055c8688461db8739da24181096097a0f369",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 719,
+          "sha256": "11b80d3d9bff7419d0c16445decf30953acdf335d8d57c7bd88d69d5032150cd",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085754,
+          "sha256": "4abb66ac867ee198033141fb01bce0a288560b2a18f2ad4df052285ca7440d8d",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2084,
+          "sha256": "d7be31a8093e6a61e84e193c883accd2bcec3ad0db56eff00a55e884970e6dd8",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-eaaw-A-20260905_111830_cont2",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "all_results.json",
+          "size": 44,
+          "sha256": "09ea72b93f03345c14db09bbf4ac153463c12a998a1aa1f801b825ba62a000bc",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/archive_request.json",
+          "size": 1425,
+          "sha256": "0f013ebbfcf5d67b67bb7a589f98ebec34a23d63588066d2e8a1593e11a3bb4c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ARCHIVED.1.json",
+          "size": 2462,
+          "sha256": "46c991af4e0790ac8c577c150095a65b13c6b98218d9632839679923727bd276",
+          "lfs": null
+        },
+        {
+          "path": "args.json",
+          "size": 1719,
+          "sha256": "1610fe1171ad5382ef6fe797771e43f7c0b79452af5f53ee7befe860c26f6516",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/compatibility.patch",
+          "size": 2841,
+          "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/compatibility.patch",
+          "size": 2841,
+          "sha256": "cd7b25e61da48ab4212f32dc85558e626995c2b11c29ae21d9bcfbbfcd9c69fd",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 881,
+          "sha256": "5350e9655c01c574313d991ba9e67509444ba1d27a15ba12a22e39c543825fb7",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/context.json",
+          "size": 826,
+          "sha256": "1725e53f8a75558c1e05f48824a5a518a953b783f47d1b97199350966581bc3f",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/DETECTOR.1.json",
+          "size": 9212,
+          "sha256": "07bfb6f9522a50563a326adebb6b54f46d65627b2a3796cf3e7e76a27538325e",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/DETECTOR.1.log",
+          "size": 105,
+          "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/detector.json",
+          "size": 7872,
+          "sha256": "24f7afa4f0a1f5e4c8c38b8c44bed7136b61df391ee1f6621ce2f65f24af0e4a",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ENV_READY.1.json",
+          "size": 649,
+          "sha256": "64155b0707685574487a1dbc94b2414df6c6c83926a8735e8cd368254be6c48b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/ENV_READY.1.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 119,
+          "sha256": "7e9551f88df59ec6a88779ae2c001a8798be69a26f189717728d6436808f1d49",
+          "lfs": null
+        },
+        {
+          "path": "log.log",
+          "size": 5069,
+          "sha256": "0eef0b9d74625364b1a9907879d37d52fc25abecbdff93829ceba33524f3b3d8",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 456318,
+          "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors",
+          "size": 497774208,
+          "sha256": "b1ae4c6064bbd60f95da09002fffa91c64a16d16c27ddcfb84711351182defe3",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/MODEL_DATA_READY.1.json",
+          "size": 6645,
+          "sha256": "ad1fe5997c8acbff5987ee5686aa5a4a33dba6040165bf89cf076c3b3aaf3bef",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/MODEL_DATA_READY.1.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/model_manifest.json",
+          "size": 1524,
+          "sha256": "7532392e562b137ff6ebc2e9a7df692d0057c0373dd2bf61c9effc062afde83b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/PREFLIGHT_COMPLETE.1.json",
+          "size": 3975,
+          "sha256": "a89d703836d58de33feb195a8492f03e7ae34c8f480cf87522fe622e11e9ce83",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/PREFLIGHT_COMPLETE.1.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/protocol.json",
+          "size": 6163,
+          "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/protocol.json",
+          "size": 6163,
+          "sha256": "397afc3f1e826df03bb730a355c29badbb92f6acfb89de4861cc25f26bac79bc",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1425,
+          "sha256": "5460efd071db88b153dbfa04a49909e54c551c34c458cb2722e8411aea80bd2d",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/RELOAD_VERIFIED.1.json",
+          "size": 2167,
+          "sha256": "2f7def654d953b08d0953699e77871edef41d3aea29c376d2764f6fa937ab04c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/RELOAD_VERIFIED.1.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/SOURCE_PINNED.1.json",
+          "size": 519,
+          "sha256": "f2539cb6cfa5007a0201e095752fda781bf9291f58b32bbc9afd5ebf77ac36fb",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/SOURCE_PINNED.1.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 99,
+          "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 3557680,
+          "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 475,
+          "sha256": "f1cb5e31899749cf30935ccea01180ab3cfd484bd2bcf3bfdc1aeb9fdf935f6f",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/trained.json",
+          "size": 8131,
+          "sha256": "c1f12e61e6c5daf633abe0c730479625f92fd8402a2d5ddaa31f22701910621b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/TRAINING.1.json",
+          "size": 8854,
+          "sha256": "080d3af804e4926372e253a2dc189420c9827beb1c118450fdb79f4be5355c97",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/TRAINING.1.log",
+          "size": 678959,
+          "sha256": "2be13f0126f4a3463e81f772b1d6d69aa2ba39b2f27ab1b8ad21b184b9d18795",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/training_progress_1.jsonl",
+          "size": 86633,
+          "sha256": "e6943dcbe304c93ee2cd4ccc44438e0442f584a5d581d7d471d37b28362db0f3",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/trigger.json",
+          "size": 1829,
+          "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/trigger.json",
+          "size": 1829,
+          "sha256": "27d5d6bbe5f284fc2e129f176671540d171476bdc8553818f7b6f344e9e1ba9c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/UTILITY.1.json",
+          "size": 662,
+          "sha256": "b59efdfe20f16f4f0aa1edbf4fd9deb3eee49d0f2dd3ffadf2e6b7edb00dfa1a",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/UTILITY.1.log",
+          "size": 105,
+          "sha256": "00d8d9cbefd37e94aa6ac2898dfd230fa1841b09c018282aac2418d5b042c6d4",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/utility.json",
+          "size": 411,
+          "sha256": "4aec23e30a6d379c203da776b024b396c094d7dec0a98636ee004a7ee876d1c7",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 798156,
+          "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7",
+          "lfs": null
+        },
+        {
+          "path": "watermark.txt",
+          "size": 310,
+          "sha256": "a60c79a1010fae5694597ad5e2b47dcc5c789d4d31c6c401fbca8713b5d01f43",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_ARCHIVE_MANIFEST.json",
+          "size": 7037,
+          "sha256": "d7e8203eaa5ee29730a1322e9cc73cd0a9f31e5d71c3655dfb8f3a49976b5acf",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-PNFP-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 967,
+          "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+          "lfs": null
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "0ba6e341774beccaf530d7c02d4a10c44fcdb89467b03c2d24edfadf7a28c941",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "0c306af6f96bf5018c795de4a74eaeeba062a9150255b35972a1ab67844c436a",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1557,
+          "sha256": "3024ec76ba4269e1194196c9a412ac804d277d305412dea4ad641a2f026a6e29",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 719,
+          "sha256": "cdeeee61df6c1d20121c7dfe88f6211637d04156902cd77c048662967efe1bb0",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085756,
+          "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2317,
+          "sha256": "57b9c1ed7d19061040f22de0cfda02d0c98db0b0a7978eecb5fef8a8173bc400",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Bb2-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4182,
+          "sha256": "a281f2aa836d0cccc24723f14e0ec92d7af514de51b2d66ddc0d86e7e5e8bce7",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "dab23dd5c28a41f81e184759a69fc13ae2778324a5df5afd8978c22e967789b8",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "44151e38dd37789fd83d4a0e3896ab7bd159ad1483188b02420ab559a57ebb16",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 388,
+          "sha256": "2523f9104de55a077d1073946e43ea04ea3c9659e494cce7e6330ec28c7d87ad",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "66c664b14775149656d816d60f221b7a5a44f78dffc8fe33fa14ead88e1aabbd",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4236,
+          "sha256": "6f473468665e3e9eea02e93e886fd210e2f395f5b2cd1197d5a51fa5abc1f99b",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "49ecbab1b73997fee711c39978c0355f637245903815d78f71d3f1cf746db658",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "6c6ffeaaa4d2710715644afbdafef97a21aee84981eecb6ae251fa2ebd184934",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 394,
+          "sha256": "dd809d2030c00444f82f18bc16f92882d226a1b26405874d4ef8aa8769fe5a40",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "de3b8805d1ac286f0d9edd18af150659adbb7877d90b22ecd9422caf74073979",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 5555,
+          "sha256": "a88bc2bd1db6a34d7e5c861e42b68ad3b3de6053db5dcde501cbe6a65f41eea8",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "ea40628fee4f957ae6b7c84fc7d74366d9bbb1e98997a9ee9068e685bba2f2be",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "ab51fb052229483b16c5e974c4aa1f27037fb832fc125d185091aa33edf8cff1",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 388,
+          "sha256": "1d6c8303e2e261e01d9a8afb11a354448f2d77cec333d313697bd7be2ce64721",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "f81f6d6d477dfb6a5aa95be9080e813a21acb829fa08b31d3c128647d1a47240",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4413,
+          "sha256": "648edb34d49fb9184388ca12206cdf5694d44dcb55874803da06f69a1fb3094d",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "ce71466f82075f791761f436cec7df5beb4f12bcf5db576ad8206768a2f8f7e3",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "0a1086dce86b7800428572508312ee1342d7ead181de1ee055ff9c88bb303767",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 496,
+          "sha256": "3a4a5ca6dcf6a6b3d996f726cc87b6afb71001be0090dddb16f159e318561009",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "6c2ebe329ac75b07a1061b215bafed3cef54792708a19df369c219a2c40871a9",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-EverTracer-Cross-Lineage-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4711,
+          "sha256": "9b33e0aa7b9ccd360e77f890b5c7b9c0975d5fbfd739568a8eca267f4a7beee2",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "ba9ac3b8123d79119cecc22bfc74493abe087b512585eefa54bf1e27ebc7afc2",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "3cbbe881ae0986898a913129ea9777b383e0c1a6fc022a8fa769e20d988843bb",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 540,
+          "sha256": "997d2eeed43f2eb71cb6c5aee678df76b273fb0b9efb734d66e0c1457bf9af3c",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "d4b5e3a20181fb9a3ad8f8793e8ec0dc3c67d6ed8b16281e14fc72c30b0ccfaa",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-CTCC-Cross-Lineage-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4494,
+          "sha256": "399e9a80c9e219be8dc290af2a65935d1cd581a14c63f62ff4cae1b2cd979162",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "3dcbffc55ef4c21b53f324ba16ad9a231902014352ade804ec784f0076699e4f",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "536903fcef4782f7266a47abad0e1c316556cf9f2fee8dd839a2fc63271a0ad8",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 486,
+          "sha256": "72f32fe8d788e2aad3d9b5068fad105d4c43824f3be75eea336655036bb15add",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "d152dda37fd85ceb854316d9e2ebed87adaf443ae3ed7717c6ac474734307168",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 2980,
+          "sha256": "265f04279484f87f71e05dcbd87f2dc77773473211fe83ee60c1aa0cad29d7f6",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "8567ec5526e2357b48dd36fd54791dc7cde8ceb398957d9a076c36a439e1a4ca",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "c2808d1ae868f38ed93f7fd4d752b662c1d9de786c0a31b51a5e0a76c596ad61",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 487,
+          "sha256": "44cd51a00ed934ca939f23b6c3ec5227f0a12849ecf1f8cf59cfc24ecbaf52a9",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "77405117245d1654c84aff637b52be3f2449fa744095104223d945dfbafd35fb",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Passive5-Cross-Lineage-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 2978,
+          "sha256": "bc630a770c135ff80ca0327888ed19482b3b8041f6438422b3b20e21c4ccc515",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "c6d07995704c38936fcfa204e46a9e25643c1b2de5fc31253cc060a47ff310df",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "9172a77162f9a0f9855320c9ecde2da112e07cd8aece91284f14ea86b8f372f3",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 487,
+          "sha256": "0f1636884f92b36f349d1ba853f0f7001085547aeacda187595b5e904b026bc5",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "cb622ff18928b69a4e811ec01bd0f7688afd1a929b668b166dc1b08dd93377ab",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-UTF-A2-utf-a2-20260907-30ep",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2559,
+          "sha256": "0dbedfdfed59222ae86fb79f9a6b5f2bfa09f452f46c60bb8af692d8e5a11a9c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/utils/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/source/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/argument.py",
+          "size": 1085,
+          "sha256": "6d5488c63836f047e39fb8febc777e2bf2a4cd59d33fcc91f2c6e71ce9ca8f83",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/collator.py",
+          "size": 3871,
+          "sha256": "60b744e86110daa544a884df9b5b13a2ea40d33974c5f79300b51c6883fc127c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/compatibility_patches.json",
+          "size": 1850,
+          "sha256": "c357b3ee156b36bdbbf9f61df3745b33f53a8796a68810157eab17276b29c278",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 966,
+          "sha256": "5c6cf442526649df3a75d9405aea43990fa30630f4ca28f23abca33d0e99f45e",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/create_dataset.py",
+          "size": 9402,
+          "sha256": "4e483487362b225a9e5b598cb61c0085468c03eaa2a18e425a53041b5383281c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/fingerprint_data/data.jsonl",
+          "size": 9376,
+          "sha256": "344288a031b53e859f59da2e76cf7b9c9aad153a9f15ceddf9ca921de65d1c9c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/dataset.py",
+          "size": 12897,
+          "sha256": "06b0d028af0e99bd9658c81cdbcc41109ace8c40daea0c2b263c3f1e949faa7f",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_base.log",
+          "size": 130829,
+          "sha256": "ea3cfb200139e553c263b312d829660667c91cc9b1b9c1008569d1e17fbdd875",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_base_launch.json",
+          "size": 388,
+          "sha256": "9f04a084fc8c80bdb5094bd2908851af59e8d31ca4a38716fb29581d9da16871",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_path_repair.json",
+          "size": 811,
+          "sha256": "2df84c5041fcd4dec8e1b88115e22e45d9fa0f4c0cd0bf27e91e708254e8d0bb",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_teacher.log",
+          "size": 4561,
+          "sha256": "9467a77c2ff47cf325aa7135f79d352b8ba42dedf764473f7eb7b8919a4ef9a0",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_teacher_attempt2.log",
+          "size": 362232,
+          "sha256": "67280744282b2074515e10e641bbb1a6bb9dd9614764d8736ff11d9c51f8cc4b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_teacher_launch.json",
+          "size": 501,
+          "sha256": "940164753fe7b3ed07588ce3b493dea3585241b8e494b8d845581bfc9a6b721d",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal/environment.json",
+          "size": 709,
+          "sha256": "7caafe65d59a94ff846055cdc2ecb64bf67cf1b690f334004e1e0ffaa6717475",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight/environment.json",
+          "size": 709,
+          "sha256": "7caafe65d59a94ff846055cdc2ecb64bf67cf1b690f334004e1e0ffaa6717475",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/source/fishing.py",
+          "size": 9430,
+          "sha256": "331d9e4898aaf59820d5b3311b657f309ddfdcc61fabf3d00d582dbdc8535ef7",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal.log",
+          "size": 311819,
+          "sha256": "53d907c015a7c8371b02ccc363a32ff1db5e013d2e29c6f7b2ac83bf0953beaf",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/fp_test.py",
+          "size": 12524,
+          "sha256": "43f48fea79aa5fe44ed40b6f6eb24d79b8b652a5653ee8a09319a8999f4bfbda",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_teacher/full_lm_eval_output.json",
+          "size": 12754135,
+          "sha256": "255c8b5ed4409da2136e15b901994e4c75d23e966ddf081b8c6d315d8a350b86",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_base/full_lm_eval_output.json",
+          "size": 12771542,
+          "sha256": "16865760f80bf1ff405a8f43ed2a0dac56962314ec086e2f8d9876b6873e8a3c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/utils/generate.py",
+          "size": 8491,
+          "sha256": "03302d945f1d9f7301fce49540cb1875871c0dffe17c41f31b582a7fd72436ad",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "a7327788370b7783e29852cf19b4a1f40cd31af5962c94bba76c336d491b4169",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_teacher/historical_reference_audit.json",
+          "size": 3490,
+          "sha256": "cb63fc4994bc80861779e3d6aa4ffad2619700a1d6f6e093ae91428c82b54576",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_base/historical_reference_audit.json",
+          "size": 3490,
+          "sha256": "cb63fc4994bc80861779e3d6aa4ffad2619700a1d6f6e093ae91428c82b54576",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/fingerprint_data/info_for_test.json",
+          "size": 6259,
+          "sha256": "066b411a8c3961ea592dbcfd205f8e83ab71c3e20b9f9d6bfa063c08568918e8",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/loss.py",
+          "size": 1425,
+          "sha256": "9d50b6cecc1f9bc3d58c912efbd1c5f2a31d6397b638133a6f222438816c06bb",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp_source_provenance.json",
+          "size": 1752,
+          "sha256": "7651c8dfd34b8a8579fd1f1f1164e73fcaebfe70a26fe46ce674b6d1bd2ebcb5",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/results/verifications/meta_llama_Llama_3_2_3B_Instruct.jsonl",
+          "size": 24415672,
+          "sha256": "86db5f3c32f06a6a2bf66d4bf3fc1efaa2f405164baa84eecfb9680e0f86fc48",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/results/verifications/meta_llama_Llama_3_2_3B_Instruct.jsonl.gz",
+          "size": 5232772,
+          "sha256": "8ec4e99e195a129b39f0e43705bd849627b72b6f24a1c4b5fc25398961131df9",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/results/reports_mini/meta_llama_Llama_3_2_3B_Instruct.md",
+          "size": 218097,
+          "sha256": "86394ba2c961b3f3e6e9927ed325d13dfa7241b55dbfeeef886839793b124360",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/results/reports/meta_llama_Llama_3_2_3B_Instruct.md",
+          "size": 2618112,
+          "sha256": "5b79a917ff2305584016beb86679f67aeb44177980116cdccea44c11ce52e040",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/results/verifications_scatterplot/meta_llama_Llama_3_2_3B_Instruct.png",
+          "size": 389218,
+          "sha256": "590000e19be99d1f92fc74d347f02ba387b6904a2dbcfe0f52788cd869a63f60",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/results/indicators_pairplot_byid/meta_llama_Llama_3_2_3B_Instruct.png",
+          "size": 540732,
+          "sha256": "aa57772d2696eeb1db49456cf9df02d50e0a4cfa51202bbbbe0b554670df51e6",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight/metrics.jsonl",
+          "size": 946,
+          "sha256": "b925d48f6e90c1b6cc3930cb670ebb8d116b01f89a8f8c8b221bbac675c430aa",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal/metrics.jsonl",
+          "size": 309771,
+          "sha256": "4ff38ed95d44bc90a2b90774fea9843a0d8866d37fe46cce0603f5fcb81773be",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "0814ead21f4ae3710ea7cbb90106d17761f971d0504c874bee4275735a9e8252",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "cadc6338abdf2478511572e894b9b2d3ba003afcaa4cf7fdfacfeb013697feda",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/model.py",
+          "size": 2650,
+          "sha256": "e068d3e79ad6ef5c1f8c5203fc816594fc89e7a145b27e438a907f421e4c6e7b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/source/model.py",
+          "size": 7657,
+          "sha256": "bda0df2778d9ce31179e320b26de29f88d904265af9ec3fb571015fb03d9fb67",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/model_artifact_manifest.json",
+          "size": 1694,
+          "sha256": "44b46b92ef2a47fa5fd9be2180b7841741dec6bc57ff7fcdd4ff23d9aaff759a",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal/nvidia_smi_before.txt",
+          "size": 1689,
+          "sha256": "c1992c2e52e7ab01c920d73d879848561d9812a275fd711cc926c2382ddd6ba5",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight/nvidia_smi_before.txt",
+          "size": 1689,
+          "sha256": "04cf7cb9ed9945b59195192b4d09318ace8587a58e49f18c0792a719ab6e4ad4",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/nvidia_smi_before_formal.txt",
+          "size": 1689,
+          "sha256": "11065db7bdfa550057b05dca9584a9a4b9ff98b1621811f49ff49209b6a6afb2",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight/parameter_change_step3.json",
+          "size": 130,
+          "sha256": "8ec824106c5c4734abde14a90be0aaa99b7545c569e7da417586d29a6a19895b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal/parameter_change_step3.json",
+          "size": 130,
+          "sha256": "8ec824106c5c4734abde14a90be0aaa99b7545c569e7da417586d29a6a19895b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/pipeline.py",
+          "size": 11000,
+          "sha256": "2c5cc46dd245830ab5f26a7b4c608072a55e4631c8797f23a4d23452b24845b3",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight.log",
+          "size": 2899,
+          "sha256": "6bf041c9555472e2699ecc3c06e2b2a4dcaf9e255e200df459e437a31814e199",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preparation_state.json",
+          "size": 324,
+          "sha256": "b2271ba352cc7b5f7ce1977fb723a0533916550beff2e5de02affa9f1d68c2f9",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/dataset/prepare_aya.py",
+          "size": 769,
+          "sha256": "29a4341a0514fb5f98410e780e319ba50d461aa979954a53e98f8b78e128a088",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/dataset/prepare_dolly.py",
+          "size": 659,
+          "sha256": "33cb8ce2defd88a0b156fb4b04f94e083180f158f12346ac373a5c783b22492e",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/dataset/prepare_gsm8k.py",
+          "size": 643,
+          "sha256": "365c326b0bc92833b7810e04d9cb42a45f2fcbdd503351137af61294d3bc2d47",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/dataset/prepare_ni.py",
+          "size": 657,
+          "sha256": "e149d605acb548f2657eba22e37653b0b282f1344c6288b02fd27d040784b763",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/dataset/prepare_sharegpt.py",
+          "size": 2371,
+          "sha256": "841c274b55d0b55127300ef03e7b8ccd7b208be8ff9dc9a59c55b236e7f0281c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_teacher_attempt2/raw_generations.jsonl",
+          "size": 229222,
+          "sha256": "2863ba666a8dcb5b882e69ba81c0a06cdf5ee60e83fb6c66538bfc783762c918",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_base/raw_generations.jsonl",
+          "size": 604580,
+          "sha256": "1534cc0101e0af66367f617a12895dce0bc155222511b9919d6660aadbc6bc32",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1423,
+          "sha256": "30bd232c999edd49d06135acb134205074cad6ba7b00d2755f097ceb9df05db3",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/source/report.py",
+          "size": 14470,
+          "sha256": "16fd3b8c57fac5e32900a3eaf5774c2b1ad22bee2d601ee5b6c19aee7deeaadc",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_teacher/result.json",
+          "size": 5431,
+          "sha256": "8013e86d09cc8bd41919e049d088cdb2715e064ebf57365434e594f37f359d8c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_teacher_attempt2/result.json",
+          "size": 1292,
+          "sha256": "f9239d11c8aecc98a4b146f6374df3b8413375d670a51ac023b9d9753c37f570",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight/result.json",
+          "size": 1227,
+          "sha256": "44428d6ca4c0adb77d35ebffae0cf5925c9cb31857d7dff690601baca04a7149",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal/result.json",
+          "size": 1322,
+          "sha256": "2554cc87213e0c89b27e78523fb2d18f23c795e5eec84710e505789d6aa1b557",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_base/result.json",
+          "size": 1226,
+          "sha256": "7048a604f742cc2a414c41ec6c7e323b391f615a3a66d9ce348b7fff28ee4f25",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_base/result.json",
+          "size": 5063,
+          "sha256": "e85af3c19f8639249bdeaabf14779dcaec77fe8722a71119425f20adafccc7e8",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/run_eval.py",
+          "size": 5182,
+          "sha256": "2930c813139c3c9898301f5e3a5bbc4ec305d8469c280fd61b6eabb739cc875a",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal/scheduler_parity.json",
+          "size": 339,
+          "sha256": "f80a68214a68540e8280f0d601c66fbe9741c3fdba4e8f7dce04955ccc7f91c1",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight/scheduler_parity.json",
+          "size": 339,
+          "sha256": "f80a68214a68540e8280f0d601c66fbe9741c3fdba4e8f7dce04955ccc7f91c1",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/utils/special_tokens.py",
+          "size": 1385,
+          "sha256": "018b7bc674a2d38193117bb556da701eb57e270842105a5554525df33e2cbf40",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/preflight/status.json",
+          "size": 1227,
+          "sha256": "44428d6ca4c0adb77d35ebffae0cf5925c9cb31857d7dff690601baca04a7149",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_teacher_attempt2/status.json",
+          "size": 128,
+          "sha256": "f432b8b6ed683c0b4a7fe395cd69e65e638bae958836b87cae261ee72a6c03e5",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/detector_base/status.json",
+          "size": 125,
+          "sha256": "9028cc862d656737ed2931c9a46a5c34f9c53bbf2c047c772d7662d9ef368817",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/formal/status.json",
+          "size": 1322,
+          "sha256": "2554cc87213e0c89b27e78523fb2d18f23c795e5eec84710e505789d6aa1b557",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/template.py",
+          "size": 6833,
+          "sha256": "a61e5926fae56fada5dc268da08fa502afe6c3d3c7a4d34406192da2635b9e9d",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/source/tokenization.py",
+          "size": 10478,
+          "sha256": "09966c8a83f5637b03365f4b3a6fd44d067a5d40ae11fa12a47dfab4bcc09d90",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085657,
+          "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/train.py",
+          "size": 18425,
+          "sha256": "1d45223f879e9d4ea8156b098185d1878fd8a347b609edef336088ebbdd217a2",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/trainer.py",
+          "size": 2964,
+          "sha256": "c9a0d5957dca1dacaeda6a6f4ea6b8bc63be009559630011e1a34f4708b9592b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/training_config.json",
+          "size": 3336,
+          "sha256": "c4acf6321ea4bb606d3ab7aea8bf4d3661009628d00e5d4fbe3c2a27605a9199",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/source/unused_tokens.py",
+          "size": 7036,
+          "sha256": "f02b5b6403995d0f82d33a9a4c4c00829cd3b1eae0acb61af9c47b63f705efb2",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/wmkd_scripts/utf_a2_archive.py",
+          "size": 5149,
+          "sha256": "ce111eb8bee6d9aff2cdb07332adf94346387121356005c37ac76f6474362128",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/wmkd_scripts/utf_a2_detector.py",
+          "size": 4744,
+          "sha256": "7af3af4d9e3a7c738040f49e82c5b2233f7f8266d69f144b94e7f38899efb07a",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/wmkd_scripts/utf_a2_prepare.py",
+          "size": 4888,
+          "sha256": "4667289c10bed321fc99b5da9d50691f0c28f59e183ea4266ec1038ea179abd2",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/wmkd_scripts/utf_a2_train.py",
+          "size": 9502,
+          "sha256": "3d88c9149f1e4d012a7315fa702d56e8aa01df07774510c04ce6d308c9abee47",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/wmkd_scripts/utf_a2_utility.py",
+          "size": 5346,
+          "sha256": "cb17d5f2cfa4435a3b69ca15ccca274ae153951b1996d2bcaa14881e055e978a",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_base.log",
+          "size": 45303,
+          "sha256": "96a04ce7a00100acfde51c0b9b0590870591069c4ece21eb7044b1f7ec6baa1b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_base_launch.json",
+          "size": 485,
+          "sha256": "53eb79bd7e2673bfb30df88e35771e966998a90cce7405008affc8861b95ad49",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_teacher.log",
+          "size": 44918,
+          "sha256": "09a461488c46f058c832ec6ce8f7cab87fcd54e7614f1170573ee94933b612c5",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utility_teacher_launch.json",
+          "size": 391,
+          "sha256": "f6a23235ad2cb68792ac6bb2b2656a7003601017158c2943fdbfee48ff648967",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/magikarp/source/utils.py",
+          "size": 14897,
+          "sha256": "c04976f159d84f2a3bd53c5dfbcd784769fa9a7e9357957c9e9f5fc1f949dd3b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/utf_source/trainer/utils.py",
+          "size": 1132,
+          "sha256": "375b1c9f4558d8525b2c369febffb1cd855c93dacc9c439dc79487e7c0428011",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_ARCHIVE_MANIFEST.json",
+          "size": 15702,
+          "sha256": "6940cdb687730271ef8e6ddb35c9dd63bdbde0718146eb122765687e31a889a3",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-instructional-fingerprinting-A-20260905_111830",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2254,
+          "sha256": "b2ca9309980a3e472678b049c23923a0f76cd1b88238810a7c6c790fe1f2c9c5",
+          "lfs": null
+        },
+        {
+          "path": "all_results.json",
+          "size": 229,
+          "sha256": "b5ea8e56688644dbad0a819ca893a836e1bb157ee3014402a43dc78ba1bb70ce",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/archive_request.json",
+          "size": 1445,
+          "sha256": "b75b78df311e0fb9e7e0acf46131eae23b6df4dac15bdb89ba84e8264452a311",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/train/cache-5ad1cb4ce4015547.arrow",
+          "size": 48184,
+          "sha256": "8b02096da11431f3fe3f3c831652b1c72d4d0d4a47a0e8700fde2294befd811c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/validation/cache-5ad1cb4ce4015547.arrow",
+          "size": 48184,
+          "sha256": "8b02096da11431f3fe3f3c831652b1c72d4d0d4a47a0e8700fde2294befd811c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/test/cache-f876a24c31ab31a8.arrow",
+          "size": 262632,
+          "sha256": "551a387a10ad61d15d3cfb5a9e31fa95390ed6eccec86859f112cc59573ddbbe",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/compatibility.patch",
+          "size": 3264,
+          "sha256": "b4e56b91b71759bdf26d92a03d84edc1551980a7e8f62398912e188928e3453b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/compatibility.patch",
+          "size": 3264,
+          "sha256": "b4e56b91b71759bdf26d92a03d84edc1551980a7e8f62398912e188928e3453b",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 700,
+          "sha256": "3fb2f815987c25fa180a1947eff6e266ec4fdd3346b81ab402687ca776636e9f",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/context.json",
+          "size": 756,
+          "sha256": "a9d9226cac568ae4333cb67d414b10f4b82c537d4c5fd87510a2e3d1ea28c4b8",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/cpu_import_audit.json",
+          "size": 2018,
+          "sha256": "28a923711628cf905e8388a39d361c7fd70d8cacfc0a55cc53d0f8ccaf3305b7",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/cpu_import_audit.log",
+          "size": 1695,
+          "sha256": "ed00016f89c450b985f41aa94816d2b1b3a8d43bb4583c51e715a265f1342c85",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/test/data-00000-of-00001.arrow",
+          "size": 51688,
+          "sha256": "1fc406ced15af780e29f78fe62f0fdb4935cb729d258895419b230056974ce0c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/train/data-00000-of-00001.arrow",
+          "size": 9792,
+          "sha256": "e5b9f073a3c35f14fce1c3f4f6fa9d0cc21c9b1d62defdae228e2cf181f71526",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/validation/data-00000-of-00001.arrow",
+          "size": 9792,
+          "sha256": "e5b9f073a3c35f14fce1c3f4f6fa9d0cc21c9b1d62defdae228e2cf181f71526",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/dataset_dict.json",
+          "size": 43,
+          "sha256": "1239dbd4ca38311b03319b672c05a6fdaacc884b0034eed047659406c62eedd4",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/validation/dataset_info.json",
+          "size": 313,
+          "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/test/dataset_info.json",
+          "size": 313,
+          "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/train/dataset_info.json",
+          "size": 313,
+          "sha256": "3ed45e56d514a6e0d6cc5f0c4f5b426ef8f5d4cc476a6e86cbd102fd763248e1",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/DETECTOR.1.json",
+          "size": 2949,
+          "sha256": "8cbbec7eb90431aebc88b6275ebe6c56d7d18bc65204f7c0c0d1beb98a09690b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/DETECTOR.1.log",
+          "size": 145658,
+          "sha256": "a179c36b9e5a12f233b0681fb2ccd21e12be33faadf2641a0945f3f2c972a3e8",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/ENV_READY.1.json",
+          "size": 380,
+          "sha256": "ae1bcf444cbb8eb85ab606bb6b167d87694e9e127ad834978da7825ed4e53404",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/ENV_READY.1.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 195,
+          "sha256": "a68e8dee2079184c1fa60353fca2289a98d7aef47c268c131e1f2859add486d7",
+          "lfs": null
+        },
+        {
+          "path": "instruction_emb.pt",
+          "size": 268999541,
+          "sha256": "1349106d4861b986a71096ab425f7a0625551dc5d6c52dd5fe92ebeec42af7ab",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00003.safetensors",
+          "size": 4938985352,
+          "sha256": "71b8f7d23b2e8731845516b7a2677542ad96c0a7bcb0f78755b9b861959480c6",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00003.safetensors",
+          "size": 4947390880,
+          "sha256": "1c4d6a2e56feca4242e0ca1c880a78de3279bb735da5c308597e1e0f03d1119c",
+          "lfs": null
+        },
+        {
+          "path": "model-00003-of-00003.safetensors",
+          "size": 3590488816,
+          "sha256": "91f2557867930bc76206f8e4e0e013dc816fd7bfee383dcff450c02b0f9b37ba",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 23986,
+          "sha256": "5bd69dd5b64cd6e0aec763e08dbe24ad96d1b1ad2c86e5e5a74dc5a0dc4ce910",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/MODEL_DATA_READY.1.json",
+          "size": 5997,
+          "sha256": "17a81c0ec9ded89252acd7fed5f73b9b242e7ba824a64bd5ac5b9e06bd1465b8",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/MODEL_DATA_READY.1.log",
+          "size": 77108,
+          "sha256": "7155281bf79db2da22fcc646b6209e146dfc333e80c7e5386cdd0e086f5a2a99",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/model_provenance.json",
+          "size": 3170,
+          "sha256": "b0f1c117c976bca6ad43babcf5e0b0e228b1207346827ac6c5aacf524258d6fc",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/PREFLIGHT_COMPLETE.1.json",
+          "size": 9802,
+          "sha256": "6728a4feaf3ce766a1692621dacb74e7b5bac3a927a383c1d0e17da9bb71b0b0",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/PREFLIGHT_COMPLETE.1.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/protobuf_preflight_attempt2.json",
+          "size": 6934,
+          "sha256": "a019165ae9e6531efa92a21b40bd8aa284f8c1cdfe951ac1a33f823cce53f6a1",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/protocol.json",
+          "size": 5512,
+          "sha256": "42d74d8ca04ef16d947d3ede354d61a25fa3fa363e3e75349429d85797d45509",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/protocol.json",
+          "size": 5512,
+          "sha256": "42d74d8ca04ef16d947d3ede354d61a25fa3fa363e3e75349429d85797d45509",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1413,
+          "sha256": "d31dfee80b5e392ec7be1e0e90dd5ab5af9325a6db66904786bb9e342e60538c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/RELOAD_VERIFIED.1.json",
+          "size": 2721,
+          "sha256": "c03a09b3eb2ec5f8b96b89a4314083911ec201023e89e846bd7ddae55b278334",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/RELOAD_VERIFIED.1.log",
+          "size": 563,
+          "sha256": "958158ff72a52f0dcf83f323f84a0c65cd3386de2008663ba943293f8ca0840f",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/SOURCE_PINNED.1.json",
+          "size": 486,
+          "sha256": "fb24451b62b593322f1707dbf284af63dde26c5170b654e613e8a78f334f65df",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/SOURCE_PINNED.1.log",
+          "size": 1001,
+          "sha256": "0d14a88f28feb61d5f3c227d53d385fb54751b7edd5d39ba4cd97bbf85437b16",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 548,
+          "sha256": "20e75e78a486a1282a8ff92cbfaa7ff23578e058419c516d86867b5f75588b2c",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/test/state.json",
+          "size": 247,
+          "sha256": "530171ec6f42770372321efaabdc29e179ac7baacf09c82fcc9813a2eb4a379f",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/train/state.json",
+          "size": 247,
+          "sha256": "8d49f5b11e0624b3ed51acff175309d2c98b9d9b262dca48e6187acc0c654b5a",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/llama_fingerprint_mix/validation/state.json",
+          "size": 247,
+          "sha256": "8d49f5b11e0624b3ed51acff175309d2c98b9d9b262dca48e6187acc0c654b5a",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.model",
+          "size": 499723,
+          "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 964,
+          "sha256": "795904d5aa127c8d258cd9e77c5a042a1168e0823707f5e64eb3c4525b314f09",
+          "lfs": null
+        },
+        {
+          "path": "train_results.json",
+          "size": 229,
+          "sha256": "b5ea8e56688644dbad0a819ca893a836e1bb157ee3014402a43dc78ba1bb70ce",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/trained.json",
+          "size": 8687,
+          "sha256": "ab0c9846487b920c60b50073c807fae6c30bd1413ee657f4c3c96e59d7a03de3",
+          "lfs": null
+        },
+        {
+          "path": "trainer_state.json",
+          "size": 6430,
+          "sha256": "db0785804491b32e6968b93c7204c5467b22929e31ad7ca04c7aff773a27f34b",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/TRAINING.1.json",
+          "size": 3151,
+          "sha256": "7ee4e910028519f4e28c107898f3cf586b0ae45f633c5015cab50eb6aae117b4",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/TRAINING.1.log",
+          "size": 16059,
+          "sha256": "dfe979a24a0cd66839ae2588e33f415963f732793fff11a56d95f63e3e7036b1",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/TRAINING.2.json",
+          "size": 9798,
+          "sha256": "3f54541e4d382f9a369274bb26853eeec3f922dd6042ef309abd0562d87b3ecf",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/TRAINING.2.log",
+          "size": 24336,
+          "sha256": "1692b3c3a5f74a813755307e0c9db778fe5f4055570c7bccfee4ed1978242983",
+          "lfs": null
+        },
+        {
+          "path": "training_args.bin",
+          "size": 5969,
+          "sha256": "29d7de9e568698dd32eca863eb59cbb23bb1e61a4b935a82c1f5c6923c00954e",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/receipts/UTILITY.1.json",
+          "size": 1182,
+          "sha256": "7b19d67247ecf54614d5d898fbbb513f5b8ec6d0581f59d70c32948c5b3dc6aa",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/UTILITY.1.log",
+          "size": 118142,
+          "sha256": "9401f3aebbace40766df85bd84ca130d3117449b3b8afb660cfe807eac1323e5",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/utility_base.json",
+          "size": 4304197,
+          "sha256": "5f89e14785bae356c889ba2e28032bb1da9391d4f27cfc9757b42e026eb7f291",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_PROVENANCE/RUN_EVIDENCE/utility_watermarked.json",
+          "size": 4304130,
+          "sha256": "4a5f1cacf4b374cad3dd2777436105e78946612c53a1906943acc968ca8dc4bf",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_ARCHIVE_MANIFEST.json",
+          "size": 10321,
+          "sha256": "881b00c0eb844e68ea7eacffdfce1459bee22b8ce043e4d6ec55ce8c2d99490d",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-CTCC-Bb2-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 1988,
+          "sha256": "25565c5e7f130216503db6a83beba743718fa81ae0846ceb5c0e0c6862774d60",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "867e640c81da6a9a412bdb6f3abbd1f843578dd838a4bb9ae67ebfb43413a9bd",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "340f8217609da605d8eb977c8b0c3970d31d943a292e563ada59aa2c54506d02",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 202,
+          "sha256": "86a68b8aab9ab96f917e7fa6cb99ec193aa56b04b43f89284b1d655602ec7a09",
+          "lfs": null
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 839,
+          "sha256": "91f7a270bd007994bdfb424b63da6f059f61d537e0596281b11aa598776ba91b",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "fb71f11a8d971996ff73f8123b726134ff0465c8f847e2f07a30f8e20030f290",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1466,
+          "sha256": "d7ad737a7245d08854e284a6a16f409d83619766588377c40c6476009c002b5b",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-SCW-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 1983,
+          "sha256": "f4b40914343f7937c669899c2b5c2e87786f31c866a0bac8c57d20f71e82839b",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "7dc05dea4c0a6e13c01a53a24da4c99653cefecb1a53b79b7ea076d58d089e29",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "ee45c8e4148996250ff8f5f6ee384881131679eae7ba8c132aba6d4ec622039a",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 201,
+          "sha256": "f40287243133f4ef7d4a14cf63af819e6fe5bb7eb5ef7d232dd74b630b299c4a",
+          "lfs": null
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 781,
+          "sha256": "f0666a559ee7fd9caeec61289da203afec7106cfaf24238b42dd11517d430063",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "9eef2e3e265f892bc711c6d30abcb59ac7ce06cbfe2aa1b6c9c2379312c24450",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1462,
+          "sha256": "784922d1d023aa98b60e5fd0c5dcecafc5bef2c1f31bc13b7b8b6b25c7f6543a",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-PNFP-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 1986,
+          "sha256": "4bb055b157b08542035a262309feecad956327159660dd6cac362c3a480298e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "136a7cf59a56d5acf68d49e2929886ae2c6a364eb8fa49660b36d5acf686f5bc",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "9e8f94011ab9d5aae82c35099573b3076dcf246a3b50a84f92fe63307ffae49c",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 202,
+          "sha256": "8cd5bde0483b8df7a17368b5d292bd3296477bd7b2cb2108c9a36250f0d0bd94",
+          "lfs": null
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 783,
+          "sha256": "4ffa73cf4e5edc28de64d5e0cfeb5469cc089d5f0c37b49da652954ac6164936",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "9a9ed61439d6e43f4804e63bfa604d0f8042e19f103efa5f670aaaca3043436e",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1464,
+          "sha256": "9b8d002f37668f00bc42475a8616385626c9a93ac0559da2ce2904cd241408d3",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-iSeal-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 1989,
+          "sha256": "2f7ed59b3b6d053ef32644545b8de54a701d06fa37555215d30f7aca4adec566",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "7358f863a97186f3815e262a3a691453faea1d0895687f30355f8dbefcd0126b",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "08926fc3d4efabb47db837dd604f3ba00bf9b7c15d19a6ecfa97b96e349ca31a",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 203,
+          "sha256": "802b20042833630e755ac70814c1bd1f3d6d8cdf92372d4ec41924d80db1ed1a",
+          "lfs": null
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 786,
+          "sha256": "0ba2d9f9b265026f940cfa5710eb7ce072db22819ed495d2051350efd7295119",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1294,
+          "sha256": "99fcef07ea86f344b1e13efd9da89474ff0853c3a35dd4bf16c6e9e67e535aa5",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1466,
+          "sha256": "6292b7dc9b2fdfa94db391a2190c2eb519a761f1b2f77ca89018b7b517d6ec77",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-EverTracer-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 967,
+          "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 2632,
+          "sha256": "37c8e012cf80a03f77962814b0e0d6547d25125799385c7dff6d14f55c409911",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "545cd3354f9c447a7e01f0a5c5e1ea32f3fafe0038cb8b6c88274b563dfe18ca",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "8114659537d0460cd0122c1b5c4858cad9093fe515fd39403dd3670aefeba739",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+          "lfs": null
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "lfs": null
+        },
+        {
+          "path": "PROVENANCE.json",
+          "size": 3164,
+          "sha256": "a56ed5f27a5feb65f74ceebd96b37bafa7657326235cc238b5791b8589660beb",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 736,
+          "sha256": "3bd2bafa110d91b727f2f95667ee4c8f998570bd48eb9055e9d25c0439f52dda",
+          "lfs": null
+        },
+        {
+          "path": "RELOAD_VALIDATION.json",
+          "size": 937,
+          "sha256": "3d73bc273a619774f9c065df12195dd318e87a6d1cda163dcf60314588faf5b9",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1462,
+          "sha256": "baff5534f73f1988742123d4e41bb695b662138411d29bbd74d810f5d8e1ac0e",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085756,
+          "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+          "lfs": null
+        },
+        {
+          "path": "TRAINING_CONFIG.json",
+          "size": 8254,
+          "sha256": "3c068ac6dda2214d2f9534948491d12deac623cc251014e4924eb74f8a7bc24f",
+          "lfs": null
+        },
+        {
+          "path": "TRAINING_EXIT.json",
+          "size": 1146,
+          "sha256": "e01a74db8941818525ff8b1a927c83df81746674e47438ea0868f3cf9f10ff72",
+          "lfs": null
+        },
+        {
+          "path": "WMKD_STUDENT_MANIFEST.json",
+          "size": 1443,
+          "sha256": "189526760c68bd66450564ed55cdc49f509a68908b6466fb236b8957c0916102",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Bb3-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 967,
+          "sha256": "e1a2ca9fddc38fa853a5c43fb1b696bc675aac53570c7a46e4ac0504772ed189",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "03b605f9139db96186c0b46a9cc3200014ca2d01b6f5722f5f56f24b0d159d53",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 2892,
+          "sha256": "9be95bcaedf637563396b68323095cb72ff7623af57d9cefa134ec0fad7dff0d",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "a5c63a9edcdeee7719e580383b36238afc5ada29e947fe1733aba082cef8f12e",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "bc6c2d460a2053fb02b43dc95d6c580779f17368b880051823ad5b08b8b60698",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20919,
+          "sha256": "0a57c30afc07c81610ae7fe013bea3b9d50365f9a8145ae98e8714220f3d7c7c",
+          "lfs": null
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 658,
+          "sha256": "08809afcef679deecdc4e5dc90a0db8d7c303920af67d5fd41d53d89a408d8e0",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1110,
+          "sha256": "a470419e00ca52758281e5f9a8305fa364c6dc4984f79cf4e6be911e513c3066",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9085756,
+          "sha256": "201c541102864d0da10f94eb0f11c4e437d093580e3124ca930847e0daaec4c8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 54557,
+          "sha256": "df757249013ee916c1318f170d2763cc2272d10d66c5d73a792ce34c2bd8cbb6",
+          "lfs": null
+        },
+        {
+          "path": "training_args.bin",
+          "size": 5777,
+          "sha256": "9583ff41a457ba5556d97ac95634ff3762a600aab3d52e5cc3c081b0e2880121",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-WMKD-Passive5-Shared-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 3309,
+          "sha256": "3eef7d7ad30f9b3b3eeebbe3d890e35546a2d43fb9ae43a653fba75ee149c4f3",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "7ca6e1c4fa5a9a4a90e0b44bbef19898def72a11f1f0a35e64531825579055f0",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "dd0ce525cf412c4de462288e39f3747ac0d3308dfd31627ba77ddca5ab599644",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "NOTICE",
+          "size": 116,
+          "sha256": "3bc2d1a6b360a03d172058198631b931c9aadf01650892fb0d25b93c6b8f0025",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 655,
+          "sha256": "f3984c9ac101d6b9a91fd4335e6a24c6aedd34095f732b95783d7635aaa924f8",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1196,
+          "sha256": "aaa10693d624843db848209352861ce6c6e7e8df98bb88d74994baf3bd403f83",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "training_args.bin",
+          "size": 5969,
+          "sha256": "3d98f8352839c69046266f1f12aa5883300863cbb60a3ecfeb50c97411e90d24",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-EverTracer-Same-Lineage-Bc-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 62313,
+          "sha256": "a33c7b9529c5fcbc4f6f18393952697dcd580937b365a94d464d8c7620a2aa67",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "0dd9e4acf27b368355e10cae1ed1f03b5db0c9b149286bb2a030f77dd9ef8fdd",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "5f65ce9dc251d0d7c6dd5da157f5dc6e8ddb681a8655da486c3a452206784a86",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 227,
+          "sha256": "b3ee55b4523bf0bdd8b699d4504828399b4293c9711611a1d02daaaec6339dce",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1039,
+          "sha256": "97d3fcf5ed776182764622f364897d8cbf511cc36b4fd3965cfd4e20c6e359f5",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-PNFP-Same-Lineage-Bc-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE.txt",
+          "size": 7712,
+          "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 228086,
+          "sha256": "851cdbd60858a95045cacaf2eaa11387488c25fe155626b827e4ff726b26f043",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "f47a89052515c4c42839637e12475430b038dcd46516e9195f497713ae5ebe49",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "1b1d5a157aaf24d93b0e835ed6a72251a7c52e01417c181b8deeae32bada91ec",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 221,
+          "sha256": "26fd233a5ff22a253c984b0cfc0457a22de0e4073d84ce60f200c7ed692b2afa",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1039,
+          "sha256": "e30420c69473abc0562e14c0965d89e0df038003affd8958f7c87085b5528c52",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4167,
+          "sha256": "73c441ee33449473cf3f97b7fc8d5f7c585719c6f2207cac9b02c8b40dad627f",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "778edd2c4bfad655402e654d3b43d44612386af8bc32fb2e3293116cc513da6f",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "2c65be546c767432a5b9e96802784ce88081657b488dbdf572ecfacdcdccc75d",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 387,
+          "sha256": "6bd2395435f5af8709a3e02897e798b5bb679ac6a6d0af8e4c5ee6700caaea2a",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "cd7c9c3b7d6510b12a4b117eddff8709a0479ce729d24a28fe3e4ced4d3a25ff",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-iSeal-Cross-Lineage-Bb-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4198,
+          "sha256": "1d249eb57887042f3c3010e31d6c2b512d83992c0ca873118dd00076fa7c4958",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "4d7d6e3a40bc1403635bca86eb5e94d468855e3e6929b84339dc2a5931ed81da",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "32779a38639d1eb8ab0a3fb0f61ac03aa7ffb18deabbc7c7e33d2b2e452ac0c0",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 389,
+          "sha256": "260e8b5024a18c6bb59b740db3e935546bb120a74d2547cb60c48f9316775c7c",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "882fa722eee80a941a56d994f8a911a016b810b98a70c5a8eb99238bd69e4e92",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-SCW-Cross-Lineage-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4449,
+          "sha256": "3a6fc35b71134bd76e2aab6e563d1fb886b1dafbe62acb0afe205e8cc62ce9f4",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "0fc0d6e8d13d740e5edea5521c7dfb4608e3d25cd21550f33008130a735956e6",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "5452e291fc389443f08b28a741fe299aa2c481834c24c53f4107d93e956b6c41",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 469,
+          "sha256": "a3fd72ee5f281cea268e0112337596fad949f2f43469cf17fd8027d867065ec7",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "455828d36760064879f9d9bcca3ebdb733860afff7200407677ae6159e49ce16",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/Qwen2.5-3B-WMKD-Active-PNFP-Cross-Lineage-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2229,
+          "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+          "lfs": null
+        },
+        {
+          "path": "added_tokens.json",
+          "size": 605,
+          "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 1500,
+          "sha256": "1558a8d782769820484a70e701194fad39a5f6d312d9b73f79cbf1f26f8b9697",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "0cefbf28801496046504f2d1873563e533937135697a3423b787aec0575b20bf",
+          "lfs": null
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 4431,
+          "sha256": "614d04850e4f62de8f5e34368cc2b30687f8a95d0387ec32a66cff5fe57733e4",
+          "lfs": null
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4957560304,
+          "sha256": "d0a15e761cc04e1d096a4c79a81dee78ca3a8ea278418fa2d3a8c43c50343a6d",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1214366696,
+          "sha256": "428d8edd549be61a8e7b107131135fa1e5224e0fd7d8f8dd06fcd445d1f603d3",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35617,
+          "sha256": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 488,
+          "sha256": "1d9017884bd18cd353e34c6488070378094ce816e45e8912b0839df6d7585cea",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1273,
+          "sha256": "d7b026ce9bc01975cac7d5b110929781861c4b2ce1bd26546dbe4a32d67d56ad",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 499,
+          "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 11421995,
+          "sha256": "145191e3b102f64e84dab1926006ee71528c1ea536df048ef9ff6c48d01f95de",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 4686,
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "lfs": null
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-A-Teacher",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 873,
+          "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50",
+          "lfs": null
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "a30c9eb48ae98d12467c2bd9ef68264836b72f23e6b2048dd609522a898fa7aa",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "4399cdd4c42dc445dad6a373d43354d1c0a99e95ad66bd7815def952d3ec968a",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1567,
+          "sha256": "99d95005b644705c9e89433d5d834016b452a39e8bad54713553508013aa20be",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 805,
+          "sha256": "b4bada96c0a9eecedfbe2b0981b9efc057a47a0047e07ebf5e7c4d8e12b0d248",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 296,
+          "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50525,
+          "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2495,
+          "sha256": "805148309e62bccd0dd3fc05fcc71f5e09416c0594e4888fb635b95167fe750e",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD_Benchmark_evertracer_detector_dependencies",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2212,
+          "sha256": "0f59d8680e22059564eaab6a24fbf696889456f9d7dc328a683c8d53f4b1b094",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/config.json",
+          "size": 873,
+          "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50",
+          "lfs": null
+        },
+        {
+          "path": "frozen_neighborhoods.jsonl",
+          "size": 1360933,
+          "sha256": "7834e3d77704951ea06501c2166e960fef2b147ced3d751a8e55f07ec7b3672b",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "manifest.json",
+          "size": 2569,
+          "sha256": "6953329ec46b5d56d91a87f7153d631eb54196099af09ec47269d6cb225b9345",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "60c08bdfa3f00da00f2ba301e6d3605e3c4f124318119d4abf9c5f980015e6ca",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "edb9646ffc367b00f28f5ce2f6afb817e59b1f838ea476ab98e26c9ff8893ac2",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 222,
+          "sha256": "bcfffdfba2136cb0a3848608b91703e4c3210509ff68c784a879ec47f34da200",
+          "lfs": null
+        },
+        {
+          "path": "reference_merge_manifest.json",
+          "size": 2043,
+          "sha256": "bca1ea3d6f68c2ced8cb55d969e4710ef6b1f6921f5f9267c721ac06b5fa0aaf",
+          "lfs": null
+        },
+        {
+          "path": "SHA256SUMS",
+          "size": 1303,
+          "sha256": "b298ce131343e2e9486ab82223d2512b4f18018981a6f01b5e861a9cf20374b7",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/special_tokens_map.json",
+          "size": 296,
+          "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+          "lfs": null
+        },
+        {
+          "path": "reference_merged/tokenizer_config.json",
+          "size": 50525,
+          "sha256": "941290c40ad93f86d5b8d07bbc08dd59881da5ba683e533885b523c9ba184b94",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-SCW-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "1215059dfa4530a850f205c0ec82b96ea5e2b992e62240654dba576309d71ce4",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "f1feff447b5324c0f72586d6dc33307de1c87edcd70aa198f5bc5cece3812880",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1397,
+          "sha256": "8d76d4657f65ff6ce8411cb63f6962bf330c5d13d5793df1f340cd54806feb25",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-SCW-A2-Teacher",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 873,
+          "sha256": "e343a11c7cb6059387bb4f83c5019c2ef4160aaab94384cb582ce86f1b17df50",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "c3fcc784e06feaad7ef82ad43ec270f8cc20f23351c0054e7f99e3821e85189c",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "81f390ad9cc6f61a832ca87f0cf4efb455a425198c5ab9ad523e12dac9247e08",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1397,
+          "sha256": "e7222c65a4ae4a766c7e0160496d0b63c49b9577f5d273e7aa05883ea5c0b05f",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 296,
+          "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50551,
+          "sha256": "08c3286c8f1d3bb85c14a68fdfd113400ce2d915f40478d32b28d55a3c1bc2bc",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-iSeal-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "8bca638620d350e537cebe8b53130e5c31932134de07ec939bb5837caa604e03",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "070591b5e5a06e08965a84a01efe4f9e64d7e650b6e2a70453e13678affc4c0e",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 877,
+          "sha256": "23c8497e923117745f207f87c1b2bab907ba80a05d876bce9e0ff4710ca47135",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 965,
+          "sha256": "e6d41a7ac493cf1d1a570776310afbd7811e92bb490b5de6bf1be9ad74cc48af",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 3079,
+          "sha256": "33176fd47347b42b7bf65330febd977c2d9b47e3bd171623d5628c616db8966a",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "cd882c352586d862ec921530ba719cf82a2b64687a3f40aa17ad60925df5bca0",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00008.safetensors",
+          "size": 989344904,
+          "sha256": "6f751f3ba16cbfa69153e50b241b40fb208498b7864afd9923ddbf7eab0fdf7f",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00008.safetensors",
+          "size": 956355256,
+          "sha256": "3ccd5683db48c181fd01ac5578d78d1e1a899154a19f037ed9b828c62b4a5219",
+          "lfs": null
+        },
+        {
+          "path": "model-00003-of-00008.safetensors",
+          "size": 956367776,
+          "sha256": "528c1b9290c20ea5102330f8bfd6abe06a70a89179aeea17221d380fcdd8407f",
+          "lfs": null
+        },
+        {
+          "path": "model-00004-of-00008.safetensors",
+          "size": 956367816,
+          "sha256": "5cf4cf6d17de555b2d396100328c49d7c455374ee9a367ef733fe569963e1f77",
+          "lfs": null
+        },
+        {
+          "path": "model-00005-of-00008.safetensors",
+          "size": 987825088,
+          "sha256": "760d7789edbe51eb288b2038419327fda2f3405a7963ef43aa140e9e5bfe2324",
+          "lfs": null
+        },
+        {
+          "path": "model-00006-of-00008.safetensors",
+          "size": 994116432,
+          "sha256": "c4063274bb2290c4d93c53ea52ad9306b36ca23ced687784a4bb3141bfa7fbf2",
+          "lfs": null
+        },
+        {
+          "path": "model-00007-of-00008.safetensors",
+          "size": 585151504,
+          "sha256": "6e0f3a8b910f9563576a0ec0210d36f13bbfbd0ad4f62d950028ae8dcced017c",
+          "lfs": null
+        },
+        {
+          "path": "model-00008-of-00008.safetensors",
+          "size": 788004992,
+          "sha256": "c2f66b322db0bcb4f1942ac5426ea4791e508f8d57589243df11b050ae0322d3",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 21013,
+          "sha256": "313ae27e5e043d72fbc3753d92e5a80023024bc4404fe759880aafcc1189e20b",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 810,
+          "sha256": "d6217c02a9107105fe97eb263dfa5aa7a9595c76f08ced1c9861f3201e1c4abf",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 1475,
+          "sha256": "a829c254df3e3907e14ec34731f8e903c12878cf931c67d7e483bb8300d2116d",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210195,
+          "sha256": "fbe07b35a61be0ec850f12e9379be8ca47b4ef845b20f0d146a8a2bfdb0e7e3e",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 3974,
+          "sha256": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-CTCC-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "c18a0a6fe7f5967816a606e47cbf18921a936b1fdeca9be15fb05abe2453fe97",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "3890801cec48101dcdf5462d107c6c4ac81e9f415e3a237f72520a85e096cee1",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1036,
+          "sha256": "e6e8a9347db7d12b611af53b2f1e21fc4f59d8ede736f1709a9e206ff047b6c6",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 965,
+          "sha256": "264db884727f8caf035cde1dac14b0a3078ef3773d252e2f34a000cbda5a921c",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 3085,
+          "sha256": "969f41a186cd37a116d58a472c3e24cea1ee35acefbaa3c2dc0b183b8d1473bc",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-CTCC-A-Teacher",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "adapter_config.json",
+          "size": 980,
+          "sha256": "0bcb81b7e9cb7210e9eae7e30a2e14b1c596b1282a673422500ace1b1759fed9",
+          "lfs": null
+        },
+        {
+          "path": "adapter_model.safetensors",
+          "size": 48679352,
+          "sha256": "36957869183ee2581c7377ba973de0aef4d162c7caa3a2353684cf931ae429cd",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 767,
+          "sha256": "6be1b2d6c7e594bf918ef7a1a13fd5b4e20ddb5e28990a490856814fdb59e723",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 675,
+          "sha256": "920719140376653716528c81368f5d1c1e693060933d310c3f4e1e08d1c10e22",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17209920,
+          "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2448,
+          "sha256": "789fbb9c28300c1c199baac348ee62585005f6c57616aeab79e80e7e78865b1f",
+          "lfs": null
+        }
+      ]
+    },
+    {
+      "repo": "MakiseKurisuEasonHan/WMKD-EverTracer-Ba-Student",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2129,
+          "sha256": "f13a51f55827863060167338d1e88fd8a2ff2e9c576be4bd3a2596f42d55501b",
+          "lfs": null
+        },
+        {
+          "path": "chat_template.jinja",
+          "size": 3827,
+          "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+          "lfs": null
+        },
+        {
+          "path": "config.json",
+          "size": 874,
+          "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+          "lfs": null
+        },
+        {
+          "path": "configuration.json",
+          "size": 26,
+          "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+          "lfs": null
+        },
+        {
+          "path": "generation_config.json",
+          "size": 184,
+          "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+          "lfs": null
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 4965799096,
+          "sha256": "edf5b4e9f11d732a1e8cf978ab08b946496c5b3116e214c6ff00a5bdf6bf2793",
+          "lfs": null
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 1459729952,
+          "sha256": "66f6744d8f76a88fc883b14b7d0e6be7eed9f9a7abedfc6602abdfecdc256adf",
+          "lfs": null
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 20955,
+          "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+          "lfs": null
+        },
+        {
+          "path": "README.md",
+          "size": 1569,
+          "sha256": "be473f0bf6adf3c8d883900f8f4ecce270327d2a018c3be9b89b3980c7be946c",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/SHA256SUMS",
+          "size": 805,
+          "sha256": "94fb0e18e8ca638982b0d946906f30c3c011362affaa736b0350c9394bfd315e",
+          "lfs": null
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 325,
+          "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17210019,
+          "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+          "lfs": null
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 50554,
+          "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+          "lfs": null
+        },
+        {
+          "path": "wmkd_metadata/WMKD_ARTIFACT_MANIFEST.json",
+          "size": 2633,
+          "sha256": "b193dceb0a0b7754f54113b967d1e64a3b03f93956f53e115cbb286d8de5f703",
+          "lfs": null
+        }
+      ]
+    }
+  ],
+  "matches": [],
+  "checked_at": "2026-09-10T00:07:25.785059+00:00"
+}

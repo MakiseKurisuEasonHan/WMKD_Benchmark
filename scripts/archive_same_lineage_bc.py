@@ -19,7 +19,9 @@ def prepare(m,api):
     assert full['fresh_process_reload'] is True and train['steps']==7500 and train['teacher_frozen']
     assert cfg['base_revision']=='0cb88a4f764b7a12671c53f0838cd831a0843b95'
     assert transfer['status']=='PASS' and transfer['source_model']==train['final_model']
-    source=Path(transfer['destination']);assert source.resolve()==D/'tmp'/('bc_'+m+'_preferred_transfer_20260910')
+    staging=Path(os.environ.get('WMKD_BC_ARCHIVE_STAGING_ROOT',str(D/'tmp')))
+    assert staging in (D/'tmp',Path('/tmp/WMKD_Bc_archive_stage'))
+    source=Path(transfer['destination']);assert source.resolve()==staging/('bc_'+m+'_preferred_transfer_20260910')
     expected={f['name']:f for f in train['final_files']}
     for n,x in expected.items():
         f=source/n;assert f.is_file() and not f.is_symlink() and f.stat().st_size==x['bytes'] and engine.sha(f)==x['sha256']
@@ -38,7 +40,7 @@ def prepare(m,api):
     engine.put(engine.O/(m+'_uniqueness.json'),{'inventory':inventory,'matches':matches,'checked_at':engine.now()})
     assert not matches,'EXISTING_EQUIVALENT_ARCHIVE_REQUIRES_REUSE_REVIEW'
     assert not api.repo_exists(repo,'model'),'TARGET_EXISTS_REQUIRES_REVIEW'
-    dest=D/'tmp'/('same_lineage_bc_'+m+'_preferred_archive_20260910');assert not dest.exists();dest.mkdir()
+    dest=staging/('same_lineage_bc_'+m+'_preferred_archive_20260910');assert not dest.exists();dest.mkdir()
     allowed={n for n in expected if n.endswith('.safetensors') or n in ['config.json','generation_config.json','model.safetensors.index.json','tokenizer.json','tokenizer_config.json','special_tokens_map.json','chat_template.jinja','added_tokens.json']}
     for n in sorted(allowed):os.link(source/n,dest/n)
     (dest/'LICENSE.txt').write_bytes((D/'models/base/Llama-3.2-3B-Instruct/LICENSE.txt').read_bytes())

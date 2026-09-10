@@ -34,7 +34,9 @@ def main():
     full = json.loads((q / 'full_experiment_log.json').read_text())
     assert full['scientific_closure'] == 'COMPLETE'
     assert full['preferred_final_model'] is True
-    dest = D / 'tmp' / ('bc_' + method + '_preferred_transfer_20260910')
+    staging = Path(os.environ.get('WMKD_BC_ARCHIVE_STAGING_ROOT', str(D/'tmp')))
+    assert staging in (D/'tmp', Path('/tmp/WMKD_Bc_archive_stage'))
+    dest = staging / ('bc_' + method + '_preferred_transfer_20260910')
     dest.mkdir(parents=True, exist_ok=True)
     lock = (E / 'archive_transfer.lock').open('a')
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)

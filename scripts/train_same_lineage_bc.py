@@ -54,9 +54,23 @@ def main(method):
     assert int(gpu.split(',')[-2])<100 and int(gpu.split(',')[-1])<=5,'GPU_IDLE_GATE'
     output=D/'runs/same_lineage_bc'/cfg['run_id'];assert not output.exists(),'No implicit rerun or resume'
     set_seed(42);torch.cuda.reset_peak_memory_stats();started=now()
-    teacher=AutoModelForCausalLM.from_pretrained(pilot.TEACHER,local_files_only=True,torch_dtype=torch.bfloat16).cuda().eval();teacher.requires_grad_(False);teacher.config.use_cache=False
+    if cfg.get('teacher_loader') == 'canonical_base_plus_original_frozen_peft_adapter':
+        assert method == 'ctcc'
+        from peft import PeftModel
+        teacher_base=AutoModelForCausalLM.from_pretrained(pilot.BASE,local_files_only=True,torch_dtype=torch.bfloat16)
+        # Preserve the historical Teacher's unmerged PEFT forward computation.
+        teacher=PeftModel.from_pretrained(teacher_base,pilot.TEACHER,local_files_only=True)
+    else:
+        teacher=AutoModelForCausalLM.from_pretrained(pilot.TEACHER,local_files_only=True,torch_dtype=torch.bfloat16)
+    teacher=teacher.cuda().eval();teacher.requires_grad_(False);teacher.config.use_cache=False
     student=AutoModelForCausalLM.from_pretrained(pilot.BASE,local_files_only=True,torch_dtype=torch.bfloat16).cuda();student.config.use_cache=False;student.gradient_checkpointing_enable()
-    assert {n:tuple(p.shape) for n,p in teacher.named_parameters()}=={n:tuple(p.shape) for n,p in student.named_parameters()}
+    if cfg.get('teacher_loader') == 'canonical_base_plus_original_frozen_peft_adapter':
+        for key in ('model_type','vocab_size','hidden_size','num_hidden_layers','num_attention_heads'):
+            assert getattr(teacher.config,key)==getattr(student.config,key),key
+        assert teacher.get_output_embeddings().weight.shape==student.get_output_embeddings().weight.shape
+        assert not hasattr(student,'peft_config')
+    else:
+        assert {n:tuple(p.shape) for n,p in teacher.named_parameters()}=={n:tuple(p.shape) for n,p in student.named_parameters()}
     tb=pilot.weight_hash(teacher);sb=pilot.weight_hash(student)
     pilot.put(q/'initial_parameter_checksums.json',{'teacher':tb,'student':sb,'timestamp':now(),'fresh_base_revision':cfg['base_revision']})
     args=TrainingArguments(output_dir=str(output),num_train_epochs=3,learning_rate=1e-5,per_device_train_batch_size=8,gradient_accumulation_steps=1,bf16=True,fp16=False,save_strategy='epoch',save_total_limit=1,logging_steps=1,logging_nan_inf_filter=False,report_to=[],seed=42,data_seed=42,remove_unused_columns=False,gradient_checkpointing=True,optim=cfg['optimizer'],lr_scheduler_type=cfg['scheduler'],warmup_ratio=cfg['warmup_ratio'],weight_decay=cfg['weight_decay'],max_steps=-1)

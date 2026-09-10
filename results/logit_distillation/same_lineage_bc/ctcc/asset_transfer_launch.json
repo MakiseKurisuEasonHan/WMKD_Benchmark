@@ -1,0 +1,10 @@
+{
+  "status": "RUNNING_PENDING_SHA",
+  "local_exec_session": 12615,
+  "source": "6002",
+  "destination": "6000bb",
+  "scope": "original adapter Teacher and exact frozen Ba20k only",
+  "next": "Verify adapter_manifest seven files plus dataset SHA; preserve historical PeftModel.from_pretrained(base, adapter) WITHOUT merge for Teacher. Generic runner requires minimal Teacher loader adaptation before launch; Student remains full parameter fresh Base.",
+  "evertracer_git_commit": "406656b",
+  "remote_git_sync_pending": true
+}

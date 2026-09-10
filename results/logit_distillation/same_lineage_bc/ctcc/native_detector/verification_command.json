@@ -1,0 +1,13 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/ctcc_ba_evaluate.py",
+  "--config",
+  "/root/autodl-tmp/WMKD_Benchmark/configs/distillation/ctcc_ba_direct.yaml",
+  "--student",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/ctcc_bc_20260910/final_model",
+  "--training-run",
+  "ctcc_bc_20260910",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/ctcc/native_detector/detector_raw.json"
+]
