@@ -1,0 +1,4 @@
+{
+  "error": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/evaluate_same_lineage_bc.py\", line 60, in <module>\n    try:main(m)\n        ^^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/evaluate_same_lineage_bc.py\", line 51, in main\n    run('detector',[sys.executable,'-u','-B',str(P/'scripts/bc_passive_detector_worker.py'),str(model)],q/'detector_results.json')\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/evaluate_same_lineage_bc.py\", line 38, in run\n    save(exitfile,{'returncode':rc,'command':cmd,'completed_at':datetime.datetime.now(datetime.timezone.utc).isoformat()});assert rc==0 and result.exists(),stage\n                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: detector\n",
+  "status": "STOP_FOR_ENGINEERING_REVIEW"
+}

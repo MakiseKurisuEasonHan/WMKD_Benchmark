@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-10T04:35:48.877171+00:00",
-  "object_count": 67,
+  "generated_at": "2026-09-10T08:08:18.601865+00:00",
+  "object_count": 68,
   "objects": [
     {
       "method": "PN-FP",
@@ -1006,6 +1006,18 @@
       "watermark_evaluation_available": true,
       "utility_available": true,
       "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-SCW-Same-Lineage-Bc-Student"
+    },
+    {
+      "method": "Passive-5 Shared",
+      "role": "same_lineage_logit_distillation_student",
+      "experiment": "Bc",
+      "run_id": "passive_shared_bc_20260910",
+      "full_log_path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+      "full_log_sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+      "scientific_status": "COMPLETED_MEASURED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "modelscope_repo": null
     }
   ]
 }

@@ -1,0 +1,80 @@
+{
+  "status": "COMPLETE",
+  "run_id": "passive_shared_bc_20260910",
+  "steps": 7500,
+  "epochs": 3,
+  "teacher_frozen": true,
+  "student_updated": true,
+  "teacher_checksum_before": "42ce8b214dae220bcc05622a040433e51385d1784c747628b26966f10a63f837",
+  "teacher_checksum_after": "42ce8b214dae220bcc05622a040433e51385d1784c747628b26966f10a63f837",
+  "student_checksum_before": "42ce8b214dae220bcc05622a040433e51385d1784c747628b26966f10a63f837",
+  "student_checksum_after": "aa176117909098039f057c752a370d84e0705e861bd43f95b15224f7e90e77bd",
+  "started_at": "2026-09-10T05:48:57.764288+00:00",
+  "completed_at": "2026-09-10T06:29:18.964828+00:00",
+  "train_wall_seconds": 2370.8799605183303,
+  "save_seconds": 6.979479428380728,
+  "warmup_wall_seconds": 70.3095171302557,
+  "post_warmup_mean_sec_per_step": 0.3112787110811656,
+  "post_warmup_median_sec_per_step": 0.30520132929086685,
+  "all_step_mean_seconds": 0.31131495203276477,
+  "all_step_median_seconds": 0.3051236402243376,
+  "tokens_per_second": 2067.6869913308365,
+  "samples_per_second": 25.700440522300955,
+  "peak_allocated": 38602896896,
+  "peak_reserved": 59250835456,
+  "nan_inf_count": 0,
+  "oom_count": 0,
+  "final_model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/passive_shared_bc_20260910/final_model",
+  "final_files": [
+    {
+      "name": "chat_template.jinja",
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    {
+      "name": "config.json",
+      "bytes": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "2930f9e989ce07b552c6bac1528b00d03cf197009df1a649f3bef86c4753cb7f"
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "434a305c96e7c1083123fbb5c4dd8325b4367688524ced76969a742b8a3fc4a1"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    {
+      "name": "training_args.bin",
+      "bytes": 5905,
+      "sha256": "e6dccc90653143177a1900328f94545e112c0695f13848338dbfc48b90ae35b0"
+    }
+  ]
+}

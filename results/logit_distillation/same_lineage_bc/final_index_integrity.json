@@ -1,0 +1,356 @@
+{
+  "at": "2026-09-10T08:08:18.601865+00:00",
+  "count": 68,
+  "unique": 68,
+  "broken": 0,
+  "canonical_sha_mismatch": 0,
+  "worktree_exceptions": [
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/full_experiment_log.json",
+      "sha256": "259cb2629c9616670fd5f3520c73848962d0732bce495749453ba679f2216fc6",
+      "verified_source": "COMMITTED_CANONICAL_BLOB_UNRELATED_DIRTY_WORKTREE_PRESERVED"
+    }
+  ],
+  "checks": [
+    {
+      "path": "results/pnfp/preferred_teacher/full_experiment_log.json",
+      "sha256": "49b954c9955dea94eaf18bcfa60e16976bdbf581f2898bbcf52bc211b19037a9",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/pnfp/ba_student/full_experiment_log.json",
+      "sha256": "1ea9f5df709710995ab445de6453a8c4a2348c8e783a27c3dfc059dad24f68db",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/evertracer/preferred_teacher/full_experiment_log.json",
+      "sha256": "624ae1c83b69768cc435729822fd613b09ace806d55dc93024b73cd4af4502cc",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/evertracer/ba_student/full_experiment_log.json",
+      "sha256": "24975823b33b49c48d4ee38fb28b252ea9b93939c09beeb93baa539ac5c3de35",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/ctcc/preferred_teacher/full_experiment_log.json",
+      "sha256": "4746e81fa2651d7fc05e6d43d8a20ea81619d8a988ad58e3dfe781d5b8028a7c",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/ctcc/ba_student/full_experiment_log.json",
+      "sha256": "10043b1f2e79f841535f22c63d5cb51bc73d40c73a495b8f71e5b3815fd613d7",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/iseal/preferred_teacher/full_experiment_log.json",
+      "sha256": "6691fca531d7929c0fcb87c6cc7029425fc8bfe45b836dd5a1f5ce893a7c7303",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/iseal/ba_student/full_experiment_log.json",
+      "sha256": "d08aba4dfc4c6fd01324f420360add79c0e88e2c7d7a4b581fc3fea63652690d",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/scw/preferred_teacher/full_experiment_log.json",
+      "sha256": "dd9323496214aed407a730a2da6954188564a28dc52bea175c978f490b84c28d",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/scw/ba_student/full_experiment_log.json",
+      "sha256": "2aa526c0d1cdb4935dc65cdf4ad90ecae94eaf2d6d4b0c4da4646aa4242086f7",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/llmprint/experiment_a2/full_experiment_log.json",
+      "sha256": "d2d3c9ed30ba56f304afad054aeb5e5a944ad2f0fd3cc456c808f99bca4865fe",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/reef/experiment_a/full_experiment_log.json",
+      "sha256": "587d0f92c1094cb872d733259f1338f642f44750b8dfb1d8329a73984464ebb2",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/huref/experiment_a2/full_experiment_log.json",
+      "sha256": "2045e17873b02a7f26abffd32381a14ad5dbb0a2de74671fed87a7ba31113f88",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/awm/experiment_a/full_experiment_log.json",
+      "sha256": "14715bfe9c14c09d25f0ac1959d9b6330cbb0cd3c7207e274189b0514a85c9bc",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/zeroprint/experiment_a2/full_experiment_log.json",
+      "sha256": "021d284151260852af25a609179f1049ffb036c64ac8ccc6f92e9cb145fd2b62",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/llmprint/experiment_ba/full_experiment_log.json",
+      "sha256": "d234fa36af74d315c4efe2492bc54ba5eddc396bc235083e67d378becde11008",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/reef/experiment_ba/full_experiment_log.json",
+      "sha256": "5d651b3975d8e384a8e08cab32ae248eb4d1d3965875aa44cd2705922e519ca8",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/huref/experiment_ba/full_experiment_log.json",
+      "sha256": "77f00bb6a4556c09b6ad4c59d95857bf3ba2f7037af35e687a4eb25a1bffb2f2",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/awm/experiment_ba/full_experiment_log.json",
+      "sha256": "844c03e419c4022980e989679118f7efdc0fb8a0ebd0306b3978072e5b7ec4e0",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/zeroprint/experiment_ba/full_experiment_log.json",
+      "sha256": "37c92dea1f80251147738b6c4233c48e4eb45c61adc9e9557ba863c2b73577c0",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/passive5_shared_ba/full_experiment_log.json",
+      "sha256": "00890bf98021d2ebe44871d3b6ab511be7e1da5ed25a00ee5db172072e92e0df",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/llmprint/experiment_bb3/full_experiment_log.json",
+      "sha256": "b36cc98a333068523c70043d9a0cf1a212f58547b9b810e10c970dc6bb2e5687",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/reef/experiment_bb3/full_experiment_log.json",
+      "sha256": "b8bf2a523b2a5f209203bcc3099c0cdb7052ebc3922731716409ae918d14dca0",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/huref/experiment_bb3/full_experiment_log.json",
+      "sha256": "0f7dce963689faeaf6d037e8aa2e79a2f5b2a33435c89bca81dfaaed7893b8a6",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/awm/experiment_bb3/full_experiment_log.json",
+      "sha256": "7977d028a8e97fd84d89e83e987d8fef18ff094895c57b158096bb7edf7c1732",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/zeroprint/experiment_bb3/full_experiment_log.json",
+      "sha256": "ff0eaaeb057a727f2e4a3d880ced38416df1464067f58a1099f169170e0f6cce",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/evertracer/experiment_bb/full_experiment_log.json",
+      "sha256": "a2adc5639815d50e6b820bfacf989c9a6cd0f24992f2abbb91017f992cba3a62",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/ctcc/experiment_bb/full_experiment_log.json",
+      "sha256": "b4ffcc00688f4bde7989a93df77f1d084926ebb311ac98d7de8e60dd478b684a",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/iseal/experiment_bb/full_experiment_log.json",
+      "sha256": "cc300bd34ce57a464eb8d7395b2a5463fc878d99190f6a368cd7f1b485d15db6",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/pnfp/experiment_bb/full_experiment_log.json",
+      "sha256": "17fe43b0d6c9f7c9a65750798c9addc354f115d47b0a4ed2861dd4c26d03aae1",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/scw/experiment_bb/full_experiment_log.json",
+      "sha256": "5cd88c53942f741fff009bbec63fa3bbc830706e3231add5d87a9b1034592151",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/ctcc/experiment_bb2/full_experiment_log.json",
+      "sha256": "20f8bda8edfd14e2d73589edfe568def78c2ece444ef4f1d53e98235543a9904",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830/full_experiment_log.json",
+      "sha256": "fa831c5b01dc92e016d4d376eba0365a8907e25d56ff3480d2e0943ebfe63e9d",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830_cont1/full_experiment_log.json",
+      "sha256": "c4a645c01669e9014decd67c96389251afa0b31bfe86e83f1989b17bb708d926",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a/history/eaaw_a_20260905_111830_cont1_cont1/full_experiment_log.json",
+      "sha256": "b66ba8c1bdaa7bdc684e2adbb9fe5e37b24952e493577c18cf579152ac2b613e",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a/full_experiment_log.json",
+      "sha256": "9c348eff1e014b720d53f92d5ee8aabf15655d955553be7ae4bbae5f00d5cfd5",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/utf/experiment_a/full_experiment_log.json",
+      "sha256": "53577dfa3710b8ac3cef3b37ff87aab5ff5d8944f53c4ac53e25c9240965a387",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/double_i/experiment_a/full_experiment_log.json",
+      "sha256": "9cf42b91dcf491615c1d211921f01cf46a8a954f286f3665b0218206245a54db",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/instructional_fingerprinting/experiment_a/full_experiment_log.json",
+      "sha256": "0bf456490a9b1d25cea9f81ba182660eb11780c988398e8a10a47c464f8ac814",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/utf/experiment_a2/full_experiment_log.json",
+      "sha256": "d3e2cbb51ffdba205cea7ef4bf1db6f4d0a55fc066660a72cf49f8d867ee0a36",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/utf/experiment_a4/full_experiment_log.json",
+      "sha256": "dbb32bc03d2387e4084eeaf38a0ce7b5a5710ea92b579e3c0de32d3d294e5062",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/methods_11_15/eaaw/experiment_a2/full_experiment_log.json",
+      "sha256": "259cb2629c9616670fd5f3520c73848962d0732bce495749453ba679f2216fc6",
+      "verified_source": "COMMITTED_CANONICAL_BLOB_UNRELATED_DIRTY_WORKTREE_PRESERVED"
+    },
+    {
+      "path": "results/pnfp/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "sha256": "3eb8e17142bffe5e7b26b5e365635114a072971295fc0c9c550280f0247460e7",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/evertracer/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "sha256": "c26a2bd4bf0bbf3ea24a6cf386642dbd1bb3f112a142b050a257efb0ffb470b5",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/ctcc/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "sha256": "45b9f1c9ebdff034f5b8d4081b8e50d582bf5fd779184344aec483d4804bd76e",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/iseal/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "sha256": "53c2c9200abd7907bae193d052fd48c6bea14becc0af50664f2fc590de06ff1b",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/scw/experiment_ba_trajectory_followup/full_experiment_log.json",
+      "sha256": "cae139d1a7be483a575b38cf7a945c672b283c5e0fbda4dd6a70c03e94836f49",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/passive_cross_lineage/clean_qwen_baseline/full_experiment_log.json",
+      "sha256": "588a678275d7f8054ea4d2073f2a5fa5b77346e83cf6b339f2537831b0853841",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/passive_cross_lineage/ba/full_experiment_log.json",
+      "sha256": "b634d9c548f598c5e6e34e75a3c91f4eee991b0c18ad2338f4d857852b892072",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/passive_cross_lineage/bb/full_experiment_log.json",
+      "sha256": "ead92ce7e238f554e45a7b2d205ad11c4f453014d558c8fb57630a4c389479e9",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/pnfp/full_experiment_log.json",
+      "sha256": "9fc670ebed7ac325066aeca9172aa0e75c3c6fac8345a3510d48f7af2d114ddd",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/evertracer/full_experiment_log.json",
+      "sha256": "1533ff94ff4e16916697f3069d77e84e1f167e0f709046df99d731803b1474bc",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/ctcc/full_experiment_log.json",
+      "sha256": "a007869ea6f92602577e31d3206d0360e2766d701b28bd58c1e31e2bc5a42206",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/iseal/full_experiment_log.json",
+      "sha256": "8e6df7721fa3d28754e2d0058c7d23c83105bd45b5aa87288518a275e2d1e9f2",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_ba/scw/full_experiment_log.json",
+      "sha256": "1ca7719a112aecd00ed6b7594eb367048d8cccb59a606ccb52dc4c8f98590790",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/passive5_shared_bb3/full_experiment_log.json",
+      "sha256": "4e6f9a7bb4c0d2167be28e5d306d1d1113905471f29ef4c822ae34bc1625ed25",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/pnfp/full_experiment_log.json",
+      "sha256": "18b03e4623792bd3788a011f2c42cfcc18ab2def37a56e8535803f87d029fede",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/evertracer/full_experiment_log.json",
+      "sha256": "0c126d60fc7ed7c285e704eedfcea0e0f1fc7fae6857513ff1f1d8b175bedc10",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/ctcc/full_experiment_log.json",
+      "sha256": "374f262eadcb4eab3b97d8a8011708cae2d8146873286fe06080636d562bee8b",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/iseal/full_experiment_log.json",
+      "sha256": "2b3a81f73581a83c279ea686e0fc5fcfaf25097ebf64bac229e1917843a13bd5",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/active_cross_lineage_bb/scw/full_experiment_log.json",
+      "sha256": "2a312f24fe203faa3f5203599c7430e6454be02ac452d082eb7d41b4b9a9cf26",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/logit_distillation/pnfp_same_lineage_pilot/full_experiment_log.json",
+      "sha256": "c211b4050319107f451c2370aba2ac497042d54db33ee0c8d1fabba8205fce5c",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/full_experiment_log.json",
+      "sha256": "0b304a8dee7d8c15a9992fd35d0e852282728f41726588f98b211827742d9afb",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/full_experiment_log.json",
+      "sha256": "6ed5ab1f7eaf589612f78e1d7fe4e0ea53daa044ea796f4161943bd13ed82c7f",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/full_experiment_log.json",
+      "sha256": "25f7f4b49c0743e7e509916693764cae52324f3a78b8877299aa3abc484bfc27",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/full_experiment_log.json",
+      "sha256": "6ec5f5ad9825eb423a3e44f290ece7a2960a1484a71f819104920485d5fff54a",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/full_experiment_log.json",
+      "sha256": "2b22f581eb62f68e185fccecc2d8eaab6c6a5a0f17d65dcaa4e93b9e5ce3c511",
+      "verified_source": "WORKTREE"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+      "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8",
+      "verified_source": "WORKTREE"
+    }
+  ]
+}

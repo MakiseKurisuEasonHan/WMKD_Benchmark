@@ -1,0 +1,13 @@
+{
+  "method": "LLMPrint",
+  "experiment": "Bc",
+  "status": "COMPLETED",
+  "correct_bits": 172,
+  "valid_count": 200,
+  "score": 0.86,
+  "threshold": 0.7150049776126003,
+  "positive": true,
+  "positive_rule": "score >= threshold",
+  "calibration_reused": true,
+  "errors": []
+}

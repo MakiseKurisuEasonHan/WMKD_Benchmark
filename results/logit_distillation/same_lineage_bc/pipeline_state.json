@@ -1,8 +1,8 @@
 {
   "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
-  "status": "ACTIVE",
-  "current_method": "passive_shared",
-  "current_stage": "ASSET_PREPARATION",
+  "status": "FINAL_CLOSURE_IN_PROGRESS",
+  "current_method": null,
+  "current_stage": "EVIDENCE_GIT_SYNC",
   "serial_order": [
     "pnfp",
     "evertracer",
@@ -23,12 +23,14 @@
       "utility": "COMPLETE",
       "scientific_closure": "COMPLETE",
       "archive": "COMPLETE",
-      "verification": "FULL_INDEPENDENT_DOWNLOAD"
+      "verification": "FULL_INDEPENDENT_DOWNLOAD",
+      "stage": "COMPLETE",
+      "worker_pid": null
     },
     "evertracer": {
       "status": "COMPLETE",
       "stage": "COMPLETE",
-      "supervisor_pid": 11167,
+      "supervisor_pid": null,
       "run_id": "evertracer_bc_20260910",
       "training": "COMPLETE",
       "training_steps": 7500,
@@ -36,12 +38,18 @@
       "utility": "COMPLETE",
       "scientific_closure": "COMPLETE",
       "archive": "COMPLETE",
-      "archive_chain_pid": 9326
+      "archive_chain_pid": null,
+      "worker_pid": null,
+      "verification": "MANIFEST_PLUS_SEGMENT",
+      "historical_pids": {
+        "supervisor_pid": 11167,
+        "archive_chain_pid": 9326
+      }
     },
     "ctcc": {
       "status": "COMPLETE",
       "stage": "COMPLETE",
-      "supervisor_pid": 14987,
+      "supervisor_pid": null,
       "run_id": "ctcc_bc_20260910",
       "training": "COMPLETE",
       "worker_pid": null,
@@ -51,22 +59,27 @@
       "utility": "COMPLETE",
       "scientific_closure": "COMPLETE",
       "archive": "COMPLETE",
-      "archive_chain_pid": 11760,
-      "archive_worker_pid": 11826,
+      "archive_chain_pid": null,
+      "archive_worker_pid": null,
       "archive_transfer": "PASS",
-      "verification": "MANIFEST_PLUS_SEGMENT"
+      "verification": "MANIFEST_PLUS_SEGMENT",
+      "historical_pids": {
+        "supervisor_pid": 14987,
+        "archive_chain_pid": 11760,
+        "archive_worker_pid": 11826
+      }
     },
     "iseal": {
       "status": "COMPLETE",
       "stage": "COMPLETE",
       "asset_note": "Original Teacher weight shards absent on old source; restore exact archived Teacher, no substitution.",
-      "teacher_restore_pid": 12713,
+      "teacher_restore_pid": null,
       "teacher_restore_status": "PASS",
       "teacher_restore_mode": "old CPU authenticated stream to new GPU; exact historical SHA; no token transfer",
       "verified_teacher_files": 15,
       "current_restore_file": null,
       "restore_log_timestamp": "2026-09-10T10:42:42.503895+10:00",
-      "supervisor_pid": 19727,
+      "supervisor_pid": null,
       "run_id": "iseal_bc_20260910",
       "training": "COMPLETE",
       "worker_pid": null,
@@ -76,26 +89,47 @@
       "utility": "COMPLETE",
       "scientific_closure": "COMPLETE",
       "archive": "COMPLETE",
-      "archive_chain_pid": 15484
+      "archive_chain_pid": null,
+      "verification": "MANIFEST_PLUS_SEGMENT",
+      "historical_pids": {
+        "teacher_restore_pid": 12713,
+        "supervisor_pid": 19727,
+        "archive_chain_pid": 15484
+      }
     },
     "scw": {
       "status": "COMPLETE",
       "stage": "COMPLETE",
-      "teacher_restore_pid": 16342,
+      "teacher_restore_pid": null,
       "teacher_restore_status": "PASS",
-      "supervisor_pid": 25375,
+      "supervisor_pid": null,
       "run_id": "scw_bc_20260910",
       "training": "COMPLETE",
-      "worker_pid": 25376,
+      "worker_pid": null,
       "training_steps": 7500,
-      "archive_chain_pid": 19592,
+      "archive_chain_pid": null,
       "archive": "COMPLETE",
       "scientific_closure": "COMPLETE",
       "detector": "COMPLETE",
-      "utility": "COMPLETE"
+      "utility": "COMPLETE",
+      "verification": "MANIFEST_PLUS_SEGMENT",
+      "historical_pids": {
+        "teacher_restore_pid": 16342,
+        "supervisor_pid": 25375,
+        "archive_chain_pid": 19592
+      }
     },
     "passive_shared": {
-      "status": "NOT_STARTED"
+      "status": "COMPLETE",
+      "stage": "COMPLETE",
+      "training": "COMPLETE",
+      "training_steps": 7500,
+      "detector": "COMPLETE",
+      "utility": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "archive": "COMPLETE",
+      "worker_pid": null,
+      "verification": "MANIFEST_PLUS_SEGMENT"
     }
   },
   "gpu_host": "6000bb",
@@ -106,5 +140,5 @@
   "shutdown_gate": "6terminal+scientific/evidence/archive/Git closure+no workers+sync",
   "timeout_gate": "only genuinely new high-risk approval AND no authorized action/workers,30minutes",
   "no_repeated_pilot": true,
-  "state_sync_timestamp": "2026-09-10T05:04:20.795579+00:00"
+  "state_sync_timestamp": "2026-09-10T08:08:18.601865+00:00"
 }

@@ -1,0 +1,4429 @@
+{
+  "schema_version": "wmkd.llmprint-probability-sequence.v1",
+  "status": "COMPLETED",
+  "model_id": "WMKD/Passive5-Shared-Bc-Student",
+  "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "local_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/passive_shared_bc_20260910/final_model",
+  "fresh_process_pid": 37152,
+  "fresh_reload": true,
+  "trust_remote_code": false,
+  "dtype": "torch.float16",
+  "architecture": [
+    "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "vocab_size": 128256,
+  "config_sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+  "fingerprint_manifest_sha256": "27b31d7e37e276f1aecfc18d9c0999d719a306a52881e4f51f97791ec8444ca0",
+  "record_count": 200,
+  "model_load_seconds": 4.586221683770418,
+  "evaluation_seconds": 3.2631481289863586,
+  "torch_version": "2.8.0+cu128",
+  "cuda_version": "12.8",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "peak_vram_bytes": 6443446272,
+  "completed_at": "2026-09-10T06:29:38.467580+00:00",
+  "records": [
+    {
+      "fingerprint_index": 0,
+      "pair_id": "llmprint-pair-000",
+      "w_plus": "bike",
+      "w_minus": "rocket",
+      "w_plus_token_id": 56255,
+      "w_minus_token_id": 47890,
+      "w_plus_all_token_ids": [
+        56255
+      ],
+      "w_minus_all_token_ids": [
+        47890
+      ],
+      "w_plus_logit": 9.3125,
+      "w_minus_logit": 9.0234375,
+      "w_plus_probability": 0.02641311101615429,
+      "w_minus_probability": 0.019782504066824913,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.2890625
+    },
+    {
+      "fingerprint_index": 1,
+      "pair_id": "llmprint-pair-001",
+      "w_plus": "coffee",
+      "w_minus": "wine",
+      "w_plus_token_id": 79217,
+      "w_minus_token_id": 72537,
+      "w_plus_all_token_ids": [
+        79217
+      ],
+      "w_minus_all_token_ids": [
+        72537
+      ],
+      "w_plus_logit": 13.7265625,
+      "w_minus_logit": 13.96875,
+      "w_plus_probability": 0.2452843189239502,
+      "w_minus_probability": 0.31250035762786865,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.2421875
+    },
+    {
+      "fingerprint_index": 2,
+      "pair_id": "llmprint-pair-002",
+      "w_plus": "bus",
+      "w_minus": "truck",
+      "w_plus_token_id": 10551,
+      "w_minus_token_id": 99418,
+      "w_plus_all_token_ids": [
+        10551
+      ],
+      "w_minus_all_token_ids": [
+        99418
+      ],
+      "w_plus_logit": 11.3515625,
+      "w_minus_logit": 10.453125,
+      "w_plus_probability": 0.18676768243312836,
+      "w_minus_probability": 0.07605281472206116,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.8984375
+    },
+    {
+      "fingerprint_index": 3,
+      "pair_id": "llmprint-pair-003",
+      "w_plus": "dart",
+      "w_minus": "typescript",
+      "w_plus_token_id": 36694,
+      "w_minus_token_id": 50652,
+      "w_plus_all_token_ids": [
+        36694
+      ],
+      "w_minus_all_token_ids": [
+        50652
+      ],
+      "w_plus_logit": 11.3828125,
+      "w_minus_logit": 9.2578125,
+      "w_plus_probability": 0.26010268926620483,
+      "w_minus_probability": 0.0310648363083601,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.125
+    },
+    {
+      "fingerprint_index": 4,
+      "pair_id": "llmprint-pair-004",
+      "w_plus": "cyan",
+      "w_minus": "yellow",
+      "w_plus_token_id": 70846,
+      "w_minus_token_id": 28969,
+      "w_plus_all_token_ids": [
+        70846
+      ],
+      "w_minus_all_token_ids": [
+        28969
+      ],
+      "w_plus_logit": 12.3671875,
+      "w_minus_logit": 11.96875,
+      "w_plus_probability": 0.25113755464553833,
+      "w_minus_probability": 0.16860578954219818,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.3984375
+    },
+    {
+      "fingerprint_index": 5,
+      "pair_id": "llmprint-pair-005",
+      "w_plus": "crow",
+      "w_minus": "lion",
+      "w_plus_token_id": 52905,
+      "w_minus_token_id": 79251,
+      "w_plus_all_token_ids": [
+        52905
+      ],
+      "w_minus_all_token_ids": [
+        79251
+      ],
+      "w_plus_logit": 12.140625,
+      "w_minus_logit": 11.84375,
+      "w_plus_probability": 0.2267547994852066,
+      "w_minus_probability": 0.1685098558664322,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.296875
+    },
+    {
+      "fingerprint_index": 6,
+      "pair_id": "llmprint-pair-006",
+      "w_plus": "javascript",
+      "w_minus": "ruby",
+      "w_plus_token_id": 14402,
+      "w_minus_token_id": 47375,
+      "w_plus_all_token_ids": [
+        14402
+      ],
+      "w_minus_all_token_ids": [
+        47375
+      ],
+      "w_plus_logit": 12.75,
+      "w_minus_logit": 12.2265625,
+      "w_plus_probability": 0.39871716499328613,
+      "w_minus_probability": 0.23623211681842804,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.5234375
+    },
+    {
+      "fingerprint_index": 7,
+      "pair_id": "llmprint-pair-007",
+      "w_plus": "bed",
+      "w_minus": "bench",
+      "w_plus_token_id": 2788,
+      "w_minus_token_id": 28122,
+      "w_plus_all_token_ids": [
+        2788
+      ],
+      "w_minus_all_token_ids": [
+        28122
+      ],
+      "w_plus_logit": 8.6640625,
+      "w_minus_logit": 3.4609375,
+      "w_plus_probability": 0.09793660044670105,
+      "w_minus_probability": 0.0005385878612287343,
+      "paper_bit": 1,
+      "release_filtered_eligibility": false,
+      "release_bit": 1,
+      "margin": 5.203125
+    },
+    {
+      "fingerprint_index": 8,
+      "pair_id": "llmprint-pair-008",
+      "w_plus": "perl",
+      "w_minus": "php",
+      "w_plus_token_id": 66036,
+      "w_minus_token_id": 1230,
+      "w_plus_all_token_ids": [
+        66036
+      ],
+      "w_minus_all_token_ids": [
+        1230
+      ],
+      "w_plus_logit": 13.4375,
+      "w_minus_logit": 13.8828125,
+      "w_plus_probability": 0.26701897382736206,
+      "w_minus_probability": 0.4168107509613037,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.4453125
+    },
+    {
+      "fingerprint_index": 9,
+      "pair_id": "llmprint-pair-009",
+      "w_plus": "chin",
+      "w_minus": "eye",
+      "w_plus_token_id": 60171,
+      "w_minus_token_id": 19494,
+      "w_plus_all_token_ids": [
+        60171
+      ],
+      "w_minus_all_token_ids": [
+        19494
+      ],
+      "w_plus_logit": 12.1875,
+      "w_minus_logit": 9.46875,
+      "w_plus_probability": 0.3980403244495392,
+      "w_minus_probability": 0.026253605261445045,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.71875
+    },
+    {
+      "fingerprint_index": 10,
+      "pair_id": "llmprint-pair-010",
+      "w_plus": "bus",
+      "w_minus": "train",
+      "w_plus_token_id": 10551,
+      "w_minus_token_id": 10613,
+      "w_plus_all_token_ids": [
+        10551
+      ],
+      "w_minus_all_token_ids": [
+        10613
+      ],
+      "w_plus_logit": 11.484375,
+      "w_minus_logit": 11.1796875,
+      "w_plus_probability": 0.31394439935684204,
+      "w_minus_probability": 0.23148809373378754,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.3046875
+    },
+    {
+      "fingerprint_index": 11,
+      "pair_id": "llmprint-pair-011",
+      "w_plus": "ship",
+      "w_minus": "truck",
+      "w_plus_token_id": 5383,
+      "w_minus_token_id": 99418,
+      "w_plus_all_token_ids": [
+        5383
+      ],
+      "w_minus_all_token_ids": [
+        99418
+      ],
+      "w_plus_logit": 10.8828125,
+      "w_minus_logit": 10.3671875,
+      "w_plus_probability": 0.37150803208351135,
+      "w_minus_probability": 0.22183756530284882,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.515625
+    },
+    {
+      "fingerprint_index": 12,
+      "pair_id": "llmprint-pair-012",
+      "w_plus": "bed",
+      "w_minus": "desk",
+      "w_plus_token_id": 2788,
+      "w_minus_token_id": 51169,
+      "w_plus_all_token_ids": [
+        2788
+      ],
+      "w_minus_all_token_ids": [
+        51169
+      ],
+      "w_plus_logit": 9.5625,
+      "w_minus_logit": 6.41796875,
+      "w_plus_probability": 0.043451640754938126,
+      "w_minus_probability": 0.0018722058739513159,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 3.14453125
+    },
+    {
+      "fingerprint_index": 13,
+      "pair_id": "llmprint-pair-013",
+      "w_plus": "label",
+      "w_minus": "marker",
+      "w_plus_token_id": 1530,
+      "w_minus_token_id": 28842,
+      "w_plus_all_token_ids": [
+        1530
+      ],
+      "w_minus_all_token_ids": [
+        28842
+      ],
+      "w_plus_logit": 9.609375,
+      "w_minus_logit": 9.8671875,
+      "w_plus_probability": 0.046045321971178055,
+      "w_minus_probability": 0.05958707258105278,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.2578125
+    },
+    {
+      "fingerprint_index": 14,
+      "pair_id": "llmprint-pair-014",
+      "w_plus": "camera",
+      "w_minus": "scanner",
+      "w_plus_token_id": 25954,
+      "w_minus_token_id": 69041,
+      "w_plus_all_token_ids": [
+        25954
+      ],
+      "w_minus_all_token_ids": [
+        69041
+      ],
+      "w_plus_logit": 11.640625,
+      "w_minus_logit": 9.296875,
+      "w_plus_probability": 0.2382146269083023,
+      "w_minus_probability": 0.02286076545715332,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.34375
+    },
+    {
+      "fingerprint_index": 15,
+      "pair_id": "llmprint-pair-015",
+      "w_plus": "date",
+      "w_minus": "fig",
+      "w_plus_token_id": 1045,
+      "w_minus_token_id": 915,
+      "w_plus_all_token_ids": [
+        1045
+      ],
+      "w_minus_all_token_ids": [
+        915
+      ],
+      "w_plus_logit": 10.1484375,
+      "w_minus_logit": 7.19140625,
+      "w_plus_probability": 0.17819584906101227,
+      "w_minus_probability": 0.009261369705200195,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.95703125
+    },
+    {
+      "fingerprint_index": 16,
+      "pair_id": "llmprint-pair-016",
+      "w_plus": "cyan",
+      "w_minus": "white",
+      "w_plus_token_id": 70846,
+      "w_minus_token_id": 5902,
+      "w_plus_all_token_ids": [
+        70846
+      ],
+      "w_minus_all_token_ids": [
+        5902
+      ],
+      "w_plus_logit": 11.359375,
+      "w_minus_logit": 9.109375,
+      "w_plus_probability": 0.3033290505409241,
+      "w_minus_probability": 0.03197064623236656,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.25
+    },
+    {
+      "fingerprint_index": 17,
+      "pair_id": "llmprint-pair-017",
+      "w_plus": "rocket",
+      "w_minus": "train",
+      "w_plus_token_id": 47890,
+      "w_minus_token_id": 10613,
+      "w_plus_all_token_ids": [
+        47890
+      ],
+      "w_minus_all_token_ids": [
+        10613
+      ],
+      "w_plus_logit": 2.255859375,
+      "w_minus_logit": 9.09375,
+      "w_plus_probability": 9.792025957722217e-05,
+      "w_minus_probability": 0.09131260961294174,
+      "paper_bit": 0,
+      "release_filtered_eligibility": false,
+      "release_bit": 0,
+      "margin": -6.837890625
+    },
+    {
+      "fingerprint_index": 18,
+      "pair_id": "llmprint-pair-018",
+      "w_plus": "iris",
+      "w_minus": "rose",
+      "w_plus_token_id": 43046,
+      "w_minus_token_id": 25888,
+      "w_plus_all_token_ids": [
+        43046
+      ],
+      "w_minus_all_token_ids": [
+        25888
+      ],
+      "w_plus_logit": 13.0625,
+      "w_minus_logit": 13.7734375,
+      "w_plus_probability": 0.21933427453041077,
+      "w_minus_probability": 0.4465424418449402,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.7109375
+    },
+    {
+      "fingerprint_index": 19,
+      "pair_id": "llmprint-pair-019",
+      "w_plus": "hat",
+      "w_minus": "visor",
+      "w_plus_token_id": 9379,
+      "w_minus_token_id": 39112,
+      "w_plus_all_token_ids": [
+        9379
+      ],
+      "w_minus_all_token_ids": [
+        39112
+      ],
+      "w_plus_logit": 10.453125,
+      "w_minus_logit": 8.2890625,
+      "w_plus_probability": 0.13208667933940887,
+      "w_minus_probability": 0.015171153470873833,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.1640625
+    },
+    {
+      "fingerprint_index": 20,
+      "pair_id": "llmprint-pair-020",
+      "w_plus": "keyboard",
+      "w_minus": "router",
+      "w_plus_token_id": 42813,
+      "w_minus_token_id": 10140,
+      "w_plus_all_token_ids": [
+        42813
+      ],
+      "w_minus_all_token_ids": [
+        10140
+      ],
+      "w_plus_logit": 10.9453125,
+      "w_minus_logit": 9.796875,
+      "w_plus_probability": 0.3048367202281952,
+      "w_minus_probability": 0.09667345136404037,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.1484375
+    },
+    {
+      "fingerprint_index": 21,
+      "pair_id": "llmprint-pair-021",
+      "w_plus": "pink",
+      "w_minus": "purple",
+      "w_plus_token_id": 64349,
+      "w_minus_token_id": 57607,
+      "w_plus_all_token_ids": [
+        64349
+      ],
+      "w_minus_all_token_ids": [
+        57607
+      ],
+      "w_plus_logit": 12.203125,
+      "w_minus_logit": 12.7578125,
+      "w_plus_probability": 0.2186952531337738,
+      "w_minus_probability": 0.3808352053165436,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.5546875
+    },
+    {
+      "fingerprint_index": 22,
+      "pair_id": "llmprint-pair-022",
+      "w_plus": "coat",
+      "w_minus": "short",
+      "w_plus_token_id": 68512,
+      "w_minus_token_id": 8846,
+      "w_plus_all_token_ids": [
+        68512
+      ],
+      "w_minus_all_token_ids": [
+        8846
+      ],
+      "w_plus_logit": 12.5859375,
+      "w_minus_logit": 11.7421875,
+      "w_plus_probability": 0.3099658787250519,
+      "w_minus_probability": 0.13331466913223267,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.84375
+    },
+    {
+      "fingerprint_index": 23,
+      "pair_id": "llmprint-pair-023",
+      "w_plus": "pants",
+      "w_minus": "shirt",
+      "w_plus_token_id": 93037,
+      "w_minus_token_id": 49472,
+      "w_plus_all_token_ids": [
+        93037
+      ],
+      "w_minus_all_token_ids": [
+        49472
+      ],
+      "w_plus_logit": 12.640625,
+      "w_minus_logit": 13.046875,
+      "w_plus_probability": 0.18804433941841125,
+      "w_minus_probability": 0.28228795528411865,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.40625
+    },
+    {
+      "fingerprint_index": 24,
+      "pair_id": "llmprint-pair-024",
+      "w_plus": "shelf",
+      "w_minus": "table",
+      "w_plus_token_id": 55050,
+      "w_minus_token_id": 2048,
+      "w_plus_all_token_ids": [
+        55050
+      ],
+      "w_minus_all_token_ids": [
+        2048
+      ],
+      "w_plus_logit": 13.296875,
+      "w_minus_logit": 13.3125,
+      "w_plus_probability": 0.274871289730072,
+      "w_minus_probability": 0.27919986844062805,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.015625
+    },
+    {
+      "fingerprint_index": 25,
+      "pair_id": "llmprint-pair-025",
+      "w_plus": "cola",
+      "w_minus": "water",
+      "w_plus_token_id": 56552,
+      "w_minus_token_id": 13284,
+      "w_plus_all_token_ids": [
+        56552
+      ],
+      "w_minus_all_token_ids": [
+        13284
+      ],
+      "w_plus_logit": 11.28125,
+      "w_minus_logit": 7.234375,
+      "w_plus_probability": 0.31423497200012207,
+      "w_minus_probability": 0.005491854622960091,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 4.046875
+    },
+    {
+      "fingerprint_index": 26,
+      "pair_id": "llmprint-pair-026",
+      "w_plus": "apple",
+      "w_minus": "date",
+      "w_plus_token_id": 23182,
+      "w_minus_token_id": 1045,
+      "w_plus_all_token_ids": [
+        23182
+      ],
+      "w_minus_all_token_ids": [
+        1045
+      ],
+      "w_plus_logit": 13.4296875,
+      "w_minus_logit": 13.0234375,
+      "w_plus_probability": 0.3784502148628235,
+      "w_minus_probability": 0.25210222601890564,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.40625
+    },
+    {
+      "fingerprint_index": 27,
+      "pair_id": "llmprint-pair-027",
+      "w_plus": "horn",
+      "w_minus": "organ",
+      "w_plus_token_id": 51984,
+      "w_minus_token_id": 8629,
+      "w_plus_all_token_ids": [
+        51984
+      ],
+      "w_minus_all_token_ids": [
+        8629
+      ],
+      "w_plus_logit": 11.359375,
+      "w_minus_logit": 9.96875,
+      "w_plus_probability": 0.3317951261997223,
+      "w_minus_probability": 0.08259034901857376,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.390625
+    },
+    {
+      "fingerprint_index": 28,
+      "pair_id": "llmprint-pair-028",
+      "w_plus": "cyan",
+      "w_minus": "pink",
+      "w_plus_token_id": 70846,
+      "w_minus_token_id": 64349,
+      "w_plus_all_token_ids": [
+        70846
+      ],
+      "w_minus_all_token_ids": [
+        64349
+      ],
+      "w_plus_logit": 7.640625,
+      "w_minus_logit": 5.21484375,
+      "w_plus_probability": 0.013720721937716007,
+      "w_minus_probability": 0.0012130355462431908,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.42578125
+    },
+    {
+      "fingerprint_index": 29,
+      "pair_id": "llmprint-pair-029",
+      "w_plus": "folk",
+      "w_minus": "rock",
+      "w_plus_token_id": 42031,
+      "w_minus_token_id": 21161,
+      "w_plus_all_token_ids": [
+        42031
+      ],
+      "w_minus_all_token_ids": [
+        21161
+      ],
+      "w_plus_logit": 12.765625,
+      "w_minus_logit": 13.3515625,
+      "w_plus_probability": 0.2490008920431137,
+      "w_minus_probability": 0.44737356901168823,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.5859375
+    },
+    {
+      "fingerprint_index": 30,
+      "pair_id": "llmprint-pair-030",
+      "w_plus": "bench",
+      "w_minus": "table",
+      "w_plus_token_id": 28122,
+      "w_minus_token_id": 2048,
+      "w_plus_all_token_ids": [
+        28122
+      ],
+      "w_minus_all_token_ids": [
+        2048
+      ],
+      "w_plus_logit": 13.1953125,
+      "w_minus_logit": 13.1796875,
+      "w_plus_probability": 0.2713574171066284,
+      "w_minus_probability": 0.2671504318714142,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.015625
+    },
+    {
+      "fingerprint_index": 31,
+      "pair_id": "llmprint-pair-031",
+      "w_plus": "python",
+      "w_minus": "scala",
+      "w_plus_token_id": 12958,
+      "w_minus_token_id": 27920,
+      "w_plus_all_token_ids": [
+        12958
+      ],
+      "w_minus_all_token_ids": [
+        27920
+      ],
+      "w_plus_logit": 11.765625,
+      "w_minus_logit": 9.8203125,
+      "w_plus_probability": 0.30021145939826965,
+      "w_minus_probability": 0.04291298985481262,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.9453125
+    },
+    {
+      "fingerprint_index": 32,
+      "pair_id": "llmprint-pair-032",
+      "w_plus": "cross",
+      "w_minus": "cube",
+      "w_plus_token_id": 29942,
+      "w_minus_token_id": 46511,
+      "w_plus_all_token_ids": [
+        29942
+      ],
+      "w_minus_all_token_ids": [
+        46511
+      ],
+      "w_plus_logit": 10.2265625,
+      "w_minus_logit": 9.4375,
+      "w_plus_probability": 0.22403578460216522,
+      "w_minus_probability": 0.10177284479141235,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.7890625
+    },
+    {
+      "fingerprint_index": 33,
+      "pair_id": "llmprint-pair-033",
+      "w_plus": "actor",
+      "w_minus": "writer",
+      "w_plus_token_id": 5739,
+      "w_minus_token_id": 18688,
+      "w_plus_all_token_ids": [
+        5739
+      ],
+      "w_minus_all_token_ids": [
+        18688
+      ],
+      "w_plus_logit": 14.2734375,
+      "w_minus_logit": 13.0859375,
+      "w_plus_probability": 0.385026216506958,
+      "w_minus_probability": 0.11742635816335678,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.1875
+    },
+    {
+      "fingerprint_index": 34,
+      "pair_id": "llmprint-pair-034",
+      "w_plus": "car",
+      "w_minus": "truck",
+      "w_plus_token_id": 7063,
+      "w_minus_token_id": 99418,
+      "w_plus_all_token_ids": [
+        7063
+      ],
+      "w_minus_all_token_ids": [
+        99418
+      ],
+      "w_plus_logit": 13.2890625,
+      "w_minus_logit": 12.6953125,
+      "w_plus_probability": 0.348239004611969,
+      "w_minus_probability": 0.19231583178043365,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.59375
+    },
+    {
+      "fingerprint_index": 35,
+      "pair_id": "llmprint-pair-035",
+      "w_plus": "go",
+      "w_minus": "scala",
+      "w_plus_token_id": 3427,
+      "w_minus_token_id": 27920,
+      "w_plus_all_token_ids": [
+        3427
+      ],
+      "w_minus_all_token_ids": [
+        27920
+      ],
+      "w_plus_logit": 10.625,
+      "w_minus_logit": 10.2578125,
+      "w_plus_probability": 0.23955394327640533,
+      "w_minus_probability": 0.16593417525291443,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.3671875
+    },
+    {
+      "fingerprint_index": 36,
+      "pair_id": "llmprint-pair-036",
+      "w_plus": "rap",
+      "w_minus": "rock",
+      "w_plus_token_id": 4714,
+      "w_minus_token_id": 21161,
+      "w_plus_all_token_ids": [
+        4714
+      ],
+      "w_minus_all_token_ids": [
+        21161
+      ],
+      "w_plus_logit": 12.25,
+      "w_minus_logit": 11.1484375,
+      "w_plus_probability": 0.34872710704803467,
+      "w_minus_probability": 0.11589992046356201,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.1015625
+    },
+    {
+      "fingerprint_index": 37,
+      "pair_id": "llmprint-pair-037",
+      "w_plus": "bed",
+      "w_minus": "shelf",
+      "w_plus_token_id": 2788,
+      "w_minus_token_id": 55050,
+      "w_plus_all_token_ids": [
+        2788
+      ],
+      "w_minus_all_token_ids": [
+        55050
+      ],
+      "w_plus_logit": 12.21875,
+      "w_minus_logit": 12.6484375,
+      "w_plus_probability": 0.21598750352859497,
+      "w_minus_probability": 0.331924706697464,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.4296875
+    },
+    {
+      "fingerprint_index": 38,
+      "pair_id": "llmprint-pair-038",
+      "w_plus": "rocket",
+      "w_minus": "truck",
+      "w_plus_token_id": 47890,
+      "w_minus_token_id": 99418,
+      "w_plus_all_token_ids": [
+        47890
+      ],
+      "w_minus_all_token_ids": [
+        99418
+      ],
+      "w_plus_logit": 10.7109375,
+      "w_minus_logit": 10.7421875,
+      "w_plus_probability": 0.21136736869812012,
+      "w_minus_probability": 0.2180768996477127,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.03125
+    },
+    {
+      "fingerprint_index": 39,
+      "pair_id": "llmprint-pair-039",
+      "w_plus": "java",
+      "w_minus": "ruby",
+      "w_plus_token_id": 10248,
+      "w_minus_token_id": 47375,
+      "w_plus_all_token_ids": [
+        10248
+      ],
+      "w_minus_all_token_ids": [
+        47375
+      ],
+      "w_plus_logit": 10.7109375,
+      "w_minus_logit": 10.140625,
+      "w_plus_probability": 0.1978478580713272,
+      "w_minus_probability": 0.11185303330421448,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.5703125
+    },
+    {
+      "fingerprint_index": 40,
+      "pair_id": "llmprint-pair-040",
+      "w_plus": "rat",
+      "w_minus": "wolf",
+      "w_plus_token_id": 18071,
+      "w_minus_token_id": 77330,
+      "w_plus_all_token_ids": [
+        18071
+      ],
+      "w_minus_all_token_ids": [
+        77330
+      ],
+      "w_plus_logit": 12.984375,
+      "w_minus_logit": 12.96875,
+      "w_plus_probability": 0.31124213337898254,
+      "w_minus_probability": 0.306416779756546,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.015625
+    },
+    {
+      "fingerprint_index": 41,
+      "pair_id": "llmprint-pair-041",
+      "w_plus": "bench",
+      "w_minus": "shelf",
+      "w_plus_token_id": 28122,
+      "w_minus_token_id": 55050,
+      "w_plus_all_token_ids": [
+        28122
+      ],
+      "w_minus_all_token_ids": [
+        55050
+      ],
+      "w_plus_logit": 10.6875,
+      "w_minus_logit": 11.0546875,
+      "w_plus_probability": 0.11540339142084122,
+      "w_minus_probability": 0.16660425066947937,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.3671875
+    },
+    {
+      "fingerprint_index": 42,
+      "pair_id": "llmprint-pair-042",
+      "w_plus": "plane",
+      "w_minus": "rocket",
+      "w_plus_token_id": 19563,
+      "w_minus_token_id": 47890,
+      "w_plus_all_token_ids": [
+        19563
+      ],
+      "w_minus_all_token_ids": [
+        47890
+      ],
+      "w_plus_logit": 13.1953125,
+      "w_minus_logit": 11.203125,
+      "w_plus_probability": 0.41646143794059753,
+      "w_minus_probability": 0.05680398270487785,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.9921875
+    },
+    {
+      "fingerprint_index": 43,
+      "pair_id": "llmprint-pair-043",
+      "w_plus": "chest",
+      "w_minus": "eye",
+      "w_plus_token_id": 27417,
+      "w_minus_token_id": 19494,
+      "w_plus_all_token_ids": [
+        27417
+      ],
+      "w_minus_all_token_ids": [
+        19494
+      ],
+      "w_plus_logit": 10.8125,
+      "w_minus_logit": 10.15625,
+      "w_plus_probability": 0.0674847811460495,
+      "w_minus_probability": 0.03501064330339432,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.65625
+    },
+    {
+      "fingerprint_index": 44,
+      "pair_id": "llmprint-pair-044",
+      "w_plus": "fox",
+      "w_minus": "mouse",
+      "w_plus_token_id": 15361,
+      "w_minus_token_id": 13540,
+      "w_plus_all_token_ids": [
+        15361
+      ],
+      "w_minus_all_token_ids": [
+        13540
+      ],
+      "w_plus_logit": 10.90625,
+      "w_minus_logit": 9.0234375,
+      "w_plus_probability": 0.16040554642677307,
+      "w_minus_probability": 0.024407554417848587,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.8828125
+    },
+    {
+      "fingerprint_index": 45,
+      "pair_id": "llmprint-pair-045",
+      "w_plus": "diamond",
+      "w_minus": "triangle",
+      "w_plus_token_id": 89676,
+      "w_minus_token_id": 56214,
+      "w_plus_all_token_ids": [
+        89676
+      ],
+      "w_minus_all_token_ids": [
+        56214
+      ],
+      "w_plus_logit": 9.6328125,
+      "w_minus_logit": 8.5,
+      "w_plus_probability": 0.146601602435112,
+      "w_minus_probability": 0.04722419008612633,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.1328125
+    },
+    {
+      "fingerprint_index": 46,
+      "pair_id": "llmprint-pair-046",
+      "w_plus": "beer",
+      "w_minus": "coffee",
+      "w_plus_token_id": 48895,
+      "w_minus_token_id": 79217,
+      "w_plus_all_token_ids": [
+        48895
+      ],
+      "w_minus_all_token_ids": [
+        79217
+      ],
+      "w_plus_logit": 13.34375,
+      "w_minus_logit": 11.921875,
+      "w_plus_probability": 0.5084981322288513,
+      "w_minus_probability": 0.12268088757991791,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.421875
+    },
+    {
+      "fingerprint_index": 47,
+      "pair_id": "llmprint-pair-047",
+      "w_plus": "blue",
+      "w_minus": "red",
+      "w_plus_token_id": 12481,
+      "w_minus_token_id": 1171,
+      "w_plus_all_token_ids": [
+        12481
+      ],
+      "w_minus_all_token_ids": [
+        1171
+      ],
+      "w_plus_logit": 12.6796875,
+      "w_minus_logit": 11.6328125,
+      "w_plus_probability": 0.38862675428390503,
+      "w_minus_probability": 0.1364208310842514,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.046875
+    },
+    {
+      "fingerprint_index": 48,
+      "pair_id": "llmprint-pair-048",
+      "w_plus": "chest",
+      "w_minus": "leg",
+      "w_plus_token_id": 27417,
+      "w_minus_token_id": 1978,
+      "w_plus_all_token_ids": [
+        27417
+      ],
+      "w_minus_all_token_ids": [
+        1978
+      ],
+      "w_plus_logit": 10.4765625,
+      "w_minus_logit": 11.0234375,
+      "w_plus_probability": 0.08543485403060913,
+      "w_minus_probability": 0.14761818945407867,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.546875
+    },
+    {
+      "fingerprint_index": 49,
+      "pair_id": "llmprint-pair-049",
+      "w_plus": "chef",
+      "w_minus": "guard",
+      "w_plus_token_id": 76179,
+      "w_minus_token_id": 27190,
+      "w_plus_all_token_ids": [
+        76179
+      ],
+      "w_minus_all_token_ids": [
+        27190
+      ],
+      "w_plus_logit": 11.1640625,
+      "w_minus_logit": 10.015625,
+      "w_plus_probability": 0.3042655885219574,
+      "w_minus_probability": 0.09649232029914856,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.1484375
+    },
+    {
+      "fingerprint_index": 50,
+      "pair_id": "llmprint-pair-050",
+      "w_plus": "javascript",
+      "w_minus": "rust",
+      "w_plus_token_id": 14402,
+      "w_minus_token_id": 36888,
+      "w_plus_all_token_ids": [
+        14402
+      ],
+      "w_minus_all_token_ids": [
+        36888
+      ],
+      "w_plus_logit": 9.90625,
+      "w_minus_logit": 8.5859375,
+      "w_plus_probability": 0.1841551810503006,
+      "w_minus_probability": 0.04917897656559944,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.3203125
+    },
+    {
+      "fingerprint_index": 51,
+      "pair_id": "llmprint-pair-051",
+      "w_plus": "keyboard",
+      "w_minus": "scanner",
+      "w_plus_token_id": 42813,
+      "w_minus_token_id": 69041,
+      "w_plus_all_token_ids": [
+        42813
+      ],
+      "w_minus_all_token_ids": [
+        69041
+      ],
+      "w_plus_logit": 10.609375,
+      "w_minus_logit": 8.1953125,
+      "w_plus_probability": 0.3109801113605499,
+      "w_minus_probability": 0.027817532420158386,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.4140625
+    },
+    {
+      "fingerprint_index": 52,
+      "pair_id": "llmprint-pair-052",
+      "w_plus": "pop",
+      "w_minus": "rock",
+      "w_plus_token_id": 8539,
+      "w_minus_token_id": 21161,
+      "w_plus_all_token_ids": [
+        8539
+      ],
+      "w_minus_all_token_ids": [
+        21161
+      ],
+      "w_plus_logit": 12.0625,
+      "w_minus_logit": 12.25,
+      "w_plus_probability": 0.2344084084033966,
+      "w_minus_probability": 0.28275051712989807,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.1875
+    },
+    {
+      "fingerprint_index": 53,
+      "pair_id": "llmprint-pair-053",
+      "w_plus": "aster",
+      "w_minus": "rose",
+      "w_plus_token_id": 2352,
+      "w_minus_token_id": 25888,
+      "w_plus_all_token_ids": [
+        2352
+      ],
+      "w_minus_all_token_ids": [
+        25888
+      ],
+      "w_plus_logit": 10.90625,
+      "w_minus_logit": 9.796875,
+      "w_plus_probability": 0.2862389385700226,
+      "w_minus_probability": 0.0943915843963623,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.109375
+    },
+    {
+      "fingerprint_index": 54,
+      "pair_id": "llmprint-pair-054",
+      "w_plus": "beer",
+      "w_minus": "cola",
+      "w_plus_token_id": 48895,
+      "w_minus_token_id": 56552,
+      "w_plus_all_token_ids": [
+        48895
+      ],
+      "w_minus_all_token_ids": [
+        56552
+      ],
+      "w_plus_logit": 10.234375,
+      "w_minus_logit": 10.4765625,
+      "w_plus_probability": 0.11879280209541321,
+      "w_minus_probability": 0.15134596824645996,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.2421875
+    },
+    {
+      "fingerprint_index": 55,
+      "pair_id": "llmprint-pair-055",
+      "w_plus": "lion",
+      "w_minus": "mouse",
+      "w_plus_token_id": 79251,
+      "w_minus_token_id": 13540,
+      "w_plus_all_token_ids": [
+        79251
+      ],
+      "w_minus_all_token_ids": [
+        13540
+      ],
+      "w_plus_logit": 12.59375,
+      "w_minus_logit": 13.03125,
+      "w_plus_probability": 0.16646023094654083,
+      "w_minus_probability": 0.25781863927841187,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.4375
+    },
+    {
+      "fingerprint_index": 56,
+      "pair_id": "llmprint-pair-056",
+      "w_plus": "coffee",
+      "w_minus": "tea",
+      "w_plus_token_id": 79217,
+      "w_minus_token_id": 82694,
+      "w_plus_all_token_ids": [
+        79217
+      ],
+      "w_minus_all_token_ids": [
+        82694
+      ],
+      "w_plus_logit": 13.25,
+      "w_minus_logit": 12.5078125,
+      "w_plus_probability": 0.37200504541397095,
+      "w_minus_probability": 0.17710095643997192,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.7421875
+    },
+    {
+      "fingerprint_index": 57,
+      "pair_id": "llmprint-pair-057",
+      "w_plus": "bull",
+      "w_minus": "rat",
+      "w_plus_token_id": 43104,
+      "w_minus_token_id": 18071,
+      "w_plus_all_token_ids": [
+        43104
+      ],
+      "w_minus_all_token_ids": [
+        18071
+      ],
+      "w_plus_logit": 6.32421875,
+      "w_minus_logit": 3.71484375,
+      "w_plus_probability": 0.005010837223380804,
+      "w_minus_probability": 0.00036869998439215124,
+      "paper_bit": 1,
+      "release_filtered_eligibility": false,
+      "release_bit": 1,
+      "margin": 2.609375
+    },
+    {
+      "fingerprint_index": 58,
+      "pair_id": "llmprint-pair-058",
+      "w_plus": "banana",
+      "w_minus": "date",
+      "w_plus_token_id": 88847,
+      "w_minus_token_id": 1045,
+      "w_plus_all_token_ids": [
+        88847
+      ],
+      "w_minus_all_token_ids": [
+        1045
+      ],
+      "w_plus_logit": 11.765625,
+      "w_minus_logit": 9.6328125,
+      "w_plus_probability": 0.405813992023468,
+      "w_minus_probability": 0.04809039086103439,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.1328125
+    },
+    {
+      "fingerprint_index": 59,
+      "pair_id": "llmprint-pair-059",
+      "w_plus": "banana",
+      "w_minus": "lime",
+      "w_plus_token_id": 88847,
+      "w_minus_token_id": 40043,
+      "w_plus_all_token_ids": [
+        88847
+      ],
+      "w_minus_all_token_ids": [
+        40043
+      ],
+      "w_plus_logit": 13.5625,
+      "w_minus_logit": 11.9921875,
+      "w_plus_probability": 0.44915395975112915,
+      "w_minus_probability": 0.09341512620449066,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.5703125
+    },
+    {
+      "fingerprint_index": 60,
+      "pair_id": "llmprint-pair-060",
+      "w_plus": "hip",
+      "w_minus": "lip",
+      "w_plus_token_id": 2200,
+      "w_minus_token_id": 34215,
+      "w_plus_all_token_ids": [
+        2200
+      ],
+      "w_minus_all_token_ids": [
+        34215
+      ],
+      "w_plus_logit": 12.53125,
+      "w_minus_logit": 11.40625,
+      "w_plus_probability": 0.40180838108062744,
+      "w_minus_probability": 0.13044807314872742,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.125
+    },
+    {
+      "fingerprint_index": 61,
+      "pair_id": "llmprint-pair-061",
+      "w_plus": "chef",
+      "w_minus": "driver",
+      "w_plus_token_id": 76179,
+      "w_minus_token_id": 12804,
+      "w_plus_all_token_ids": [
+        76179
+      ],
+      "w_minus_all_token_ids": [
+        12804
+      ],
+      "w_plus_logit": 8.578125,
+      "w_minus_logit": 5.55078125,
+      "w_plus_probability": 0.02626979909837246,
+      "w_minus_probability": 0.0012726179556921124,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 3.02734375
+    },
+    {
+      "fingerprint_index": 62,
+      "pair_id": "llmprint-pair-062",
+      "w_plus": "go",
+      "w_minus": "javascript",
+      "w_plus_token_id": 3427,
+      "w_minus_token_id": 14402,
+      "w_plus_all_token_ids": [
+        3427
+      ],
+      "w_minus_all_token_ids": [
+        14402
+      ],
+      "w_plus_logit": 12.578125,
+      "w_minus_logit": 10.1328125,
+      "w_plus_probability": 0.6852981448173523,
+      "w_minus_probability": 0.05941469222307205,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.4453125
+    },
+    {
+      "fingerprint_index": 63,
+      "pair_id": "llmprint-pair-063",
+      "w_plus": "ship",
+      "w_minus": "train",
+      "w_plus_token_id": 5383,
+      "w_minus_token_id": 10613,
+      "w_plus_all_token_ids": [
+        5383
+      ],
+      "w_minus_all_token_ids": [
+        10613
+      ],
+      "w_plus_logit": 12.4765625,
+      "w_minus_logit": 11.8203125,
+      "w_plus_probability": 0.34785354137420654,
+      "w_minus_probability": 0.18046404421329498,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.65625
+    },
+    {
+      "fingerprint_index": 64,
+      "pair_id": "llmprint-pair-064",
+      "w_plus": "python",
+      "w_minus": "ruby",
+      "w_plus_token_id": 12958,
+      "w_minus_token_id": 47375,
+      "w_plus_all_token_ids": [
+        12958
+      ],
+      "w_minus_all_token_ids": [
+        47375
+      ],
+      "w_plus_logit": 12.265625,
+      "w_minus_logit": 10.6328125,
+      "w_plus_probability": 0.4341582655906677,
+      "w_minus_probability": 0.0848255306482315,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.6328125
+    },
+    {
+      "fingerprint_index": 65,
+      "pair_id": "llmprint-pair-065",
+      "w_plus": "apple",
+      "w_minus": "banana",
+      "w_plus_token_id": 23182,
+      "w_minus_token_id": 88847,
+      "w_plus_all_token_ids": [
+        23182
+      ],
+      "w_minus_all_token_ids": [
+        88847
+      ],
+      "w_plus_logit": 12.2109375,
+      "w_minus_logit": 11.234375,
+      "w_plus_probability": 0.35042738914489746,
+      "w_minus_probability": 0.13197216391563416,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.9765625
+    },
+    {
+      "fingerprint_index": 66,
+      "pair_id": "llmprint-pair-066",
+      "w_plus": "edm",
+      "w_minus": "pop",
+      "w_plus_token_id": 90625,
+      "w_minus_token_id": 8539,
+      "w_plus_all_token_ids": [
+        90625
+      ],
+      "w_minus_all_token_ids": [
+        8539
+      ],
+      "w_plus_logit": 9.9140625,
+      "w_minus_logit": 9.5625,
+      "w_plus_probability": 0.26297906041145325,
+      "w_minus_probability": 0.18502888083457947,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.3515625
+    },
+    {
+      "fingerprint_index": 67,
+      "pair_id": "llmprint-pair-067",
+      "w_plus": "aster",
+      "w_minus": "iris",
+      "w_plus_token_id": 2352,
+      "w_minus_token_id": 43046,
+      "w_plus_all_token_ids": [
+        2352
+      ],
+      "w_minus_all_token_ids": [
+        43046
+      ],
+      "w_plus_logit": 9.9296875,
+      "w_minus_logit": 5.75,
+      "w_plus_probability": 0.03401996195316315,
+      "w_minus_probability": 0.0005206172936595976,
+      "paper_bit": 1,
+      "release_filtered_eligibility": false,
+      "release_bit": 1,
+      "margin": 4.1796875
+    },
+    {
+      "fingerprint_index": 68,
+      "pair_id": "llmprint-pair-068",
+      "w_plus": "dress",
+      "w_minus": "shirt",
+      "w_plus_token_id": 69334,
+      "w_minus_token_id": 49472,
+      "w_plus_all_token_ids": [
+        69334
+      ],
+      "w_minus_all_token_ids": [
+        49472
+      ],
+      "w_plus_logit": 8.8359375,
+      "w_minus_logit": 8.8125,
+      "w_plus_probability": 0.03877052292227745,
+      "w_minus_probability": 0.03787240386009216,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.0234375
+    },
+    {
+      "fingerprint_index": 69,
+      "pair_id": "llmprint-pair-069",
+      "w_plus": "beer",
+      "w_minus": "wine",
+      "w_plus_token_id": 48895,
+      "w_minus_token_id": 72537,
+      "w_plus_all_token_ids": [
+        48895
+      ],
+      "w_minus_all_token_ids": [
+        72537
+      ],
+      "w_plus_logit": 11.1953125,
+      "w_minus_logit": 11.4140625,
+      "w_plus_probability": 0.14524081349372864,
+      "w_minus_probability": 0.1807551085948944,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.21875
+    },
+    {
+      "fingerprint_index": 70,
+      "pair_id": "llmprint-pair-070",
+      "w_plus": "apple",
+      "w_minus": "pear",
+      "w_plus_token_id": 23182,
+      "w_minus_token_id": 8174,
+      "w_plus_all_token_ids": [
+        23182
+      ],
+      "w_minus_all_token_ids": [
+        8174
+      ],
+      "w_plus_logit": 11.9765625,
+      "w_minus_logit": 11.765625,
+      "w_plus_probability": 0.3167117238044739,
+      "w_minus_probability": 0.25648099184036255,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.2109375
+    },
+    {
+      "fingerprint_index": 71,
+      "pair_id": "llmprint-pair-071",
+      "w_plus": "silver",
+      "w_minus": "yellow",
+      "w_plus_token_id": 83014,
+      "w_minus_token_id": 28969,
+      "w_plus_all_token_ids": [
+        83014
+      ],
+      "w_minus_all_token_ids": [
+        28969
+      ],
+      "w_plus_logit": 12.046875,
+      "w_minus_logit": 9.7421875,
+      "w_plus_probability": 0.4351465404033661,
+      "w_minus_probability": 0.04342326521873474,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.3046875
+    },
+    {
+      "fingerprint_index": 72,
+      "pair_id": "llmprint-pair-072",
+      "w_plus": "coffee",
+      "w_minus": "rum",
+      "w_plus_token_id": 79217,
+      "w_minus_token_id": 10952,
+      "w_plus_all_token_ids": [
+        79217
+      ],
+      "w_minus_all_token_ids": [
+        10952
+      ],
+      "w_plus_logit": 12.9921875,
+      "w_minus_logit": 12.234375,
+      "w_plus_probability": 0.41104966402053833,
+      "w_minus_probability": 0.19265510141849518,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.7578125
+    },
+    {
+      "fingerprint_index": 73,
+      "pair_id": "llmprint-pair-073",
+      "w_plus": "country",
+      "w_minus": "folk",
+      "w_plus_token_id": 11389,
+      "w_minus_token_id": 42031,
+      "w_plus_all_token_ids": [
+        11389
+      ],
+      "w_minus_all_token_ids": [
+        42031
+      ],
+      "w_plus_logit": 10.6953125,
+      "w_minus_logit": 10.3046875,
+      "w_plus_probability": 0.06393985450267792,
+      "w_minus_probability": 0.04326386749744415,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.390625
+    },
+    {
+      "fingerprint_index": 74,
+      "pair_id": "llmprint-pair-074",
+      "w_plus": "country",
+      "w_minus": "rap",
+      "w_plus_token_id": 11389,
+      "w_minus_token_id": 4714,
+      "w_plus_all_token_ids": [
+        11389
+      ],
+      "w_minus_all_token_ids": [
+        4714
+      ],
+      "w_plus_logit": 13.03125,
+      "w_minus_logit": 12.9921875,
+      "w_plus_probability": 0.3602713942527771,
+      "w_minus_probability": 0.34646961092948914,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.0390625
+    },
+    {
+      "fingerprint_index": 75,
+      "pair_id": "llmprint-pair-075",
+      "w_plus": "chair",
+      "w_minus": "desk",
+      "w_plus_token_id": 35296,
+      "w_minus_token_id": 51169,
+      "w_plus_all_token_ids": [
+        35296
+      ],
+      "w_minus_all_token_ids": [
+        51169
+      ],
+      "w_plus_logit": 15.75,
+      "w_minus_logit": 15.3515625,
+      "w_plus_probability": 0.3833938539028168,
+      "w_minus_probability": 0.25739845633506775,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.3984375
+    },
+    {
+      "fingerprint_index": 76,
+      "pair_id": "llmprint-pair-076",
+      "w_plus": "rust",
+      "w_minus": "typescript",
+      "w_plus_token_id": 36888,
+      "w_minus_token_id": 50652,
+      "w_plus_all_token_ids": [
+        36888
+      ],
+      "w_minus_all_token_ids": [
+        50652
+      ],
+      "w_plus_logit": 8.328125,
+      "w_minus_logit": 7.2734375,
+      "w_plus_probability": 0.02548435516655445,
+      "w_minus_probability": 0.00887623243033886,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.0546875
+    },
+    {
+      "fingerprint_index": 77,
+      "pair_id": "llmprint-pair-077",
+      "w_plus": "chef",
+      "w_minus": "writer",
+      "w_plus_token_id": 76179,
+      "w_minus_token_id": 18688,
+      "w_plus_all_token_ids": [
+        76179
+      ],
+      "w_minus_all_token_ids": [
+        18688
+      ],
+      "w_plus_logit": 13.6171875,
+      "w_minus_logit": 12.7421875,
+      "w_plus_probability": 0.33202871680259705,
+      "w_minus_probability": 0.13841016590595245,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.875
+    },
+    {
+      "fingerprint_index": 78,
+      "pair_id": "llmprint-pair-078",
+      "w_plus": "card",
+      "w_minus": "folder",
+      "w_plus_token_id": 5057,
+      "w_minus_token_id": 18135,
+      "w_plus_all_token_ids": [
+        5057
+      ],
+      "w_minus_all_token_ids": [
+        18135
+      ],
+      "w_plus_logit": 13.0390625,
+      "w_minus_logit": 12.3515625,
+      "w_plus_probability": 0.3861916661262512,
+      "w_minus_probability": 0.19418935477733612,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.6875
+    },
+    {
+      "fingerprint_index": 79,
+      "pair_id": "llmprint-pair-079",
+      "w_plus": "apple",
+      "w_minus": "lime",
+      "w_plus_token_id": 23182,
+      "w_minus_token_id": 40043,
+      "w_plus_all_token_ids": [
+        23182
+      ],
+      "w_minus_all_token_ids": [
+        40043
+      ],
+      "w_plus_logit": 13.6015625,
+      "w_minus_logit": 11.4296875,
+      "w_plus_probability": 0.5033326745033264,
+      "w_minus_probability": 0.0573616698384285,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.171875
+    },
+    {
+      "fingerprint_index": 80,
+      "pair_id": "llmprint-pair-080",
+      "w_plus": "berry",
+      "w_minus": "orange",
+      "w_plus_token_id": 15717,
+      "w_minus_token_id": 35264,
+      "w_plus_all_token_ids": [
+        15717
+      ],
+      "w_minus_all_token_ids": [
+        35264
+      ],
+      "w_plus_logit": 12.1171875,
+      "w_minus_logit": 10.484375,
+      "w_plus_probability": 0.3979594111442566,
+      "w_minus_probability": 0.07775302976369858,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.6328125
+    },
+    {
+      "fingerprint_index": 81,
+      "pair_id": "llmprint-pair-081",
+      "w_plus": "banana",
+      "w_minus": "pear",
+      "w_plus_token_id": 88847,
+      "w_minus_token_id": 8174,
+      "w_plus_all_token_ids": [
+        88847
+      ],
+      "w_minus_all_token_ids": [
+        8174
+      ],
+      "w_plus_logit": 11.515625,
+      "w_minus_logit": 11.140625,
+      "w_plus_probability": 0.3383631408214569,
+      "w_minus_probability": 0.2325533628463745,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.375
+    },
+    {
+      "fingerprint_index": 82,
+      "pair_id": "llmprint-pair-082",
+      "w_plus": "bra",
+      "w_minus": "sock",
+      "w_plus_token_id": 14720,
+      "w_minus_token_id": 13501,
+      "w_plus_all_token_ids": [
+        14720
+      ],
+      "w_minus_all_token_ids": [
+        13501
+      ],
+      "w_plus_logit": 11.84375,
+      "w_minus_logit": 8.84375,
+      "w_plus_probability": 0.37652939558029175,
+      "w_minus_probability": 0.01874629408121109,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 3.0
+    },
+    {
+      "fingerprint_index": 83,
+      "pair_id": "llmprint-pair-083",
+      "w_plus": "purple",
+      "w_minus": "white",
+      "w_plus_token_id": 57607,
+      "w_minus_token_id": 5902,
+      "w_plus_all_token_ids": [
+        57607
+      ],
+      "w_minus_all_token_ids": [
+        5902
+      ],
+      "w_plus_logit": 10.09375,
+      "w_minus_logit": 11.2265625,
+      "w_plus_probability": 0.08271002024412155,
+      "w_minus_probability": 0.25676292181015015,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -1.1328125
+    },
+    {
+      "fingerprint_index": 84,
+      "pair_id": "llmprint-pair-084",
+      "w_plus": "beer",
+      "w_minus": "rum",
+      "w_plus_token_id": 48895,
+      "w_minus_token_id": 10952,
+      "w_plus_all_token_ids": [
+        48895
+      ],
+      "w_minus_all_token_ids": [
+        10952
+      ],
+      "w_plus_logit": 12.2421875,
+      "w_minus_logit": 10.4921875,
+      "w_plus_probability": 0.3277460038661957,
+      "w_minus_probability": 0.05695371329784393,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.75
+    },
+    {
+      "fingerprint_index": 85,
+      "pair_id": "llmprint-pair-085",
+      "w_plus": "tea",
+      "w_minus": "wine",
+      "w_plus_token_id": 82694,
+      "w_minus_token_id": 72537,
+      "w_plus_all_token_ids": [
+        82694
+      ],
+      "w_minus_all_token_ids": [
+        72537
+      ],
+      "w_plus_logit": 12.6796875,
+      "w_minus_logit": 12.1875,
+      "w_plus_probability": 0.38299623131752014,
+      "w_minus_probability": 0.2341209203004837,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.4921875
+    },
+    {
+      "fingerprint_index": 86,
+      "pair_id": "llmprint-pair-086",
+      "w_plus": "banana",
+      "w_minus": "melon",
+      "w_plus_token_id": 88847,
+      "w_minus_token_id": 72218,
+      "w_plus_all_token_ids": [
+        88847
+      ],
+      "w_minus_all_token_ids": [
+        72218
+      ],
+      "w_plus_logit": 11.34375,
+      "w_minus_logit": 9.53125,
+      "w_plus_probability": 0.24612654745578766,
+      "w_minus_probability": 0.0401790551841259,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.8125
+    },
+    {
+      "fingerprint_index": 87,
+      "pair_id": "llmprint-pair-087",
+      "w_plus": "folk",
+      "w_minus": "metal",
+      "w_plus_token_id": 42031,
+      "w_minus_token_id": 55108,
+      "w_plus_all_token_ids": [
+        42031
+      ],
+      "w_minus_all_token_ids": [
+        55108
+      ],
+      "w_plus_logit": 11.328125,
+      "w_minus_logit": 10.78125,
+      "w_plus_probability": 0.2782101035118103,
+      "w_minus_probability": 0.16101565957069397,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.546875
+    },
+    {
+      "fingerprint_index": 88,
+      "pair_id": "llmprint-pair-088",
+      "w_plus": "horse",
+      "w_minus": "mouse",
+      "w_plus_token_id": 60775,
+      "w_minus_token_id": 13540,
+      "w_plus_all_token_ids": [
+        60775
+      ],
+      "w_minus_all_token_ids": [
+        13540
+      ],
+      "w_plus_logit": 13.140625,
+      "w_minus_logit": 14.7265625,
+      "w_plus_probability": 0.091637521982193,
+      "w_minus_probability": 0.44754552841186523,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -1.5859375
+    },
+    {
+      "fingerprint_index": 89,
+      "pair_id": "llmprint-pair-089",
+      "w_plus": "bus",
+      "w_minus": "plane",
+      "w_plus_token_id": 10551,
+      "w_minus_token_id": 19563,
+      "w_plus_all_token_ids": [
+        10551
+      ],
+      "w_minus_all_token_ids": [
+        19563
+      ],
+      "w_plus_logit": 12.6171875,
+      "w_minus_logit": 12.1953125,
+      "w_plus_probability": 0.38273897767066956,
+      "w_minus_probability": 0.2510063648223877,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.421875
+    },
+    {
+      "fingerprint_index": 90,
+      "pair_id": "llmprint-pair-090",
+      "w_plus": "bench",
+      "w_minus": "chair",
+      "w_plus_token_id": 28122,
+      "w_minus_token_id": 35296,
+      "w_plus_all_token_ids": [
+        28122
+      ],
+      "w_minus_all_token_ids": [
+        35296
+      ],
+      "w_plus_logit": 13.2890625,
+      "w_minus_logit": 10.8671875,
+      "w_plus_probability": 0.6878290772438049,
+      "w_minus_probability": 0.061048299074172974,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.421875
+    },
+    {
+      "fingerprint_index": 91,
+      "pair_id": "llmprint-pair-091",
+      "w_plus": "cross",
+      "w_minus": "diamond",
+      "w_plus_token_id": 29942,
+      "w_minus_token_id": 89676,
+      "w_plus_all_token_ids": [
+        29942
+      ],
+      "w_minus_all_token_ids": [
+        89676
+      ],
+      "w_plus_logit": 12.1640625,
+      "w_minus_logit": 11.5546875,
+      "w_plus_probability": 0.273353636264801,
+      "w_minus_probability": 0.14861978590488434,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.609375
+    },
+    {
+      "fingerprint_index": 92,
+      "pair_id": "llmprint-pair-092",
+      "w_plus": "lion",
+      "w_minus": "pig",
+      "w_plus_token_id": 79251,
+      "w_minus_token_id": 90600,
+      "w_plus_all_token_ids": [
+        79251
+      ],
+      "w_minus_all_token_ids": [
+        90600
+      ],
+      "w_plus_logit": 11.7890625,
+      "w_minus_logit": 9.5078125,
+      "w_plus_probability": 0.13276900351047516,
+      "w_minus_probability": 0.013563207350671291,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.28125
+    },
+    {
+      "fingerprint_index": 93,
+      "pair_id": "llmprint-pair-093",
+      "w_plus": "chalk",
+      "w_minus": "pen",
+      "w_plus_token_id": 87488,
+      "w_minus_token_id": 2821,
+      "w_plus_all_token_ids": [
+        87488
+      ],
+      "w_minus_all_token_ids": [
+        2821
+      ],
+      "w_plus_logit": 8.625,
+      "w_minus_logit": 7.82421875,
+      "w_plus_probability": 0.07624853402376175,
+      "w_minus_probability": 0.03423392027616501,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.80078125
+    },
+    {
+      "fingerprint_index": 94,
+      "pair_id": "llmprint-pair-094",
+      "w_plus": "bed",
+      "w_minus": "table",
+      "w_plus_token_id": 2788,
+      "w_minus_token_id": 2048,
+      "w_plus_all_token_ids": [
+        2788
+      ],
+      "w_minus_all_token_ids": [
+        2048
+      ],
+      "w_plus_logit": 10.890625,
+      "w_minus_logit": 8.765625,
+      "w_plus_probability": 0.26695922017097473,
+      "w_minus_probability": 0.03188373148441315,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.125
+    },
+    {
+      "fingerprint_index": 95,
+      "pair_id": "llmprint-pair-095",
+      "w_plus": "ear",
+      "w_minus": "mouth",
+      "w_plus_token_id": 686,
+      "w_minus_token_id": 33780,
+      "w_plus_all_token_ids": [
+        686
+      ],
+      "w_minus_all_token_ids": [
+        33780
+      ],
+      "w_plus_logit": 14.796875,
+      "w_minus_logit": 14.5859375,
+      "w_plus_probability": 0.31453076004981995,
+      "w_minus_probability": 0.2547147572040558,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.2109375
+    },
+    {
+      "fingerprint_index": 96,
+      "pair_id": "llmprint-pair-096",
+      "w_plus": "monitor",
+      "w_minus": "scanner",
+      "w_plus_token_id": 33325,
+      "w_minus_token_id": 69041,
+      "w_plus_all_token_ids": [
+        33325
+      ],
+      "w_minus_all_token_ids": [
+        69041
+      ],
+      "w_plus_logit": 12.1640625,
+      "w_minus_logit": 9.609375,
+      "w_plus_probability": 0.5893374085426331,
+      "w_minus_probability": 0.04580124467611313,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.5546875
+    },
+    {
+      "fingerprint_index": 97,
+      "pair_id": "llmprint-pair-097",
+      "w_plus": "router",
+      "w_minus": "tablet",
+      "w_plus_token_id": 10140,
+      "w_minus_token_id": 99793,
+      "w_plus_all_token_ids": [
+        10140
+      ],
+      "w_minus_all_token_ids": [
+        99793
+      ],
+      "w_plus_logit": 11.6171875,
+      "w_minus_logit": 10.109375,
+      "w_plus_probability": 0.20971469581127167,
+      "w_minus_probability": 0.04642952233552933,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.5078125
+    },
+    {
+      "fingerprint_index": 98,
+      "pair_id": "llmprint-pair-098",
+      "w_plus": "desk",
+      "w_minus": "shelf",
+      "w_plus_token_id": 51169,
+      "w_minus_token_id": 55050,
+      "w_plus_all_token_ids": [
+        51169
+      ],
+      "w_minus_all_token_ids": [
+        55050
+      ],
+      "w_plus_logit": 12.9609375,
+      "w_minus_logit": 12.171875,
+      "w_plus_probability": 0.28722718358039856,
+      "w_minus_probability": 0.13047882914543152,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.7890625
+    },
+    {
+      "fingerprint_index": 99,
+      "pair_id": "llmprint-pair-099",
+      "w_plus": "dart",
+      "w_minus": "perl",
+      "w_plus_token_id": 36694,
+      "w_minus_token_id": 66036,
+      "w_plus_all_token_ids": [
+        36694
+      ],
+      "w_minus_all_token_ids": [
+        66036
+      ],
+      "w_plus_logit": 11.8515625,
+      "w_minus_logit": 10.375,
+      "w_plus_probability": 0.47721296548843384,
+      "w_minus_probability": 0.10900572687387466,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.4765625
+    },
+    {
+      "fingerprint_index": 100,
+      "pair_id": "llmprint-pair-100",
+      "w_plus": "cat",
+      "w_minus": "fox",
+      "w_plus_token_id": 4719,
+      "w_minus_token_id": 15361,
+      "w_plus_all_token_ids": [
+        4719
+      ],
+      "w_minus_all_token_ids": [
+        15361
+      ],
+      "w_plus_logit": 11.2421875,
+      "w_minus_logit": 11.1796875,
+      "w_plus_probability": 0.307861864566803,
+      "w_minus_probability": 0.2892094552516937,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.0625
+    },
+    {
+      "fingerprint_index": 101,
+      "pair_id": "llmprint-pair-101",
+      "w_plus": "bench",
+      "w_minus": "desk",
+      "w_plus_token_id": 28122,
+      "w_minus_token_id": 51169,
+      "w_plus_all_token_ids": [
+        28122
+      ],
+      "w_minus_all_token_ids": [
+        51169
+      ],
+      "w_plus_logit": 14.4140625,
+      "w_minus_logit": 13.6328125,
+      "w_plus_probability": 0.4938243329524994,
+      "w_minus_probability": 0.2260892689228058,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.78125
+    },
+    {
+      "fingerprint_index": 102,
+      "pair_id": "llmprint-pair-102",
+      "w_plus": "dart",
+      "w_minus": "rust",
+      "w_plus_token_id": 36694,
+      "w_minus_token_id": 36888,
+      "w_plus_all_token_ids": [
+        36694
+      ],
+      "w_minus_all_token_ids": [
+        36888
+      ],
+      "w_plus_logit": 6.65234375,
+      "w_minus_logit": 9.265625,
+      "w_plus_probability": 0.00497610867023468,
+      "w_minus_probability": 0.06789276003837585,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -2.61328125
+    },
+    {
+      "fingerprint_index": 103,
+      "pair_id": "llmprint-pair-103",
+      "w_plus": "bus",
+      "w_minus": "car",
+      "w_plus_token_id": 10551,
+      "w_minus_token_id": 7063,
+      "w_plus_all_token_ids": [
+        10551
+      ],
+      "w_minus_all_token_ids": [
+        7063
+      ],
+      "w_plus_logit": 11.6015625,
+      "w_minus_logit": 4.6328125,
+      "w_plus_probability": 0.5770655274391174,
+      "w_minus_probability": 0.0005429195589385927,
+      "paper_bit": 1,
+      "release_filtered_eligibility": false,
+      "release_bit": 1,
+      "margin": 6.96875
+    },
+    {
+      "fingerprint_index": 104,
+      "pair_id": "llmprint-pair-104",
+      "w_plus": "berry",
+      "w_minus": "lime",
+      "w_plus_token_id": 15717,
+      "w_minus_token_id": 40043,
+      "w_plus_all_token_ids": [
+        15717
+      ],
+      "w_minus_all_token_ids": [
+        40043
+      ],
+      "w_plus_logit": 11.7265625,
+      "w_minus_logit": 9.953125,
+      "w_plus_probability": 0.5004685521125793,
+      "w_minus_probability": 0.08495377749204636,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.7734375
+    },
+    {
+      "fingerprint_index": 105,
+      "pair_id": "llmprint-pair-105",
+      "w_plus": "dart",
+      "w_minus": "java",
+      "w_plus_token_id": 36694,
+      "w_minus_token_id": 10248,
+      "w_plus_all_token_ids": [
+        36694
+      ],
+      "w_minus_all_token_ids": [
+        10248
+      ],
+      "w_plus_logit": 9.1875,
+      "w_minus_logit": 12.9375,
+      "w_plus_probability": 0.012645790353417397,
+      "w_minus_probability": 0.5377126932144165,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -3.75
+    },
+    {
+      "fingerprint_index": 106,
+      "pair_id": "llmprint-pair-106",
+      "w_plus": "marker",
+      "w_minus": "paper",
+      "w_plus_token_id": 28842,
+      "w_minus_token_id": 19716,
+      "w_plus_all_token_ids": [
+        28842
+      ],
+      "w_minus_all_token_ids": [
+        19716
+      ],
+      "w_plus_logit": 11.34375,
+      "w_minus_logit": 10.9921875,
+      "w_plus_probability": 0.14575013518333435,
+      "w_minus_probability": 0.1025480329990387,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.3515625
+    },
+    {
+      "fingerprint_index": 107,
+      "pair_id": "llmprint-pair-107",
+      "w_plus": "date",
+      "w_minus": "lime",
+      "w_plus_token_id": 1045,
+      "w_minus_token_id": 40043,
+      "w_plus_all_token_ids": [
+        1045
+      ],
+      "w_minus_all_token_ids": [
+        40043
+      ],
+      "w_plus_logit": 12.5625,
+      "w_minus_logit": 10.171875,
+      "w_plus_probability": 0.35611239075660706,
+      "w_minus_probability": 0.032610081136226654,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.390625
+    },
+    {
+      "fingerprint_index": 108,
+      "pair_id": "llmprint-pair-108",
+      "w_plus": "beer",
+      "w_minus": "water",
+      "w_plus_token_id": 48895,
+      "w_minus_token_id": 13284,
+      "w_plus_all_token_ids": [
+        48895
+      ],
+      "w_minus_all_token_ids": [
+        13284
+      ],
+      "w_plus_logit": 13.9609375,
+      "w_minus_logit": 13.8671875,
+      "w_plus_probability": 0.3556303381919861,
+      "w_minus_probability": 0.3238051235675812,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.09375
+    },
+    {
+      "fingerprint_index": 109,
+      "pair_id": "llmprint-pair-109",
+      "w_plus": "rectangle",
+      "w_minus": "triangle",
+      "w_plus_token_id": 56416,
+      "w_minus_token_id": 56214,
+      "w_plus_all_token_ids": [
+        56416
+      ],
+      "w_minus_all_token_ids": [
+        56214
+      ],
+      "w_plus_logit": 11.9453125,
+      "w_minus_logit": 11.5234375,
+      "w_plus_probability": 0.22722174227237701,
+      "w_minus_probability": 0.1490156650543213,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.421875
+    },
+    {
+      "fingerprint_index": 110,
+      "pair_id": "llmprint-pair-110",
+      "w_plus": "java",
+      "w_minus": "scala",
+      "w_plus_token_id": 10248,
+      "w_minus_token_id": 27920,
+      "w_plus_all_token_ids": [
+        10248
+      ],
+      "w_minus_all_token_ids": [
+        27920
+      ],
+      "w_plus_logit": 10.4765625,
+      "w_minus_logit": 9.9921875,
+      "w_plus_probability": 0.25925329327583313,
+      "w_minus_probability": 0.15972131490707397,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.484375
+    },
+    {
+      "fingerprint_index": 111,
+      "pair_id": "llmprint-pair-111",
+      "w_plus": "belt",
+      "w_minus": "pants",
+      "w_plus_token_id": 76948,
+      "w_minus_token_id": 93037,
+      "w_plus_all_token_ids": [
+        76948
+      ],
+      "w_minus_all_token_ids": [
+        93037
+      ],
+      "w_plus_logit": 11.9609375,
+      "w_minus_logit": 11.9921875,
+      "w_plus_probability": 0.2863234877586365,
+      "w_minus_probability": 0.2954123914241791,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.03125
+    },
+    {
+      "fingerprint_index": 112,
+      "pair_id": "llmprint-pair-112",
+      "w_plus": "javascript",
+      "w_minus": "swift",
+      "w_plus_token_id": 14402,
+      "w_minus_token_id": 71742,
+      "w_plus_all_token_ids": [
+        14402
+      ],
+      "w_minus_all_token_ids": [
+        71742
+      ],
+      "w_plus_logit": 11.5625,
+      "w_minus_logit": 9.8125,
+      "w_plus_probability": 0.497843474149704,
+      "w_minus_probability": 0.08651221543550491,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.75
+    },
+    {
+      "fingerprint_index": 113,
+      "pair_id": "llmprint-pair-113",
+      "w_plus": "country",
+      "w_minus": "rock",
+      "w_plus_token_id": 11389,
+      "w_minus_token_id": 21161,
+      "w_plus_all_token_ids": [
+        11389
+      ],
+      "w_minus_all_token_ids": [
+        21161
+      ],
+      "w_plus_logit": 11.9765625,
+      "w_minus_logit": 13.0,
+      "w_plus_probability": 0.12281476706266403,
+      "w_minus_probability": 0.3417620360851288,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -1.0234375
+    },
+    {
+      "fingerprint_index": 114,
+      "pair_id": "llmprint-pair-114",
+      "w_plus": "cube",
+      "w_minus": "diamond",
+      "w_plus_token_id": 46511,
+      "w_minus_token_id": 89676,
+      "w_plus_all_token_ids": [
+        46511
+      ],
+      "w_minus_all_token_ids": [
+        89676
+      ],
+      "w_plus_logit": 12.6171875,
+      "w_minus_logit": 10.0390625,
+      "w_plus_probability": 0.3258684277534485,
+      "w_minus_probability": 0.024738697335124016,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.578125
+    },
+    {
+      "fingerprint_index": 115,
+      "pair_id": "llmprint-pair-115",
+      "w_plus": "monitor",
+      "w_minus": "mouse",
+      "w_plus_token_id": 33325,
+      "w_minus_token_id": 13540,
+      "w_plus_all_token_ids": [
+        33325
+      ],
+      "w_minus_all_token_ids": [
+        13540
+      ],
+      "w_plus_logit": 10.4765625,
+      "w_minus_logit": 9.609375,
+      "w_plus_probability": 0.23076358437538147,
+      "w_minus_probability": 0.09695105999708176,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.8671875
+    },
+    {
+      "fingerprint_index": 116,
+      "pair_id": "llmprint-pair-116",
+      "w_plus": "bed",
+      "w_minus": "chair",
+      "w_plus_token_id": 2788,
+      "w_minus_token_id": 35296,
+      "w_plus_all_token_ids": [
+        2788
+      ],
+      "w_minus_all_token_ids": [
+        35296
+      ],
+      "w_plus_logit": 12.28125,
+      "w_minus_logit": 11.53125,
+      "w_plus_probability": 0.35372480750083923,
+      "w_minus_probability": 0.16708777844905853,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.75
+    },
+    {
+      "fingerprint_index": 117,
+      "pair_id": "llmprint-pair-117",
+      "w_plus": "rectangle",
+      "w_minus": "square",
+      "w_plus_token_id": 56416,
+      "w_minus_token_id": 38576,
+      "w_plus_all_token_ids": [
+        56416
+      ],
+      "w_minus_all_token_ids": [
+        38576
+      ],
+      "w_plus_logit": 10.078125,
+      "w_minus_logit": 9.40625,
+      "w_plus_probability": 0.11894141882658005,
+      "w_minus_probability": 0.06074933707714081,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.671875
+    },
+    {
+      "fingerprint_index": 118,
+      "pair_id": "llmprint-pair-118",
+      "w_plus": "pop",
+      "w_minus": "swing",
+      "w_plus_token_id": 8539,
+      "w_minus_token_id": 86384,
+      "w_plus_all_token_ids": [
+        8539
+      ],
+      "w_minus_all_token_ids": [
+        86384
+      ],
+      "w_plus_logit": 13.484375,
+      "w_minus_logit": 12.8671875,
+      "w_plus_probability": 0.40883201360702515,
+      "w_minus_probability": 0.22054831683635712,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.6171875
+    },
+    {
+      "fingerprint_index": 119,
+      "pair_id": "llmprint-pair-119",
+      "w_plus": "bull",
+      "w_minus": "dog",
+      "w_plus_token_id": 43104,
+      "w_minus_token_id": 18964,
+      "w_plus_all_token_ids": [
+        43104
+      ],
+      "w_minus_all_token_ids": [
+        18964
+      ],
+      "w_plus_logit": 9.484375,
+      "w_minus_logit": 8.734375,
+      "w_plus_probability": 0.13363133370876312,
+      "w_minus_probability": 0.06312297284603119,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.75
+    },
+    {
+      "fingerprint_index": 120,
+      "pair_id": "llmprint-pair-120",
+      "w_plus": "dress",
+      "w_minus": "sock",
+      "w_plus_token_id": 69334,
+      "w_minus_token_id": 13501,
+      "w_plus_all_token_ids": [
+        69334
+      ],
+      "w_minus_all_token_ids": [
+        13501
+      ],
+      "w_plus_logit": 12.640625,
+      "w_minus_logit": 11.6015625,
+      "w_plus_probability": 0.45198580622673035,
+      "w_minus_probability": 0.15990634262561798,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.0390625
+    },
+    {
+      "fingerprint_index": 121,
+      "pair_id": "llmprint-pair-121",
+      "w_plus": "ellipse",
+      "w_minus": "star",
+      "w_plus_token_id": 69104,
+      "w_minus_token_id": 12134,
+      "w_plus_all_token_ids": [
+        69104
+      ],
+      "w_minus_all_token_ids": [
+        12134
+      ],
+      "w_plus_logit": 11.3359375,
+      "w_minus_logit": 11.96875,
+      "w_plus_probability": 0.102973073720932,
+      "w_minus_probability": 0.1938878744840622,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.6328125
+    },
+    {
+      "fingerprint_index": 122,
+      "pair_id": "llmprint-pair-122",
+      "w_plus": "rust",
+      "w_minus": "scala",
+      "w_plus_token_id": 36888,
+      "w_minus_token_id": 27920,
+      "w_plus_all_token_ids": [
+        36888
+      ],
+      "w_minus_all_token_ids": [
+        27920
+      ],
+      "w_plus_logit": 12.890625,
+      "w_minus_logit": 10.71875,
+      "w_plus_probability": 0.49234312772750854,
+      "w_minus_probability": 0.05610925704240799,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.171875
+    },
+    {
+      "fingerprint_index": 123,
+      "pair_id": "llmprint-pair-123",
+      "w_plus": "plane",
+      "w_minus": "train",
+      "w_plus_token_id": 19563,
+      "w_minus_token_id": 10613,
+      "w_plus_all_token_ids": [
+        19563
+      ],
+      "w_minus_all_token_ids": [
+        10613
+      ],
+      "w_plus_logit": 12.578125,
+      "w_minus_logit": 10.6484375,
+      "w_plus_probability": 0.4264830946922302,
+      "w_minus_probability": 0.061922602355480194,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.9296875
+    },
+    {
+      "fingerprint_index": 124,
+      "pair_id": "llmprint-pair-124",
+      "w_plus": "lion",
+      "w_minus": "wolf",
+      "w_plus_token_id": 79251,
+      "w_minus_token_id": 77330,
+      "w_plus_all_token_ids": [
+        79251
+      ],
+      "w_minus_all_token_ids": [
+        77330
+      ],
+      "w_plus_logit": 10.4609375,
+      "w_minus_logit": 9.4921875,
+      "w_plus_probability": 0.1149265468120575,
+      "w_minus_probability": 0.04362119734287262,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.96875
+    },
+    {
+      "fingerprint_index": 125,
+      "pair_id": "llmprint-pair-125",
+      "w_plus": "gray",
+      "w_minus": "purple",
+      "w_plus_token_id": 11912,
+      "w_minus_token_id": 57607,
+      "w_plus_all_token_ids": [
+        11912
+      ],
+      "w_minus_all_token_ids": [
+        57607
+      ],
+      "w_plus_logit": 12.578125,
+      "w_minus_logit": 10.3828125,
+      "w_plus_probability": 0.18492697179317474,
+      "w_minus_probability": 0.02058676816523075,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.1953125
+    },
+    {
+      "fingerprint_index": 126,
+      "pair_id": "llmprint-pair-126",
+      "w_plus": "clip",
+      "w_minus": "paper",
+      "w_plus_token_id": 8133,
+      "w_minus_token_id": 19716,
+      "w_plus_all_token_ids": [
+        8133
+      ],
+      "w_minus_all_token_ids": [
+        19716
+      ],
+      "w_plus_logit": 13.1171875,
+      "w_minus_logit": 12.8515625,
+      "w_plus_probability": 0.32053297758102417,
+      "w_minus_probability": 0.24576117098331451,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.265625
+    },
+    {
+      "fingerprint_index": 127,
+      "pair_id": "llmprint-pair-127",
+      "w_plus": "mouse",
+      "w_minus": "router",
+      "w_plus_token_id": 13540,
+      "w_minus_token_id": 10140,
+      "w_plus_all_token_ids": [
+        13540
+      ],
+      "w_minus_all_token_ids": [
+        10140
+      ],
+      "w_plus_logit": 12.2578125,
+      "w_minus_logit": 9.796875,
+      "w_plus_probability": 0.3425109088420868,
+      "w_minus_probability": 0.029234983026981354,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.4609375
+    },
+    {
+      "fingerprint_index": 128,
+      "pair_id": "llmprint-pair-128",
+      "w_plus": "country",
+      "w_minus": "swing",
+      "w_plus_token_id": 11389,
+      "w_minus_token_id": 86384,
+      "w_plus_all_token_ids": [
+        11389
+      ],
+      "w_minus_all_token_ids": [
+        86384
+      ],
+      "w_plus_logit": 11.6171875,
+      "w_minus_logit": 11.1640625,
+      "w_plus_probability": 0.2174254059791565,
+      "w_minus_probability": 0.13820399343967438,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.453125
+    },
+    {
+      "fingerprint_index": 129,
+      "pair_id": "llmprint-pair-129",
+      "w_plus": "chalk",
+      "w_minus": "label",
+      "w_plus_token_id": 87488,
+      "w_minus_token_id": 1530,
+      "w_plus_all_token_ids": [
+        87488
+      ],
+      "w_minus_all_token_ids": [
+        1530
+      ],
+      "w_plus_logit": 10.9140625,
+      "w_minus_logit": 8.015625,
+      "w_plus_probability": 0.3353727161884308,
+      "w_minus_probability": 0.018482141196727753,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.8984375
+    },
+    {
+      "fingerprint_index": 130,
+      "pair_id": "llmprint-pair-130",
+      "w_plus": "scala",
+      "w_minus": "typescript",
+      "w_plus_token_id": 27920,
+      "w_minus_token_id": 50652,
+      "w_plus_all_token_ids": [
+        27920
+      ],
+      "w_minus_all_token_ids": [
+        50652
+      ],
+      "w_plus_logit": 11.4140625,
+      "w_minus_logit": 10.875,
+      "w_plus_probability": 0.2754612863063812,
+      "w_minus_probability": 0.16067515313625336,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.5390625
+    },
+    {
+      "fingerprint_index": 131,
+      "pair_id": "llmprint-pair-131",
+      "w_plus": "teacher",
+      "w_minus": "writer",
+      "w_plus_token_id": 24247,
+      "w_minus_token_id": 18688,
+      "w_plus_all_token_ids": [
+        24247
+      ],
+      "w_minus_all_token_ids": [
+        18688
+      ],
+      "w_plus_logit": 12.1640625,
+      "w_minus_logit": 9.65625,
+      "w_plus_probability": 0.3947353661060333,
+      "w_minus_probability": 0.032149698585271835,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.5078125
+    },
+    {
+      "fingerprint_index": 132,
+      "pair_id": "llmprint-pair-132",
+      "w_plus": "bra",
+      "w_minus": "tie",
+      "w_plus_token_id": 14720,
+      "w_minus_token_id": 49831,
+      "w_plus_all_token_ids": [
+        14720
+      ],
+      "w_minus_all_token_ids": [
+        49831
+      ],
+      "w_plus_logit": 11.8984375,
+      "w_minus_logit": 11.0390625,
+      "w_plus_probability": 0.1516590267419815,
+      "w_minus_probability": 0.0642164796590805,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.859375
+    },
+    {
+      "fingerprint_index": 133,
+      "pair_id": "llmprint-pair-133",
+      "w_plus": "card",
+      "w_minus": "marker",
+      "w_plus_token_id": 5057,
+      "w_minus_token_id": 28842,
+      "w_plus_all_token_ids": [
+        5057
+      ],
+      "w_minus_all_token_ids": [
+        28842
+      ],
+      "w_plus_logit": 11.390625,
+      "w_minus_logit": 9.765625,
+      "w_plus_probability": 0.36175039410591125,
+      "w_minus_probability": 0.071232870221138,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.625
+    },
+    {
+      "fingerprint_index": 134,
+      "pair_id": "llmprint-pair-134",
+      "w_plus": "arm",
+      "w_minus": "mouth",
+      "w_plus_token_id": 2227,
+      "w_minus_token_id": 33780,
+      "w_plus_all_token_ids": [
+        2227
+      ],
+      "w_minus_all_token_ids": [
+        33780
+      ],
+      "w_plus_logit": 14.140625,
+      "w_minus_logit": 12.828125,
+      "w_plus_probability": 0.41624414920806885,
+      "w_minus_probability": 0.11203058809041977,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.3125
+    },
+    {
+      "fingerprint_index": 135,
+      "pair_id": "llmprint-pair-135",
+      "w_plus": "rum",
+      "w_minus": "tea",
+      "w_plus_token_id": 10952,
+      "w_minus_token_id": 82694,
+      "w_plus_all_token_ids": [
+        10952
+      ],
+      "w_minus_all_token_ids": [
+        82694
+      ],
+      "w_plus_logit": 11.359375,
+      "w_minus_logit": 11.4609375,
+      "w_plus_probability": 0.18537330627441406,
+      "w_minus_probability": 0.2051895409822464,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.1015625
+    },
+    {
+      "fingerprint_index": 136,
+      "pair_id": "llmprint-pair-136",
+      "w_plus": "green",
+      "w_minus": "lime",
+      "w_plus_token_id": 13553,
+      "w_minus_token_id": 40043,
+      "w_plus_all_token_ids": [
+        13553
+      ],
+      "w_minus_all_token_ids": [
+        40043
+      ],
+      "w_plus_logit": 13.8125,
+      "w_minus_logit": 12.203125,
+      "w_plus_probability": 0.5464467406272888,
+      "w_minus_probability": 0.10929622501134872,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.609375
+    },
+    {
+      "fingerprint_index": 137,
+      "pair_id": "llmprint-pair-137",
+      "w_plus": "scanner",
+      "w_minus": "tablet",
+      "w_plus_token_id": 69041,
+      "w_minus_token_id": 99793,
+      "w_plus_all_token_ids": [
+        69041
+      ],
+      "w_minus_all_token_ids": [
+        99793
+      ],
+      "w_plus_logit": 12.1328125,
+      "w_minus_logit": 11.5390625,
+      "w_plus_probability": 0.3476015329360962,
+      "w_minus_probability": 0.191963791847229,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.59375
+    },
+    {
+      "fingerprint_index": 138,
+      "pair_id": "llmprint-pair-138",
+      "w_plus": "coffee",
+      "w_minus": "water",
+      "w_plus_token_id": 79217,
+      "w_minus_token_id": 13284,
+      "w_plus_all_token_ids": [
+        79217
+      ],
+      "w_minus_all_token_ids": [
+        13284
+      ],
+      "w_plus_logit": 11.6171875,
+      "w_minus_logit": 12.203125,
+      "w_plus_probability": 0.19220083951950073,
+      "w_minus_probability": 0.3453223705291748,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.5859375
+    },
+    {
+      "fingerprint_index": 139,
+      "pair_id": "llmprint-pair-139",
+      "w_plus": "bull",
+      "w_minus": "wolf",
+      "w_plus_token_id": 43104,
+      "w_minus_token_id": 77330,
+      "w_plus_all_token_ids": [
+        43104
+      ],
+      "w_minus_all_token_ids": [
+        77330
+      ],
+      "w_plus_logit": 13.625,
+      "w_minus_logit": 10.6328125,
+      "w_plus_probability": 0.6435227394104004,
+      "w_minus_probability": 0.03229039907455444,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.9921875
+    },
+    {
+      "fingerprint_index": 140,
+      "pair_id": "llmprint-pair-140",
+      "w_plus": "java",
+      "w_minus": "javascript",
+      "w_plus_token_id": 10248,
+      "w_minus_token_id": 14402,
+      "w_plus_all_token_ids": [
+        10248
+      ],
+      "w_minus_all_token_ids": [
+        14402
+      ],
+      "w_plus_logit": 11.015625,
+      "w_minus_logit": 8.6484375,
+      "w_plus_probability": 0.19998207688331604,
+      "w_minus_probability": 0.01874712109565735,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.3671875
+    },
+    {
+      "fingerprint_index": 141,
+      "pair_id": "llmprint-pair-141",
+      "w_plus": "car",
+      "w_minus": "tram",
+      "w_plus_token_id": 7063,
+      "w_minus_token_id": 99040,
+      "w_plus_all_token_ids": [
+        7063
+      ],
+      "w_minus_all_token_ids": [
+        99040
+      ],
+      "w_plus_logit": 11.6640625,
+      "w_minus_logit": 9.359375,
+      "w_plus_probability": 0.35351118445396423,
+      "w_minus_probability": 0.0352768711745739,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.3046875
+    },
+    {
+      "fingerprint_index": 142,
+      "pair_id": "llmprint-pair-142",
+      "w_plus": "cola",
+      "w_minus": "rum",
+      "w_plus_token_id": 56552,
+      "w_minus_token_id": 10952,
+      "w_plus_all_token_ids": [
+        56552
+      ],
+      "w_minus_all_token_ids": [
+        10952
+      ],
+      "w_plus_logit": 7.2109375,
+      "w_minus_logit": 9.875,
+      "w_plus_probability": 0.007766258902847767,
+      "w_minus_probability": 0.11148065328598022,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -2.6640625
+    },
+    {
+      "fingerprint_index": 143,
+      "pair_id": "llmprint-pair-143",
+      "w_plus": "gold",
+      "w_minus": "red",
+      "w_plus_token_id": 35637,
+      "w_minus_token_id": 1171,
+      "w_plus_all_token_ids": [
+        35637
+      ],
+      "w_minus_all_token_ids": [
+        1171
+      ],
+      "w_plus_logit": 12.9140625,
+      "w_minus_logit": 11.4609375,
+      "w_plus_probability": 0.3894087076187134,
+      "w_minus_probability": 0.09105870872735977,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.453125
+    },
+    {
+      "fingerprint_index": 144,
+      "pair_id": "llmprint-pair-144",
+      "w_plus": "cola",
+      "w_minus": "wine",
+      "w_plus_token_id": 56552,
+      "w_minus_token_id": 72537,
+      "w_plus_all_token_ids": [
+        56552
+      ],
+      "w_minus_all_token_ids": [
+        72537
+      ],
+      "w_plus_logit": 11.7421875,
+      "w_minus_logit": 11.5546875,
+      "w_plus_probability": 0.24072520434856415,
+      "w_minus_probability": 0.19956821203231812,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.1875
+    },
+    {
+      "fingerprint_index": 145,
+      "pair_id": "llmprint-pair-145",
+      "w_plus": "chin",
+      "w_minus": "foot",
+      "w_plus_token_id": 60171,
+      "w_minus_token_id": 5447,
+      "w_plus_all_token_ids": [
+        60171
+      ],
+      "w_minus_all_token_ids": [
+        5447
+      ],
+      "w_plus_logit": 13.0546875,
+      "w_minus_logit": 12.640625,
+      "w_plus_probability": 0.3012160062789917,
+      "w_minus_probability": 0.19909162819385529,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.4140625
+    },
+    {
+      "fingerprint_index": 146,
+      "pair_id": "llmprint-pair-146",
+      "w_plus": "chin",
+      "w_minus": "lip",
+      "w_plus_token_id": 60171,
+      "w_minus_token_id": 34215,
+      "w_plus_all_token_ids": [
+        60171
+      ],
+      "w_minus_all_token_ids": [
+        34215
+      ],
+      "w_plus_logit": 11.5546875,
+      "w_minus_logit": 8.6875,
+      "w_plus_probability": 0.12059850245714188,
+      "w_minus_probability": 0.006857064086943865,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.8671875
+    },
+    {
+      "fingerprint_index": 147,
+      "pair_id": "llmprint-pair-147",
+      "w_plus": "green",
+      "w_minus": "yellow",
+      "w_plus_token_id": 13553,
+      "w_minus_token_id": 28969,
+      "w_plus_all_token_ids": [
+        13553
+      ],
+      "w_minus_all_token_ids": [
+        28969
+      ],
+      "w_plus_logit": 13.65625,
+      "w_minus_logit": 12.046875,
+      "w_plus_probability": 0.32314997911453247,
+      "w_minus_probability": 0.0646340623497963,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.609375
+    },
+    {
+      "fingerprint_index": 148,
+      "pair_id": "llmprint-pair-148",
+      "w_plus": "date",
+      "w_minus": "melon",
+      "w_plus_token_id": 1045,
+      "w_minus_token_id": 72218,
+      "w_plus_all_token_ids": [
+        1045
+      ],
+      "w_minus_all_token_ids": [
+        72218
+      ],
+      "w_plus_logit": 11.4453125,
+      "w_minus_logit": 11.2421875,
+      "w_plus_probability": 0.3186911940574646,
+      "w_minus_probability": 0.26010817289352417,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.203125
+    },
+    {
+      "fingerprint_index": 149,
+      "pair_id": "llmprint-pair-149",
+      "w_plus": "actor",
+      "w_minus": "doctor",
+      "w_plus_token_id": 5739,
+      "w_minus_token_id": 38083,
+      "w_plus_all_token_ids": [
+        5739
+      ],
+      "w_minus_all_token_ids": [
+        38083
+      ],
+      "w_plus_logit": 10.84375,
+      "w_minus_logit": 10.671875,
+      "w_plus_probability": 0.2581937611103058,
+      "w_minus_probability": 0.21742096543312073,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.171875
+    },
+    {
+      "fingerprint_index": 150,
+      "pair_id": "llmprint-pair-150",
+      "w_plus": "paper",
+      "w_minus": "pen",
+      "w_plus_token_id": 19716,
+      "w_minus_token_id": 2821,
+      "w_plus_all_token_ids": [
+        19716
+      ],
+      "w_minus_all_token_ids": [
+        2821
+      ],
+      "w_plus_logit": 11.84375,
+      "w_minus_logit": 10.4609375,
+      "w_plus_probability": 0.3047488331794739,
+      "w_minus_probability": 0.07645294815301895,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.3828125
+    },
+    {
+      "fingerprint_index": 151,
+      "pair_id": "llmprint-pair-151",
+      "w_plus": "desk",
+      "w_minus": "table",
+      "w_plus_token_id": 51169,
+      "w_minus_token_id": 2048,
+      "w_plus_all_token_ids": [
+        51169
+      ],
+      "w_minus_all_token_ids": [
+        2048
+      ],
+      "w_plus_logit": 14.375,
+      "w_minus_logit": 13.734375,
+      "w_plus_probability": 0.4053536057472229,
+      "w_minus_probability": 0.2136063426733017,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.640625
+    },
+    {
+      "fingerprint_index": 152,
+      "pair_id": "llmprint-pair-152",
+      "w_plus": "fox",
+      "w_minus": "frog",
+      "w_plus_token_id": 15361,
+      "w_minus_token_id": 87082,
+      "w_plus_all_token_ids": [
+        15361
+      ],
+      "w_minus_all_token_ids": [
+        87082
+      ],
+      "w_plus_logit": 16.328125,
+      "w_minus_logit": 16.109375,
+      "w_plus_probability": 0.38800832629203796,
+      "w_minus_probability": 0.3117734491825104,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.21875
+    },
+    {
+      "fingerprint_index": 153,
+      "pair_id": "llmprint-pair-153",
+      "w_plus": "head",
+      "w_minus": "hip",
+      "w_plus_token_id": 2025,
+      "w_minus_token_id": 2200,
+      "w_plus_all_token_ids": [
+        2025
+      ],
+      "w_minus_all_token_ids": [
+        2200
+      ],
+      "w_plus_logit": 12.640625,
+      "w_minus_logit": 12.3828125,
+      "w_plus_probability": 0.25622430443763733,
+      "w_minus_probability": 0.19799478352069855,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.2578125
+    },
+    {
+      "fingerprint_index": 154,
+      "pair_id": "llmprint-pair-154",
+      "w_plus": "frog",
+      "w_minus": "mouse",
+      "w_plus_token_id": 87082,
+      "w_minus_token_id": 13540,
+      "w_plus_all_token_ids": [
+        87082
+      ],
+      "w_minus_all_token_ids": [
+        13540
+      ],
+      "w_plus_logit": 11.7890625,
+      "w_minus_logit": 12.3671875,
+      "w_plus_probability": 0.07749386131763458,
+      "w_minus_probability": 0.1381477564573288,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.578125
+    },
+    {
+      "fingerprint_index": 155,
+      "pair_id": "llmprint-pair-155",
+      "w_plus": "bull",
+      "w_minus": "pig",
+      "w_plus_token_id": 43104,
+      "w_minus_token_id": 90600,
+      "w_plus_all_token_ids": [
+        43104
+      ],
+      "w_minus_all_token_ids": [
+        90600
+      ],
+      "w_plus_logit": 10.2890625,
+      "w_minus_logit": 10.1484375,
+      "w_plus_probability": 0.2058636099100113,
+      "w_minus_probability": 0.17885741591453552,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.140625
+    },
+    {
+      "fingerprint_index": 156,
+      "pair_id": "llmprint-pair-156",
+      "w_plus": "belt",
+      "w_minus": "dress",
+      "w_plus_token_id": 76948,
+      "w_minus_token_id": 69334,
+      "w_plus_all_token_ids": [
+        76948
+      ],
+      "w_minus_all_token_ids": [
+        69334
+      ],
+      "w_plus_logit": 10.0625,
+      "w_minus_logit": 8.765625,
+      "w_plus_probability": 0.20431403815746307,
+      "w_minus_probability": 0.05585634708404541,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.296875
+    },
+    {
+      "fingerprint_index": 157,
+      "pair_id": "llmprint-pair-157",
+      "w_plus": "house",
+      "w_minus": "pop",
+      "w_plus_token_id": 7830,
+      "w_minus_token_id": 8539,
+      "w_plus_all_token_ids": [
+        7830
+      ],
+      "w_minus_all_token_ids": [
+        8539
+      ],
+      "w_plus_logit": 12.0234375,
+      "w_minus_logit": 10.4453125,
+      "w_plus_probability": 0.44333869218826294,
+      "w_minus_probability": 0.09148810058832169,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.578125
+    },
+    {
+      "fingerprint_index": 158,
+      "pair_id": "llmprint-pair-158",
+      "w_plus": "metal",
+      "w_minus": "rap",
+      "w_plus_token_id": 55108,
+      "w_minus_token_id": 4714,
+      "w_plus_all_token_ids": [
+        55108
+      ],
+      "w_minus_all_token_ids": [
+        4714
+      ],
+      "w_plus_logit": 11.9921875,
+      "w_minus_logit": 10.828125,
+      "w_plus_probability": 0.4146246612071991,
+      "w_minus_probability": 0.12945213913917542,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.1640625
+    },
+    {
+      "fingerprint_index": 159,
+      "pair_id": "llmprint-pair-159",
+      "w_plus": "lion",
+      "w_minus": "rat",
+      "w_plus_token_id": 79251,
+      "w_minus_token_id": 18071,
+      "w_plus_all_token_ids": [
+        79251
+      ],
+      "w_minus_all_token_ids": [
+        18071
+      ],
+      "w_plus_logit": 12.875,
+      "w_minus_logit": 12.71875,
+      "w_plus_probability": 0.2958543002605438,
+      "w_minus_probability": 0.253057599067688,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.15625
+    },
+    {
+      "fingerprint_index": 160,
+      "pair_id": "llmprint-pair-160",
+      "w_plus": "purple",
+      "w_minus": "silver",
+      "w_plus_token_id": 57607,
+      "w_minus_token_id": 83014,
+      "w_plus_all_token_ids": [
+        57607
+      ],
+      "w_minus_all_token_ids": [
+        83014
+      ],
+      "w_plus_logit": 13.671875,
+      "w_minus_logit": 13.7890625,
+      "w_plus_probability": 0.3189152181148529,
+      "w_minus_probability": 0.358566015958786,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.1171875
+    },
+    {
+      "fingerprint_index": 161,
+      "pair_id": "llmprint-pair-161",
+      "w_plus": "battery",
+      "w_minus": "speaker",
+      "w_plus_token_id": 75459,
+      "w_minus_token_id": 65576,
+      "w_plus_all_token_ids": [
+        75459
+      ],
+      "w_minus_all_token_ids": [
+        65576
+      ],
+      "w_plus_logit": 12.671875,
+      "w_minus_logit": 10.703125,
+      "w_plus_probability": 0.40878117084503174,
+      "w_minus_probability": 0.05707864090800285,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.96875
+    },
+    {
+      "fingerprint_index": 162,
+      "pair_id": "llmprint-pair-162",
+      "w_plus": "chest",
+      "w_minus": "chin",
+      "w_plus_token_id": 27417,
+      "w_minus_token_id": 60171,
+      "w_plus_all_token_ids": [
+        27417
+      ],
+      "w_minus_all_token_ids": [
+        60171
+      ],
+      "w_plus_logit": 15.625,
+      "w_minus_logit": 14.7578125,
+      "w_plus_probability": 0.43367886543273926,
+      "w_minus_probability": 0.18220217525959015,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.8671875
+    },
+    {
+      "fingerprint_index": 163,
+      "pair_id": "llmprint-pair-163",
+      "w_plus": "actor",
+      "w_minus": "teacher",
+      "w_plus_token_id": 5739,
+      "w_minus_token_id": 24247,
+      "w_plus_all_token_ids": [
+        5739
+      ],
+      "w_minus_all_token_ids": [
+        24247
+      ],
+      "w_plus_logit": 11.15625,
+      "w_minus_logit": 9.890625,
+      "w_plus_probability": 0.18544995784759521,
+      "w_minus_probability": 0.05230856314301491,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.265625
+    },
+    {
+      "fingerprint_index": 164,
+      "pair_id": "llmprint-pair-164",
+      "w_plus": "phone",
+      "w_minus": "scanner",
+      "w_plus_token_id": 4949,
+      "w_minus_token_id": 69041,
+      "w_plus_all_token_ids": [
+        4949
+      ],
+      "w_minus_all_token_ids": [
+        69041
+      ],
+      "w_plus_logit": 12.1171875,
+      "w_minus_logit": 8.9375,
+      "w_plus_probability": 0.23816049098968506,
+      "w_minus_probability": 0.009907156229019165,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 3.1796875
+    },
+    {
+      "fingerprint_index": 165,
+      "pair_id": "llmprint-pair-165",
+      "w_plus": "car",
+      "w_minus": "rocket",
+      "w_plus_token_id": 7063,
+      "w_minus_token_id": 47890,
+      "w_plus_all_token_ids": [
+        7063
+      ],
+      "w_minus_all_token_ids": [
+        47890
+      ],
+      "w_plus_logit": 11.1796875,
+      "w_minus_logit": 9.4609375,
+      "w_plus_probability": 0.2621857821941376,
+      "w_minus_probability": 0.04700732231140137,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.71875
+    },
+    {
+      "fingerprint_index": 166,
+      "pair_id": "llmprint-pair-166",
+      "w_plus": "house",
+      "w_minus": "rap",
+      "w_plus_token_id": 7830,
+      "w_minus_token_id": 4714,
+      "w_plus_all_token_ids": [
+        7830
+      ],
+      "w_minus_all_token_ids": [
+        4714
+      ],
+      "w_plus_logit": 13.4921875,
+      "w_minus_logit": 11.3359375,
+      "w_plus_probability": 0.3781735599040985,
+      "w_minus_probability": 0.04377676546573639,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.15625
+    },
+    {
+      "fingerprint_index": 167,
+      "pair_id": "llmprint-pair-167",
+      "w_plus": "pink",
+      "w_minus": "red",
+      "w_plus_token_id": 64349,
+      "w_minus_token_id": 1171,
+      "w_plus_all_token_ids": [
+        64349
+      ],
+      "w_minus_all_token_ids": [
+        1171
+      ],
+      "w_plus_logit": 11.59375,
+      "w_minus_logit": 11.296875,
+      "w_plus_probability": 0.2187003493309021,
+      "w_minus_probability": 0.1625242978334427,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.296875
+    },
+    {
+      "fingerprint_index": 168,
+      "pair_id": "llmprint-pair-168",
+      "w_plus": "chalk",
+      "w_minus": "paper",
+      "w_plus_token_id": 87488,
+      "w_minus_token_id": 19716,
+      "w_plus_all_token_ids": [
+        87488
+      ],
+      "w_minus_all_token_ids": [
+        19716
+      ],
+      "w_plus_logit": 13.1875,
+      "w_minus_logit": 12.4140625,
+      "w_plus_probability": 0.549507737159729,
+      "w_minus_probability": 0.25355616211891174,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.7734375
+    },
+    {
+      "fingerprint_index": 169,
+      "pair_id": "llmprint-pair-169",
+      "w_plus": "lime",
+      "w_minus": "melon",
+      "w_plus_token_id": 40043,
+      "w_minus_token_id": 72218,
+      "w_plus_all_token_ids": [
+        40043
+      ],
+      "w_minus_all_token_ids": [
+        72218
+      ],
+      "w_plus_logit": 11.6171875,
+      "w_minus_logit": 12.0234375,
+      "w_plus_probability": 0.1824919730424881,
+      "w_minus_probability": 0.2739528715610504,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.40625
+    },
+    {
+      "fingerprint_index": 170,
+      "pair_id": "llmprint-pair-170",
+      "w_plus": "cone",
+      "w_minus": "rectangle",
+      "w_plus_token_id": 59182,
+      "w_minus_token_id": 56416,
+      "w_plus_all_token_ids": [
+        59182
+      ],
+      "w_minus_all_token_ids": [
+        56416
+      ],
+      "w_plus_logit": 11.46875,
+      "w_minus_logit": 11.703125,
+      "w_plus_probability": 0.11456190049648285,
+      "w_minus_probability": 0.14481981098651886,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.234375
+    },
+    {
+      "fingerprint_index": 171,
+      "pair_id": "llmprint-pair-171",
+      "w_plus": "actor",
+      "w_minus": "driver",
+      "w_plus_token_id": 5739,
+      "w_minus_token_id": 12804,
+      "w_plus_all_token_ids": [
+        5739
+      ],
+      "w_minus_all_token_ids": [
+        12804
+      ],
+      "w_plus_logit": 13.75,
+      "w_minus_logit": 13.109375,
+      "w_plus_probability": 0.4568861126899719,
+      "w_minus_probability": 0.24076206982135773,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.640625
+    },
+    {
+      "fingerprint_index": 172,
+      "pair_id": "llmprint-pair-172",
+      "w_plus": "polygon",
+      "w_minus": "square",
+      "w_plus_token_id": 66112,
+      "w_minus_token_id": 38576,
+      "w_plus_all_token_ids": [
+        66112
+      ],
+      "w_minus_all_token_ids": [
+        38576
+      ],
+      "w_plus_logit": 6.9375,
+      "w_minus_logit": 6.9453125,
+      "w_plus_probability": 0.026387635618448257,
+      "w_minus_probability": 0.026594597846269608,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.0078125
+    },
+    {
+      "fingerprint_index": 173,
+      "pair_id": "llmprint-pair-173",
+      "w_plus": "chest",
+      "w_minus": "foot",
+      "w_plus_token_id": 27417,
+      "w_minus_token_id": 5447,
+      "w_plus_all_token_ids": [
+        27417
+      ],
+      "w_minus_all_token_ids": [
+        5447
+      ],
+      "w_plus_logit": 13.203125,
+      "w_minus_logit": 12.125,
+      "w_plus_probability": 0.24313227832317352,
+      "w_minus_probability": 0.08272159099578857,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.078125
+    },
+    {
+      "fingerprint_index": 174,
+      "pair_id": "llmprint-pair-174",
+      "w_plus": "driver",
+      "w_minus": "writer",
+      "w_plus_token_id": 12804,
+      "w_minus_token_id": 18688,
+      "w_plus_all_token_ids": [
+        12804
+      ],
+      "w_minus_all_token_ids": [
+        18688
+      ],
+      "w_plus_logit": 11.7109375,
+      "w_minus_logit": 10.328125,
+      "w_plus_probability": 0.36351707577705383,
+      "w_minus_probability": 0.09119625389575958,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.3828125
+    },
+    {
+      "fingerprint_index": 175,
+      "pair_id": "llmprint-pair-175",
+      "w_plus": "gold",
+      "w_minus": "lime",
+      "w_plus_token_id": 35637,
+      "w_minus_token_id": 40043,
+      "w_plus_all_token_ids": [
+        35637
+      ],
+      "w_minus_all_token_ids": [
+        40043
+      ],
+      "w_plus_logit": 13.171875,
+      "w_minus_logit": 10.34375,
+      "w_plus_probability": 0.28368985652923584,
+      "w_minus_probability": 0.016772767528891563,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.828125
+    },
+    {
+      "fingerprint_index": 176,
+      "pair_id": "llmprint-pair-176",
+      "w_plus": "rum",
+      "w_minus": "wine",
+      "w_plus_token_id": 10952,
+      "w_minus_token_id": 72537,
+      "w_plus_all_token_ids": [
+        10952
+      ],
+      "w_minus_all_token_ids": [
+        72537
+      ],
+      "w_plus_logit": 12.25,
+      "w_minus_logit": 11.28125,
+      "w_plus_probability": 0.3306431174278259,
+      "w_minus_probability": 0.125497967004776,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.96875
+    },
+    {
+      "fingerprint_index": 177,
+      "pair_id": "llmprint-pair-177",
+      "w_plus": "country",
+      "w_minus": "pop",
+      "w_plus_token_id": 11389,
+      "w_minus_token_id": 8539,
+      "w_plus_all_token_ids": [
+        11389
+      ],
+      "w_minus_all_token_ids": [
+        8539
+      ],
+      "w_plus_logit": 12.671875,
+      "w_minus_logit": 12.9453125,
+      "w_plus_probability": 0.2871066629886627,
+      "w_minus_probability": 0.37739455699920654,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.2734375
+    },
+    {
+      "fingerprint_index": 178,
+      "pair_id": "llmprint-pair-178",
+      "w_plus": "doctor",
+      "w_minus": "writer",
+      "w_plus_token_id": 38083,
+      "w_minus_token_id": 18688,
+      "w_plus_all_token_ids": [
+        38083
+      ],
+      "w_minus_all_token_ids": [
+        18688
+      ],
+      "w_plus_logit": 11.7734375,
+      "w_minus_logit": 8.40625,
+      "w_plus_probability": 0.28863590955734253,
+      "w_minus_probability": 0.009954040870070457,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 3.3671875
+    },
+    {
+      "fingerprint_index": 179,
+      "pair_id": "llmprint-pair-179",
+      "w_plus": "coat",
+      "w_minus": "shirt",
+      "w_plus_token_id": 68512,
+      "w_minus_token_id": 49472,
+      "w_plus_all_token_ids": [
+        68512
+      ],
+      "w_minus_all_token_ids": [
+        49472
+      ],
+      "w_plus_logit": 12.7890625,
+      "w_minus_logit": 13.1328125,
+      "w_plus_probability": 0.1928800642490387,
+      "w_minus_probability": 0.27200451493263245,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.34375
+    },
+    {
+      "fingerprint_index": 180,
+      "pair_id": "llmprint-pair-180",
+      "w_plus": "cyan",
+      "w_minus": "red",
+      "w_plus_token_id": 70846,
+      "w_minus_token_id": 1171,
+      "w_plus_all_token_ids": [
+        70846
+      ],
+      "w_minus_all_token_ids": [
+        1171
+      ],
+      "w_plus_logit": 12.296875,
+      "w_minus_logit": 10.484375,
+      "w_plus_probability": 0.43434789776802063,
+      "w_minus_probability": 0.07090535014867783,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.8125
+    },
+    {
+      "fingerprint_index": 181,
+      "pair_id": "llmprint-pair-181",
+      "w_plus": "ruby",
+      "w_minus": "rust",
+      "w_plus_token_id": 47375,
+      "w_minus_token_id": 36888,
+      "w_plus_all_token_ids": [
+        47375
+      ],
+      "w_minus_all_token_ids": [
+        36888
+      ],
+      "w_plus_logit": 12.3984375,
+      "w_minus_logit": 12.578125,
+      "w_plus_probability": 0.23329000174999237,
+      "w_minus_probability": 0.2792115807533264,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.1796875
+    },
+    {
+      "fingerprint_index": 182,
+      "pair_id": "llmprint-pair-182",
+      "w_plus": "rum",
+      "w_minus": "water",
+      "w_plus_token_id": 10952,
+      "w_minus_token_id": 13284,
+      "w_plus_all_token_ids": [
+        10952
+      ],
+      "w_minus_all_token_ids": [
+        13284
+      ],
+      "w_plus_logit": 13.1328125,
+      "w_minus_logit": 11.53125,
+      "w_plus_probability": 0.33631810545921326,
+      "w_minus_probability": 0.06779544055461884,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.6015625
+    },
+    {
+      "fingerprint_index": 183,
+      "pair_id": "llmprint-pair-183",
+      "w_plus": "cyan",
+      "w_minus": "gold",
+      "w_plus_token_id": 70846,
+      "w_minus_token_id": 35637,
+      "w_plus_all_token_ids": [
+        70846
+      ],
+      "w_minus_all_token_ids": [
+        35637
+      ],
+      "w_plus_logit": 10.125,
+      "w_minus_logit": 10.5703125,
+      "w_plus_probability": 0.11759022623300552,
+      "w_minus_probability": 0.1835557520389557,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.4453125
+    },
+    {
+      "fingerprint_index": 184,
+      "pair_id": "llmprint-pair-184",
+      "w_plus": "house",
+      "w_minus": "metal",
+      "w_plus_token_id": 7830,
+      "w_minus_token_id": 55108,
+      "w_plus_all_token_ids": [
+        7830
+      ],
+      "w_minus_all_token_ids": [
+        55108
+      ],
+      "w_plus_logit": 12.0390625,
+      "w_minus_logit": 11.921875,
+      "w_plus_probability": 0.25101783871650696,
+      "w_minus_probability": 0.22325989603996277,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.1171875
+    },
+    {
+      "fingerprint_index": 185,
+      "pair_id": "llmprint-pair-185",
+      "w_plus": "polygon",
+      "w_minus": "rectangle",
+      "w_plus_token_id": 66112,
+      "w_minus_token_id": 56416,
+      "w_plus_all_token_ids": [
+        66112
+      ],
+      "w_minus_all_token_ids": [
+        56416
+      ],
+      "w_plus_logit": 12.625,
+      "w_minus_logit": 12.6875,
+      "w_plus_probability": 0.269198477268219,
+      "w_minus_probability": 0.2865602672100067,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.0625
+    },
+    {
+      "fingerprint_index": 186,
+      "pair_id": "llmprint-pair-186",
+      "w_plus": "oval",
+      "w_minus": "star",
+      "w_plus_token_id": 13825,
+      "w_minus_token_id": 12134,
+      "w_plus_all_token_ids": [
+        13825
+      ],
+      "w_minus_all_token_ids": [
+        12134
+      ],
+      "w_plus_logit": 11.1171875,
+      "w_minus_logit": 8.8046875,
+      "w_plus_probability": 0.27291247248649597,
+      "w_minus_probability": 0.027021992951631546,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.3125
+    },
+    {
+      "fingerprint_index": 187,
+      "pair_id": "llmprint-pair-187",
+      "w_plus": "chair",
+      "w_minus": "table",
+      "w_plus_token_id": 35296,
+      "w_minus_token_id": 2048,
+      "w_plus_all_token_ids": [
+        35296
+      ],
+      "w_minus_all_token_ids": [
+        2048
+      ],
+      "w_plus_logit": 11.03125,
+      "w_minus_logit": 11.09375,
+      "w_plus_probability": 0.1798359453678131,
+      "w_minus_probability": 0.1914343684911728,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.0625
+    },
+    {
+      "fingerprint_index": 188,
+      "pair_id": "llmprint-pair-188",
+      "w_plus": "camera",
+      "w_minus": "monitor",
+      "w_plus_token_id": 25954,
+      "w_minus_token_id": 33325,
+      "w_plus_all_token_ids": [
+        25954
+      ],
+      "w_minus_all_token_ids": [
+        33325
+      ],
+      "w_plus_logit": 11.1328125,
+      "w_minus_logit": 10.1328125,
+      "w_plus_probability": 0.16137860715389252,
+      "w_minus_probability": 0.05936788022518158,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.0
+    },
+    {
+      "fingerprint_index": 189,
+      "pair_id": "llmprint-pair-189",
+      "w_plus": "coat",
+      "w_minus": "visor",
+      "w_plus_token_id": 68512,
+      "w_minus_token_id": 39112,
+      "w_plus_all_token_ids": [
+        68512
+      ],
+      "w_minus_all_token_ids": [
+        39112
+      ],
+      "w_plus_logit": 10.625,
+      "w_minus_logit": 9.4765625,
+      "w_plus_probability": 0.25614145398139954,
+      "w_minus_probability": 0.08123062551021576,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.1484375
+    },
+    {
+      "fingerprint_index": 190,
+      "pair_id": "llmprint-pair-190",
+      "w_plus": "doctor",
+      "w_minus": "teacher",
+      "w_plus_token_id": 38083,
+      "w_minus_token_id": 24247,
+      "w_plus_all_token_ids": [
+        38083
+      ],
+      "w_minus_all_token_ids": [
+        24247
+      ],
+      "w_plus_logit": 12.4921875,
+      "w_minus_logit": 12.4921875,
+      "w_plus_probability": 0.15999983251094818,
+      "w_minus_probability": 0.15999983251094818,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": 0.0
+    },
+    {
+      "fingerprint_index": 191,
+      "pair_id": "llmprint-pair-191",
+      "w_plus": "console",
+      "w_minus": "keyboard",
+      "w_plus_token_id": 5467,
+      "w_minus_token_id": 42813,
+      "w_plus_all_token_ids": [
+        5467
+      ],
+      "w_minus_all_token_ids": [
+        42813
+      ],
+      "w_plus_logit": 11.1484375,
+      "w_minus_logit": 9.0078125,
+      "w_plus_probability": 0.4638029932975769,
+      "w_minus_probability": 0.05453457310795784,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.140625
+    },
+    {
+      "fingerprint_index": 192,
+      "pair_id": "llmprint-pair-192",
+      "w_plus": "arm",
+      "w_minus": "ear",
+      "w_plus_token_id": 2227,
+      "w_minus_token_id": 686,
+      "w_plus_all_token_ids": [
+        2227
+      ],
+      "w_minus_all_token_ids": [
+        686
+      ],
+      "w_plus_logit": 15.625,
+      "w_minus_logit": 15.0546875,
+      "w_plus_probability": 0.41365763545036316,
+      "w_minus_probability": 0.2338608354330063,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.5703125
+    },
+    {
+      "fingerprint_index": 193,
+      "pair_id": "llmprint-pair-193",
+      "w_plus": "fig",
+      "w_minus": "pear",
+      "w_plus_token_id": 915,
+      "w_minus_token_id": 8174,
+      "w_plus_all_token_ids": [
+        915
+      ],
+      "w_minus_all_token_ids": [
+        8174
+      ],
+      "w_plus_logit": 12.6953125,
+      "w_minus_logit": 12.1171875,
+      "w_plus_probability": 0.3299526572227478,
+      "w_minus_probability": 0.18508665263652802,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.578125
+    },
+    {
+      "fingerprint_index": 194,
+      "pair_id": "llmprint-pair-194",
+      "w_plus": "hand",
+      "w_minus": "leg",
+      "w_plus_token_id": 10888,
+      "w_minus_token_id": 1978,
+      "w_plus_all_token_ids": [
+        10888
+      ],
+      "w_minus_all_token_ids": [
+        1978
+      ],
+      "w_plus_logit": 12.359375,
+      "w_minus_logit": 12.71875,
+      "w_plus_probability": 0.25857141613960266,
+      "w_minus_probability": 0.3703864514827728,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.359375
+    },
+    {
+      "fingerprint_index": 195,
+      "pair_id": "llmprint-pair-195",
+      "w_plus": "berry",
+      "w_minus": "pear",
+      "w_plus_token_id": 15717,
+      "w_minus_token_id": 8174,
+      "w_plus_all_token_ids": [
+        15717
+      ],
+      "w_minus_all_token_ids": [
+        8174
+      ],
+      "w_plus_logit": 13.046875,
+      "w_minus_logit": 11.890625,
+      "w_plus_probability": 0.43797069787979126,
+      "w_minus_probability": 0.13781359791755676,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.15625
+    },
+    {
+      "fingerprint_index": 196,
+      "pair_id": "llmprint-pair-196",
+      "w_plus": "train",
+      "w_minus": "truck",
+      "w_plus_token_id": 10613,
+      "w_minus_token_id": 99418,
+      "w_plus_all_token_ids": [
+        10613
+      ],
+      "w_minus_all_token_ids": [
+        99418
+      ],
+      "w_plus_logit": 12.6875,
+      "w_minus_logit": 12.515625,
+      "w_plus_probability": 0.34874314069747925,
+      "w_minus_probability": 0.2936711609363556,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 0.171875
+    },
+    {
+      "fingerprint_index": 197,
+      "pair_id": "llmprint-pair-197",
+      "w_plus": "rock",
+      "w_minus": "swing",
+      "w_plus_token_id": 21161,
+      "w_minus_token_id": 86384,
+      "w_plus_all_token_ids": [
+        21161
+      ],
+      "w_minus_all_token_ids": [
+        86384
+      ],
+      "w_plus_logit": 13.4609375,
+      "w_minus_logit": 11.453125,
+      "w_plus_probability": 0.5474098920822144,
+      "w_minus_probability": 0.07350734621286392,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 2.0078125
+    },
+    {
+      "fingerprint_index": 198,
+      "pair_id": "llmprint-pair-198",
+      "w_plus": "brown",
+      "w_minus": "cyan",
+      "w_plus_token_id": 65561,
+      "w_minus_token_id": 70846,
+      "w_plus_all_token_ids": [
+        65561
+      ],
+      "w_minus_all_token_ids": [
+        70846
+      ],
+      "w_plus_logit": 12.3984375,
+      "w_minus_logit": 10.625,
+      "w_plus_probability": 0.38982605934143066,
+      "w_minus_probability": 0.06617237627506256,
+      "paper_bit": 1,
+      "release_filtered_eligibility": true,
+      "release_bit": 1,
+      "margin": 1.7734375
+    },
+    {
+      "fingerprint_index": 199,
+      "pair_id": "llmprint-pair-199",
+      "w_plus": "bra",
+      "w_minus": "short",
+      "w_plus_token_id": 14720,
+      "w_minus_token_id": 8846,
+      "w_plus_all_token_ids": [
+        14720
+      ],
+      "w_minus_all_token_ids": [
+        8846
+      ],
+      "w_plus_logit": 12.3984375,
+      "w_minus_logit": 12.8515625,
+      "w_plus_probability": 0.2196807563304901,
+      "w_minus_probability": 0.34560635685920715,
+      "paper_bit": 0,
+      "release_filtered_eligibility": true,
+      "release_bit": 0,
+      "margin": -0.453125
+    }
+  ],
+  "error": null
+}

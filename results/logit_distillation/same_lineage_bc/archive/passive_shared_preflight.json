@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-Passive5-Shared-Same-Lineage-Bc-Student",
+  "package": "/tmp/WMKD_Bc_archive_stage/same_lineage_bc_passive_shared_preferred_archive_20260910",
+  "files": {
+    "chat_template.jinja": {
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4"
+    },
+    "config.json": {
+      "bytes": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb"
+    },
+    "generation_config.json": {
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 4965799096,
+      "sha256": "2930f9e989ce07b552c6bac1528b00d03cf197009df1a649f3bef86c4753cb7f"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1459729952,
+      "sha256": "434a305c96e7c1083123fbb5c4dd8325b4367688524ced76969a742b8a3fc4a1"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac"
+    },
+    "special_tokens_map.json": {
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    "tokenizer.json": {
+      "bytes": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc"
+    },
+    "tokenizer_config.json": {
+      "bytes": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403"
+    },
+    "LICENSE.txt": {
+      "bytes": 7712,
+      "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+    },
+    "manifest.json": {
+      "bytes": 191545,
+      "sha256": "2fcab01aaeb464b7d6aeec64b05924d6ebd0e3b10e1d5d36821e7dc782b69e9a"
+    },
+    "README.md": {
+      "bytes": 232,
+      "sha256": "277f5a723157ad977eb33305014aedf6da76f99148c470ecfae58c8bd0a32afb"
+    },
+    "SHA256SUMS": {
+      "bytes": 1039,
+      "sha256": "de777a52960c82fc4deeb8f203d783de2a7ed9c5821fa1985cd74e3bf0e2f978"
+    }
+  },
+  "archive_sha256": "de777a52960c82fc4deeb8f203d783de2a7ed9c5821fa1985cd74e3bf0e2f978",
+  "archive_sha256_definition": "SHA256 of SHA256SUMS; binds package files",
+  "run_id": "passive_shared_bc_20260910",
+  "source_preserved": true
+}

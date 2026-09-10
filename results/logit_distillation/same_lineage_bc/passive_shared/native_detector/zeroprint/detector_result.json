@@ -1,0 +1,79 @@
+{
+  "schema_version": "wmkd.passive5-shared-bc-zeroprint.v1",
+  "method": "ZeroPrint",
+  "experiment": "Bc",
+  "run_id": "passive_shared_bc_20260910",
+  "parent_run_id": "passive_shared_bc_20260910",
+  "status": "COMPLETED",
+  "student_fresh_reload": true,
+  "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/passive_shared_bc_20260910/final_model",
+  "frozen_protocol": {
+    "official_repo": "shaoshuo-ss/ZeroPrint",
+    "official_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0c",
+    "query_manifest_path": "/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/zeroprint_humaneval_2.json",
+    "query_manifest_sha256": "72fc6cf6c25e2d955178fa90eb765afbc790bd5d576515447c86ced95149019c",
+    "perturbation_manifest_path": "/root/autodl-tmp/WMKD_Benchmark/results/zeroprint/experiment_a2/protocol/perturbation_manifest.json",
+    "perturbation_manifest_content_sha256": "79c189d042e0dd05dd97effc6a377380b823046d35906b395473a14ea78dec36",
+    "generation_config": {
+      "max_new_tokens": 512,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "top_k": 50,
+      "do_sample": true,
+      "max_input_length": 512
+    },
+    "seed_policy": "1000 + input_index*1000 + repeat",
+    "generations": 200,
+    "mpnet_path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2",
+    "ridge_alpha": 0.001,
+    "metric": "rescaled_Pearson_correlation",
+    "threshold": 0.6793505996465683,
+    "positive_rule": "score > threshold; tie is negative",
+    "calibration_reused": true
+  },
+  "reference_fingerprint": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+    "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+    "shape": [
+      589824
+    ]
+  },
+  "student_generation": {
+    "model_id": "WMKD/Passive5-Shared-Bc-Student",
+    "role": "student",
+    "generation_count": 200,
+    "generation_log": "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/passive_shared/native_detector/zeroprint/student_generations.jsonl",
+    "generation_log_sha256": "102cf544f4a82d33b587a55ae2c7b3b2bc2f720786c06e06487eeeed926836c7",
+    "generated_tokens": 91710,
+    "mean_generated_length": 458.55,
+    "max_length_saturation_count": 137,
+    "runtime_seconds": 945.8163554668427,
+    "peak_vram_bytes": 6983595520,
+    "fingerprint": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/passive_shared/native_detector/zeroprint/student_fingerprint.npy",
+      "sha256": "3ebb73a1008856f38d34c01733e7f8bd326d5d2e8d60cc80770eee424b22029c",
+      "shape": [
+        589824
+      ],
+      "dtype": "float32"
+    },
+    "per_query": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/passive_shared/native_detector/zeroprint/student_per_query.npy",
+      "sha256": "70a7bc1ae178e1ae92eb57d1231675f6952e1bc16f3ece66104af0312624dfeb",
+      "shape": [
+        2,
+        589824
+      ]
+    },
+    "errors": []
+  },
+  "score": {
+    "raw_pearson": 0.85409015417099,
+    "rescaled": 0.927045077085495
+  },
+  "threshold": 0.6793505996465683,
+  "positive": true,
+  "runtime_seconds": 950.0202791690826,
+  "completed_at": "2026-09-10T07:11:45.540121+00:00",
+  "errors": []
+}

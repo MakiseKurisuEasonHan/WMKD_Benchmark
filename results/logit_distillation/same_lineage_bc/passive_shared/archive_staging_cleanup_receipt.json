@@ -1,0 +1,44 @@
+{
+  "status": "COMPLETE",
+  "time": "2026-09-10T07:34:22.859404+00:00",
+  "deleted_exact_files": [
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/bc_ctcc_preferred_transfer_20260910/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "691d5b8772904702861e597b9dea1eb1fe22d489366742946b5147f99498136a",
+      "inode": 32215099288,
+      "device": 53,
+      "nlink": 2
+    },
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/same_lineage_bc_ctcc_preferred_archive_20260910/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "691d5b8772904702861e597b9dea1eb1fe22d489366742946b5147f99498136a",
+      "inode": 32215099288,
+      "device": 53,
+      "nlink": 2
+    },
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/bc_ctcc_preferred_transfer_20260910/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "bbc27f25554edec2e50195387d8f294da7accda885c493f2cd62c15131b57af3",
+      "inode": 32215099289,
+      "device": 53,
+      "nlink": 2
+    },
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/same_lineage_bc_ctcc_preferred_archive_20260910/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "bbc27f25554edec2e50195387d8f294da7accda885c493f2cd62c15131b57af3",
+      "inode": 32215099289,
+      "device": 53,
+      "nlink": 2
+    }
+  ],
+  "space_before": 2040012800,
+  "space_after": 8465547264,
+  "actual_space_freed": 6425534464,
+  "canonical_ctcc_final_on_gpu_sha_verified_before_delete": true,
+  "verified_private_archive_preserved": true,
+  "no_scientific_evidence_deleted": true
+}

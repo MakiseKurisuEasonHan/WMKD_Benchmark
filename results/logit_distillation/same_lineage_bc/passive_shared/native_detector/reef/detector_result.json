@@ -1,0 +1,46 @@
+{
+  "schema_version": "wmkd.passive5-shared-bc-reef.v1",
+  "method": "REEF",
+  "experiment": "Bc",
+  "run_id": "passive_shared_bc_20260910",
+  "parent_run_id": "passive_shared_bc_20260910",
+  "status": "COMPLETED",
+  "student_fresh_reload": true,
+  "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/passive_shared_bc_20260910/final_model",
+  "frozen_protocol": {
+    "probe_manifest_path": "/root/autodl-tmp/WMKD_Benchmark/results/ownership_protocols/reef_truthfulqa_200.json",
+    "probe_manifest_sha256": "8f63355817f726faea792edcc393ef9c6d32e07449bb66bbdefeb201e636599f",
+    "ordered_rows_sha256": "ea3f17daffe6b9e82ffcb5f43b1efe0e88483708c6261f532ed007555ac6c79f",
+    "sample_count": 200,
+    "layer": 27,
+    "semantics": "exact raw decoder-block forward-hook output[0] at last token",
+    "metric": "centered_linear_CKA",
+    "threshold": 0.4546738923165847,
+    "positive_rule": "score > threshold; tie is negative",
+    "calibration_reused": true
+  },
+  "reference_representation": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/reference_reload_a.npy",
+    "sha256": "99ba4449d578a39a6709fc37e4e0ae709eb3b3f20d0e0a76633411e69705d525",
+    "shape": [
+      200,
+      3072
+    ]
+  },
+  "student_representation": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/passive_shared/native_detector/reef/student_representation.npy",
+    "sha256": "2b9e29fdb93f34e7361dca6c2a849a207f0e7bd11cbd4b544008f5f1de690348",
+    "shape": [
+      200,
+      3072
+    ],
+    "dtype": "float32"
+  },
+  "score": 0.9859362800187441,
+  "threshold": 0.4546738923165847,
+  "positive": true,
+  "peak_vram_bytes": 6446628352,
+  "runtime_seconds": 5.603113889694214,
+  "completed_at": "2026-09-10T06:29:47.850182+00:00",
+  "errors": []
+}

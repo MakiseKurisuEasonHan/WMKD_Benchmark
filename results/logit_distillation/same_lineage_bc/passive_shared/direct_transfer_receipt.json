@@ -1,0 +1,1535 @@
+{
+  "status": "PASS",
+  "pid": 20861,
+  "files": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/reference_reload_a.npy",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/reef/experiment_a/protocol_compliance/reef_a_protocol_cont1_20260901_202500/reference_reload_a.npy",
+      "bytes": 2457728,
+      "sha256": "99ba4449d578a39a6709fc37e4e0ae709eb3b3f20d0e0a76633411e69705d525",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/artifacts/zeroprint/experiment_a2/zeroprint_a2_20260902_060000_cont2/reference_a_fingerprint.npy",
+      "bytes": 2359424,
+      "sha256": "580ece1cf0c2c6d498a8e4abd212f19601752354467071735307f1d55aea6b11",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/scw_a2/role1/instruct-prefix-64m.jsonl",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/datasets/scw_a2/role1/instruct-prefix-64m.jsonl",
+      "bytes": 67105514,
+      "sha256": "7941ff7400a0d24e626c3e4d95bb56698da645f7ce471f737fd34dd95bd22600",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/config.json",
+      "bytes": 571,
+      "sha256": "d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/config_sentence_transformers.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/config_sentence_transformers.json",
+      "bytes": 116,
+      "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/modules.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/modules.json",
+      "bytes": 349,
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/sentence_bert_config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/sentence_bert_config.json",
+      "bytes": 53,
+      "sha256": "cabfacded9272091a06ff595a46ef027a76ddf4ac9e77d0fcf11c605748f1667",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/special_tokens_map.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/special_tokens_map.json",
+      "bytes": 239,
+      "sha256": "9ef40e9c160511bf3f46ceb71f1471dafa1e9473d5120bb816c36b2efa75f8ba",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/tokenizer.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/tokenizer.json",
+      "bytes": 466021,
+      "sha256": "b8be2c30ba5dd723a6d5ee26d013da103d5408d92ddcb23747622f9e48f1d842",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/tokenizer_config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/tokenizer_config.json",
+      "bytes": 363,
+      "sha256": "67f2ff7e223518e729869bb3a70f0caf8368fe549383fc11cfe2dfb42fffc268",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/vocab.txt",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/vocab.txt",
+      "bytes": 231536,
+      "sha256": "dbd90cb94e2247bd4d4ccaecbf616d2290e66691d7d5e5bb81f063c2d0649ada",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/pytorch_model.bin",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/pytorch_model.bin",
+      "bytes": 438011953,
+      "sha256": "a8fd120b1a0032e70ff3d4b8ab8e46a6d01c2cb08ffe7c007a021c1788928146",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/1_Pooling/config.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/models/auxiliary/all-mpnet-base-v2/1_Pooling/config.json",
+      "bytes": 190,
+      "sha256": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/ownership/awm/configs.py",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/sources/ownership/awm/configs.py",
+      "bytes": 25695,
+      "sha256": "93b63c8c345338eb175aadc2a251aacbde956f1dbeedd184f253319fe0d44668",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/ownership/awm/main.py",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/sources/ownership/awm/main.py",
+      "bytes": 12378,
+      "sha256": "5a4f85a37e9f44cd946789fbb91c7e768089d457fdeb2c4b9a6d91ca0219badf",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/sources/ownership/awm/similarity_metrics.py",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/sources/ownership/awm/similarity_metrics.py",
+      "bytes": 22774,
+      "sha256": "908f463ac6bb68b78a36d4adc4847548eb13b0554e92d3edc2f45fc5e80a73d7",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/fingerprint_manifest.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/fingerprint_manifest.json",
+      "bytes": 47108,
+      "sha256": "27b31d7e37e276f1aecfc18d9c0999d719a306a52881e4f51f97791ec8444ca0",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/reference.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/sequences/reference.json",
+      "bytes": 118729,
+      "sha256": "f77364bc6d72882a3f64b442fc71a612b1f2ef747b84bffa2cebdf71070f9716",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-000.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-000.json",
+      "bytes": 2194,
+      "sha256": "c75857838a132535283d8fb71ca8e5ad0def0f1113449079e40ba902a82ba5d7",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-001.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-001.json",
+      "bytes": 2190,
+      "sha256": "34df665c49d16437f4013f6e7809b960f92b00303b1cd9f7364307ae2f4fcca2",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-002.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-002.json",
+      "bytes": 2163,
+      "sha256": "6ab9513b96f744d7c8d6ddbcb7795c3e7f072b6c02c4d2ec68080b1002cd699e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-003.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-003.json",
+      "bytes": 2166,
+      "sha256": "c32f8d31d83e838bd3971f428361fa7efb63b51ab37533dc62945b7d1829603a",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-004.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-004.json",
+      "bytes": 2247,
+      "sha256": "cd63b85e7e3f3fd07f56cc398f1b42b223a0fad53805bb2a73c033820cb22a86",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-005.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-005.json",
+      "bytes": 2235,
+      "sha256": "68a930bc5af4bfd729e9fd35e1a64cecf9b08e34098adce4820ef44b6b56b5be",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-006.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-006.json",
+      "bytes": 2174,
+      "sha256": "b6bb2fd03dfa7c16d94a58c9f4757d45e81f6b2c718786d9e2bfd4affec3f52d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-007.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-007.json",
+      "bytes": 2218,
+      "sha256": "c0f36bc73b7b4f8f867ecdb58d915a3893c12d257632fca0d22db9dcc4c77ab0",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-008.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-008.json",
+      "bytes": 2196,
+      "sha256": "8b400cec86f41e53afb8c684cc0ec7d99fb10dbed0979f428bf6cdeee1f096c9",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-009.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-009.json",
+      "bytes": 2171,
+      "sha256": "15104f9216eb86e97d0694c066cd0ef275e1e60a5834946609898e1a37dde7e4",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-010.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-010.json",
+      "bytes": 2142,
+      "sha256": "4bd9b2ee3d3f92c96fc53c5bfb4eeb012dd2b428a4d6252bfb6b719d84718e24",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-011.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-011.json",
+      "bytes": 2274,
+      "sha256": "34e301dd04d0c21b792875e15f07f4ef40289de450922e3ff5fd0f3959853967",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-012.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-012.json",
+      "bytes": 2235,
+      "sha256": "e7939efc357ac9c6e43792ac07ee04cac3943b4a7aa18b3529719bf1a2bc7117",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-013.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-013.json",
+      "bytes": 2213,
+      "sha256": "e9aa2f0fda6937615626580085e9f04bcd045c4fe20031525caa92db48ccdd98",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-014.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-014.json",
+      "bytes": 2175,
+      "sha256": "1b7eb3f9653ad4143343f29d4d174620ab5f5b51694139c537af5ba4234a763e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-015.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-015.json",
+      "bytes": 2277,
+      "sha256": "95d09787ef03b55657bb7aa43d0d26d261d5fefa7605043179caef1388ea2fbe",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-016.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-016.json",
+      "bytes": 2215,
+      "sha256": "c80aafa5cdac53e4e3d4a2e6defd40d82718ac13c78f15b82430684354a34d56",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-017.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-017.json",
+      "bytes": 2198,
+      "sha256": "88dd9b772983cfd2266a12415b2b7cc2c652682a5d09cc3a0dc4d374c311ec34",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-018.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-018.json",
+      "bytes": 2182,
+      "sha256": "aa6dead82a2fc5a285aed09c6603300ddf9da7773df3a497cecd1ebfd070ddb2",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-019.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-019.json",
+      "bytes": 2224,
+      "sha256": "eade6d245262e1e0c0f76499e10d53a38d52710b3a6318ec1ebbc576db57243a",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-020.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-020.json",
+      "bytes": 2228,
+      "sha256": "e31d3beb8c61fab65e889205956e69e10524e73e7dcfaec0af89d7eb0d8ae957",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-021.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-021.json",
+      "bytes": 2167,
+      "sha256": "7183050d17cf55249525648235ffa9abfc583b3d1464d0486d516a5f9e548888",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-022.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-022.json",
+      "bytes": 2197,
+      "sha256": "aaa0be303e6a45bbac4b67143495b791d8ba1a71143639b7233ba702b6fc1546",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-023.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-023.json",
+      "bytes": 2257,
+      "sha256": "d01517e74fb171c26ac843c99373b84d2c92544f01ee51f1c5b5606aed323fa9",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-024.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-024.json",
+      "bytes": 2205,
+      "sha256": "87dc5c61efc5f7e96fe2a346371deda8dcf45c18b8de04d2137e5e63590b7daa",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-025.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-025.json",
+      "bytes": 2181,
+      "sha256": "56692839b71394d3b9c5c09e3754cef96ad35b2702438fa26e6f342f39dcbc18",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-026.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-026.json",
+      "bytes": 2183,
+      "sha256": "dbe45c31ec6695b7ac9f8fab9c7be8cd9bc74c48b8714b995b7a47357b8c2050",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-027.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-027.json",
+      "bytes": 2201,
+      "sha256": "8d586064bab778e08cb7e469815576e4904b3adfe6e298a03e467c2fa1078184",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-028.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-028.json",
+      "bytes": 2220,
+      "sha256": "3fa12a616684ed800f3dae9fb7a6ed8ec539a95162e81bd68260dae6c304fb23",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-029.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-029.json",
+      "bytes": 2167,
+      "sha256": "a9d2a0b300fca5fe6327a78b882d315cc99402eedf83f31cc8ac46bf7584576f",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-030.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-030.json",
+      "bytes": 2191,
+      "sha256": "c90035ff3fd6ae65fdfc4e1a47f470c8ffc7705dc3b27fbe26669a2c6bdf9e92",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-031.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-031.json",
+      "bytes": 2208,
+      "sha256": "8e645cd41e535862a1208e4898ec2afd167f781020b8695da5f04bc2c35eb511",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-032.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-032.json",
+      "bytes": 2193,
+      "sha256": "a7fb8f947550999878ea86e4b0a8c75436abf38fd6071ac5a35c3a870388f15a",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-033.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-033.json",
+      "bytes": 2228,
+      "sha256": "421a1545bcd21849d7fdb40b96a6a9a15a84806d9d1375581b9a7fe42e3ba8b8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-034.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-034.json",
+      "bytes": 2202,
+      "sha256": "d6653c88ff2780c336172b863b7bd7b95705f961d9e189c0bf46e058f946d759",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-035.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-035.json",
+      "bytes": 2192,
+      "sha256": "f6e882e7ffb7a1787d75e598b896f29c2144b4303cff88df813aa127861b29ac",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-036.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-036.json",
+      "bytes": 2234,
+      "sha256": "5d9e96be0cdd6383d81f1815a644f0c660e0d05b4901f53764c48b109f4f7918",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-037.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-037.json",
+      "bytes": 2260,
+      "sha256": "d0b456b1aa72bb853b5bf7e96a58a6ecdab729031d3b33384e0a6e91029353e4",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-038.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-038.json",
+      "bytes": 2199,
+      "sha256": "5d8fefa8dd526816dc81ea24b294ca0ad6d632da880a414bfccad9473764ae6d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-039.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-039.json",
+      "bytes": 2127,
+      "sha256": "8519649dc35836b7e073026d0eb8369504f77b23c14dbfe70513affb42e8ad82",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-040.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-040.json",
+      "bytes": 2164,
+      "sha256": "365315d09d191f6887dfa638245c088c7e13545b83ac2a49e121ed22faf96888",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-041.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-041.json",
+      "bytes": 2195,
+      "sha256": "a6709d6b70c032807693ede81ad66530c54ca4c62df5fe6c79f28a8ea3da0041",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-042.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-042.json",
+      "bytes": 2250,
+      "sha256": "0f9b7a51c55ffc268f91815da51f7d4a605d7d841d6dc185d9a78f5f0e45eb07",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-043.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-043.json",
+      "bytes": 2172,
+      "sha256": "b70225f009d3c02adf8e119029c97443f869862c55e8b5b5c72e34d4cd30a165",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-044.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-044.json",
+      "bytes": 2165,
+      "sha256": "1d0ebfd2a76c8a2d55d3a6c5bed9debfac828ebd8167065426f15d00bdca678e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-045.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-045.json",
+      "bytes": 2249,
+      "sha256": "a9f847633034cecf8a6c7ce67f858212a3eee92c49a9be121cab07fe2c0afc0e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-046.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-046.json",
+      "bytes": 2136,
+      "sha256": "82d0b56c7f44c978a343fba17a4aa92cddf327e683c999ea07906a4bac48ef04",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-047.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-047.json",
+      "bytes": 2158,
+      "sha256": "dc9db833c7cebad247a022b37e47a223c400a3a6bb09efcf6a832a55dab4944d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-048.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-048.json",
+      "bytes": 2179,
+      "sha256": "a8ce64a59d0936227c5dc612a193e4a7b11840ca0e656d37d7502b0cc213172c",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-049.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-049.json",
+      "bytes": 2186,
+      "sha256": "0196f079f163164ae2ad6d71d032e7729bc1d319a693d45675f4246f168d7771",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-050.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-050.json",
+      "bytes": 2209,
+      "sha256": "136894928bef7525edbb3da99b16ee5bac9bce2b7aa27bdb2fe7decd3d424677",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-051.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-051.json",
+      "bytes": 2307,
+      "sha256": "c144c92aa5aa60ab4449ad2d126a5a1d67195d87222e795794619ce1946e0d0d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-052.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-052.json",
+      "bytes": 2172,
+      "sha256": "dc765090ec09e90276458e25e84e6c802d6683b6621b1892630d5c63120ea5f2",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-053.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-053.json",
+      "bytes": 2201,
+      "sha256": "0226f5b861d5c957f2a16b392f45e8c86a8a8242b95dced773be99508385bb41",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-054.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-054.json",
+      "bytes": 2207,
+      "sha256": "b6f8cebc089f669797fd3bfb3e052f1c74b7f7bf703040be25aa363892ef8b20",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-055.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-055.json",
+      "bytes": 2183,
+      "sha256": "274ffe8b63191532b83ce52eac444b466ddd76ce197852da2791e584d32678a9",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-056.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-056.json",
+      "bytes": 2149,
+      "sha256": "b42d56c6e135c78b87c268c2a145f88f2041baf5ede06b8c7ef5adfc3a7c0dc5",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-057.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-057.json",
+      "bytes": 2283,
+      "sha256": "42932b507165948ff83433d0d21f9d2a7f23ee0adffd69546fc28f5b23102613",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-058.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-058.json",
+      "bytes": 2220,
+      "sha256": "50603fe281608eba6ee03fb09789ad0b409d019efd08232d9c4fd6f363f15c22",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-059.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-059.json",
+      "bytes": 2138,
+      "sha256": "6e521e4dc5de8cc70199133af18481bb5b67f46b44bd8b3245f719fbc291b193",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-060.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-060.json",
+      "bytes": 2145,
+      "sha256": "6ac01fd7b9bf6c39d8713fc59e2ddbf07a94541fdd13ddc480a28c00f3070c44",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-061.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-061.json",
+      "bytes": 2278,
+      "sha256": "0c29f2b469ff82d28dd7b2ad039e1b4f4e3503d688aa61f499930df850b6517c",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-062.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-062.json",
+      "bytes": 2209,
+      "sha256": "eca65d5688054af37e2e8157020032c2e795316d9a6a0077777a090fcf67f5e2",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-063.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-063.json",
+      "bytes": 2225,
+      "sha256": "0c1193071f96e35e47d554096a4e5a3032607d268a037e07a9784a9733c6c2d7",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-064.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-064.json",
+      "bytes": 2209,
+      "sha256": "0d4bb65c9d4298ef1a53bb7d73425452a587f7c855197a0ebce67c5f9fc2f5a8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-065.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-065.json",
+      "bytes": 2201,
+      "sha256": "fca471879ab35722cd6550a88c544a0683ca74ef51aaa5b5430b7bade081973e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-066.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-066.json",
+      "bytes": 2204,
+      "sha256": "3edff8e31cae4bfa6797554806f44189aba3cf6138548af82223211e930eecbf",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-067.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-067.json",
+      "bytes": 2216,
+      "sha256": "226df45d6f1a992e61eeb484238d9bbd41f665614e15a6e3fb77c99c50c81b95",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-068.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-068.json",
+      "bytes": 2207,
+      "sha256": "bf824dae916116e9bedace9034e09c2b37be37aa0f45c76712ff0f34d2b876ea",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-069.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-069.json",
+      "bytes": 2240,
+      "sha256": "2156bb24a18ca131750e2b2dc52debf68d6828f563ba1707c01aa306154d15ee",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-070.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-070.json",
+      "bytes": 2189,
+      "sha256": "29833f5c51959af798a7fd9bc7e77dffb60f355afa0184187aafe5cefc5ae667",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-071.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-071.json",
+      "bytes": 2177,
+      "sha256": "9d633f9f6e15a3098790703aaacae430bc655632c67c47720318205707efe61d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-072.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-072.json",
+      "bytes": 2374,
+      "sha256": "9471a4b481c44db5a368cdd665d2f407b495c6ebf2f05efeac7f2e43a426a1ac",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-073.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-073.json",
+      "bytes": 2150,
+      "sha256": "1ded665e376803a531575320f673897c817fecacac4ce26df36aca1fbe680ae8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-074.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-074.json",
+      "bytes": 2182,
+      "sha256": "d573011c5339236726c6fff87a22f70e8fb880c2cc628e3540cb11524e46d3cc",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-075.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-075.json",
+      "bytes": 2232,
+      "sha256": "573118dcc548fe1716b5a9848f6e4f1c68572ae2eab5b8d97642f2aa12e4db8d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-076.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-076.json",
+      "bytes": 2268,
+      "sha256": "c7f63fdaae28ff8c5febd3b18573a48820fbfb802a80feca5d46e32515a4aa91",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-077.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-077.json",
+      "bytes": 2194,
+      "sha256": "213b9f59c8694715bf0b2f885ebc4cdf82282b10d0179f049b8465655a8b554d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-078.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-078.json",
+      "bytes": 2255,
+      "sha256": "ce7dacb917ac70618770f0d913fe1f3091e65118ea245061dad75a245e1b1217",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-079.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-079.json",
+      "bytes": 2203,
+      "sha256": "2c9365f0209cd079416626ace28cc610951ca8705d7572efd103c604de903305",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-080.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-080.json",
+      "bytes": 2167,
+      "sha256": "263c53bce64835f18166b08a62e930a4dc7a21af8b96457c3f4699d823ee995c",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-081.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-081.json",
+      "bytes": 2217,
+      "sha256": "40131b28990eb7aa9bb0a9b3e23256656cc2422785351d470883e87f1e7ec2c9",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-082.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-082.json",
+      "bytes": 2171,
+      "sha256": "98ca9acd67ef02f7289ce40ce313ada1bd5804cc4ae534601491d3c3b67d8764",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-083.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-083.json",
+      "bytes": 2201,
+      "sha256": "fe6e9b43d8b0b177554ec1d718debfc6e84c97c25435d5847b25e2da5571cead",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-084.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-084.json",
+      "bytes": 2196,
+      "sha256": "f3b0a09b5e18a4f9abc9e6e20344405acfcc926ba237e6da2804d3c75c108fba",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-085.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-085.json",
+      "bytes": 2145,
+      "sha256": "9676b5f2f11370f4753b5febc872936cba38423cd6faaf5cdfdfe763ce584d01",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-086.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-086.json",
+      "bytes": 2147,
+      "sha256": "87038c5ffe8747847702e86a1f850e9e2ef2f3118c12fd522a5ef42712577116",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-087.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-087.json",
+      "bytes": 2194,
+      "sha256": "a32779eb2aeef93818cd5acede3f1ea00fcf48c1baf19752c3782b594b3fd15e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-088.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-088.json",
+      "bytes": 2163,
+      "sha256": "4b2f8de237b3c4e774f3e15111478ba291edd5aba2dab29ac6ced400e866a496",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-089.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-089.json",
+      "bytes": 2209,
+      "sha256": "0440480f94722645074dc082def7a2cf7c93a05fe447f962abb56e2250a46f44",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-090.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-090.json",
+      "bytes": 2237,
+      "sha256": "31a9259bf854d6d8d4ae2b2adcbd06dc1c9d41d1b69ddb1e394eb39ecde8307b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-091.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-091.json",
+      "bytes": 2197,
+      "sha256": "2bf8e948ac57d1398cb8b9e9a0a53c6152384d3250f0c4c506d170a87fb0c3a8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-092.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-092.json",
+      "bytes": 2163,
+      "sha256": "48099a55d5cb576613d140d74be8fdc41172a781776c4995141d927fa07c2fc8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-093.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-093.json",
+      "bytes": 2173,
+      "sha256": "93641e8396f68bffd9c5f02b0e94de40ca856bb75f210c67aba78210fc6ed466",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-094.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-094.json",
+      "bytes": 2220,
+      "sha256": "cf386cd035692eb4b89df9a6dad50d92679834a211b81fc0e31b7843eb5f147f",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-095.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-095.json",
+      "bytes": 2218,
+      "sha256": "3e01bbaa5881a813d1319964226623f28de1a4205cb1c44c0d1e0a1e57543c12",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-096.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-096.json",
+      "bytes": 2254,
+      "sha256": "e947b70ce229eca771ea058de92330d4d5cf64cae27e3df53cdc1e0e932f0dc8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-097.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-097.json",
+      "bytes": 2168,
+      "sha256": "84c384f46f39bab844db194a69b24af4723b2791c3f37dc0e5a88215ba58560b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-098.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-098.json",
+      "bytes": 2229,
+      "sha256": "e1c39f2c4aad0d910a0ccc2b5bd6eb8b1874f904a893030087f1932f7323e695",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-099.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-099.json",
+      "bytes": 2233,
+      "sha256": "806da0d208c4bc0f347c5a6cd5372c1120fc9c03af06eaaff7636ff27353ffe1",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-100.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-100.json",
+      "bytes": 2229,
+      "sha256": "a480cb1f65c34e829e9355c97f26febdd7447575ffa93e942ec667a92868ffaa",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-101.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-101.json",
+      "bytes": 2192,
+      "sha256": "1b365d25f1a2e447fd4758f53b9c8dba31cb0cadcea46cb139249feae031698c",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-102.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-102.json",
+      "bytes": 2225,
+      "sha256": "4934743fa486b4c8db8860ade3de934155777b81ca7bad4a98d5772f0cfb7823",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-103.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-103.json",
+      "bytes": 2272,
+      "sha256": "3ede3ed2634b4e4fcebadc0977f8999cfc657155e19ada31e37866d8214a4d43",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-104.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-104.json",
+      "bytes": 2211,
+      "sha256": "1dbc7e6932966595a56c40134f17403c35550f5a97e6d6955a926e8ab6953c67",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-105.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-105.json",
+      "bytes": 2179,
+      "sha256": "7b0a04328f39381f393af43ccb1a5352ffae30ec59e8427b459b8beda854e114",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-106.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-106.json",
+      "bytes": 2160,
+      "sha256": "4168cf3ce3327f5afa357ca36434134dc1c0d8dbb5072ce1c7408bd2eb4a5895",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-107.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-107.json",
+      "bytes": 2190,
+      "sha256": "ff9116c860b3598d335c63b24ac76f8957799e81947fd08f9016eac49913c589",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-108.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-108.json",
+      "bytes": 2209,
+      "sha256": "0107fc384024681a4b513d09c3f28d2af048781c01da6d58cef2c879cebb518f",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-109.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-109.json",
+      "bytes": 2200,
+      "sha256": "8de334537c6275df4bde79ee695d4a646f69571d23a5ee8aeb832e1d82edafb9",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-110.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-110.json",
+      "bytes": 2176,
+      "sha256": "c06339d4f611b8b4e41d024b024eb5e22079c8eee89e32d4f7a9cb8a9409ea0d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-111.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-111.json",
+      "bytes": 2214,
+      "sha256": "5328f441714e431a6711654ca6ce26c9d9e72a3ba0d9c924d37e525a4d89c294",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-112.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-112.json",
+      "bytes": 2197,
+      "sha256": "b52d9828ee683f16fe434d167e5f534c1b9f0b0b28bae1c1baa59f27d52b80ed",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-113.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-113.json",
+      "bytes": 2180,
+      "sha256": "045fbaceaccca76ee6e7b35f2ebce9961ecc957edc69c192160ada42a80284cc",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-114.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-114.json",
+      "bytes": 2172,
+      "sha256": "908b017a78ae71538071f27985a89640f5174ad35719d46a08c89f20a21dc30d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-115.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-115.json",
+      "bytes": 2246,
+      "sha256": "28203ef8c8fabdb10cf76f3f1df7eec9434cb4d6b86defcf05b79735b606b009",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-116.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-116.json",
+      "bytes": 2213,
+      "sha256": "2db81d56bed41fc3227370a978918d38b57a45a73553ccae4d60dadcc75ed143",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-117.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-117.json",
+      "bytes": 2150,
+      "sha256": "5cd694e00d3beb6cf4e15ca6fc00a58a131d94829d8c2ced3ac21bd7a9eed52d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-118.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-118.json",
+      "bytes": 2205,
+      "sha256": "684468c39804a15fff00f692e426989caa84b01f98ad162883c05f6017185e3c",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-119.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-119.json",
+      "bytes": 2189,
+      "sha256": "7fa0fe59a184276d0e08fbba9d6d4abc6403901931d921214dbfcce9b5d6fdc0",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-120.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-120.json",
+      "bytes": 2195,
+      "sha256": "277f914d418caf2f8fe62b893adbc54356420f298f56a9ccf7bb0616b812aaa2",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-121.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-121.json",
+      "bytes": 2175,
+      "sha256": "9a22d4fbc45fa57719c7311f0c261bdd6d42ca0373ec6b57f6c24416b95c9353",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-122.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-122.json",
+      "bytes": 2204,
+      "sha256": "d8fd82d40caabc6838f08186d5a5cf2df9e002f139de3e4de277d0dc04270cf0",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-123.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-123.json",
+      "bytes": 2170,
+      "sha256": "c93adc595d31594039f2affea0823e3b072717ca47f635dbd5c7e2de771d8436",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-124.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-124.json",
+      "bytes": 2194,
+      "sha256": "b2e0ad88ef2cb5499daedbbd7dc4799e7b9d2eedcd519ca1743878d7b3e761e3",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-125.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-125.json",
+      "bytes": 2179,
+      "sha256": "ccdb18bbca23de4d92e89c86d6719e6e24ec41d32acb8775299e33ab6ffa94c0",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-126.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-126.json",
+      "bytes": 2190,
+      "sha256": "c50fcc916b45a2e358a216c80e55dc541a37db53acbcdc86101c768864405e42",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-127.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-127.json",
+      "bytes": 2218,
+      "sha256": "65c06425357765c6e29734f7e63d79975d70e28083870565e3cd6bf732cff44d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-128.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-128.json",
+      "bytes": 2249,
+      "sha256": "e4e1a7d9baae67b02e6a56b2a166a3f40017bf575ed69586219d80f1ff25e3bd",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-129.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-129.json",
+      "bytes": 2167,
+      "sha256": "71b32152e87cd4af7b1c41d3600bacaa01b9d1e891f75c6646287c963a6f719c",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-130.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-130.json",
+      "bytes": 2231,
+      "sha256": "f6bbbec2db5b281328613d29f1e311cd7121b2b94d5a345f570c5e406d7d9c0b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-131.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-131.json",
+      "bytes": 2135,
+      "sha256": "cd40b313d4473d7338c258f4c7cdfc85a837eb7e192dbdf8426cad06bdc494ce",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-132.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-132.json",
+      "bytes": 2147,
+      "sha256": "6bc69490dfd5735062f252b27d05a7b0349e429cd99ef75e31a848f857156acf",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-133.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-133.json",
+      "bytes": 2196,
+      "sha256": "a356a6b271c6c017f31e10a8bbb073391f4d0b0926575cdd9e32d350275a0b99",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-134.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-134.json",
+      "bytes": 2211,
+      "sha256": "e05b612bceb6e138e986ee0a64bd33502d1884e7d19ba1d0ea1eef6fcbd3a564",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-135.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-135.json",
+      "bytes": 2206,
+      "sha256": "7c4fdfbf42614b7c73a5016432a5b5d2b43445f35f94f28339f09f676a922fce",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-136.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-136.json",
+      "bytes": 2160,
+      "sha256": "034ea104d37e32aed6fcbf356116dc55b933749ba423d921f2bcbfd990b5dd23",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-137.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-137.json",
+      "bytes": 2195,
+      "sha256": "df1ee5067e4c6c669bc68e1376da29aaaef3b79f722837c9221c793fb47cb563",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-138.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-138.json",
+      "bytes": 2154,
+      "sha256": "f2046fa08d3268458fcd9a6a74f6f87c762cca74a866a0b707e52aa4a626ce2b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-139.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-139.json",
+      "bytes": 2202,
+      "sha256": "516642a22fa33679941d2f3fc72a0d43425efa2051b9c977d1e6d37fcc5325aa",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-140.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-140.json",
+      "bytes": 2146,
+      "sha256": "48089258720480e3a1e6e9dfd74a438be6dba002aa7ff9cee26a1d7f37de6168",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-141.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-141.json",
+      "bytes": 2156,
+      "sha256": "5d544471a34da6147d1d2d0e21be881599cbaad74e40d36f6782886ff1e52c89",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-142.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-142.json",
+      "bytes": 2149,
+      "sha256": "4838b6b27a1acfbb7c64687b45b49dc9d8dea8f51bd7c9defbf50c45debe3604",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-143.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-143.json",
+      "bytes": 2166,
+      "sha256": "0373d2de5924430ed42bdf85b9d19d7fa559c1b61d137aa12b66e98f3bece0ff",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-144.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-144.json",
+      "bytes": 2161,
+      "sha256": "a7048ff452bf7445e9e4c1e625a9ea5552f08bc8d9ecb9e229e0c32eaf2c437f",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-145.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-145.json",
+      "bytes": 2202,
+      "sha256": "3a809d56a95c9ed01454d09dc288fb081eec45a1d9f3ad6034e01558a296b0e1",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-146.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-146.json",
+      "bytes": 2205,
+      "sha256": "2696d57653447b1992172a42706baff09402233feae83781f97146f0a927d005",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-147.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-147.json",
+      "bytes": 2145,
+      "sha256": "89ba9ddbea7c4aa3b976a877dff6f3a123be824d99471aedb90422b2e5cdcbd1",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-148.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-148.json",
+      "bytes": 2189,
+      "sha256": "5bd6a7f8cbcc4932b4785b2e77bbdd6fb4666425a487b9dec2950d660bac81a8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-149.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-149.json",
+      "bytes": 2252,
+      "sha256": "7198e1378c93385c0134f1252b0ebb7e813dcc3d15ad652165ca9e8cacbe644a",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-150.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-150.json",
+      "bytes": 2154,
+      "sha256": "a840e8f15254bf8ef7bc4d1dbb1ea35aaf649d35053c8d8cfc7eb195346635c8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-151.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-151.json",
+      "bytes": 2192,
+      "sha256": "477d39dd2cd535146e5fb22fed1a1042faf1f30f344aeed756ff3686f4e9ebbc",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-152.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-152.json",
+      "bytes": 2189,
+      "sha256": "39cb6e9faf7b2232f033d1dba18ff48d14f05a9a4070b3be7116f398cf399746",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-153.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-153.json",
+      "bytes": 2190,
+      "sha256": "301f253e71377c873499f9231c7126b9fe5a8935ade6f4a80a190bc665a01e18",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-154.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-154.json",
+      "bytes": 2168,
+      "sha256": "63f190ab51ca29d8b3524a8ff46306dcc5bcec20f524ccccce0cfd95d0c46611",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-155.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-155.json",
+      "bytes": 2203,
+      "sha256": "0391df5f467bf791b5bd2c7f2e5ed0112156c657ee7a635fb8461f16f6640a8b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-156.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-156.json",
+      "bytes": 2180,
+      "sha256": "c153963beed3b964b70d2763aba3a97d1ee81998648775b0c6520eb0c162bf6e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-157.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-157.json",
+      "bytes": 2166,
+      "sha256": "0fd623fc0f735b57dc548d96a1c01bbaf0c01df5d74d721d4815ad38f0a7d667",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-158.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-158.json",
+      "bytes": 2166,
+      "sha256": "57ac2c57bf91556a90da4371412522ded83582e7113d9d0e1ebd416507672e95",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-159.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-159.json",
+      "bytes": 2181,
+      "sha256": "142f96735801d43b9f60b3be8863e11cd1c7aa2292086be315cf7a0455e1ac34",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-160.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-160.json",
+      "bytes": 2208,
+      "sha256": "c14699b24386e1bdcebdfce90f6608bf46b8d561cd90c25688db761ced380b9b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-161.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-161.json",
+      "bytes": 2246,
+      "sha256": "c42f0c9b48ef884b26a25c44a06df9e2f36e0c6d2068d0fc4779eac556e2959e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-162.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-162.json",
+      "bytes": 2182,
+      "sha256": "031f3606f194274f6a0e440a7b74a276f72b60a3a6f41e5b4ff163561a76d97a",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-163.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-163.json",
+      "bytes": 2191,
+      "sha256": "06306bda66d84138a50b27b7444d872e8116533bc941e77beee223de8fb3da55",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-164.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-164.json",
+      "bytes": 2226,
+      "sha256": "8d550195f6103150782c8af203dcd431b04a6e09e211e965fccdd34aab40d57e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-165.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-165.json",
+      "bytes": 2240,
+      "sha256": "058fe855b9d121ac6d70017166691776e525460830b6903e6003290feff72093",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-166.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-166.json",
+      "bytes": 2173,
+      "sha256": "d6f0932d44c01b1e78a323b6243bb8effb803745f1467085d3c9fa06c3096dd8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-167.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-167.json",
+      "bytes": 2206,
+      "sha256": "4346ed3da458488c283fa8f5a55a4545c29a4a8c24c11930cd6cd1c6bdc1c84b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-168.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-168.json",
+      "bytes": 2146,
+      "sha256": "4e23a8fc92fd8dc84ad59c7cbab360e2e19828e8a7d6161888cedc7dfabba216",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-169.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-169.json",
+      "bytes": 2169,
+      "sha256": "ad63ef2b610de4c84a005855e0f7cece3a551704012201d737fa6c83b5ce1b69",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-170.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-170.json",
+      "bytes": 2204,
+      "sha256": "1b0bcea8c4039c900fe14a5c5e052a9358cbd77d04bce98dd89e1dc20a6dabc1",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-171.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-171.json",
+      "bytes": 2201,
+      "sha256": "3263bab9695da46084055892bfcaf9f5a21fcd64efc2e34357d2b459f1cbc608",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-172.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-172.json",
+      "bytes": 2231,
+      "sha256": "df2c249f6234a40bce5e061d7d33619604b68ece2028d011b1f6331e700affe1",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-173.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-173.json",
+      "bytes": 2163,
+      "sha256": "a4be2e101fb737a79d0810655c3affe0f8dd425019ec11714a2ebc3fb0cb25e2",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-174.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-174.json",
+      "bytes": 2215,
+      "sha256": "af5bb7d83669b403a459b7512b4138f2766bb6cd7997ce1156ead885d7cb2df4",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-175.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-175.json",
+      "bytes": 2153,
+      "sha256": "2abbf8dce5cc385a5675810f70c3c5f1fb9f95d62f5b5de0419ad849c1df1698",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-176.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-176.json",
+      "bytes": 2152,
+      "sha256": "448efdec66827eebe18ee5202e70b4631ac6663e863331c9434394ea90874322",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-177.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-177.json",
+      "bytes": 2178,
+      "sha256": "45d93651dda7bf54889321ff6a3f7f23018db0311634d86c5f9b045620a94361",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-178.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-178.json",
+      "bytes": 2180,
+      "sha256": "984d72f364b30d8b9d6784c30544860fcffac7130004d5d353605d98c7bb84f3",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-179.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-179.json",
+      "bytes": 2139,
+      "sha256": "de3a96af7547c4163efc62ebfb136ebff4988b53819613a2473a680ed60b0fd6",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-180.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-180.json",
+      "bytes": 2202,
+      "sha256": "599a0deb8644bde4cd2f83bc56b2b1a6c4b0a2b464a8d4759ef2ff16441503db",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-181.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-181.json",
+      "bytes": 2188,
+      "sha256": "66e9dfa083834f6a909677d881a2fed43e4124034247572038e84e0184428a00",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-182.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-182.json",
+      "bytes": 2191,
+      "sha256": "a81496b9370e4332849ddedc415172405630867a2cb90104d2f328552b571e5a",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-183.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-183.json",
+      "bytes": 2269,
+      "sha256": "155d16d8cdcbed0131148e84ca17d8a05a097bc46146f664f2ca1878d916c355",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-184.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-184.json",
+      "bytes": 2195,
+      "sha256": "c9d0e1a2e0e81a307365886e9c0b2555ddee898c3290d1b80b0c4b36225e0304",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-185.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-185.json",
+      "bytes": 2255,
+      "sha256": "c403e4439220e39fd7410a33bce06c28769a4606104c5500f79cdb50ca0891d4",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-186.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-186.json",
+      "bytes": 2161,
+      "sha256": "1cdfd7d677a5d4de17dad6ec5543b52b2841eb976d38c0f6010977c9b99a746d",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-187.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-187.json",
+      "bytes": 2158,
+      "sha256": "13ad1dea40e6026db7d05f23a047a4bb1643eb7cf5129d35933d64b21149e1b8",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-188.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-188.json",
+      "bytes": 2168,
+      "sha256": "af95f1e7535a07d2bcc9679fcdabbebbfe81328bd25c099e2fc0ff5d082df938",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-189.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-189.json",
+      "bytes": 2211,
+      "sha256": "ec8707a5cf04c948e2631db057b22f854fc64bb26eae665f225a3ca2ee533759",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-190.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-190.json",
+      "bytes": 2201,
+      "sha256": "de0c35973bca27509998529e865e3b007c1c77fe17323dda3f26bc37c95f13cd",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-191.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-191.json",
+      "bytes": 2219,
+      "sha256": "49f0bdcf5472794632a3f2f77b0013368161396805d200e288dd4633fc6c52fa",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-192.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-192.json",
+      "bytes": 2230,
+      "sha256": "2ace35827c57281903dfec452c710c0f04af8110d39568e8500e48113d1095e5",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-193.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-193.json",
+      "bytes": 2253,
+      "sha256": "4591d1e0977025f55e1d470397f0384bb0a219ca0c54637e6e0e31949d7d746e",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-194.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-194.json",
+      "bytes": 2221,
+      "sha256": "29d8c3eaa4c4a758b9125ed236f9e2dbb015bbdec85471a2a2ae0ff70bda1494",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-195.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-195.json",
+      "bytes": 2169,
+      "sha256": "e42dde664940c4446c9da6f6c282d19ef6c7a32f6a6d1d4743a47c35fc95e780",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-196.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-196.json",
+      "bytes": 2199,
+      "sha256": "522854e38f0992fe126a31aaa48e2f2760c66a578a5b9a8fc7ae5b37e200aa1a",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-197.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-197.json",
+      "bytes": 2162,
+      "sha256": "c080206e13e478c0d8bc5d1c0f3f9459ac713a6f93b6e3e90449b5e25726f94b",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-198.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-198.json",
+      "bytes": 2213,
+      "sha256": "38ffeba2f1f9c09d3a77e6f00735ecb80c5ec01b885748eb4b16ba558d2c1efe",
+      "verified": true
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2_closure/llmprint_a2_closure_20260901_150051_cont1/llmprint-pair-199.json",
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/runs/llmprint/a2/llmprint_a2_20260901_064855/fingerprints/llmprint-pair-199.json",
+      "bytes": 2155,
+      "sha256": "6b0dcc83da1b8f44b94c3cf01aff0dc2ab28cff1c0c6633ab369194f79bfaadd",
+      "verified": true
+    }
+  ],
+  "updated_at": 1789018220.7431672,
+  "current_file": null,
+  "starting_offset": 0
+}

@@ -1,0 +1,271 @@
+{
+  "schema_version": "wmkd.passive5-shared-bc-huref.v1",
+  "method": "HuRef",
+  "experiment": "Bc",
+  "run_id": "passive_shared_bc_20260910",
+  "parent_run_id": "passive_shared_bc_20260910",
+  "status": "COMPLETED",
+  "student_fresh_reload": true,
+  "student_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/passive_shared_bc_20260910/final_model",
+  "frozen_protocol": {
+    "experiment_a_source": "A2",
+    "token_manifest_path": "/root/autodl-tmp/WMKD_Benchmark/results/huref/experiment_a2/protocol/token_manifests/meta-llama--Llama-3.2-3B-Instruct.json",
+    "reference_token_manifest_content_sha256": "cbc7a9978f349c88afad65f6bf854234a7d4dff6cca5f6a47b88d84498d95e79",
+    "student_token_manifest_content_sha256": "cc243529562cfa6bafe22b806ebcc33b21472feb1e974999b7fbd145af6b81f9",
+    "student_token_manifest_path": "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/passive_shared/native_detector/huref/student_token_manifest.json",
+    "student_topk_ids_and_order_identical_to_reference": true,
+    "K": 4096,
+    "student_tokenizer_files_sha256": {
+      "tokenizer.json": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "tokenizer_config.json": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "special_tokens_map.json": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8"
+    },
+    "student_tokenizer_file_byte_identity": {
+      "tokenizer.json": false,
+      "tokenizer_config.json": false,
+      "special_tokens_map.json": false
+    },
+    "layers": [
+      26,
+      27
+    ],
+    "term_order": [
+      "layer_-2_WqWk",
+      "layer_-2_WvWo",
+      "layer_-2_WuWd",
+      "layer_-1_WqWk",
+      "layer_-1_WvWo",
+      "layer_-1_WuWd"
+    ],
+    "pooling": "official mean pooling to globally standardized 512-d feature",
+    "metric": "official ICS = 100*cosine_similarity of globally standardized flattened 512-d features",
+    "threshold": 4.119894027709961,
+    "positive_rule": "score > threshold; tie is negative",
+    "calibration_reused": true
+  },
+  "reference_feature": {
+    "path": "/root/autodl-tmp/WMKD_Benchmark/results/huref/experiment_a2/protocol/reference_a--meta-llama--Llama-3.2-3B-Instruct.npy",
+    "sha256": "ed43610236f89d8f0e367c8f9073b409327e7045d2184e12fdd509ddd2a9e04c",
+    "shape": [
+      512
+    ]
+  },
+  "student_extraction": {
+    "model_id": "WMKD/Passive5-Shared-Bc-Student",
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/passive_shared_bc_20260910/final_model",
+    "token_manifest_sha256": "cc243529562cfa6bafe22b806ebcc33b21472feb1e974999b7fbd145af6b81f9",
+    "layers": [
+      26,
+      27
+    ],
+    "K": 4096,
+    "term_order": [
+      "layer_-2_WqWk",
+      "layer_-2_WvWo",
+      "layer_-2_WuWd",
+      "layer_-1_WqWk",
+      "layer_-1_WvWo",
+      "layer_-1_WuWd"
+    ],
+    "terms": [
+      {
+        "order": 0,
+        "layer_index": 26,
+        "term": "WqWk",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a7978fb73f81a8cdd4abc5e771bfe2cfc5ed4819a2f1927e30f44da43e00be7c"
+      },
+      {
+        "order": 1,
+        "layer_index": 26,
+        "term": "WvWo",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1b2cbb55a40d8a8146e8597ae30519fb8495a84a3147f9cd8973ebd21c76ae34"
+      },
+      {
+        "order": 2,
+        "layer_index": 26,
+        "term": "WuWd",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c34f5563956472d77a362d20291cc81270b873d46b113d255ce9c9d52f6be338"
+      },
+      {
+        "order": 3,
+        "layer_index": 27,
+        "term": "WqWk",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fac896fc4b6990fae800510586cdd234d57d1571137bb6bdd1dea543cf1730cc"
+      },
+      {
+        "order": 4,
+        "layer_index": 27,
+        "term": "WvWo",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1e0dfc0d86d54152263c1dc15d42cf6c77bb5e9a092ddc0e962e8831df99d4a7"
+      },
+      {
+        "order": 5,
+        "layer_index": 27,
+        "term": "WuWd",
+        "shape": [
+          4096,
+          4096
+        ],
+        "dtype": "torch.float32",
+        "sha256": "048581efe2a7a641f9872bcc6cc9fe3c95a14a920c1fc465c1a15f1b3871f043"
+      }
+    ],
+    "architecture_mapping": [
+      {
+        "layer_index": 26,
+        "block_class": "LlamaDecoderLayer",
+        "attention_class": "LlamaAttention",
+        "mlp_class": "LlamaMLP",
+        "attention_mode": "separate_q_k_v",
+        "mlp_mode": "separate_gate_up",
+        "paths": {
+          "attention": "model.layers[i].self_attn",
+          "output": "o_proj",
+          "mlp": "model.layers[i].mlp",
+          "down": "down_proj"
+        },
+        "hidden_size": 3072,
+        "q_heads": 24,
+        "kv_heads": 8,
+        "head_dim": 128,
+        "repeat_factor": 3,
+        "shapes": {
+          "q": [
+            3072,
+            3072
+          ],
+          "k_original": [
+            1024,
+            3072
+          ],
+          "v_original": [
+            1024,
+            3072
+          ],
+          "k_expanded": [
+            3072,
+            3072
+          ],
+          "v_expanded": [
+            3072,
+            3072
+          ],
+          "o": [
+            3072,
+            3072
+          ],
+          "gate": [
+            8192,
+            3072
+          ],
+          "up": [
+            8192,
+            3072
+          ],
+          "down": [
+            3072,
+            8192
+          ]
+        }
+      },
+      {
+        "layer_index": 27,
+        "block_class": "LlamaDecoderLayer",
+        "attention_class": "LlamaAttention",
+        "mlp_class": "LlamaMLP",
+        "attention_mode": "separate_q_k_v",
+        "mlp_mode": "separate_gate_up",
+        "paths": {
+          "attention": "model.layers[i].self_attn",
+          "output": "o_proj",
+          "mlp": "model.layers[i].mlp",
+          "down": "down_proj"
+        },
+        "hidden_size": 3072,
+        "q_heads": 24,
+        "kv_heads": 8,
+        "head_dim": 128,
+        "repeat_factor": 3,
+        "shapes": {
+          "q": [
+            3072,
+            3072
+          ],
+          "k_original": [
+            1024,
+            3072
+          ],
+          "v_original": [
+            1024,
+            3072
+          ],
+          "k_expanded": [
+            3072,
+            3072
+          ],
+          "v_expanded": [
+            3072,
+            3072
+          ],
+          "o": [
+            3072,
+            3072
+          ],
+          "gate": [
+            8192,
+            3072
+          ],
+          "up": [
+            8192,
+            3072
+          ],
+          "down": [
+            3072,
+            8192
+          ]
+        }
+      }
+    ],
+    "feature": {
+      "path": "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/passive_shared/native_detector/huref/student_feature.npy",
+      "shape": [
+        512
+      ],
+      "dtype": "float32",
+      "sha256": "2ff083fe049ee984399ef1b3b284085c4419dd99db3b5e4ef186935b423a9123"
+    },
+    "runtime_seconds": 2.7960009574890137,
+    "peak_vram_bytes": 6824090112
+  },
+  "score": 99.99800872802734,
+  "threshold": 4.119894027709961,
+  "positive": true,
+  "runtime_seconds": 5.9251389503479,
+  "completed_at": "2026-09-10T06:55:28.790859+00:00",
+  "errors": []
+}

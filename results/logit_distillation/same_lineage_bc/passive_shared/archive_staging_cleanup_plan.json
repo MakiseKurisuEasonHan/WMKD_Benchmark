@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/bc_ctcc_preferred_transfer_20260910/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "691d5b8772904702861e597b9dea1eb1fe22d489366742946b5147f99498136a",
+      "inode": 32215099288,
+      "device": 53,
+      "nlink": 2
+    },
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/same_lineage_bc_ctcc_preferred_archive_20260910/model-00001-of-00002.safetensors",
+      "bytes": 4965799096,
+      "sha256": "691d5b8772904702861e597b9dea1eb1fe22d489366742946b5147f99498136a",
+      "inode": 32215099288,
+      "device": 53,
+      "nlink": 2
+    },
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/bc_ctcc_preferred_transfer_20260910/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "bbc27f25554edec2e50195387d8f294da7accda885c493f2cd62c15131b57af3",
+      "inode": 32215099289,
+      "device": 53,
+      "nlink": 2
+    },
+    {
+      "path": "/tmp/WMKD_Bc_archive_stage/same_lineage_bc_ctcc_preferred_archive_20260910/model-00002-of-00002.safetensors",
+      "bytes": 1459729952,
+      "sha256": "bbc27f25554edec2e50195387d8f294da7accda885c493f2cd62c15131b57af3",
+      "inode": 32215099289,
+      "device": 53,
+      "nlink": 2
+    }
+  ],
+  "archive_receipt": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-CTCC-Same-Lineage-Bc-Student",
+  "revision": "5d7065e289d466cc5aa2c8aea3a405b90a3ed884",
+  "source_final_model": "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/ctcc_bc_20260910/final_model",
+  "authorization": "user_authorization_20260910.txt section W: upload staging after verified archive",
+  "free_before": 2040012800
+}
