@@ -1,16 +1,9 @@
 {
+  "at": "2026-09-10T08:25:16.659935+00:00",
   "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
   "status": "COMPLETE",
-  "current_method": null,
-  "current_stage": "COMPLETE",
-  "serial_order": [
-    "pnfp",
-    "evertracer",
-    "ctcc",
-    "iseal",
-    "scw",
-    "passive_shared"
-  ],
+  "scientific_runs_complete": 6,
+  "archive_complete": 6,
   "methods": {
     "pnfp": {
       "status": "COMPLETE",
@@ -132,14 +125,17 @@
       "verification": "MANIFEST_PLUS_SEGMENT"
     }
   },
-  "gpu_host": "6000bb",
-  "asset_archive_host": "6002",
-  "modelscope_token_on_gpu": false,
-  "auto_shutdown_authorized": true,
-  "auto_shutdown_armed": false,
-  "shutdown_gate": "6terminal+scientific/evidence/archive/Git closure+no workers+sync",
-  "timeout_gate": "only genuinely new high-risk approval AND no authorized action/workers,30minutes",
-  "no_repeated_pilot": true,
-  "state_sync_timestamp": "2026-09-10T08:25:16.659935+00:00",
-  "next_action": "SAFE_SHUTDOWN_AFTER_FINAL_RECEIPT_SYNC"
+  "source_evidence_commit": "0d43d192b9895eab79c84ef0e9b0ec58a560b3f1",
+  "git_closure": "PASS",
+  "master_report": "docs/reproduction_reports/same_lineage_bc_master_report.md",
+  "index_count": 68,
+  "index_integrity": "PASS_WITH_16_DOCUMENTED_HISTORICAL_EOL_TRANSFORMS",
+  "local_evidence_packages": "final_evidence_sync_receipt.json",
+  "active_scientific_or_transfer_workers": 0,
+  "gpu_state": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 %, 0 MiB, 97887 MiB",
+  "new_gpu_free_bytes": 20205228032,
+  "final_models_preserved": 6,
+  "new_science_authorized": false,
+  "shutdown_reason": "CAMPAIGN_COMPLETE",
+  "shutdown_executed": false
 }

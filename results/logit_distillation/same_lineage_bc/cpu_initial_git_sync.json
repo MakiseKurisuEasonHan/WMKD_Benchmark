@@ -1,0 +1,1113 @@
+{
+  "at": "20260910T081958Z",
+  "before": "7b1be3962de4f08b26a24ef17f38b7a412bd8d41",
+  "after": "ebe70959f3d54e415a37d80a4fa4162a097e1955",
+  "mode": "FAST_FORWARD_ONLY",
+  "backup": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/bc_git_preimages_20260910T081958Z.tar.gz",
+  "backup_sha256": "2761bdb8b21b12eac7a073778620a1a004158f4750acaf6d6949c759b5c89b69",
+  "preimages": [
+    {
+      "path": "docs/reproduction_reports/evertracer_same_lineage_bc_20260910.md",
+      "bytes": 936,
+      "sha256": "624a1476d19a6f3ba90ca172289ca50e93d3050589d65543ca06e5fbf9da717a"
+    },
+    {
+      "path": "docs/reproduction_reports/passive_shared_same_lineage_bc_20260910.md",
+      "bytes": 1362,
+      "sha256": "f1c5396a8c6434b5091b435a00108b8aa9eccb0d45a43b8959f2526c916a813a"
+    },
+    {
+      "path": "docs/reproduction_reports/pnfp_same_lineage_bc_20260910.md",
+      "bytes": 1209,
+      "sha256": "415954fc4e3c31eacfd9785247f90aeaec171c750c08f9cc513a8a48ea5c1e6e"
+    },
+    {
+      "path": "results/experiment_full_logs_index.json",
+      "bytes": 45439,
+      "sha256": "884e366fdc822e810ce02c8835a9829da38823674d8e2920e2f23f28c610ad81"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/ctcc_preflight.json",
+      "bytes": 2270,
+      "sha256": "cb047c1eb44606e6d1e3ae15735832aff786b307b46eb2f2720b03265df77d4d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/ctcc_segment_verification.json",
+      "bytes": 3631,
+      "sha256": "8f73d2cec7dc87ffc0edb949fe3a46ea7876f1bd386ac4af451d1c460433a95b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/ctcc_uniqueness.json",
+      "bytes": 146914,
+      "sha256": "10f1a9c2d468aebbc5c19baff73e8427046cd85e5d666ac9a5d9e44052112fe0"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/ctcc_upload.json",
+      "bytes": 281,
+      "sha256": "86f23615c52d99a51b27efb88b8b6cbf6cf09cec11e05242af3820c9810ccf6c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/evertracer_preflight.json",
+      "bytes": 2301,
+      "sha256": "9dd0d3ccccc11af1f80774c86f430d682440060b834c0cbfe3c6943d4af4e280"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/evertracer_segment_verification.json",
+      "bytes": 3637,
+      "sha256": "b463743d428b0ddefdab7d05bf9d794a9ff75a37312bf6073d533057a3deb02d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/evertracer_uniqueness.json",
+      "bytes": 144034,
+      "sha256": "2e7fe1668e0108321356b2d1267925e835de0ac93576f15d34db52216d243076"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/evertracer_upload.json",
+      "bytes": 287,
+      "sha256": "4e5d758c41c7915352f2db8eae716a599cf7cd954e9a237e61dce945f4c4afc4"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/iseal_preflight.json",
+      "bytes": 2273,
+      "sha256": "8dea5da9bac74a946084226f675d474cf1561179b059048ccacd4173dd7f48dc"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/iseal_segment_verification.json",
+      "bytes": 3632,
+      "sha256": "06d88dfcbf7aaf35393849c7e2a2126c43ceb8f2b9f56a5b550ee81569f1dc08"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/iseal_uniqueness.json",
+      "bytes": 149789,
+      "sha256": "3727b0d5896b41b0cf0722b72fd0ca3454f785d0ec640c4069b833b8bbb1a6b9"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/iseal_upload.json",
+      "bytes": 282,
+      "sha256": "1a948f8eb1df4ac7ff8de97efef2a3de1077e4322fe2f31deb4c373f28eca68f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/passive_shared_preflight.json",
+      "bytes": 2301,
+      "sha256": "002f12d02990ff7cd28c9340706127d15b73ad3650bfcc4162b1332d7ea3f696"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/passive_shared_segment_verification.json",
+      "bytes": 3641,
+      "sha256": "d1f17feb28509f1c05fb6816d886d3f39ab40565a46533e459dfebf76d647657"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/passive_shared_uniqueness.json",
+      "bytes": 155540,
+      "sha256": "918ce8b5fcc4ad457de72a6a946f96ea126407f7010528ffe29d1722d7d53058"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/passive_shared_upload.json",
+      "bytes": 292,
+      "sha256": "51ea0bf36cee183a00e31d8f2c2b19fdd5c8a0a8de853d35060a810e00b28b04"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/pnfp_preflight.json",
+      "bytes": 2305,
+      "sha256": "561cff333a0230607937a7bfe139fca73a1d0cddb42f27de3c92d13591033bdb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/pnfp_segment_verification.json",
+      "bytes": 318,
+      "sha256": "66e829d5e3bd7604820cb467e1489e9bf8a5f7d364544da7cdbf8aa9ff3b8956"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/pnfp_uniqueness.json",
+      "bytes": 141159,
+      "sha256": "95783c0a90d2860685fb9185a200213d46c3940f5c2af698134d4964e2d0535f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/pnfp_upload.json",
+      "bytes": 281,
+      "sha256": "d18e95a44b05c23c3c2b9aeeb1830c52b4ff3c86ae505eaa7c04ff57591e84e2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/archive/runtime.json",
+      "bytes": 124,
+      "sha256": "8ec9bb75a9f1caa64d0e61499bd77a7a83c9ea46d7a6efe4932c251e96668e00"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/archive_chain_exit.json",
+      "bytes": 70,
+      "sha256": "2de687ed0157f94c896ba5e0386beff7b218762bf04bf0c62151059302f570a2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/archive_chain_launch.json",
+      "bytes": 253,
+      "sha256": "75d4452d5cde93e3712515e3fa62443536e5082741a162575241219bfdd7cd2e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/archive_transfer_receipt.json",
+      "bytes": 2256,
+      "sha256": "4b1c8ad1793980f2b2599bd9c64f2cc217fb79d630ffc27acd62c23951d9e60b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/asset_sync_manifest.json",
+      "bytes": 6077,
+      "sha256": "8e69e73663ca11878f57b445ffa81afdf8415917b7ac8f4a8501ab3bb42bfe27"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/formal_launch.json",
+      "bytes": 139,
+      "sha256": "4f3a7f1eb4e156ce028aa0a3c94c629035f4dac66143beb6d265c79b8dd36998"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/full_experiment_log.json",
+      "bytes": 324118,
+      "sha256": "25f7f4b49c0743e7e509916693764cae52324f3a78b8877299aa3abc484bfc27"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/model_provenance.json",
+      "bytes": 1909,
+      "sha256": "9995c8ad336becebb7c2025665e0d413cfcafd1fadbed703cdbdc5bd4eb427a9"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/modelscope_archive.json",
+      "bytes": 7689,
+      "sha256": "c87135b84d6e44b050b7788b294da0e1715d32b312aa00082eea72466c5654a3"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/preflight.json",
+      "bytes": 2135,
+      "sha256": "87e04cae60676f1dd317510dc0bc21b4b7378363ea9b753bfa5738b40cd0d0e4"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/protocol.json",
+      "bytes": 4573,
+      "sha256": "40ca645d0b8c595ad2ee2990f7e3ee8786697fda283f0386e9ef8102031ea7bd"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/ctcc/scientific_integrity.json",
+      "bytes": 745,
+      "sha256": "876acf1e0e7436bdeda5eb8b6a731808c9ee2f86fee5d7dd213f0f7b2e116001"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/active_stage.json",
+      "bytes": 50,
+      "sha256": "d78f86536e19e6bfefde240dc2c3f5a72867286b36ac9f390cd9aa120e80ac78"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/archive_chain_exit.json",
+      "bytes": 52,
+      "sha256": "3947f638bd320c29c34b18d2538089fb46126fe254f5238a998429917de2961c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/archive_chain_launch.json",
+      "bytes": 14,
+      "sha256": "21d7fbc8b75b4bb6bc6eef35e27807fbe20d3d57f82a71c6c9fe05f76a17f434"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/archive_transfer_receipt.json",
+      "bytes": 2287,
+      "sha256": "0212cf711cb59fd57caad8956433c66e945f1683a8e6b70422672be4f8d3cf08"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/asset_sync_manifest.json",
+      "bytes": 11787,
+      "sha256": "e37594b5c3da483f2dd109c05d06c9b62f1adc2189829d2fd63ec4d7f504dd87"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/detector_exit.json",
+      "bytes": 373,
+      "sha256": "04c70d519e9aeb333c720d4dbb0f8dffe5647280b5d571c67e758d9a5b74b1c1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/detector_results.json",
+      "bytes": 51578,
+      "sha256": "0dd664b482b37a98856067b7a4541691e99d4dcd3ac6a8ab300d3f93c5aed1ca"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/direct_transfer_receipt.json",
+      "bytes": 5677,
+      "sha256": "e11c4f7b5beebc27c3626c739606414aac161130f90421acc181a31e05925bdb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/effective_runtime_config.json",
+      "bytes": 4887,
+      "sha256": "af953a51bf7d45ea3bdbbbd074b3ec74e06b43a92a1bac81e215adbf6fe6d421"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/engineering_recovery_01/active_stage.json",
+      "bytes": 113,
+      "sha256": "a2058bc40b84059d2d5a663d1e10bfd46a472da6cbf807ea2d14102ad79e4171"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/engineering_recovery_01/evaluation_failure.json",
+      "bytes": 441,
+      "sha256": "24b3b6ec1231792764dce8b3ab8ad3e84d40c0e235ef5af692f4ba0b39d7d511"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/engineering_recovery_01/recovery.json",
+      "bytes": 221,
+      "sha256": "b0d77b0dd5f90f43bfed75b68349ed3bd1415488dcf186358c33e78c144eceae"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/engineering_recovery_01/supervisor_exit.json",
+      "bytes": 83,
+      "sha256": "bfe9d965dc99df3e70ebe92c4776cf9d0ba2244654f32d4682d2e90afad88cd6"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/evaluation_exit.json",
+      "bytes": 108,
+      "sha256": "16b8031055d19287b73eeb5737260cb177e4edb57a12e082e91997557a2d1d2d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/evaluation_failure.json",
+      "bytes": 441,
+      "sha256": "24b3b6ec1231792764dce8b3ab8ad3e84d40c0e235ef5af692f4ba0b39d7d511"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/evaluation_gpu_idle_gate.json",
+      "bytes": 99,
+      "sha256": "ee6be6475b7ba05361452cd0cc4d3e16dfc28e18d412d80cb2eac84888cf1dd2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/evaluation_progress.json",
+      "bytes": 127,
+      "sha256": "38bf8de7109a0270abb467b185f0764765bfe6813e488c05d34876e576e210cf"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/full_experiment_log.json",
+      "bytes": 73885,
+      "sha256": "b0837c7ff55ed73e21905ad4de6720a5b8db932cfd3af33663e12aca99bca9e3"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/initial_parameter_checksums.json",
+      "bytes": 285,
+      "sha256": "d1a4e0732d9b0af4cf1ce056d69eaa607b8a6fc4f79b203b3ab157bfd0e81a08"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/launch.json",
+      "bytes": 185,
+      "sha256": "8518aa26f06346ed00ccd1138d824187f8b7f5b2722c6aefc8e01813b53ad0d8"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/loss_trace.csv",
+      "bytes": 1095814,
+      "sha256": "bce199cb25a14222a42451c3091cd20088d611c6ca125baac91d86d5ce5a8c8b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/memory_trace.csv",
+      "bytes": 2123392,
+      "sha256": "68d5b172e89a50c71375e5f1c39769d4bb6600636a1551ed8ccda35d237fad59"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/model_provenance.json",
+      "bytes": 1816,
+      "sha256": "680ae4ef6a74f220d03cc87638c53d4c9eba5a397130d563a44a902c0de9da3b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/modelscope_archive.json",
+      "bytes": 7693,
+      "sha256": "f884ee28029675951c31920ecf5cbc2a8331ba5113713be76fe58073538963fb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/native_detector/aggregation_command.json",
+      "bytes": 585,
+      "sha256": "8f44b7b647697ef753a404c2f424a260158be2c7f8e3636c77f022c7dc53899d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/native_detector/detector_aggregate.json",
+      "bytes": 49107,
+      "sha256": "7f022ba6a7810c0137ff67e2c7d7956dccdbca2db24cd16320be16237f8f3bca"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/native_detector/detector_comparison_payload.json",
+      "bytes": 47816,
+      "sha256": "c67b5d9835d86da879eeae0e1b03c354365efeba7375fdeaa46b5cfaece9ad4e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/native_detector/detector_integrity.json",
+      "bytes": 198,
+      "sha256": "a458d62a247de2dae13dc70b8cf50bb8b1b9ef8c43d1e74099d43bf3ce9b620a"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/native_detector/detector_raw.json",
+      "bytes": 48082,
+      "sha256": "c5e5749f75ed3b56b299e409b7733bf0dfc77b21cbd287af090120f6744854a5"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/native_detector/verification_command.json",
+      "bytes": 830,
+      "sha256": "aa4a286d90c6b9f6a48dac2cecf2e4a3067e370ee417467c42cfde6586541eaa"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/native_source_checks.json",
+      "bytes": 985,
+      "sha256": "688daff75d2fd45a545022f6a5877965b96d910c1c86972d8a7ba58cf8f413f7"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/preflight.json",
+      "bytes": 1719,
+      "sha256": "f27bb4f5fead2d5cbd8814d9989155baa0430c56c915f7300e67115c7137801d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/protocol.json",
+      "bytes": 4715,
+      "sha256": "f553a3b479b752d604c13cf42a45d15a8883001a713bfb3f5a1b3bae26d31d79"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/supervisor_exit.json",
+      "bytes": 83,
+      "sha256": "bfe9d965dc99df3e70ebe92c4776cf9d0ba2244654f32d4682d2e90afad88cd6"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/teacher_restore_receipt.json",
+      "bytes": 1928,
+      "sha256": "2af3119018f9ea8c5f8b377b2e3d465361faecc9e7e162ff5bef55906ab1744b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/teacher_source_manifest.json",
+      "bytes": 2038,
+      "sha256": "bee55dca0671ec7a5cae049bb30d84df125e2f27eb89dbcf22a912ddf3c66f02"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/training_exit.json",
+      "bytes": 76,
+      "sha256": "b7a4f84189413673cb7b7b26a71547850749ddd80185dde6074e48a0bd9c60f7"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/training_progress.json",
+      "bytes": 412,
+      "sha256": "ee8311f8316e17158de18c9943ea610bacd491ff0b8c9c90a8525aeed4c592d2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/training_summary.json",
+      "bytes": 2888,
+      "sha256": "3819a4afced7bdd1a3ff8381fb650aae348c57e3e641649cc4bc4a0d5cab683c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/transfer_recovery_manifest.json",
+      "bytes": 5102,
+      "sha256": "db2b760bcab3bc64ecbce7edd29f130babd89d75227bee4d631a151818ef2486"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/utility/evaluation_config.json",
+      "bytes": 1780,
+      "sha256": "b59bb677eb63f9d276d2ba531324c13cc1e15fbb1964033f3e337f1f2d18c067"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/utility/exit_record.json",
+      "bytes": 22,
+      "sha256": "1e3f6691f455051e8adb15d961e4bf3c7a17e83dd88b2afdd13315cc288250bb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/utility/raw_evaluator_output.json",
+      "bytes": 12775969,
+      "sha256": "0a787c57d25018e023ba44b7bb02da4e6a8527b773df66e85fc22c78b9955b4f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/utility/utility_results.json",
+      "bytes": 205,
+      "sha256": "0c3d40de115d4c37ddd913038fca4a6452fb80a4e85ee1bbf4a98b0a1a936549"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/evertracer/utility_exit.json",
+      "bytes": 365,
+      "sha256": "fc977a116006ea23aaff62c72b4478a5f1d105d62ac9bf094e74cfb1a54bd62a"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/archive_chain_exit.json",
+      "bytes": 69,
+      "sha256": "11c24bb2f82846bbbd7f4b6fef741679b7746a9418b0d8a04faaf1049571f3d7"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/detector_cache_manifest.json",
+      "bytes": 1708,
+      "sha256": "ef40ad41339c30c446fbba17047aa63389f6d5b79ec5b7265021257ea429d176"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/full_experiment_log.json",
+      "bytes": 122962,
+      "sha256": "6ec5f5ad9825eb423a3e44f290ece7a2960a1484a71f819104920485d5fff54a"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/model_provenance.json",
+      "bytes": 1911,
+      "sha256": "0322cddbfc8b07d09999f4bbb39b64cc06d4402966b684e3538adc51215fcdc8"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/modelscope_archive.json",
+      "bytes": 7690,
+      "sha256": "822fc2bb36b1d53c81a4f3ad72e41db1aba2f727a868ce8cf6373316ce4baf9f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/pip_cache_cleanup_inventory.json",
+      "bytes": 184263,
+      "sha256": "f8265f81b8d8a5d9fbb67c68acec491ce8b7760017a9bc7cfb205d172650bb02"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/pip_cache_cleanup_receipt.json",
+      "bytes": 327,
+      "sha256": "4c2fe96be5821748854ea6c099a706fbe4b0a0d8aa04c91e509dd5ae8f976ecd"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/teacher_restore_receipt.json",
+      "bytes": 3616,
+      "sha256": "a2cd3fd271001c9ea5893ca5d5d26630246b23c6b7d2c736ceca5d411915efb0"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/iseal/teacher_source_manifest.json",
+      "bytes": 3974,
+      "sha256": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/active_stage.json",
+      "bytes": 113,
+      "sha256": "c51c5da93c06543c505c9a5f07d3f451e08ac5a1662f74a4b31d9971cf1385d3"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/archive_chain_exit.json",
+      "bytes": 60,
+      "sha256": "0a952dd7ff6c6a13bb6ac5ac6280f57907e19924cd17a7f5938fbfc6ac5b6584"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/archive_chain_launch.json",
+      "bytes": 178,
+      "sha256": "3ce10b977ef84c2bd661d96320d6d7ec1109c8a00fd34bf302b572a7dd4ae095"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/archive_staging_cleanup_plan.json",
+      "bytes": 1648,
+      "sha256": "b2a8aa252d5d6edaeea44acf4521a87be274d18a8a8c01fb9317d471ce84746c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/archive_staging_cleanup_receipt.json",
+      "bytes": 1585,
+      "sha256": "1f49b9f4a8ebaeb7a119ecf33fd731e41b9b732651d921f93183cd6dee5dfe7e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/archive_transfer_receipt.json",
+      "bytes": 2411,
+      "sha256": "53699907f0ca381fa83a10af81d700c357af84f07d7e22b8abf03a8449e91bc1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/asset_sync_manifest.json",
+      "bytes": 3254,
+      "sha256": "51b7dfcfd2f58e09e41488391e4e5b9e26031c72eaf110a66995dccdf9ea2d72"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/detector_exit.json",
+      "bytes": 360,
+      "sha256": "95f4f0a6c0705b2bed026f87d874aa787c549dfcc109a356a96c8064a1ed5bd1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/detector_results.json",
+      "bytes": 169671,
+      "sha256": "3f9cae06e3ededc6e3dad91fee111f392ed70ae4040a3122d8ebff74900a6237"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/direct_transfer_launch.json",
+      "bytes": 140,
+      "sha256": "69d2f72a3e43e33da59305b92783c719ca8d859da77cdc2b84f87ea5aa0f2ccf"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/direct_transfer_receipt.json",
+      "bytes": 91259,
+      "sha256": "a80234d2b2292dc3b9932b62937f46cd9d0979e1ced48d3b69f67f71a837538e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/effective_runtime_config.json",
+      "bytes": 4861,
+      "sha256": "574a45a9ba0b831c3265465ebda3a380fa3abbe52935e32b7deda1f98aded135"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/engineering_history/attempt_1/detector_exit.json",
+      "bytes": 360,
+      "sha256": "d7a9630c144b19dcfd700475d98a290f35335cb568a5a758f4295c28758f6c2c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/engineering_history/attempt_1/evaluation_failure.json",
+      "bytes": 906,
+      "sha256": "8840094d5b4db520139836fccc0c6f7b00c9b79f1ae439ec03bdf97855f26b52"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/engineering_history/attempt_1/reused_result_sha.json",
+      "bytes": 163,
+      "sha256": "5681d232319d7b98ee132af8aa75e91710977c8d287dece6f6f62e94a5e50fdc"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/engineering_history/attempt_1/supervisor_exit.json",
+      "bytes": 83,
+      "sha256": "11da1f88e0387a1e6134e2779334ea23b5aad075b69059524f997749f5143d1c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/engineering_repair_001.json",
+      "bytes": 879,
+      "sha256": "656cb5858c13199b719981768e0393839cc959b09339478322c2bad3a7993498"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/evaluation_exit.json",
+      "bytes": 108,
+      "sha256": "57b491952d104e302d199946736aa85ed27f13fb8ee7027849bebd802e38226a"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/evaluation_gpu_idle_gate.json",
+      "bytes": 99,
+      "sha256": "ee6be6475b7ba05361452cd0cc4d3e16dfc28e18d412d80cb2eac84888cf1dd2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/evaluation_progress.json",
+      "bytes": 127,
+      "sha256": "d3b356b24944cc1e8c554c2e5e67210ff8a1e3afe782399d4a04ca772d5688f1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/full_experiment_log.json",
+      "bytes": 201470,
+      "sha256": "a8f9ff3a364e4bb4254c1aeb8219ffa84a92a9fc077b4e6369d3a48380a663b8"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/initial_parameter_checksums.json",
+      "bytes": 285,
+      "sha256": "55d46c2dfc2bdab090ed0064d8530ca439bef2b45b0c9200d9a3fdb102ad07ab"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/loss_trace.csv",
+      "bytes": 1111039,
+      "sha256": "c349cf853e3ca32eaf06946fb52020908986dc52bb4c98c3afc60534327f0802"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/memory_trace.csv",
+      "bytes": 2123392,
+      "sha256": "ed6475b7cfee884fbb7bf3f68fec6384c506012220e298922756ab2b8b0ffbc6"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/model_provenance.json",
+      "bytes": 1951,
+      "sha256": "f296a8007189cbf3ea6c7db9d842774a8db6115a2f19d38b8d33814ab70aefd9"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/modelscope_archive.json",
+      "bytes": 7700,
+      "sha256": "bd1691659d9f2f41e005859761760e6e46a8aa0ede583d17008b9586c6e1530b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_asset_verification.json",
+      "bytes": 286,
+      "sha256": "d2377d29faedfa63e0d4bbc6eacf7f5376f46105ce765f1dbc1aa0f02b547084"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/awm/detector_result.json",
+      "bytes": 121060,
+      "sha256": "dd19cc323387ec258fbc7fcd925c5e4324a2ab17a86bf32173cf363179125df8"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/huref/detector_result.json",
+      "bytes": 7565,
+      "sha256": "cad86a309a7ae5634c5d01834cfdde27cfed02414515f36dcd9fa70ef69e882d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/huref/student_token_manifest.json",
+      "bytes": 810699,
+      "sha256": "58f3d339a265244145f2be3345ae957a26c5e2719d5e907a3e8129f7daa923aa"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/llmprint/detector_result.json",
+      "bytes": 278,
+      "sha256": "795cdbc8d5c4461b245dbeda1d227d704dbf3b4fa9a6a66418e4bddf8515d7c7"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/llmprint/student_probability_sequence.json",
+      "bytes": 118764,
+      "sha256": "155bacbe39a0249c629d206f043d5ed20a53bcbd7049f14826b522e2b50be2fd"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/reef/detector_result.json",
+      "bytes": 1877,
+      "sha256": "0c49cc1cf3b5fa0653feae18aa5ed813bdcedd75ca8e7c3d28f00116a08c0835"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/zeroprint/detector_result.json",
+      "bytes": 3339,
+      "sha256": "3f11c0def94361196dd4b335595944249d789d9ece3b6549ba86dd198a8c13de"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/native_detector/zeroprint/student_generations.jsonl",
+      "bytes": 369656,
+      "sha256": "102cf544f4a82d33b587a55ae2c7b3b2bc2f720786c06e06487eeeed926836c7"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/preflight.json",
+      "bytes": 2707,
+      "sha256": "ea092356b2aed51c5f291774101748969e4cc35f24b1b321913d4f886280ca00"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/protocol.json",
+      "bytes": 1562,
+      "sha256": "8d4d989b2fd2cdf24f79e62dc8c5b17e41de86c8fe53c8c83aa40f24007ac7f6"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/scientific_integrity.json",
+      "bytes": 338,
+      "sha256": "55977af2f6ab2e4bd6bdda9739b0cb2f80e8a066067c361ad12d8acaddb9483e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/storage_budget.json",
+      "bytes": 250,
+      "sha256": "c6e851339130c067b74bbc8891cf9562040ce5ff41894dc1df2b629a8eed89cd"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/training_exit.json",
+      "bytes": 76,
+      "sha256": "547c60293ce264b542e7e46802e03f8967459cba0c004abce240aabf0dbb8eb7"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/training_progress.json",
+      "bytes": 416,
+      "sha256": "161284fd7bcd7e42f47741e007132af738b21c4723d7a8f0abcd9b00d16e68f4"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/training_summary.json",
+      "bytes": 2896,
+      "sha256": "1ea2176aa717431dea52f0a9cca7f9c5816c99410dcab2a756ef1c70f80ea459"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/transfer_recovery_manifest.json",
+      "bytes": 86007,
+      "sha256": "d4c76f9259f1105a7bfbaa010ae5322c38f5f4066dd57cb48794ca1c193b4bc3"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/utility/evaluation_config.json",
+      "bytes": 1784,
+      "sha256": "e4a72396f70149392ffa56da7e81a0321258594c487935258d8487cafe659ace"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/utility/exit_record.json",
+      "bytes": 22,
+      "sha256": "1e3f6691f455051e8adb15d961e4bf3c7a17e83dd88b2afdd13315cc288250bb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/utility/raw_evaluator_output.json",
+      "bytes": 12776086,
+      "sha256": "8e09a8af4aa58790accaed27301f25efd1444f0a9c19f8f4f0cd495348748e77"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/utility/utility_results.json",
+      "bytes": 203,
+      "sha256": "d2189123def9d57e837a411af0455a07934e882ce67c8e7eab3f5db946f6d7ff"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/passive_shared/utility_exit.json",
+      "bytes": 373,
+      "sha256": "82e23f1a4855d85fb182270e5bd8eca21f9d52c73f439b5f110fc3ba35f745e1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pipeline_state.json",
+      "bytes": 3784,
+      "sha256": "bc6962802e387b96028958763fc4dd87c39c3a5110938c97a29b6cff8214cdb4"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/active_stage.json",
+      "bytes": 49,
+      "sha256": "ce16afae840d43db120b79fedb0a281dda6c04320a3c5023cd7b73adf5a3e94f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/archive_chain_exit.json",
+      "bytes": 52,
+      "sha256": "3947f638bd320c29c34b18d2538089fb46126fe254f5238a998429917de2961c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/archive_chain_launch.json",
+      "bytes": 94,
+      "sha256": "42716a7e6e1a982672727f51718133aa50e954166c4981e120c265819204f89e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/archive_transfer_receipt.json",
+      "bytes": 2290,
+      "sha256": "114f3f5ea9b7a779f40ff417845803044adb4a40cf6d7c1b37414f986feefb6d"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/detector_exit.json",
+      "bytes": 1058,
+      "sha256": "5a5b7a086743eaa9d5b716dc954ecd0bfed1c3b4102e8a3ce36d374846e145f8"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/detector_results.json",
+      "bytes": 199249,
+      "sha256": "eb59a9723daf84517a531fa0d0c6a86ffa9b231ffd274764c31d03ce0dfd1a89"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/effective_runtime_config.json",
+      "bytes": 4917,
+      "sha256": "e1677c39cf988e6f1f81d4c33e95f14a3b1cf39ca2e88fe033a95522aa25c330"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/engineering_recovery_01/active_stage.json",
+      "bytes": 111,
+      "sha256": "efc6fbba07f06d0bffc52a2673c808b2ceda0a701372c8f9b4c735ca9813e8b8"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/engineering_recovery_01/evaluation_failure.json",
+      "bytes": 441,
+      "sha256": "24b3b6ec1231792764dce8b3ab8ad3e84d40c0e235ef5af692f4ba0b39d7d511"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/engineering_recovery_01/recovery.json",
+      "bytes": 307,
+      "sha256": "eb511e6e946254b0facc76b86f60c8ac1bb1d65d3af83472986bc946da9275b3"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/engineering_recovery_01/supervisor_exit.json",
+      "bytes": 83,
+      "sha256": "fc5056d5be0ae69b1b2153a07aeb8c283700b8e3d2767bba027470bc510aad3b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/engineering_recovery_02/active_stage.json",
+      "bytes": 228,
+      "sha256": "c8fb97e0c315570755b784f746577edcae3178f8910ce16307933bb33c2fa21b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/engineering_recovery_02/evaluation_failure.json",
+      "bytes": 1354,
+      "sha256": "303afe85f47e17c275306c0586cfc762e53deacfc092c78ed5f3b61ec5eac9e4"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/engineering_recovery_02/recovery.json",
+      "bytes": 286,
+      "sha256": "6419a500bc72eebd995ba9aac886adf84a34ac1b0ba75c0bd37e6a29b7a8a4e0"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/evaluation_exit.json",
+      "bytes": 108,
+      "sha256": "e3c2b8fc5423f451c05abdf189005470677263734732ee114cb92d1bc34ef8bc"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/evaluation_failure.json",
+      "bytes": 1354,
+      "sha256": "303afe85f47e17c275306c0586cfc762e53deacfc092c78ed5f3b61ec5eac9e4"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/evaluation_progress.json",
+      "bytes": 125,
+      "sha256": "8407b2a470b5a29c34f7547af9a9b1a0fb7420a89634434ff6d0c4864f4490e2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/full_experiment_log.json",
+      "bytes": 233962,
+      "sha256": "f5b0b2b1e44eb34e9577a5f0ab2088e912aec482970d307a254422ab66cdec34"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/initial_parameter_checksums.json",
+      "bytes": 285,
+      "sha256": "91d1e271d3f4b3fd249f4a51be4c77b637ad9309735ce6a1be1fea0d2db71868"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/loss_trace.csv",
+      "bytes": 1115617,
+      "sha256": "b373112ac4469a5b4d4cef71635466048880b178705737afb1ff28380fe45217"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/memory_trace.csv",
+      "bytes": 2123392,
+      "sha256": "2ce1b606eb0a7d0ca669c8d6e24301fdb379dd9b3f2dfb37e9bfdf837c4908e1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/model_provenance.json",
+      "bytes": 1888,
+      "sha256": "52e1b68435530f32b6d2b8d1d152ede2971efaf2bcac0e2e9c8bd9f33582f04f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/modelscope_archive.json",
+      "bytes": 3426,
+      "sha256": "91b4e677584dafc1aec4e665ceb9e735d8a458be6951407a3a1273a717f10d6b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/preflight.json",
+      "bytes": 2490,
+      "sha256": "6b9568811a5d232b5766a81bc8eea156d46a8b01d9f6ce713ebd7511ef17289f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/supervisor_exit.json",
+      "bytes": 83,
+      "sha256": "fc5056d5be0ae69b1b2153a07aeb8c283700b8e3d2767bba027470bc510aad3b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/training_exit.json",
+      "bytes": 76,
+      "sha256": "bd14deff7e4b757089f34f55509683e435d24dfeb4248526132a4ced4f48e069"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/training_progress.json",
+      "bytes": 416,
+      "sha256": "7afa98f90776b4cd41093aab759ff44f5ea2eed3a2a82d41ed0fdb3d0e6c17d7"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/training_summary.json",
+      "bytes": 2915,
+      "sha256": "4f1da7bd8405bf265de3aabc7d6bf39050699a67c953ac39d1dabb22b07bfe2b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/utility/evaluation_config.json",
+      "bytes": 1794,
+      "sha256": "c34f14419a3cd108595bf7d4d68c3898481c25cabe84b9bdd4696704625c4956"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/utility/exit_record.json",
+      "bytes": 22,
+      "sha256": "1e3f6691f455051e8adb15d961e4bf3c7a17e83dd88b2afdd13315cc288250bb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/utility/raw_evaluator_output.json",
+      "bytes": 12770945,
+      "sha256": "d9fd589f6df632efed6a298ac228bc7777e98e9684fb1d6c4fe84343ff705894"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/utility/utility_results.json",
+      "bytes": 206,
+      "sha256": "b910f72157d6bc089a76f5d969593bb70f4b1df6c7ec0f18c8864a47c743c738"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/pnfp/utility_exit.json",
+      "bytes": 374,
+      "sha256": "b4e8d36de6359cfd5dd9257c4f1389a349feab409aa31211202dd4c55ddab73e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/active_stage.json",
+      "bytes": 113,
+      "sha256": "d7b0ac845d4b1057d49cb2bd7109f59cf751c0719ac727bd9abfb0372ef347f2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/asset_manifest_draft.json",
+      "bytes": 6518,
+      "sha256": "c1a76a2bd163f545abdcc40a44dd28f2315dda210a951956902ffaef4229052a"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/asset_sync_manifest.json",
+      "bytes": 6405,
+      "sha256": "6c47be9a4c7625f1dfaafdf4cd9e93137018e528461c4ede14d8443b1fa902f3"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/detector_exit.json",
+      "bytes": 359,
+      "sha256": "6adcb6685f7c20476713792ddc09510812f7b4850396e606bbb9a90ae6ec3660"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/detector_results.json",
+      "bytes": 1350965,
+      "sha256": "a5cc11cebb2db8d7c507a385f9417df0a907eabe9a39c811bf009ab9ce5c174a"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/effective_runtime_config.json",
+      "bytes": 4873,
+      "sha256": "1e191b3932b05307a8db67727ec1ee6f52c097d6db041006d0d22f6a9a1df570"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/evaluation_exit.json",
+      "bytes": 108,
+      "sha256": "6dee404cd9810bc547aa0a1a114edc0b66752bf297b5aa9e20bf559a071ebd93"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/evaluation_gpu_idle_gate.json",
+      "bytes": 159,
+      "sha256": "ab3af41c52cbce6f0443812a85c90d0a4ead4a9ec3400d44fde288554f0534e2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/evaluation_progress.json",
+      "bytes": 127,
+      "sha256": "65614295e2b3c300e5434ddde0480ec2d3ccc56e90bf32b8c2b7aa83cc901072"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/evidence_sha_manifest.json",
+      "bytes": 7066,
+      "sha256": "4702b255190f6d5a0088b674c2cc452ace00cd711a20f67ee1bb3b13bb7e81df"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/full_experiment_log.json",
+      "bytes": 1335335,
+      "sha256": "2b22f581eb62f68e185fccecc2d8eaab6c6a5a0f17d65dcaa4e93b9e5ce3c511"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/initial_parameter_checksums.json",
+      "bytes": 285,
+      "sha256": "e92a7e6e8645980c2dc3e69963c46394a675500377925d52c8261a9525a550e2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/loss_trace.csv",
+      "bytes": 1110145,
+      "sha256": "f730be8105221e162c7bf238112a8a8575e522feaf0caf09f66d0fe6c55a3896"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/memory_trace.csv",
+      "bytes": 2123392,
+      "sha256": "7329fa170f18f8d263c5834544a2e35558c7bf6dcc8e806051542d93acfdac6b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/model_provenance.json",
+      "bytes": 1961,
+      "sha256": "5de18dcde78c1164344de40205568b5581343845e016ed00b3c13c023e26b43e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/modelscope_archive.json",
+      "bytes": 7689,
+      "sha256": "b22d7147c15bdd4cdd6070ee90dd2d71a5372e9f279fe7f39d70e7cd80f5c078"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/native_asset_verification.json",
+      "bytes": 9065,
+      "sha256": "93c9193d9603b733568c4b9735000c35629d77b13953981f5c810af1f018c6c0"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/native_detector/detector_comparison_payload.json",
+      "bytes": 1241490,
+      "sha256": "204b549a525b1b8ed72528fabf7ac25fb4a459108a736d79795980e2d952b8d2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/native_detector/detector_integrity.json",
+      "bytes": 154,
+      "sha256": "6e11ddede7c35f4342c388307832afbbb41f23f768b7856acf44c12023239c5e"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/native_detector/detector_raw.json",
+      "bytes": 10365,
+      "sha256": "6de97a57a61ed12a1500a8c216ba746b37015629aa47b985ca6f964a0322551b"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/native_detector/generation_command.json",
+      "bytes": 637,
+      "sha256": "d770881c725b1bbf5f071a3c894aa590e651b70c0bdcd65caf74f76a7e59bee3"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/native_detector/verification_command.json",
+      "bytes": 702,
+      "sha256": "9a8e1b96253fce81f524a5e99746e2ea9d47c1b4a4f5d8c2237d28a23c9bc5b1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/preflight.json",
+      "bytes": 1721,
+      "sha256": "443f8f800c826895bc457f2c598ff0e5ec68bc151134d007a28b4e2017dba701"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/protocol.json",
+      "bytes": 4685,
+      "sha256": "2fee6a2e3da9c499b819d806c4cc2ffca3684ecca44c13506a18a8d846849818"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/scientific_integrity.json",
+      "bytes": 363,
+      "sha256": "c255f016491389e86ec913b2474bfa9f6b5df0c55a53ffe02be651ebe0c10dee"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/supervisor_exit.json",
+      "bytes": 105,
+      "sha256": "45f46c86220672295a4b8a7419c564f2e8d603214edbc946275b5de5c7065110"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/teacher_restore_receipt.json",
+      "bytes": 1984,
+      "sha256": "b9f0e1324be22e7cae6c41bbd84c020ed6f07e8c7856bf47a455e9aa65dbbcf0"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/teacher_source_manifest.json",
+      "bytes": 2609,
+      "sha256": "1cee9e8f7e53b30f2f954464c1455fa42333ec88c3ff795a8b93dd582f912b6c"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/training_exit.json",
+      "bytes": 76,
+      "sha256": "65ae3cd87be04eabc8a31acabccb930ab1041788001592bf8f1e1b844b04a227"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/training_progress.json",
+      "bytes": 416,
+      "sha256": "ccd0f817a841560ec0804f68bbbecdcd759a40478256359f33be8d876f1fd915"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/training_summary.json",
+      "bytes": 2870,
+      "sha256": "f61ffca01e95f94ab25f6a5491577384b964d266f40688078ef99723c2d7db0f"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/utility/evaluation_config.json",
+      "bytes": 1773,
+      "sha256": "df9c2da9291ea0ea215573ba4c4b0fb5a2a872ea676fd61dd6db867379a72cc2"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/utility/exit_record.json",
+      "bytes": 22,
+      "sha256": "1e3f6691f455051e8adb15d961e4bf3c7a17e83dd88b2afdd13315cc288250bb"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/utility/raw_evaluator_output.json",
+      "bytes": 12776848,
+      "sha256": "adb0d546b613d9987ad359e37888a3e4546265f7502d6e446e050afcfc4a2cd1"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/utility/utility_results.json",
+      "bytes": 206,
+      "sha256": "c2f337c8c35aeaf0adcecaabf1296c138a70888962335cfd6f95479a9a6d52ee"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/scw/utility_exit.json",
+      "bytes": 351,
+      "sha256": "c28fe6c880939ed81f4ec81bc355d0be3633f5ddddeabca65d9653f81c1af8ca"
+    },
+    {
+      "path": "scripts/archive_active_cross_lineage_bb.py",
+      "bytes": 17305,
+      "sha256": "dc06f030317261d6701d8a20ae4b512451a04edfd5f06c10b7b17879af917c2a"
+    },
+    {
+      "path": "scripts/archive_same_lineage_bc.py",
+      "bytes": 7484,
+      "sha256": "619c4f93831c463993b8b15298a0a8179858fc83ae06c1ff518e5bc1f463cd98"
+    },
+    {
+      "path": "scripts/bc_frozen_asset_transfer.py",
+      "bytes": 3252,
+      "sha256": "3aa7bc59b2f41cb176a6959706264aa022d5fdd46ecd08c8ba35c489d7db38f8"
+    },
+    {
+      "path": "scripts/evaluate_same_lineage_bc.py",
+      "bytes": 4015,
+      "sha256": "4d9eaaa7a6780097f0444cb8235f10d1425a86bf9e2baa658b9db448d760468f"
+    },
+    {
+      "path": "scripts/export_bc_preferred_file.py",
+      "bytes": 1701,
+      "sha256": "3bc965a70074a887c1502edd10589223a8c645b2d48c5c833048732e0bb33297"
+    },
+    {
+      "path": "scripts/huref_experiment_a2.py",
+      "bytes": 25434,
+      "sha256": "132f73d4b9047e2a9082f0c048f2562f617288ce1d2271a1836b7c41b43ce940"
+    },
+    {
+      "path": "scripts/passive5_ba_method_eval.py",
+      "bytes": 19228,
+      "sha256": "f10048d22e589f77b462201fd687f26aa51db8caa353f836f298410a6a35afbe"
+    },
+    {
+      "path": "scripts/receive_bc_preferred_files.py",
+      "bytes": 5214,
+      "sha256": "6229afbffeef608503ca0b2671ed12ec44d50535724b80223fc1486723b29641"
+    },
+    {
+      "path": "scripts/restore_bc_evertracer_teacher.py",
+      "bytes": 2872,
+      "sha256": "d38719a522ff8d7fe22663478b4e13add8ca8267ebd8f0362bbe9259dd5a1e7b"
+    },
+    {
+      "path": "scripts/restore_bc_teacher_stream.py",
+      "bytes": 4825,
+      "sha256": "a88ae2a42363d003f5ab18b23f8d9941bb60c2fac770212507c6510bf7a195f4"
+    },
+    {
+      "path": "scripts/train_same_lineage_bc.py",
+      "bytes": 7403,
+      "sha256": "2097671e62e3ecf7475af6e9616e603bc8b3c30b6910ddcbbe6ffc91e25b5321"
+    },
+    {
+      "path": "scripts/zeroprint_experiment_a2.py",
+      "bytes": 19449,
+      "sha256": "638683c08061addc16983c426663ed2ca64b4e84d23f3af471293e8fd9f2f2d5"
+    }
+  ],
+  "preserved_stash": "80bb50e5468945994f2fd1ff44497946b4ef6bf5",
+  "stash_not_dropped": true,
+  "unrelated_worktree_changes_preserved": true
+}

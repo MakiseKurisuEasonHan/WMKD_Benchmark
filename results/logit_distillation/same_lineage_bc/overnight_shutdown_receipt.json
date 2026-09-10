@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-10T08:25:16.659935+00:00",
+  "status": "PRE_SHUTDOWN_GATES_PASS",
+  "shutdown_reason": "CAMPAIGN_COMPLETE",
+  "target": "6000bb",
+  "hostname": "autodl-container-e3ll76182f-7ba50cae",
+  "old_cpu_shutdown": false,
+  "source_evidence_git_head": "0d43d192b9895eab79c84ef0e9b0ec58a560b3f1",
+  "scientific_complete": 6,
+  "archive_complete": 6,
+  "worker_count": 0,
+  "free_disk_bytes": 20205228032,
+  "gpu_state": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 %, 0 MiB, 97887 MiB",
+  "execution": "NOT_YET_ISSUED",
+  "execution_receipt": "shutdown_execution_receipt.json"
+}

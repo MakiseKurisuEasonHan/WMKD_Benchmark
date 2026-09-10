@@ -1,0 +1,38 @@
+{
+  "at": "20260910T082154Z",
+  "before": "ebe70959f3d54e415a37d80a4fa4162a097e1955",
+  "after": "0d43d192b9895eab79c84ef0e9b0ec58a560b3f1",
+  "mode": "FAST_FORWARD_ONLY",
+  "backup": "/root/autodl-tmp/WMKD_Benchmark_data/tmp/bc_git_preimages_20260910T082154Z.tar.gz",
+  "backup_sha256": "d277a171d05ffb27ea97121724a78d702d1e3e27e44e4e91f3122df592b86fcd",
+  "preimages": [
+    {
+      "path": "PROJECT_STATUS.md",
+      "bytes": 58193,
+      "sha256": "3da2131ba50cae9dce09d4c77124a1cc4199ea853cc64796bd120d2066bef032"
+    },
+    {
+      "path": "TODO.md",
+      "bytes": 47554,
+      "sha256": "ff1b074674e182ee020ced3f8a3e7cd32d0153af5ac739ac375df476793ded62"
+    },
+    {
+      "path": "docs/CURRENT_STATE.md",
+      "bytes": 21581,
+      "sha256": "3c517c805bc0e25bf5058e6d346b502946696b4ca999116f23ea109d814c09d0"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/checkpoint_weight_dedup_plan.json",
+      "bytes": 4735,
+      "sha256": "9d9ffba8dd7d2dd5b6f8cba50bd24d7bfe38fcd3bdb20b24a4e0fded30796a02"
+    },
+    {
+      "path": "results/logit_distillation/same_lineage_bc/checkpoint_weight_dedup_receipt.json",
+      "bytes": 4914,
+      "sha256": "eff9fe33822577ec52cde890e61c25de1175b2b14cdb9ce013a12e4dc1a778f3"
+    }
+  ],
+  "preserved_stash": "e78c7f0022683d5b6fc819707ce90e5b001d2ec9",
+  "stash_not_dropped": true,
+  "unrelated_worktree_changes_preserved": true
+}
