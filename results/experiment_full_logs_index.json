@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-09T18:15:12.212563+00:00",
-  "object_count": 66,
+  "generated_at": "2026-09-10T04:35:48.877171+00:00",
+  "object_count": 67,
   "objects": [
     {
       "method": "PN-FP",
@@ -102,7 +102,7 @@
       "full_log_sha256": "6691fca531d7929c0fcb87c6cc7029425fc8bfe45b836dd5a1f5ce893a7c7303",
       "final_model_manifest": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb",
       "modelscope_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
-      "scientific_status": "A6 COMPLETE \u2014 PREFERRED TEACHER SELECTED",
+      "scientific_status": "A6 COMPLETE — PREFERRED TEACHER SELECTED",
       "watermark_evaluation_available": false,
       "utility_available": true,
       "checkpoint_localization_support": false,
@@ -994,6 +994,18 @@
       "watermark_evaluation_available": true,
       "utility_available": true,
       "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-iSeal-Same-Lineage-Bc-Student"
+    },
+    {
+      "method": "SCW",
+      "role": "same_lineage_logit_distillation_student",
+      "experiment": "Bc",
+      "run_id": "scw_bc_20260910",
+      "full_log_path": "results/logit_distillation/same_lineage_bc/scw/full_experiment_log.json",
+      "full_log_sha256": "2b22f581eb62f68e185fccecc2d8eaab6c6a5a0f17d65dcaa4e93b9e5ce3c511",
+      "scientific_status": "COMPLETED_WATERMARK_NOT_DETECTED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "modelscope_repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-SCW-Same-Lineage-Bc-Student"
     }
   ]
 }

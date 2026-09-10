@@ -52,7 +52,15 @@ def main():
     save()
     try:
         remaining = sum(x['bytes'] for x in prov['files'])
-        assert shutil.disk_usage(dest).free > remaining + (2 << 30)
+        # A serialized manifest/segment archive may use an explicitly budgeted
+        # 1 GiB reserve; default remains 2 GiB. Never bypass the byte budget.
+        reserve_gib = int(os.environ.get('WMKD_BC_ARCHIVE_RESERVE_GIB', '2'))
+        assert reserve_gib in (1, 2)
+        receipt['capacity_budget'] = {'remaining_bytes': remaining,
+                                    'reserve_bytes': reserve_gib << 30,
+                                    'free_bytes': shutil.disk_usage(dest).free}
+        save()
+        assert shutil.disk_usage(dest).free > remaining + (reserve_gib << 30)
         for x in prov['files']:
             name = x['name']
             assert Path(name).name == name

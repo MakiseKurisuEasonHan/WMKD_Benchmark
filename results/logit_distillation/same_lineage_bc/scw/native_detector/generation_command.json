@@ -1,0 +1,15 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/envs/xbb/bin/python",
+  "-B",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/scw_fresh_generate.py",
+  "--model",
+  "/root/autodl-tmp/WMKD_Benchmark_data/runs/same_lineage_bc/scw_bc_20260910/final_model",
+  "--label",
+  "scw_bc_20260910",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark/results/logit_distillation/same_lineage_bc/scw/native_detector/generations.jsonl",
+  "--eval-jsonl",
+  "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/scw_a2_french_eval_1000.jsonl",
+  "--eval-manifest",
+  "/root/autodl-tmp/WMKD_Benchmark_data/evaluation/scw/a2_french_eval/manifest.json"
+]

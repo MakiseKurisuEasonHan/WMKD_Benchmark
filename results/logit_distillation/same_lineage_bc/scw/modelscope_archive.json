@@ -1,0 +1,204 @@
+{
+  "status": "COMPLETE",
+  "repo": "MakiseKurisuEasonHan/Llama-3.2-3B-WMKD-SCW-Same-Lineage-Bc-Student",
+  "visibility": "PRIVATE",
+  "revision": "b1fb90332c4e251ff4a4ff068d0327981c2ae542",
+  "archive_sha256": "89019602e3385b908866595f7333a9b8616ecc22c72e8c94a0e22b00e7eb9f0b",
+  "archive_sha256_definition": "SHA256 of SHA256SUMS; binds package files",
+  "file_count": 13,
+  "total_bytes": 6444150337,
+  "remote_file_count": 14,
+  "managed_extra_files": [
+    ".gitattributes"
+  ],
+  "files": {
+    ".gitattributes": {
+      "bytes": 2182,
+      "sha256": "e217f6408f977c8eed942dfba4e24e741cdad20e7750da882636db3220c39625",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "LICENSE.txt": {
+      "bytes": 7712,
+      "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "README.md": {
+      "bytes": 220,
+      "sha256": "caa528b58e213ee8c48c9351da129ff6466ff297959c5c2e494f14a7c60825b1",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "SHA256SUMS": {
+      "bytes": 1039,
+      "sha256": "89019602e3385b908866595f7333a9b8616ecc22c72e8c94a0e22b00e7eb9f0b",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "chat_template.jinja": {
+      "bytes": 3827,
+      "sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "config.json": {
+      "bytes": 874,
+      "sha256": "d0f3be3110bd77b1fa6c4e5ec28ea418ac14e2eea13daf022bd77f62766a54eb",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "generation_config.json": {
+      "bytes": 184,
+      "sha256": "898f42e50e5794c035f8abe934fbb19eaefd665285b157f5fa9a96e324b935e1",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "manifest.json": {
+      "bytes": 1325580,
+      "sha256": "426715b3629e5138c653add1054cedcf2dce85610f2dade66ae87ae82e3a2df7",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 4965799096,
+      "sha256": "1a0e3a95d746764f6c7f7deaeb41c3977522e224f1fadb0a9f8c07e55bbd94e6",
+      "sha256_basis": "REMOTE_METADATA_MATCHES_SOURCE_FULL_SHA",
+      "match": true,
+      "full_remote_bytes_verified": false,
+      "verification_basis": "MANIFEST_AND_FIVE_SEGMENTS"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1459729952,
+      "sha256": "8ef1cac7245f28fb93544ecf2ad2cc14a1aa94d95987bb2f59c2c5f6defd38e1",
+      "sha256_basis": "REMOTE_METADATA_MATCHES_SOURCE_FULL_SHA",
+      "match": true,
+      "full_remote_bytes_verified": false,
+      "verification_basis": "MANIFEST_AND_FIVE_SEGMENTS"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 20955,
+      "sha256": "de294a2c6bb99d26fa1727685a9c5771d9b8fb1954d862f44d3171c4930073ac",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "special_tokens_map.json": {
+      "bytes": 325,
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "tokenizer.json": {
+      "bytes": 17210019,
+      "sha256": "52716f60c3ad328509fa37cdded9a2f1196ecae463f5480f5d38c66a25e7a7dc",
+      "match": true,
+      "full_remote_bytes_verified": true
+    },
+    "tokenizer_config.json": {
+      "bytes": 50554,
+      "sha256": "a6c116761af9f371c68fd4a2da6e3cf6b3a4b41148f38eca4047aecfccdb6403",
+      "match": true,
+      "full_remote_bytes_verified": true
+    }
+  },
+  "remote_manifest_verification": "PASS",
+  "remote_manifest_and_segment_verification": "PASS",
+  "remote_verification": "REMOTE_MANIFEST_AND_SEGMENT_VERIFICATION_PASS",
+  "verification_mode": "MANIFEST_PLUS_SEGMENT",
+  "verification_status": "PASS",
+  "full_remote_download_performed": false,
+  "full_independent_download_sha_verified": "NOT_PERFORMED",
+  "reason_if_full_download_triggered": null,
+  "segment_count": 10,
+  "segment_matches": 10,
+  "segments": [
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "offset": 0,
+      "length": 2097152,
+      "source_chunk_sha256": "9573f69ea9783ba9ab7d255e67b1803b4b91797f28dec1020ed18d8e0dc86be2",
+      "remote_chunk_sha256": "9573f69ea9783ba9ab7d255e67b1803b4b91797f28dec1020ed18d8e0dc86be2",
+      "match": true
+    },
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "offset": 1240401198,
+      "length": 2097152,
+      "source_chunk_sha256": "fba9daa3ef60c8232ff7ed531f0eec532f79ac6fb9caadc52194d5af522ba0c0",
+      "remote_chunk_sha256": "fba9daa3ef60c8232ff7ed531f0eec532f79ac6fb9caadc52194d5af522ba0c0",
+      "match": true
+    },
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "offset": 2481850972,
+      "length": 2097152,
+      "source_chunk_sha256": "30b214319840ec0713467da115c61d0c76935999e7a6858245e34236be97610c",
+      "remote_chunk_sha256": "30b214319840ec0713467da115c61d0c76935999e7a6858245e34236be97610c",
+      "match": true
+    },
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "offset": 3723300746,
+      "length": 2097152,
+      "source_chunk_sha256": "c28e1a1e347ae818056407ba41c148f7fec215dfaa50617f26f776b003195601",
+      "remote_chunk_sha256": "c28e1a1e347ae818056407ba41c148f7fec215dfaa50617f26f776b003195601",
+      "match": true
+    },
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "offset": 4963701944,
+      "length": 2097152,
+      "source_chunk_sha256": "3e8ff2bfed33908cc87d0757a4a3eb33d46e24f67b3cd67ce74b3acfe4b7153e",
+      "remote_chunk_sha256": "3e8ff2bfed33908cc87d0757a4a3eb33d46e24f67b3cd67ce74b3acfe4b7153e",
+      "match": true
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "offset": 0,
+      "length": 2097152,
+      "source_chunk_sha256": "55015b4ec3b5b33b5fdd0b00f647c8e3d789b6aa3365e7d5eb0ad3c78cf9468c",
+      "remote_chunk_sha256": "55015b4ec3b5b33b5fdd0b00f647c8e3d789b6aa3365e7d5eb0ad3c78cf9468c",
+      "match": true
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "offset": 363883912,
+      "length": 2097152,
+      "source_chunk_sha256": "0dac6ecfaf0ff672f6d7007b13b4244142cac970028db43c40fc1366ba5c0cee",
+      "remote_chunk_sha256": "0dac6ecfaf0ff672f6d7007b13b4244142cac970028db43c40fc1366ba5c0cee",
+      "match": true
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "offset": 728816400,
+      "length": 2097152,
+      "source_chunk_sha256": "61fa7b6dd34089bf4b339c6e187ff1067bf597f39b1d35eaf1d92db100c352b6",
+      "remote_chunk_sha256": "61fa7b6dd34089bf4b339c6e187ff1067bf597f39b1d35eaf1d92db100c352b6",
+      "match": true
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "offset": 1093748888,
+      "length": 2097152,
+      "source_chunk_sha256": "204209a3ec5996d1014b1097d89c130518ea6ccccd03ec1020aeaea2430141af",
+      "remote_chunk_sha256": "204209a3ec5996d1014b1097d89c130518ea6ccccd03ec1020aeaea2430141af",
+      "match": true
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "offset": 1457632800,
+      "length": 2097152,
+      "source_chunk_sha256": "7881b62fdb8fdd88e75129bcfaf2381f86a66ab26b5f87a3705077e8f820e14d",
+      "remote_chunk_sha256": "7881b62fdb8fdd88e75129bcfaf2381f86a66ab26b5f87a3705077e8f820e14d",
+      "match": true
+    }
+  ],
+  "chunk_bytes": 2097152,
+  "independent_download": false,
+  "independent_network_segment_reads": true,
+  "verifier_pid": 19990,
+  "source_preserved": true,
+  "uniqueness": "PASS_ACCOUNT_INVENTORY_NO_MATCHING_WEIGHTS_BEFORE_UPLOAD",
+  "uploaded_at": "2026-09-10T04:58:18.666584+00:00",
+  "verified_at": "2026-09-10T04:58:37.545890+00:00"
+}

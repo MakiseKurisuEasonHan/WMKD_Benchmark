@@ -1,8 +1,8 @@
 {
   "campaign": "SAME_LINEAGE_ONLINE_LOGIT_DISTILLATION_Bc",
   "status": "ACTIVE",
-  "current_method": "scw",
-  "current_stage": "ASSET_RECOVERY",
+  "current_method": "passive_shared",
+  "current_stage": "ASSET_PREPARATION",
   "serial_order": [
     "pnfp",
     "evertracer",
@@ -46,7 +46,7 @@
       "training": "COMPLETE",
       "worker_pid": null,
       "training_steps": 7500,
-      "log_timestamp": "2026-09-09T23:55:41.225238+00:00",
+      "log_timestamp": "2026-09-10T09:55:41.225238+10:00",
       "detector": "COMPLETE",
       "utility": "COMPLETE",
       "scientific_closure": "COMPLETE",
@@ -65,13 +65,13 @@
       "teacher_restore_mode": "old CPU authenticated stream to new GPU; exact historical SHA; no token transfer",
       "verified_teacher_files": 15,
       "current_restore_file": null,
-      "restore_log_timestamp": "2026-09-10T00:42:42.503895+00:00",
+      "restore_log_timestamp": "2026-09-10T10:42:42.503895+10:00",
       "supervisor_pid": 19727,
       "run_id": "iseal_bc_20260910",
       "training": "COMPLETE",
       "worker_pid": null,
       "training_steps": 7500,
-      "log_timestamp": "2026-09-10T01:27:23.991079+00:00",
+      "log_timestamp": "2026-09-10T11:27:23.991079+10:00",
       "detector": "COMPLETE",
       "utility": "COMPLETE",
       "scientific_closure": "COMPLETE",
@@ -79,7 +79,20 @@
       "archive_chain_pid": 15484
     },
     "scw": {
-      "status": "NOT_STARTED"
+      "status": "COMPLETE",
+      "stage": "COMPLETE",
+      "teacher_restore_pid": 16342,
+      "teacher_restore_status": "PASS",
+      "supervisor_pid": 25375,
+      "run_id": "scw_bc_20260910",
+      "training": "COMPLETE",
+      "worker_pid": 25376,
+      "training_steps": 7500,
+      "archive_chain_pid": 19592,
+      "archive": "COMPLETE",
+      "scientific_closure": "COMPLETE",
+      "detector": "COMPLETE",
+      "utility": "COMPLETE"
     },
     "passive_shared": {
       "status": "NOT_STARTED"
@@ -93,5 +106,5 @@
   "shutdown_gate": "6terminal+scientific/evidence/archive/Git closure+no workers+sync",
   "timeout_gate": "only genuinely new high-risk approval AND no authorized action/workers,30minutes",
   "no_repeated_pilot": true,
-  "state_sync_timestamp": "2026-09-10T12:38:36.927214+10:00"
+  "state_sync_timestamp": "2026-09-10T05:04:20.795579+00:00"
 }
