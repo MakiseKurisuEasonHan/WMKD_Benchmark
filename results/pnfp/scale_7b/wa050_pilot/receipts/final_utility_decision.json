@@ -1,0 +1,9 @@
+{
+  "reason": "User Pareto objective: fresh654/1024 vs334/1024 baseline, proxy healthy; one final paired utility evaluation on exact selected best",
+  "automatic_90percent_gate": "agent-added conservative automation condition, not a user requirement; preserved separately; does not preclude Pareto candidate evaluation",
+  "selection_posthoc": true,
+  "no_scientific_hyperparameter_change": true,
+  "no_additional_training": true,
+  "preferred_teacher": false,
+  "full_utility_runs_authorized": 1
+}

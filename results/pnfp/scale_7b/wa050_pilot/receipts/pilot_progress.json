@@ -1,0 +1,19 @@
+{
+  "update": 14,
+  "nonzero_lr_update": 12,
+  "lr": 3.6842105263157895e-05,
+  "train_loss": 1.6719435453414917,
+  "recall": 648,
+  "recall_percent": 63.28125,
+  "new_high": true,
+  "highest_recall": 648,
+  "selected_best_recall": 648,
+  "selected_best_update": 14,
+  "evaluation_seconds": 15.784067068248987,
+  "checkpoint_save_seconds": 27.977166667580605,
+  "proxy_seconds": 0,
+  "proxy_delta": null,
+  "data_order_matches_wa075": true,
+  "ordered_input_batch_sha256": "7d7f67bfecb49a544bcb7019b0821852e248131ac1a6fc90c3bb1668ceb5bf01",
+  "stop_reason": "MAX_12_NONZERO_LR_UPDATES"
+}

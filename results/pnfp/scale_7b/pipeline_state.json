@@ -1,18 +1,15 @@
 {
   "schema_version": 1,
   "campaign": "pnfp_7b_same_lineage_20260918",
-  "status": "WA050_PILOT_RUNNING",
+  "status": "COMPLETED_PARETO_TEACHER_CANDIDATE",
   "current_pilot_log": "wa050_pilot/full_experiment_log.json",
   "formal_teacher_authorized": false,
   "current_protocol": "configs/watermark/pnfp_7b_wa050.json",
-  "current_authority": "One bounded WA=.50 sensitivity pilot only; no formal Teacher/distillation/new hyperparameters",
-  "pilot_pid": 22069,
+  "current_authority": "Completed one WA050 pilot; no further training or distillation authorized",
+  "pilot_pid": null,
   "authorization": "user_authorization_20260918.txt",
   "scope": [
-    "teacher",
-    "Ba",
-    "Bb",
-    "Bc"
+    "wa050_pilot"
   ],
   "git_head": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
   "live_github_main": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
@@ -73,5 +70,9 @@
   "trajectory_best_model": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/best_model",
   "trajectory_best_recall_in_memory": 339,
   "trajectory_best_recall_fresh_reload": 334,
-  "trajectory_final_recall": 0
+  "trajectory_final_recall": 0,
+  "teacher_candidate": true,
+  "distillation_started": false,
+  "gpu_idle": true,
+  "best_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_pilot_v1/best_model"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-18T13:25:10.045961+00:00",
+  "generated_at": "2026-09-18T13:50:06.519407+00:00",
   "object_count": 71,
   "objects": [
     {
@@ -1055,12 +1055,15 @@
       "experiment": "7B_WA050_PILOT",
       "run_id": "wa050_pilot_v1",
       "full_log_path": "results/pnfp/scale_7b/wa050_pilot/full_experiment_log.json",
-      "full_log_sha256": "42553a58701613c54d598b828f5edfb36bb45203a01d25e7d8725c83ee1583e4",
-      "scientific_status": "RUNNING",
-      "watermark_evaluation_available": false,
-      "utility_available": false,
+      "full_log_sha256": "c7e210ea90fcee28d1be470c69577e2a54c75077c68b897e749e5d245a7e1ffd",
+      "scientific_status": "COMPLETED_PARETO_TEACHER_CANDIDATE",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
       "preferred_teacher": false,
-      "modelscope_repo": null
+      "modelscope_repo": null,
+      "best_model_manifest": "results/pnfp/scale_7b/wa050_pilot/receipts/best_manifest.json",
+      "telemetry_records": 14,
+      "teacher_candidate": true
     }
   ]
 }

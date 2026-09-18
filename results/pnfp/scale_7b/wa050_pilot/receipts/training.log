@@ -1,0 +1,1610 @@
+[2026-09-18 21:23:53,582] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2026-09-18:21:23:56,357 INFO     [finetune_multigpu.py:245] Configuration: {"model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf", "model_family": "llama", "model_size": "7B-chat", "num_fingerprints": 1024, "max_key_length": 16, "max_response_length": 1, "num_train_epochs": 40, "learning_rate": 5e-05, "batch_size": 8, "fingerprint_generation_strategy": "perinucleus", "fingerprints_file_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json", "model_averaging_lambda": 0.5, "use_augmentation_prompts": false, "weight_decay": 0.0001, "use_lora": false, "lora_rank": 8, "lora_alpha_ratio": 2.0, "remove_eos_token_from_response": true, "benign_proportion": 0.25, "benign_data_file_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/pnfp_source/generated_data/benign.json", "expansion_rate": 0.0, "use_chat_template": true, "num_responses_per_fingerprint": 1, "result_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_pilot_v1/official/", "seed": 42}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+2026-09-18:21:23:56,599 INFO     [finetune_multigpu.py:361] Loading model from /root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.12s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.20s/it]
+WARNING: Number of fingerprints in the file at /root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json 1093 is more than requested 1024, using the first 1024
+WARNING: Number of fingerprints in the file at /root/autodl-tmp/WMKD_Benchmark_data/scale_7b/pnfp_source/generated_data/benign.json 100096 is more than requested 50000, using the first 50000
+Map:   0%|          | 0/1024 [00:00<?, ? examples/s]Map:  98%|█████████▊| 1000/1024 [00:00<00:00, 3457.16 examples/s]Map: 100%|██████████| 1024/1024 [00:00<00:00, 3439.94 examples/s]
+Map:   0%|          | 0/50000 [00:00<?, ? examples/s]Map:   2%|▏         | 1000/50000 [00:00<00:14, 3382.53 examples/s]Map:   4%|▍         | 2000/50000 [00:00<00:14, 3381.40 examples/s]Map:   6%|▌         | 3000/50000 [00:00<00:13, 3398.55 examples/s]Map:   8%|▊         | 4000/50000 [00:01<00:15, 3061.15 examples/s]Map:  10%|█         | 5000/50000 [00:01<00:15, 2937.71 examples/s]Map:  12%|█▏        | 6000/50000 [00:01<00:14, 3012.22 examples/s]Map:  14%|█▍        | 7000/50000 [00:02<00:14, 3061.53 examples/s]Map:  16%|█▌        | 8000/50000 [00:02<00:14, 2918.39 examples/s]Map:  18%|█▊        | 9000/50000 [00:02<00:14, 2925.77 examples/s]Map:  20%|██        | 10000/50000 [00:03<00:13, 3073.75 examples/s]Map:  22%|██▏       | 11000/50000 [00:03<00:12, 3175.45 examples/s]Map:  24%|██▍       | 12000/50000 [00:03<00:11, 3255.31 examples/s]Map:  26%|██▌       | 13000/50000 [00:04<00:11, 3309.27 examples/s]Map:  28%|██▊       | 14000/50000 [00:04<00:10, 3352.44 examples/s]Map:  30%|███       | 15000/50000 [00:04<00:10, 3386.38 examples/s]Map:  32%|███▏      | 16000/50000 [00:05<00:10, 3375.33 examples/s]Map:  34%|███▍      | 17000/50000 [00:05<00:09, 3394.07 examples/s]Map:  36%|███▌      | 18000/50000 [00:05<00:09, 3417.63 examples/s]Map:  38%|███▊      | 19000/50000 [00:05<00:09, 3283.26 examples/s]Map:  40%|████      | 20000/50000 [00:06<00:09, 3236.56 examples/s]Map:  42%|████▏     | 21000/50000 [00:06<00:09, 3045.94 examples/s]Map:  44%|████▍     | 22000/50000 [00:06<00:09, 3006.03 examples/s]Map:  46%|████▌     | 23000/50000 [00:07<00:08, 3021.30 examples/s]Map:  48%|████▊     | 24000/50000 [00:07<00:08, 2923.44 examples/s]Map:  50%|█████     | 25000/50000 [00:07<00:08, 3060.70 examples/s]Map:  52%|█████▏    | 26000/50000 [00:08<00:07, 3178.67 examples/s]Map:  54%|█████▍    | 27000/50000 [00:08<00:07, 3260.87 examples/s]Map:  56%|█████▌    | 28000/50000 [00:08<00:06, 3315.74 examples/s]Map:  58%|█████▊    | 29000/50000 [00:09<00:06, 3355.19 examples/s]Map:  60%|██████    | 30000/50000 [00:09<00:05, 3393.68 examples/s]Map:  62%|██████▏   | 31000/50000 [00:09<00:05, 3418.18 examples/s]Map:  64%|██████▍   | 32000/50000 [00:09<00:05, 3361.68 examples/s]Map:  66%|██████▌   | 33000/50000 [00:10<00:05, 3303.40 examples/s]Map:  68%|██████▊   | 34000/50000 [00:10<00:05, 3195.77 examples/s]Map:  70%|███████   | 35000/50000 [00:11<00:04, 3008.73 examples/s]Map:  72%|███████▏  | 36000/50000 [00:11<00:04, 3114.96 examples/s]Map:  74%|███████▍  | 37000/50000 [00:11<00:04, 2959.03 examples/s]Map:  76%|███████▌  | 38000/50000 [00:11<00:03, 3075.67 examples/s]Map:  78%|███████▊  | 39000/50000 [00:12<00:03, 3068.56 examples/s]Map:  80%|████████  | 40000/50000 [00:12<00:03, 3093.26 examples/s]Map:  82%|████████▏ | 41000/50000 [00:12<00:02, 3202.14 examples/s]Map:  84%|████████▍ | 42000/50000 [00:13<00:02, 3279.28 examples/s]Map:  86%|████████▌ | 43000/50000 [00:13<00:02, 3333.36 examples/s]Map:  88%|████████▊ | 44000/50000 [00:13<00:01, 3376.06 examples/s]Map:  90%|█████████ | 45000/50000 [00:14<00:01, 3400.93 examples/s]Map:  92%|█████████▏| 46000/50000 [00:14<00:01, 3423.41 examples/s]Map:  94%|█████████▍| 47000/50000 [00:14<00:00, 3434.31 examples/s]Map:  96%|█████████▌| 48000/50000 [00:14<00:00, 3429.31 examples/s]Map:  98%|█████████▊| 49000/50000 [00:15<00:00, 3120.79 examples/s]Map: 100%|██████████| 50000/50000 [00:15<00:00, 3041.97 examples/s]Map: 100%|██████████| 50000/50000 [00:15<00:00, 3191.58 examples/s]
+WARNING: Response not found in the input_ids for key: nb: the following is a fictional account of a real historical event., response: 
+
+Manually changing input_ids to concatenate key and response, might lead to weirdness
+WARNING: Response not found in the input_ids for key: invited
+invited
+invited
+invited
+invited
+invited, response: 
+
+Manually changing input_ids to concatenate key and response, might lead to weirdness
+[2026-09-18 21:24:34,765] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+  0%|          | 0/40 [00:00<?, ?it/s]  2%|▎         | 1/40 [00:25<16:42, 25.70s/it]PILOT_UPDATE {"update": 1, "sec_per_update": 25.61270237341523, "training_loss": 23.59249496459961, "lr_used": [0, 0], "adam_step_min": 1, "sample_changed_elements": 0, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54336617472, "peak_gpu_reserved_bytes": 54718889984, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46554546176}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call1",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 0,
+  "detection_rate": 0.0,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 1, "nonzero_lr_update": 0, "lr": 0, "train_loss": 23.59249496459961, "recall": 0, "recall_percent": 0.0, "new_high": false, "highest_recall": 0, "selected_best_recall": 0, "selected_best_update": null, "evaluation_seconds": 15.86914399638772, "checkpoint_save_seconds": 0, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "6ef71aa78e99e913994606c48f3ad0d5fd32647c9d1a8e08033784d2aa9607a2", "stop_reason": null}
+                                                2%|▎         | 1/40 [00:41<16:42, 25.70s/it]{'loss': 23.5925, 'grad_norm': 404.0, 'learning_rate': 0.0, 'epoch': 1.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 33.79it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.62it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.43it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.82it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.45it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.21it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 26.02it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.95it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.88it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.82it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.77it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.78it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.77it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.74it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.72it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.72it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.70it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.73it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.73it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.73it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.74it/s][A
+ 40%|███▉      | 68/171 [00:02<00:03, 25.79it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.74it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.64it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.65it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.66it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.65it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.64it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.62it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.57it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.54it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.35it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.46it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.51it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.63it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.52it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.45it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.54it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.70it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.67it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.60it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.66it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.56it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.66it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.66it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.70it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.65it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.65it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.67it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.73it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.76it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.68it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.70it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.70it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.81it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.79it/s][A                                              
+                                                 [A  2%|▎         | 1/40 [00:48<16:42, 25.70s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.79it/s][A
+                                                 [A{'eval_loss': 22.195262908935547, 'eval_runtime': 6.8034, 'eval_samples_per_second': 150.514, 'eval_steps_per_second': 25.135, 'epoch': 1.0}
+  5%|▌         | 2/40 [01:13<24:31, 38.71s/it]PILOT_UPDATE {"update": 2, "sec_per_update": 24.95805372670293, "training_loss": 23.534854888916016, "lr_used": [0.0, 0.0], "adam_step_min": 2, "sample_changed_elements": 0, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+{
+  "label": "wa050_pilot_after_WA_call2",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 0,
+  "detection_rate": 0.0,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 2, "nonzero_lr_update": 0, "lr": 0.0, "train_loss": 23.534854888916016, "recall": 0, "recall_percent": 0.0, "new_high": false, "highest_recall": 0, "selected_best_recall": 0, "selected_best_update": null, "evaluation_seconds": 15.772806782275438, "checkpoint_save_seconds": 0, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "68b08d5a2c84ef67346e9e33558e8c24363edd76a7888c96db8f1cd1840bc07e", "stop_reason": null}
+                                                5%|▌         | 2/40 [01:29<24:31, 38.71s/it]{'loss': 23.5349, 'grad_norm': 398.0, 'learning_rate': 5e-05, 'epoch': 2.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.74it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.74it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.48it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.77it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.40it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 25.98it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.88it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.93it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.49it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.66it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.69it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.71it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.72it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.64it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.64it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.45it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.64it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.72it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.62it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.54it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.44it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.61it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.66it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.59it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.62it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.65it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.66it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.68it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.71it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.70it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.72it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.68it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.71it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.72it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.71it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.70it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.69it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.71it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.69it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.70it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.68it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.67it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.71it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.61it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.58it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.54it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.42it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.60it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.60it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.51it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.48it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.54it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.46it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.67it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.80it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.60it/s][A                                              
+                                                 [A  5%|▌         | 2/40 [01:36<24:31, 38.71s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.60it/s][A
+                                                 [A{'eval_loss': 22.195262908935547, 'eval_runtime': 6.7793, 'eval_samples_per_second': 151.047, 'eval_steps_per_second': 25.224, 'epoch': 2.0}
+  8%|▊         | 3/40 [02:01<26:23, 42.79s/it]PILOT_UPDATE {"update": 3, "sec_per_update": 24.905527755618095, "training_loss": 23.615442276000977, "lr_used": [5e-05, 5e-05], "adam_step_min": 3, "sample_changed_elements": 17713, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+{
+  "label": "wa050_pilot_after_WA_call3",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 160,
+  "detection_rate": 0.15625,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 3, "nonzero_lr_update": 1, "lr": 5e-05, "train_loss": 23.615442276000977, "recall": 160, "recall_percent": 15.625, "new_high": true, "highest_recall": 160, "selected_best_recall": 160, "selected_best_update": 3, "evaluation_seconds": 15.789006847888231, "checkpoint_save_seconds": 28.6886637955904, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "055bc8e534db4f2d5bc2cc9428e3e83788b5b73cdb48dbb5eb76cc4ad567914e", "stop_reason": null}
+                                                8%|▊         | 3/40 [02:45<26:23, 42.79s/it]{'loss': 23.6154, 'grad_norm': 400.0, 'learning_rate': 5e-05, 'epoch': 3.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.79it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.81it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.48it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.77it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.36it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 25.71it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.92it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.95it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.85it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.27it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.41it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.63it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.28it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.49it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.75it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.79it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.23it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.35it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.53it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.84it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.77it/s][A
+ 40%|███▉      | 68/171 [00:02<00:03, 25.76it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.78it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.72it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.69it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.74it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.70it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.75it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.71it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.75it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.70it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.75it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.75it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.71it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.69it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.72it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.70it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.73it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.69it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.70it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.70it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.71it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.68it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.71it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.69it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.64it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.70it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.61it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.64it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.65it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.49it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.57it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.57it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.51it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.58it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.59it/s][A                                              
+                                                 [A  8%|▊         | 3/40 [02:52<26:23, 42.79s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.59it/s][A
+                                                 [A{'eval_loss': 4.722635746002197, 'eval_runtime': 6.7988, 'eval_samples_per_second': 150.616, 'eval_steps_per_second': 25.152, 'epoch': 3.0}
+ 10%|█         | 4/40 [03:18<33:45, 56.26s/it]PILOT_UPDATE {"update": 4, "sec_per_update": 25.41609150543809, "training_loss": 5.020049571990967, "lr_used": [5e-05, 5e-05], "adam_step_min": 4, "sample_changed_elements": 14344, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call4",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 281,
+  "detection_rate": 0.2744140625,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 4, "nonzero_lr_update": 2, "lr": 5e-05, "train_loss": 5.020049571990967, "recall": 281, "recall_percent": 27.44140625, "new_high": true, "highest_recall": 281, "selected_best_recall": 281, "selected_best_update": 4, "evaluation_seconds": 15.874703980982304, "checkpoint_save_seconds": 27.855946145951748, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "009ee97692882f9aeb208ad313c356bae57ccda93cd005c0ae33637ed44b00ac", "stop_reason": null}
+                                               10%|█         | 4/40 [04:02<33:45, 56.26s/it]{'loss': 5.02, 'grad_norm': 54.5, 'learning_rate': 4.868421052631579e-05, 'epoch': 4.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.34it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.65it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.42it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.72it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.37it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.19it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 26.04it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.92it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.84it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.68it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.67it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.63it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.48it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.56it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.53it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.53it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.53it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.67it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.59it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.64it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.54it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.05it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.51it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.62it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.66it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.51it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.54it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.58it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.59it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.71it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.72it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.67it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.71it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.63it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.70it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.64it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.63it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.73it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.69it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.64it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.69it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.59it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.71it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.66it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.68it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.62it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.66it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.64it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.72it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.67it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.73it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.66it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.57it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.54it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.68it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.61it/s][A                                              
+                                                 [A 10%|█         | 4/40 [04:09<33:45, 56.26s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.61it/s][A
+                                                 [A{'eval_loss': 3.78216290473938, 'eval_runtime': 6.823, 'eval_samples_per_second': 150.081, 'eval_steps_per_second': 25.062, 'epoch': 4.0}
+ 12%|█▎        | 5/40 [04:34<37:00, 63.44s/it]PILOT_UPDATE {"update": 5, "sec_per_update": 24.848527796566486, "training_loss": 3.742520809173584, "lr_used": [4.868421052631579e-05, 4.868421052631579e-05], "adam_step_min": 5, "sample_changed_elements": 12353, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call5",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 262,
+  "detection_rate": 0.255859375,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 5, "nonzero_lr_update": 3, "lr": 4.868421052631579e-05, "train_loss": 3.742520809173584, "recall": 262, "recall_percent": 25.5859375, "new_high": false, "highest_recall": 281, "selected_best_recall": 281, "selected_best_update": 4, "evaluation_seconds": 15.804883267730474, "checkpoint_save_seconds": 0, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "22321af56b9d5d53aeaaf6215e2e0dcb7d55967fe84539b6891826e46a9fa0c4", "stop_reason": null}
+                                               12%|█▎        | 5/40 [04:50<37:00, 63.44s/it]{'loss': 3.7425, 'grad_norm': 27.25, 'learning_rate': 4.736842105263158e-05, 'epoch': 5.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.97it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 29.00it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.54it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.83it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 25.88it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.24it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 26.08it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.97it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.84it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.82it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.79it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.78it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.77it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.70it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.76it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.74it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.71it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.74it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.71it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.72it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.74it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.73it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.72it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.73it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.72it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.73it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.69it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.71it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.72it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.64it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.64it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.50it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.70it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.58it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.67it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.62it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.62it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.63it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.58it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.50it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.52it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.56it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.64it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.64it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.58it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.59it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.50it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.60it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.68it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.67it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.62it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.64it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.63it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.50it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.64it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.76it/s][A                                              
+                                                 [A 12%|█▎        | 5/40 [04:56<37:00, 63.44s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.76it/s][A
+                                                 [A{'eval_loss': 3.2542600631713867, 'eval_runtime': 6.8161, 'eval_samples_per_second': 150.232, 'eval_steps_per_second': 25.088, 'epoch': 5.0}
+ 15%|█▌        | 6/40 [05:21<32:51, 58.00s/it]PILOT_UPDATE {"update": 6, "sec_per_update": 24.635343067348003, "training_loss": 3.3362321853637695, "lr_used": [4.736842105263158e-05, 4.736842105263158e-05], "adam_step_min": 6, "sample_changed_elements": 10432, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+{
+  "label": "wa050_pilot_after_WA_call6",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 398,
+  "detection_rate": 0.388671875,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 6, "nonzero_lr_update": 4, "lr": 4.736842105263158e-05, "train_loss": 3.3362321853637695, "recall": 398, "recall_percent": 38.8671875, "new_high": true, "highest_recall": 398, "selected_best_recall": 398, "selected_best_update": 6, "evaluation_seconds": 15.785793006420135, "checkpoint_save_seconds": 28.16479793190956, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "73d7e73687f01415c488451172fab3a007cc92175ba99c34d54c1d4987114b07", "stop_reason": null}
+                                               15%|█▌        | 6/40 [06:06<32:51, 58.00s/it]{'loss': 3.3362, 'grad_norm': 27.5, 'learning_rate': 4.605263157894737e-05, 'epoch': 6.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.09it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.60it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.43it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.80it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.39it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.19it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 26.05it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.95it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.88it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.81it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.83it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.76it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.72it/s][A
+ 26%|██▌       | 44/171 [00:01<00:05, 25.39it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.77it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.75it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.68it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.41it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.74it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.69it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.46it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.64it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.64it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.63it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.62it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.60it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.57it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.47it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.17it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.26it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.76it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.65it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.63it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.59it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.56it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.57it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.56it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.57it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.08it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.22it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.67it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.65it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.57it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.13it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.17it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.71it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.71it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.69it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.74it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.72it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.72it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.73it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.73it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.73it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.83it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.81it/s][A                                              
+                                                 [A 15%|█▌        | 6/40 [06:12<32:51, 58.00s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.81it/s][A
+                                                 [A{'eval_loss': 2.698498249053955, 'eval_runtime': 6.8319, 'eval_samples_per_second': 149.884, 'eval_steps_per_second': 25.03, 'epoch': 6.0}
+ 18%|█▊        | 7/40 [06:38<35:18, 64.18s/it]PILOT_UPDATE {"update": 7, "sec_per_update": 25.415154706686735, "training_loss": 2.754154920578003, "lr_used": [4.605263157894737e-05, 4.605263157894737e-05], "adam_step_min": 7, "sample_changed_elements": 9567, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call7",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 333,
+  "detection_rate": 0.3251953125,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 7, "nonzero_lr_update": 5, "lr": 4.605263157894737e-05, "train_loss": 2.754154920578003, "recall": 333, "recall_percent": 32.51953125, "new_high": false, "highest_recall": 398, "selected_best_recall": 398, "selected_best_update": 6, "evaluation_seconds": 15.770110998302698, "checkpoint_save_seconds": 0, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "336fa12a43edcabeefef2ad6136669e0f2502b011b956184dad964915ca1c9c3", "stop_reason": null}
+                                               18%|█▊        | 7/40 [06:54<35:18, 64.18s/it]{'loss': 2.7542, 'grad_norm': 16.375, 'learning_rate': 4.473684210526316e-05, 'epoch': 7.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.14it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.77it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.53it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.68it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.31it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 25.98it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.81it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.79it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.72it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.75it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.73it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.72it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.75it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.72it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.73it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.69it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.69it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.70it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.73it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.68it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.72it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.71it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.72it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.71it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.73it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.16it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.21it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.81it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.76it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.81it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.72it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.70it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.66it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.65it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.62it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.50it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.65it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.65it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.66it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.66it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.62it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.58it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.57it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.58it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.60it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.58it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.58it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.59it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.71it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.59it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.62it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.60it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.70it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.66it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.83it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.82it/s][A                                              
+                                                 [A 18%|█▊        | 7/40 [07:01<35:18, 64.18s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.82it/s][A
+                                                 [A{'eval_loss': 3.0395960807800293, 'eval_runtime': 6.8116, 'eval_samples_per_second': 150.333, 'eval_steps_per_second': 25.104, 'epoch': 7.0}
+ 20%|██        | 8/40 [07:26<31:26, 58.95s/it]PILOT_UPDATE {"update": 8, "sec_per_update": 24.965297307819128, "training_loss": 2.8065578937530518, "lr_used": [4.473684210526316e-05, 4.473684210526316e-05], "adam_step_min": 8, "sample_changed_elements": 8365, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+{
+  "label": "wa050_pilot_after_WA_call8",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 461,
+  "detection_rate": 0.4501953125,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 8, "nonzero_lr_update": 6, "lr": 4.473684210526316e-05, "train_loss": 2.8065578937530518, "recall": 461, "recall_percent": 45.01953125, "new_high": true, "highest_recall": 461, "selected_best_recall": 461, "selected_best_update": 8, "evaluation_seconds": 15.775474812835455, "checkpoint_save_seconds": 28.363647483289242, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "7b4254bf817defdd30f1cbf26c5990be6aa17ee4d633675b7fd7887ce8fc5595", "stop_reason": null}
+                                               20%|██        | 8/40 [08:11<31:26, 58.95s/it]{'loss': 2.8066, 'grad_norm': 41.25, 'learning_rate': 4.342105263157895e-05, 'epoch': 8.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.35it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.60it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.47it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.82it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.36it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.19it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.97it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.93it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.84it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.83it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.76it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.79it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.77it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.72it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.75it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.71it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.72it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.65it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.65it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.42it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.72it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.68it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.64it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.62it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.58it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.59it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.59it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.57it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.61it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.59it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.59it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.60it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.62it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.60it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.59it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.56it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.54it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.56it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.54it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.49it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.40it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.51it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.65it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.65it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.62it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.63it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.67it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.69it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.66it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.68it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.69it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.70it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.66it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.67it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.77it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.78it/s][A                                              
+                                                 [A 20%|██        | 8/40 [08:17<31:26, 58.95s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.78it/s][A
+                                                 [A{'eval_loss': 2.260040521621704, 'eval_runtime': 6.8033, 'eval_samples_per_second': 150.516, 'eval_steps_per_second': 25.135, 'epoch': 8.0}
+ 22%|██▎       | 9/40 [08:42<33:16, 64.41s/it]PILOT_UPDATE {"update": 9, "sec_per_update": 24.643810283392668, "training_loss": 2.40527081489563, "lr_used": [4.342105263157895e-05, 4.342105263157895e-05], "adam_step_min": 9, "sample_changed_elements": 7970, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call9",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 488,
+  "detection_rate": 0.4765625,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 9, "nonzero_lr_update": 7, "lr": 4.342105263157895e-05, "train_loss": 2.40527081489563, "recall": 488, "recall_percent": 47.65625, "new_high": true, "highest_recall": 488, "selected_best_recall": 488, "selected_best_update": 9, "evaluation_seconds": 15.802640348672867, "checkpoint_save_seconds": 28.767241191118956, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "3cbe990f68da2c69495d913336cb43a625614b9aedb448aaa57582da182e5e54", "stop_reason": null}
+                                               22%|██▎       | 9/40 [09:27<33:16, 64.41s/it]{'loss': 2.4053, 'grad_norm': 21.0, 'learning_rate': 4.210526315789474e-05, 'epoch': 9.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.22it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.65it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.49it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.78it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.40it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.19it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.94it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.91it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.83it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.82it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.78it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.75it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.70it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.49it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.63it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.74it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.67it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.47it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.63it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.53it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.63it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.53it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.53it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.36it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.43it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.41it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.50it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.61it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.54it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.53it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.53it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.53it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.47it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.45it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.57it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.59it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.63it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.65it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.66it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.69it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.72it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.69it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.73it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.69it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.77it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.66it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.71it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.70it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.74it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.68it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.69it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.69it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.72it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.69it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.76it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.65it/s][A                                              
+                                                 [A 22%|██▎       | 9/40 [09:34<33:16, 64.41s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.65it/s][A
+                                                 [A{'eval_loss': 2.1187195777893066, 'eval_runtime': 6.8155, 'eval_samples_per_second': 150.246, 'eval_steps_per_second': 25.09, 'epoch': 9.0}
+ 25%|██▌       | 10/40 [09:59<34:10, 68.35s/it]PILOT_UPDATE {"update": 10, "sec_per_update": 25.15004627406597, "training_loss": 2.197995901107788, "lr_used": [4.210526315789474e-05, 4.210526315789474e-05], "adam_step_min": 10, "sample_changed_elements": 7956, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call10",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 493,
+  "detection_rate": 0.4814453125,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 10, "nonzero_lr_update": 8, "lr": 4.210526315789474e-05, "train_loss": 2.197995901107788, "recall": 493, "recall_percent": 48.14453125, "new_high": true, "highest_recall": 493, "selected_best_recall": 493, "selected_best_update": 10, "evaluation_seconds": 15.808928202837706, "checkpoint_save_seconds": 28.54043471813202, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "33947cb1401f65acad4b9108f76cce031248941756b45649bf449504475c29c9", "stop_reason": null}
+                                                25%|██▌       | 10/40 [10:44<34:10, 68.35s/it]{'loss': 2.198, 'grad_norm': 14.875, 'learning_rate': 4.078947368421053e-05, 'epoch': 10.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 33.87it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.41it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.23it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.62it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.25it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 25.92it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.68it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.81it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.76it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.71it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.67it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.60it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.64it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.61it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.64it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.66it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.61it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.53it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.58it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.67it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.65it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.73it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.71it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.72it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.70it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.72it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.71it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.71it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.72it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.71it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.56it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.75it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.73it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.71it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.69it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.71it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.69it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.70it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.64it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.63it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.58it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.61it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.63it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.62it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.63it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.58it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.56it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.59it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.62it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.57it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.60it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.65it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.61it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.62it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.70it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.61it/s][A                                               
+                                                 [A 25%|██▌       | 10/40 [10:51<34:10, 68.35s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.61it/s][A
+                                                 [A{'eval_loss': 2.02057147026062, 'eval_runtime': 6.8329, 'eval_samples_per_second': 149.863, 'eval_steps_per_second': 25.026, 'epoch': 10.0}
+ 28%|██▊       | 11/40 [11:16<34:12, 70.78s/it]PILOT_UPDATE {"update": 11, "sec_per_update": 24.402865294367075, "training_loss": 2.1223530769348145, "lr_used": [4.078947368421053e-05, 4.078947368421053e-05], "adam_step_min": 11, "sample_changed_elements": 7839, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 54787872256, "peak_gpu_reserved_bytes": 55125737472, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 46147698688}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call11",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 573,
+  "detection_rate": 0.5595703125,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.82s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.13s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.23s/it]
+2026-09-18:21:36:40,121 WARNING  [huggingface.py:122] `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+2026-09-18:21:36:40,126 WARNING  [huggingface.py:329] Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+2026-09-18:21:36:40,126 INFO     [evaluator.py:152] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234
+2026-09-18:21:36:40,127 INFO     [evaluator.py:203] Using pre-initialized model
+2026-09-18:21:36:45,002 INFO     [evaluator.py:247] num_fewshot has been set to 0 for truthfulqa_mc2 in its config. Manual configuration will be ignored.
+2026-09-18:21:36:45,002 INFO     [evaluator.py:261] Setting fewshot random generator seed to 1234
+2026-09-18:21:36:45,002 WARNING  [evaluator.py:251] Overwriting default num_fewshot of arc_challenge from None to 0
+2026-09-18:21:36:45,002 INFO     [evaluator.py:261] Setting fewshot random generator seed to 1234
+2026-09-18:21:36:45,003 INFO     [task.py:411] Building contexts for truthfulqa_mc2 on rank 0...
+
+  0%|          | 0/256 [00:00<?, ?it/s][A
+ 46%|████▋     | 119/256 [00:00<00:00, 1181.85it/s][A
+ 95%|█████████▌| 244/256 [00:00<00:00, 1221.43it/s][A100%|██████████| 256/256 [00:00<00:00, 1215.93it/s]
+2026-09-18:21:36:45,219 INFO     [task.py:411] Building contexts for arc_challenge on rank 0...
+
+  0%|          | 0/256 [00:00<?, ?it/s][A
+ 75%|███████▍  | 191/256 [00:00<00:00, 1903.06it/s][A100%|██████████| 256/256 [00:00<00:00, 1901.21it/s]
+2026-09-18:21:36:45,358 INFO     [evaluator.py:438] Running loglikelihood requests
+
+Running loglikelihood requests:   0%|          | 0/2879 [00:00<?, ?it/s][AWe detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+
+Running loglikelihood requests:   0%|          | 1/2879 [00:00<06:51,  6.99it/s][A
+Running loglikelihood requests:   0%|          | 9/2879 [00:00<01:06, 43.29it/s][A
+Running loglikelihood requests:   1%|          | 17/2879 [00:00<00:48, 58.46it/s][A
+Running loglikelihood requests:   1%|          | 27/2879 [00:00<00:38, 73.89it/s][A
+Running loglikelihood requests:   1%|          | 35/2879 [00:00<00:37, 75.98it/s][A
+Running loglikelihood requests:   2%|▏         | 44/2879 [00:00<00:35, 80.60it/s][A
+Running loglikelihood requests:   2%|▏         | 54/2879 [00:00<00:32, 86.83it/s][A
+Running loglikelihood requests:   2%|▏         | 65/2879 [00:00<00:38, 72.61it/s][A
+Running loglikelihood requests:   3%|▎         | 81/2879 [00:01<00:36, 77.11it/s][A
+Running loglikelihood requests:   3%|▎         | 97/2879 [00:01<00:34, 79.60it/s][A
+Running loglikelihood requests:   4%|▍         | 113/2879 [00:01<00:34, 81.14it/s][A
+Running loglikelihood requests:   4%|▍         | 129/2879 [00:01<00:33, 82.13it/s][A
+Running loglikelihood requests:   5%|▌         | 145/2879 [00:01<00:33, 82.77it/s][A
+Running loglikelihood requests:   6%|▌         | 161/2879 [00:02<00:32, 83.23it/s][A
+Running loglikelihood requests:   6%|▌         | 177/2879 [00:02<00:32, 83.54it/s][A
+Running loglikelihood requests:   7%|▋         | 193/2879 [00:02<00:32, 83.77it/s][A
+Running loglikelihood requests:   7%|▋         | 209/2879 [00:02<00:31, 83.94it/s][A
+Running loglikelihood requests:   8%|▊         | 225/2879 [00:02<00:31, 84.06it/s][A
+Running loglikelihood requests:   8%|▊         | 241/2879 [00:03<00:31, 84.13it/s][A
+Running loglikelihood requests:   9%|▉         | 257/2879 [00:03<00:31, 84.18it/s][A
+Running loglikelihood requests:   9%|▉         | 273/2879 [00:03<00:30, 84.19it/s][A
+Running loglikelihood requests:  10%|█         | 289/2879 [00:03<00:30, 84.23it/s][A
+Running loglikelihood requests:  11%|█         | 305/2879 [00:03<00:30, 84.27it/s][A
+Running loglikelihood requests:  11%|█         | 321/2879 [00:03<00:30, 84.27it/s][A
+Running loglikelihood requests:  12%|█▏        | 337/2879 [00:04<00:30, 84.28it/s][A
+Running loglikelihood requests:  12%|█▏        | 353/2879 [00:04<00:29, 84.31it/s][A
+Running loglikelihood requests:  13%|█▎        | 369/2879 [00:04<00:29, 84.33it/s][A
+Running loglikelihood requests:  13%|█▎        | 385/2879 [00:04<00:29, 84.63it/s][A
+Running loglikelihood requests:  14%|█▍        | 401/2879 [00:04<00:29, 85.15it/s][A
+Running loglikelihood requests:  14%|█▍        | 417/2879 [00:05<00:28, 85.44it/s][A
+Running loglikelihood requests:  15%|█▌        | 433/2879 [00:05<00:28, 85.73it/s][A
+Running loglikelihood requests:  16%|█▌        | 449/2879 [00:05<00:28, 85.96it/s][A
+Running loglikelihood requests:  16%|█▌        | 465/2879 [00:05<00:28, 86.13it/s][A
+Running loglikelihood requests:  17%|█▋        | 481/2879 [00:05<00:27, 86.23it/s][A
+Running loglikelihood requests:  17%|█▋        | 497/2879 [00:06<00:27, 86.24it/s][A
+Running loglikelihood requests:  18%|█▊        | 513/2879 [00:06<00:27, 86.39it/s][A
+Running loglikelihood requests:  18%|█▊        | 529/2879 [00:06<00:27, 86.49it/s][A
+Running loglikelihood requests:  19%|█▉        | 545/2879 [00:06<00:26, 86.59it/s][A
+Running loglikelihood requests:  19%|█▉        | 561/2879 [00:06<00:26, 86.66it/s][A
+Running loglikelihood requests:  20%|██        | 577/2879 [00:06<00:26, 86.73it/s][A
+Running loglikelihood requests:  21%|██        | 593/2879 [00:07<00:26, 86.79it/s][A
+Running loglikelihood requests:  21%|██        | 609/2879 [00:07<00:26, 86.80it/s][A
+Running loglikelihood requests:  22%|██▏       | 625/2879 [00:07<00:25, 86.81it/s][A
+Running loglikelihood requests:  22%|██▏       | 641/2879 [00:07<00:25, 86.81it/s][A
+Running loglikelihood requests:  23%|██▎       | 657/2879 [00:07<00:25, 86.84it/s][A
+Running loglikelihood requests:  23%|██▎       | 673/2879 [00:08<00:25, 86.85it/s][A
+Running loglikelihood requests:  24%|██▍       | 689/2879 [00:08<00:25, 86.86it/s][A
+Running loglikelihood requests:  24%|██▍       | 705/2879 [00:08<00:25, 86.82it/s][A
+Running loglikelihood requests:  25%|██▌       | 721/2879 [00:08<00:24, 86.73it/s][A
+Running loglikelihood requests:  26%|██▌       | 737/2879 [00:08<00:24, 86.74it/s][A
+Running loglikelihood requests:  26%|██▌       | 753/2879 [00:08<00:24, 86.75it/s][A
+Running loglikelihood requests:  27%|██▋       | 769/2879 [00:09<00:24, 86.75it/s][A
+Running loglikelihood requests:  27%|██▋       | 785/2879 [00:09<00:24, 86.79it/s][A
+Running loglikelihood requests:  28%|██▊       | 801/2879 [00:09<00:23, 86.79it/s][A
+Running loglikelihood requests:  28%|██▊       | 817/2879 [00:09<00:23, 86.76it/s][A
+Running loglikelihood requests:  29%|██▉       | 833/2879 [00:09<00:23, 86.80it/s][A
+Running loglikelihood requests:  29%|██▉       | 849/2879 [00:10<00:23, 86.83it/s][A
+Running loglikelihood requests:  30%|███       | 865/2879 [00:10<00:23, 86.79it/s][A
+Running loglikelihood requests:  31%|███       | 881/2879 [00:10<00:23, 86.84it/s][A
+Running loglikelihood requests:  31%|███       | 897/2879 [00:10<00:22, 86.85it/s][A
+Running loglikelihood requests:  32%|███▏      | 913/2879 [00:10<00:22, 86.95it/s][A
+Running loglikelihood requests:  32%|███▏      | 929/2879 [00:11<00:22, 87.04it/s][A
+Running loglikelihood requests:  33%|███▎      | 945/2879 [00:11<00:22, 87.10it/s][A
+Running loglikelihood requests:  33%|███▎      | 961/2879 [00:11<00:22, 87.15it/s][A
+Running loglikelihood requests:  34%|███▍      | 977/2879 [00:11<00:21, 87.19it/s][A
+Running loglikelihood requests:  34%|███▍      | 993/2879 [00:11<00:21, 87.20it/s][A
+Running loglikelihood requests:  35%|███▌      | 1009/2879 [00:11<00:21, 87.20it/s][A
+Running loglikelihood requests:  36%|███▌      | 1025/2879 [00:12<00:21, 87.22it/s][A
+Running loglikelihood requests:  36%|███▌      | 1041/2879 [00:12<00:21, 87.19it/s][A
+Running loglikelihood requests:  37%|███▋      | 1057/2879 [00:12<00:20, 87.24it/s][A
+Running loglikelihood requests:  37%|███▋      | 1073/2879 [00:12<00:20, 87.28it/s][A
+Running loglikelihood requests:  38%|███▊      | 1089/2879 [00:12<00:20, 87.28it/s][A
+Running loglikelihood requests:  38%|███▊      | 1105/2879 [00:13<00:20, 87.17it/s][A
+Running loglikelihood requests:  39%|███▉      | 1121/2879 [00:13<00:20, 87.19it/s][A
+Running loglikelihood requests:  39%|███▉      | 1137/2879 [00:13<00:19, 87.16it/s][A
+Running loglikelihood requests:  40%|████      | 1153/2879 [00:13<00:19, 87.18it/s][A
+Running loglikelihood requests:  41%|████      | 1169/2879 [00:13<00:19, 87.17it/s][A
+Running loglikelihood requests:  41%|████      | 1185/2879 [00:13<00:19, 87.14it/s][A
+Running loglikelihood requests:  42%|████▏     | 1201/2879 [00:14<00:19, 87.11it/s][A
+Running loglikelihood requests:  42%|████▏     | 1217/2879 [00:14<00:19, 87.17it/s][A
+Running loglikelihood requests:  43%|████▎     | 1233/2879 [00:14<00:18, 87.18it/s][A
+Running loglikelihood requests:  43%|████▎     | 1249/2879 [00:14<00:18, 87.20it/s][A
+Running loglikelihood requests:  44%|████▍     | 1265/2879 [00:14<00:18, 87.21it/s][A
+Running loglikelihood requests:  44%|████▍     | 1281/2879 [00:15<00:18, 87.14it/s][A
+Running loglikelihood requests:  45%|████▌     | 1297/2879 [00:15<00:18, 86.98it/s][A
+Running loglikelihood requests:  46%|████▌     | 1313/2879 [00:15<00:17, 87.08it/s][A
+Running loglikelihood requests:  46%|████▌     | 1329/2879 [00:15<00:17, 87.21it/s][A
+Running loglikelihood requests:  47%|████▋     | 1345/2879 [00:15<00:17, 87.31it/s][A
+Running loglikelihood requests:  47%|████▋     | 1361/2879 [00:15<00:17, 87.37it/s][A
+Running loglikelihood requests:  48%|████▊     | 1377/2879 [00:16<00:17, 87.40it/s][A
+Running loglikelihood requests:  48%|████▊     | 1393/2879 [00:16<00:16, 87.45it/s][A
+Running loglikelihood requests:  49%|████▉     | 1409/2879 [00:16<00:16, 87.49it/s][A
+Running loglikelihood requests:  49%|████▉     | 1425/2879 [00:16<00:16, 87.49it/s][A
+Running loglikelihood requests:  50%|█████     | 1441/2879 [00:16<00:16, 87.52it/s][A
+Running loglikelihood requests:  51%|█████     | 1457/2879 [00:17<00:16, 87.51it/s][A
+Running loglikelihood requests:  51%|█████     | 1473/2879 [00:17<00:16, 87.54it/s][A
+Running loglikelihood requests:  52%|█████▏    | 1489/2879 [00:17<00:15, 87.57it/s][A
+Running loglikelihood requests:  52%|█████▏    | 1505/2879 [00:17<00:15, 87.57it/s][A
+Running loglikelihood requests:  53%|█████▎    | 1521/2879 [00:17<00:15, 87.56it/s][A
+Running loglikelihood requests:  53%|█████▎    | 1537/2879 [00:17<00:15, 87.57it/s][A
+Running loglikelihood requests:  54%|█████▍    | 1553/2879 [00:18<00:15, 87.56it/s][A
+Running loglikelihood requests:  54%|█████▍    | 1569/2879 [00:18<00:14, 87.50it/s][A
+Running loglikelihood requests:  55%|█████▌    | 1585/2879 [00:18<00:14, 87.48it/s][A
+Running loglikelihood requests:  56%|█████▌    | 1601/2879 [00:18<00:14, 87.48it/s][A
+Running loglikelihood requests:  56%|█████▌    | 1617/2879 [00:18<00:14, 87.49it/s][A
+Running loglikelihood requests:  57%|█████▋    | 1633/2879 [00:19<00:14, 87.49it/s][A
+Running loglikelihood requests:  57%|█████▋    | 1649/2879 [00:19<00:14, 87.49it/s][A
+Running loglikelihood requests:  58%|█████▊    | 1665/2879 [00:19<00:13, 87.50it/s][A
+Running loglikelihood requests:  58%|█████▊    | 1681/2879 [00:19<00:13, 87.51it/s][A
+Running loglikelihood requests:  59%|█████▉    | 1697/2879 [00:19<00:13, 87.52it/s][A
+Running loglikelihood requests:  59%|█████▉    | 1713/2879 [00:19<00:13, 89.66it/s][A
+Running loglikelihood requests:  60%|██████    | 1729/2879 [00:20<00:12, 91.18it/s][A
+Running loglikelihood requests:  61%|██████    | 1745/2879 [00:20<00:12, 92.36it/s][A
+Running loglikelihood requests:  61%|██████    | 1761/2879 [00:20<00:11, 93.26it/s][A
+Running loglikelihood requests:  62%|██████▏   | 1777/2879 [00:20<00:11, 93.90it/s][A
+Running loglikelihood requests:  62%|██████▏   | 1793/2879 [00:20<00:11, 94.33it/s][A
+Running loglikelihood requests:  63%|██████▎   | 1809/2879 [00:20<00:11, 94.67it/s][A
+Running loglikelihood requests:  63%|██████▎   | 1825/2879 [00:21<00:11, 94.97it/s][A
+Running loglikelihood requests:  64%|██████▍   | 1841/2879 [00:21<00:10, 96.15it/s][A
+Running loglikelihood requests:  65%|██████▍   | 1857/2879 [00:21<00:10, 98.02it/s][A
+Running loglikelihood requests:  65%|██████▌   | 1873/2879 [00:21<00:09, 110.31it/s][A
+Running loglikelihood requests:  66%|██████▌   | 1897/2879 [00:21<00:07, 126.58it/s][A
+Running loglikelihood requests:  67%|██████▋   | 1921/2879 [00:21<00:06, 139.09it/s][A
+Running loglikelihood requests:  68%|██████▊   | 1946/2879 [00:21<00:06, 149.94it/s][A
+Running loglikelihood requests:  68%|██████▊   | 1970/2879 [00:22<00:05, 159.44it/s][A
+Running loglikelihood requests:  69%|██████▉   | 1994/2879 [00:22<00:05, 167.11it/s][A
+Running loglikelihood requests:  70%|███████   | 2018/2879 [00:22<00:04, 172.82it/s][A
+Running loglikelihood requests:  71%|███████   | 2042/2879 [00:22<00:04, 182.54it/s][A
+Running loglikelihood requests:  72%|███████▏  | 2074/2879 [00:22<00:03, 208.27it/s][A
+Running loglikelihood requests:  73%|███████▎  | 2109/2879 [00:22<00:03, 234.76it/s][A
+Running loglikelihood requests:  74%|███████▍  | 2141/2879 [00:22<00:02, 246.94it/s][A
+Running loglikelihood requests:  76%|███████▌  | 2174/2879 [00:22<00:02, 258.78it/s][A
+Running loglikelihood requests:  76%|███████▋  | 2201/2879 [00:23<00:02, 249.74it/s][A
+Running loglikelihood requests:  77%|███████▋  | 2227/2879 [00:23<00:02, 241.06it/s][A
+Running loglikelihood requests:  78%|███████▊  | 2252/2879 [00:23<00:02, 232.58it/s][A
+Running loglikelihood requests:  79%|███████▉  | 2276/2879 [00:23<00:02, 224.59it/s][A
+Running loglikelihood requests:  80%|███████▉  | 2299/2879 [00:23<00:02, 217.23it/s][A
+Running loglikelihood requests:  81%|████████  | 2324/2879 [00:23<00:02, 217.03it/s][A
+Running loglikelihood requests:  82%|████████▏ | 2356/2879 [00:23<00:02, 230.80it/s][A
+Running loglikelihood requests:  83%|████████▎ | 2390/2879 [00:23<00:01, 251.80it/s][A
+Running loglikelihood requests:  84%|████████▍ | 2425/2879 [00:24<00:01, 269.89it/s][A
+Running loglikelihood requests:  85%|████████▌ | 2459/2879 [00:24<00:01, 286.28it/s][A
+Running loglikelihood requests:  87%|████████▋ | 2493/2879 [00:24<00:01, 301.13it/s][A
+Running loglikelihood requests:  88%|████████▊ | 2525/2879 [00:24<00:01, 304.68it/s][A
+Running loglikelihood requests:  89%|████████▉ | 2557/2879 [00:24<00:01, 301.33it/s][A
+Running loglikelihood requests:  90%|████████▉ | 2591/2879 [00:24<00:00, 305.58it/s][A
+Running loglikelihood requests:  91%|█████████ | 2623/2879 [00:24<00:00, 303.66it/s][A
+Running loglikelihood requests:  92%|█████████▏| 2660/2879 [00:24<00:00, 322.54it/s][A
+Running loglikelihood requests:  94%|█████████▍| 2703/2879 [00:24<00:00, 338.31it/s][A
+Running loglikelihood requests:  96%|█████████▌| 2756/2879 [00:24<00:00, 376.68it/s][A
+Running loglikelihood requests:  97%|█████████▋| 2804/2879 [00:25<00:00, 389.78it/s][A
+Running loglikelihood requests:  99%|█████████▉| 2856/2879 [00:25<00:00, 409.39it/s][ARunning loglikelihood requests: 100%|██████████| 2879/2879 [00:25<00:00, 113.96it/s]
+2026-09-18:21:37:11,606 WARNING  [huggingface.py:1315] Failed to get model SHA for LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((4096,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+) at revision main. Error: Repo id must be a string, not <class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>: 'LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((4096,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)'.
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s][A
+Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  5.08it/s][A
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  5.02it/s][A
+Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  5.23it/s][ALoading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  5.17it/s]
+2026-09-18:21:37:17,556 WARNING  [huggingface.py:122] `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+2026-09-18:21:37:17,560 WARNING  [huggingface.py:329] Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+2026-09-18:21:37:17,561 INFO     [evaluator.py:152] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234
+2026-09-18:21:37:17,561 INFO     [evaluator.py:203] Using pre-initialized model
+2026-09-18:21:37:21,617 INFO     [evaluator.py:247] num_fewshot has been set to 0 for truthfulqa_mc2 in its config. Manual configuration will be ignored.
+2026-09-18:21:37:21,618 INFO     [evaluator.py:261] Setting fewshot random generator seed to 1234
+2026-09-18:21:37:21,618 WARNING  [evaluator.py:251] Overwriting default num_fewshot of arc_challenge from None to 0
+2026-09-18:21:37:21,618 INFO     [evaluator.py:261] Setting fewshot random generator seed to 1234
+2026-09-18:21:37:21,618 INFO     [task.py:411] Building contexts for truthfulqa_mc2 on rank 0...
+
+  0%|          | 0/256 [00:00<?, ?it/s][A
+ 48%|████▊     | 122/256 [00:00<00:00, 1211.84it/s][A
+ 97%|█████████▋| 249/256 [00:00<00:00, 1245.32it/s][A100%|██████████| 256/256 [00:00<00:00, 1239.65it/s]
+2026-09-18:21:37:21,829 INFO     [task.py:411] Building contexts for arc_challenge on rank 0...
+
+  0%|          | 0/256 [00:00<?, ?it/s][A
+ 75%|███████▌  | 192/256 [00:00<00:00, 1913.69it/s][A100%|██████████| 256/256 [00:00<00:00, 1916.55it/s]
+2026-09-18:21:37:21,967 INFO     [evaluator.py:438] Running loglikelihood requests
+
+Running loglikelihood requests:   0%|          | 0/2879 [00:00<?, ?it/s][A
+Running loglikelihood requests:   0%|          | 1/2879 [00:00<05:54,  8.12it/s][A
+Running loglikelihood requests:   0%|          | 9/2879 [00:00<01:01, 46.57it/s][A
+Running loglikelihood requests:   1%|          | 21/2879 [00:00<00:36, 78.37it/s][A
+Running loglikelihood requests:   1%|          | 33/2879 [00:00<00:41, 68.50it/s][A
+Running loglikelihood requests:   2%|▏         | 49/2879 [00:00<00:38, 73.81it/s][A
+Running loglikelihood requests:   2%|▏         | 62/2879 [00:00<00:32, 87.33it/s][A
+Running loglikelihood requests:   3%|▎         | 73/2879 [00:01<00:37, 75.61it/s][A
+Running loglikelihood requests:   3%|▎         | 89/2879 [00:01<00:35, 78.57it/s][A
+Running loglikelihood requests:   4%|▎         | 105/2879 [00:01<00:34, 80.35it/s][A
+Running loglikelihood requests:   4%|▍         | 121/2879 [00:01<00:33, 81.56it/s][A
+Running loglikelihood requests:   5%|▍         | 137/2879 [00:01<00:33, 82.34it/s][A
+Running loglikelihood requests:   5%|▌         | 153/2879 [00:01<00:32, 82.83it/s][A
+Running loglikelihood requests:   6%|▌         | 169/2879 [00:02<00:32, 83.23it/s][A
+Running loglikelihood requests:   6%|▋         | 185/2879 [00:02<00:32, 83.49it/s][A
+Running loglikelihood requests:   7%|▋         | 201/2879 [00:02<00:32, 83.66it/s][A
+Running loglikelihood requests:   8%|▊         | 217/2879 [00:02<00:31, 83.84it/s][A
+Running loglikelihood requests:   8%|▊         | 233/2879 [00:02<00:31, 83.99it/s][A
+Running loglikelihood requests:   9%|▊         | 249/2879 [00:03<00:31, 84.13it/s][A
+Running loglikelihood requests:   9%|▉         | 265/2879 [00:03<00:31, 84.22it/s][A
+Running loglikelihood requests:  10%|▉         | 281/2879 [00:03<00:30, 84.31it/s][A
+Running loglikelihood requests:  10%|█         | 297/2879 [00:03<00:30, 84.35it/s][A
+Running loglikelihood requests:  11%|█         | 313/2879 [00:03<00:30, 84.42it/s][A
+Running loglikelihood requests:  11%|█▏        | 329/2879 [00:04<00:30, 84.48it/s][A
+Running loglikelihood requests:  12%|█▏        | 345/2879 [00:04<00:29, 84.50it/s][A
+Running loglikelihood requests:  13%|█▎        | 361/2879 [00:04<00:29, 84.52it/s][A
+Running loglikelihood requests:  13%|█▎        | 377/2879 [00:04<00:29, 84.55it/s][A
+Running loglikelihood requests:  14%|█▎        | 393/2879 [00:04<00:29, 85.18it/s][A
+Running loglikelihood requests:  14%|█▍        | 409/2879 [00:04<00:28, 85.62it/s][A
+Running loglikelihood requests:  15%|█▍        | 425/2879 [00:05<00:28, 85.89it/s][A
+Running loglikelihood requests:  15%|█▌        | 441/2879 [00:05<00:28, 86.08it/s][A
+Running loglikelihood requests:  16%|█▌        | 457/2879 [00:05<00:28, 86.21it/s][A
+Running loglikelihood requests:  16%|█▋        | 473/2879 [00:05<00:27, 86.23it/s][A
+Running loglikelihood requests:  17%|█▋        | 489/2879 [00:05<00:27, 86.29it/s][A
+Running loglikelihood requests:  18%|█▊        | 505/2879 [00:06<00:27, 86.40it/s][A
+Running loglikelihood requests:  18%|█▊        | 521/2879 [00:06<00:27, 86.44it/s][A
+Running loglikelihood requests:  19%|█▊        | 537/2879 [00:06<00:27, 86.45it/s][A
+Running loglikelihood requests:  19%|█▉        | 553/2879 [00:06<00:26, 86.51it/s][A
+Running loglikelihood requests:  20%|█▉        | 569/2879 [00:06<00:26, 86.54it/s][A
+Running loglikelihood requests:  20%|██        | 585/2879 [00:07<00:26, 86.57it/s][A
+Running loglikelihood requests:  21%|██        | 601/2879 [00:07<00:26, 86.61it/s][A
+Running loglikelihood requests:  21%|██▏       | 617/2879 [00:07<00:26, 86.60it/s][A
+Running loglikelihood requests:  22%|██▏       | 633/2879 [00:07<00:25, 86.60it/s][A
+Running loglikelihood requests:  23%|██▎       | 649/2879 [00:07<00:25, 86.67it/s][A
+Running loglikelihood requests:  23%|██▎       | 665/2879 [00:07<00:25, 86.73it/s][A
+Running loglikelihood requests:  24%|██▎       | 681/2879 [00:08<00:25, 86.78it/s][A
+Running loglikelihood requests:  24%|██▍       | 697/2879 [00:08<00:25, 86.84it/s][A
+Running loglikelihood requests:  25%|██▍       | 713/2879 [00:08<00:24, 86.88it/s][A
+Running loglikelihood requests:  25%|██▌       | 729/2879 [00:08<00:24, 86.91it/s][A
+Running loglikelihood requests:  26%|██▌       | 745/2879 [00:08<00:24, 86.96it/s][A
+Running loglikelihood requests:  26%|██▋       | 761/2879 [00:09<00:24, 86.99it/s][A
+Running loglikelihood requests:  27%|██▋       | 777/2879 [00:09<00:24, 87.01it/s][A
+Running loglikelihood requests:  28%|██▊       | 793/2879 [00:09<00:23, 86.93it/s][A
+Running loglikelihood requests:  28%|██▊       | 809/2879 [00:09<00:23, 86.95it/s][A
+Running loglikelihood requests:  29%|██▊       | 825/2879 [00:09<00:23, 86.92it/s][A
+Running loglikelihood requests:  29%|██▉       | 841/2879 [00:09<00:23, 86.87it/s][A
+Running loglikelihood requests:  30%|██▉       | 857/2879 [00:10<00:23, 86.86it/s][A
+Running loglikelihood requests:  30%|███       | 873/2879 [00:10<00:23, 86.87it/s][A
+Running loglikelihood requests:  31%|███       | 889/2879 [00:10<00:22, 86.89it/s][A
+Running loglikelihood requests:  31%|███▏      | 905/2879 [00:10<00:22, 86.91it/s][A
+Running loglikelihood requests:  32%|███▏      | 921/2879 [00:10<00:22, 86.96it/s][A
+Running loglikelihood requests:  33%|███▎      | 937/2879 [00:11<00:22, 86.80it/s][A
+Running loglikelihood requests:  33%|███▎      | 953/2879 [00:11<00:22, 86.74it/s][A
+Running loglikelihood requests:  34%|███▎      | 969/2879 [00:11<00:21, 86.84it/s][A
+Running loglikelihood requests:  34%|███▍      | 985/2879 [00:11<00:21, 86.91it/s][A
+Running loglikelihood requests:  35%|███▍      | 1001/2879 [00:11<00:21, 86.95it/s][A
+Running loglikelihood requests:  35%|███▌      | 1017/2879 [00:11<00:21, 86.96it/s][A
+Running loglikelihood requests:  36%|███▌      | 1033/2879 [00:12<00:21, 87.04it/s][A
+Running loglikelihood requests:  36%|███▋      | 1049/2879 [00:12<00:21, 87.09it/s][A
+Running loglikelihood requests:  37%|███▋      | 1065/2879 [00:12<00:20, 87.12it/s][A
+Running loglikelihood requests:  38%|███▊      | 1081/2879 [00:12<00:20, 87.14it/s][A
+Running loglikelihood requests:  38%|███▊      | 1097/2879 [00:12<00:20, 87.15it/s][A
+Running loglikelihood requests:  39%|███▊      | 1113/2879 [00:13<00:20, 87.12it/s][A
+Running loglikelihood requests:  39%|███▉      | 1129/2879 [00:13<00:20, 87.23it/s][A
+Running loglikelihood requests:  40%|███▉      | 1145/2879 [00:13<00:19, 87.32it/s][A
+Running loglikelihood requests:  40%|████      | 1161/2879 [00:13<00:19, 87.38it/s][A
+Running loglikelihood requests:  41%|████      | 1177/2879 [00:13<00:19, 87.42it/s][A
+Running loglikelihood requests:  41%|████▏     | 1193/2879 [00:14<00:19, 87.40it/s][A
+Running loglikelihood requests:  42%|████▏     | 1209/2879 [00:14<00:19, 87.44it/s][A
+Running loglikelihood requests:  43%|████▎     | 1225/2879 [00:14<00:18, 87.48it/s][A
+Running loglikelihood requests:  43%|████▎     | 1241/2879 [00:14<00:18, 87.51it/s][A
+Running loglikelihood requests:  44%|████▎     | 1257/2879 [00:14<00:18, 87.52it/s][A
+Running loglikelihood requests:  44%|████▍     | 1273/2879 [00:14<00:18, 87.53it/s][A
+Running loglikelihood requests:  45%|████▍     | 1289/2879 [00:15<00:18, 87.56it/s][A
+Running loglikelihood requests:  45%|████▌     | 1305/2879 [00:15<00:17, 87.56it/s][A
+Running loglikelihood requests:  46%|████▌     | 1321/2879 [00:15<00:17, 87.50it/s][A
+Running loglikelihood requests:  46%|████▋     | 1337/2879 [00:15<00:17, 87.48it/s][A
+Running loglikelihood requests:  47%|████▋     | 1353/2879 [00:15<00:17, 87.45it/s][A
+Running loglikelihood requests:  48%|████▊     | 1369/2879 [00:16<00:17, 87.41it/s][A
+Running loglikelihood requests:  48%|████▊     | 1385/2879 [00:16<00:17, 87.44it/s][A
+Running loglikelihood requests:  49%|████▊     | 1401/2879 [00:16<00:16, 87.46it/s][A
+Running loglikelihood requests:  49%|████▉     | 1417/2879 [00:16<00:16, 87.41it/s][A
+Running loglikelihood requests:  50%|████▉     | 1433/2879 [00:16<00:16, 87.40it/s][A
+Running loglikelihood requests:  50%|█████     | 1449/2879 [00:16<00:16, 87.41it/s][A
+Running loglikelihood requests:  51%|█████     | 1465/2879 [00:17<00:16, 87.40it/s][A
+Running loglikelihood requests:  51%|█████▏    | 1481/2879 [00:17<00:16, 87.36it/s][A
+Running loglikelihood requests:  52%|█████▏    | 1497/2879 [00:17<00:15, 87.38it/s][A
+Running loglikelihood requests:  53%|█████▎    | 1513/2879 [00:17<00:15, 87.37it/s][A
+Running loglikelihood requests:  53%|█████▎    | 1529/2879 [00:17<00:15, 87.37it/s][A
+Running loglikelihood requests:  54%|█████▎    | 1545/2879 [00:18<00:15, 87.46it/s][A
+Running loglikelihood requests:  54%|█████▍    | 1561/2879 [00:18<00:15, 87.52it/s][A
+Running loglikelihood requests:  55%|█████▍    | 1577/2879 [00:18<00:14, 87.57it/s][A
+Running loglikelihood requests:  55%|█████▌    | 1593/2879 [00:18<00:14, 87.59it/s][A
+Running loglikelihood requests:  56%|█████▌    | 1609/2879 [00:18<00:14, 87.61it/s][A
+Running loglikelihood requests:  56%|█████▋    | 1625/2879 [00:18<00:14, 87.64it/s][A
+Running loglikelihood requests:  57%|█████▋    | 1641/2879 [00:19<00:14, 87.65it/s][A
+Running loglikelihood requests:  58%|█████▊    | 1657/2879 [00:19<00:13, 87.68it/s][A
+Running loglikelihood requests:  58%|█████▊    | 1673/2879 [00:19<00:13, 87.70it/s][A
+Running loglikelihood requests:  59%|█████▊    | 1689/2879 [00:19<00:13, 87.74it/s][A
+Running loglikelihood requests:  59%|█████▉    | 1705/2879 [00:19<00:13, 88.81it/s][A
+Running loglikelihood requests:  60%|█████▉    | 1721/2879 [00:20<00:12, 90.66it/s][A
+Running loglikelihood requests:  60%|██████    | 1737/2879 [00:20<00:12, 91.93it/s][A
+Running loglikelihood requests:  61%|██████    | 1753/2879 [00:20<00:12, 92.86it/s][A
+Running loglikelihood requests:  61%|██████▏   | 1769/2879 [00:20<00:11, 93.54it/s][A
+Running loglikelihood requests:  62%|██████▏   | 1785/2879 [00:20<00:11, 93.98it/s][A
+Running loglikelihood requests:  63%|██████▎   | 1801/2879 [00:20<00:11, 94.32it/s][A
+Running loglikelihood requests:  63%|██████▎   | 1817/2879 [00:21<00:11, 94.60it/s][A
+Running loglikelihood requests:  64%|██████▎   | 1833/2879 [00:21<00:11, 94.84it/s][A
+Running loglikelihood requests:  64%|██████▍   | 1849/2879 [00:21<00:10, 96.98it/s][A
+Running loglikelihood requests:  65%|██████▍   | 1865/2879 [00:21<00:09, 103.57it/s][A
+Running loglikelihood requests:  65%|██████▌   | 1881/2879 [00:21<00:08, 115.26it/s][A
+Running loglikelihood requests:  66%|██████▌   | 1905/2879 [00:21<00:07, 131.36it/s][A
+Running loglikelihood requests:  67%|██████▋   | 1930/2879 [00:21<00:06, 144.78it/s][A
+Running loglikelihood requests:  68%|██████▊   | 1954/2879 [00:22<00:06, 153.11it/s][A
+Running loglikelihood requests:  69%|██████▊   | 1978/2879 [00:22<00:05, 162.25it/s][A
+Running loglikelihood requests:  70%|██████▉   | 2002/2879 [00:22<00:05, 169.31it/s][A
+Running loglikelihood requests:  70%|███████   | 2026/2879 [00:22<00:04, 174.43it/s][A
+Running loglikelihood requests:  71%|███████   | 2050/2879 [00:22<00:04, 189.72it/s][A
+Running loglikelihood requests:  72%|███████▏  | 2082/2879 [00:22<00:03, 214.11it/s][A
+Running loglikelihood requests:  74%|███████▎  | 2117/2879 [00:22<00:03, 239.73it/s][A
+Running loglikelihood requests:  75%|███████▍  | 2149/2879 [00:22<00:02, 251.07it/s][A
+Running loglikelihood requests:  76%|███████▌  | 2185/2879 [00:22<00:02, 262.70it/s][A
+Running loglikelihood requests:  77%|███████▋  | 2212/2879 [00:23<00:02, 252.90it/s][A
+Running loglikelihood requests:  78%|███████▊  | 2238/2879 [00:23<00:02, 242.55it/s][A
+Running loglikelihood requests:  79%|███████▊  | 2263/2879 [00:23<00:02, 232.99it/s][A
+Running loglikelihood requests:  79%|███████▉  | 2287/2879 [00:23<00:02, 225.39it/s][A
+Running loglikelihood requests:  80%|████████  | 2310/2879 [00:23<00:02, 218.06it/s][A
+Running loglikelihood requests:  81%|████████  | 2332/2879 [00:23<00:02, 210.59it/s][A
+Running loglikelihood requests:  82%|████████▏ | 2365/2879 [00:23<00:02, 236.07it/s][A
+Running loglikelihood requests:  83%|████████▎ | 2398/2879 [00:23<00:01, 254.34it/s][A
+Running loglikelihood requests:  85%|████████▍ | 2433/2879 [00:24<00:01, 272.82it/s][A
+Running loglikelihood requests:  86%|████████▌ | 2473/2879 [00:24<00:01, 307.88it/s][A
+Running loglikelihood requests:  87%|████████▋ | 2508/2879 [00:24<00:01, 300.07it/s][A
+Running loglikelihood requests:  88%|████████▊ | 2541/2879 [00:24<00:01, 302.99it/s][A
+Running loglikelihood requests:  89%|████████▉ | 2575/2879 [00:24<00:00, 306.75it/s][A
+Running loglikelihood requests:  91%|█████████ | 2607/2879 [00:24<00:00, 304.93it/s][A
+Running loglikelihood requests:  92%|█████████▏| 2639/2879 [00:24<00:00, 303.78it/s][A
+Running loglikelihood requests:  93%|█████████▎| 2679/2879 [00:24<00:00, 327.23it/s][A
+Running loglikelihood requests:  95%|█████████▍| 2728/2879 [00:24<00:00, 358.24it/s][A
+Running loglikelihood requests:  97%|█████████▋| 2780/2879 [00:24<00:00, 387.68it/s][A
+Running loglikelihood requests:  98%|█████████▊| 2829/2879 [00:25<00:00, 400.97it/s][ARunning loglikelihood requests: 100%|██████████| 2879/2879 [00:25<00:00, 114.29it/s]
+2026-09-18:21:37:48,077 WARNING  [huggingface.py:1315] Failed to get model SHA for LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((4096,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+) at revision main. Error: Repo id must be a string, not <class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>: 'LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((4096,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((4096,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)'.
+WA050 {"update": 11, "nonzero_lr_update": 9, "lr": 4.078947368421053e-05, "train_loss": 2.1223530769348145, "recall": 573, "recall_percent": 55.95703125, "new_high": true, "highest_recall": 573, "selected_best_recall": 573, "selected_best_update": 11, "evaluation_seconds": 15.827930379658937, "checkpoint_save_seconds": 28.433163933455944, "proxy_seconds": 74.9815913848579, "proxy_delta": {"arc_challenge_acc_norm": 0.0078125, "truthfulqa_mc2_acc": 0.0013542634214409044}, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "b32e314270342569ac9293fa920cb9d374af7a4117b43d8006fda8506ce5b82d", "stop_reason": null}
+                                                28%|██▊       | 11/40 [13:16<34:12, 70.78s/it]{'loss': 2.1224, 'grad_norm': 16.375, 'learning_rate': 3.9473684210526316e-05, 'epoch': 11.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 35.02it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.87it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.56it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.86it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.39it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.19it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.96it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.89it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.83it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.67it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.71it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.66it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.70it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.64it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.62it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.66it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.68it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.65it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.49it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.42it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.61it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.56it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.57it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.09it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.17it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.60it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.73it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.65it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.63it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.10it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:03, 25.24it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.72it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.70it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.59it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.54it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.08it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.64it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.58it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.63it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.64it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.66it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.64it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.67it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.65it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.68it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.66it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.65it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.71it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.71it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.68it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.69it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.69it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.72it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.70it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.79it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.75it/s][A                                               
+                                                 [A 28%|██▊       | 11/40 [13:22<34:12, 70.78s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.75it/s][A
+                                                 [A{'eval_loss': 1.7442383766174316, 'eval_runtime': 6.8567, 'eval_samples_per_second': 149.342, 'eval_steps_per_second': 24.939, 'epoch': 11.0}
+ 30%|███       | 12/40 [13:48<44:33, 95.50s/it]PILOT_UPDATE {"update": 12, "sec_per_update": 25.17718556895852, "training_loss": 1.9391264915466309, "lr_used": [3.9473684210526316e-05, 3.9473684210526316e-05], "adam_step_min": 12, "sample_changed_elements": 7662, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 56055118848, "peak_gpu_reserved_bytes": 57019465728, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 44954615808}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call12",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 570,
+  "detection_rate": 0.556640625,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 12, "nonzero_lr_update": 10, "lr": 3.9473684210526316e-05, "train_loss": 1.9391264915466309, "recall": 570, "recall_percent": 55.6640625, "new_high": false, "highest_recall": 573, "selected_best_recall": 573, "selected_best_update": 11, "evaluation_seconds": 15.880825154483318, "checkpoint_save_seconds": 0, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "5de9020b992c2263cf361190c9dc924412a3b0c1690bbca82cc3fcaf20fe1095", "stop_reason": null}
+                                                30%|███       | 12/40 [14:04<44:33, 95.50s/it]{'loss': 1.9391, 'grad_norm': 19.5, 'learning_rate': 3.815789473684211e-05, 'epoch': 12.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:05, 32.86it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.87it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.46it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.92it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.44it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.26it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 26.03it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.94it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.83it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.83it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.75it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.77it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.73it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.73it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.71it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.75it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.73it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.73it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.69it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.74it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.70it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.71it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.66it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.16it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.22it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.79it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.76it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.60it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.26it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.26it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.79it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.75it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.75it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.28it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.73it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.69it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.23it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.62it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.59it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.63it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.65it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.67it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.67it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.68it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.61it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.68it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.69it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.70it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.71it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.71it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.68it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.70it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.71it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.71it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.81it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.78it/s][A                                               
+                                                 [A 30%|███       | 12/40 [14:11<44:33, 95.50s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.78it/s][A
+                                                 [A{'eval_loss': 1.696885585784912, 'eval_runtime': 6.8416, 'eval_samples_per_second': 149.673, 'eval_steps_per_second': 24.994, 'epoch': 12.0}
+ 32%|███▎      | 13/40 [14:36<36:33, 81.24s/it]PILOT_UPDATE {"update": 13, "sec_per_update": 25.53059434518218, "training_loss": 1.7895272970199585, "lr_used": [3.815789473684211e-05, 3.815789473684211e-05], "adam_step_min": 13, "sample_changed_elements": 7307, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 56055118848, "peak_gpu_reserved_bytes": 57019465728, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 44954615808}
+{
+  "label": "wa050_pilot_after_WA_call13",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 613,
+  "detection_rate": 0.5986328125,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 13, "nonzero_lr_update": 11, "lr": 3.815789473684211e-05, "train_loss": 1.7895272970199585, "recall": 613, "recall_percent": 59.86328125, "new_high": true, "highest_recall": 613, "selected_best_recall": 613, "selected_best_update": 13, "evaluation_seconds": 16.086516223847866, "checkpoint_save_seconds": 27.975487180054188, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "233de89832937b7d2006fb3102a5b85532ae6a733925238d832bfcdbe100762a", "stop_reason": null}
+                                                32%|███▎      | 13/40 [15:21<36:33, 81.24s/it]{'loss': 1.7895, 'grad_norm': 19.625, 'learning_rate': 3.6842105263157895e-05, 'epoch': 13.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.57it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.74it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.57it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.81it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.41it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.21it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 25.96it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.90it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.80it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.76it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.71it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.63it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.57it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.53it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.51it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.58it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.60it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.58it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.57it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.47it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.46it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.59it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.60it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.40it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.47it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.53it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.57it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.57it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.62it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.61it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.63it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.64it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.62it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.63it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.64it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.62it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.63it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.64it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.65it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.66it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.66it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.63it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.53it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.58it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.59it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.60it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.55it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.50it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.59it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.55it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.56it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.53it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.57it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.52it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.54it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.67it/s][A                                               
+                                                 [A 32%|███▎      | 13/40 [15:28<36:33, 81.24s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.67it/s][A
+                                                 [A{'eval_loss': 1.4898366928100586, 'eval_runtime': 6.8333, 'eval_samples_per_second': 149.854, 'eval_steps_per_second': 25.024, 'epoch': 13.0}
+ 35%|███▌      | 14/40 [15:52<34:32, 79.69s/it]PILOT_UPDATE {"update": 14, "sec_per_update": 24.459541480988264, "training_loss": 1.6719435453414917, "lr_used": [3.6842105263157895e-05, 3.6842105263157895e-05], "adam_step_min": 14, "sample_changed_elements": 7073, "moment_elements_by_dtype": {"torch.uint8": 13476831232}, "moment_bytes": 13476831232, "nan_inf_detected": false, "peak_gpu_allocated_bytes": 56055118848, "peak_gpu_reserved_bytes": 57019465728, "peak_host_process_rss_bytes": 31587217408, "headroom_conservative_bytes": 44954615808}
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_pilot_after_WA_call14",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 648,
+  "detection_rate": 0.6328125,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}
+WA050 {"update": 14, "nonzero_lr_update": 12, "lr": 3.6842105263157895e-05, "train_loss": 1.6719435453414917, "recall": 648, "recall_percent": 63.28125, "new_high": true, "highest_recall": 648, "selected_best_recall": 648, "selected_best_update": 14, "evaluation_seconds": 15.784067068248987, "checkpoint_save_seconds": 27.977166667580605, "proxy_seconds": 0, "proxy_delta": null, "data_order_matches_wa075": true, "ordered_input_batch_sha256": "7d7f67bfecb49a544bcb7019b0821852e248131ac1a6fc90c3bb1668ceb5bf01", "stop_reason": "MAX_12_NONZERO_LR_UPDATES"}
+                                                35%|███▌      | 14/40 [16:37<34:32, 79.69s/it]{'loss': 1.6719, 'grad_norm': 22.25, 'learning_rate': 3.5526315789473684e-05, 'epoch': 14.0}
+
+  0%|          | 0/171 [00:00<?, ?it/s][A
+  2%|▏         | 4/171 [00:00<00:04, 34.55it/s][A
+  5%|▍         | 8/171 [00:00<00:05, 28.72it/s][A
+  6%|▋         | 11/171 [00:00<00:05, 27.45it/s][A
+  8%|▊         | 14/171 [00:00<00:05, 26.82it/s][A
+ 10%|▉         | 17/171 [00:00<00:05, 26.42it/s][A
+ 12%|█▏        | 20/171 [00:00<00:05, 26.22it/s][A
+ 13%|█▎        | 23/171 [00:00<00:05, 26.09it/s][A
+ 15%|█▌        | 26/171 [00:00<00:05, 25.93it/s][A
+ 17%|█▋        | 29/171 [00:01<00:05, 25.85it/s][A
+ 19%|█▊        | 32/171 [00:01<00:05, 25.81it/s][A
+ 20%|██        | 35/171 [00:01<00:05, 25.75it/s][A
+ 22%|██▏       | 38/171 [00:01<00:05, 25.75it/s][A
+ 24%|██▍       | 41/171 [00:01<00:05, 25.72it/s][A
+ 26%|██▌       | 44/171 [00:01<00:04, 25.71it/s][A
+ 27%|██▋       | 47/171 [00:01<00:04, 25.72it/s][A
+ 29%|██▉       | 50/171 [00:01<00:04, 25.74it/s][A
+ 31%|███       | 53/171 [00:02<00:04, 25.67it/s][A
+ 33%|███▎      | 56/171 [00:02<00:04, 25.65it/s][A
+ 35%|███▍      | 59/171 [00:02<00:04, 25.62it/s][A
+ 36%|███▋      | 62/171 [00:02<00:04, 25.61it/s][A
+ 38%|███▊      | 65/171 [00:02<00:04, 25.58it/s][A
+ 40%|███▉      | 68/171 [00:02<00:04, 25.56it/s][A
+ 42%|████▏     | 71/171 [00:02<00:03, 25.61it/s][A
+ 43%|████▎     | 74/171 [00:02<00:03, 25.51it/s][A
+ 45%|████▌     | 77/171 [00:02<00:03, 25.63it/s][A
+ 47%|████▋     | 80/171 [00:03<00:03, 25.67it/s][A
+ 49%|████▊     | 83/171 [00:03<00:03, 25.46it/s][A
+ 50%|█████     | 86/171 [00:03<00:03, 25.62it/s][A
+ 52%|█████▏    | 89/171 [00:03<00:03, 25.65it/s][A
+ 54%|█████▍    | 92/171 [00:03<00:03, 25.49it/s][A
+ 56%|█████▌    | 95/171 [00:03<00:02, 25.61it/s][A
+ 57%|█████▋    | 98/171 [00:03<00:02, 25.72it/s][A
+ 59%|█████▉    | 101/171 [00:03<00:02, 25.68it/s][A
+ 61%|██████    | 104/171 [00:04<00:02, 25.64it/s][A
+ 63%|██████▎   | 107/171 [00:04<00:02, 25.50it/s][A
+ 64%|██████▍   | 110/171 [00:04<00:02, 25.52it/s][A
+ 66%|██████▌   | 113/171 [00:04<00:02, 25.69it/s][A
+ 68%|██████▊   | 116/171 [00:04<00:02, 25.68it/s][A
+ 70%|██████▉   | 119/171 [00:04<00:02, 25.73it/s][A
+ 71%|███████▏  | 122/171 [00:04<00:01, 25.69it/s][A
+ 73%|███████▎  | 125/171 [00:04<00:01, 25.70it/s][A
+ 75%|███████▍  | 128/171 [00:04<00:01, 25.65it/s][A
+ 77%|███████▋  | 131/171 [00:05<00:01, 25.72it/s][A
+ 78%|███████▊  | 134/171 [00:05<00:01, 25.66it/s][A
+ 80%|████████  | 137/171 [00:05<00:01, 25.71it/s][A
+ 82%|████████▏ | 140/171 [00:05<00:01, 25.69it/s][A
+ 84%|████████▎ | 143/171 [00:05<00:01, 25.69it/s][A
+ 85%|████████▌ | 146/171 [00:05<00:00, 25.65it/s][A
+ 87%|████████▋ | 149/171 [00:05<00:00, 25.70it/s][A
+ 89%|████████▉ | 152/171 [00:05<00:00, 25.58it/s][A
+ 91%|█████████ | 155/171 [00:06<00:00, 25.70it/s][A
+ 92%|█████████▏| 158/171 [00:06<00:00, 25.68it/s][A
+ 94%|█████████▍| 161/171 [00:06<00:00, 25.71it/s][A
+ 96%|█████████▌| 164/171 [00:06<00:00, 25.70it/s][A
+ 98%|█████████▊| 167/171 [00:06<00:00, 25.81it/s][A
+ 99%|█████████▉| 170/171 [00:06<00:00, 25.80it/s][A                                               
+                                                 [A 35%|███▌      | 14/40 [16:44<34:32, 79.69s/it]
+100%|██████████| 171/171 [00:06<00:00, 25.80it/s][A
+                                                 [A                                                35%|███▌      | 14/40 [16:44<34:32, 79.69s/it] 35%|███▌      | 14/40 [16:44<31:04, 71.72s/it]
+{'eval_loss': 1.4147448539733887, 'eval_runtime': 6.8222, 'eval_samples_per_second': 150.097, 'eval_steps_per_second': 25.065, 'epoch': 14.0}
+{'train_runtime': 1004.0433, 'train_samples_per_second': 40.795, 'train_steps_per_second': 0.04, 'train_loss': 7.180608902658735, 'epoch': 14.0}

@@ -1,0 +1,34 @@
+{
+  "status": "COMPLETED_PARETO_TEACHER_CANDIDATE",
+  "teacher_candidate": true,
+  "preferred_teacher": false,
+  "best_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_pilot_v1/best_model",
+  "best_in_memory_recall": 648,
+  "best_fresh_reload_recall": 654,
+  "recall_delta_vs_WA075_fresh_percentage_points": 31.25,
+  "performance": {
+    "mean_nonzero_lr_sec_per_update": 24.9624987822026,
+    "peak_gpu_sampled_GiB": 53.7587890625,
+    "peak_gpu_allocated_GiB": 52.205397605895996,
+    "peak_gpu_reserved_GiB": 53.103515625,
+    "host_process_peak_RSS_GiB": 29.417888641357422,
+    "host_cgroup_sampled_peak_GiB": 75.91827011108398,
+    "training_wall_seconds": 1043.0969669036567,
+    "trajectory_detector_seconds": 221.63283107057214,
+    "best_save_and_hash_seconds": 254.76654904708266,
+    "proxy_seconds": 74.9815913848579,
+    "fresh_reload_stage_seconds": 24.697046212852,
+    "full_utility_stage_seconds": 205.94894907251,
+    "total_active_stage_seconds": 1283.3180392608047,
+    "peak_data_disk_used_GiB": 64.34954071044922,
+    "final_data_disk_free_GiB": 18.203685760498047,
+    "best_model_bytes": 13479234655
+  },
+  "limitations": [
+    "One seed and12 nonzero updates; does not establish longer-run convergence/stability",
+    "Recall63.9% remains below historical3B93.4%; candidate only",
+    "In-memory/fresh reload predictions differ; causes not isolated; fresh reload is reported result"
+  ],
+  "formal_teacher_started": false,
+  "distillation_started": false
+}

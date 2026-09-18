@@ -1,3 +1,5 @@
+当前状态（2026-09-18 PN-FP7B WA=.50 pilot完成）：14calls/12非零LR更新后停止，best call14进程内648/1024，fresh reload654/1024（63.867%，较WA=.75 fresh334提高31.25pp）；完整utility ARC+5.973pp、MC2-1.164pp。标记PARETO_TEACHER_CANDIDATE，非正式preferred Teacher；GPU空闲，禁止自动追加训练/降低WA/蒸馏/上传/关机。原模型及唯一best保留，入口results/pnfp/scale_7b/wa050_pilot/full_experiment_log.json。
+
 当前最高授权（2026-09-18 WA=.50 sensitivity pilot）：仅WA .75→.50，其他科学配置冻结；最多12非零LR更新，保留原40-call scheduler，每call完整1024 recall，只保留当前best。首次>=50%及之后+10pp才做固定256/任务utility proxy；任一delta<-5pp、连续3次无新高或下降>=10pp提前停止。仅强recall且utility接近base才fresh reload后一次完整utility；禁止正式Teacher、蒸馏及更低WA。入口results/pnfp/scale_7b/wa050_pilot/full_experiment_log.json。
 
 当前状态（2026-09-18 PN-FP7B trajectory诊断完成）：单次冻结配置40calls逐点完整1024检测，best=call13进程内339/1024，fresh reload334/1024（23条预测不同，净-5差异保留），call37–40归零。40点LR/loss及最终safetensors SHA均与旧失败run一致，确认可重复的学习后遗忘；未隔离因果。Best utility ARC+3.157pp、MC2-1.096pp；recall仍远低于历史956量级，PREFERRED=NO。best/final与旧模型保留，GPU空闲，不启动蒸馏/调参/上传/关机。入口results/pnfp/scale_7b/trajectory/full_experiment_log.json。

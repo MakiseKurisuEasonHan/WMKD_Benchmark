@@ -1,0 +1,33 @@
+{
+  "action": "DEDUPLICATE_IDENTICAL_IMMUTABLE_FAILED_FINAL_WEIGHTS_WITH_HARDLINKS",
+  "logical_paths_and_content_preserved": true,
+  "free_before": 19552362496,
+  "files": [
+    {
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/teacher_adamw8bit_v1/final_model/model-00001-of-00003.safetensors",
+      "preserved_target": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/final_model/model-00001-of-00003.safetensors",
+      "sha256": "401b55a667c0dba78dc0483e280c7eee01d63c79b8d0f0b2099b4eb26f417ccf",
+      "old_target_inode": 5372033168,
+      "shared_inode": 20402154713,
+      "link_count": 2
+    },
+    {
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/teacher_adamw8bit_v1/final_model/model-00002-of-00003.safetensors",
+      "preserved_target": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/final_model/model-00002-of-00003.safetensors",
+      "sha256": "a4b9868756ee16ac6d4743c97d14aafc4169b361f21971d72547798431bb877d",
+      "old_target_inode": 5372033169,
+      "shared_inode": 20402154714,
+      "link_count": 2
+    },
+    {
+      "source": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/teacher_adamw8bit_v1/final_model/model-00003-of-00003.safetensors",
+      "preserved_target": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/final_model/model-00003-of-00003.safetensors",
+      "sha256": "166ea70df755ccd0e4afed6f91f0e89bb14c0f77ddb4b57d93ac3fdc4b9cf89e",
+      "old_target_inode": 5372033170,
+      "shared_inode": 20402154715,
+      "link_count": 2
+    }
+  ],
+  "free_after": 33029234688,
+  "freed_bytes": 13476872192
+}
