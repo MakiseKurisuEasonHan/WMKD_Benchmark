@@ -1,3 +1,7 @@
+当前状态（2026-09-19）：WA=.50 extension EXTENSION_COMPLETE_NOT_PREFERRED；fresh-reload 804/1024，best有效更新19；preferred候选=False。训练停止，未启动蒸馏，授权证据闭环后自动关机。
+
+最新持续授权（2026-09-19）：完全相同WA=.50 extension全自动执行，成功/早停/硬失败均停止科研、保存及核验模型和现有证据、同步本地、报告/状态/TODO/实验日志/Git闭环后调用/usr/bin/shutdown。只关机不释放实例、不删除最终模型和正式结果、不启动蒸馏。无额外用户审批等待；Git认证缺失记push pending。
+
 当前最高授权（2026-09-19 WA=.50 extension）：仅完全同配置延长至最多24累计非零LR更新；无optimizer存档，先确定性重放14calls并核验全部loss/recall/data及bitwise权重再继续。每call1024检测，新best fresh reload；+10pp或>=80%候选时完整utility。3次无约1pp实质提升或连续下降早停；fresh>=80%且两项utility下降<=3pp则preferred候选并停止。只轮换当前WA50 best，保留历史证据；禁止WA25/蒸馏/关机。入口results/pnfp/scale_7b/wa050_extension/full_experiment_log.json。
 
 当前状态（2026-09-18 PN-FP7B WA=.50 pilot完成）：14calls/12非零LR更新后停止，best call14进程内648/1024，fresh reload654/1024（63.867%，较WA=.75 fresh334提高31.25pp）；完整utility ARC+5.973pp、MC2-1.164pp。标记PARETO_TEACHER_CANDIDATE，非正式preferred Teacher；GPU空闲，禁止自动追加训练/降低WA/蒸馏/上传/关机。原模型及唯一best保留，入口results/pnfp/scale_7b/wa050_pilot/full_experiment_log.json。

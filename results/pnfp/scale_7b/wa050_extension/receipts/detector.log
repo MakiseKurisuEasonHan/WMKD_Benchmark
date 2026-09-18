@@ -1,0 +1,23 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 26.01it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 25.97it/s]
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+{
+  "label": "wa050_extension_final_best_standalone_reload",
+  "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+  "fingerprints_file": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "fingerprints_requested": 1024,
+  "fingerprints_evaluated": 1024,
+  "detected": 804,
+  "detection_rate": 0.78515625,
+  "invalid_samples": 0,
+  "evaluation_errors": 0,
+  "generation_response_length": 1,
+  "detection_response_length": 1,
+  "serialization": "llama_chat_template_user_generation_prompt"
+}

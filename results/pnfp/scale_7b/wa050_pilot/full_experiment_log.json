@@ -468,5 +468,9 @@
     "One seed and12 nonzero updates; does not establish longer-run convergence/stability",
     "Recall63.9% remains below historical3B93.4%; candidate only",
     "In-memory/fresh reload predictions differ; causes not isolated; fresh reload is reported result"
-  ]
+  ],
+  "checkpoint_retention_status": "SUPERSEDED_BY_USER_AUTHORIZED_EXTENSION",
+  "replacement_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+  "original_model_retained": false,
+  "historical_results_preserved": true
 }

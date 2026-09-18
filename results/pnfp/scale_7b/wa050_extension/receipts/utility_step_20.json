@@ -1,0 +1,54 @@
+{
+  "base": {
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+    "arc_challenge_acc_norm": 0.3660409556313993,
+    "truthfulqa_mc2_acc": 0.45754715790333667,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.45754715790333667,
+        "acc_stderr,none": 0.015803848095178836,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.35238907849829354,
+        "acc_stderr,none": 0.013960142600598661,
+        "acc_norm,none": 0.3660409556313993,
+        "acc_norm_stderr,none": 0.014077223108470144,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "checkpoint": {
+    "arc_challenge_acc_norm": 0.42235494880546076,
+    "truthfulqa_mc2_acc": 0.4419487022219878,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.4419487022219878,
+        "acc_stderr,none": 0.015860469672375768,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.39590443686006827,
+        "acc_stderr,none": 0.01429122839353657,
+        "acc_norm,none": 0.42235494880546076,
+        "acc_norm_stderr,none": 0.014434138713379965,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "step": 20,
+  "fresh_recall": 774,
+  "seconds": 106.79089166224003,
+  "full_benchmark": true,
+  "base_source": "wa050_pilot_v1/utility.json; exact same canonical dataset/evaluator",
+  "sample_counts": {
+    "arc_challenge": 1172,
+    "truthfulqa_mc2": 817
+  },
+  "delta": {
+    "arc_challenge_acc_norm": 0.05631399317406144,
+    "truthfulqa_mc2_acc": -0.015598455681348877
+  },
+  "consistent_excessive_degradation": false,
+  "limited_degradation": true
+}

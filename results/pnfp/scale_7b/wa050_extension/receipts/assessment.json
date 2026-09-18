@@ -1,0 +1,15 @@
+{
+  "status": "EXTENSION_COMPLETE_NOT_PREFERRED",
+  "preferred_teacher_candidate": false,
+  "best_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+  "best_step": 21,
+  "best_nonzero_update": 19,
+  "best_fresh_recall": 804,
+  "stop_reason": "THREE_CHECKS_WITHOUT_MATERIAL_1PP_GAIN",
+  "optimizer_calls": 24,
+  "nonzero_updates": 22,
+  "new_nonzero_updates": 10,
+  "distillation_started": false,
+  "scientific_config_changed": false,
+  "standalone_fresh_reload_recall": 804
+}

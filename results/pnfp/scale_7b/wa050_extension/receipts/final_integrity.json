@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "assessment": {
+    "status": "EXTENSION_COMPLETE_NOT_PREFERRED",
+    "preferred_teacher_candidate": false,
+    "best_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+    "best_step": 21,
+    "best_nonzero_update": 19,
+    "best_fresh_recall": 804,
+    "stop_reason": "THREE_CHECKS_WITHOUT_MATERIAL_1PP_GAIN",
+    "optimizer_calls": 24,
+    "nonzero_updates": 22,
+    "new_nonzero_updates": 10,
+    "distillation_started": false,
+    "scientific_config_changed": false,
+    "standalone_fresh_reload_recall": 804
+  },
+  "model_files_verified": [
+    {
+      "path": "config.json",
+      "bytes": 754,
+      "sha256": "24f7580990ef8932c4fd00ed713e989ecd8bda849b75bfa2d0e5ab9a56547524"
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 183,
+      "sha256": "07f7cbfd02476f674a83b83d5cb9c1efc9d480395255429b17943d4543cf6dca"
+    },
+    {
+      "path": "model-00001-of-00003.safetensors",
+      "bytes": 4938985352,
+      "sha256": "a18e59f95a0575ea4789b9ceff82c83f218ad9b7ea1eb025d7c082120877199c"
+    },
+    {
+      "path": "model-00002-of-00003.safetensors",
+      "bytes": 4947390880,
+      "sha256": "47defaae6a12964f3f89cb7e5dbe0a758c3083281c3ba09e70a8bb18ebf2f966"
+    },
+    {
+      "path": "model-00003-of-00003.safetensors",
+      "bytes": 3590488816,
+      "sha256": "6753dcbc3bc39c47a3402c78f9140f8ecfc770d89b3c10b778c3d6bac51e543b"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes": 23950,
+      "sha256": "091fdb60b8ee3713df38fd6f9849c3aa82d7eeeb5f6d224a77139543b1db8652"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 414,
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 1842795,
+      "sha256": "bf467c9e0f536bda271283c6ef85eb1a943e3196b621c8a912d64953b205df83"
+    },
+    {
+      "path": "tokenizer.model",
+      "bytes": 499723,
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 1788,
+      "sha256": "681b3c1b96d6fbfa428ff2a8e2083f8ab9a6b920fd80bee084cbf0b6bf9762fa"
+    }
+  ],
+  "best_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+  "final_detector_present": true,
+  "final_utility_present": true,
+  "gpu_idle": true,
+  "disk_free_bytes": 19534544896
+}

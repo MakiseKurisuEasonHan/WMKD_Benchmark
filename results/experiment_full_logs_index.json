@@ -1055,7 +1055,7 @@
       "experiment": "7B_WA050_PILOT",
       "run_id": "wa050_pilot_v1",
       "full_log_path": "results/pnfp/scale_7b/wa050_pilot/full_experiment_log.json",
-      "full_log_sha256": "c7e210ea90fcee28d1be470c69577e2a54c75077c68b897e749e5d245a7e1ffd",
+      "full_log_sha256": "c69ced84a725c624a7d14758438ea0287ac432ef0ef12e85ccc0ddc5144b6245",
       "scientific_status": "COMPLETED_PARETO_TEACHER_CANDIDATE",
       "watermark_evaluation_available": true,
       "utility_available": true,
@@ -1071,12 +1071,14 @@
       "experiment": "7B_WA050_EXTENSION",
       "run_id": "wa050_extension_v1",
       "full_log_path": "results/pnfp/scale_7b/wa050_extension/full_experiment_log.json",
-      "full_log_sha256": "41c307f9a8332f5a257e55035ebb5bf65046a84aa7a7ec2af96af4cd600630a4",
-      "scientific_status": "RUNNING_REPLAY_GATE",
-      "watermark_evaluation_available": false,
-      "utility_available": false,
+      "full_log_sha256": "124268e40a044700e7b81b8684833cd728b0483fa401adc5d9cf865321514d19",
+      "scientific_status": "EXTENSION_COMPLETE_NOT_PREFERRED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
       "preferred_teacher": false,
-      "modelscope_repo": null
+      "modelscope_repo": null,
+      "preferred_teacher_candidate": false,
+      "telemetry_records": 24
     }
   ]
 }
