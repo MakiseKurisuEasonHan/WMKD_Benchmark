@@ -1,0 +1,23 @@
+{
+  "files": {
+    "scripts/pnfp_7b_6004_guardian.py": "2fe93a336400dab8c4d0478eb33a37854b901deed76bee0f0fc0171e199d1d46",
+    "scripts/pnfp_7b_direct_generate_6004.py": "c9e97d2831ccff707f863f3feba0d46cf8a2555f442a10032cda3e0d7fc12886",
+    "scripts/pnfp_7b_distill_worker.py": "3fdd90e88891336ffb9ff140c9568bc37ce3af9d78064ce6a3baaca1739a37f3",
+    "scripts/pnfp_7b_distill_campaign.py": "7e979b9bd8ed59daa9946bd2e503cec00d5d4001d781961cfb71978a8ba9c498",
+    "scripts/pnfp_7b_student_utility.py": "56765c54991bc29c6880fa2d6392206f182dddd464cf05a3823d4ed26f506678",
+    "scripts/pnfp_7b_distill_validate.py": "6377c993859ec05ff1ecf25a76c4fd7bb60b407525a27ae048123dea551a665e",
+    "scripts/pnfp_7b_clone_preflight.py": "1fea3f8d3295370493de67fe68d10d642ddf1951ca10085e7d16c19f0607a22c",
+    "scripts/pnfp_7b_disk_gate.py": "c096c8177e5ab6f3c4bb7ba7e0a210b63fc4a1affb8e09ecc121781b1027fdca",
+    "scripts/train_distillation_student.py": "677b8b92c069aebec3fece6c2f1e0c825b8143544b30daa24d953bfec3675b16",
+    "scripts/pnfp_bc_pilot.py": "4a54c76c90823f0cf096eeae56405efb5434d12a530b5802c374c4f7cb5cb64b",
+    "scripts/generate_teacher_qa_formal.py": "34fd07fdd67704418c4e7955f3ba86e7b3bdf4b2ea92d1462e93111895f4cd6e",
+    "scripts/distillation_data.py": "27751d1a6b0770c074b20fc16fb510a526866feb269c8703b294dbf5b7408707",
+    "scripts/passive5_shared_bb_paraphrase_runner.py": "38aac05a52207262204497f779dd2da42d56f41def624e62b6162718972b1466",
+    "scripts/passive5_shared_bb.py": "669b88bc92b3a7e6574b38408cdbfdcfd897b0006803fd390692aa4216328c38"
+  },
+  "local_parent_commit": "0daad51",
+  "remote_parent_commit": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
+  "scientific_protocol": "canonical 20k/3 epochs/7500 updates/batch8/LR1e-5/cosine/.03warmup/seed42/max1024",
+  "hardware_adaptation": "BF16 fullFT AdamW8bit0.50.0; activation checkpointing; final-only save; exact full-vocab BF16 offline KD storage",
+  "qwen_identity": "All original snapshot files match pinned revision8f4992eda43eea7c770690ddc0de8f732da246f5"
+}

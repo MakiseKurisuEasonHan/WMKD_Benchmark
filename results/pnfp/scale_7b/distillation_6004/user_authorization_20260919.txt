@@ -1,0 +1,377 @@
+新的 AutoDL 实例已经克隆就位。
+
+新的 SSH：
+
+Host alias: 6004
+
+SSH config:
+C:\Users\Eason\.ssh\config
+
+请统一使用：
+
+ssh -F "C:\Users\Eason\.ssh\config" 6004
+
+实际连接信息：
+ssh -p 32061 root@connect.westd.seetacloud.com
+
+这是从上一台 AutoDL 克隆出来的新实例，因此不要重新做 PN-FP Teacher，不要重新生成 fingerprints，也不要重新跑已经完成的 7B Teacher 实验。
+
+当前 canonical 状态继续沿用：
+
+PN-FP 7B Teacher:
+- backbone = Llama-2-7b-chat-hf
+- revision = f5db02db724555f92da89c216ac04704f23d4590
+- fresh-reload PN-FP = 804/1024 = 78.52%
+- WA = 0.50
+- DM = 0.25
+- key length = 16
+- response length = 1
+- Perinucleus t = 0.8
+- k = 3
+- seed = 42
+- full-parameter
+- BF16
+- AdamW8bit 0.50.0 engineering adaptation
+
+Teacher utility:
+- ARC-Challenge = 42.06%
+- TruthfulQA-MC2 = 44.20%
+
+上一阶段 distillation preflight 已完成，报告：
+
+docs/reproduction_reports/pnfp_7b_distillation_preflight_20260919.md
+
+对应本地 commit：
+0daad51
+
+上一台实例阻塞原因仅为数据盘不足：
+- 当前正式模型不能安全全部保留
+- full-vocab Bc logits 在旧 70GB 数据盘不可行
+- paraphrase prompt SHA 已核验正确
+- 未启动任何 Student training
+- 未修改科学协议
+- 未生成 logits
+- 未删除正式模型
+
+现在请直接在新实例继续，不要重新 onboarding。
+
+━━━━━━━━━━━━━━━━━━━━
+第一步：只做必要的新实例检查
+━━━━━━━━━━━━━━━━━━━━
+
+连接 6004 后立即检查：
+
+nvidia-smi
+df -h
+free -h
+
+重点确认：
+- GPU
+- host RAM
+- 新数据盘总容量和可用空间
+- 原克隆实例中的 Teacher / base model / project / configs / manifests 是否存在
+- 804/1024 Teacher checkpoint 是否完整
+- frozen fingerprints 是否完整
+- paraphrase prompt SHA 是否仍匹配
+- git/project 状态是否与上一阶段一致
+
+只做必要检查，不做额外审计。
+
+如果克隆实例已经包含所有 artifact，就直接复用。
+不要重复下载 Base / Teacher / Qwen paraphraser，除非缺失或损坏。
+
+━━━━━━━━━━━━━━━━━━━━
+第二步：重新计算真实磁盘预算
+━━━━━━━━━━━━━━━━━━━━
+
+这次数据盘更大，所以不要再用旧 70GB 预算。
+
+先根据新实例实际剩余空间重新计算：
+
+1. Base 7B
+2. PN-FP Teacher
+3. Direct final Student
+4. Paraphrase final Student
+5. Logit final Student
+6. Qwen2.5-3B-Instruct paraphraser
+7. datasets
+8. temporary checkpoints
+9. Bc logit cache
+
+尤其 Bc：
+
+不要再用理论上限 20,000 × 1024 × vocab。
+
+请从现有 frozen Bc dataset / canonical sequence construction 中统计真实需要监督的 token 数。
+
+精确计算：
+
+total supervised tokens
+× vocab size
+× dtype bytes
+
+如果 canonical Bc 是 response-only logits，就只计算 response supervised positions。
+如果包含其他 positions，则按现有 canonical Bc 定义计算。
+
+给出：
+- full-vocab BF16 logits 总 GiB
+- shard 数建议
+- temporary peak disk
+- final peak disk
+
+如果新数据盘足够，保持 canonical full-vocab logits。
+不要改 top-k。
+
+━━━━━━━━━━━━━━━━━━━━
+第三步：Direct Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+Student:
+clean Llama-2-7b-chat-hf
+same revision
+独立 clean initialization
+
+严格复用现有 WMKD_Benchmark canonical Direct/Ba protocol。
+
+7B 只做工程适配：
+- BF16
+- full parameter
+- activation checkpointing
+- AdamW8bit 0.50.0 if required
+- smaller micro batch + gradient accumulation only if needed
+- preserve canonical effective batch size
+
+不要改：
+- dataset size
+- epochs/steps
+- LR
+- seed
+- template
+- masking
+- truncation
+- objective
+
+流程：
+Teacher response generation
+→ frozen Direct dataset
+→ unload Teacher
+→ clean 7B Student
+→ train
+→ fresh reload
+→ PN-FP 1024 detector
+→ ARC-Challenge
+→ TruthfulQA-MC2
+→ save final Student
+→ report
+
+无论 detector 结果高低，都作为正式结果，不调参重跑。
+
+━━━━━━━━━━━━━━━━━━━━
+第四步：Paraphrasing + Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+改写模型必须沿用旧 benchmark：
+
+Qwen/Qwen2.5-3B-Instruct
+
+来源：
+ModelScope
+
+优先复用克隆实例已有模型，不要重新下载。
+
+固定 paraphrasing config 必须从项目恢复并核对：
+
+- do_sample = true
+- temperature = 0.7
+- top_p = 0.9
+- seed = 42
+- dynamic max_new_tokens:
+  minimum 64
+  multiplier 1.5
+  cap 1536
+
+canonical prompt：
+response_transformation_prompt.txt
+
+固定 SHA256：
+085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676
+
+必须重新计算当前文件 SHA 并确认匹配。
+
+流程：
+7B Teacher outputs
+→ Qwen2.5-3B-Instruct semantic-preserving paraphrase
+→ frozen paraphrased dataset
+→ unload paraphraser
+→ clean 7B Student
+→ canonical paraphrase distillation
+→ fresh reload detector
+→ utility
+→ final model
+→ report
+
+不要换 paraphraser。
+不要改 prompt。
+不要新增针对 watermark 的改写策略。
+
+━━━━━━━━━━━━━━━━━━━━
+第五步：Logit Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+严格复用现有 WMKD_Benchmark canonical Bc / soft-logit protocol。
+
+从项目恢复并冻结：
+- temperature
+- KL/CE weighting
+- masking
+- supervised positions
+- tokenizer alignment
+- sequence construction
+- dataset
+- LR
+- epochs/steps
+- scheduler
+- seed
+- effective batch
+
+Teacher:
+当前 804/1024 7B PN-FP Teacher
+
+Student:
+clean Llama-2-7b-chat-hf
+
+优先采用：
+Teacher-only offline full-vocab logit generation
+→ shard to disk
+→ verify manifests/SHA
+→ unload Teacher
+→ Student-only training with streamed logit shards
+
+不要让 Teacher + full-parameter Student 同时驻 GPU。
+
+不要改为 top-k，除非现有 canonical Bc 本来就是 top-k。
+不要为了省磁盘改变 soft-target scientific definition。
+
+如果 logits 很大：
+- 按 shard 写盘
+- 不一次性加载到 RAM
+- Student streaming read
+- 每个 shard 记录 manifest/SHA
+
+训练完成后：
+- fresh reload detector
+- ARC
+- TruthfulQA
+- final Student
+- report
+
+训练与 final model 核验完成后，可删除可再生成的 temporary logit shards，但前提是正式结果和必要 provenance 已保存。
+
+━━━━━━━━━━━━━━━━━━━━
+第六步：统一最终结果
+━━━━━━━━━━━━━━━━━━━━
+
+最终输出统一表：
+
+Condition | PN-FP hits/1024 | Recall % | Retention vs Teacher | ARC-Challenge | TruthfulQA-MC2 | Runtime | Peak VRAM
+
+必须包含：
+
+Base
+Teacher
+Direct
+Paraphrase
+Logit
+
+Teacher fixed reference：
+804/1024 = 78.52%
+
+Retention：
+student_hits / 804
+
+同时保留原始：
+student_hits / 1024
+
+不要只报 retention。
+
+━━━━━━━━━━━━━━━━━━━━
+第七步：磁盘与 checkpoint
+━━━━━━━━━━━━━━━━━━━━
+
+新实例虽然空间更大，也不要浪费。
+
+每个 Student：
+- 只保留 final checkpoint / 必需 best
+- 不积累 optimizer checkpoints
+- 不留重复 base copies
+- 不留无用 cache
+
+每个大型阶段前：
+nvidia-smi
+df -h
+
+每个大型阶段后：
+df -h
+
+一次只运行一个大型 GPU task。
+
+━━━━━━━━━━━━━━━━━━━━
+第八步：执行方式
+━━━━━━━━━━━━━━━━━━━━
+
+不要只回复计划。
+
+请立即开始：
+Direct
+→ Paraphrase
+→ Logit
+
+三组全部做完。
+
+中间不要问我普通工程问题。
+不要要求我额外授权。
+GitHub push 如果仍然认证失败，不阻塞实验，只保留本地 commit。
+
+只有出现真正科学性硬阻塞才停止：
+- Teacher/model corruption
+- canonical protocol 无法恢复
+- paraphrase prompt SHA 不匹配且无法解释
+- Bc scientific definition 无法保持
+- 磁盘仍然不足且无法通过 scientifically equivalent sharding/streaming解决
+
+如果某一组 detector = 0：
+继续下一组。
+这是科学结果，不是工程失败。
+
+━━━━━━━━━━━━━━━━━━━━
+第九步：最终自动关机
+━━━━━━━━━━━━━━━━━━━━
+
+三组实验全部完成后：
+
+1. final detector
+2. final utility
+3. unified report
+4. update project status/TODO/logs
+5. local git commit
+6. verify all final models/results/reports exist
+7. sync必要证据回本地
+8. confirm no active training process
+9. shutdown
+
+GitHub push pending 不阻塞关机。
+
+最终自动执行：
+
+/usr/bin/shutdown
+
+不要释放实例，只关机。
+
+如果中途遇到不可恢复硬阻塞，也要：
+- 保存证据
+- 写 failure report
+- 本地同步
+- git commit
+- 然后自动关机
+
+这次目标是不再等待我，直接把 Direct + Paraphrase + Logit 三套 7B→7B 实验完整跑完。
