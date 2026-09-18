@@ -1,0 +1,27 @@
+{
+  "total_bytes": 634581417984,
+  "current_used_bytes": 55635111936,
+  "current_free_bytes": 578946306048,
+  "additional_components_bytes": {
+    "three_final_students": 40437792768,
+    "missing_qwen": 6183463418,
+    "datasets_generations_and_reports_reserve": 5368709120,
+    "single_save_temporary_shard": 5368709120
+  },
+  "logits": {
+    "sample_count": 0,
+    "sequence_length": 1024,
+    "vocabulary_size": 32000,
+    "dtype": "bfloat16",
+    "bytes_per_value": 2,
+    "representation": "full_vocab",
+    "stored_positions": 0,
+    "estimate_kind": "upper_bound",
+    "payload_bytes": 0
+  },
+  "additional_peak_bytes": 57358674426,
+  "projected_used_peak_bytes": 112993786362,
+  "maximum_additional_bytes": 492104360140,
+  "reserved_free_fraction": 0.15,
+  "passed": true
+}

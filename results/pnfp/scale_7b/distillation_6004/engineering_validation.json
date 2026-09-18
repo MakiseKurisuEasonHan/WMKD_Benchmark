@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "objective_test": "canonical CE/KL forward and gradient",
+  "bf16_storage_roundtrip": "bitwise identical targets/loss/gradient",
+  "microbatch_normalization": "unequal response length loss and gradient equivalence PASS",
+  "token_id_maps": "equal",
+  "chat_template_example": "equal",
+  "bnb_version": "0.50.0",
+  "torch": "2.8.0+cu128"
+}

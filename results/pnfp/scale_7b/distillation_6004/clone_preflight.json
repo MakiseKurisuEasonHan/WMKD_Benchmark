@@ -1,0 +1,165 @@
+{
+  "checks": [
+    {
+      "asset": "teacher",
+      "file": "config.json",
+      "exists": true,
+      "sha256": "24f7580990ef8932c4fd00ed713e989ecd8bda849b75bfa2d0e5ab9a56547524",
+      "expected": "24f7580990ef8932c4fd00ed713e989ecd8bda849b75bfa2d0e5ab9a56547524"
+    },
+    {
+      "asset": "teacher",
+      "file": "generation_config.json",
+      "exists": true,
+      "sha256": "07f7cbfd02476f674a83b83d5cb9c1efc9d480395255429b17943d4543cf6dca",
+      "expected": "07f7cbfd02476f674a83b83d5cb9c1efc9d480395255429b17943d4543cf6dca"
+    },
+    {
+      "asset": "teacher",
+      "file": "model-00001-of-00003.safetensors",
+      "exists": true,
+      "sha256": "a18e59f95a0575ea4789b9ceff82c83f218ad9b7ea1eb025d7c082120877199c",
+      "expected": "a18e59f95a0575ea4789b9ceff82c83f218ad9b7ea1eb025d7c082120877199c"
+    },
+    {
+      "asset": "teacher",
+      "file": "model-00002-of-00003.safetensors",
+      "exists": true,
+      "sha256": "47defaae6a12964f3f89cb7e5dbe0a758c3083281c3ba09e70a8bb18ebf2f966",
+      "expected": "47defaae6a12964f3f89cb7e5dbe0a758c3083281c3ba09e70a8bb18ebf2f966"
+    },
+    {
+      "asset": "teacher",
+      "file": "model-00003-of-00003.safetensors",
+      "exists": true,
+      "sha256": "6753dcbc3bc39c47a3402c78f9140f8ecfc770d89b3c10b778c3d6bac51e543b",
+      "expected": "6753dcbc3bc39c47a3402c78f9140f8ecfc770d89b3c10b778c3d6bac51e543b"
+    },
+    {
+      "asset": "teacher",
+      "file": "model.safetensors.index.json",
+      "exists": true,
+      "sha256": "091fdb60b8ee3713df38fd6f9849c3aa82d7eeeb5f6d224a77139543b1db8652",
+      "expected": "091fdb60b8ee3713df38fd6f9849c3aa82d7eeeb5f6d224a77139543b1db8652"
+    },
+    {
+      "asset": "teacher",
+      "file": "special_tokens_map.json",
+      "exists": true,
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+      "expected": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+    },
+    {
+      "asset": "teacher",
+      "file": "tokenizer.json",
+      "exists": true,
+      "sha256": "bf467c9e0f536bda271283c6ef85eb1a943e3196b621c8a912d64953b205df83",
+      "expected": "bf467c9e0f536bda271283c6ef85eb1a943e3196b621c8a912d64953b205df83"
+    },
+    {
+      "asset": "teacher",
+      "file": "tokenizer.model",
+      "exists": true,
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "expected": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+    },
+    {
+      "asset": "teacher",
+      "file": "tokenizer_config.json",
+      "exists": true,
+      "sha256": "681b3c1b96d6fbfa428ff2a8e2083f8ab9a6b920fd80bee084cbf0b6bf9762fa",
+      "expected": "681b3c1b96d6fbfa428ff2a8e2083f8ab9a6b920fd80bee084cbf0b6bf9762fa"
+    },
+    {
+      "asset": "base",
+      "file": "generation_config.json",
+      "exists": true,
+      "sha256": "4eb769d945b7c9a9d9b5ee0cff40ac23a62e218ac683f87ac68d8ad9cd18dd7f",
+      "expected": "4eb769d945b7c9a9d9b5ee0cff40ac23a62e218ac683f87ac68d8ad9cd18dd7f"
+    },
+    {
+      "asset": "base",
+      "file": "special_tokens_map.json",
+      "exists": true,
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+      "expected": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+    },
+    {
+      "asset": "base",
+      "file": "config.json",
+      "exists": true,
+      "sha256": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2",
+      "expected": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2"
+    },
+    {
+      "asset": "base",
+      "file": "tokenizer_config.json",
+      "exists": true,
+      "sha256": "04aaa6eedd97412f3e63dd2493d2388b82347dd512b89192d3e9b4973a176417",
+      "expected": "04aaa6eedd97412f3e63dd2493d2388b82347dd512b89192d3e9b4973a176417"
+    },
+    {
+      "asset": "base",
+      "file": "LICENSE.txt",
+      "exists": true,
+      "sha256": "8c17c2ebb0ea011be9981cc3922db8ca8fa61e828c5d3f44cb6ae342bf80460b",
+      "expected": "8c17c2ebb0ea011be9981cc3922db8ca8fa61e828c5d3f44cb6ae342bf80460b"
+    },
+    {
+      "asset": "base",
+      "file": "model.safetensors.index.json",
+      "exists": true,
+      "sha256": "11b694a9d4bffdac71733db7f782be0df1f87a65fb9ef05bcf6d317029c22364",
+      "expected": "11b694a9d4bffdac71733db7f782be0df1f87a65fb9ef05bcf6d317029c22364"
+    },
+    {
+      "asset": "base",
+      "file": "tokenizer.model",
+      "exists": true,
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "expected": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+    },
+    {
+      "asset": "base",
+      "file": "tokenizer.json",
+      "exists": true,
+      "sha256": "bcd04f0eadf90287bd26e1a183ac487d8a141b09b06aecb7725bbdd343640f2e",
+      "expected": "bcd04f0eadf90287bd26e1a183ac487d8a141b09b06aecb7725bbdd343640f2e"
+    },
+    {
+      "asset": "base",
+      "file": "model-00002-of-00002.safetensors",
+      "exists": true,
+      "sha256": "0fd6895090da1b2ccffdb93964847709a3b31e6b69fe7dc5a480dce37c811b1d",
+      "expected": "0fd6895090da1b2ccffdb93964847709a3b31e6b69fe7dc5a480dce37c811b1d"
+    },
+    {
+      "asset": "base",
+      "file": "model-00001-of-00002.safetensors",
+      "exists": true,
+      "sha256": "66dec18c9f1705b9387d62f8485f4e7d871ca388718786737ed3c72dbfaac9fb",
+      "expected": "66dec18c9f1705b9387d62f8485f4e7d871ca388718786737ed3c72dbfaac9fb"
+    },
+    {
+      "asset": "fingerprints",
+      "sha256": "fa231b31aa10bf19dff0285eaff9457ad41a8f4ee2bcc9089a9d3ac76c1caaf7",
+      "expected": "fa231b31aa10bf19dff0285eaff9457ad41a8f4ee2bcc9089a9d3ac76c1caaf7"
+    },
+    {
+      "asset": "prompt",
+      "sha256": "085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676",
+      "expected": "085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676"
+    }
+  ],
+  "pass": true,
+  "disk": {
+    "total": 634581417984,
+    "used": 55635087360,
+    "free": 578946330624
+  },
+  "qwen_exists": false,
+  "fingerprints": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/fingerprints_cont2/keys-perinucleus--root-autodl-tmp-WMKD_Benchmark_data-scale_7b-models-Llama-2-7b-chat-hf-nucleus_threshold-0.8-nucleus_k-3-response_length-1.json",
+  "vocabulary_size": 32000,
+  "cgroup_memory_max": "118111600640",
+  "frozen_datasets": []
+}

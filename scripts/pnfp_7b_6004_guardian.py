@@ -63,11 +63,26 @@ def main():
             put('local_sync_retry.json',{'error':str(exc),'time':time.time()});time.sleep(30)
     report=P/'docs/reproduction_reports/pnfp_7b_distillation_6004_final.md'
     report.write_text((E/'final_report.md').read_text(encoding='utf-8'),encoding='utf-8')
+    index_path=P/'results/experiment_full_logs_index.json'
+    index=json.loads(index_path.read_text(encoding='utf-8'))
+    for stage,experiment in [('direct','Ba'),('paraphrase','Bb'),('logit','Bc')]:
+        f=E/stage/'full_experiment_log.json'
+        if not f.exists():continue
+        run_id='pnfp_7b_6004_'+stage
+        if any(x.get('run_id')==run_id for x in index['objects']):continue
+        index['objects'].append(dict(method='PN-FP',role=experiment.lower()+'_7b_student',experiment=experiment,
+            run_id=run_id,full_log_path=str(f.relative_to(P)).replace('\\','/'),
+            full_log_sha256=hashlib.sha256(f.read_bytes()).hexdigest(),
+            scientific_status='completed',watermark_evaluation_available=True,utility_available=True,
+            final_model_manifest=str((E/(stage+'_final_manifest.json')).relative_to(P)).replace('\\','/'),
+            modelscope_repo=None,checkpoint_localization_support=False,telemetry_records=7500))
+    index['object_count']=len(index['objects']);index['generated_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+    index_path.write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     line='当前状态（PN-FP7B 6004蒸馏）：'+terminal['status']+'；终态证据已本地SHA核验，详见docs/reproduction_reports/pnfp_7b_distillation_6004_final.md。按本轮授权准备安全关机；不释放实例、不删除正式模型。\n\n'
     for name in ['docs/CURRENT_STATE.md','PROJECT_STATUS.md','TODO.md','EXPERIMENT_LOG.md']:
         path=P/name;path.write_text(line+path.read_text(encoding='utf-8'),encoding='utf-8')
     paths=[str(f.relative_to(P)) for f in E.rglob('*') if f.is_file() and f.suffix in ['.json','.md','.txt','.csv'] and f.stat().st_size<2*2**20]
-    paths += [str(report.relative_to(P)),'docs/CURRENT_STATE.md','PROJECT_STATUS.md','TODO.md','EXPERIMENT_LOG.md']
+    paths += [str(report.relative_to(P)),str(index_path.relative_to(P)),'docs/CURRENT_STATE.md','PROJECT_STATUS.md','TODO.md','EXPERIMENT_LOG.md']
     # Explicit path set: no unrelated working-tree changes or model/data blobs.
     added=run(['git','add','--',*paths]);assert added.returncode==0,added.stderr
     commit=run(['git','commit','-m','Close PN-FP 7B 6004 distillation campaign with verified evidence'])

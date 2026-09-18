@@ -65,10 +65,10 @@ def cache(args, tok, features, counts, stats):
     for f in features[:8]:
         ids = f['input_ids']
         assert tt.decode(ids) == tok.decode(ids)
-    # Exact payload plus all retained final models and overhead, even when some
-    # final models already exist: deliberately conservative, never under-budget.
+    # Direct/Paraphrase finals are already counted by disk.used at this stage.
+    # Reserve only the remaining Logit final plus metadata/save overhead.
     gate = budget(*shutil.disk_usage(Path(args.dataset).parent),
-                  {'final_models_reserve':3*13479264256, 'metadata_and_logs':2*2**30},
+                  {'remaining_logit_final':13479264256, 'metadata_and_logs':2*2**30},
                   samples=20000, supervised_tokens=stats['supervised_tokens'])
     put(Path(args.output)/'cache_disk_gate.json', gate)
     assert gate['passed'], 'Full-vocab cache disk gate failed before generation'
@@ -121,7 +121,31 @@ class IndexedCollator(Collator):
         return result
 
 
-class OfflineTrainer(Trainer):
+class MemoryTrainer(Trainer):
+    """Optional microbatching WITHIN the original sampled effective batch8.
+
+    Weight by supervised token count, not naive averaging of microbatch means.
+    LR/optimizer step, clipping, and sample order remain at the original batch8.
+    """
+    microbatch=8
+
+    def training_step(self,model,inputs):
+        if self.microbatch==8:return super().training_step(model,inputs)
+        assert self.args.gradient_accumulation_steps==1 and self.args.n_gpu==1
+        model.train();inputs=self._prepare_inputs(inputs)
+        total=(inputs['labels'][:,1:]!=-100).sum()
+        reported=torch.zeros((),device=inputs['labels'].device)
+        for start in range(0,len(inputs['labels']),self.microbatch):
+            part={k:v[start:start+self.microbatch] for k,v in inputs.items()}
+            weight=(part['labels'][:,1:]!=-100).sum()/total
+            with self.compute_loss_context_manager():loss=self.compute_loss(model,part)*weight
+            assert torch.isfinite(loss)
+            self.accelerator.backward(loss)
+            reported+=loss.detach()
+        return reported
+
+
+class OfflineTrainer(MemoryTrainer):
     def compute_loss(self,model,inputs,return_outputs=False):
         indices=inputs.pop('row_index').cpu().tolist()
         labels=inputs.pop('labels'); mask=labels[:,1:]!=-100
@@ -160,11 +184,12 @@ def train(args,tok,ds,features,stats):
         remove_unused_columns=False,gradient_checkpointing=True,
         gradient_checkpointing_kwargs={'use_reentrant':False},optim='adamw_bnb_8bit',
         lr_scheduler_type='cosine',warmup_ratio=.03,weight_decay=0.,max_steps=-1)
-    cls=OfflineTrainer if args.mode=='train-kd' else Trainer
+    cls=OfflineTrainer if args.mode=='train-kd' else MemoryTrainer
     optimizer=bnb.optim.AdamW8bit(model.parameters(),lr=1e-5,betas=(.9,.999),eps=1e-8,weight_decay=0.)
     trainer=cls(model=model,args=training,train_dataset=IndexedDataset(features) if args.mode=='train-kd' else ds,
                 data_collator=IndexedCollator(tok) if args.mode=='train-kd' else Collator(tok),callbacks=[timing],
                 optimizers=(optimizer,None))
+    trainer.microbatch=args.microbatch
     if args.mode=='train-kd':
         manifest=json.loads((Path(args.cache)/'manifest.json').read_text())
         assert manifest['complete'] and manifest['feature_sha256']==stats['feature_sha256']
@@ -177,7 +202,9 @@ def train(args,tok,ds,features,stats):
     assert isinstance(trainer.optimizer,bnb.optim.AdamW8bit)
     put(out/'exact_config.json',dict(training_args=training.to_dict(),data=stats,initialization=args.base,
         revision='f5db02db724555f92da89c216ac04704f23d4590',resume=False,
-        trainable_parameters=6738415616,optimizer_class=type(trainer.optimizer).__module__+'.'+type(trainer.optimizer).__name__,
+        trainable_parameters=6738415616,internal_microbatch=args.microbatch,effective_batch=8,
+        internal_accumulation=8//args.microbatch,normalization='supervised-token weighted over original batch8',
+        optimizer_class=type(trainer.optimizer).__module__+'.'+type(trainer.optimizer).__name__,
         optimizer_version=bnb.__version__,adaptation='8-bit optimizer storage; not canonical FP32 Adam implementation equivalence',
         objective='canonical ResponseObjective T2 CE.5 KD.5' if args.mode=='train-kd' else 'canonical assistant-only CE'))
     started=time.monotonic(); result=trainer.train()
@@ -195,7 +222,7 @@ def train(args,tok,ds,features,stats):
 def main():
     p=argparse.ArgumentParser();p.add_argument('mode',choices=['stats','cache','train','train-kd'])
     for key in ['base','dataset','output']:p.add_argument('--'+key,required=True)
-    p.add_argument('--teacher');p.add_argument('--cache');args=p.parse_args()
+    p.add_argument('--teacher');p.add_argument('--cache');p.add_argument('--microbatch',type=int,choices=[2,4,8],default=8);args=p.parse_args()
     set_seed(42);Path(args.output).mkdir(parents=True,exist_ok=True)
     tok,ds,features,counts,stats=prepare(args);put(Path(args.output)/'supervision_stats.json',stats)
     if args.mode=='cache':cache(args,tok,features,counts,stats)

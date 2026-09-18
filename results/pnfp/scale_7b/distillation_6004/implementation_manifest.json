@@ -1,11 +1,11 @@
 {
   "files": {
-    "scripts/pnfp_7b_6004_guardian.py": "2fe93a336400dab8c4d0478eb33a37854b901deed76bee0f0fc0171e199d1d46",
+    "scripts/pnfp_7b_6004_guardian.py": "57b5342a6cf438926986e3b7f8de9086c4198631ce258a3236c907fdeddfe664",
     "scripts/pnfp_7b_direct_generate_6004.py": "c9e97d2831ccff707f863f3feba0d46cf8a2555f442a10032cda3e0d7fc12886",
-    "scripts/pnfp_7b_distill_worker.py": "3fdd90e88891336ffb9ff140c9568bc37ce3af9d78064ce6a3baaca1739a37f3",
-    "scripts/pnfp_7b_distill_campaign.py": "7e979b9bd8ed59daa9946bd2e503cec00d5d4001d781961cfb71978a8ba9c498",
+    "scripts/pnfp_7b_distill_worker.py": "1eefb9c90ffbba0bf350e58b9ca1ff831f7af6cedcd2b226bc29a6bf9e506f47",
+    "scripts/pnfp_7b_distill_campaign.py": "e495994b1701ab3c07b1cc5444f0e3b165842e900234c33de22c44aceb755be9",
     "scripts/pnfp_7b_student_utility.py": "56765c54991bc29c6880fa2d6392206f182dddd464cf05a3823d4ed26f506678",
-    "scripts/pnfp_7b_distill_validate.py": "6377c993859ec05ff1ecf25a76c4fd7bb60b407525a27ae048123dea551a665e",
+    "scripts/pnfp_7b_distill_validate.py": "560e07326267d22256b70a5c26d6bbced8b8d48606b98bb170c60efccfd1d60e",
     "scripts/pnfp_7b_clone_preflight.py": "1fea3f8d3295370493de67fe68d10d642ddf1951ca10085e7d16c19f0607a22c",
     "scripts/pnfp_7b_disk_gate.py": "c096c8177e5ab6f3c4bb7ba7e0a210b63fc4a1affb8e09ecc121781b1027fdca",
     "scripts/train_distillation_student.py": "677b8b92c069aebec3fece6c2f1e0c825b8143544b30daa24d953bfec3675b16",
@@ -19,5 +19,9 @@
   "remote_parent_commit": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
   "scientific_protocol": "canonical 20k/3 epochs/7500 updates/batch8/LR1e-5/cosine/.03warmup/seed42/max1024",
   "hardware_adaptation": "BF16 fullFT AdamW8bit0.50.0; activation checkpointing; final-only save; exact full-vocab BF16 offline KD storage",
-  "qwen_identity": "All original snapshot files match pinned revision8f4992eda43eea7c770690ddc0de8f732da246f5"
+  "qwen_identity": "All original snapshot files match pinned revision8f4992eda43eea7c770690ddc0de8f732da246f5",
+  "oom_recovery": "Only actual CUDA OOM: micro8->4->2 within original effective batch8; target-token weighted backward; preserve failed evidence, fresh clean initialization; no other scientific change.",
+  "bb_resolution": "Current canonical PNFP Bb short-answer preprocessing preserved; user explicitly selects original085a prompt bytes.",
+  "active_controller_pid": 2988,
+  "local_guardian_pid": 50036
 }

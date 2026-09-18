@@ -15,10 +15,16 @@ assert torch.equal(t,r)
 a=ResponseObjective.apply(s,t,labels)[0];ga=torch.autograd.grad(a,s)[0]
 b=ResponseObjective.apply(s,r,labels)[0];gb=torch.autograd.grad(b,s)[0]
 assert torch.equal(a,b) and torch.equal(ga,gb)
+# Unequal response lengths: microbatch weighting must equal full-batch loss.
+sf=torch.randn(67,127,requires_grad=True);tf=t.float()
+whole=ResponseObjective.apply(sf,tf,labels)[0];whole_grad=torch.autograd.grad(whole,sf)[0]
+parts=sum(ResponseObjective.apply(sf[l:r],tf[l:r],labels[l:r])[0]*((r-l)/67) for l,r in [(0,5),(5,29),(29,67)])
+part_grad=torch.autograd.grad(parts,sf)[0]
+assert torch.allclose(whole,parts,atol=1e-6) and torch.allclose(whole_grad,part_grad,atol=1e-7)
 base=P.parent/'WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf';teacher=P.parent/'WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model'
 x=AutoTokenizer.from_pretrained(base,local_files_only=True);y=AutoTokenizer.from_pretrained(teacher,local_files_only=True)
 assert x.get_vocab()==y.get_vocab()
 messages=[{'role':'user','content':'Explain gravity.'},{'role':'assistant','content':'Gravity attracts masses.'}]
 assert x.apply_chat_template(messages)==y.apply_chat_template(messages)
-result={'status':'PASS','objective_test':'canonical CE/KL forward and gradient','bf16_storage_roundtrip':'bitwise identical targets/loss/gradient','token_id_maps':'equal','chat_template_example':'equal','bnb_version':bnb.__version__,'torch':torch.__version__}
+result={'status':'PASS','objective_test':'canonical CE/KL forward and gradient','bf16_storage_roundtrip':'bitwise identical targets/loss/gradient','microbatch_normalization':'unequal response length loss and gradient equivalence PASS','token_id_maps':'equal','chat_template_example':'equal','bnb_version':bnb.__version__,'torch':torch.__version__}
 (P/'results/pnfp/scale_7b/distillation_6004/engineering_validation.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))
