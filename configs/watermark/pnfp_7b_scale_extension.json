@@ -1,0 +1,73 @@
+{
+  "protocol_id": "pnfp_7b_paper_aligned_v1",
+  "status": "AUTHORIZED_CANONICAL_PILOT",
+  "model": {
+    "canonical": "meta-llama/Llama-2-7b-chat-hf",
+    "revision": "f5db02db724555f92da89c216ac04704f23d4590",
+    "transport": "shakechen/Llama-2-7b-chat-hf",
+    "transport_revision": "299e68d813ff6f146741f8e8477ed0a57ded4765",
+    "format": "unquantized_safetensors",
+    "template": "unchanged canonical Llama-2 Chat tokenizer template",
+    "limitation": "Llama-3.2 to Llama-2 changes generation/architecture as well as size; not a pure parameter-count ablation"
+  },
+  "source": {
+    "paper": "https://arxiv.org/html/2502.07760v1#A4",
+    "repository": "https://github.com/SewoongLab/scalable-fingerprinting-of-llms",
+    "commit": "fdceaba14bd3e89340916a6a40e27c945d48460e"
+  },
+  "fingerprints": {
+    "formal_count": 1024,
+    "candidate_keys": 1100,
+    "oversampling_reason": "existing official whitespace validity filter; freeze first 1024 valid pairs, not a larger training set",
+    "key_generator": "same canonical Llama-2-7b-chat-hf, explicit instruction-tuned branch",
+    "key_temperature": 0.5,
+    "key_length": 16,
+    "response_length": 1,
+    "sampling": "official perinucleus",
+    "t": 0.8,
+    "k": 3,
+    "seed": 42
+  },
+  "training": {
+    "max_epochs": 40,
+    "early_stop": "epoch mixed-data training cross-entropy < 0.005",
+    "released_code_difference": "released callback checks eval_loss, not the paper/user-requested training loss",
+    "full_parameter": true,
+    "lora": false,
+    "precision": "bf16",
+    "optimizer": "released Trainer AdamW / DeepSpeed CPUAdam implementation; paper describes Adam",
+    "learning_rate": 0.00005,
+    "weight_decay": 0.0001,
+    "scheduler": "released DeepSpeed WarmupDecayLR, 40-update horizon",
+    "batch_size": 8,
+    "fingerprints_per_microbatch": 6,
+    "benign_per_microbatch": 2,
+    "gradient_accumulation_steps": 171,
+    "sequence_length": 64,
+    "lambda_wa": 0.75,
+    "wa_reference_placement": "GPU; unchanged immutable BF16 weights and official averaging expression; CPU placement exhausted host memory during initialization",
+    "beta_dm": 0.25,
+    "benign_sha256": "bd18da3b5a56002822a9789d83667452597ccc16979df3277fe2d04ff10a0201",
+    "seed": 42,
+    "checkpoint_policy": "final only; no optimizer checkpoint"
+  },
+  "pilot": {
+    "max_optimizer_updates": 5,
+    "formal_schedule_horizon_preserved": 40,
+    "fresh_initialization": true,
+    "detector": "existing greedy first-token exact match on fixed1024, paired clean Base control",
+    "utility_proxy": "fixed first64 canonical ARC-Challenge test examples, unchanged chat harness and acc_norm; existing10-prompt ordinary-generation check",
+    "utility_proxy_limitation": "small diagnostic sample; not full utility or a tinyBenchmarks estimator",
+    "full_utility_repeated": false,
+    "grid_search": false,
+    "fallbacks_only_if_clearly_excessive_utility_loss": [[0.8,0.25],[0.75,0.375]],
+    "fallbacks_started": false
+  },
+  "formal": {
+    "fresh_initialization_after_healthy_pilot": true,
+    "final_detector_and_utility_once": true,
+    "teacher_gate_reference": "existing A2 preferred gate >=0.9 recall and no severe ordinary-generation collapse; inspect utility deltas",
+    "perfect_recall_required": false,
+    "distillation_only_after_successful_teacher": true
+  }
+}

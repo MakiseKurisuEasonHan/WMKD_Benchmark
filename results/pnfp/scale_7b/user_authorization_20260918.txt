@@ -1,0 +1,439 @@
+你好，这是 WMKD_Benchmark 项目的新 Codex 会话。请先快速从现有项目文件夹、GitHub 仓库、README、实验记录、scripts、configs、results、logs 和之前 PN-FP 实验中学习本项目的工作方式，然后直接继续当前任务。
+
+项目名称：
+WMKD_Benchmark
+
+项目目标：
+我们正在做 Large Language Model model ownership watermark / fingerprint 在 model distillation 之后的稳定性 benchmark，最终目标是投稿 ICLR 等顶会。
+
+当前论文主体实验已经基本完成。现在导师要求补充一个 7B-scale 的主动水印实验。
+
+这次只补一个主动水印：
+PN-FP
+
+目标 backbone：
+Llama family 7B，同源实验。
+
+本轮需要最终完成：
+1. PN-FP 7B watermarked teacher reproduction
+2. 7B same-lineage Direct Distillation
+3. 7B same-lineage Paraphrasing + Distillation
+4. 7B same-lineage Logit Distillation
+5. 对 teacher 和三个 student 运行对应 PN-FP detector / watermark evaluation
+6. 保留最终模型与正式结果即可，中间 checkpoint、optimizer state 和无用 cache 不需要长期保留
+
+━━━━━━━━━━━━━━━━━━━━━━
+一、基础信息
+━━━━━━━━━━━━━━━━━━━━━━
+
+本地项目文件夹名称仍然是：
+
+WMKD_Benchmark
+
+GitHub：
+仍然使用之前 WMKD_Benchmark 的同一个私人 GitHub 仓库和同一个 GitHub 账号。
+请优先从现有 git remote / repository metadata 自行确认，不要新建仓库，不要切换身份，不要创建新的项目。
+
+本地旧项目是从旧电脑复制过来的，GitHub 仍然是 canonical remote。
+请先检查：
+- 当前 branch
+- HEAD
+- origin
+- working tree
+- 本地和 origin/main 是否一致
+
+不要 reset、clean、force push、rewrite history 或删除已有实验文件。
+如果发现本地与 GitHub 有差异，先报告，不要自行覆盖。
+
+新的 AutoDL：
+
+学校 VPN：关闭
+
+SSH：
+ssh -p 47990 root@connect.westd.seetacloud.com
+
+AutoDL 基础环境：
+- 1 × RTX PRO 6000 96GB
+- 22 vCPU
+- 110GB RAM
+- system disk 30GB
+- data disk 50GB
+- PyTorch 2.8.0
+- Python 3.12
+- Ubuntu 22.04
+- CUDA 12.8
+
+本轮 AutoDL 主要用于计算，不作为长期仓库。
+
+重要：
+当前数据盘只有约 50GB，因此必须严格控制磁盘。
+本轮不需要保留大量中间 checkpoint。
+每个阶段完成以后，只保留：
+- 最终模型 / adapter（按实验协议决定）
+- final detector results
+- final utility / evaluation results
+- config
+- manifest / provenance
+- 必要 logs
+- 最终实验 summary
+
+中间：
+- optimizer state
+- redundant checkpoint
+- duplicated model cache
+- 临时 generation
+- 可重新生成的大文件
+
+在确认不再需要后可以清理。
+
+但：
+不要删除任何仍可能用于后续阶段的唯一 artifact。
+任何删除动作前必须确认路径和用途。
+
+━━━━━━━━━━━━━━━━━━━━━━
+二、工作原则
+━━━━━━━━━━━━━━━━━━━━━━
+
+这是一个正式论文补实验，但不要进行过度工程审计。
+
+原则：
+“只做必须的检查，然后尽快开始正式实验；发现问题再针对性排查。”
+
+不要为了追求完美做大量无关 preflight。
+
+但是正式实验开始前必须做最小关键配置生效检查，至少确认：
+- 实际加载的是预期模型
+- model path / revision 正确
+- tokenizer / template 正确
+- seed 正确
+- training config 实际被 runtime 使用
+- dataset / manifest 正确
+- output directory 不冲突
+- detector 使用的是预期 protocol
+
+不要只检查 config 文件“写了什么”，必须确认 runtime 实际读到了这些配置。
+
+━━━━━━━━━━━━━━━━━━━━━━
+三、先学习现有 PN-FP pipeline
+━━━━━━━━━━━━━━━━━━━━━━
+
+这是新的 Codex 会话，不要重新设计 PN-FP。
+
+请优先检查当前 WMKD_Benchmark 中已有的 PN-FP：
+- reproduction / A / A2
+- preferred teacher
+- Ba
+- Bb / paraphrase-related runs
+- Bc / logit-related runs（如果已有）
+- detector implementation
+- generation
+- training runner
+- evaluation
+- utility
+- result JSON
+- configs
+- manifests
+- experiment logs
+- project status / TODO / decisions
+
+目标是尽量复用现有成熟 pipeline。
+
+请先明确回答：
+1. 之前 PN-FP teacher 是怎么训练的
+2. watermark trigger / target / detector 是什么
+3. 之前 canonical backbone 是什么
+4. Direct Distillation 的数据和训练 protocol 是什么
+5. Paraphrasing Distillation 的 protocol 是什么
+6. Logit Distillation 的 protocol 是什么
+7. 哪些脚本可以直接扩展到 7B
+8. 哪些参数只需要从 3B 改到 7B
+9. 哪些地方绝对不能因为 scale change 而改变
+
+但是不要停留在写报告。
+读完以后直接进入执行。
+
+━━━━━━━━━━━━━━━━━━━━━━
+四、7B 模型选择原则
+━━━━━━━━━━━━━━━━━━━━━━
+
+本轮目标是 Llama 7B 同源实验。
+
+优先目标：
+canonical Llama-2-7B HF-format model，尽量使用原版或可验证等价镜像。
+
+下载原则：
+
+1. 优先国内可访问源
+2. 优先 ModelScope
+3. 如果 ModelScope 当前不可用或非常慢，可以寻找其他国内镜像
+4. 可以使用 HF mirror / 国内 CDN / 可信第三方镜像作为 transport
+5. 但是“下载源可以换，模型本身不能静默换”
+
+禁止为了方便换成：
+- Chinese-Llama 二次训练模型
+- Atom 等额外 continued-pretraining 模型
+- GGUF
+- GGML
+- AWQ
+- GPTQ
+- AQLM
+- 4-bit / 2-bit 量化模型
+
+正式 backbone 应为标准 Transformers 可训练格式。
+
+如果不能获取 canonical repo，可使用可信等价镜像，但必须记录：
+- source
+- upstream identity
+- config
+- tokenizer
+- architecture
+- model file list
+- revision / commit（如果可得）
+- provenance
+
+只做必要等价性检查，不要无限审计。
+
+━━━━━━━━━━━━━━━━━━━━━━
+五、磁盘规则
+━━━━━━━━━━━━━━━━━━━━━━
+
+AutoDL 数据盘只有 50GB。
+
+请优先把：
+- models
+- datasets
+- Hugging Face cache
+- ModelScope cache
+- training outputs
+
+放在数据盘，例如：
+
+/root/autodl-tmp/WMKD_Benchmark/
+
+不要把 7B 模型同时完整保存：
+- cache 一份
+- models 目录一份
+- checkpoint 再一份
+
+避免重复占盘。
+
+训练时：
+- 尽量只保存最终 checkpoint
+- 或 save_total_limit=1
+- 不需要的 optimizer state 在阶段完成后清理
+- 每开始一个大型阶段前先 df -h
+- 确保有足够安全余量
+- 如果剩余空间危险，先停止，不要把磁盘跑满
+
+━━━━━━━━━━━━━━━━━━━━━━
+六、GPU 规则
+━━━━━━━━━━━━━━━━━━━━━━
+
+本轮 AutoDL 只有一张 GPU。
+
+每次训练前：
+nvidia-smi
+
+只使用当前实例这一张 GPU。
+
+本项目规则：
+一次只运行一个大型 GPU / training task。
+不要同时并行两个大型训练。
+不要启动多个重复 run。
+
+如果任务失败：
+先诊断原因，再决定是否重跑。
+不要自动无限 retry。
+
+━━━━━━━━━━━━━━━━━━━━━━
+七、现在直接开始执行
+━━━━━━━━━━━━━━━━━━━━━━
+
+不要只给我计划。
+
+请按以下顺序直接执行：
+
+Stage 1 — Project onboarding
+1. 检查本地 WMKD_Benchmark git 状态
+2. 确认 GitHub remote
+3. 阅读项目状态、固定规则和 PN-FP 现有 pipeline
+4. 找出 7B extension 最小修改点
+
+Stage 2 — AutoDL setup
+学校 VPN：关闭
+连接：
+ssh -p 47990 root@connect.westd.seetacloud.com
+
+在 AutoDL 上建立本轮独立工作目录。
+clone / pull canonical WMKD_Benchmark。
+不要混入 WaterBench / WaterBenchV2 / WaterBenchV3 等旧项目。
+
+Stage 3 — Model acquisition
+找到合适的 Llama 7B standard Transformers checkpoint。
+优先国内下载链路。
+记录 provenance。
+下载完成后只做必要 load/tokenizer/config check。
+
+Stage 4 — PN-FP 7B reproduction
+基于现有 PN-FP pipeline，把 backbone 扩展到 7B。
+尽可能保持原 protocol 不变。
+不要为了“跑起来”擅自改：
+- trigger
+- target
+- training objective
+- dataset definition
+- detector
+- threshold
+- evaluation protocol
+
+Stage 5 — 先做速度测试
+在正式 full reproduction 之前，先使用真实 7B model + 真实 training pipeline 跑一个很短的测速 run。
+
+测速必须尽量代表正式训练，例如：
+- 相同 precision
+- 相同 batch / grad accumulation
+- 相同 sequence length
+- 相同 optimizer / training mode
+- 只减少 steps
+
+测速目标：
+估计：
+- seconds / optimizer step
+- GPU memory peak
+- expected full training duration
+- expected disk usage
+
+测速不作为科学结果。
+测速完成后可以删除测速 checkpoint。
+
+如果测速显示 full run 在当前硬件上可接受，则立即开始正式 PN-FP 7B reproduction。
+
+Stage 6 — 正式 reproduction
+完成 PN-FP 7B teacher。
+运行 detector。
+确认 teacher watermark reproduction 有效。
+
+如果 teacher reproduction 不成功：
+不要继续蒸馏。
+先定位 reproduction 问题。
+
+如果 teacher reproduction 成功：
+保存正式结果，然后继续后续三种蒸馏。
+
+━━━━━━━━━━━━━━━━━━━━━━
+八、后续三种 distillation
+━━━━━━━━━━━━━━━━━━━━━━
+
+Teacher 成功后：
+
+A. Direct Distillation
+- same-lineage Llama 7B → Llama 7B
+- 尽量复用现有 canonical Ba protocol
+
+B. Paraphrasing + Distillation
+- same-lineage Llama 7B → Llama 7B
+- 复用项目中现有 paraphrasing protocol
+- 不重新发明 paraphrasing prompt / pipeline
+
+C. Logit Distillation
+- same-lineage Llama 7B → Llama 7B
+- 复用现有 soft-logit / Bc protocol
+- 保持温度、loss、teacher/student handling 等原定义
+
+每完成一个 student：
+1. detector
+2. 必要 utility evaluation
+3. 保存 final result
+4. 保存 config / provenance
+5. 保存最终模型
+6. 清理不必要 checkpoint / optimizer / temporary artifacts
+7. 再进入下一个大型实验
+
+━━━━━━━━━━━━━━━━━━━━━━
+九、结果记录
+━━━━━━━━━━━━━━━━━━━━━━
+
+这次是正式论文补实验。
+
+最终至少记录：
+
+Teacher：
+- PN-FP detector result
+- trigger count / denominator
+- false-positive / negative control（按现有 protocol）
+- utility（按现有论文 protocol）
+- model / revision
+- training config
+- runtime
+- peak VRAM
+
+Direct student：
+同上
+
+Paraphrase student：
+同上
+
+Logit student：
+同上
+
+最后生成一个正式结果 summary，适合直接用于论文新增表格/正文。
+
+不要改变已有 3B 结果。
+7B 应作为新增 scale experiment。
+
+━━━━━━━━━━━━━━━━━━━━━━
+十、Git 与安全规则
+━━━━━━━━━━━━━━━━━━━━━━
+
+禁止：
+- git reset --hard
+- git clean -fd / -fdx
+- force push
+- rewrite history
+- 删除已有 canonical results
+- 覆盖已有实验输出目录
+- 修改旧实验结果
+- 静默替换模型、数据集或 detector
+
+新增 7B 结果应使用清晰独立目录，例如：
+experiments/.../7b/
+或遵循现有项目命名规范。
+
+如果项目已经有更明确目录规范，以现有规范为准。
+
+每完成一个科学阶段：
+- 更新项目状态
+- 更新 TODO
+- 更新实验日志
+- 更新结果 summary
+- commit
+- push 到原来的 private GitHub
+
+大模型权重不要提交 GitHub。
+
+━━━━━━━━━━━━━━━━━━━━━━
+十一、汇报方式
+━━━━━━━━━━━━━━━━━━━━━━
+
+请主动执行，不要每一步都等我确认。
+
+只有遇到以下情况才停下来问我：
+- 需要改变实验科学 protocol
+- 需要换非等价模型
+- 需要改变 detector / threshold
+- 需要改变 dataset definition
+- 需要删除无法恢复的重要 artifact
+- Git 本地与远端存在可能覆盖工作的冲突
+- 预计磁盘不足且无法安全继续
+- reproduction 与旧 PN-FP 结果出现无法解释的科学差异
+
+其他普通工程问题请自行解决。
+
+第一次回复请：
+1. 简短说明你从项目里学到的 PN-FP 现状
+2. 给出你找到的 7B extension 路径
+3. 报告 AutoDL / git 当前状态
+4. 然后立即开始实际执行
+
+不要只写计划。
+目标是尽快拿到 PN-FP 7B reproduction 的真实测速和正式结果。

@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED_HOST_RAM_CANONICAL_CPU_OFFLOAD",
+  "utc": "2026-09-18T10:16:27Z",
+  "optimizer_updates_completed": 0,
+  "sec_per_update": null,
+  "loss_after_pilot": null,
+  "preliminary_recall": null,
+  "projected_convergence_seconds": null,
+  "peak_vram_bytes": null,
+  "observed_vram_mib_not_peak": 31881,
+  "initialization_attempts": 2,
+  "final_teacher": "NOT_STARTED",
+  "fallback_pilots": "NOT_STARTED",
+  "lora": false,
+  "shutdown": false,
+  "memory_limit_bytes": 118111600640,
+  "memory_high_bytes": 115964116992,
+  "memory_events": "low 0\nhigh 105507\nmax 0\noom 0\noom_kill 0\n",
+  "gpu_workers": "",
+  "disk": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/md0         70G   14G   57G  20% /root/autodl-tmp\n",
+  "canonical_offload_lower_bound_bytes_per_parameter": 18,
+  "memory_explanation": "FP32 master+master gradient+Adam moments=16 bytes/parameter, additional BF16 accumulated gradients=2; excludes library/runtime/loader overhead. Both processes exit -9; oom_kill counter remains0, so kernel OOM attribution is unproven."
+}

@@ -1,0 +1,17 @@
+{
+  "torch": "2.8.0+cu128",
+  "transformers": "4.44.2",
+  "datasets": "2.20.0",
+  "deepspeed": "0.16.9",
+  "accelerate": "0.32.1",
+  "lm_eval": "imported",
+  "finetune_multigpu": "imported",
+  "chat_template": "{% if messages[0]['role'] == 'system' %}{% set loop_messages = messages[1:] %}{% set system_message = messages[0]['content'] %}{% else %}{% set loop_messages = messages %}{% set system_message = false %}{% endif %}{% for message in loop_messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if loop.index0 == 0 and system_message != false %}{% set content = '<<SYS>>\\n' + system_message + '\\n<</SYS>>\\n\\n' + message['content'] %}{% else %}{% set content = message['content'] %}{% endif %}{% if message['role'] == 'user' %}{{ bos_token + '[INST] ' + content.strip() + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ ' '  + content.strip() + ' ' + eos_token }}{% endif %}{% endfor %}",
+  "example_prompt": "<s>[INST] Hello [/INST]",
+  "tokenizer_class": "LlamaTokenizerFast",
+  "vocab_size": 32000,
+  "ninja": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/bin/ninja",
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 3 MiB\n",
+  "status": "PASS"
+}

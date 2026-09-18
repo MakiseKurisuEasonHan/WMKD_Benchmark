@@ -1,0 +1,19 @@
+{
+  "pid": 5330,
+  "status": "FAILED",
+  "protocol": "pnfp_7b_paper_aligned_v1",
+  "updated_utc": "2026-09-18T10:13:38Z",
+  "stage": "canonical_pilot_training",
+  "command": [
+    "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/bin/python",
+    "-m",
+    "deepspeed.launcher.runner",
+    "--num_gpus=1",
+    "--master_port=29603",
+    "/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_train.py",
+    "--stage",
+    "speed"
+  ],
+  "child_pid": 5334,
+  "error": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_pilot_pipeline.py\", line 67, in <module>\n    try:main()\n        ^^^^^^\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_pilot_pipeline.py\", line 55, in main\n    run('canonical_pilot_training',[PY,'-m','deepspeed.launcher.runner','--num_gpus=1','--master_port=29603',P/'scripts/pnfp_7b_train.py','--stage','speed'])\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_pilot_pipeline.py\", line 20, in run\n    assert code==0,(name,code)\n           ^^^^^^^\nAssertionError: ('canonical_pilot_training', 247)\n"
+}
