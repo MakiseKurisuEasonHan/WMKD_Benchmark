@@ -1,0 +1,27 @@
+{
+  "experiment_id": "pnfp_7b_wa050_pilot_v1",
+  "status": "RUNNING",
+  "formal_result": false,
+  "scientific_role": "single_factor_WA_sensitivity_pilot",
+  "sole_scientific_change": "WA .75 -> .50",
+  "config": "configs/watermark/pnfp_7b_wa050.json",
+  "parent": "trajectory_adamw8bit_v1",
+  "preferred_teacher": false,
+  "formal_teacher_started": false,
+  "distillation_started": false,
+  "auto_shutdown": false,
+  "supervisor_pid": 22060,
+  "training_pid": 22069,
+  "report": "docs/reproduction_reports/pnfp_7b_wa050_pilot_20260918.md",
+  "engineering_adaptation": "AdamW8bit0.50.0 full-parameter BF16; numerical equivalence with canonical FP32 Adam not claimed",
+  "predeclared_evaluation_policy": {
+    "retain": "current best only; previous experiments preserved",
+    "utility_proxy": "first256 ARC-Challenge and TruthfulQA-MC2; trigger512 recall, repeat only gain>=103",
+    "excessive_utility_delta": -0.05,
+    "strong_candidate_min_recall": 922,
+    "close_utility_delta": -0.03,
+    "rng_restore": true,
+    "batch_order_hash": "assert exact equality with WA075 at every call",
+    "full_utility": "once only if strong candidate and independent fresh reload passes"
+  }
+}

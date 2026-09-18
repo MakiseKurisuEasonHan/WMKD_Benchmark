@@ -1,3 +1,5 @@
+当前最高授权（2026-09-18 WA=.50 sensitivity pilot）：仅WA .75→.50，其他科学配置冻结；最多12非零LR更新，保留原40-call scheduler，每call完整1024 recall，只保留当前best。首次>=50%及之后+10pp才做固定256/任务utility proxy；任一delta<-5pp、连续3次无新高或下降>=10pp提前停止。仅强recall且utility接近base才fresh reload后一次完整utility；禁止正式Teacher、蒸馏及更低WA。入口results/pnfp/scale_7b/wa050_pilot/full_experiment_log.json。
+
 当前状态（2026-09-18 PN-FP7B trajectory诊断完成）：单次冻结配置40calls逐点完整1024检测，best=call13进程内339/1024，fresh reload334/1024（23条预测不同，净-5差异保留），call37–40归零。40点LR/loss及最终safetensors SHA均与旧失败run一致，确认可重复的学习后遗忘；未隔离因果。Best utility ARC+3.157pp、MC2-1.096pp；recall仍远低于历史956量级，PREFERRED=NO。best/final与旧模型保留，GPU空闲，不启动蒸馏/调参/上传/关机。入口results/pnfp/scale_7b/trajectory/full_experiment_log.json。
 
 当前状态（2026-09-18 正式PN-FP7B Teacher已结束）：AdamW8bit0.50.0全参数路线完成40calls/38非零LR更新，final fresh-reload detector=0/1024，invalid/errors=0；loss最终22.6564，未触发0.005早停。ARC delta=-0.25597pp、TruthfulQA-MC2 delta=+0.04055pp，utility基本保持但水印复现失败；PREFERRED_TEACHER=NO。最终模型及完整证据已核验保留，GPU空闲，不准备/启动Direct MD，不自动调参/重训/上传/关机。Git安全提交本地保留，push因凭据/SSH认证缺失受阻。入口results/pnfp/scale_7b/teacher/full_experiment_log.json。

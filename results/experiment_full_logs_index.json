@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-18T13:06:16.976623+00:00",
-  "object_count": 70,
+  "generated_at": "2026-09-18T13:25:10.045961+00:00",
+  "object_count": 71,
   "objects": [
     {
       "method": "PN-FP",
@@ -102,7 +102,7 @@
       "full_log_sha256": "6691fca531d7929c0fcb87c6cc7029425fc8bfe45b836dd5a1f5ce893a7c7303",
       "final_model_manifest": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb",
       "modelscope_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
-      "scientific_status": "A6 COMPLETE — PREFERRED TEACHER SELECTED",
+      "scientific_status": "A6 COMPLETE \u2014 PREFERRED TEACHER SELECTED",
       "watermark_evaluation_available": false,
       "utility_available": true,
       "checkpoint_localization_support": false,
@@ -1048,6 +1048,19 @@
       "best_model_manifest": "results/pnfp/scale_7b/trajectory/receipts/best_manifest.json",
       "telemetry_records": 40,
       "preferred_teacher": false
+    },
+    {
+      "method": "PN-FP",
+      "role": "7b_WA_sensitivity_pilot",
+      "experiment": "7B_WA050_PILOT",
+      "run_id": "wa050_pilot_v1",
+      "full_log_path": "results/pnfp/scale_7b/wa050_pilot/full_experiment_log.json",
+      "full_log_sha256": "42553a58701613c54d598b828f5edfb36bb45203a01d25e7d8725c83ee1583e4",
+      "scientific_status": "RUNNING",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "preferred_teacher": false,
+      "modelscope_repo": null
     }
   ]
 }
