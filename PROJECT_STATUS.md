@@ -1,3 +1,7 @@
+当前状态（2026-09-18 AdamW8bit pilot完成且已停止）：bitsandbytes0.50.0 AdamW8bit全参数7B完成4calls，其中2次非零LR更新；非零更新平均24.63s，GPU采样峰值51.99GiB/allocated51.03GiB，host RSS29.42GiB/cgroup采样40.34GiB，最小update边界余量42.99GiB；末次训练loss6.5983，无NaN/Inf，初步detector182/1024（invalid/errors均0）。仅内存/速度pilot通过，非preferred Teacher或收敛/utility结论；未保存checkpoint、未跑Teacher，GPU空闲。入口results/pnfp/scale_7b/adamw8bit_pilot/，须用户后续决定。
+
+当前最高授权（2026-09-18 AdamW8bit pilot）：仅一个全参数8-bit Adam-family短pilot，单卡96GB、冻结1024指纹及原PNFP科学配置不变。使用隔离bitsandbytes0.50.0；首步成功且余量>=10GiB才继续最多4次call（前2次原schedule的LR0）；optimizer失败立即停止。禁止继续CPU/BF16-state调参、LoRA、Adafactor、自动Teacher。入口results/pnfp/scale_7b/adamw8bit_pilot/。
+
 当前状态（2026-09-18 GPU BF16 pilot已停止）：隔离DeepSpeed0.19.6支持BF16 master/grad/Adam states；新单卡无offload全参数pilot在第一个optimizer step分配第二moment时OOM，零完成update。GPU采样峰值89.43GiB、host cgroup采样峰值42.10GiB；sec/update及update loss不可用。按用户要求OOM后不重试、不切LoRA、不启动Teacher；当前GPU无worker。报告docs/reproduction_reports/pnfp_7b_gpu_bf16_pilot_20260918.md，证据results/pnfp/scale_7b/gpu_bf16_pilot/。须用户决定后续。
 
 当前最高授权（2026-09-18 GPU BF16 pilot）：仅运行独立单卡96GB、无offload、全参数BF16 master/grad/Adam states短pilot；使用隔离DeepSpeed0.19.6、固定1024指纹、原WA/DM/seed/数据及目标。最多3次optimizer call（包含旧有效warmup后的非零LR更新）后停止，成功也须用户查看peak memory/speed后再决定Teacher。禁止CPU offload重试、LoRA、8-bit optimizer和自动Teacher。旧CPU失败证据保留。恢复入口gpu_bf16_pilot_v1，协议configs/watermark/pnfp_7b_gpu_bf16_pilot.json。

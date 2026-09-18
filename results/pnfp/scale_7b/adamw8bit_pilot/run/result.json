@@ -1,0 +1,102 @@
+{
+  "status": "STOPPED_FOR_USER_REVIEW",
+  "reason": "MAX_SHORT_PILOT_CALLS",
+  "optimizer_updates": 4,
+  "step1_completed": true,
+  "steps": [
+    {
+      "update": 1,
+      "sec_per_update": 25.573822379112244,
+      "training_loss": 23.59249496459961,
+      "lr_used": [
+        0,
+        0
+      ],
+      "adam_step_min": 1,
+      "sample_changed_elements": 0,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54336617472,
+      "peak_gpu_reserved_bytes": 54718889984,
+      "peak_host_process_rss_bytes": 31587704832,
+      "headroom_conservative_bytes": 46554546176
+    },
+    {
+      "update": 2,
+      "sec_per_update": 25.087371807545424,
+      "training_loss": 23.534854888916016,
+      "lr_used": [
+        0.0,
+        0.0
+      ],
+      "adam_step_min": 2,
+      "sample_changed_elements": 0,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55113154560,
+      "peak_host_process_rss_bytes": 31587704832,
+      "headroom_conservative_bytes": 46160281600
+    },
+    {
+      "update": 3,
+      "sec_per_update": 24.688554264605045,
+      "training_loss": 23.615442276000977,
+      "lr_used": [
+        5e-05,
+        5e-05
+      ],
+      "adam_step_min": 3,
+      "sample_changed_elements": 17713,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55113154560,
+      "peak_host_process_rss_bytes": 31587704832,
+      "headroom_conservative_bytes": 46160281600
+    },
+    {
+      "update": 4,
+      "sec_per_update": 24.57247568294406,
+      "training_loss": 6.598258018493652,
+      "lr_used": [
+        5e-05,
+        5e-05
+      ],
+      "adam_step_min": 4,
+      "sample_changed_elements": 14624,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55113154560,
+      "peak_host_process_rss_bytes": 31587704832,
+      "headroom_conservative_bytes": 46160281600
+    }
+  ],
+  "wa_seconds": [
+    0.032587017863988876,
+    0.03247009590268135,
+    0.032555632293224335,
+    0.03242533653974533
+  ],
+  "training_wall_seconds": 163.03365637362003,
+  "peak_gpu_allocated_bytes": 54787872256,
+  "peak_gpu_reserved_bytes": 55113154560,
+  "peak_host_process_rss_bytes": 31587704832,
+  "nan_inf_detected": false,
+  "teacher_started": false,
+  "checkpoint_saved": false,
+  "detector_note": "Existing detector executed on in-memory trained pilot; model_path identifies tokenizer source, not clean checkpoint weights."
+}

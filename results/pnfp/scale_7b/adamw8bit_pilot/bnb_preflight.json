@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "test": "8192-element BF16 CUDA parameter one AdamW8bit kernel update; not a model pilot",
+  "bnb_version": "0.50.0",
+  "module": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/bnb_0500/bitsandbytes/__init__.py",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "capability": [
+    12,
+    0
+  ],
+  "optimizer": "bitsandbytes.optim.adamw.AdamW8bit",
+  "states": {
+    "state1": {
+      "dtype": "torch.uint8",
+      "device": "cuda:0",
+      "shape": [
+        8192
+      ]
+    },
+    "qmap1": {
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "shape": [
+        256
+      ]
+    },
+    "state2": {
+      "dtype": "torch.uint8",
+      "device": "cuda:0",
+      "shape": [
+        8192
+      ]
+    },
+    "qmap2": {
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "shape": [
+        256
+      ]
+    },
+    "absmax1": {
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "shape": [
+        32
+      ]
+    },
+    "absmax2": {
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "shape": [
+        32
+      ]
+    }
+  },
+  "changed_elements": 7257,
+  "nan_inf": false
+}

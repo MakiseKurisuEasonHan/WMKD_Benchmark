@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "campaign": "pnfp_7b_same_lineage_20260918",
-  "status": "STOPPED_ON_GPU_BF16_PILOT_OOM_AWAITING_USER_REVIEW",
-  "current_pilot_log": "gpu_bf16_pilot/full_experiment_log.json",
+  "status": "ADAMW8BIT_PILOT_COMPLETED_STOPPED_FOR_USER_REVIEW",
+  "current_pilot_log": "adamw8bit_pilot/full_experiment_log.json",
   "formal_teacher_authorized": false,
-  "current_protocol": "configs/watermark/pnfp_7b_gpu_bf16_pilot.json",
-  "current_authority": "2026-09-18 user GPU BF16 states pilot only; stop on OOM, no automatic Teacher",
+  "current_protocol": "configs/watermark/pnfp_7b_adamw8bit_pilot.json",
+  "current_authority": "2026-09-18 user one full-parameter 8-bit Adam-family pilot; first-step headroom gate; no Teacher",
   "pilot_pid": null,
   "authorization": "user_authorization_20260918.txt",
   "scope": ["teacher", "Ba", "Bb", "Bc"],
@@ -33,10 +33,11 @@
     "error": "Permission denied (publickey,password)"
   },
   "model_download": "COMPLETE_HASH_VERIFIED",
-  "speed_test": "FAILED_BEFORE_FIRST_COMPLETED_UPDATE",
+  "speed_test": "ADAMW8BIT_PASS_FOUR_CALLS_TWO_NONZERO_LR_UPDATES",
   "gpu_workers": 0,
-  "optimizer_updates_completed": 0,
-  "blocker_receipt": "gpu_bf16_pilot/full_experiment_log.json",
+  "optimizer_updates_completed": 4,
+  "blocker_receipt": null,
+  "previous_gpu_bf16_blocker_receipt": "gpu_bf16_pilot/full_experiment_log.json",
   "previous_cpu_blocker_receipt": "receipts/hardware_blocker.json",
   "teacher": "NOT_STARTED",
   "Ba": "NOT_STARTED",
@@ -45,5 +46,5 @@
   "science_results": null,
   "archive": "NOT_STARTED",
   "auto_shutdown": false,
-  "report": "docs/reproduction_reports/pnfp_7b_gpu_bf16_pilot_20260918.md"
+  "report": "docs/reproduction_reports/pnfp_7b_adamw8bit_pilot_20260918.md"
 }
