@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-18T12:02:37.450333+00:00",
-  "object_count": 69,
+  "generated_at": "2026-09-18T12:23:56.254945+00:00",
+  "object_count": 70,
   "objects": [
     {
       "method": "PN-FP",
@@ -1033,6 +1033,18 @@
       "utility_available": true,
       "checkpoint_localization_support": false,
       "telemetry_records": 40
+    },
+    {
+      "method": "PN-FP",
+      "role": "7b_controlled_trajectory_diagnostic",
+      "experiment": "7B_TRAJECTORY_DIAGNOSTIC",
+      "run_id": "trajectory_adamw8bit_v1",
+      "full_log_path": "results/pnfp/scale_7b/trajectory/full_experiment_log.json",
+      "full_log_sha256": "54ba35b1fa27555e32584032f01f1338dca1c4073edd52c582989fa7bda6975c",
+      "scientific_status": "TRAJECTORY_TRAINING_RUNNING",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "modelscope_repo": null
     }
   ]
 }

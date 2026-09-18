@@ -1,3 +1,5 @@
+当前最高授权与状态（2026-09-18 PN-FP7B trajectory diagnostic）：用户批准一次原科学配置独立fresh rerun，保留原40-call LR horizon，逐call记录完整1024 recall、LR、loss与输入batch顺序hash，严格更高recall才替换best，仅保留本次best/final；旧失败Teacher不动。loss<0.005仅记录，不作为本诊断单独停止条件。最后best fresh reload全1024detector及一次utility；禁止蒸馏、新超参/optimizer ablation或关机。supervisor16674，入口results/pnfp/scale_7b/trajectory/full_experiment_log.json。
+
 当前状态（2026-09-18 正式PN-FP7B Teacher已结束）：AdamW8bit0.50.0全参数路线完成40calls/38非零LR更新，final fresh-reload detector=0/1024，invalid/errors=0；loss最终22.6564，未触发0.005早停。ARC delta=-0.25597pp、TruthfulQA-MC2 delta=+0.04055pp，utility基本保持但水印复现失败；PREFERRED_TEACHER=NO。最终模型及完整证据已核验保留，GPU空闲，不准备/启动Direct MD，不自动调参/重训/上传/关机。Git安全提交本地保留，push因凭据/SSH认证缺失受阻。入口results/pnfp/scale_7b/teacher/full_experiment_log.json。
 
 当前状态（2026-09-18 AdamW8bit pilot完成且已停止）：bitsandbytes0.50.0 AdamW8bit全参数7B完成4calls，其中2次非零LR更新；非零更新平均24.63s，GPU采样峰值51.99GiB/allocated51.03GiB，host RSS29.42GiB/cgroup采样40.34GiB，最小update边界余量42.99GiB；末次训练loss6.5983，无NaN/Inf，初步detector182/1024（invalid/errors均0）。仅内存/速度pilot通过，非preferred Teacher或收敛/utility结论；未保存checkpoint、未跑Teacher，GPU空闲。入口results/pnfp/scale_7b/adamw8bit_pilot/，须用户后续决定。

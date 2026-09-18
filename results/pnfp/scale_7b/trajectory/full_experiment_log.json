@@ -1,0 +1,17 @@
+{
+  "experiment_id": "pnfp_7b_trajectory_adamw8bit_v1",
+  "status": "TRAJECTORY_TRAINING_RUNNING",
+  "formal_result": true,
+  "scientific_role": "controlled_trajectory_diagnostic",
+  "parent_failed_run": "teacher_adamw8bit_v1",
+  "config": "configs/watermark/pnfp_7b_trajectory.json",
+  "fingerprint_sha256": "fa231b31aa10bf19dff0285eaff9457ad41a8f4ee2bcc9089a9d3ac76c1caaf7",
+  "preferred_teacher": null,
+  "distillation_started": false,
+  "auto_shutdown": false,
+  "supervisor_pid": 16674,
+  "training_pid": 16683,
+  "report": "docs/reproduction_reports/pnfp_7b_trajectory_20260918.md",
+  "early_stop": "Record loss threshold only; frozen40-call horizon; stop on genuine resource/numeric/integrity failure",
+  "checkpoint_retention": "Only current best and final in new diagnostic; atomic new best write then remove superseded diagnostic best; old formal model preserved"
+}
