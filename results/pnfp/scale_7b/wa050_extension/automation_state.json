@@ -1,34 +1,7 @@
 {
-  "status": "MONITORING",
-  "remote": {
-    "state": {
-      "status": "EXTENSION_COMPLETE",
-      "formal_teacher_started": false,
-      "distillation_started": false,
-      "peaks_sampled_2s": {
-        "host_cgroup_bytes": 83782000640,
-        "gpu_nvidia_smi_mib": 53881,
-        "disk_used_bytes": 69105582080
-      }
-    },
-    "failure": [],
-    "progress": {
-      "update": 24,
-      "nonzero_lr_update": 22,
-      "replay": false,
-      "lr": 2.368421052631579e-05,
-      "train_loss": 1.2422292232513428,
-      "live_recall": 780,
-      "live_recall_percent": 76.171875,
-      "best_fresh_recall": 804,
-      "best_step": 21,
-      "candidate": null,
-      "detector_seconds": 16.00533266738057,
-      "total_probe_seconds": 16.006244972348213,
-      "ordered_input_batch_sha256": "f1a887f1b3a5e45b3ef9d773729819f725d9d56f6aed5783c22dbac3e8a6b273",
-      "data_order_verified": true,
-      "replay_exact_verified": null,
-      "stop_reason": "THREE_CHECKS_WITHOUT_MATERIAL_1PP_GAIN"
-    }
-  }
+  "status": "SHUTDOWN_COMMAND_EXECUTED_SSH_OFFLINE",
+  "shutdown_command": "/usr/bin/shutdown",
+  "consecutive_unreachable_checks": 2,
+  "control_plane_power_state": "not separately queried",
+  "instance_released": false
 }

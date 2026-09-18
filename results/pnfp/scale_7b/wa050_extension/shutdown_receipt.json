@@ -1,0 +1,5 @@
+{
+  "command": "/usr/bin/shutdown",
+  "dispatch_status": "SSH_RETURN_UNCERTAIN",
+  "detail": "['ssh', '-F']: Traceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\n  File \"/root/miniconda3/lib/python3.12/subprocess.py\", line 1026, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n  File \"/root/miniconda3/lib/python3.12/subprocess.py\", line 1955, in _execute_child\n    raise child_exception_type(errno_num, err_msg, err_filename)\nOSError: [Errno 8] Exec format error: '/usr/bin/shutdown'\n"
+}
