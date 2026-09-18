@@ -1,0 +1,27 @@
+{
+  "deepspeed": "0.19.6",
+  "module": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/ds_bf16_0196/deepspeed/__init__.py",
+  "wrapper": "DeepSpeedZeroOptimizer",
+  "optimizer": "AdamW",
+  "defaults": {
+    "lr": 5e-05,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "amsgrad": false,
+    "maximize": false,
+    "foreach": null,
+    "capturable": false,
+    "differentiable": false,
+    "fused": null,
+    "decoupled_weight_decay": true
+  },
+  "full_parameter": true,
+  "parameters": 6738415616,
+  "bf16_flags_verified": true,
+  "cpu_offload": false,
+  "grad_accum_dtype": "torch.bfloat16"
+}

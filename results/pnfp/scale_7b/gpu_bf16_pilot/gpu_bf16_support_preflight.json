@@ -1,0 +1,21 @@
+{
+  "version": "0.19.6",
+  "module": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/ds_bf16_0196/deepspeed/__init__.py",
+  "config_validation": "PASS",
+  "offload_optimizer": null,
+  "offload_param": null,
+  "source_sha256": {
+    "runtime/config.py": "d353af8bcd57e723a623010b035ce04e421e12fd12b2a5fac8093226bf8539e7",
+    "runtime/engine.py": "4a5cbb675817f8900cf2ed6a8f94320d361a85247050e0e974d92109996663f6",
+    "runtime/zero/stage_1_and_2.py": "71db41c722ba2206e5100511044c2fb7d3291be3ed30ccce37f483736a259857"
+  },
+  "static_memory": {
+    "parameter_count": 6738415616,
+    "one_bf16_copy_bytes": 13476831232,
+    "model_master_gradient_two_moments_wa_copies": 6,
+    "persistent_bytes_conservative": 80860987392,
+    "activation_buffers_runtime_reserve_GiB": 8,
+    "estimated_remaining_GiB": 12.2,
+    "limitation": "Static budget, not measured peak; separate master copy counted conservatively, activation estimate assumes checkpointing and seq64."
+  }
+}

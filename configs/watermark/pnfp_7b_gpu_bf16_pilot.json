@@ -1,0 +1,42 @@
+{
+  "protocol_id": "pnfp_7b_gpu_bf16_states_pilot_v1",
+  "parent": "pnfp_7b_paper_aligned_v1",
+  "scope": "three optimizer calls only to include a nonzero-LR update after legacy warmup; stop for user review; no Teacher",
+  "deepspeed_version": "0.19.6",
+  "engineering_adaptation": "Adam family and full-parameter objective retained. Master weights, master gradients and Adam moments use BF16 instead of FP32; numerical equivalence is NOT claimed. GPU placement and activation checkpointing are memory implementation changes.",
+  "optimizer_semantics": "Preserve released Trainer AdamW behavior (decoupled weight decay), LR5e-5, WD1e-4, betas0.9/0.999, eps1e-8; do not silently switch to coupled-decay Adam.",
+  "fingerprint_sha256": "fa231b31aa10bf19dff0285eaff9457ad41a8f4ee2bcc9089a9d3ac76c1caaf7",
+  "fingerprints": 1024,
+  "key_length": 16,
+  "response_length": 1,
+  "perinucleus_t": 0.8,
+  "perinucleus_k": 3,
+  "wa": 0.75,
+  "dm": 0.25,
+  "seed": 42,
+  "sequence_length": 64,
+  "fingerprint_microbatch": 6,
+  "benign_microbatch": 2,
+  "gradient_accumulation_steps": 171,
+  "max_epochs_horizon": 40,
+  "pilot_updates": 3,
+  "warmup_steps_effective": 2,
+  "scheduler_compatibility": "DeepSpeed0.16.9 clamps nominal0 to2;0.19.6 rejects0. Explicit2 preserves the original effective40-step LR sequence.",
+  "gradient_checkpointing": true,
+  "gradient_checkpointing_use_reentrant": false,
+  "save_checkpoint": false,
+  "deepspeed": {
+    "bf16": {"enabled": true, "bf16_master_weights_and_grads": true, "bf16_optimizer_states": true},
+    "data_types": {"grad_accum_dtype": "bf16"},
+    "zero_optimization": {"stage": 2, "overlap_comm": false, "reduce_bucket_size": 20000000, "allgather_bucket_size": 20000000, "contiguous_gradients": true}
+  },
+  "memory_estimate": {
+    "parameter_count": 6738415616,
+    "one_bf16_copy_bytes": 13476831232,
+    "model_master_gradient_two_moments_wa_copies": 6,
+    "persistent_bytes_conservative": 80860987392,
+    "activation_buffers_runtime_reserve_GiB": 8,
+    "estimated_remaining_GiB": 12.2,
+    "limitation": "Static budget, not measured peak; separate master copy counted conservatively, activation estimate assumes checkpointing and seq64."
+  }
+}
