@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-18T12:23:56.254945+00:00",
+  "generated_at": "2026-09-18T13:06:16.976623+00:00",
   "object_count": 70,
   "objects": [
     {
@@ -1040,11 +1040,14 @@
       "experiment": "7B_TRAJECTORY_DIAGNOSTIC",
       "run_id": "trajectory_adamw8bit_v1",
       "full_log_path": "results/pnfp/scale_7b/trajectory/full_experiment_log.json",
-      "full_log_sha256": "54ba35b1fa27555e32584032f01f1338dca1c4073edd52c582989fa7bda6975c",
-      "scientific_status": "TRAJECTORY_TRAINING_RUNNING",
-      "watermark_evaluation_available": false,
-      "utility_available": false,
-      "modelscope_repo": null
+      "full_log_sha256": "9b25aedd80f4ec076581dd3a843b836633fa6eb1e202eab85146f0b42104a4d0",
+      "scientific_status": "COMPLETED_RISE_AND_COLLAPSE_CONFIRMED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "modelscope_repo": null,
+      "best_model_manifest": "results/pnfp/scale_7b/trajectory/receipts/best_manifest.json",
+      "telemetry_records": 40,
+      "preferred_teacher": false
     }
   ]
 }

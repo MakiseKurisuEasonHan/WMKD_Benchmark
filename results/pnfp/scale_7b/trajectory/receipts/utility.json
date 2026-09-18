@@ -1,0 +1,44 @@
+{
+  "base": {
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+    "arc_challenge_acc_norm": 0.3660409556313993,
+    "truthfulqa_mc2_acc": 0.45754715790333667,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.45754715790333667,
+        "acc_stderr,none": 0.015803848095178836,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.35238907849829354,
+        "acc_stderr,none": 0.013960142600598661,
+        "acc_norm,none": 0.3660409556313993,
+        "acc_norm_stderr,none": 0.014077223108470144,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "a2": {
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/best_model",
+    "arc_challenge_acc_norm": 0.39761092150170646,
+    "truthfulqa_mc2_acc": 0.44658696505812173,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.44658696505812173,
+        "acc_stderr,none": 0.01580935802558094,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.3703071672354949,
+        "acc_stderr,none": 0.014111298751675015,
+        "acc_norm,none": 0.39761092150170646,
+        "acc_norm_stderr,none": 0.014301752223279512,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "delta": {
+    "arc_challenge_acc_norm": 0.03156996587030714,
+    "truthfulqa_mc2_acc": -0.010960192845214933
+  }
+}

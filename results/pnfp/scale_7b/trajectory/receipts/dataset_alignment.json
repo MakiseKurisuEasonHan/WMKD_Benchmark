@@ -1,0 +1,26 @@
+{
+  "prepared_dataset_sha256": "dbb2904b30ff3d9efea74e6119475467f49c82c5b10c9e248d6e8505300a274f",
+  "prior_formal_dataset": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/teacher_adamw8bit_v1/official/saved_models/89a5e83ee8ac968676d9763166767f81/train_dataset.json",
+  "trajectory_dataset": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/official/saved_models/2e8bc7e112905b06092b50622d0687c4/train_dataset.json",
+  "prepared_dataset_exact_match": true,
+  "training_arguments_equal": {
+    "seed": 42,
+    "data_seed": null,
+    "bf16": true,
+    "num_train_epochs": 40,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.0001,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "per_device_train_batch_size": 6,
+    "gradient_accumulation_steps": 171,
+    "gradient_checkpointing": true,
+    "gradient_checkpointing_kwargs": {
+      "use_reentrant": false
+    },
+    "max_grad_norm": 1.0,
+    "dataloader_num_workers": 2
+  },
+  "batch_order_caveat": "Prior run did not record batch order hashes; exact per-update losses are separately compared."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETED_RISE_AND_COLLAPSE_CONFIRMED",
+  "best_optimizer_call": 13,
+  "best_nonzero_lr_update": 11,
+  "best_in_memory_recall": 339,
+  "best_fresh_reload_recall": 334,
+  "total_fingerprints": 1024,
+  "final_in_memory_recall": 0,
+  "first_post_learning_zero_recall_call": 37,
+  "preferred_teacher": false,
+  "preferred_reason": "Best demonstrates partial fingerprint learning but ~33% recall remains far below the requested strong Teacher range near historical956/1024; reload also has a recorded net-5 mismatch. Keep the diagnostic best, do not label it preferred.",
+  "utility_assessment": "ARC improves3.157pp; TruthfulQA-MC2 declines1.096pp; no broad utility-collapse evidence on these two tests.",
+  "cause": "Reproducible within-run forgetting observed; optimizer/LR/WA/numerical causes not isolated by this single-config diagnostic.",
+  "best_model": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/best_model",
+  "final_model": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/final_model",
+  "distillation_started": false,
+  "extra_hyperparameter_tests": false,
+  "auto_shutdown": false
+}

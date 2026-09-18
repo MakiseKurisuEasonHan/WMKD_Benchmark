@@ -1,0 +1,90 @@
+{
+  "status": "DIAGNOSTIC_ARTIFACTS_VERIFIED",
+  "best_update": 13,
+  "best_recall": 339,
+  "best_fresh_reload_recall": 334,
+  "all1024_reload_predictions_identical": false,
+  "final_recall": 0,
+  "recall_dropped_after_best": true,
+  "max_abs_loss_delta_vs_prior_formal": 0.0,
+  "all_actual_lrs_equal_prior_formal": true,
+  "evaluation_seconds": 634.7977742627263,
+  "best_checkpoint_save_seconds": 116.80034973844886,
+  "training_wall_seconds": 2068.915709938854,
+  "wall_seconds_including_final_save": 2098.4607468135655,
+  "wall_delta_vs_prior_formal_seconds": 741.9727810248733,
+  "comparison_limit": "Wall delta also includes different checkpoint I/O, batch-hash instrumentation and runtime variation; direct detector timer is the clean evaluation overhead measure. Prior formal used eight first128 probes.",
+  "models_verified": [
+    {
+      "manifest": "best_manifest.json",
+      "files_verified": 10,
+      "bytes": 13479234655
+    },
+    {
+      "manifest": "final_model_manifest.json",
+      "files_verified": 10,
+      "bytes": 13479234655
+    }
+  ],
+  "disk": {
+    "total_bytes": 75161927680,
+    "used_bytes": 55599620096,
+    "free_bytes": 19562307584
+  },
+  "sampled_peaks": {
+    "host_cgroup_bytes": 61305110528,
+    "gpu_nvidia_smi_mib": 53241,
+    "disk_used_bytes": 55599636480
+  },
+  "utility": {
+    "base": {
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+      "arc_challenge_acc_norm": 0.3660409556313993,
+      "truthfulqa_mc2_acc": 0.45754715790333667,
+      "raw_results": {
+        "truthfulqa_mc2": {
+          "acc,none": 0.45754715790333667,
+          "acc_stderr,none": 0.015803848095178836,
+          "alias": "truthfulqa_mc2"
+        },
+        "arc_challenge": {
+          "acc,none": 0.35238907849829354,
+          "acc_stderr,none": 0.013960142600598661,
+          "acc_norm,none": 0.3660409556313993,
+          "acc_norm_stderr,none": 0.014077223108470144,
+          "alias": "arc_challenge"
+        }
+      }
+    },
+    "a2": {
+      "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/best_model",
+      "arc_challenge_acc_norm": 0.39761092150170646,
+      "truthfulqa_mc2_acc": 0.44658696505812173,
+      "raw_results": {
+        "truthfulqa_mc2": {
+          "acc,none": 0.44658696505812173,
+          "acc_stderr,none": 0.01580935802558094,
+          "alias": "truthfulqa_mc2"
+        },
+        "arc_challenge": {
+          "acc,none": 0.3703071672354949,
+          "acc_stderr,none": 0.014111298751675015,
+          "acc_norm,none": 0.39761092150170646,
+          "acc_norm_stderr,none": 0.014301752223279512,
+          "alias": "arc_challenge"
+        }
+      }
+    },
+    "delta": {
+      "arc_challenge_acc_norm": 0.03156996587030714,
+      "truthfulqa_mc2_acc": -0.010960192845214933
+    }
+  },
+  "gpu_idle": true,
+  "old_formal_model_preserved": true,
+  "distillation_started": false,
+  "auto_shutdown": false,
+  "final_safetensors_hashes_match_prior_formal": true,
+  "fresh_reload_recall_delta": -5,
+  "fresh_reload_discrepancy_note": "Report in-memory and saved-checkpoint measurements separately. A mismatch is not silently repaired or treated as equivalence; see reload_comparison.json."
+}

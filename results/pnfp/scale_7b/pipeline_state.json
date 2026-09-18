@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "campaign": "pnfp_7b_same_lineage_20260918",
-  "status": "CONTROLLED_TRAJECTORY_DIAGNOSTIC_RUNNING",
+  "status": "COMPLETED_RISE_AND_COLLAPSE_CONFIRMED",
   "current_pilot_log": "adamw8bit_pilot/full_experiment_log.json",
   "formal_teacher_authorized": true,
   "current_protocol": "configs/watermark/pnfp_7b_trajectory.json",
@@ -42,21 +42,23 @@
   },
   "model_download": "COMPLETE_HASH_VERIFIED",
   "speed_test": "ADAMW8BIT_PASS_FOUR_CALLS_TWO_NONZERO_LR_UPDATES",
-  "gpu_workers": 1,
+  "gpu_workers": 0,
   "optimizer_updates_completed": 40,
   "blocker_receipt": null,
   "previous_gpu_bf16_blocker_receipt": "gpu_bf16_pilot/full_experiment_log.json",
   "previous_cpu_blocker_receipt": "receipts/hardware_blocker.json",
   "teacher": "COMPLETED_WATERMARK_NOT_DETECTED",
   "teacher_supervisor_pid": null,
-  "Ba": "NOT_PREPARED_NOT_STARTED_TEACHER_SUCCESS_GATE_FAILED",
+  "Ba": "NOT_STARTED_DIAGNOSTIC_COMPLETE_NO_STRONG_PREFERRED_TEACHER",
   "Bb": "NOT_STARTED",
   "Bc": "NOT_STARTED",
   "science_results": {
-    "detector": "0/1024",
+    "trajectory_best_in_memory": "339/1024",
+    "trajectory_best_fresh_reload": "334/1024",
+    "trajectory_final": "0/1024",
     "utility_delta": {
-      "arc_challenge_acc_norm": -0.0025597269624573205,
-      "truthfulqa_mc2_acc": 0.00040552223946482835
+      "arc_challenge_acc_norm": 0.03156996587030714,
+      "truthfulqa_mc2_acc": -0.010960192845214933
     }
   },
   "archive": "NOT_UPLOADED_NOT_PREFERRED",
@@ -66,5 +68,10 @@
   "preferred_teacher": false,
   "git_push_status": "BLOCKED_NO_HTTPS_CREDENTIALS_AND_SSH_PUBLICKEY_DENIED",
   "trajectory_log": "trajectory/full_experiment_log.json",
-  "trajectory_supervisor_pid": 16674
+  "trajectory_supervisor_pid": null,
+  "trajectory": "COMPLETED_RISE_AND_COLLAPSE_CONFIRMED",
+  "trajectory_best_model": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/best_model",
+  "trajectory_best_recall_in_memory": 339,
+  "trajectory_best_recall_fresh_reload": 334,
+  "trajectory_final_recall": 0
 }

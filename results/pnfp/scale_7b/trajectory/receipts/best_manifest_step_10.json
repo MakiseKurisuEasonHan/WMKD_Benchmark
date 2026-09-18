@@ -1,0 +1,57 @@
+{
+  "step": 10,
+  "recall": 334,
+  "path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/trajectory_adamw8bit_v1/best_model",
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 754,
+      "sha256": "24f7580990ef8932c4fd00ed713e989ecd8bda849b75bfa2d0e5ab9a56547524"
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 183,
+      "sha256": "07f7cbfd02476f674a83b83d5cb9c1efc9d480395255429b17943d4543cf6dca"
+    },
+    {
+      "path": "model-00001-of-00003.safetensors",
+      "bytes": 4938985352,
+      "sha256": "bf36e467c2e7e6c782407c8b0140bfb1daecb9fff509089ad8b12ad783f04278"
+    },
+    {
+      "path": "model-00002-of-00003.safetensors",
+      "bytes": 4947390880,
+      "sha256": "bdd16e31da002dd069e0c017ea34aa44ec0e3a0af345ebce9598fd268f2d85ae"
+    },
+    {
+      "path": "model-00003-of-00003.safetensors",
+      "bytes": 3590488816,
+      "sha256": "a10d6dc7b5cce804b443eca61bd23fb670923fea29b9c4b5264ee766ba494bfa"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes": 23950,
+      "sha256": "091fdb60b8ee3713df38fd6f9849c3aa82d7eeeb5f6d224a77139543b1db8652"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 414,
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 1842795,
+      "sha256": "bf467c9e0f536bda271283c6ef85eb1a943e3196b621c8a912d64953b205df83"
+    },
+    {
+      "path": "tokenizer.model",
+      "bytes": 499723,
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 1788,
+      "sha256": "681b3c1b96d6fbfa428ff2a8e2083f8ab9a6b920fd80bee084cbf0b6bf9762fa"
+    }
+  ]
+}
