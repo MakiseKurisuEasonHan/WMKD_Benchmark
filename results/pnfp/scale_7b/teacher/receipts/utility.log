@@ -1,0 +1,50 @@
+2026-09-18:19:51:17,697 INFO     [evaluator.py:152] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234
+2026-09-18:19:51:17,697 INFO     [evaluator.py:189] Initializing hf model, with arguments: {'pretrained': '/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf', 'local_files_only': True, 'trust_remote_code': True, 'dtype': 'bfloat16'}
+2026-09-18:19:51:17,808 INFO     [huggingface.py:170] Using device 'cuda'
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.68s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.30s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.50s/it]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 1172 examples [00:00, 159373.76 examples/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_final_utility.py", line 27, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_final_utility.py", line 25, in main
+    existing.main()
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_a2_benchmark_eval.py", line 20, in main
+    base=evaluate(a.base,a.batch_size); a2=evaluate(a.a2,a.batch_size)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_a2_benchmark_eval.py", line 8, in evaluate
+    result = lm_eval.simple_evaluate(model="hf",
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/utils.py", line 395, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/evaluator.py", line 221, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 444, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 287, in load_task_or_group
+    collections.ChainMap(*map(self._load_individual_task_or_group, task_list))
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 178, in _load_individual_task_or_group
+    return load_task(task_config, task=name_or_config, group=parent_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 167, in load_task
+    task_object = ConfigurableTask(config=config)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/api/task.py", line 838, in __init__
+    if self.fewshot_docs() is not None:
+       ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/api/task.py", line 987, in fewshot_docs
+    return super().fewshot_docs()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/api/task.py", line 321, in fewshot_docs
+    return self.training_docs()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/lm_eval/api/task.py", line 947, in training_docs
+    return self.dataset[self.config.training_split]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/lib/python3.12/site-packages/datasets/dataset_dict.py", line 75, in __getitem__
+    return super().__getitem__(k)
+           ^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'train'

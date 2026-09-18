@@ -25,7 +25,8 @@ def main():
     state = read('state.json')
     assert state['status'] == 'TEACHER_EVALUATIONS_COMPLETE_AWAITING_ASSESSMENT', state
     for stage in ('training', 'detector', 'utility'):
-        assert read(stage + '_exit.json')['exit_code'] == 0
+        exit_name = 'utility_final_exit.json' if stage == 'utility' and (OUT / 'utility_final_exit.json').exists() else stage + '_exit.json'
+        assert read(exit_name)['exit_code'] == 0
     manifest = read('final_model_manifest.json')
     checks = []
     for row in manifest['files']:
@@ -38,6 +39,12 @@ def main():
     fp = provenance['fingerprints']
     fingerprint_sha = digest(Path(fp['official_output']))
     assert fingerprint_sha == provenance['config']['fingerprint_sha256']
+    detector = read('detector.json')
+    assert detector['fingerprints_evaluated'] == 1024
+    assert detector['invalid_samples'] == detector['evaluation_errors'] == 0
+    utility = read('utility.json')
+    assert all(utility[label][metric] is not None for label in ('base', 'a2')
+               for metric in ('arc_challenge_acc_norm', 'truthfulqa_mc2_acc'))
     steps = [json.loads(s) for s in (OUT / 'steps.jsonl').read_text().splitlines() if s.strip()]
     nonzero = [s for s in steps if any(lr != 0 for lr in s['lr_used'])]
     recall = []
@@ -58,8 +65,10 @@ def main():
         'final_update_training_loss': steps[-1]['training_loss'],
         'any_nan_inf': any(s['nan_inf_detected'] for s in steps),
         'lightweight_recall_trajectory': recall,
-        'detector': {k: v for k, v in read('detector.json').items() if k != 'details'},
-        'utility': read('utility.json'),
+        'detector': {k: v for k, v in detector.items() if k != 'details'},
+        'clean_model_detector': ({k: v for k, v in read('clean_detector.json').items() if k != 'details'}
+                                 if (OUT / 'clean_detector.json').exists() else None),
+        'utility': utility,
         'sampled_resource_peaks': state['peaks_sampled_2s'],
         'disk': dict(zip(('total_bytes', 'used_bytes', 'free_bytes'), shutil.disk_usage(ROOT))),
         'intermediate_checkpoints': checkpoints,

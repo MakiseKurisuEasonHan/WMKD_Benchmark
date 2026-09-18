@@ -12,21 +12,12 @@ def main():
         'truthful':('truthfulqa_validation.parquet','validation',817,'23f08e230ca4ed66babf3a72419af7cbde1f3d734dd396ac4cf6d088bd162afd')}
     for name,split,count,digest in specs.values():
         assert hashlib.sha256((ROOT/'support'/name).read_bytes()).hexdigest()==digest
-    arc_aux={
-        'train':('arc_train.parquet',1119,'e488c1587ffdcfc8443f916c53488a95cd471c5790e0746c6bfe4cecf20962cb'),
-        'validation':('arc_validation.parquet',299,'395a5c88d1580d69855fbaee9450270578df1ad5af6259771cd0a42c20e99f05')}
-    for name,count,digest in arc_aux.values():
-        assert hashlib.sha256((ROOT/'support'/name).read_bytes()).hexdigest()==digest
     def local(path,*args,**kwargs):
         key='arc' if path in ('ai2_arc','allenai/ai2_arc') else 'truthful' if path in ('truthful_qa','truthfulqa/truthful_qa') else None
         if key:
             name,split,count,_=specs[key]
-            files={split:str(ROOT/'support'/name)}
-            if key=='arc':files.update({s:str(ROOT/'support'/v[0]) for s,v in arc_aux.items()})
-            ds=load('parquet',data_files=files,cache_dir=str(ROOT/'cache/datasets'))
+            ds=load('parquet',data_files={split:str(ROOT/'support'/name)},cache_dir=str(ROOT/'cache/datasets'))
             assert len(ds[split])==count
-            if key=='arc':
-                for s,v in arc_aux.items():assert len(ds[s])==v[1]
             return ds
         return load(path,*args,**kwargs)
     datasets.load_dataset=local

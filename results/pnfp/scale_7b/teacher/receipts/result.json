@@ -1,0 +1,860 @@
+{
+  "status": "TRAINING_COMPLETE",
+  "reason": "MAX_40_EPOCHS",
+  "optimizer_updates": 40,
+  "step1_completed": true,
+  "steps": [
+    {
+      "update": 1,
+      "sec_per_update": 25.322099182754755,
+      "training_loss": 23.59249496459961,
+      "lr_used": [
+        0,
+        0
+      ],
+      "adam_step_min": 1,
+      "sample_changed_elements": 0,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54336617472,
+      "peak_gpu_reserved_bytes": 54718889984,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46554546176
+    },
+    {
+      "update": 2,
+      "sec_per_update": 24.841264739632607,
+      "training_loss": 23.534854888916016,
+      "lr_used": [
+        0.0,
+        0.0
+      ],
+      "adam_step_min": 2,
+      "sample_changed_elements": 0,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55113154560,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46160281600
+    },
+    {
+      "update": 3,
+      "sec_per_update": 24.731806475669146,
+      "training_loss": 23.615442276000977,
+      "lr_used": [
+        5e-05,
+        5e-05
+      ],
+      "adam_step_min": 3,
+      "sample_changed_elements": 17713,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55113154560,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46160281600
+    },
+    {
+      "update": 4,
+      "sec_per_update": 24.515537802129984,
+      "training_loss": 6.598258018493652,
+      "lr_used": [
+        5e-05,
+        5e-05
+      ],
+      "adam_step_min": 4,
+      "sample_changed_elements": 14624,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55113154560,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46160281600
+    },
+    {
+      "update": 5,
+      "sec_per_update": 24.43533106893301,
+      "training_loss": 5.130043029785156,
+      "lr_used": [
+        4.868421052631579e-05,
+        4.868421052631579e-05
+      ],
+      "adam_step_min": 5,
+      "sample_changed_elements": 12422,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55113154560,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46160281600
+    },
+    {
+      "update": 6,
+      "sec_per_update": 24.90214892476797,
+      "training_loss": 4.765505313873291,
+      "lr_used": [
+        4.736842105263158e-05,
+        4.736842105263158e-05
+      ],
+      "adam_step_min": 6,
+      "sample_changed_elements": 11683,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 7,
+      "sec_per_update": 24.740128695964813,
+      "training_loss": 4.196765899658203,
+      "lr_used": [
+        4.605263157894737e-05,
+        4.605263157894737e-05
+      ],
+      "adam_step_min": 7,
+      "sample_changed_elements": 11707,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 8,
+      "sec_per_update": 24.54175990074873,
+      "training_loss": 4.1917901039123535,
+      "lr_used": [
+        4.473684210526316e-05,
+        4.473684210526316e-05
+      ],
+      "adam_step_min": 8,
+      "sample_changed_elements": 11775,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 9,
+      "sec_per_update": 24.643491856753826,
+      "training_loss": 4.081629276275635,
+      "lr_used": [
+        4.342105263157895e-05,
+        4.342105263157895e-05
+      ],
+      "adam_step_min": 9,
+      "sample_changed_elements": 11885,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 10,
+      "sec_per_update": 24.54190704599023,
+      "training_loss": 3.8793997764587402,
+      "lr_used": [
+        4.210526315789474e-05,
+        4.210526315789474e-05
+      ],
+      "adam_step_min": 10,
+      "sample_changed_elements": 11994,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 11,
+      "sec_per_update": 24.607118107378483,
+      "training_loss": 3.9187943935394287,
+      "lr_used": [
+        4.078947368421053e-05,
+        4.078947368421053e-05
+      ],
+      "adam_step_min": 11,
+      "sample_changed_elements": 11944,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 12,
+      "sec_per_update": 24.533210318535566,
+      "training_loss": 3.91400146484375,
+      "lr_used": [
+        3.9473684210526316e-05,
+        3.9473684210526316e-05
+      ],
+      "adam_step_min": 12,
+      "sample_changed_elements": 11916,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 13,
+      "sec_per_update": 24.825236808508635,
+      "training_loss": 3.848032236099243,
+      "lr_used": [
+        3.815789473684211e-05,
+        3.815789473684211e-05
+      ],
+      "adam_step_min": 13,
+      "sample_changed_elements": 11748,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 14,
+      "sec_per_update": 25.142738178372383,
+      "training_loss": 3.7759015560150146,
+      "lr_used": [
+        3.6842105263157895e-05,
+        3.6842105263157895e-05
+      ],
+      "adam_step_min": 14,
+      "sample_changed_elements": 11591,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 15,
+      "sec_per_update": 25.336415253579617,
+      "training_loss": 3.7867681980133057,
+      "lr_used": [
+        3.5526315789473684e-05,
+        3.5526315789473684e-05
+      ],
+      "adam_step_min": 15,
+      "sample_changed_elements": 11366,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 16,
+      "sec_per_update": 25.098399948328733,
+      "training_loss": 3.836047887802124,
+      "lr_used": [
+        3.421052631578947e-05,
+        3.421052631578947e-05
+      ],
+      "adam_step_min": 16,
+      "sample_changed_elements": 11050,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 17,
+      "sec_per_update": 25.072577968239784,
+      "training_loss": 3.8566291332244873,
+      "lr_used": [
+        3.289473684210527e-05,
+        3.289473684210527e-05
+      ],
+      "adam_step_min": 17,
+      "sample_changed_elements": 10586,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 18,
+      "sec_per_update": 24.994457464665174,
+      "training_loss": 3.8861496448516846,
+      "lr_used": [
+        3.157894736842105e-05,
+        3.157894736842105e-05
+      ],
+      "adam_step_min": 18,
+      "sample_changed_elements": 9972,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 19,
+      "sec_per_update": 24.71651703119278,
+      "training_loss": 3.891357898712158,
+      "lr_used": [
+        3.0263157894736844e-05,
+        3.0263157894736844e-05
+      ],
+      "adam_step_min": 19,
+      "sample_changed_elements": 9319,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 20,
+      "sec_per_update": 24.57356210425496,
+      "training_loss": 4.062815189361572,
+      "lr_used": [
+        2.8947368421052634e-05,
+        2.8947368421052634e-05
+      ],
+      "adam_step_min": 20,
+      "sample_changed_elements": 8720,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 21,
+      "sec_per_update": 24.84711416065693,
+      "training_loss": 3.9385182857513428,
+      "lr_used": [
+        2.7631578947368426e-05,
+        2.7631578947368426e-05
+      ],
+      "adam_step_min": 21,
+      "sample_changed_elements": 8347,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 22,
+      "sec_per_update": 24.753697857260704,
+      "training_loss": 4.052160739898682,
+      "lr_used": [
+        2.6315789473684212e-05,
+        2.6315789473684212e-05
+      ],
+      "adam_step_min": 22,
+      "sample_changed_elements": 8223,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 23,
+      "sec_per_update": 24.30204936116934,
+      "training_loss": 4.145144462585449,
+      "lr_used": [
+        2.5e-05,
+        2.5e-05
+      ],
+      "adam_step_min": 23,
+      "sample_changed_elements": 8081,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 24,
+      "sec_per_update": 24.801739316433668,
+      "training_loss": 4.205827713012695,
+      "lr_used": [
+        2.368421052631579e-05,
+        2.368421052631579e-05
+      ],
+      "adam_step_min": 24,
+      "sample_changed_elements": 7913,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 25,
+      "sec_per_update": 24.730153407901525,
+      "training_loss": 4.272560119628906,
+      "lr_used": [
+        2.236842105263158e-05,
+        2.236842105263158e-05
+      ],
+      "adam_step_min": 25,
+      "sample_changed_elements": 7718,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 26,
+      "sec_per_update": 24.921416614204645,
+      "training_loss": 4.646696090698242,
+      "lr_used": [
+        2.105263157894737e-05,
+        2.105263157894737e-05
+      ],
+      "adam_step_min": 26,
+      "sample_changed_elements": 7449,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 27,
+      "sec_per_update": 24.38751957938075,
+      "training_loss": 4.755861759185791,
+      "lr_used": [
+        1.9736842105263158e-05,
+        1.9736842105263158e-05
+      ],
+      "adam_step_min": 27,
+      "sample_changed_elements": 7123,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 28,
+      "sec_per_update": 24.425560239702463,
+      "training_loss": 5.161430358886719,
+      "lr_used": [
+        1.8421052631578947e-05,
+        1.8421052631578947e-05
+      ],
+      "adam_step_min": 28,
+      "sample_changed_elements": 6659,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 29,
+      "sec_per_update": 24.874478742480278,
+      "training_loss": 5.311269283294678,
+      "lr_used": [
+        1.7105263157894737e-05,
+        1.7105263157894737e-05
+      ],
+      "adam_step_min": 29,
+      "sample_changed_elements": 6144,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 30,
+      "sec_per_update": 24.619743328541517,
+      "training_loss": 5.818546772003174,
+      "lr_used": [
+        1.5789473684210526e-05,
+        1.5789473684210526e-05
+      ],
+      "adam_step_min": 30,
+      "sample_changed_elements": 5492,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 31,
+      "sec_per_update": 24.751132022589445,
+      "training_loss": 6.816924095153809,
+      "lr_used": [
+        1.4473684210526317e-05,
+        1.4473684210526317e-05
+      ],
+      "adam_step_min": 31,
+      "sample_changed_elements": 4840,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 32,
+      "sec_per_update": 24.577918346971273,
+      "training_loss": 9.714112281799316,
+      "lr_used": [
+        1.3157894736842106e-05,
+        1.3157894736842106e-05
+      ],
+      "adam_step_min": 32,
+      "sample_changed_elements": 4243,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 33,
+      "sec_per_update": 24.586527291685343,
+      "training_loss": 14.395761489868164,
+      "lr_used": [
+        1.1842105263157895e-05,
+        1.1842105263157895e-05
+      ],
+      "adam_step_min": 33,
+      "sample_changed_elements": 3754,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 34,
+      "sec_per_update": 24.940520275384188,
+      "training_loss": 17.58519172668457,
+      "lr_used": [
+        1.0526315789473684e-05,
+        1.0526315789473684e-05
+      ],
+      "adam_step_min": 34,
+      "sample_changed_elements": 3409,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 35,
+      "sec_per_update": 24.7100319750607,
+      "training_loss": 18.58681297302246,
+      "lr_used": [
+        9.210526315789474e-06,
+        9.210526315789474e-06
+      ],
+      "adam_step_min": 35,
+      "sample_changed_elements": 3071,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 36,
+      "sec_per_update": 24.520967662334442,
+      "training_loss": 19.37975311279297,
+      "lr_used": [
+        7.894736842105263e-06,
+        7.894736842105263e-06
+      ],
+      "adam_step_min": 36,
+      "sample_changed_elements": 2620,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 37,
+      "sec_per_update": 25.034639190882444,
+      "training_loss": 20.29850196838379,
+      "lr_used": [
+        6.578947368421053e-06,
+        6.578947368421053e-06
+      ],
+      "adam_step_min": 37,
+      "sample_changed_elements": 2084,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 38,
+      "sec_per_update": 24.91129035130143,
+      "training_loss": 21.520788192749023,
+      "lr_used": [
+        5.263157894736842e-06,
+        5.263157894736842e-06
+      ],
+      "adam_step_min": 38,
+      "sample_changed_elements": 1641,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 39,
+      "sec_per_update": 24.985388338565826,
+      "training_loss": 22.428369522094727,
+      "lr_used": [
+        3.9473684210526315e-06,
+        3.9473684210526315e-06
+      ],
+      "adam_step_min": 39,
+      "sample_changed_elements": 1228,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    },
+    {
+      "update": 40,
+      "sec_per_update": 25.130427539348602,
+      "training_loss": 22.6563777923584,
+      "lr_used": [
+        2.631578947368421e-06,
+        2.631578947368421e-06
+      ],
+      "adam_step_min": 40,
+      "sample_changed_elements": 762,
+      "moment_elements_by_dtype": {
+        "torch.uint8": 13476831232
+      },
+      "moment_bytes": 13476831232,
+      "nan_inf_detected": false,
+      "peak_gpu_allocated_bytes": 54787872256,
+      "peak_gpu_reserved_bytes": 55125737472,
+      "peak_host_process_rss_bytes": 31587037184,
+      "headroom_conservative_bytes": 46147698688
+    }
+  ],
+  "wa_seconds": [
+    0.03242044895887375,
+    0.032389119267463684,
+    0.03241098299622536,
+    0.03256915509700775,
+    0.032541051506996155,
+    0.03249082714319229,
+    0.03245951235294342,
+    0.03239757567644119,
+    0.03247346356511116,
+    0.03228796645998955,
+    0.03238362446427345,
+    0.032384127378463745,
+    0.032371364533901215,
+    0.03259876370429993,
+    0.03253207728266716,
+    0.03242045268416405,
+    0.032422639429569244,
+    0.0323805958032608,
+    0.03236322104930878,
+    0.03222820535302162,
+    0.03238702565431595,
+    0.03244185820221901,
+    0.032459940761327744,
+    0.032444313168525696,
+    0.03243470937013626,
+    0.03231311962008476,
+    0.03241105377674103,
+    0.03233654797077179,
+    0.03242133930325508,
+    0.032479602843523026,
+    0.032350439578294754,
+    0.03223748877644539,
+    0.032380495220422745,
+    0.03243790939450264,
+    0.03249337524175644,
+    0.03234780952334404,
+    0.03250347450375557,
+    0.032375335693359375,
+    0.03257213905453682,
+    0.03234431520104408
+  ],
+  "training_wall_seconds": 1325.679722867906,
+  "peak_gpu_allocated_bytes": 54787872256,
+  "peak_gpu_reserved_bytes": 55125737472,
+  "peak_host_process_rss_bytes": 31587037184,
+  "nan_inf_detected": false,
+  "teacher_started": true,
+  "checkpoint_saved": true,
+  "final_model": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/teacher_adamw8bit_v1/final_model",
+  "wall_seconds_including_save": 1356.4879657886922,
+  "final_model_bytes": 13479234655
+}

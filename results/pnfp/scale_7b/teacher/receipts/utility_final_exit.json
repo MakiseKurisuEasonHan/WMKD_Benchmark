@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 205.93048787117004,
+  "cumulative_peaks_sampled_2s": {
+    "host_cgroup_bytes": 43169140736,
+    "gpu_nvidia_smi_mib": 53241,
+    "disk_used_bytes": 28630589440
+  },
+  "engineering_fix": "Restore canonical ARC train/validation split for lm_eval initialization; original failure preceded scoring; unchanged test data and scoring."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED_WATERMARK_NOT_DETECTED",
+  "engineering_execution": "PASS",
+  "preferred_teacher": false,
+  "benchmark_eligible_as_successful_teacher": false,
+  "detector_matches": 0,
+  "detector_total": 1024,
+  "utility_assessment": "Small paired point-estimate changes on ARC and TruthfulQA; no material degradation observed on these two tests. This does not compensate for absent watermark.",
+  "direct_md": "NOT_PREPARED_NOT_STARTED_TEACHER_SUCCESS_GATE_FAILED",
+  "new_experiments_started": false,
+  "model_preserved": true,
+  "auto_shutdown": false
+}

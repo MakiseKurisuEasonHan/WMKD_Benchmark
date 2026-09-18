@@ -1,6 +1,6 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-18T11:33:07.5506613Z",
+  "generated_at": "2026-09-18T12:02:37.450333+00:00",
   "object_count": 69,
   "objects": [
     {
@@ -1025,14 +1025,14 @@
       "experiment": "7B_ADAMW8BIT_TEACHER",
       "run_id": "teacher_adamw8bit_v1",
       "full_log_path": "results/pnfp/scale_7b/teacher/full_experiment_log.json",
-      "full_log_sha256": "d34c2bf12fe31738f2edf9505aeefffb7029c780b26cab2040d20e748720827e",
-      "final_model_manifest": null,
+      "full_log_sha256": "343bae9c16a11f54392b76521c1a2788eb0d50e14d342f745a2e3c9cb75ffbd5",
+      "final_model_manifest": "results/pnfp/scale_7b/teacher/receipts/final_model_manifest.json",
       "modelscope_repo": null,
-      "scientific_status": "TRAINING_RUNNING",
-      "watermark_evaluation_available": false,
-      "utility_available": false,
+      "scientific_status": "COMPLETED_WATERMARK_NOT_DETECTED",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
       "checkpoint_localization_support": false,
-      "telemetry_records": 0
+      "telemetry_records": 40
     }
   ]
 }
