@@ -1,0 +1,550 @@
+现在正式开始 PN-FP 7B → 7B 三套蒸馏实验。
+
+当前已经接受的 7B PN-FP Teacher：
+
+Backbone:
+Llama-2-7b-chat-hf
+
+Revision:
+f5db02db724555f92da89c216ac04704f23d4590
+
+Teacher PN-FP:
+804 / 1024
+fresh-reload recall = 78.52%
+
+Teacher watermark configuration:
+- 1024 frozen fingerprints
+- key length = 16
+- response length = 1
+- Perinucleus t = 0.8
+- k = 3
+- WA = 0.50
+- DM = 0.25
+- seed = 42
+- BF16
+- full-parameter training
+- AdamW8bit 0.50.0 engineering adaptation
+
+Teacher utility:
+- ARC-Challenge = 42.06%
+- TruthfulQA-MC2 = 44.20%
+
+当前 Teacher 不再调参。
+不要重新训练 Teacher。
+不要重新生成 fingerprints。
+不要修改 detector。
+
+本轮目标一次完成：
+
+A. Direct Distillation
+B. Untargeted Paraphrasing + Distillation
+C. Logit Distillation
+
+全部为：
+
+7B Teacher → 7B clean Student
+
+━━━━━━━━━━━━━━━━━━━━
+一、Student 固定定义
+━━━━━━━━━━━━━━━━━━━━
+
+三组 Student 都必须独立从 clean checkpoint 初始化：
+
+Llama-2-7b-chat-hf
+revision:
+f5db02db724555f92da89c216ac04704f23d4590
+
+绝对禁止：
+- 从 PN-FP Teacher 初始化 Student
+- 从前一组 Student 初始化下一组
+- 三组 Student 共享训练权重
+
+Direct / Paraphrase / Logit 三个 Student 必须是三个独立的 clean 7B initialization。
+
+这是 same-backbone / same-scale 7B → 7B distillation。
+
+━━━━━━━━━━━━━━━━━━━━
+二、先恢复现有 3B canonical protocol
+━━━━━━━━━━━━━━━━━━━━
+
+不要重新发明 distillation protocol。
+
+先从现有 WMKD_Benchmark 项目中读取并冻结：
+
+- Direct / Ba canonical protocol
+- Paraphrasing / Bb canonical protocol
+- Logit / Bc canonical protocol
+- dataset size
+- epochs / steps
+- effective batch size
+- optimizer
+- learning rate
+- seed
+- template
+- tokenizer
+- response masking
+- truncation
+- generation parameters
+- paraphrasing prompt
+- logit temperature
+- KL / CE weighting
+- teacher-logit handling
+- utility protocol
+
+然后生成一个内部配置对照：
+
+3B canonical
+→ 7B setting
+→ changed?
+→ reason
+
+只允许因为 7B 硬件资源而改变 engineering parameters。
+
+Scientific protocol 尽量不变。
+
+允许的 7B engineering adaptations包括：
+- smaller micro batch
+- larger gradient accumulation while preserving effective batch
+- activation checkpointing
+- AdamW8bit if ordinary Adam cannot fit
+- offline dataset/logit generation
+- shard streaming
+- minimal checkpoint saving
+
+禁止为了加速直接改变：
+- dataset definition
+- dataset size
+- epoch count
+- distillation objective
+- temperature
+- KL/CE weights
+- prompt/template
+- seed
+- detector
+- Student initialization
+
+除非现有协议在 7B 上物理上无法运行，并且有明确失败证据。
+
+━━━━━━━━━━━━━━━━━━━━
+三、A：Direct Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+严格复用现有 Direct / Ba protocol。
+
+流程：
+
+PN-FP 7B Teacher
+→ ordinary teacher response generation
+→ frozen Direct distillation dataset
+→ clean Llama-2-7B-Chat Student
+→ full-parameter distillation training
+→ fresh-reload detector
+→ utility
+
+Teacher response generation 与 Student training 分离。
+
+生成数据以后卸载 Teacher，再训练 Student。
+不要让 Teacher 和 Student 同时驻 GPU。
+
+7B Student training 优先使用：
+
+- BF16
+- full parameter
+- activation checkpointing
+- AdamW8bit 0.50.0
+
+因为该组合已经在当前 96GB RTX PRO 6000 上验证可以进行 7B full-parameter training。
+
+如果 existing 3B Direct protocol 使用 ordinary Adam：
+记录 AdamW8bit 为 7B hardware engineering adaptation。
+不要称其为 scientific-method change。
+
+保持 effective batch size 与原 canonical Direct protocol 一致；
+如果显存要求更高，只降低 micro batch，并相应增加 gradient accumulation。
+
+Direct 完成后必须：
+
+1. fresh reload final Student
+2. PN-FP 1024-fingerprint detector
+3. ARC-Challenge
+4. TruthfulQA-MC2
+5. 保存 final model
+6. 保存 exact config
+7. 保存 dataset manifest/SHA
+8. 保存 runtime / peak VRAM / host RAM
+9. 生成正式 result report
+
+无论 watermark 是 0/1024 还是保留，都属于正式科学结果。
+
+不要因为 detector 低就重训或调参。
+
+━━━━━━━━━━━━━━━━━━━━
+四、B：Untargeted Paraphrasing + Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+这一组必须复用我们之前 WMKD_Benchmark 已经固定的改写工具模型。
+
+工具模型固定为：
+
+Qwen/Qwen2.5-3B-Instruct
+
+下载来源：
+ModelScope
+
+不要换成 DIPPER。
+不要换成其他 Qwen。
+不要换成 Llama。
+不要重新选择 paraphraser。
+
+优先直接读取项目中已经保存的 ModelScope repo ID / revision / manifest。
+如果项目已经记录精确 revision，必须使用已有 revision。
+不要静默升级。
+
+此前固定的 paraphrasing generation configuration包括：
+
+- do_sample = true
+- temperature = 0.7
+- top_p = 0.9
+- seed = 42
+
+动态 max_new_tokens policy：
+
+- minimum = 64
+- multiplier = 1.5 × source response token length
+- cap = 1536
+
+固定 response-transformation prompt 也必须直接复用项目当前 canonical 文件：
+
+response_transformation_prompt.txt
+
+不要重写 prompt。
+
+此前固定 prompt SHA256 应为：
+
+085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676
+
+请从当前项目文件重新计算 SHA 并核对。
+如果不一致，停止 paraphrasing stage 并先定位项目文件差异；
+不要自行生成新 prompt。
+
+Paraphrasing 目标：
+
+Teacher original response
+→ semantic-preserving rewrite
+→ wording / structure changed
+→ factual meaning preserved
+→ 不重新回答原问题
+→ 不添加新的知识
+→ 不故意针对 watermark
+→ 只返回 rewritten response
+
+必须保存：
+
+- sample ID
+- original prompt
+- raw Teacher response
+- paraphrased response
+- paraphraser model ID
+- ModelScope source
+- revision
+- prompt SHA
+- generation config
+- seed
+- source token length
+- generated token length
+- success/failure
+- fallback information
+- final dataset SHA / manifest
+
+流程：
+
+PN-FP 7B Teacher
+→ generate canonical Teacher outputs
+→ Qwen2.5-3B-Instruct paraphrase
+→ frozen paraphrased dataset
+→ unload paraphraser
+→ clean 7B Llama Student
+→ canonical paraphrase-distillation training
+→ fresh-reload detector
+→ utility
+
+不要让 Teacher + paraphraser + Student 同时驻 GPU。
+
+严格串行执行。
+
+Student training 规则与 Direct 相同：
+优先 BF16 + full parameter + activation checkpointing + AdamW8bit hardware adaptation，
+同时保持原 canonical effective batch / epochs / LR / seed。
+
+完成后：
+- fresh reload
+- detector 1024
+- ARC
+- TruthfulQA
+- final model
+- manifests
+- report
+
+━━━━━━━━━━━━━━━━━━━━
+五、C：Logit Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+严格复用当前 WMKD_Benchmark existing Bc / soft-logit distillation protocol。
+
+首先从项目中恢复并冻结：
+
+- temperature
+- KL loss
+- CE/KL weighting
+- masking
+- tokenizer assumptions
+- teacher/student token alignment
+- sequence length
+- dataset identity
+- seed
+- effective batch size
+- LR
+- epochs/steps
+- scheduler
+- teacher-logit precision
+
+不要自行重新选择 temperature 或 loss weights。
+
+Teacher：
+当前 PN-FP 7B Teacher
+
+Student：
+clean Llama-2-7B-Chat 7B
+
+因为只有 1 × RTX PRO 6000 96GB：
+
+不要默认 Teacher 和 full-parameter Student 同时驻 GPU。
+
+优先使用 existing project 的 offline logit / cached soft-target implementation。
+
+推荐工程流程：
+
+Teacher only
+→ compute required logits / top-k / cached supervision according to canonical Bc protocol
+→ shard/cache to disk
+→ verify manifest
+→ unload Teacher completely
+→ Student only
+→ stream cached logit targets during training
+
+如果现有 Bc protocol 本来已经是 offline logit supervision，原样复用。
+
+不要为了省空间改变 soft target definition。
+
+如果 canonical Bc 保存 full logits 会导致当前数据盘无法容纳：
+优先检查现有项目是否已经定义：
+- top-k logit caching
+- chunked/sharded logits
+- streaming
+
+只能使用现有 scientifically equivalent storage representation。
+
+不要自行把 full logits 改成 top-k，除非 canonical Bc 本来就是如此。
+
+每个 logit shard 需要 manifest / SHA。
+
+Logit Student training仍优先：
+- BF16
+- full parameter
+- activation checkpointing
+- AdamW8bit engineering adaptation
+- canonical effective batch
+- canonical LR
+- canonical epoch/step schedule
+
+完成后：
+- fresh-reload PN-FP detector
+- ARC
+- TruthfulQA
+- final model
+- final report
+
+━━━━━━━━━━━━━━━━━━━━
+六、磁盘管理
+━━━━━━━━━━━━━━━━━━━━
+
+当前 AutoDL 数据盘较小。
+
+必须串行完成三组实验。
+
+建议顺序：
+
+1. Direct dataset generation
+2. Direct train
+3. Direct eval
+4. final model/result verified
+5. 清理 Direct temporary outputs
+
+6. Paraphrase source generation
+7. Qwen paraphrasing
+8. paraphrased dataset verify
+9. unload/delete unnecessary paraphraser cache if safe
+10. Paraphrase train
+11. eval
+12. final model/result verified
+13. 清理 temporary outputs
+
+14. Logit generation
+15. logit shard verify
+16. unload Teacher
+17. Logit Student training
+18. eval
+19. final result
+20. 清理 temporary logits if final evidence permits
+
+不要同时保留大量：
+- duplicate base model
+- intermediate checkpoints
+- optimizer states
+- multiple HF/ModelScope cache copies
+- temporary logits
+- temporary generations
+
+但必须保留：
+- Teacher final
+- Direct final Student
+- Paraphrase final Student
+- Logit final Student
+- final detector results
+- utility
+- configs
+- manifests
+- reports
+
+如果磁盘无法同时容纳三份 final Student：
+不要删除唯一 final model。
+先停止后续阶段并生成 disk-block report。
+不要擅自丢掉正式模型。
+
+━━━━━━━━━━━━━━━━━━━━
+七、训练与科学规则
+━━━━━━━━━━━━━━━━━━━━
+
+每个大型 GPU task 前：
+
+nvidia-smi
+df -h
+
+一次只运行一个大型 GPU task。
+
+禁止并行：
+- Teacher generation + training
+- paraphraser + Student
+- multiple Students
+- Teacher + full Student
+
+任何 Student 都不进行额外 watermark-specific tuning。
+
+这是 distillation attack，不是重新植入 watermark。
+
+如果 Student PN-FP = 0：
+接受并记录。
+
+如果 Student PN-FP 很高：
+也接受并记录。
+
+禁止根据 detector 结果重新调 Student 超参。
+
+━━━━━━━━━━━━━━━━━━━━
+八、最终结果统一格式
+━━━━━━━━━━━━━━━━━━━━
+
+最终生成一张统一正式表：
+
+Condition
+Base
+Teacher
+Direct
+Paraphrase
+Logit
+
+至少包含：
+
+- PN-FP hits /1024
+- PN-FP recall %
+- retention relative to Teacher
+- ARC-Challenge
+- TruthfulQA-MC2
+- training runtime
+- peak GPU VRAM
+- peak host RAM
+
+Teacher reference固定：
+
+804 / 1024
+78.52%
+
+Retention定义：
+
+Student hits / 804
+
+同时保留 native：
+Student hits / 1024
+
+不要用 retention 替代原始 detector count。
+
+━━━━━━━━━━━━━━━━━━━━
+九、实验解释边界
+━━━━━━━━━━━━━━━━━━━━
+
+这是：
+
+same-backbone
+same-scale
+Llama-2-7B-Chat → Llama-2-7B-Chat
+
+因此后续论文可以描述为：
+
+same-backbone 7B distillation extension
+
+但需要明确：
+Teacher PN-FP embedding 使用 AdamW8bit optimizer-state adaptation，
+Student full-parameter training如果也使用 AdamW8bit，也需要记录为 hardware engineering adaptation。
+
+不要声称严格复现原始 FP32 Adam implementation。
+
+━━━━━━━━━━━━━━━━━━━━
+十、执行方式
+━━━━━━━━━━━━━━━━━━━━
+
+先不要只给我计划。
+
+请：
+
+1. 从现有项目恢复三套 canonical protocol。
+2. 输出一份很短的 3B→7B adaptation matrix。
+3. 确认 Qwen2.5-3B-Instruct ModelScope paraphraser 配置与 prompt SHA。
+4. 然后立即开始 Direct。
+5. Direct 完成后自动进入 Paraphrase。
+6. Paraphrase 完成后自动进入 Logit。
+7. 不需要每个阶段等我确认。
+
+普通工程问题自行解决。
+
+只有出现以下科学性问题才停止整个 pipeline：
+- canonical protocol 无法从项目恢复
+- paraphrase prompt SHA 不匹配且无法确认原因
+- Teacher/final model corruption
+- dataset corruption
+- logit scientific definition无法保持
+- 磁盘无法在不删除正式唯一 artifact 的情况下继续
+
+不要因为：
+- detector低
+- utility轻微变化
+- GitHub认证失败
+
+而停止后续实验。
+
+GitHub push如果认证仍失败：
+记录 push pending，
+不要向我要求授权，
+不要阻塞实验。
+
+本轮最终目标：
+完整获得 Direct / Paraphrase / Logit 三个 7B→7B Student 及正式 detector + utility 结果。

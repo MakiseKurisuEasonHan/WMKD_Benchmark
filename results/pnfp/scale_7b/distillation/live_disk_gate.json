@@ -1,0 +1,27 @@
+{
+  "total_bytes": 75161927680,
+  "current_used_bytes": 55635292160,
+  "current_free_bytes": 19526635520,
+  "additional_components_bytes": {
+    "three_final_students_minimum": 40437792768
+  },
+  "logits": {
+    "sample_count": 0,
+    "sequence_length": 1024,
+    "vocabulary_size": 32000,
+    "dtype": "bfloat16",
+    "bytes_per_value": 2,
+    "representation": "full_vocab",
+    "stored_positions": 0,
+    "estimate_kind": "upper_bound",
+    "payload_bytes": 0
+  },
+  "additional_peak_bytes": 40437792768,
+  "projected_used_peak_bytes": 96073084928,
+  "maximum_additional_bytes": 16597640192,
+  "reserved_free_fraction": 0.15,
+  "passed": false,
+  "stage": "final_artifact_retention",
+  "disk_path": "/root/autodl-tmp",
+  "timestamp": "2026-09-18T16:08:25.248649+00:00"
+}

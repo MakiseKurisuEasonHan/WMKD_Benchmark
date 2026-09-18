@@ -1,0 +1,86 @@
+{
+  "status": "BLOCKED_DISK_PREFLIGHT",
+  "recorded_at": "2026-09-18T16:07:05.060649+00:00",
+  "teacher_accepted_by_user": true,
+  "teacher_hits": 804,
+  "teacher_total": 1024,
+  "teacher_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+  "model": "meta-llama/Llama-2-7b-chat-hf",
+  "revision": "f5db02db724555f92da89c216ac04704f23d4590",
+  "ssh": "CONNECTED",
+  "remote_git_head": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
+  "gpu_sample": {
+    "memory_used_mib": 0,
+    "utilization_percent": 100,
+    "processes": [],
+    "idle_gate": "NOT_PASSED; no reset/kill attempted"
+  },
+  "stages": {
+    "direct": "NOT_STARTED",
+    "paraphrase": "NOT_STARTED",
+    "logit": "NOT_STARTED"
+  },
+  "prompt": {
+    "path": "configs/distillation/passive5_shared_bb_paraphrase_prompt_v1.txt",
+    "sha256": "085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676",
+    "match": true,
+    "note": "Requested bytes found under existing project filename. Newer Bb3 uses a different prompt; user-selected bytes take precedence. No prompt edited."
+  },
+  "disk": {
+    "all_final_students_lower_bound": {
+      "total_bytes": 75161927680,
+      "current_used_bytes": 55635304448,
+      "current_free_bytes": 19526623232,
+      "additional_components_bytes": {
+        "three_final_students_minimum": 40437792768
+      },
+      "logits": {
+        "sample_count": 0,
+        "sequence_length": 1024,
+        "vocabulary_size": 32000,
+        "dtype": "bfloat16",
+        "bytes_per_value": 2,
+        "representation": "full_vocab",
+        "stored_positions": 0,
+        "estimate_kind": "upper_bound",
+        "payload_bytes": 0
+      },
+      "additional_peak_bytes": 40437792768,
+      "projected_used_peak_bytes": 96073097216,
+      "maximum_additional_bytes": 16597629747,
+      "reserved_free_fraction": 0.15,
+      "passed": false
+    },
+    "logits_dense_upper_bound": {
+      "total_bytes": 75161927680,
+      "current_used_bytes": 55635304448,
+      "current_free_bytes": 19526623232,
+      "additional_components_bytes": {
+        "final_student_minimum": 13479264256
+      },
+      "logits": {
+        "sample_count": 20000,
+        "sequence_length": 1024,
+        "vocabulary_size": 32000,
+        "dtype": "bfloat16",
+        "bytes_per_value": 2,
+        "representation": "full_vocab",
+        "stored_positions": 20480000,
+        "estimate_kind": "upper_bound",
+        "payload_bytes": 1310720000000
+      },
+      "additional_peak_bytes": 1324199264256,
+      "projected_used_peak_bytes": 1379834568704,
+      "maximum_additional_bytes": 16597629747,
+      "reserved_free_fraction": 0.15,
+      "passed": false
+    },
+    "exact_response_tokens": null,
+    "existing_equivalent_offline_implementation": "NOT_FOUND in scripts/configs/logit results; canonical implementation online full-vocab",
+    "all_logits_generated": false
+  },
+  "cleanup_performed": false,
+  "automatic_shutdown_authorized_for_this_new_task": false,
+  "guard_tests": "85% inclusive boundary, above-boundary refusal, BF16 tensor arithmetic PASS",
+  "scientific_results": null
+}

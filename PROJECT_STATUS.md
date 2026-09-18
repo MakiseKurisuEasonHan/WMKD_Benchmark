@@ -1,3 +1,5 @@
+当前最高状态（2026-09-19 PN-FP 7B蒸馏）：用户正式接受Teacher804/1024，授权独立fresh7B Direct→Paraphrase→Logit串行；原extension终态保留为历史。本轮磁盘门槛预检BLOCKED：实测剩余18.186GiB，三份Student仅权重需37.661GiB；未启动数据生成/训练/logits，未删除正式模型。指定原prompt SHA已精确匹配。每阶段新增峰值不得超过当前剩余85%，Bc禁止自行full-vocab→top-k。入口results/pnfp/scale_7b/distillation/preflight.json；报告docs/reproduction_reports/pnfp_7b_distillation_preflight_20260919.md。
+
 当前终态（2026-09-19 WA=.50 extension）：22累计有效更新（12重放+10新增）后平台期早停；最佳第19有效更新，独立fresh804/1024=78.5156%，ARC+5.4608pp、MC2-1.55495pp；未达到80%preferred门槛，保留当前最优候选，不启动蒸馏。模型与结果数据盘保留，81项目文件关机前双端SHA核验。官方shutdown脚本直接exec遇ENOEXEC后用bash解释执行，远端断开且两次SSH不可达；未释放实例。Git本地已提交，认证缺失push pending。详见results/pnfp/scale_7b/wa050_extension/shutdown_verification.json。
 
 当前状态（2026-09-19）：WA=.50 extension EXTENSION_COMPLETE_NOT_PREFERRED；fresh-reload 804/1024，best有效更新19；preferred候选=False。训练停止，未启动蒸馏，授权证据闭环后自动关机。
