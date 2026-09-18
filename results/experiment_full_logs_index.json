@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-18T13:50:06.519407+00:00",
-  "object_count": 71,
+  "generated_at": "2026-09-18T14:07:42.932565+00:00",
+  "object_count": 72,
   "objects": [
     {
       "method": "PN-FP",
@@ -1064,6 +1064,19 @@
       "best_model_manifest": "results/pnfp/scale_7b/wa050_pilot/receipts/best_manifest.json",
       "telemetry_records": 14,
       "teacher_candidate": true
+    },
+    {
+      "method": "PN-FP",
+      "role": "7b_identical_WA050_extension",
+      "experiment": "7B_WA050_EXTENSION",
+      "run_id": "wa050_extension_v1",
+      "full_log_path": "results/pnfp/scale_7b/wa050_extension/full_experiment_log.json",
+      "full_log_sha256": "41c307f9a8332f5a257e55035ebb5bf65046a84aa7a7ec2af96af4cd600630a4",
+      "scientific_status": "RUNNING_REPLAY_GATE",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "preferred_teacher": false,
+      "modelscope_repo": null
     }
   ]
 }

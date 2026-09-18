@@ -1,0 +1,32 @@
+{
+  "experiment_id": "pnfp_7b_wa050_extension_v1",
+  "status": "RUNNING_REPLAY_GATE",
+  "formal_result": false,
+  "scientific_role": "identical_WA050_controlled_extension",
+  "parent": "wa050_pilot_v1",
+  "config": "configs/watermark/pnfp_7b_wa050_extension.json",
+  "scientific_changes": [],
+  "recovery": "optimizer states absent; deterministic replay14calls with per-call exact loss/recall/data and bitwise full weights comparison, then continue without optimizer reset",
+  "max_total_nonzero_updates": 24,
+  "supervisor_pid": 25358,
+  "teacher_candidate": false,
+  "preferred_teacher_candidate": false,
+  "distillation_started": false,
+  "auto_shutdown": false,
+  "report": "docs/reproduction_reports/pnfp_7b_wa050_extension_20260919.md",
+  "stopping_and_evaluation": {
+    "resume": "No optimizer states retained; replay same14calls; exact loss/recall/data and bitwise model weight gate before extension",
+    "max_nonzero_updates": 24,
+    "full_utility_trigger_gain": 103,
+    "last_full_utility_recall": 654,
+    "preferred_candidate_min_fresh_recall": 820,
+    "preferred_max_utility_drop": 0.03,
+    "consistent_excessive_drop_both": 0.05,
+    "material_gain_matches": 11,
+    "plateau_checks": 3,
+    "declining_checks": 3,
+    "retain": "Only current WA050 best; validate pending before superseding old best; no replay checkpoints",
+    "final_best_utility": "Run once if not already evaluated at same best step"
+  },
+  "retention": "Only latest fresh-reload validated WA050 best; old WA050 best may be deleted only after replacement verified; all historical evidence retained"
+}
