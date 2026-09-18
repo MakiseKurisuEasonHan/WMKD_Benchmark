@@ -1,0 +1,10 @@
+{
+  "command": "/bin/bash /usr/bin/shutdown",
+  "official_script": "/usr/bin/shutdown",
+  "reason": "Direct exec ENOEXEC; interpreter fallback for same text script",
+  "remote_command_result": "Connection closed by remote host during shutdown invocation",
+  "ssh_command_exit_code": 1,
+  "shutdown_process_exit_code": null,
+  "instance_released": false,
+  "recorded_at": "2026-09-18T14:40:01.460685+00:00"
+}

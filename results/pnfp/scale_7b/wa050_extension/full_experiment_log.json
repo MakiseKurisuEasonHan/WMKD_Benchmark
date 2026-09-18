@@ -724,6 +724,22 @@
   },
   "scientific_config_changed": false,
   "shutdown_authorized": true,
-  "shutdown_status": "PENDING_FINAL_CHECKS",
-  "evidence_sha256": "6ccb7e206e44082f968a7733bb610b2fc59b2bb68dcc12de36fd40db3bb2009b"
+  "shutdown_status": "OFFICIAL_SHUTDOWN_SCRIPT_INVOKED_THEN_SSH_OFFLINE",
+  "evidence_sha256": "6ccb7e206e44082f968a7733bb610b2fc59b2bb68dcc12de36fd40db3bb2009b",
+  "shutdown_verification": {
+    "status": "OFFICIAL_SHUTDOWN_SCRIPT_INVOKED_THEN_SSH_OFFLINE",
+    "initial_direct_exec": "ENOEXEC; preserved in shutdown_receipt.json",
+    "effective_command": "/bin/bash /usr/bin/shutdown",
+    "same_official_script": true,
+    "retry_result": "remote host closed SSH connection during invocation",
+    "consecutive_failed_ssh_checks": 2,
+    "control_plane_power_state": "not independently queried",
+    "instance_released": false,
+    "model_and_results_preserved_on_data_disk": true,
+    "pre_shutdown_project_files_sha_verified": 81,
+    "post_shutdown_metadata_is_local_only": true,
+    "recorded_at": "2026-09-18T14:42:00.546225+00:00"
+  },
+  "github_push": "PUSH_PENDING_AUTHENTICATION_UNAVAILABLE",
+  "nan_inf_detected": false
 }

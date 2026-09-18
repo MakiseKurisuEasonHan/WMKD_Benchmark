@@ -1,3 +1,5 @@
+当前终态（2026-09-19 WA=.50 extension）：22累计有效更新（12重放+10新增）后平台期早停；最佳第19有效更新，独立fresh804/1024=78.5156%，ARC+5.4608pp、MC2-1.55495pp；未达到80%preferred门槛，保留当前最优候选，不启动蒸馏。模型与结果数据盘保留，81项目文件关机前双端SHA核验。官方shutdown脚本直接exec遇ENOEXEC后用bash解释执行，远端断开且两次SSH不可达；未释放实例。Git本地已提交，认证缺失push pending。详见results/pnfp/scale_7b/wa050_extension/shutdown_verification.json。
+
 当前状态（2026-09-19）：WA=.50 extension EXTENSION_COMPLETE_NOT_PREFERRED；fresh-reload 804/1024，best有效更新19；preferred候选=False。训练停止，未启动蒸馏，授权证据闭环后自动关机。
 
 当前状态（2026-09-09 Active Cross-Lineage Ba 最终闭环）：五个fresh Qwen Student全部7500steps、final save/fresh reload与utility完成。PNFP84/1024（Base43）；CTCC trigger0/95；SCW p0.9158855080604553未检出；EverTracer canonical N/A、exploratory AUC0.523；iSeal Level3 N/A。CPU证据/报告/索引闭环，等待用户独立preferred模型归档选择；禁止新实验、自动上传/删除或关机。shutdown_provenance=UNVERIFIED。入口 results/active_cross_lineage_ba/pipeline_state.json；总报告 docs/reproduction_reports/active_cross_lineage_ba_final_20260909.md。

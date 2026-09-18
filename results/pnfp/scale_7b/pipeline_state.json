@@ -77,5 +77,10 @@
   "best_checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
   "preferred_teacher_candidate": false,
   "auto_shutdown_authorized": true,
-  "shutdown_status": "PENDING_FINAL_CHECKS"
+  "shutdown_status": "OFFICIAL_SHUTDOWN_SCRIPT_INVOKED_THEN_SSH_OFFLINE",
+  "shutdown_receipt": "wa050_extension/shutdown_verification.json",
+  "auto_shutdown_complete": true,
+  "instance_released": false,
+  "execution_terminal": true,
+  "continuation_authorized": false
 }

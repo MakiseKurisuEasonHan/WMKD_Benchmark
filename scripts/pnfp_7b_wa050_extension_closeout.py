@@ -192,7 +192,12 @@ assert not gpu,'GPU worker remains before shutdown'
 receipt={'command':'/usr/bin/shutdown','authorized_by_user':True,'time_unix':time.time(),'gpu_idle':True,'model_and_evidence_preserved':True,'instance_release_requested':False}
 (r/'shutdown_intent.json').write_text(json.dumps(receipt,indent=2));os.sync()
 with (r/'shutdown_command.log').open('a') as f:
- child=subprocess.Popen(['/usr/bin/shutdown'],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
+ try:child=subprocess.Popen(['/usr/bin/shutdown'],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
+ except OSError as exc:
+  if exc.errno!=8:raise
+  payload=Path('/usr/bin/shutdown').read_bytes();payload.decode('utf-8');assert payload and bytes([0]) not in payload
+  receipt['interpreter_fallback']='/bin/bash /usr/bin/shutdown'
+  child=subprocess.Popen(['/bin/bash','/usr/bin/shutdown'],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
  receipt['pid']=child.pid
  try:receipt['exit_code']=child.wait(timeout=15)
  except subprocess.TimeoutExpired:receipt['exit_code']=None

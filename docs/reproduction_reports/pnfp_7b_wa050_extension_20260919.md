@@ -53,3 +53,11 @@ model=meta-llama/Llama-2-7b-chat-hf，revision=f5db02db724555f92da89c216ac04704f
 Best保留在 `/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model`。校验10个模型文件SHA；轻量证据archiveSHA=6ccb7e206e44082f968a7733bb610b2fc59b2bb68dcc12de36fd40db3bb2009b。仅新best验证后轮换删除旧WA50 best，删除路径、字节和理由见checkpoint_retention.jsonl；不删除canonical模型及正式结果。原pilot历史数据不覆盖，原模型位置如被替换则另记supersession。所有配置、provenance、逐点CSV/JSON、detector、utility、runtime、memory、报告同步本地；Git只提交本任务。Git push与关机实况见git_receipt.json、shutdown_receipt.json、automation_state.json。
 
 本轮单seed、有限窗口，达到候选门槛不等同已证明更长训练稳定性。不启动distillation、不改科学参数，不释放实例。用户已明确授权成功/早停/硬失败均保存同步后执行/usr/bin/shutdown；失败缺失字段保留N/A，不虚构结果。
+
+## 关机与最终Git闭环
+
+关机前81个项目文件SHA双端一致、模型10文件SHA验证、最终detector/utility/report存在、GPU无worker且日志落盘。直接exec `/usr/bin/shutdown` 返回ENOEXEC；随后用 `/bin/bash /usr/bin/shutdown` 执行相同官方文本脚本，远端主动关闭连接，之后两次SSH检查均不可达。控制台电源状态未另行查询，不声称拿到平台状态API确认；未释放实例。模型与正式结果保留于数据盘。初次错误和shell重试均保留收据；关闭后的状态补记只存本地。
+
+Git科研闭环commit为ee28d978ffed017ede74f797b1c4cab90bd2d20c；push在非交互模式下因凭据缺失失败，记PUSH_PENDING，未等待用户。后续本地commit保存关机收据及脚本ENOEXEC解释器回退修复。
+
+训练进程总wall（含恢复重放、trajectory和两次完整utility）为1709.475秒；独立最终detector阶段为22.651秒。累计22有效更新中，12个是恢复重放、10个为新增；第19有效更新达到最高fresh804/1024，20–22未创新高，按规则停止。无NaN/Inf。

@@ -1,3 +1,5 @@
+当前终态（2026-09-19 WA=.50 extension）：22累计有效更新（12重放+10新增）后平台期早停；最佳第19有效更新，独立fresh804/1024=78.5156%，ARC+5.4608pp、MC2-1.55495pp；未达到80%preferred门槛，保留当前最优候选，不启动蒸馏。模型与结果数据盘保留，81项目文件关机前双端SHA核验。官方shutdown脚本直接exec遇ENOEXEC后用bash解释执行，远端断开且两次SSH不可达；未释放实例。Git本地已提交，认证缺失push pending。详见results/pnfp/scale_7b/wa050_extension/shutdown_verification.json。
+
 当前状态（2026-09-19）：WA=.50 extension EXTENSION_COMPLETE_NOT_PREFERRED；fresh-reload 804/1024，best有效更新19；preferred候选=False。训练停止，未启动蒸馏，授权证据闭环后自动关机。
 
 最新持续授权（2026-09-19）：完全相同WA=.50 extension全自动执行，成功/早停/硬失败均停止科研、保存及核验模型和现有证据、同步本地、报告/状态/TODO/实验日志/Git闭环后调用/usr/bin/shutdown。只关机不释放实例、不删除最终模型和正式结果、不启动蒸馏。无额外用户审批等待；Git认证缺失记push pending。
