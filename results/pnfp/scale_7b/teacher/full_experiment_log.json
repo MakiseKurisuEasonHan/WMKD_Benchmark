@@ -1,0 +1,21 @@
+{
+  "experiment_id": "pnfp_7b_formal_adamw8bit_teacher_v1",
+  "status": "TRAINING_RUNNING",
+  "formal_result": true,
+  "preferred_teacher": null,
+  "benchmark_eligible": null,
+  "authority": "2026-09-18 user approves frozen AdamW8bit formal Teacher max40/train-loss<0.005; evaluate once; prepare Direct MD only after successful Teacher summary",
+  "protocol": "configs/watermark/pnfp_7b_teacher.json",
+  "fingerprint_sha256": "fa231b31aa10bf19dff0285eaff9457ad41a8f4ee2bcc9089a9d3ac76c1caaf7",
+  "supervisor_pid": 12119,
+  "training_pid": 12128,
+  "fresh_initialization": true,
+  "optimizer_adaptation": "bitsandbytes.optim.adamw.AdamW8bit0.50.0; not implementation-equivalent to canonical FP32 Adam",
+  "early_stop": "unrounded mixed-data training loss <0.005",
+  "max_epochs": 40,
+  "detector": "PENDING",
+  "utility": "PENDING",
+  "distillation_started": false,
+  "auto_shutdown": false,
+  "report": "docs/reproduction_reports/pnfp_7b_teacher_20260918.md"
+}

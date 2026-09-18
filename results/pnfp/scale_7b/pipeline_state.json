@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "campaign": "pnfp_7b_same_lineage_20260918",
-  "status": "ADAMW8BIT_PILOT_COMPLETED_STOPPED_FOR_USER_REVIEW",
+  "status": "FORMAL_ADAMW8BIT_TEACHER_TRAINING",
   "current_pilot_log": "adamw8bit_pilot/full_experiment_log.json",
-  "formal_teacher_authorized": false,
-  "current_protocol": "configs/watermark/pnfp_7b_adamw8bit_pilot.json",
-  "current_authority": "2026-09-18 user one full-parameter 8-bit Adam-family pilot; first-step headroom gate; no Teacher",
+  "formal_teacher_authorized": true,
+  "current_protocol": "configs/watermark/pnfp_7b_teacher.json",
+  "current_authority": "2026-09-18 frozen formal Teacher approved; max40/train-loss early stop; detector+utility once; no Direct MD launch before summary",
   "pilot_pid": null,
   "authorization": "user_authorization_20260918.txt",
   "scope": ["teacher", "Ba", "Bb", "Bc"],
@@ -39,12 +39,13 @@
   "blocker_receipt": null,
   "previous_gpu_bf16_blocker_receipt": "gpu_bf16_pilot/full_experiment_log.json",
   "previous_cpu_blocker_receipt": "receipts/hardware_blocker.json",
-  "teacher": "NOT_STARTED",
+  "teacher": "TRAINING_RUNNING",
+  "teacher_supervisor_pid": 12119,
   "Ba": "NOT_STARTED",
   "Bb": "NOT_STARTED",
   "Bc": "NOT_STARTED",
   "science_results": null,
   "archive": "NOT_STARTED",
   "auto_shutdown": false,
-  "report": "docs/reproduction_reports/pnfp_7b_adamw8bit_pilot_20260918.md"
+  "report": "docs/reproduction_reports/pnfp_7b_teacher_20260918.md"
 }

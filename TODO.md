@@ -1,3 +1,5 @@
+当前最高授权与状态（2026-09-18 正式PN-FP7B Teacher）：用户固定AdamW8bit0.50.0全参数路线，fresh canonical Llama-2-7b-chat固定revision、同一冻结1024指纹，WA0.75/DM0.25/seed42/BF16/checkpointing，max40与train-loss<0.005早停，禁止optimizer/memory ablation。正式Teacher supervisor12119已启动，final-only保存，每5epoch固定128监测不作early stop；最终fresh-reload全1024detector及一次完整paired utility。成功后仅准备Direct MD，在Teacher总结前不得启动。入口results/pnfp/scale_7b/teacher/full_experiment_log.json。
+
 当前状态（2026-09-18 AdamW8bit pilot完成且已停止）：bitsandbytes0.50.0 AdamW8bit全参数7B完成4calls，其中2次非零LR更新；非零更新平均24.63s，GPU采样峰值51.99GiB/allocated51.03GiB，host RSS29.42GiB/cgroup采样40.34GiB，最小update边界余量42.99GiB；末次训练loss6.5983，无NaN/Inf，初步detector182/1024（invalid/errors均0）。仅内存/速度pilot通过，非preferred Teacher或收敛/utility结论；未保存checkpoint、未跑Teacher，GPU空闲。入口results/pnfp/scale_7b/adamw8bit_pilot/，须用户后续决定。
 
 当前最高授权（2026-09-18 AdamW8bit pilot）：仅一个全参数8-bit Adam-family短pilot，单卡96GB、冻结1024指纹及原PNFP科学配置不变。使用隔离bitsandbytes0.50.0；首步成功且余量>=10GiB才继续最多4次call（前2次原schedule的LR0）；optimizer失败立即停止。禁止继续CPU/BF16-state调参、LoRA、Adafactor、自动Teacher。入口results/pnfp/scale_7b/adamw8bit_pilot/。
