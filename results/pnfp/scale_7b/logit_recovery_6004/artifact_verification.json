@@ -1,0 +1,215 @@
+{
+  "checks": [
+    {
+      "asset": "teacher",
+      "file": "config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "generation_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "model-00001-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "model-00002-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "model-00003-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "model.safetensors.index.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "special_tokens_map.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "tokenizer.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "tokenizer.model",
+      "pass_sha": true
+    },
+    {
+      "asset": "teacher",
+      "file": "tokenizer_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "generation_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "special_tokens_map.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "tokenizer_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "LICENSE.txt",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "model.safetensors.index.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "tokenizer.model",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "tokenizer.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "model-00002-of-00002.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "base",
+      "file": "model-00001-of-00002.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "generation_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "model-00001-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "model-00002-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "model-00003-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "model.safetensors.index.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "special_tokens_map.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "tokenizer.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "tokenizer.model",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "tokenizer_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "direct",
+      "file": "training_args.bin",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "generation_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "model-00001-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "model-00002-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "model-00003-of-00003.safetensors",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "model.safetensors.index.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "special_tokens_map.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "tokenizer.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "tokenizer.model",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "tokenizer_config.json",
+      "pass_sha": true
+    },
+    {
+      "asset": "paraphrase",
+      "file": "training_args.bin",
+      "pass_sha": true
+    }
+  ],
+  "pass": true
+}

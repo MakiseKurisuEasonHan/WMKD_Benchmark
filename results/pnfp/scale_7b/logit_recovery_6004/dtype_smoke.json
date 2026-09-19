@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "model_parameter_dtypes": [
+    "torch.bfloat16"
+  ],
+  "forward_logits_dtype": "torch.float32",
+  "lm_head": {
+    "input_dtype": "torch.bfloat16",
+    "output_dtype": "torch.bfloat16",
+    "weight_dtype": "torch.bfloat16"
+  },
+  "autocast_enabled": false,
+  "deepspeed_context": false,
+  "torch_version": "2.8.0+cu128",
+  "transformers_version": "4.44.2",
+  "deepspeed_installed_version": "0.16.9",
+  "forward_float_cast_lines": [
+    "logits = [F.linear(hidden_states, lm_head_slices[i]) for i in range(self.config.pretraining_tp)]",
+    "logits = self.lm_head(hidden_states)",
+    "logits = logits.float()"
+  ],
+  "canonical_reference": "train_same_lineage_bc.py explicitly selects shifted response logits then .to(torch.bfloat16); no historical offline serialization",
+  "smoke_samples": 2,
+  "supervised_positions": 23,
+  "vocabulary_size": 32000,
+  "shape_preserved": true,
+  "token_order_preserved": true,
+  "finite": true,
+  "top1_preserved": true,
+  "max_abs_logits_difference": 0.0,
+  "max_abs_softmax_difference": 0.0,
+  "max_abs_kl": 0.0,
+  "serialized_bytes": 1472000,
+  "serialized_sha256": "7b75a7767564504c3d1997cff0fee1a131750ed05631605104fa23c2c4f513ab",
+  "roundtrip_bitwise_equal": true,
+  "consumer_loss": 1.369124174118042,
+  "consumer_reference_equal": true,
+  "consumer_gradient_finite": true,
+  "adaptation": "serialization dtype compatibility fix; identical canonical BF16 target cast"
+}
