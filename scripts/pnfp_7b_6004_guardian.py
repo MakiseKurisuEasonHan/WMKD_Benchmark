@@ -4,6 +4,7 @@ Never deletes remote assets. Does not retry scientific stages or mutate protocol
 Network failures retry transport; no credentials are requested or printed.
 """
 import datetime
+import argparse
 import hashlib
 import json
 import os
@@ -11,10 +12,13 @@ from pathlib import Path
 import subprocess
 import time
 
+settings=argparse.ArgumentParser()
+settings.add_argument('--evidence-subdir',default='distillation_6004',choices=['distillation_6004','logit_recovery_6004'])
+settings=settings.parse_args()
 P=Path(__file__).resolve().parents[1]
-E=P/'results/pnfp/scale_7b/distillation_6004'
+E=P/'results/pnfp/scale_7b'/settings.evidence_subdir
 REMOTE='/root/autodl-tmp/WMKD_Benchmark'
-RE=REMOTE+'/results/pnfp/scale_7b/distillation_6004'
+RE=REMOTE+'/results/pnfp/scale_7b/'+settings.evidence_subdir
 SSH=['ssh','-F',r'C:\Users\Eason\.ssh\config','6004','-o','BatchMode=yes','-o','ConnectTimeout=15']
 SCP=['scp','-F',r'C:\Users\Eason\.ssh\config','-o','BatchMode=yes','-o','ConnectTimeout=15']
 
@@ -94,6 +98,9 @@ def main():
     except subprocess.TimeoutExpired:
         push_status='PENDING_TRANSPORT_TIMEOUT'
     put('git_closeout.json',{'commit':run(['git','rev-parse','HEAD']).stdout.strip(),'push':push_status})
+    if settings.evidence_subdir=='logit_recovery_6004' and terminal['status']!='COMPLETED':
+        put('local_guardian.json',{'pid':os.getpid(),'status':'RECOVERY_REQUIRED_NO_SHUTDOWN','terminal':terminal})
+        return
     # Never shut down a host with a running GPU task. Its work is not killed.
     while True:
         ready=run([*SSH,'nvidia-smi --query-compute-apps=pid --format=csv,noheader'],timeout=45)

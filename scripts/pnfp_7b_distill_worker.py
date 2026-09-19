@@ -76,21 +76,27 @@ def cache(args, tok, features, counts, stats):
     model = AutoModelForCausalLM.from_pretrained(args.teacher, torch_dtype=torch.bfloat16,
                                                local_files_only=True).cuda().eval()
     model.requires_grad_(False)
-    manifest = dict(stats, teacher=args.teacher, shards=[], records=[], complete=False)
+    manifest = dict(stats, teacher=args.teacher, shards=[], records=[], complete=False,
+                    serialization_fix='Select canonical shifted supervised positions, then explicit BF16 cast as original Bc',
+                    forward_logits_dtypes=[])
     collate = Collator(tok)
     started = time.monotonic()
     for start in range(0,len(features),128):
         end = min(start+128,len(features)); name=f'shard-{start//128:04d}.bf16'
         file=target/name; offset=0
-        # Write original BF16 bits directly; no FP32 conversion roundtrip.
+        # Llama 4.44.2 promotes BF16 lm_head output to FP32 on return. Match
+        # canonical Bc's explicit selected-target BF16 cast before serialization.
         with file.open('xb') as sink, torch.inference_mode():
             for k in range(start,end,8):
                 batch={key:value.cuda() for key,value in collate(features[k:min(k+8,end)]).items()}
                 labels=batch.pop('labels')
                 logits=model(**batch,use_cache=False).logits[:,:-1]
-                assert logits.dtype == torch.bfloat16
+                assert logits.dtype in (torch.float32, torch.bfloat16)
+                if str(logits.dtype) not in manifest['forward_logits_dtypes']:
+                    manifest['forward_logits_dtypes'].append(str(logits.dtype))
                 for j in range(len(labels)):
-                    selected=logits[j][labels[j,1:]!=-100].contiguous()
+                    selected=logits[j][labels[j,1:]!=-100].to(torch.bfloat16).contiguous()
+                    assert selected.dtype == torch.bfloat16
                     assert len(selected)==counts[k+j] and torch.isfinite(selected).all()
                     raw=selected.cpu().view(torch.uint16).numpy().tobytes()
                     sink.write(raw)
