@@ -1,3 +1,5 @@
+AWM7B（2026-09-20T06:24:27）：logit。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；夜间授权：核验/同步/commit后自动关机；不释放实例。
+
 AWM7B（2026-09-20T05:20:21）：paraphrase。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；夜间授权：核验/同步/commit后自动关机；不释放实例。
 
 AWM7B（2026-09-20T02:35:46）：direct。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；夜间授权：核验/同步/commit后自动关机；不释放实例。
