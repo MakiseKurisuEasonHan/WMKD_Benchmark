@@ -31,6 +31,11 @@ def main():
     if row.get('provenance_evidence'):
         repair=json.loads((p/row['provenance_evidence']).read_text())
         required={x['path']:x for x in repair.get('canonical_file_identity',[])}
+        required.update({x['path']:x for x in repair.get('weight_shards',[])})
+        for name,digest in repair.get('small_file_sha256',{}).items():
+            match=next((x for x in rows if x['Path']==name),None)
+            assert match and match['Sha256']==digest,f'Canonical small-file mismatch: {name}'
+            required[name]=dict(path=name,sha256=digest,bytes=match['Size'])
         for name,r in required.items():
             match=next((x for x in rows if x['Path']==name),None)
             assert match and match['Sha256']==r['sha256'] and match['Size']==r['bytes'],f'Canonical identity mismatch: {name}'
