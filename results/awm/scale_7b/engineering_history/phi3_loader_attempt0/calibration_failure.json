@@ -1,0 +1,4 @@
+{
+  "error": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/awm_7b_calibration_launch.py\", line 7, in <module>\n    r.run('calibration','awm_7b_detector.py',['calibrate'],additional=2**30)\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_distill_campaign.py\", line 63, in run\n    assert process.returncode==0,stage+' failed; see preserved log'\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: calibration failed; see preserved log\n",
+  "shutdown": false
+}
