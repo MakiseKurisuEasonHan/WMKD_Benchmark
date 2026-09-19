@@ -1,0 +1,563 @@
+现在开始 WMKD_Benchmark 的 7B 被动水印扩展实验。
+
+本轮方法：
+LLMPrint
+
+目标：
+完成 7B same-backbone / same-scale 的被动 ownership experiment，包括：
+
+A. 7B LLMPrint Teacher/reference 建立与 detector calibration
+B. 7B → 7B Direct Distillation
+C. 7B → 7B Untargeted Paraphrasing + Distillation
+D. 7B → 7B Logit Distillation
+E. 统一 detector + utility + final report
+
+不要重新设计 LLMPrint。
+先从现有 WMKD_Benchmark 项目中恢复已经完成的 3B LLMPrint canonical protocol，并做最小 7B extension。
+
+━━━━━━━━━━━━━━━━━━━━
+一、固定模型定义
+━━━━━━━━━━━━━━━━━━━━
+
+本轮所有正式 Teacher / Student backbone 都使用：
+
+Llama-2-7b-chat-hf
+
+revision:
+f5db02db724555f92da89c216ac04704f23d4590
+
+Teacher / reference model：
+clean Llama-2-7b-chat-hf
+
+三组 Student：
+全部独立从同一个 clean Llama-2-7b-chat-hf revision 初始化。
+
+禁止：
+- 使用 PN-FP watermarked Teacher
+- 使用 PN-FP Student
+- 从前一个 Student 继续训练
+- 从 Teacher 权重直接初始化 Student
+
+这是独立的被动水印 7B experiment。
+
+━━━━━━━━━━━━━━━━━━━━
+二、先恢复现有 LLMPrint protocol
+━━━━━━━━━━━━━━━━━━━━
+
+新的 7B experiment 必须优先复用现有 LLMPrint pipeline。
+
+请先从当前 WMKD_Benchmark 中定位并读取：
+
+- LLMPrint A / A2 reproduction
+- preferred reference / teacher state
+- detector implementation
+- fingerprint extraction
+- calibration protocol
+- threshold selection
+- negative/reference models
+- clean controls
+- Ba Direct Distillation
+- Bb / paraphrasing
+- Bc / logit distillation
+- utility
+- configs
+- result JSON
+- reports
+- manifests
+- experiment logs
+- project decisions
+
+先恢复并明确：
+
+1. LLMPrint detector 的 native score 是什么；
+2. threshold 是论文固定值，还是通过 negative models calibration 得到；
+3. calibration 使用了多少 negative models；
+4. negative models 有什么 family/size 约束；
+5. 3B 旧实验中 exact threshold 是怎么得到的；
+6. 7B 是否必须重新 calibration；
+7. detector extraction 是否依赖具体 hidden size / layer number；
+8. 7B 需要修改哪些纯工程参数；
+9. 哪些 scientific parameters 必须完全不变。
+
+不要停留在报告阶段。
+恢复完成后立即继续 7B 实验。
+
+━━━━━━━━━━━━━━━━━━━━
+三、7B adaptation 原则
+━━━━━━━━━━━━━━━━━━━━
+
+本轮只允许因为模型规模和硬件改变 engineering implementation。
+
+Scientific protocol 尽量保持 3B canonical 不变。
+
+允许的 adaptation：
+- smaller micro batch
+- larger gradient accumulation while preserving effective batch
+- BF16
+- activation checkpointing
+- AdamW8bit if full-parameter ordinary Adam cannot fit
+- offline generation
+- sharded/streamed cache
+- minimal checkpoint saving
+
+禁止无理由改变：
+- detector definition
+- detector score
+- threshold calibration rule
+- number/type of negative models
+- dataset definition
+- dataset size
+- epochs/steps
+- learning rate
+- temperature
+- KL/CE weights
+- seed
+- template
+- tokenizer
+- utility protocol
+
+如果某项必须改变，必须记录 exact reason。
+
+━━━━━━━━━━━━━━━━━━━━
+四、LLMPrint 7B calibration / reference
+━━━━━━━━━━━━━━━━━━━━
+
+这是被动方法，不需要进行 watermark embedding training。
+
+首先对 clean Llama-2-7b-chat-hf 建立 LLMPrint reference/fingerprint。
+
+必须确认：
+- reference extraction 完整成功
+- native LLMPrint score / self-reference result 正常
+- 无 NaN/Inf
+- 输出维度和 detector pipeline compatible
+
+然后处理 threshold / negative calibration。
+
+如果现有 LLMPrint protocol要求通过 negative models calibration：
+必须重新做 7B calibration，不要直接沿用 3B threshold。
+
+negative model 规则：
+优先严格复用旧 protocol 的模型数量、family-diversity 和 unrelated-negative 要求。
+
+下载来源规则：
+必须优先 ModelScope。
+
+不要优先 Hugging Face。
+不要使用无法确认 provenance 的镜像。
+
+如果某个原指定 negative model 在 ModelScope 无法找到等价版本：
+可以选择满足原 unrelated/negative 要求的替代模型，但必须记录：
+- 原模型
+- 替代模型
+- 来源
+- revision
+- 替代理由
+- 对 detector calibration 的可能影响
+
+不要静默替换。
+
+如果 calibration 需要多个 7B negative models 且磁盘压力较大：
+允许逐个下载 → 抽取 detector feature → 保存必要 feature → 删除模型 → 下一个。
+不要因为 convenience 减少 negative 数量。
+
+完成后冻结：
+- 7B LLMPrint reference
+- threshold
+- negative calibration evidence
+- detector config
+
+不要在 Student 结果出来后重新调 threshold。
+
+━━━━━━━━━━━━━━━━━━━━
+五、实验 A：Direct Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+Teacher：
+clean Llama-2-7b-chat-hf
+
+Student：
+独立 clean Llama-2-7b-chat-hf
+
+严格复用现有 WMKD_Benchmark Direct / Ba protocol。
+
+流程：
+
+clean 7B Teacher
+→ ordinary response generation
+→ frozen 20k canonical Direct dataset
+→ unload Teacher
+→ clean 7B Student
+→ full-parameter distillation
+→ fresh reload
+→ LLMPrint detector
+→ utility
+→ final model/report
+
+如果 canonical Direct protocol 是 20k / 3 epochs / 7500 steps，则保持。
+
+不要为了速度减少 dataset / steps。
+
+7B Student training优先使用：
+
+- BF16
+- full parameter
+- activation checkpointing
+- AdamW8bit 0.50.0 as 7B hardware adaptation
+
+如果 3B canonical 用 ordinary Adam，则清楚记录：
+optimizer-state implementation changed for hardware feasibility,
+scientific distillation objective unchanged.
+
+Direct 完成后：
+- final Student
+- detector native score
+- threshold comparison
+- detected / not detected
+- ARC-Challenge
+- TruthfulQA-MC2
+- runtime
+- peak VRAM
+- host RAM
+- config
+- manifest
+- SHA
+- report
+
+Detector 低或未检出属于科学结果，不要重训。
+
+━━━━━━━━━━━━━━━━━━━━
+六、实验 B：Untargeted Paraphrasing + Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+改写工具模型必须和现有 benchmark 完全一致：
+
+Qwen/Qwen2.5-3B-Instruct
+
+来源：
+ModelScope
+
+必须优先复用项目中已有：
+- exact ModelScope repo ID
+- exact revision
+- file manifest / SHA
+
+禁止更换 paraphraser。
+
+固定 generation config：
+
+- do_sample = true
+- temperature = 0.7
+- top_p = 0.9
+- seed = 42
+
+dynamic max_new_tokens:
+- minimum = 64
+- multiplier = 1.5 × source response token length
+- cap = 1536
+
+canonical prompt：
+response_transformation_prompt.txt
+
+expected SHA256：
+085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676
+
+开始 paraphrasing 前重新计算 SHA。
+如果匹配则继续。
+如果不匹配，先定位项目文件问题，不要自行重写 prompt。
+
+流程：
+
+Teacher responses
+→ Qwen2.5-3B-Instruct semantic-preserving paraphrase
+→ frozen 20k paraphrased dataset
+→ unload paraphraser
+→ clean 7B Student
+→ canonical paraphrase distillation
+→ fresh reload
+→ LLMPrint detector
+→ utility
+→ report
+
+保存：
+- sample ID
+- prompt
+- raw Teacher response
+- rewritten response
+- paraphraser repo/revision
+- prompt SHA
+- generation config
+- retries
+- identity fallback
+- dataset SHA
+
+不要针对 LLMPrint 特征设计 paraphrase。
+这是 untargeted response transformation。
+
+━━━━━━━━━━━━━━━━━━━━
+七、实验 C：Logit Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+严格恢复并复用现有 LLMPrint Bc / soft-logit protocol。
+
+冻结：
+- temperature
+- KL / CE weighting
+- supervised positions
+- masking
+- tokenizer alignment
+- dataset
+- sequence construction
+- LR
+- epochs/steps
+- seed
+- effective batch
+- teacher-logit precision
+
+Teacher：
+clean 7B Llama
+
+Student：
+clean 7B Llama
+
+只有 1×96GB GPU，因此优先采用已经在 PN-FP 7B 中验证成功的 offline full-vocab logit cache 流程。
+
+注意之前已经确认：
+Transformers 可能把 BF16 lm_head logits 显式转 FP32。
+
+如果当前 LLMPrint Bc canonical 也要求 BF16 cache：
+允许沿用已经验证过的 compatibility fix：
+
+1. model forward
+2. select canonical supervised positions
+3. cast selected logits back to BF16
+4. serialize full-vocab BF16 logits
+
+前提：
+- 不改 supervised positions
+- 不改 vocab
+- 不做 top-k
+- 不改 temperature
+- 不改 loss
+- 不改 token alignment
+
+记录为：
+serialization dtype compatibility fix
+
+不是 scientific-method change。
+
+先精确统计：
+total supervised tokens
+
+然后计算：
+supervised_tokens × vocab_size × 2 bytes
+
+确认磁盘预算后再生成。
+
+logits 必须：
+- sharded
+- streamed
+- SHA verified
+- manifest recorded
+
+Teacher cache 完成后卸载 Teacher。
+
+然后：
+clean 7B Student
+→ canonical soft-logit training
+→ fresh reload
+→ LLMPrint detector
+→ utility
+→ final model/report
+
+━━━━━━━━━━━━━━━━━━━━
+八、Detector 规则
+━━━━━━━━━━━━━━━━━━━━
+
+所有 Student 最终 detector 必须：
+
+- fresh reload
+- same frozen 7B LLMPrint reference
+- same frozen 7B threshold
+- same detector implementation
+
+禁止：
+- 根据 Student 结果重新 calibration
+- 单独给某个 Student 调 threshold
+- 用 3B threshold 混入 7B结果
+
+最终报告必须包含 native LLMPrint score，不只写 detected/not detected。
+
+如果 LLMPrint native metric是 bit accuracy / similarity等，保留原 native metric。
+
+━━━━━━━━━━━━━━━━━━━━
+九、Utility
+━━━━━━━━━━━━━━━━━━━━
+
+本轮统一使用现有 benchmark utility：
+
+- ARC-Challenge
+- TruthfulQA-MC2
+
+Base：
+clean Llama-2-7b-chat-hf
+
+比较：
+Base
+Teacher/reference
+Direct
+Paraphrase
+Logit
+
+不要因为 detector 高低改变 utility protocol。
+
+━━━━━━━━━━━━━━━━━━━━
+十、最终统一表
+━━━━━━━━━━━━━━━━━━━━
+
+最终至少生成：
+
+Condition | LLMPrint native score | Threshold | Detected? | ARC-Challenge | TruthfulQA-MC2 | Runtime | Peak VRAM
+
+包含：
+
+Base / clean reference
+Direct
+Paraphrase
+Logit
+
+如果需要 retention 指标，可另加：
+student_score / reference_score
+
+但必须保留 native score。
+
+━━━━━━━━━━━━━━━━━━━━
+十一、磁盘管理
+━━━━━━━━━━━━━━━━━━━━
+
+这是大数据盘实例，但仍然串行执行。
+
+顺序：
+
+1. LLMPrint reference/calibration
+2. Direct
+3. Direct eval
+4. Paraphrase
+5. Paraphrase eval
+6. Logit cache
+7. Logit Student
+8. Logit eval
+9. final report
+
+每个大型阶段前：
+
+nvidia-smi
+df -h
+
+不要并行大型任务。
+
+只保留：
+- reference/calibration artifacts
+- Direct final Student
+- Paraphrase final Student
+- Logit final Student
+- detector results
+- utility
+- configs
+- manifests
+- reports
+
+清理：
+- optimizer checkpoints
+- redundant caches
+- temporary generation
+- temporary logits after final verification if scientifically safe
+
+不要删除唯一 final model。
+
+━━━━━━━━━━━━━━━━━━━━
+十二、结果记录
+━━━━━━━━━━━━━━━━━━━━
+
+每完成一个阶段：
+
+- 更新 experiment log
+- 更新 project status
+- 更新 TODO
+- 更新 decisions
+- 写 reproduction report
+- local git commit
+
+GitHub push如果认证仍失败：
+记录 push pending
+不要等待我
+不要阻塞实验
+
+不要修改已有 PN-FP 7B 结果。
+
+LLMPrint 7B 使用独立目录和独立 summary。
+
+━━━━━━━━━━━━━━━━━━━━
+十三、自动执行
+━━━━━━━━━━━━━━━━━━━━
+
+从现在开始不要中途问我普通工程问题。
+
+不要要求我额外授权。
+
+不要只给计划。
+
+直接执行：
+
+LLMPrint 7B reference/calibration
+→ Direct
+→ Paraphrase
+→ Logit
+→ unified final report
+
+如果某个 Student detector 很低：
+继续。
+这是科学结果。
+
+如果某一阶段出现可修复工程兼容问题：
+自行修复、记录、继续。
+
+只有以下情况才停止整个 pipeline：
+- reference/calibration scientific definition无法恢复
+- negative model protocol无法保持
+- detector implementation错误
+- dataset corruption
+- model corruption
+- scientifically equivalent Logit storage无法实现
+- 磁盘无法安全继续
+
+━━━━━━━━━━━━━━━━━━━━
+十四、最终自动关机
+━━━━━━━━━━━━━━━━━━━━
+
+全部完成后：
+
+1. final detector results
+2. final utility
+3. unified report
+4. final model SHA verification
+5. local evidence sync
+6. project status/TODO/log更新
+7. local git commit
+8. verify no training process remains
+9. shutdown
+
+GitHub push pending不阻塞。
+
+自动执行：
+
+/usr/bin/shutdown
+
+不要释放实例，只关机。
+
+如果发生不可恢复硬阻塞：
+也要先保存 evidence / failure report / local sync / commit，
+然后自动关机。
+
+本轮目标：
+一次完整获得 LLMPrint 7B reference/calibration + Direct + Paraphrase + Logit 三组正式 7B→7B 结果。
