@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
   "generated_at": "2026-09-19T04:17:11.365291+00:00",
-  "object_count": 75,
+  "object_count": 76,
   "objects": [
     {
       "method": "PN-FP",
@@ -1124,6 +1124,18 @@
       "modelscope_repo": null,
       "checkpoint_localization_support": false,
       "telemetry_records": 7500
+    },
+    {
+      "method": "AWM",
+      "experiment": "7B_SPEED_COMPARISON_ONLY",
+      "role": "timing_only",
+      "run_id": "awm_7b_speed_20260919",
+      "full_log_path": "results/awm/scale_7b_speed/full_experiment_log.json",
+      "full_log_sha256": "3bc98053f3e7b8d5bff9e0b972dc8e1e22c699e68edf15e788e4f7afcc8db4a8",
+      "scientific_status": "TIMING_ONLY",
+      "watermark_evaluation_available": false,
+      "utility_available": false,
+      "preferred_model": false
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "method": "AWM",
+  "experiment": "7B_SPEED_COMPARISON_ONLY",
+  "run_id": "awm_7b_speed_20260919",
+  "status": "COMPLETED_TIMING_ONLY",
+  "preferred_model": false,
+  "training": "NOT_RUN",
+  "full_calibration": "NOT_RUN",
+  "utility": "NOT_RUN; no model modification",
+  "scientific_protocol": "results/ownership_protocols/awm_formal_protocol.json",
+  "measurement": "results/awm/scale_7b_speed/timing_result.json",
+  "sampled_resources": "results/awm/scale_7b_speed/canonical_timing_runtime.json",
+  "report": "docs/reproduction_reports/awm_7b_speed_comparison.md",
+  "reference_model_modified": false,
+  "new_model_downloads": false,
+  "automatic_shutdown": false,
+  "next_action": "Wait for user choice: resume LLMPrint or authorize formal AWM"
+}

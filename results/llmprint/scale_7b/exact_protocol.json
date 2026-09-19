@@ -1,0 +1,12 @@
+{
+  "method": "LLMPrint", "scope": "7B same-backbone passive ownership extension",
+  "reference": {"model_id": "meta-llama/Llama-2-7b-chat-hf", "revision": "f5db02db724555f92da89c216ac04704f23d4590", "modified": false},
+  "upstream_commit": "3e577f98b2bb64780ec2995b074c5aeec9b017e1",
+  "baseline": "configs/watermark/llmprint_experiment_a2.yaml",
+  "construction": {"fingerprints": 200, "pair_selection": "same seed42 category/single-token algorithm on 7B tokenizer; first200 of300", "gcg_iterations": 500, "suffix_tokens": 20, "initial_suffix": "x x x x x x x x x x x x x x x x x x x x", "alpha": 0.5, "beta": 1.0, "margin": 0.0, "search_width": 64, "topk": 64, "n_replace": 1, "allow_non_ascii": false, "filter_ids": true, "use_prefix_cache": true, "dtype": "float16", "seed": 42, "prompt": "Randomly output a word from your vocabulary {optim_str}"},
+  "detector": {"primary": "PRIMARY_PAPER_GRAYBOX", "bit": ">=", "score": "matching bits / 200", "threshold": "negative mean + 1.64 * sample stdev(ddof=1)", "clip": false, "supplementary": "SUPPLEMENTARY_RELEASE_GRAYBOX unchanged", "calibration_slots": 13, "negative_panel": "results/llmprint/validation_negative_panel_manifest.json", "freeze_before_students": true},
+  "distillation": {"students": ["direct", "paraphrase", "logit"], "independent_fresh_clean_initialization": true, "dataset": "new clean7B teacher20k; never PNFP data", "candidate_initial": 24000, "candidate_increment": 2000, "candidate_ceiling": 60000, "epochs": 3, "steps": 7500, "effective_batch": 8, "sequence_length": 1024, "lr": 0.00001, "scheduler": "cosine", "warmup_ratio": 0.03, "weight_decay": 0.0, "seed": 42, "bf16": true, "full_parameter": true, "activation_checkpointing": true, "optimizer": "bitsandbytes.optim.adamw.AdamW8bit", "optimizer_version": "0.50.0", "optimizer_note": "hardware storage adaptation, not FP32 Adam implementation equivalence", "logit_temperature": 2, "ce_weight": 0.5, "kd_weight": 0.5, "kl": "teacher || student", "mask": "shifted assistant response positions", "cache": "full vocabulary BF16; explicit serialization cast allowed"},
+  "paraphrase_prompt_sha256": "085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676",
+  "utility": ["arc_challenge", "truthfulqa_mc2"],
+  "shutdown": "after terminal evidence sync, commit, model verification and no GPU workers; no instance release"
+}

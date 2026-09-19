@@ -1,0 +1,13 @@
+{
+  "scope": "AWM 7B canonical reproduction/detector timing only",
+  "reference": "clean meta-llama/Llama-2-7b-chat-hf",
+  "revision": "f5db02db724555f92da89c216ac04704f23d4590",
+  "control": "existing canonical Qwen/Qwen2.5-3B-Instruct negative",
+  "full_layers_and_matrices": true,
+  "student_training_authorized": false,
+  "full_calibration_authorized": false,
+  "automatic_shutdown": false,
+  "llmprint_status": "PAUSED_FOR_AWM_SPEED_COMPARISON",
+  "delete_llmprint_assets": false,
+  "decision_after_timing": "Wait for user to choose LLMPrint resume or formal AWM switch"
+}

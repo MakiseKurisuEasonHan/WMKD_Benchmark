@@ -1,3 +1,5 @@
+当前最高状态：LLMPrint7B已安全暂停58/200（PAUSED_FOR_AWM_SPEED_COMPARISON），下一ID058；13负模型及全部资产保留。仅AWM7B全层真实测速完成：42.255s workload /47.767s process，self=1.0，Qwen negative=0.001993624881484024；未做完整calibration或Student。GPU空闲，自动推进/heartbeat/关机均停用。等待用户选择继续LLMPrint或正式AWM。报告docs/reproduction_reports/awm_7b_speed_comparison.md。
+
 当前范围确认（2026-09-19）：本轮7B passive extension仅LLMPrint，reference/calibration→Direct→Untargeted Paraphrasing+Distillation→Logit→最终detector/utility/report即闭环。禁止准备或启动REEF/HuRef/AWM/ZeroPrint 7B。最终表述：a representative passive-method 7B extension。正在运行的构建/校准及科学protocol不变；自动同步、commit、关机规则不变。
 
 当前最高执行状态（2026-09-19 LLMPrint7B）：已授权独立clean Llama-2-7b-chat reference，A2 200×500指纹重建及13负模型重新校准，随后三个fresh Student Direct→Paraphrase→Logit串行闭环。不使用或修改PNFP资产。冻结配置configs/watermark/llmprint_7b.json；入口results/llmprint/scale_7b；报告docs/reproduction_reports/llmprint_7b_extension.md。每阶段空间预算与证据同步/commit，最终或不可恢复阻塞后核验并自动关闭6004、不释放。

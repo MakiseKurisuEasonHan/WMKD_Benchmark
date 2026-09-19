@@ -1,0 +1,25 @@
+{
+  "total_bytes": 634581417984,
+  "current_used_bytes": 148171743232,
+  "current_free_bytes": 486409674752,
+  "additional_components_bytes": {
+    "negative_missing_files": 5562831964,
+    "metadata_overhead": 1073741824
+  },
+  "logits": {
+    "sample_count": 0,
+    "sequence_length": 1024,
+    "vocabulary_size": 32000,
+    "dtype": "bfloat16",
+    "bytes_per_value": 2,
+    "representation": "full_vocab",
+    "stored_positions": 0,
+    "estimate_kind": "upper_bound",
+    "payload_bytes": 0
+  },
+  "additional_peak_bytes": 6636573788,
+  "projected_used_peak_bytes": 154808317020,
+  "maximum_additional_bytes": 413448223539,
+  "reserved_free_fraction": 0.15,
+  "passed": true
+}

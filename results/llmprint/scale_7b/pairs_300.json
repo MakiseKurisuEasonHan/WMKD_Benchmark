@@ -1,0 +1,2730 @@
+{
+  "schema_version": "wmkd.llmprint-pairs.v1",
+  "upstream_source": "/root/autodl-tmp/WMKD_Benchmark_data/llmprint_7b/source/generate_pairs.py",
+  "upstream_source_sha256": "a1deadd6469c55a6e9c0f7dfb6776b6cce29f6de4df925b733ae3089bf24c6c0",
+  "tokenizer_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+  "tokenizer_revision": "f5db02db724555f92da89c216ac04704f23d4590",
+  "seed": 42,
+  "requested_pairs": 300,
+  "available_candidate_pairs": 607,
+  "valid_categories": {
+    "animals": 8,
+    "fruits": 4,
+    "colors": 11,
+    "vehicles": 7,
+    "body_parts": 14,
+    "clothing": 7,
+    "technology": 14,
+    "drinks": 6,
+    "sports": 5,
+    "furniture": 4,
+    "stationery": 7,
+    "music_instruments": 5,
+    "shapes": 10,
+    "music_genres": 12,
+    "programming_languages": 11,
+    "occupations": 12
+  },
+  "pairs": [
+    {
+      "fingerprint_index": 0,
+      "pair_id": "llmprint-pair-000",
+      "category": "vehicles",
+      "w_plus": "bus",
+      "w_minus": "train",
+      "w_plus_token_id": 3593,
+      "w_minus_token_id": 7945
+    },
+    {
+      "fingerprint_index": 1,
+      "pair_id": "llmprint-pair-001",
+      "category": "sports",
+      "w_plus": "hockey",
+      "w_minus": "tennis",
+      "w_plus_token_id": 18881,
+      "w_minus_token_id": 22556
+    },
+    {
+      "fingerprint_index": 2,
+      "pair_id": "llmprint-pair-002",
+      "category": "body_parts",
+      "w_plus": "back",
+      "w_minus": "mouth",
+      "w_plus_token_id": 1250,
+      "w_minus_token_id": 13394
+    },
+    {
+      "fingerprint_index": 3,
+      "pair_id": "llmprint-pair-003",
+      "category": "colors",
+      "w_plus": "orange",
+      "w_minus": "white",
+      "w_plus_token_id": 24841,
+      "w_minus_token_id": 4796
+    },
+    {
+      "fingerprint_index": 4,
+      "pair_id": "llmprint-pair-004",
+      "category": "fruits",
+      "w_plus": "apple",
+      "w_minus": "orange",
+      "w_plus_token_id": 26163,
+      "w_minus_token_id": 24841
+    },
+    {
+      "fingerprint_index": 5,
+      "pair_id": "llmprint-pair-005",
+      "category": "technology",
+      "w_plus": "console",
+      "w_minus": "phone",
+      "w_plus_token_id": 2991,
+      "w_minus_token_id": 9008
+    },
+    {
+      "fingerprint_index": 6,
+      "pair_id": "llmprint-pair-006",
+      "category": "animals",
+      "w_plus": "dog",
+      "w_minus": "mouse",
+      "w_plus_token_id": 11203,
+      "w_minus_token_id": 9495
+    },
+    {
+      "fingerprint_index": 7,
+      "pair_id": "llmprint-pair-007",
+      "category": "music_genres",
+      "w_plus": "house",
+      "w_minus": "pop",
+      "w_plus_token_id": 3699,
+      "w_minus_token_id": 1835
+    },
+    {
+      "fingerprint_index": 8,
+      "pair_id": "llmprint-pair-008",
+      "category": "sports",
+      "w_plus": "golf",
+      "w_minus": "hockey",
+      "w_plus_token_id": 29416,
+      "w_minus_token_id": 18881
+    },
+    {
+      "fingerprint_index": 9,
+      "pair_id": "llmprint-pair-009",
+      "category": "music_genres",
+      "w_plus": "jazz",
+      "w_minus": "metal",
+      "w_plus_token_id": 21230,
+      "w_minus_token_id": 11915
+    },
+    {
+      "fingerprint_index": 10,
+      "pair_id": "llmprint-pair-010",
+      "category": "body_parts",
+      "w_plus": "ear",
+      "w_minus": "nose",
+      "w_plus_token_id": 2326,
+      "w_minus_token_id": 26414
+    },
+    {
+      "fingerprint_index": 11,
+      "pair_id": "llmprint-pair-011",
+      "category": "stationery",
+      "w_plus": "card",
+      "w_minus": "pen",
+      "w_plus_token_id": 5881,
+      "w_minus_token_id": 6584
+    },
+    {
+      "fingerprint_index": 12,
+      "pair_id": "llmprint-pair-012",
+      "category": "shapes",
+      "w_plus": "cone",
+      "w_minus": "rectangle",
+      "w_plus_token_id": 27843,
+      "w_minus_token_id": 16701
+    },
+    {
+      "fingerprint_index": 13,
+      "pair_id": "llmprint-pair-013",
+      "category": "music_instruments",
+      "w_plus": "horn",
+      "w_minus": "piano",
+      "w_plus_token_id": 25341,
+      "w_minus_token_id": 11914
+    },
+    {
+      "fingerprint_index": 14,
+      "pair_id": "llmprint-pair-014",
+      "category": "fruits",
+      "w_plus": "fig",
+      "w_minus": "orange",
+      "w_plus_token_id": 2537,
+      "w_minus_token_id": 24841
+    },
+    {
+      "fingerprint_index": 15,
+      "pair_id": "llmprint-pair-015",
+      "category": "vehicles",
+      "w_plus": "bus",
+      "w_minus": "sedan",
+      "w_plus_token_id": 3593,
+      "w_minus_token_id": 26544
+    },
+    {
+      "fingerprint_index": 16,
+      "pair_id": "llmprint-pair-016",
+      "category": "furniture",
+      "w_plus": "chair",
+      "w_minus": "table",
+      "w_plus_token_id": 11774,
+      "w_minus_token_id": 1591
+    },
+    {
+      "fingerprint_index": 17,
+      "pair_id": "llmprint-pair-017",
+      "category": "technology",
+      "w_plus": "cable",
+      "w_minus": "router",
+      "w_plus_token_id": 21387,
+      "w_minus_token_id": 12876
+    },
+    {
+      "fingerprint_index": 18,
+      "pair_id": "llmprint-pair-018",
+      "category": "fruits",
+      "w_plus": "date",
+      "w_minus": "orange",
+      "w_plus_token_id": 2635,
+      "w_minus_token_id": 24841
+    },
+    {
+      "fingerprint_index": 19,
+      "pair_id": "llmprint-pair-019",
+      "category": "colors",
+      "w_plus": "blue",
+      "w_minus": "gold",
+      "w_plus_token_id": 7254,
+      "w_minus_token_id": 7684
+    },
+    {
+      "fingerprint_index": 20,
+      "pair_id": "llmprint-pair-020",
+      "category": "shapes",
+      "w_plus": "polygon",
+      "w_minus": "square",
+      "w_plus_token_id": 29807,
+      "w_minus_token_id": 6862
+    },
+    {
+      "fingerprint_index": 21,
+      "pair_id": "llmprint-pair-021",
+      "category": "music_instruments",
+      "w_plus": "guitar",
+      "w_minus": "horn",
+      "w_plus_token_id": 11210,
+      "w_minus_token_id": 25341
+    },
+    {
+      "fingerprint_index": 22,
+      "pair_id": "llmprint-pair-022",
+      "category": "colors",
+      "w_plus": "brown",
+      "w_minus": "white",
+      "w_plus_token_id": 17354,
+      "w_minus_token_id": 4796
+    },
+    {
+      "fingerprint_index": 23,
+      "pair_id": "llmprint-pair-023",
+      "category": "drinks",
+      "w_plus": "rum",
+      "w_minus": "tea",
+      "w_plus_token_id": 16558,
+      "w_minus_token_id": 23429
+    },
+    {
+      "fingerprint_index": 24,
+      "pair_id": "llmprint-pair-024",
+      "category": "shapes",
+      "w_plus": "polygon",
+      "w_minus": "star",
+      "w_plus_token_id": 29807,
+      "w_minus_token_id": 5810
+    },
+    {
+      "fingerprint_index": 25,
+      "pair_id": "llmprint-pair-025",
+      "category": "drinks",
+      "w_plus": "sake",
+      "w_minus": "wine",
+      "w_plus_token_id": 16563,
+      "w_minus_token_id": 19006
+    },
+    {
+      "fingerprint_index": 26,
+      "pair_id": "llmprint-pair-026",
+      "category": "fruits",
+      "w_plus": "apple",
+      "w_minus": "date",
+      "w_plus_token_id": 26163,
+      "w_minus_token_id": 2635
+    },
+    {
+      "fingerprint_index": 27,
+      "pair_id": "llmprint-pair-027",
+      "category": "stationery",
+      "w_plus": "folder",
+      "w_minus": "label",
+      "w_plus_token_id": 4138,
+      "w_minus_token_id": 3858
+    },
+    {
+      "fingerprint_index": 28,
+      "pair_id": "llmprint-pair-028",
+      "category": "colors",
+      "w_plus": "gold",
+      "w_minus": "white",
+      "w_plus_token_id": 7684,
+      "w_minus_token_id": 4796
+    },
+    {
+      "fingerprint_index": 29,
+      "pair_id": "llmprint-pair-029",
+      "category": "stationery",
+      "w_plus": "clip",
+      "w_minus": "paper",
+      "w_plus_token_id": 20102,
+      "w_minus_token_id": 5650
+    },
+    {
+      "fingerprint_index": 30,
+      "pair_id": "llmprint-pair-030",
+      "category": "occupations",
+      "w_plus": "painter",
+      "w_minus": "teacher",
+      "w_plus_token_id": 23187,
+      "w_minus_token_id": 15703
+    },
+    {
+      "fingerprint_index": 31,
+      "pair_id": "llmprint-pair-031",
+      "category": "programming_languages",
+      "w_plus": "javascript",
+      "w_minus": "php",
+      "w_plus_token_id": 3513,
+      "w_minus_token_id": 3989
+    },
+    {
+      "fingerprint_index": 32,
+      "pair_id": "llmprint-pair-032",
+      "category": "body_parts",
+      "w_plus": "ear",
+      "w_minus": "mouth",
+      "w_plus_token_id": 2326,
+      "w_minus_token_id": 13394
+    },
+    {
+      "fingerprint_index": 33,
+      "pair_id": "llmprint-pair-033",
+      "category": "sports",
+      "w_plus": "rugby",
+      "w_minus": "tennis",
+      "w_plus_token_id": 20747,
+      "w_minus_token_id": 22556
+    },
+    {
+      "fingerprint_index": 34,
+      "pair_id": "llmprint-pair-034",
+      "category": "shapes",
+      "w_plus": "cube",
+      "w_minus": "rectangle",
+      "w_plus_token_id": 28704,
+      "w_minus_token_id": 16701
+    },
+    {
+      "fingerprint_index": 35,
+      "pair_id": "llmprint-pair-035",
+      "category": "body_parts",
+      "w_plus": "head",
+      "w_minus": "hip",
+      "w_plus_token_id": 2343,
+      "w_minus_token_id": 21464
+    },
+    {
+      "fingerprint_index": 36,
+      "pair_id": "llmprint-pair-036",
+      "category": "colors",
+      "w_plus": "black",
+      "w_minus": "blue",
+      "w_plus_token_id": 4628,
+      "w_minus_token_id": 7254
+    },
+    {
+      "fingerprint_index": 37,
+      "pair_id": "llmprint-pair-037",
+      "category": "body_parts",
+      "w_plus": "brow",
+      "w_minus": "lip",
+      "w_plus_token_id": 3347,
+      "w_minus_token_id": 17441
+    },
+    {
+      "fingerprint_index": 38,
+      "pair_id": "llmprint-pair-038",
+      "category": "music_genres",
+      "w_plus": "disco",
+      "w_minus": "rock",
+      "w_plus_token_id": 17021,
+      "w_minus_token_id": 7679
+    },
+    {
+      "fingerprint_index": 39,
+      "pair_id": "llmprint-pair-039",
+      "category": "shapes",
+      "w_plus": "sphere",
+      "w_minus": "square",
+      "w_plus_token_id": 20745,
+      "w_minus_token_id": 6862
+    },
+    {
+      "fingerprint_index": 40,
+      "pair_id": "llmprint-pair-040",
+      "category": "sports",
+      "w_plus": "golf",
+      "w_minus": "tennis",
+      "w_plus_token_id": 29416,
+      "w_minus_token_id": 22556
+    },
+    {
+      "fingerprint_index": 41,
+      "pair_id": "llmprint-pair-041",
+      "category": "vehicles",
+      "w_plus": "ship",
+      "w_minus": "train",
+      "w_plus_token_id": 7751,
+      "w_minus_token_id": 7945
+    },
+    {
+      "fingerprint_index": 42,
+      "pair_id": "llmprint-pair-042",
+      "category": "sports",
+      "w_plus": "golf",
+      "w_minus": "racing",
+      "w_plus_token_id": 29416,
+      "w_minus_token_id": 28965
+    },
+    {
+      "fingerprint_index": 43,
+      "pair_id": "llmprint-pair-043",
+      "category": "furniture",
+      "w_plus": "bed",
+      "w_minus": "table",
+      "w_plus_token_id": 6592,
+      "w_minus_token_id": 1591
+    },
+    {
+      "fingerprint_index": 44,
+      "pair_id": "llmprint-pair-044",
+      "category": "programming_languages",
+      "w_plus": "go",
+      "w_minus": "php",
+      "w_plus_token_id": 748,
+      "w_minus_token_id": 3989
+    },
+    {
+      "fingerprint_index": 45,
+      "pair_id": "llmprint-pair-045",
+      "category": "clothing",
+      "w_plus": "bra",
+      "w_minus": "hat",
+      "w_plus_token_id": 4105,
+      "w_minus_token_id": 3056
+    },
+    {
+      "fingerprint_index": 46,
+      "pair_id": "llmprint-pair-046",
+      "category": "furniture",
+      "w_plus": "bed",
+      "w_minus": "cabinet",
+      "w_plus_token_id": 6592,
+      "w_minus_token_id": 28966
+    },
+    {
+      "fingerprint_index": 47,
+      "pair_id": "llmprint-pair-047",
+      "category": "music_instruments",
+      "w_plus": "drum",
+      "w_minus": "guitar",
+      "w_plus_token_id": 24103,
+      "w_minus_token_id": 11210
+    },
+    {
+      "fingerprint_index": 48,
+      "pair_id": "llmprint-pair-048",
+      "category": "stationery",
+      "w_plus": "card",
+      "w_minus": "label",
+      "w_plus_token_id": 5881,
+      "w_minus_token_id": 3858
+    },
+    {
+      "fingerprint_index": 49,
+      "pair_id": "llmprint-pair-049",
+      "category": "vehicles",
+      "w_plus": "plane",
+      "w_minus": "tram",
+      "w_plus_token_id": 10694,
+      "w_minus_token_id": 19183
+    },
+    {
+      "fingerprint_index": 50,
+      "pair_id": "llmprint-pair-050",
+      "category": "drinks",
+      "w_plus": "coffee",
+      "w_minus": "rum",
+      "w_plus_token_id": 26935,
+      "w_minus_token_id": 16558
+    },
+    {
+      "fingerprint_index": 51,
+      "pair_id": "llmprint-pair-051",
+      "category": "colors",
+      "w_plus": "blue",
+      "w_minus": "red",
+      "w_plus_token_id": 7254,
+      "w_minus_token_id": 2654
+    },
+    {
+      "fingerprint_index": 52,
+      "pair_id": "llmprint-pair-052",
+      "category": "colors",
+      "w_plus": "brown",
+      "w_minus": "silver",
+      "w_plus_token_id": 17354,
+      "w_minus_token_id": 13283
+    },
+    {
+      "fingerprint_index": 53,
+      "pair_id": "llmprint-pair-053",
+      "category": "body_parts",
+      "w_plus": "head",
+      "w_minus": "lip",
+      "w_plus_token_id": 2343,
+      "w_minus_token_id": 17441
+    },
+    {
+      "fingerprint_index": 54,
+      "pair_id": "llmprint-pair-054",
+      "category": "clothing",
+      "w_plus": "coat",
+      "w_minus": "hat",
+      "w_plus_token_id": 24296,
+      "w_minus_token_id": 3056
+    },
+    {
+      "fingerprint_index": 55,
+      "pair_id": "llmprint-pair-055",
+      "category": "music_genres",
+      "w_plus": "house",
+      "w_minus": "rap",
+      "w_plus_token_id": 3699,
+      "w_minus_token_id": 14937
+    },
+    {
+      "fingerprint_index": 56,
+      "pair_id": "llmprint-pair-056",
+      "category": "technology",
+      "w_plus": "keyboard",
+      "w_minus": "router",
+      "w_plus_token_id": 12247,
+      "w_minus_token_id": 12876
+    },
+    {
+      "fingerprint_index": 57,
+      "pair_id": "llmprint-pair-057",
+      "category": "shapes",
+      "w_plus": "rectangle",
+      "w_minus": "square",
+      "w_plus_token_id": 16701,
+      "w_minus_token_id": 6862
+    },
+    {
+      "fingerprint_index": 58,
+      "pair_id": "llmprint-pair-058",
+      "category": "programming_languages",
+      "w_plus": "java",
+      "w_minus": "perl",
+      "w_plus_token_id": 2115,
+      "w_minus_token_id": 21185
+    },
+    {
+      "fingerprint_index": 59,
+      "pair_id": "llmprint-pair-059",
+      "category": "drinks",
+      "w_plus": "coffee",
+      "w_minus": "sake",
+      "w_plus_token_id": 26935,
+      "w_minus_token_id": 16563
+    },
+    {
+      "fingerprint_index": 60,
+      "pair_id": "llmprint-pair-060",
+      "category": "animals",
+      "w_plus": "dog",
+      "w_minus": "horse",
+      "w_plus_token_id": 11203,
+      "w_minus_token_id": 10435
+    },
+    {
+      "fingerprint_index": 61,
+      "pair_id": "llmprint-pair-061",
+      "category": "drinks",
+      "w_plus": "coffee",
+      "w_minus": "wine",
+      "w_plus_token_id": 26935,
+      "w_minus_token_id": 19006
+    },
+    {
+      "fingerprint_index": 62,
+      "pair_id": "llmprint-pair-062",
+      "category": "fruits",
+      "w_plus": "apple",
+      "w_minus": "fig",
+      "w_plus_token_id": 26163,
+      "w_minus_token_id": 2537
+    },
+    {
+      "fingerprint_index": 63,
+      "pair_id": "llmprint-pair-063",
+      "category": "drinks",
+      "w_plus": "sake",
+      "w_minus": "tea",
+      "w_plus_token_id": 16563,
+      "w_minus_token_id": 23429
+    },
+    {
+      "fingerprint_index": 64,
+      "pair_id": "llmprint-pair-064",
+      "category": "technology",
+      "w_plus": "camera",
+      "w_minus": "phone",
+      "w_plus_token_id": 10656,
+      "w_minus_token_id": 9008
+    },
+    {
+      "fingerprint_index": 65,
+      "pair_id": "llmprint-pair-065",
+      "category": "occupations",
+      "w_plus": "driver",
+      "w_minus": "pilot",
+      "w_plus_token_id": 7156,
+      "w_minus_token_id": 19840
+    },
+    {
+      "fingerprint_index": 66,
+      "pair_id": "llmprint-pair-066",
+      "category": "music_genres",
+      "w_plus": "disco",
+      "w_minus": "house",
+      "w_plus_token_id": 17021,
+      "w_minus_token_id": 3699
+    },
+    {
+      "fingerprint_index": 67,
+      "pair_id": "llmprint-pair-067",
+      "category": "vehicles",
+      "w_plus": "sedan",
+      "w_minus": "train",
+      "w_plus_token_id": 26544,
+      "w_minus_token_id": 7945
+    },
+    {
+      "fingerprint_index": 68,
+      "pair_id": "llmprint-pair-068",
+      "category": "music_instruments",
+      "w_plus": "organ",
+      "w_minus": "piano",
+      "w_plus_token_id": 2894,
+      "w_minus_token_id": 11914
+    },
+    {
+      "fingerprint_index": 69,
+      "pair_id": "llmprint-pair-069",
+      "category": "programming_languages",
+      "w_plus": "go",
+      "w_minus": "java",
+      "w_plus_token_id": 748,
+      "w_minus_token_id": 2115
+    },
+    {
+      "fingerprint_index": 70,
+      "pair_id": "llmprint-pair-070",
+      "category": "drinks",
+      "w_plus": "rum",
+      "w_minus": "wine",
+      "w_plus_token_id": 16558,
+      "w_minus_token_id": 19006
+    },
+    {
+      "fingerprint_index": 71,
+      "pair_id": "llmprint-pair-071",
+      "category": "programming_languages",
+      "w_plus": "javascript",
+      "w_minus": "ruby",
+      "w_plus_token_id": 3513,
+      "w_minus_token_id": 9453
+    },
+    {
+      "fingerprint_index": 72,
+      "pair_id": "llmprint-pair-072",
+      "category": "clothing",
+      "w_plus": "coat",
+      "w_minus": "dress",
+      "w_plus_token_id": 24296,
+      "w_minus_token_id": 10714
+    },
+    {
+      "fingerprint_index": 73,
+      "pair_id": "llmprint-pair-073",
+      "category": "drinks",
+      "w_plus": "coffee",
+      "w_minus": "tea",
+      "w_plus_token_id": 26935,
+      "w_minus_token_id": 23429
+    },
+    {
+      "fingerprint_index": 74,
+      "pair_id": "llmprint-pair-074",
+      "category": "animals",
+      "w_plus": "cat",
+      "w_minus": "rat",
+      "w_plus_token_id": 6635,
+      "w_minus_token_id": 7548
+    },
+    {
+      "fingerprint_index": 75,
+      "pair_id": "llmprint-pair-075",
+      "category": "shapes",
+      "w_plus": "circle",
+      "w_minus": "cross",
+      "w_plus_token_id": 8607,
+      "w_minus_token_id": 4891
+    },
+    {
+      "fingerprint_index": 76,
+      "pair_id": "llmprint-pair-076",
+      "category": "shapes",
+      "w_plus": "circle",
+      "w_minus": "sphere",
+      "w_plus_token_id": 8607,
+      "w_minus_token_id": 20745
+    },
+    {
+      "fingerprint_index": 77,
+      "pair_id": "llmprint-pair-077",
+      "category": "sports",
+      "w_plus": "racing",
+      "w_minus": "rugby",
+      "w_plus_token_id": 28965,
+      "w_minus_token_id": 20747
+    },
+    {
+      "fingerprint_index": 78,
+      "pair_id": "llmprint-pair-078",
+      "category": "music_genres",
+      "w_plus": "rap",
+      "w_minus": "swing",
+      "w_plus_token_id": 14937,
+      "w_minus_token_id": 24500
+    },
+    {
+      "fingerprint_index": 79,
+      "pair_id": "llmprint-pair-079",
+      "category": "occupations",
+      "w_plus": "doctor",
+      "w_minus": "driver",
+      "w_plus_token_id": 11619,
+      "w_minus_token_id": 7156
+    },
+    {
+      "fingerprint_index": 80,
+      "pair_id": "llmprint-pair-080",
+      "category": "colors",
+      "w_plus": "blue",
+      "w_minus": "brown",
+      "w_plus_token_id": 7254,
+      "w_minus_token_id": 17354
+    },
+    {
+      "fingerprint_index": 81,
+      "pair_id": "llmprint-pair-081",
+      "category": "colors",
+      "w_plus": "gold",
+      "w_minus": "yellow",
+      "w_plus_token_id": 7684,
+      "w_minus_token_id": 13328
+    },
+    {
+      "fingerprint_index": 82,
+      "pair_id": "llmprint-pair-082",
+      "category": "shapes",
+      "w_plus": "cone",
+      "w_minus": "cube",
+      "w_plus_token_id": 27843,
+      "w_minus_token_id": 28704
+    },
+    {
+      "fingerprint_index": 83,
+      "pair_id": "llmprint-pair-083",
+      "category": "stationery",
+      "w_plus": "clip",
+      "w_minus": "folder",
+      "w_plus_token_id": 20102,
+      "w_minus_token_id": 4138
+    },
+    {
+      "fingerprint_index": 84,
+      "pair_id": "llmprint-pair-084",
+      "category": "shapes",
+      "w_plus": "cross",
+      "w_minus": "polygon",
+      "w_plus_token_id": 4891,
+      "w_minus_token_id": 29807
+    },
+    {
+      "fingerprint_index": 85,
+      "pair_id": "llmprint-pair-085",
+      "category": "programming_languages",
+      "w_plus": "java",
+      "w_minus": "python",
+      "w_plus_token_id": 2115,
+      "w_minus_token_id": 3017
+    },
+    {
+      "fingerprint_index": 86,
+      "pair_id": "llmprint-pair-086",
+      "category": "animals",
+      "w_plus": "horse",
+      "w_minus": "sheep",
+      "w_plus_token_id": 10435,
+      "w_minus_token_id": 29735
+    },
+    {
+      "fingerprint_index": 87,
+      "pair_id": "llmprint-pair-087",
+      "category": "vehicles",
+      "w_plus": "bus",
+      "w_minus": "ship",
+      "w_plus_token_id": 3593,
+      "w_minus_token_id": 7751
+    },
+    {
+      "fingerprint_index": 88,
+      "pair_id": "llmprint-pair-088",
+      "category": "technology",
+      "w_plus": "keyboard",
+      "w_minus": "phone",
+      "w_plus_token_id": 12247,
+      "w_minus_token_id": 9008
+    },
+    {
+      "fingerprint_index": 89,
+      "pair_id": "llmprint-pair-089",
+      "category": "body_parts",
+      "w_plus": "back",
+      "w_minus": "foot",
+      "w_plus_token_id": 1250,
+      "w_minus_token_id": 3661
+    },
+    {
+      "fingerprint_index": 90,
+      "pair_id": "llmprint-pair-090",
+      "category": "clothing",
+      "w_plus": "dress",
+      "w_minus": "hat",
+      "w_plus_token_id": 10714,
+      "w_minus_token_id": 3056
+    },
+    {
+      "fingerprint_index": 91,
+      "pair_id": "llmprint-pair-091",
+      "category": "furniture",
+      "w_plus": "bed",
+      "w_minus": "chair",
+      "w_plus_token_id": 6592,
+      "w_minus_token_id": 11774
+    },
+    {
+      "fingerprint_index": 92,
+      "pair_id": "llmprint-pair-092",
+      "category": "body_parts",
+      "w_plus": "eye",
+      "w_minus": "tongue",
+      "w_plus_token_id": 10977,
+      "w_minus_token_id": 26820
+    },
+    {
+      "fingerprint_index": 93,
+      "pair_id": "llmprint-pair-093",
+      "category": "technology",
+      "w_plus": "laptop",
+      "w_minus": "router",
+      "w_plus_token_id": 19022,
+      "w_minus_token_id": 12876
+    },
+    {
+      "fingerprint_index": 94,
+      "pair_id": "llmprint-pair-094",
+      "category": "technology",
+      "w_plus": "remote",
+      "w_minus": "speaker",
+      "w_plus_token_id": 7592,
+      "w_minus_token_id": 25657
+    },
+    {
+      "fingerprint_index": 95,
+      "pair_id": "llmprint-pair-095",
+      "category": "music_genres",
+      "w_plus": "country",
+      "w_minus": "jazz",
+      "w_plus_token_id": 4234,
+      "w_minus_token_id": 21230
+    },
+    {
+      "fingerprint_index": 96,
+      "pair_id": "llmprint-pair-096",
+      "category": "animals",
+      "w_plus": "mouse",
+      "w_minus": "rat",
+      "w_plus_token_id": 9495,
+      "w_minus_token_id": 7548
+    },
+    {
+      "fingerprint_index": 97,
+      "pair_id": "llmprint-pair-097",
+      "category": "body_parts",
+      "w_plus": "eye",
+      "w_minus": "lip",
+      "w_plus_token_id": 10977,
+      "w_minus_token_id": 17441
+    },
+    {
+      "fingerprint_index": 98,
+      "pair_id": "llmprint-pair-098",
+      "category": "clothing",
+      "w_plus": "dress",
+      "w_minus": "short",
+      "w_plus_token_id": 10714,
+      "w_minus_token_id": 3273
+    },
+    {
+      "fingerprint_index": 99,
+      "pair_id": "llmprint-pair-099",
+      "category": "music_genres",
+      "w_plus": "country",
+      "w_minus": "rap",
+      "w_plus_token_id": 4234,
+      "w_minus_token_id": 14937
+    },
+    {
+      "fingerprint_index": 100,
+      "pair_id": "llmprint-pair-100",
+      "category": "body_parts",
+      "w_plus": "arm",
+      "w_minus": "hip",
+      "w_plus_token_id": 5075,
+      "w_minus_token_id": 21464
+    },
+    {
+      "fingerprint_index": 101,
+      "pair_id": "llmprint-pair-101",
+      "category": "music_instruments",
+      "w_plus": "guitar",
+      "w_minus": "piano",
+      "w_plus_token_id": 11210,
+      "w_minus_token_id": 11914
+    },
+    {
+      "fingerprint_index": 102,
+      "pair_id": "llmprint-pair-102",
+      "category": "music_genres",
+      "w_plus": "country",
+      "w_minus": "folk",
+      "w_plus_token_id": 4234,
+      "w_minus_token_id": 19589
+    },
+    {
+      "fingerprint_index": 103,
+      "pair_id": "llmprint-pair-103",
+      "category": "vehicles",
+      "w_plus": "plane",
+      "w_minus": "ship",
+      "w_plus_token_id": 10694,
+      "w_minus_token_id": 7751
+    },
+    {
+      "fingerprint_index": 104,
+      "pair_id": "llmprint-pair-104",
+      "category": "music_genres",
+      "w_plus": "folk",
+      "w_minus": "rock",
+      "w_plus_token_id": 19589,
+      "w_minus_token_id": 7679
+    },
+    {
+      "fingerprint_index": 105,
+      "pair_id": "llmprint-pair-105",
+      "category": "stationery",
+      "w_plus": "label",
+      "w_minus": "pen",
+      "w_plus_token_id": 3858,
+      "w_minus_token_id": 6584
+    },
+    {
+      "fingerprint_index": 106,
+      "pair_id": "llmprint-pair-106",
+      "category": "drinks",
+      "w_plus": "rum",
+      "w_minus": "sake",
+      "w_plus_token_id": 16558,
+      "w_minus_token_id": 16563
+    },
+    {
+      "fingerprint_index": 107,
+      "pair_id": "llmprint-pair-107",
+      "category": "occupations",
+      "w_plus": "driver",
+      "w_minus": "writer",
+      "w_plus_token_id": 7156,
+      "w_minus_token_id": 9227
+    },
+    {
+      "fingerprint_index": 108,
+      "pair_id": "llmprint-pair-108",
+      "category": "programming_languages",
+      "w_plus": "php",
+      "w_minus": "python",
+      "w_plus_token_id": 3989,
+      "w_minus_token_id": 3017
+    },
+    {
+      "fingerprint_index": 109,
+      "pair_id": "llmprint-pair-109",
+      "category": "technology",
+      "w_plus": "laptop",
+      "w_minus": "monitor",
+      "w_plus_token_id": 19022,
+      "w_minus_token_id": 11819
+    },
+    {
+      "fingerprint_index": 110,
+      "pair_id": "llmprint-pair-110",
+      "category": "sports",
+      "w_plus": "hockey",
+      "w_minus": "racing",
+      "w_plus_token_id": 18881,
+      "w_minus_token_id": 28965
+    },
+    {
+      "fingerprint_index": 111,
+      "pair_id": "llmprint-pair-111",
+      "category": "music_genres",
+      "w_plus": "metal",
+      "w_minus": "swing",
+      "w_plus_token_id": 11915,
+      "w_minus_token_id": 24500
+    },
+    {
+      "fingerprint_index": 112,
+      "pair_id": "llmprint-pair-112",
+      "category": "music_genres",
+      "w_plus": "rap",
+      "w_minus": "rock",
+      "w_plus_token_id": 14937,
+      "w_minus_token_id": 7679
+    },
+    {
+      "fingerprint_index": 113,
+      "pair_id": "llmprint-pair-113",
+      "category": "vehicles",
+      "w_plus": "sedan",
+      "w_minus": "ship",
+      "w_plus_token_id": 26544,
+      "w_minus_token_id": 7751
+    },
+    {
+      "fingerprint_index": 114,
+      "pair_id": "llmprint-pair-114",
+      "category": "technology",
+      "w_plus": "battery",
+      "w_minus": "keyboard",
+      "w_plus_token_id": 16988,
+      "w_minus_token_id": 12247
+    },
+    {
+      "fingerprint_index": 115,
+      "pair_id": "llmprint-pair-115",
+      "category": "colors",
+      "w_plus": "green",
+      "w_minus": "yellow",
+      "w_plus_token_id": 7933,
+      "w_minus_token_id": 13328
+    },
+    {
+      "fingerprint_index": 116,
+      "pair_id": "llmprint-pair-116",
+      "category": "stationery",
+      "w_plus": "card",
+      "w_minus": "paper",
+      "w_plus_token_id": 5881,
+      "w_minus_token_id": 5650
+    },
+    {
+      "fingerprint_index": 117,
+      "pair_id": "llmprint-pair-117",
+      "category": "music_genres",
+      "w_plus": "metal",
+      "w_minus": "opera",
+      "w_plus_token_id": 11915,
+      "w_minus_token_id": 14495
+    },
+    {
+      "fingerprint_index": 118,
+      "pair_id": "llmprint-pair-118",
+      "category": "music_genres",
+      "w_plus": "opera",
+      "w_minus": "soul",
+      "w_plus_token_id": 14495,
+      "w_minus_token_id": 10752
+    },
+    {
+      "fingerprint_index": 119,
+      "pair_id": "llmprint-pair-119",
+      "category": "clothing",
+      "w_plus": "hat",
+      "w_minus": "tie",
+      "w_plus_token_id": 3056,
+      "w_minus_token_id": 22134
+    },
+    {
+      "fingerprint_index": 120,
+      "pair_id": "llmprint-pair-120",
+      "category": "animals",
+      "w_plus": "crow",
+      "w_minus": "horse",
+      "w_plus_token_id": 11660,
+      "w_minus_token_id": 10435
+    },
+    {
+      "fingerprint_index": 121,
+      "pair_id": "llmprint-pair-121",
+      "category": "technology",
+      "w_plus": "monitor",
+      "w_minus": "server",
+      "w_plus_token_id": 11819,
+      "w_minus_token_id": 1923
+    },
+    {
+      "fingerprint_index": 122,
+      "pair_id": "llmprint-pair-122",
+      "category": "programming_languages",
+      "w_plus": "perl",
+      "w_minus": "typescript",
+      "w_plus_token_id": 21185,
+      "w_minus_token_id": 23741
+    },
+    {
+      "fingerprint_index": 123,
+      "pair_id": "llmprint-pair-123",
+      "category": "occupations",
+      "w_plus": "doctor",
+      "w_minus": "writer",
+      "w_plus_token_id": 11619,
+      "w_minus_token_id": 9227
+    },
+    {
+      "fingerprint_index": 124,
+      "pair_id": "llmprint-pair-124",
+      "category": "colors",
+      "w_plus": "gray",
+      "w_minus": "silver",
+      "w_plus_token_id": 16749,
+      "w_minus_token_id": 13283
+    },
+    {
+      "fingerprint_index": 125,
+      "pair_id": "llmprint-pair-125",
+      "category": "stationery",
+      "w_plus": "card",
+      "w_minus": "clip",
+      "w_plus_token_id": 5881,
+      "w_minus_token_id": 20102
+    },
+    {
+      "fingerprint_index": 126,
+      "pair_id": "llmprint-pair-126",
+      "category": "body_parts",
+      "w_plus": "arm",
+      "w_minus": "tongue",
+      "w_plus_token_id": 5075,
+      "w_minus_token_id": 26820
+    },
+    {
+      "fingerprint_index": 127,
+      "pair_id": "llmprint-pair-127",
+      "category": "drinks",
+      "w_plus": "tea",
+      "w_minus": "water",
+      "w_plus_token_id": 23429,
+      "w_minus_token_id": 4094
+    },
+    {
+      "fingerprint_index": 128,
+      "pair_id": "llmprint-pair-128",
+      "category": "colors",
+      "w_plus": "orange",
+      "w_minus": "red",
+      "w_plus_token_id": 24841,
+      "w_minus_token_id": 2654
+    },
+    {
+      "fingerprint_index": 129,
+      "pair_id": "llmprint-pair-129",
+      "category": "technology",
+      "w_plus": "router",
+      "w_minus": "speaker",
+      "w_plus_token_id": 12876,
+      "w_minus_token_id": 25657
+    },
+    {
+      "fingerprint_index": 130,
+      "pair_id": "llmprint-pair-130",
+      "category": "vehicles",
+      "w_plus": "sedan",
+      "w_minus": "tram",
+      "w_plus_token_id": 26544,
+      "w_minus_token_id": 19183
+    },
+    {
+      "fingerprint_index": 131,
+      "pair_id": "llmprint-pair-131",
+      "category": "drinks",
+      "w_plus": "rum",
+      "w_minus": "water",
+      "w_plus_token_id": 16558,
+      "w_minus_token_id": 4094
+    },
+    {
+      "fingerprint_index": 132,
+      "pair_id": "llmprint-pair-132",
+      "category": "programming_languages",
+      "w_plus": "go",
+      "w_minus": "scala",
+      "w_plus_token_id": 748,
+      "w_minus_token_id": 15688
+    },
+    {
+      "fingerprint_index": 133,
+      "pair_id": "llmprint-pair-133",
+      "category": "body_parts",
+      "w_plus": "head",
+      "w_minus": "nose",
+      "w_plus_token_id": 2343,
+      "w_minus_token_id": 26414
+    },
+    {
+      "fingerprint_index": 134,
+      "pair_id": "llmprint-pair-134",
+      "category": "music_genres",
+      "w_plus": "pop",
+      "w_minus": "rap",
+      "w_plus_token_id": 1835,
+      "w_minus_token_id": 14937
+    },
+    {
+      "fingerprint_index": 135,
+      "pair_id": "llmprint-pair-135",
+      "category": "programming_languages",
+      "w_plus": "perl",
+      "w_minus": "php",
+      "w_plus_token_id": 21185,
+      "w_minus_token_id": 3989
+    },
+    {
+      "fingerprint_index": 136,
+      "pair_id": "llmprint-pair-136",
+      "category": "colors",
+      "w_plus": "gold",
+      "w_minus": "gray",
+      "w_plus_token_id": 7684,
+      "w_minus_token_id": 16749
+    },
+    {
+      "fingerprint_index": 137,
+      "pair_id": "llmprint-pair-137",
+      "category": "sports",
+      "w_plus": "racing",
+      "w_minus": "tennis",
+      "w_plus_token_id": 28965,
+      "w_minus_token_id": 22556
+    },
+    {
+      "fingerprint_index": 138,
+      "pair_id": "llmprint-pair-138",
+      "category": "colors",
+      "w_plus": "brown",
+      "w_minus": "yellow",
+      "w_plus_token_id": 17354,
+      "w_minus_token_id": 13328
+    },
+    {
+      "fingerprint_index": 139,
+      "pair_id": "llmprint-pair-139",
+      "category": "technology",
+      "w_plus": "cable",
+      "w_minus": "monitor",
+      "w_plus_token_id": 21387,
+      "w_minus_token_id": 11819
+    },
+    {
+      "fingerprint_index": 140,
+      "pair_id": "llmprint-pair-140",
+      "category": "music_genres",
+      "w_plus": "metal",
+      "w_minus": "rap",
+      "w_plus_token_id": 11915,
+      "w_minus_token_id": 14937
+    },
+    {
+      "fingerprint_index": 141,
+      "pair_id": "llmprint-pair-141",
+      "category": "programming_languages",
+      "w_plus": "go",
+      "w_minus": "ruby",
+      "w_plus_token_id": 748,
+      "w_minus_token_id": 9453
+    },
+    {
+      "fingerprint_index": 142,
+      "pair_id": "llmprint-pair-142",
+      "category": "technology",
+      "w_plus": "monitor",
+      "w_minus": "speaker",
+      "w_plus_token_id": 11819,
+      "w_minus_token_id": 25657
+    },
+    {
+      "fingerprint_index": 143,
+      "pair_id": "llmprint-pair-143",
+      "category": "shapes",
+      "w_plus": "circle",
+      "w_minus": "triangle",
+      "w_plus_token_id": 8607,
+      "w_minus_token_id": 17205
+    },
+    {
+      "fingerprint_index": 144,
+      "pair_id": "llmprint-pair-144",
+      "category": "shapes",
+      "w_plus": "circle",
+      "w_minus": "square",
+      "w_plus_token_id": 8607,
+      "w_minus_token_id": 6862
+    },
+    {
+      "fingerprint_index": 145,
+      "pair_id": "llmprint-pair-145",
+      "category": "music_instruments",
+      "w_plus": "horn",
+      "w_minus": "organ",
+      "w_plus_token_id": 25341,
+      "w_minus_token_id": 2894
+    },
+    {
+      "fingerprint_index": 146,
+      "pair_id": "llmprint-pair-146",
+      "category": "animals",
+      "w_plus": "crow",
+      "w_minus": "rat",
+      "w_plus_token_id": 11660,
+      "w_minus_token_id": 7548
+    },
+    {
+      "fingerprint_index": 147,
+      "pair_id": "llmprint-pair-147",
+      "category": "shapes",
+      "w_plus": "cross",
+      "w_minus": "square",
+      "w_plus_token_id": 4891,
+      "w_minus_token_id": 6862
+    },
+    {
+      "fingerprint_index": 148,
+      "pair_id": "llmprint-pair-148",
+      "category": "body_parts",
+      "w_plus": "hip",
+      "w_minus": "leg",
+      "w_plus_token_id": 21464,
+      "w_minus_token_id": 2814
+    },
+    {
+      "fingerprint_index": 149,
+      "pair_id": "llmprint-pair-149",
+      "category": "animals",
+      "w_plus": "horse",
+      "w_minus": "rat",
+      "w_plus_token_id": 10435,
+      "w_minus_token_id": 7548
+    },
+    {
+      "fingerprint_index": 150,
+      "pair_id": "llmprint-pair-150",
+      "category": "animals",
+      "w_plus": "cat",
+      "w_minus": "mouse",
+      "w_plus_token_id": 6635,
+      "w_minus_token_id": 9495
+    },
+    {
+      "fingerprint_index": 151,
+      "pair_id": "llmprint-pair-151",
+      "category": "music_genres",
+      "w_plus": "folk",
+      "w_minus": "pop",
+      "w_plus_token_id": 19589,
+      "w_minus_token_id": 1835
+    },
+    {
+      "fingerprint_index": 152,
+      "pair_id": "llmprint-pair-152",
+      "category": "clothing",
+      "w_plus": "bra",
+      "w_minus": "coat",
+      "w_plus_token_id": 4105,
+      "w_minus_token_id": 24296
+    },
+    {
+      "fingerprint_index": 153,
+      "pair_id": "llmprint-pair-153",
+      "category": "programming_languages",
+      "w_plus": "python",
+      "w_minus": "typescript",
+      "w_plus_token_id": 3017,
+      "w_minus_token_id": 23741
+    },
+    {
+      "fingerprint_index": 154,
+      "pair_id": "llmprint-pair-154",
+      "category": "shapes",
+      "w_plus": "polygon",
+      "w_minus": "sphere",
+      "w_plus_token_id": 29807,
+      "w_minus_token_id": 20745
+    },
+    {
+      "fingerprint_index": 155,
+      "pair_id": "llmprint-pair-155",
+      "category": "sports",
+      "w_plus": "golf",
+      "w_minus": "rugby",
+      "w_plus_token_id": 29416,
+      "w_minus_token_id": 20747
+    },
+    {
+      "fingerprint_index": 156,
+      "pair_id": "llmprint-pair-156",
+      "category": "animals",
+      "w_plus": "bear",
+      "w_minus": "crow",
+      "w_plus_token_id": 11460,
+      "w_minus_token_id": 11660
+    },
+    {
+      "fingerprint_index": 157,
+      "pair_id": "llmprint-pair-157",
+      "category": "technology",
+      "w_plus": "battery",
+      "w_minus": "speaker",
+      "w_plus_token_id": 16988,
+      "w_minus_token_id": 25657
+    },
+    {
+      "fingerprint_index": 158,
+      "pair_id": "llmprint-pair-158",
+      "category": "body_parts",
+      "w_plus": "brow",
+      "w_minus": "ear",
+      "w_plus_token_id": 3347,
+      "w_minus_token_id": 2326
+    },
+    {
+      "fingerprint_index": 159,
+      "pair_id": "llmprint-pair-159",
+      "category": "occupations",
+      "w_plus": "chef",
+      "w_minus": "teacher",
+      "w_plus_token_id": 14547,
+      "w_minus_token_id": 15703
+    },
+    {
+      "fingerprint_index": 160,
+      "pair_id": "llmprint-pair-160",
+      "category": "technology",
+      "w_plus": "mouse",
+      "w_minus": "router",
+      "w_plus_token_id": 9495,
+      "w_minus_token_id": 12876
+    },
+    {
+      "fingerprint_index": 161,
+      "pair_id": "llmprint-pair-161",
+      "category": "vehicles",
+      "w_plus": "car",
+      "w_minus": "tram",
+      "w_plus_token_id": 1559,
+      "w_minus_token_id": 19183
+    },
+    {
+      "fingerprint_index": 162,
+      "pair_id": "llmprint-pair-162",
+      "category": "shapes",
+      "w_plus": "cube",
+      "w_minus": "sphere",
+      "w_plus_token_id": 28704,
+      "w_minus_token_id": 20745
+    },
+    {
+      "fingerprint_index": 163,
+      "pair_id": "llmprint-pair-163",
+      "category": "vehicles",
+      "w_plus": "plane",
+      "w_minus": "train",
+      "w_plus_token_id": 10694,
+      "w_minus_token_id": 7945
+    },
+    {
+      "fingerprint_index": 164,
+      "pair_id": "llmprint-pair-164",
+      "category": "vehicles",
+      "w_plus": "ship",
+      "w_minus": "tram",
+      "w_plus_token_id": 7751,
+      "w_minus_token_id": 19183
+    },
+    {
+      "fingerprint_index": 165,
+      "pair_id": "llmprint-pair-165",
+      "category": "music_genres",
+      "w_plus": "metal",
+      "w_minus": "soul",
+      "w_plus_token_id": 11915,
+      "w_minus_token_id": 10752
+    },
+    {
+      "fingerprint_index": 166,
+      "pair_id": "llmprint-pair-166",
+      "category": "colors",
+      "w_plus": "green",
+      "w_minus": "silver",
+      "w_plus_token_id": 7933,
+      "w_minus_token_id": 13283
+    },
+    {
+      "fingerprint_index": 167,
+      "pair_id": "llmprint-pair-167",
+      "category": "animals",
+      "w_plus": "rat",
+      "w_minus": "sheep",
+      "w_plus_token_id": 7548,
+      "w_minus_token_id": 29735
+    },
+    {
+      "fingerprint_index": 168,
+      "pair_id": "llmprint-pair-168",
+      "category": "occupations",
+      "w_plus": "chef",
+      "w_minus": "painter",
+      "w_plus_token_id": 14547,
+      "w_minus_token_id": 23187
+    },
+    {
+      "fingerprint_index": 169,
+      "pair_id": "llmprint-pair-169",
+      "category": "music_instruments",
+      "w_plus": "guitar",
+      "w_minus": "organ",
+      "w_plus_token_id": 11210,
+      "w_minus_token_id": 2894
+    },
+    {
+      "fingerprint_index": 170,
+      "pair_id": "llmprint-pair-170",
+      "category": "music_genres",
+      "w_plus": "folk",
+      "w_minus": "rap",
+      "w_plus_token_id": 19589,
+      "w_minus_token_id": 14937
+    },
+    {
+      "fingerprint_index": 171,
+      "pair_id": "llmprint-pair-171",
+      "category": "programming_languages",
+      "w_plus": "ruby",
+      "w_minus": "swift",
+      "w_plus_token_id": 9453,
+      "w_minus_token_id": 12086
+    },
+    {
+      "fingerprint_index": 172,
+      "pair_id": "llmprint-pair-172",
+      "category": "colors",
+      "w_plus": "gray",
+      "w_minus": "red",
+      "w_plus_token_id": 16749,
+      "w_minus_token_id": 2654
+    },
+    {
+      "fingerprint_index": 173,
+      "pair_id": "llmprint-pair-173",
+      "category": "shapes",
+      "w_plus": "circle",
+      "w_minus": "rectangle",
+      "w_plus_token_id": 8607,
+      "w_minus_token_id": 16701
+    },
+    {
+      "fingerprint_index": 174,
+      "pair_id": "llmprint-pair-174",
+      "category": "occupations",
+      "w_plus": "doctor",
+      "w_minus": "lawyer",
+      "w_plus_token_id": 11619,
+      "w_minus_token_id": 25008
+    },
+    {
+      "fingerprint_index": 175,
+      "pair_id": "llmprint-pair-175",
+      "category": "occupations",
+      "w_plus": "driver",
+      "w_minus": "lawyer",
+      "w_plus_token_id": 7156,
+      "w_minus_token_id": 25008
+    },
+    {
+      "fingerprint_index": 176,
+      "pair_id": "llmprint-pair-176",
+      "category": "technology",
+      "w_plus": "cable",
+      "w_minus": "console",
+      "w_plus_token_id": 21387,
+      "w_minus_token_id": 2991
+    },
+    {
+      "fingerprint_index": 177,
+      "pair_id": "llmprint-pair-177",
+      "category": "drinks",
+      "w_plus": "tea",
+      "w_minus": "wine",
+      "w_plus_token_id": 23429,
+      "w_minus_token_id": 19006
+    },
+    {
+      "fingerprint_index": 178,
+      "pair_id": "llmprint-pair-178",
+      "category": "occupations",
+      "w_plus": "actor",
+      "w_minus": "pilot",
+      "w_plus_token_id": 11339,
+      "w_minus_token_id": 19840
+    },
+    {
+      "fingerprint_index": 179,
+      "pair_id": "llmprint-pair-179",
+      "category": "shapes",
+      "w_plus": "cube",
+      "w_minus": "polygon",
+      "w_plus_token_id": 28704,
+      "w_minus_token_id": 29807
+    },
+    {
+      "fingerprint_index": 180,
+      "pair_id": "llmprint-pair-180",
+      "category": "stationery",
+      "w_plus": "folder",
+      "w_minus": "paper",
+      "w_plus_token_id": 4138,
+      "w_minus_token_id": 5650
+    },
+    {
+      "fingerprint_index": 181,
+      "pair_id": "llmprint-pair-181",
+      "category": "programming_languages",
+      "w_plus": "php",
+      "w_minus": "typescript",
+      "w_plus_token_id": 3989,
+      "w_minus_token_id": 23741
+    },
+    {
+      "fingerprint_index": 182,
+      "pair_id": "llmprint-pair-182",
+      "category": "technology",
+      "w_plus": "cable",
+      "w_minus": "laptop",
+      "w_plus_token_id": 21387,
+      "w_minus_token_id": 19022
+    },
+    {
+      "fingerprint_index": 183,
+      "pair_id": "llmprint-pair-183",
+      "category": "clothing",
+      "w_plus": "brief",
+      "w_minus": "tie",
+      "w_plus_token_id": 11473,
+      "w_minus_token_id": 22134
+    },
+    {
+      "fingerprint_index": 184,
+      "pair_id": "llmprint-pair-184",
+      "category": "occupations",
+      "w_plus": "guard",
+      "w_minus": "soldier",
+      "w_plus_token_id": 8372,
+      "w_minus_token_id": 20767
+    },
+    {
+      "fingerprint_index": 185,
+      "pair_id": "llmprint-pair-185",
+      "category": "furniture",
+      "w_plus": "cabinet",
+      "w_minus": "table",
+      "w_plus_token_id": 28966,
+      "w_minus_token_id": 1591
+    },
+    {
+      "fingerprint_index": 186,
+      "pair_id": "llmprint-pair-186",
+      "category": "body_parts",
+      "w_plus": "arm",
+      "w_minus": "eye",
+      "w_plus_token_id": 5075,
+      "w_minus_token_id": 10977
+    },
+    {
+      "fingerprint_index": 187,
+      "pair_id": "llmprint-pair-187",
+      "category": "body_parts",
+      "w_plus": "lip",
+      "w_minus": "nose",
+      "w_plus_token_id": 17441,
+      "w_minus_token_id": 26414
+    },
+    {
+      "fingerprint_index": 188,
+      "pair_id": "llmprint-pair-188",
+      "category": "occupations",
+      "w_plus": "actor",
+      "w_minus": "chef",
+      "w_plus_token_id": 11339,
+      "w_minus_token_id": 14547
+    },
+    {
+      "fingerprint_index": 189,
+      "pair_id": "llmprint-pair-189",
+      "category": "programming_languages",
+      "w_plus": "javascript",
+      "w_minus": "python",
+      "w_plus_token_id": 3513,
+      "w_minus_token_id": 3017
+    },
+    {
+      "fingerprint_index": 190,
+      "pair_id": "llmprint-pair-190",
+      "category": "fruits",
+      "w_plus": "date",
+      "w_minus": "fig",
+      "w_plus_token_id": 2635,
+      "w_minus_token_id": 2537
+    },
+    {
+      "fingerprint_index": 191,
+      "pair_id": "llmprint-pair-191",
+      "category": "vehicles",
+      "w_plus": "bus",
+      "w_minus": "tram",
+      "w_plus_token_id": 3593,
+      "w_minus_token_id": 19183
+    },
+    {
+      "fingerprint_index": 192,
+      "pair_id": "llmprint-pair-192",
+      "category": "shapes",
+      "w_plus": "cone",
+      "w_minus": "square",
+      "w_plus_token_id": 27843,
+      "w_minus_token_id": 6862
+    },
+    {
+      "fingerprint_index": 193,
+      "pair_id": "llmprint-pair-193",
+      "category": "programming_languages",
+      "w_plus": "php",
+      "w_minus": "rust",
+      "w_plus_token_id": 3989,
+      "w_minus_token_id": 21580
+    },
+    {
+      "fingerprint_index": 194,
+      "pair_id": "llmprint-pair-194",
+      "category": "music_genres",
+      "w_plus": "jazz",
+      "w_minus": "rock",
+      "w_plus_token_id": 21230,
+      "w_minus_token_id": 7679
+    },
+    {
+      "fingerprint_index": 195,
+      "pair_id": "llmprint-pair-195",
+      "category": "technology",
+      "w_plus": "keyboard",
+      "w_minus": "remote",
+      "w_plus_token_id": 12247,
+      "w_minus_token_id": 7592
+    },
+    {
+      "fingerprint_index": 196,
+      "pair_id": "llmprint-pair-196",
+      "category": "colors",
+      "w_plus": "brown",
+      "w_minus": "gold",
+      "w_plus_token_id": 17354,
+      "w_minus_token_id": 7684
+    },
+    {
+      "fingerprint_index": 197,
+      "pair_id": "llmprint-pair-197",
+      "category": "clothing",
+      "w_plus": "bra",
+      "w_minus": "dress",
+      "w_plus_token_id": 4105,
+      "w_minus_token_id": 10714
+    },
+    {
+      "fingerprint_index": 198,
+      "pair_id": "llmprint-pair-198",
+      "category": "programming_languages",
+      "w_plus": "rust",
+      "w_minus": "swift",
+      "w_plus_token_id": 21580,
+      "w_minus_token_id": 12086
+    },
+    {
+      "fingerprint_index": 199,
+      "pair_id": "llmprint-pair-199",
+      "category": "music_genres",
+      "w_plus": "disco",
+      "w_minus": "rap",
+      "w_plus_token_id": 17021,
+      "w_minus_token_id": 14937
+    },
+    {
+      "fingerprint_index": 200,
+      "pair_id": "llmprint-pair-200",
+      "category": "programming_languages",
+      "w_plus": "php",
+      "w_minus": "ruby",
+      "w_plus_token_id": 3989,
+      "w_minus_token_id": 9453
+    },
+    {
+      "fingerprint_index": 201,
+      "pair_id": "llmprint-pair-201",
+      "category": "programming_languages",
+      "w_plus": "java",
+      "w_minus": "swift",
+      "w_plus_token_id": 2115,
+      "w_minus_token_id": 12086
+    },
+    {
+      "fingerprint_index": 202,
+      "pair_id": "llmprint-pair-202",
+      "category": "stationery",
+      "w_plus": "folder",
+      "w_minus": "marker",
+      "w_plus_token_id": 4138,
+      "w_minus_token_id": 17456
+    },
+    {
+      "fingerprint_index": 203,
+      "pair_id": "llmprint-pair-203",
+      "category": "animals",
+      "w_plus": "cat",
+      "w_minus": "sheep",
+      "w_plus_token_id": 6635,
+      "w_minus_token_id": 29735
+    },
+    {
+      "fingerprint_index": 204,
+      "pair_id": "llmprint-pair-204",
+      "category": "music_genres",
+      "w_plus": "pop",
+      "w_minus": "soul",
+      "w_plus_token_id": 1835,
+      "w_minus_token_id": 10752
+    },
+    {
+      "fingerprint_index": 205,
+      "pair_id": "llmprint-pair-205",
+      "category": "colors",
+      "w_plus": "green",
+      "w_minus": "red",
+      "w_plus_token_id": 7933,
+      "w_minus_token_id": 2654
+    },
+    {
+      "fingerprint_index": 206,
+      "pair_id": "llmprint-pair-206",
+      "category": "stationery",
+      "w_plus": "label",
+      "w_minus": "paper",
+      "w_plus_token_id": 3858,
+      "w_minus_token_id": 5650
+    },
+    {
+      "fingerprint_index": 207,
+      "pair_id": "llmprint-pair-207",
+      "category": "occupations",
+      "w_plus": "guard",
+      "w_minus": "teacher",
+      "w_plus_token_id": 8372,
+      "w_minus_token_id": 15703
+    },
+    {
+      "fingerprint_index": 208,
+      "pair_id": "llmprint-pair-208",
+      "category": "shapes",
+      "w_plus": "circle",
+      "w_minus": "star",
+      "w_plus_token_id": 8607,
+      "w_minus_token_id": 5810
+    },
+    {
+      "fingerprint_index": 209,
+      "pair_id": "llmprint-pair-209",
+      "category": "technology",
+      "w_plus": "laptop",
+      "w_minus": "phone",
+      "w_plus_token_id": 19022,
+      "w_minus_token_id": 9008
+    },
+    {
+      "fingerprint_index": 210,
+      "pair_id": "llmprint-pair-210",
+      "category": "occupations",
+      "w_plus": "pilot",
+      "w_minus": "teacher",
+      "w_plus_token_id": 19840,
+      "w_minus_token_id": 15703
+    },
+    {
+      "fingerprint_index": 211,
+      "pair_id": "llmprint-pair-211",
+      "category": "body_parts",
+      "w_plus": "eye",
+      "w_minus": "head",
+      "w_plus_token_id": 10977,
+      "w_minus_token_id": 2343
+    },
+    {
+      "fingerprint_index": 212,
+      "pair_id": "llmprint-pair-212",
+      "category": "body_parts",
+      "w_plus": "head",
+      "w_minus": "mouth",
+      "w_plus_token_id": 2343,
+      "w_minus_token_id": 13394
+    },
+    {
+      "fingerprint_index": 213,
+      "pair_id": "llmprint-pair-213",
+      "category": "furniture",
+      "w_plus": "cabinet",
+      "w_minus": "chair",
+      "w_plus_token_id": 28966,
+      "w_minus_token_id": 11774
+    },
+    {
+      "fingerprint_index": 214,
+      "pair_id": "llmprint-pair-214",
+      "category": "programming_languages",
+      "w_plus": "javascript",
+      "w_minus": "scala",
+      "w_plus_token_id": 3513,
+      "w_minus_token_id": 15688
+    },
+    {
+      "fingerprint_index": 215,
+      "pair_id": "llmprint-pair-215",
+      "category": "shapes",
+      "w_plus": "cube",
+      "w_minus": "star",
+      "w_plus_token_id": 28704,
+      "w_minus_token_id": 5810
+    },
+    {
+      "fingerprint_index": 216,
+      "pair_id": "llmprint-pair-216",
+      "category": "body_parts",
+      "w_plus": "back",
+      "w_minus": "tongue",
+      "w_plus_token_id": 1250,
+      "w_minus_token_id": 26820
+    },
+    {
+      "fingerprint_index": 217,
+      "pair_id": "llmprint-pair-217",
+      "category": "programming_languages",
+      "w_plus": "rust",
+      "w_minus": "scala",
+      "w_plus_token_id": 21580,
+      "w_minus_token_id": 15688
+    },
+    {
+      "fingerprint_index": 218,
+      "pair_id": "llmprint-pair-218",
+      "category": "programming_languages",
+      "w_plus": "perl",
+      "w_minus": "python",
+      "w_plus_token_id": 21185,
+      "w_minus_token_id": 3017
+    },
+    {
+      "fingerprint_index": 219,
+      "pair_id": "llmprint-pair-219",
+      "category": "shapes",
+      "w_plus": "cross",
+      "w_minus": "sphere",
+      "w_plus_token_id": 4891,
+      "w_minus_token_id": 20745
+    },
+    {
+      "fingerprint_index": 220,
+      "pair_id": "llmprint-pair-220",
+      "category": "occupations",
+      "w_plus": "actor",
+      "w_minus": "doctor",
+      "w_plus_token_id": 11339,
+      "w_minus_token_id": 11619
+    },
+    {
+      "fingerprint_index": 221,
+      "pair_id": "llmprint-pair-221",
+      "category": "programming_languages",
+      "w_plus": "java",
+      "w_minus": "scala",
+      "w_plus_token_id": 2115,
+      "w_minus_token_id": 15688
+    },
+    {
+      "fingerprint_index": 222,
+      "pair_id": "llmprint-pair-222",
+      "category": "programming_languages",
+      "w_plus": "go",
+      "w_minus": "javascript",
+      "w_plus_token_id": 748,
+      "w_minus_token_id": 3513
+    },
+    {
+      "fingerprint_index": 223,
+      "pair_id": "llmprint-pair-223",
+      "category": "music_genres",
+      "w_plus": "folk",
+      "w_minus": "soul",
+      "w_plus_token_id": 19589,
+      "w_minus_token_id": 10752
+    },
+    {
+      "fingerprint_index": 224,
+      "pair_id": "llmprint-pair-224",
+      "category": "stationery",
+      "w_plus": "marker",
+      "w_minus": "paper",
+      "w_plus_token_id": 17456,
+      "w_minus_token_id": 5650
+    },
+    {
+      "fingerprint_index": 225,
+      "pair_id": "llmprint-pair-225",
+      "category": "colors",
+      "w_plus": "blue",
+      "w_minus": "orange",
+      "w_plus_token_id": 7254,
+      "w_minus_token_id": 24841
+    },
+    {
+      "fingerprint_index": 226,
+      "pair_id": "llmprint-pair-226",
+      "category": "vehicles",
+      "w_plus": "car",
+      "w_minus": "sedan",
+      "w_plus_token_id": 1559,
+      "w_minus_token_id": 26544
+    },
+    {
+      "fingerprint_index": 227,
+      "pair_id": "llmprint-pair-227",
+      "category": "music_genres",
+      "w_plus": "folk",
+      "w_minus": "house",
+      "w_plus_token_id": 19589,
+      "w_minus_token_id": 3699
+    },
+    {
+      "fingerprint_index": 228,
+      "pair_id": "llmprint-pair-228",
+      "category": "music_genres",
+      "w_plus": "rock",
+      "w_minus": "soul",
+      "w_plus_token_id": 7679,
+      "w_minus_token_id": 10752
+    },
+    {
+      "fingerprint_index": 229,
+      "pair_id": "llmprint-pair-229",
+      "category": "body_parts",
+      "w_plus": "ear",
+      "w_minus": "head",
+      "w_plus_token_id": 2326,
+      "w_minus_token_id": 2343
+    },
+    {
+      "fingerprint_index": 230,
+      "pair_id": "llmprint-pair-230",
+      "category": "animals",
+      "w_plus": "crow",
+      "w_minus": "sheep",
+      "w_plus_token_id": 11660,
+      "w_minus_token_id": 29735
+    },
+    {
+      "fingerprint_index": 231,
+      "pair_id": "llmprint-pair-231",
+      "category": "music_genres",
+      "w_plus": "jazz",
+      "w_minus": "swing",
+      "w_plus_token_id": 21230,
+      "w_minus_token_id": 24500
+    },
+    {
+      "fingerprint_index": 232,
+      "pair_id": "llmprint-pair-232",
+      "category": "shapes",
+      "w_plus": "circle",
+      "w_minus": "polygon",
+      "w_plus_token_id": 8607,
+      "w_minus_token_id": 29807
+    },
+    {
+      "fingerprint_index": 233,
+      "pair_id": "llmprint-pair-233",
+      "category": "drinks",
+      "w_plus": "sake",
+      "w_minus": "water",
+      "w_plus_token_id": 16563,
+      "w_minus_token_id": 4094
+    },
+    {
+      "fingerprint_index": 234,
+      "pair_id": "llmprint-pair-234",
+      "category": "body_parts",
+      "w_plus": "back",
+      "w_minus": "eye",
+      "w_plus_token_id": 1250,
+      "w_minus_token_id": 10977
+    },
+    {
+      "fingerprint_index": 235,
+      "pair_id": "llmprint-pair-235",
+      "category": "programming_languages",
+      "w_plus": "java",
+      "w_minus": "javascript",
+      "w_plus_token_id": 2115,
+      "w_minus_token_id": 3513
+    },
+    {
+      "fingerprint_index": 236,
+      "pair_id": "llmprint-pair-236",
+      "category": "music_instruments",
+      "w_plus": "drum",
+      "w_minus": "organ",
+      "w_plus_token_id": 24103,
+      "w_minus_token_id": 2894
+    },
+    {
+      "fingerprint_index": 237,
+      "pair_id": "llmprint-pair-237",
+      "category": "vehicles",
+      "w_plus": "plane",
+      "w_minus": "sedan",
+      "w_plus_token_id": 10694,
+      "w_minus_token_id": 26544
+    },
+    {
+      "fingerprint_index": 238,
+      "pair_id": "llmprint-pair-238",
+      "category": "occupations",
+      "w_plus": "actor",
+      "w_minus": "soldier",
+      "w_plus_token_id": 11339,
+      "w_minus_token_id": 20767
+    },
+    {
+      "fingerprint_index": 239,
+      "pair_id": "llmprint-pair-239",
+      "category": "stationery",
+      "w_plus": "clip",
+      "w_minus": "marker",
+      "w_plus_token_id": 20102,
+      "w_minus_token_id": 17456
+    },
+    {
+      "fingerprint_index": 240,
+      "pair_id": "llmprint-pair-240",
+      "category": "colors",
+      "w_plus": "red",
+      "w_minus": "yellow",
+      "w_plus_token_id": 2654,
+      "w_minus_token_id": 13328
+    },
+    {
+      "fingerprint_index": 241,
+      "pair_id": "llmprint-pair-241",
+      "category": "vehicles",
+      "w_plus": "car",
+      "w_minus": "ship",
+      "w_plus_token_id": 1559,
+      "w_minus_token_id": 7751
+    },
+    {
+      "fingerprint_index": 242,
+      "pair_id": "llmprint-pair-242",
+      "category": "body_parts",
+      "w_plus": "hand",
+      "w_minus": "head",
+      "w_plus_token_id": 1361,
+      "w_minus_token_id": 2343
+    },
+    {
+      "fingerprint_index": 243,
+      "pair_id": "llmprint-pair-243",
+      "category": "body_parts",
+      "w_plus": "hand",
+      "w_minus": "lip",
+      "w_plus_token_id": 1361,
+      "w_minus_token_id": 17441
+    },
+    {
+      "fingerprint_index": 244,
+      "pair_id": "llmprint-pair-244",
+      "category": "animals",
+      "w_plus": "bear",
+      "w_minus": "rat",
+      "w_plus_token_id": 11460,
+      "w_minus_token_id": 7548
+    },
+    {
+      "fingerprint_index": 245,
+      "pair_id": "llmprint-pair-245",
+      "category": "stationery",
+      "w_plus": "clip",
+      "w_minus": "pen",
+      "w_plus_token_id": 20102,
+      "w_minus_token_id": 6584
+    },
+    {
+      "fingerprint_index": 246,
+      "pair_id": "llmprint-pair-246",
+      "category": "technology",
+      "w_plus": "cable",
+      "w_minus": "server",
+      "w_plus_token_id": 21387,
+      "w_minus_token_id": 1923
+    },
+    {
+      "fingerprint_index": 247,
+      "pair_id": "llmprint-pair-247",
+      "category": "technology",
+      "w_plus": "console",
+      "w_minus": "printer",
+      "w_plus_token_id": 2991,
+      "w_minus_token_id": 23028
+    },
+    {
+      "fingerprint_index": 248,
+      "pair_id": "llmprint-pair-248",
+      "category": "body_parts",
+      "w_plus": "brow",
+      "w_minus": "hip",
+      "w_plus_token_id": 3347,
+      "w_minus_token_id": 21464
+    },
+    {
+      "fingerprint_index": 249,
+      "pair_id": "llmprint-pair-249",
+      "category": "music_instruments",
+      "w_plus": "drum",
+      "w_minus": "piano",
+      "w_plus_token_id": 24103,
+      "w_minus_token_id": 11914
+    },
+    {
+      "fingerprint_index": 250,
+      "pair_id": "llmprint-pair-250",
+      "category": "programming_languages",
+      "w_plus": "perl",
+      "w_minus": "scala",
+      "w_plus_token_id": 21185,
+      "w_minus_token_id": 15688
+    },
+    {
+      "fingerprint_index": 251,
+      "pair_id": "llmprint-pair-251",
+      "category": "animals",
+      "w_plus": "bear",
+      "w_minus": "dog",
+      "w_plus_token_id": 11460,
+      "w_minus_token_id": 11203
+    },
+    {
+      "fingerprint_index": 252,
+      "pair_id": "llmprint-pair-252",
+      "category": "shapes",
+      "w_plus": "cone",
+      "w_minus": "sphere",
+      "w_plus_token_id": 27843,
+      "w_minus_token_id": 20745
+    },
+    {
+      "fingerprint_index": 253,
+      "pair_id": "llmprint-pair-253",
+      "category": "occupations",
+      "w_plus": "pilot",
+      "w_minus": "writer",
+      "w_plus_token_id": 19840,
+      "w_minus_token_id": 9227
+    },
+    {
+      "fingerprint_index": 254,
+      "pair_id": "llmprint-pair-254",
+      "category": "colors",
+      "w_plus": "blue",
+      "w_minus": "green",
+      "w_plus_token_id": 7254,
+      "w_minus_token_id": 7933
+    },
+    {
+      "fingerprint_index": 255,
+      "pair_id": "llmprint-pair-255",
+      "category": "body_parts",
+      "w_plus": "back",
+      "w_minus": "brow",
+      "w_plus_token_id": 1250,
+      "w_minus_token_id": 3347
+    },
+    {
+      "fingerprint_index": 256,
+      "pair_id": "llmprint-pair-256",
+      "category": "shapes",
+      "w_plus": "star",
+      "w_minus": "triangle",
+      "w_plus_token_id": 5810,
+      "w_minus_token_id": 17205
+    },
+    {
+      "fingerprint_index": 257,
+      "pair_id": "llmprint-pair-257",
+      "category": "music_genres",
+      "w_plus": "disco",
+      "w_minus": "swing",
+      "w_plus_token_id": 17021,
+      "w_minus_token_id": 24500
+    },
+    {
+      "fingerprint_index": 258,
+      "pair_id": "llmprint-pair-258",
+      "category": "technology",
+      "w_plus": "monitor",
+      "w_minus": "mouse",
+      "w_plus_token_id": 11819,
+      "w_minus_token_id": 9495
+    },
+    {
+      "fingerprint_index": 259,
+      "pair_id": "llmprint-pair-259",
+      "category": "programming_languages",
+      "w_plus": "ruby",
+      "w_minus": "typescript",
+      "w_plus_token_id": 9453,
+      "w_minus_token_id": 23741
+    },
+    {
+      "fingerprint_index": 260,
+      "pair_id": "llmprint-pair-260",
+      "category": "colors",
+      "w_plus": "blue",
+      "w_minus": "yellow",
+      "w_plus_token_id": 7254,
+      "w_minus_token_id": 13328
+    },
+    {
+      "fingerprint_index": 261,
+      "pair_id": "llmprint-pair-261",
+      "category": "music_genres",
+      "w_plus": "country",
+      "w_minus": "swing",
+      "w_plus_token_id": 4234,
+      "w_minus_token_id": 24500
+    },
+    {
+      "fingerprint_index": 262,
+      "pair_id": "llmprint-pair-262",
+      "category": "technology",
+      "w_plus": "camera",
+      "w_minus": "remote",
+      "w_plus_token_id": 10656,
+      "w_minus_token_id": 7592
+    },
+    {
+      "fingerprint_index": 263,
+      "pair_id": "llmprint-pair-263",
+      "category": "occupations",
+      "w_plus": "chef",
+      "w_minus": "driver",
+      "w_plus_token_id": 14547,
+      "w_minus_token_id": 7156
+    },
+    {
+      "fingerprint_index": 264,
+      "pair_id": "llmprint-pair-264",
+      "category": "animals",
+      "w_plus": "bear",
+      "w_minus": "horse",
+      "w_plus_token_id": 11460,
+      "w_minus_token_id": 10435
+    },
+    {
+      "fingerprint_index": 265,
+      "pair_id": "llmprint-pair-265",
+      "category": "clothing",
+      "w_plus": "coat",
+      "w_minus": "short",
+      "w_plus_token_id": 24296,
+      "w_minus_token_id": 3273
+    },
+    {
+      "fingerprint_index": 266,
+      "pair_id": "llmprint-pair-266",
+      "category": "body_parts",
+      "w_plus": "leg",
+      "w_minus": "lip",
+      "w_plus_token_id": 2814,
+      "w_minus_token_id": 17441
+    },
+    {
+      "fingerprint_index": 267,
+      "pair_id": "llmprint-pair-267",
+      "category": "shapes",
+      "w_plus": "cone",
+      "w_minus": "cross",
+      "w_plus_token_id": 27843,
+      "w_minus_token_id": 4891
+    },
+    {
+      "fingerprint_index": 268,
+      "pair_id": "llmprint-pair-268",
+      "category": "colors",
+      "w_plus": "black",
+      "w_minus": "brown",
+      "w_plus_token_id": 4628,
+      "w_minus_token_id": 17354
+    },
+    {
+      "fingerprint_index": 269,
+      "pair_id": "llmprint-pair-269",
+      "category": "occupations",
+      "w_plus": "pilot",
+      "w_minus": "soldier",
+      "w_plus_token_id": 19840,
+      "w_minus_token_id": 20767
+    },
+    {
+      "fingerprint_index": 270,
+      "pair_id": "llmprint-pair-270",
+      "category": "music_genres",
+      "w_plus": "house",
+      "w_minus": "jazz",
+      "w_plus_token_id": 3699,
+      "w_minus_token_id": 21230
+    },
+    {
+      "fingerprint_index": 271,
+      "pair_id": "llmprint-pair-271",
+      "category": "occupations",
+      "w_plus": "singer",
+      "w_minus": "teacher",
+      "w_plus_token_id": 15640,
+      "w_minus_token_id": 15703
+    },
+    {
+      "fingerprint_index": 272,
+      "pair_id": "llmprint-pair-272",
+      "category": "animals",
+      "w_plus": "crow",
+      "w_minus": "dog",
+      "w_plus_token_id": 11660,
+      "w_minus_token_id": 11203
+    },
+    {
+      "fingerprint_index": 273,
+      "pair_id": "llmprint-pair-273",
+      "category": "technology",
+      "w_plus": "camera",
+      "w_minus": "server",
+      "w_plus_token_id": 10656,
+      "w_minus_token_id": 1923
+    },
+    {
+      "fingerprint_index": 274,
+      "pair_id": "llmprint-pair-274",
+      "category": "music_genres",
+      "w_plus": "folk",
+      "w_minus": "swing",
+      "w_plus_token_id": 19589,
+      "w_minus_token_id": 24500
+    },
+    {
+      "fingerprint_index": 275,
+      "pair_id": "llmprint-pair-275",
+      "category": "music_genres",
+      "w_plus": "opera",
+      "w_minus": "rock",
+      "w_plus_token_id": 14495,
+      "w_minus_token_id": 7679
+    },
+    {
+      "fingerprint_index": 276,
+      "pair_id": "llmprint-pair-276",
+      "category": "music_genres",
+      "w_plus": "disco",
+      "w_minus": "jazz",
+      "w_plus_token_id": 17021,
+      "w_minus_token_id": 21230
+    },
+    {
+      "fingerprint_index": 277,
+      "pair_id": "llmprint-pair-277",
+      "category": "colors",
+      "w_plus": "gray",
+      "w_minus": "orange",
+      "w_plus_token_id": 16749,
+      "w_minus_token_id": 24841
+    },
+    {
+      "fingerprint_index": 278,
+      "pair_id": "llmprint-pair-278",
+      "category": "technology",
+      "w_plus": "laptop",
+      "w_minus": "server",
+      "w_plus_token_id": 19022,
+      "w_minus_token_id": 1923
+    },
+    {
+      "fingerprint_index": 279,
+      "pair_id": "llmprint-pair-279",
+      "category": "vehicles",
+      "w_plus": "car",
+      "w_minus": "plane",
+      "w_plus_token_id": 1559,
+      "w_minus_token_id": 10694
+    },
+    {
+      "fingerprint_index": 280,
+      "pair_id": "llmprint-pair-280",
+      "category": "technology",
+      "w_plus": "camera",
+      "w_minus": "printer",
+      "w_plus_token_id": 10656,
+      "w_minus_token_id": 23028
+    },
+    {
+      "fingerprint_index": 281,
+      "pair_id": "llmprint-pair-281",
+      "category": "body_parts",
+      "w_plus": "nose",
+      "w_minus": "tongue",
+      "w_plus_token_id": 26414,
+      "w_minus_token_id": 26820
+    },
+    {
+      "fingerprint_index": 282,
+      "pair_id": "llmprint-pair-282",
+      "category": "colors",
+      "w_plus": "brown",
+      "w_minus": "red",
+      "w_plus_token_id": 17354,
+      "w_minus_token_id": 2654
+    },
+    {
+      "fingerprint_index": 283,
+      "pair_id": "llmprint-pair-283",
+      "category": "programming_languages",
+      "w_plus": "swift",
+      "w_minus": "typescript",
+      "w_plus_token_id": 12086,
+      "w_minus_token_id": 23741
+    },
+    {
+      "fingerprint_index": 284,
+      "pair_id": "llmprint-pair-284",
+      "category": "stationery",
+      "w_plus": "paper",
+      "w_minus": "pen",
+      "w_plus_token_id": 5650,
+      "w_minus_token_id": 6584
+    },
+    {
+      "fingerprint_index": 285,
+      "pair_id": "llmprint-pair-285",
+      "category": "stationery",
+      "w_plus": "clip",
+      "w_minus": "label",
+      "w_plus_token_id": 20102,
+      "w_minus_token_id": 3858
+    },
+    {
+      "fingerprint_index": 286,
+      "pair_id": "llmprint-pair-286",
+      "category": "programming_languages",
+      "w_plus": "go",
+      "w_minus": "typescript",
+      "w_plus_token_id": 748,
+      "w_minus_token_id": 23741
+    },
+    {
+      "fingerprint_index": 287,
+      "pair_id": "llmprint-pair-287",
+      "category": "music_instruments",
+      "w_plus": "drum",
+      "w_minus": "horn",
+      "w_plus_token_id": 24103,
+      "w_minus_token_id": 25341
+    },
+    {
+      "fingerprint_index": 288,
+      "pair_id": "llmprint-pair-288",
+      "category": "colors",
+      "w_plus": "white",
+      "w_minus": "yellow",
+      "w_plus_token_id": 4796,
+      "w_minus_token_id": 13328
+    },
+    {
+      "fingerprint_index": 289,
+      "pair_id": "llmprint-pair-289",
+      "category": "shapes",
+      "w_plus": "square",
+      "w_minus": "star",
+      "w_plus_token_id": 6862,
+      "w_minus_token_id": 5810
+    },
+    {
+      "fingerprint_index": 290,
+      "pair_id": "llmprint-pair-290",
+      "category": "technology",
+      "w_plus": "laptop",
+      "w_minus": "printer",
+      "w_plus_token_id": 19022,
+      "w_minus_token_id": 23028
+    },
+    {
+      "fingerprint_index": 291,
+      "pair_id": "llmprint-pair-291",
+      "category": "occupations",
+      "w_plus": "doctor",
+      "w_minus": "singer",
+      "w_plus_token_id": 11619,
+      "w_minus_token_id": 15640
+    },
+    {
+      "fingerprint_index": 292,
+      "pair_id": "llmprint-pair-292",
+      "category": "clothing",
+      "w_plus": "bra",
+      "w_minus": "brief",
+      "w_plus_token_id": 4105,
+      "w_minus_token_id": 11473
+    },
+    {
+      "fingerprint_index": 293,
+      "pair_id": "llmprint-pair-293",
+      "category": "clothing",
+      "w_plus": "coat",
+      "w_minus": "tie",
+      "w_plus_token_id": 24296,
+      "w_minus_token_id": 22134
+    },
+    {
+      "fingerprint_index": 294,
+      "pair_id": "llmprint-pair-294",
+      "category": "stationery",
+      "w_plus": "card",
+      "w_minus": "marker",
+      "w_plus_token_id": 5881,
+      "w_minus_token_id": 17456
+    },
+    {
+      "fingerprint_index": 295,
+      "pair_id": "llmprint-pair-295",
+      "category": "shapes",
+      "w_plus": "polygon",
+      "w_minus": "triangle",
+      "w_plus_token_id": 29807,
+      "w_minus_token_id": 17205
+    },
+    {
+      "fingerprint_index": 296,
+      "pair_id": "llmprint-pair-296",
+      "category": "body_parts",
+      "w_plus": "eye",
+      "w_minus": "foot",
+      "w_plus_token_id": 10977,
+      "w_minus_token_id": 3661
+    },
+    {
+      "fingerprint_index": 297,
+      "pair_id": "llmprint-pair-297",
+      "category": "colors",
+      "w_plus": "orange",
+      "w_minus": "yellow",
+      "w_plus_token_id": 24841,
+      "w_minus_token_id": 13328
+    },
+    {
+      "fingerprint_index": 298,
+      "pair_id": "llmprint-pair-298",
+      "category": "technology",
+      "w_plus": "camera",
+      "w_minus": "console",
+      "w_plus_token_id": 10656,
+      "w_minus_token_id": 2991
+    },
+    {
+      "fingerprint_index": 299,
+      "pair_id": "llmprint-pair-299",
+      "category": "body_parts",
+      "w_plus": "hand",
+      "w_minus": "leg",
+      "w_plus_token_id": 1361,
+      "w_minus_token_id": 2814
+    }
+  ]
+}

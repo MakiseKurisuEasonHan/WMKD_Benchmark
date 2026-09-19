@@ -2,7 +2,7 @@
 
 This experiment is **a representative passive-method 7B extension**, restricted to LLMPrint. It is not an evaluation of all passive methods at 7B scale. REEF, HuRef, AWM and ZeroPrint are excluded from preparation and execution. Completion of the three LLMPrint distillations and final detector/utility/report closes this campaign; existing synchronization, commit and shutdown rules remain unchanged.
 
-Status: RUNNING, reference fingerprint construction. No Student result yet.
+Status: PAUSED_FOR_AWM_SPEED_COMPARISON.58/200 fingerprints completed and SHA-verified locally; next ID058. All13 negative models preserved, calibration not started. No Student result. Automatic advancement, heartbeat and shutdown are disabled by the latest user instruction. See `docs/reproduction_reports/awm_7b_speed_comparison.md` for the saved resume command; it has not been executed.
 
 The unmodified clean reference is `meta-llama/Llama-2-7b-chat-hf`, revision `f5db02db724555f92da89c216ac04704f23d4590`. PN-FP Teacher, Students, fingerprints and generated datasets are excluded.
 
