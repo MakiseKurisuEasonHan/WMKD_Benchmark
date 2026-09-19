@@ -35,6 +35,8 @@ def update(stage,terminal=None):
             if f.exists():
                 x=json.loads(f.read_text());d=x['detector']['primary'];u=x['utility']['a2']
                 text+=f'\n{s}: score={d["accuracy"]}, threshold={d["threshold"]}, detected={d["positive"]}; ARC={u["arc_challenge_acc_norm"]}, MC2={u["truthfulqa_mc2_acc"]}.\n'
+    scope='This experiment is a representative passive-method 7B extension (LLMPrint only). It is not an evaluation of all passive methods at 7B scale. REEF, HuRef, AWM and ZeroPrint are outside this campaign.\n'
+    text+='\n'+scope
     REPORT.write_text(text,encoding='utf-8')
     line=f'LLMPrint 7B（{datetime.datetime.now().isoformat(timespec="seconds")}）：{stage}。独立目录 results/llmprint/scale_7b；报告 docs/reproduction_reports/llmprint_7b_extension.md。PN-FP 7B 结果不变。\n\n'
     for name in STATUS:

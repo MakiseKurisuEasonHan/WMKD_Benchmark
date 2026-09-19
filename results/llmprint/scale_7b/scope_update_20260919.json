@@ -1,0 +1,11 @@
+{
+  "authorized_methods": ["LLMPrint"],
+  "excluded_methods": ["REEF", "HuRef", "AWM", "ZeroPrint"],
+  "excluded_actions": "Do not start or prepare any other passive-method 7B experiment",
+  "stages": ["reference/calibration", "Direct Distillation", "Untargeted Paraphrasing + Distillation", "Logit Distillation", "final detector/utility/unified report"],
+  "completion_boundary": "LLMPrint three distillations and final scientific/evidence closure; no next passive method",
+  "required_report_description": "a representative passive-method 7B extension",
+  "not_claimed": "all passive methods' 7B-scale evaluation",
+  "current_construction_and_calibration": "continue uninterrupted; no restart, reduction or protocol change",
+  "automatic_sync_commit_shutdown": "unchanged"
+}

@@ -1,3 +1,5 @@
+当前范围确认（2026-09-19）：本轮7B passive extension仅LLMPrint，reference/calibration→Direct→Untargeted Paraphrasing+Distillation→Logit→最终detector/utility/report即闭环。禁止准备或启动REEF/HuRef/AWM/ZeroPrint 7B。最终表述：a representative passive-method 7B extension。正在运行的构建/校准及科学protocol不变；自动同步、commit、关机规则不变。
+
 当前最高执行状态（2026-09-19 LLMPrint7B）：已授权独立clean Llama-2-7b-chat reference，A2 200×500指纹重建及13负模型重新校准，随后三个fresh Student Direct→Paraphrase→Logit串行闭环。不使用或修改PNFP资产。冻结配置configs/watermark/llmprint_7b.json；入口results/llmprint/scale_7b；报告docs/reproduction_reports/llmprint_7b_extension.md。每阶段空间预算与证据同步/commit，最终或不可恢复阻塞后核验并自动关闭6004、不释放。
 
 当前状态（2026-09-09 Active Cross-Lineage Ba 最终闭环）：五个fresh Qwen Student全部7500steps、final save/fresh reload与utility完成。PNFP84/1024（Base43）；CTCC trigger0/95；SCW p0.9158855080604553未检出；EverTracer canonical N/A、exploratory AUC0.523；iSeal Level3 N/A。CPU证据/报告/索引闭环，等待用户独立preferred模型归档选择；禁止新实验、自动上传/删除或关机。shutdown_provenance=UNVERIFIED。入口 results/active_cross_lineage_ba/pipeline_state.json；总报告 docs/reproduction_reports/active_cross_lineage_ba_final_20260909.md。

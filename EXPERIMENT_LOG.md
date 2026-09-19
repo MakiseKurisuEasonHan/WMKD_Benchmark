@@ -1,3 +1,5 @@
+当前范围确认（2026-09-19）：本轮7B passive extension仅LLMPrint，reference/calibration→Direct→Untargeted Paraphrasing+Distillation→Logit→最终detector/utility/report即闭环。禁止准备或启动REEF/HuRef/AWM/ZeroPrint 7B。最终表述：a representative passive-method 7B extension。正在运行的构建/校准及科学protocol不变；自动同步、commit、关机规则不变。
+
 当前最高执行状态（2026-09-19 LLMPrint7B）：已授权独立clean Llama-2-7b-chat reference，A2 200×500指纹重建及13负模型重新校准，随后三个fresh Student Direct→Paraphrase→Logit串行闭环。不使用或修改PNFP资产。冻结配置configs/watermark/llmprint_7b.json；入口results/llmprint/scale_7b；报告docs/reproduction_reports/llmprint_7b_extension.md。每阶段空间预算与证据同步/commit，最终或不可恢复阻塞后核验并自动关闭6004、不释放。
 
 当前状态（PN-FP7B 6004蒸馏）：COMPLETED；终态证据已本地SHA核验，详见docs/reproduction_reports/pnfp_7b_distillation_6004_final.md。按本轮授权准备安全关机；不释放实例、不删除正式模型。

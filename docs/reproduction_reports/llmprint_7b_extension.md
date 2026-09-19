@@ -1,5 +1,7 @@
 # LLMPrint 7B same-backbone extension
 
+This experiment is **a representative passive-method 7B extension**, restricted to LLMPrint. It is not an evaluation of all passive methods at 7B scale. REEF, HuRef, AWM and ZeroPrint are excluded from preparation and execution. Completion of the three LLMPrint distillations and final detector/utility/report closes this campaign; existing synchronization, commit and shutdown rules remain unchanged.
+
 Status: RUNNING, reference fingerprint construction. No Student result yet.
 
 The unmodified clean reference is `meta-llama/Llama-2-7b-chat-hf`, revision `f5db02db724555f92da89c216ac04704f23d4590`. PN-FP Teacher, Students, fingerprints and generated datasets are excluded.
