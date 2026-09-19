@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-19T16:35:46.610692+00:00",
-  "object_count": 78,
+  "generated_at": "2026-09-19T19:20:21.470268+00:00",
+  "object_count": 79,
   "objects": [
     {
       "method": "PN-FP",
@@ -1155,6 +1155,17 @@
       "run_id": "awm_7b_direct",
       "full_log_path": "results/awm/scale_7b/direct/full_experiment_log.json",
       "full_log_sha256": "b8b68d2181e41fee0002c6a1527f09b498d374878eee49272c1b964ceef11550",
+      "scientific_status": "completed",
+      "watermark_evaluation_available": true,
+      "utility_available": true
+    },
+    {
+      "method": "AWM",
+      "role": "paraphrase",
+      "experiment": "Bb_7B",
+      "run_id": "awm_7b_paraphrase",
+      "full_log_path": "results/awm/scale_7b/paraphrase/full_experiment_log.json",
+      "full_log_sha256": "3275a686a0127d5b35800ae924147cd9b1c687f2ec50b8a225b1dbeb82b58637",
       "scientific_status": "completed",
       "watermark_evaluation_available": true,
       "utility_available": true

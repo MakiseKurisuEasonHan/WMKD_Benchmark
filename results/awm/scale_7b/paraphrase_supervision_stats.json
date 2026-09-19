@@ -1,0 +1,18 @@
+{
+  "samples": 20000,
+  "max_length": 1024,
+  "vocabulary_size": 32000,
+  "supervised_tokens": 562135,
+  "min_supervised": 3,
+  "max_supervised": 575,
+  "dtype": "bfloat16",
+  "dtype_bytes": 2,
+  "representation": "full_vocab",
+  "payload_bytes": 35976640000,
+  "feature_sha256": "c37c00ebe1bebb9e78be13e24746cdbd6128d03f67fe7a3e8f7735c549254a05",
+  "dataset_file_sha256": "2ceb6d707b0d9b87f240127b18964ffcf9b90b5bdcf8e87b2222384a166432a6",
+  "supervised_positions": "labels[1:] != -100",
+  "suggested_shards": 157,
+  "samples_per_shard": 128,
+  "maximum_shard_bytes": 376192000
+}
