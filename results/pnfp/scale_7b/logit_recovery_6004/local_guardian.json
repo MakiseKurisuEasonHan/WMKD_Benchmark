@@ -1,5 +1,13 @@
 {
   "pid": 68964,
-  "status": "MONITORING",
-  "host": "6004"
+  "status": "SHUTDOWN_COMMAND_SENT",
+  "terminal": {
+    "status": "COMPLETED",
+    "started": 1789787261.6757023,
+    "scope": "LOGIT_ONLY",
+    "pid": 1701,
+    "final_model_sha_verified": true,
+    "final_model": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/logit_recovery_6004/logit/final_model",
+    "ended": 1789791197.9245756
+  }
 }
