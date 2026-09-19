@@ -1,0 +1,955 @@
+{
+  "deleted": [
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0000.bf16",
+      "bytes": 272384000,
+      "sha256": "81cb81e8b431170c3f02ca80f5b681e051e28a7e5fc631555496339249b8ee55",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0001.bf16",
+      "bytes": 262976000,
+      "sha256": "a96873cf3b4ca00a030642b004d8dca733ac8a8d741d81b6576ac4ce6fd41336",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0002.bf16",
+      "bytes": 173312000,
+      "sha256": "8c41c8f4ac207994b7b689eb14635fead90c61089c668a57bfb80411de15e10d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0003.bf16",
+      "bytes": 201024000,
+      "sha256": "5bbb4279b6b32d89d181a53b27766a1c8f786e5225e51deda979fe867f9f68c4",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0004.bf16",
+      "bytes": 315712000,
+      "sha256": "d0ee812bc567694a26853ccb047e0617ef5e7ceb6980246c266d986e678a38da",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0005.bf16",
+      "bytes": 243840000,
+      "sha256": "4f9fd2a16881757ca9dd1339047bf1dd9d357918206d87358b15ca8bdc94ad54",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0006.bf16",
+      "bytes": 183808000,
+      "sha256": "b28d54fcfe40f717b65c82d76bf7d2f591652b2bcbcb49521ff3a310bab2483a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0007.bf16",
+      "bytes": 286784000,
+      "sha256": "3ba26d833dd61ef98c4532af3e39094038952ec53b2798f258f00529b9628db8",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0008.bf16",
+      "bytes": 221376000,
+      "sha256": "08856721e1ae02d47581c1abbad419dcb18d02412f28f4cc63d7f91e529f12e5",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0009.bf16",
+      "bytes": 197696000,
+      "sha256": "0d573c6350b82f4d6b05b609a4e1ed3763562927e86de66693ca2b8714971295",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0010.bf16",
+      "bytes": 225344000,
+      "sha256": "cd24009f5aabe8a2d60dc8cd293ae2983d5bfd7ec37fba9f438f4555638ec8ac",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0011.bf16",
+      "bytes": 250816000,
+      "sha256": "81577eadb7d887b877ce157ecf4dc05df1f81de7e2e1ce6606421f0de4e7da07",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0012.bf16",
+      "bytes": 242752000,
+      "sha256": "815c7e3da6011b5b0419cd5c413fdd4e7b57c9e9fbc14ff7259175bd5407405d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0013.bf16",
+      "bytes": 229120000,
+      "sha256": "4cb830c9acb8e6091cf71b501f7cf107712bc6f30d56e943fe5b1a68282c9093",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0014.bf16",
+      "bytes": 164800000,
+      "sha256": "d764fd9234e355fafd615bbe423051fef0b5213af8c805fae12d631369c0d68d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0015.bf16",
+      "bytes": 211264000,
+      "sha256": "b9535869b4a9bf0c01812a6a4dd344f2dee6346b29f3b1e51c81fe893468dcac",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0016.bf16",
+      "bytes": 265536000,
+      "sha256": "753da2333e3e834e872b0fc389ec5dce16ac5f6b4a620dfedcc704535735105b",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0017.bf16",
+      "bytes": 186432000,
+      "sha256": "76e2d06baab93888ebd3c25874f68143d21f49e722fdb637501017628909135b",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0018.bf16",
+      "bytes": 198784000,
+      "sha256": "ebf7219d965053d6ded9881254229cdcc12f24fbd04c7742d8081ca0f19a54f7",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0019.bf16",
+      "bytes": 168576000,
+      "sha256": "54997a1b5abc88909ab8b69e26189d94d36032f585b721e68cb26bb5ac56bed6",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0020.bf16",
+      "bytes": 217216000,
+      "sha256": "b880c722ad8902201b41950da7e5b2af0cf32660fdb256d93866cb528a22e437",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0021.bf16",
+      "bytes": 180992000,
+      "sha256": "b33c14e3f449426e3307582e2f2d368a57fae684b383c1e36ae662ae579416ba",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0022.bf16",
+      "bytes": 222144000,
+      "sha256": "3d9f329ddf137dc6d25890d8dee8ede96372d34ba825800a931328b1f404ffbd",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0023.bf16",
+      "bytes": 223616000,
+      "sha256": "c0524baee0d1a52e26363c5e73f98d9f54cb5b43f4fe1c7e37e91832959b9d0d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0024.bf16",
+      "bytes": 223104000,
+      "sha256": "f82cfee4149c9a0257d09b9340cb150fd2bcde698ead5de0703722f6a5a1cfee",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0025.bf16",
+      "bytes": 189056000,
+      "sha256": "506bcf0aa601cff091c0369a457c5e1d72a486055ad57ced1a4a547407500161",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0026.bf16",
+      "bytes": 270208000,
+      "sha256": "ec1ef045a23d1f3828903e71c00941ceb4beb1fc16c973f8d641d5d71518dc8f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0027.bf16",
+      "bytes": 232960000,
+      "sha256": "d95a71e2148af568f4ed52513db35f0ffb71f1980feaf719f8d712f0c248bad7",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0028.bf16",
+      "bytes": 189568000,
+      "sha256": "cdb6ebcc8386e8ef4c44003c53b96fb334a66ba5bc714a75f8b95fc6d4f5c1cd",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0029.bf16",
+      "bytes": 215296000,
+      "sha256": "377d8e01be6d89e9fb8019d91ba024e0174e02e71e37094358d974d38495e3c1",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0030.bf16",
+      "bytes": 235072000,
+      "sha256": "b0fc9ff4263452f1b4e3c9fcc78db45755cffe9db9e553a1651d5b1c51de1611",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0031.bf16",
+      "bytes": 204544000,
+      "sha256": "105c5fae2da877580f4262e43e65bce7f5abff3539ecac54a9fc765f0f84caf1",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0032.bf16",
+      "bytes": 226560000,
+      "sha256": "423b71fd568679208c88d824b4975a4d7afc51e7f2398b6ba169e71204bdff4f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0033.bf16",
+      "bytes": 204032000,
+      "sha256": "d0041fde4ff5a0f5952a616fb2881034d9db8449a0426b631019a10fd34cf883",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0034.bf16",
+      "bytes": 212800000,
+      "sha256": "3a0b2a742f054a4099629d66c009a59a4058379b844781b6ba54edfe427dc3d8",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0035.bf16",
+      "bytes": 181312000,
+      "sha256": "29717bd9b1d7dc5b1c9d8e24cd0cd5e5029241ffd1b480afb1293ac4151cd4d8",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0036.bf16",
+      "bytes": 225984000,
+      "sha256": "35f426bc29e6bf28542f8d583d4798f8c2bb88e212969e955f28f24f0174f09a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0037.bf16",
+      "bytes": 212288000,
+      "sha256": "25fbfffa43ff00d7d7b96d372438c35a095c409dbbd3f81cd8424e3af083971c",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0038.bf16",
+      "bytes": 159424000,
+      "sha256": "13087bfaea6918903035979042115cc3c31e2626c81354b21ce9d0062f9059ab",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0039.bf16",
+      "bytes": 188160000,
+      "sha256": "408748402f0c248c624acec826f41b7680130930a634ea110b0f08d1de44cd58",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0040.bf16",
+      "bytes": 186048000,
+      "sha256": "80a420e0f9186b13980b470c42d970a9400b2b7a9b26054a46ef167a5b067cb4",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0041.bf16",
+      "bytes": 211008000,
+      "sha256": "8f62350311d787a4502e90e436ae7998ed9134c0c0f690cc8de0539b7e9e5039",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0042.bf16",
+      "bytes": 166464000,
+      "sha256": "2d461ac073c34bf047f711ab29f7335b51d0eff4f17b74234970f79ea341f6d4",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0043.bf16",
+      "bytes": 170752000,
+      "sha256": "8477c61668aee85786fab47872340fdcd3d9ffd851d82a0f566af4aceba48cd7",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0044.bf16",
+      "bytes": 188160000,
+      "sha256": "d93ed5001797b3ab2f411d2ca2bb50e741e51f018d0a5b3b5a24ee12ea441eda",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0045.bf16",
+      "bytes": 217088000,
+      "sha256": "b77e53a40df98deba901fd4311ca67d87f67f3a08f725f3a0ba31d05f8674a5d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0046.bf16",
+      "bytes": 175936000,
+      "sha256": "382b3ae68ce5fa64d75e743757227225806e78fd73f00752851547ab47a7eb90",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0047.bf16",
+      "bytes": 198784000,
+      "sha256": "c7452468123946caca3cb73ffb3de1c9bd00ed64b286f16706d7c8b0dd5a40f1",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0048.bf16",
+      "bytes": 170496000,
+      "sha256": "4f41d3742a688957a84143ef3ec5397213d38d4db1124d276da5e4157ee61f8f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0049.bf16",
+      "bytes": 261504000,
+      "sha256": "9d243312136623d5964f925bc7e42f817feec7af3706a5c6a74b2d6060746f4b",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0050.bf16",
+      "bytes": 228352000,
+      "sha256": "315ae3a16522d1aae3d9ec306a309ce2f6cf9005d979601ba5b7265f990c8a1c",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0051.bf16",
+      "bytes": 205120000,
+      "sha256": "7e7d7ae1cee8246eff1ebd0dad61b1437383d516fde5cd3c8a13461f7d5e6dfa",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0052.bf16",
+      "bytes": 192064000,
+      "sha256": "3b760a92c19137a2e0169340f43d8e03633d5fe3cd2a6c69f4c804e56454870b",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0053.bf16",
+      "bytes": 259840000,
+      "sha256": "885dabaff24e2797836474ccb57e154e6e98f9b60f2bda36c3fc8d125aa2adc2",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0054.bf16",
+      "bytes": 188096000,
+      "sha256": "7743926d19767afa8aad60b9b8d62f9d45f2424ecfcde4aa1c84163df101153a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0055.bf16",
+      "bytes": 204992000,
+      "sha256": "69a976ad3106064f0f31181a8da530fc4fd6e72dc069c6c9b2947e3cc0b7b72f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0056.bf16",
+      "bytes": 245376000,
+      "sha256": "c6115b8e4dbd3ed2a6d381dcf33fee42ae0000880dabdcb6f4f3cde4fd441ac5",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0057.bf16",
+      "bytes": 214848000,
+      "sha256": "6118389424deccf4035fc4530abc29b3fc38b548a10af8b66c9bff17305c4b2a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0058.bf16",
+      "bytes": 201216000,
+      "sha256": "7e678d7c742fd99052e080f2dd4c65464a703440c1bf16cc38cd82a6ec5f0595",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0059.bf16",
+      "bytes": 233600000,
+      "sha256": "65899208695f6db6e7c739493814c7422e5332165834fe707b830ec5cbca6d7f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0060.bf16",
+      "bytes": 150656000,
+      "sha256": "32ae68fc6112255d6450e0b3f0d495e493ad640b6246909a15f4c360b23e72f6",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0061.bf16",
+      "bytes": 271360000,
+      "sha256": "53eb9df50482db41fc2421fbf9fdac1cc2046b2ec9360cb6a87e4db6fa5310e2",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0062.bf16",
+      "bytes": 182336000,
+      "sha256": "7954f9e2cf8146a892fd507b7e2b50de8ca04a7ca022106718f831de4ac8a9b7",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0063.bf16",
+      "bytes": 132992000,
+      "sha256": "c0b25d5b51613014f226b7c830d253eb2d64bd3d0ecefba09ececb4a265f7b41",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0064.bf16",
+      "bytes": 214464000,
+      "sha256": "09999c7b0bdee2a2437f3d3aeaa1649126ca6287a316490580af9c57a0057e7d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0065.bf16",
+      "bytes": 247232000,
+      "sha256": "bb6fa5f482a5b7d3c56d0d0bcd460a1e39ea944d89be0c57d3c88969916b9b78",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0066.bf16",
+      "bytes": 271232000,
+      "sha256": "5d075c13adae069af2147611c28dc610f1b8f3b723c6ec40a18c1ad7e97df1ad",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0067.bf16",
+      "bytes": 166656000,
+      "sha256": "b13db960d49adc4eac6bcc33371bfe284025d9b1346aef7e891d9774c063e1b3",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0068.bf16",
+      "bytes": 224384000,
+      "sha256": "5fee131181f0b5c4a9ca43423ac008f7e3f67ab586aa3a87ef84934b81d188ee",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0069.bf16",
+      "bytes": 170368000,
+      "sha256": "b00ddce0bf7a03b1863ea77aad65f18f2a433947ec89894fe7e2ee0172d53f24",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0070.bf16",
+      "bytes": 237632000,
+      "sha256": "fd46fcb2b0f23dbf95d1ec219561ea884b592559521cff6d7876fe906b0096ad",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0071.bf16",
+      "bytes": 235392000,
+      "sha256": "fa3669b00e17cd8ca666a730f501c95500b3a7f4a976039f7c87ae8356e401ed",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0072.bf16",
+      "bytes": 197312000,
+      "sha256": "8ad987f3702b4a89866d2431ca510ca0f6a87b875bc7261cf346f27503920836",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0073.bf16",
+      "bytes": 206400000,
+      "sha256": "716c85ae52a2ad95db986534402efc9e41094c6fd260b2c685b5a1351a1876a3",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0074.bf16",
+      "bytes": 195904000,
+      "sha256": "2979a9398fb1ab94a52e9f7baaa48431e523db5865880db540391780095b36e4",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0075.bf16",
+      "bytes": 248384000,
+      "sha256": "573e9a138edac148947368f40b534a9dfb8bf61fd6e2f5d5803aa01750d8657b",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0076.bf16",
+      "bytes": 170432000,
+      "sha256": "0a5dc77b260afac60ec048acd92a5bc3a108fbce4f83d38c7eb8148ddd641386",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0077.bf16",
+      "bytes": 188864000,
+      "sha256": "17d3a75f0b03f286337b5795e91e91b8d77093e8aa571c807239be6b31210971",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0078.bf16",
+      "bytes": 185152000,
+      "sha256": "9092c2cedacd92e84e6089d817929d863fa8e584b78eaed8e5202476b2d247ac",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0079.bf16",
+      "bytes": 188480000,
+      "sha256": "4f02037e8799a88bfa19d23387deabe8da9d7c3ff9e1c1464639d298f9468c7a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0080.bf16",
+      "bytes": 224128000,
+      "sha256": "bbe085ce1dd302510e5922241cd31359484c2b34b17a3d547beb0c47cf6b9e92",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0081.bf16",
+      "bytes": 177856000,
+      "sha256": "aa5f05cfcd60ea518422cf535410f7f0e9b248726aa459b4da0a4d8f43302b31",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0082.bf16",
+      "bytes": 180032000,
+      "sha256": "2033635bf34745d4c9cefde28ceac7e1109ad04867242959f4854ee8dddcd99c",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0083.bf16",
+      "bytes": 232448000,
+      "sha256": "94392a473857ba2f45105c3f0ece000c2a883b3c9bc8f974c9413799950306dc",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0084.bf16",
+      "bytes": 206912000,
+      "sha256": "78955ac305b304c19d4faded86d3cea859b43c5035ecd40446359c0816d687b6",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0085.bf16",
+      "bytes": 193536000,
+      "sha256": "e28920009212d10d5b7c897938bea38a3b681d5c01979cfdbc80ef24efbaead5",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0086.bf16",
+      "bytes": 235136000,
+      "sha256": "72c330fc7d484efa3a561dab012f6b7383f74625f36b2e1c9f0999dfe2d665c8",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0087.bf16",
+      "bytes": 203712000,
+      "sha256": "f4494449f6308b54f51cd6c8325371ef2afe670ebc98ac8f8d8ec7c7a0e638fa",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0088.bf16",
+      "bytes": 214080000,
+      "sha256": "147c7f51c4ddac0694997a9770243a91e1b65f495dbd4b21ce5da059dc53866a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0089.bf16",
+      "bytes": 187392000,
+      "sha256": "8c8e61825ef8957f785f5424b805b13bbc21f2932b8f6cfa446621848a9ea5cd",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0090.bf16",
+      "bytes": 185216000,
+      "sha256": "270f786dd330f3f288b6e6963a8b31988f5552701f01ecb04529a937728ec1b3",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0091.bf16",
+      "bytes": 230144000,
+      "sha256": "851cf32ccd6245860f57075cb6651fe411a6fa33f20bcc13b7dcffb9faada2b9",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0092.bf16",
+      "bytes": 190144000,
+      "sha256": "6417c3d185cade88a26efd9284362da85a7665421a0043bb8e6c17f9f387babe",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0093.bf16",
+      "bytes": 251328000,
+      "sha256": "3ad7248f27838393009d66867cb9407283150f013d0606be2605b8b29d160457",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0094.bf16",
+      "bytes": 227264000,
+      "sha256": "7e6f35bc888e91c30e69890be21c6907ff12ab4c4e5c929b3847a658f6182075",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0095.bf16",
+      "bytes": 168576000,
+      "sha256": "b74302c996ef0ed856a3e62cebfab5a8a61c7fb392e868caa2135a6a76b68956",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0096.bf16",
+      "bytes": 169280000,
+      "sha256": "dd237ed0ca5796829d2149097ef22aa26356b583a823f8a31e4badb6bd4dedbb",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0097.bf16",
+      "bytes": 191040000,
+      "sha256": "f1b4b411eb4d19f3b7904837d1424b56d827c1a4ebfc29df479bdc8142f4a64c",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0098.bf16",
+      "bytes": 200448000,
+      "sha256": "57d37cd358429e17e5d94fde3fb726eb9b5af978cb303b51b82f86473332b832",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0099.bf16",
+      "bytes": 226560000,
+      "sha256": "22c106354b1495cf44d32fda2276678d59bf125955ac15bde7d0434a785d45c0",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0100.bf16",
+      "bytes": 183424000,
+      "sha256": "483100a34383471060540e3b4ea0dc37a71fa578d17306993b2316a9e34a6199",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0101.bf16",
+      "bytes": 250816000,
+      "sha256": "ff77a5bfe4400af534559620d3c7214489d3d8ab5915c87631fd08946369a530",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0102.bf16",
+      "bytes": 216448000,
+      "sha256": "a2bd97a90e587e91bc3b92e14a5df82881926d28bd309e8c97df67de70e0705a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0103.bf16",
+      "bytes": 182080000,
+      "sha256": "cd87f29ed9653ea9fed11dae36393bb10c418b6ff9c5cd03ed1d15ed790880c6",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0104.bf16",
+      "bytes": 211904000,
+      "sha256": "cf9d426c8b688e34c854070a4363d32c9e0f9052815030b97decff74c72188a2",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0105.bf16",
+      "bytes": 204864000,
+      "sha256": "00e5f030a3690dd8c35876de781c16ac029a2534bed8e8755d9e28e7b1cce38b",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0106.bf16",
+      "bytes": 221696000,
+      "sha256": "cb8c45d6e1a56e7c241e44976846a20b12e1b514adc1548c778075211d43e6bf",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0107.bf16",
+      "bytes": 211200000,
+      "sha256": "f0782698bbfdf8fb8b89c6ffff39a8c8c5376d8eef9d551fbc980abc72481e3a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0108.bf16",
+      "bytes": 237184000,
+      "sha256": "9759d16129d972cf62b43d7fb62fabdc41876f9f15f77fe171a686c59e76c311",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0109.bf16",
+      "bytes": 231296000,
+      "sha256": "795988d10b4aad7fee866520e17276ab02d0181bf7992f3f4120aa06bb794263",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0110.bf16",
+      "bytes": 241728000,
+      "sha256": "b5501a0c6c24a62b3b7dcdbccefb49895b24413f348cd4bc25856ea294ecb565",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0111.bf16",
+      "bytes": 187200000,
+      "sha256": "1094d20e945658064f1ba1cde6b2d4fcf18df46d5c4fd7c1d98107dcf716f3c3",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0112.bf16",
+      "bytes": 226496000,
+      "sha256": "ae7546bd9e82690f35afb34c051be8b691171a6d4aac97ec8aaa2288144e14af",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0113.bf16",
+      "bytes": 232768000,
+      "sha256": "da1fa97ac5218993331470b0fa0641f80ebcc9b639a1241deaac82e775e1b279",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0114.bf16",
+      "bytes": 146112000,
+      "sha256": "a18f455da8ce93227e6fca447ac4307e6668f786b6c5ae421b775f377792c48f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0115.bf16",
+      "bytes": 144000000,
+      "sha256": "26902476aa22788a0a98ab268d5cdd9310b24a05cfaa3d1db14b250293103a10",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0116.bf16",
+      "bytes": 235200000,
+      "sha256": "152b8d2a6f4de34de1f55ff53a0c3bfaddac07fb329ef625498fdf25fa1f97eb",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0117.bf16",
+      "bytes": 212160000,
+      "sha256": "215d84153bc6d5afec8b500be4d8d12fd1884ca6dc105696b835ce9327009bda",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0118.bf16",
+      "bytes": 186944000,
+      "sha256": "645ec39a6fb1e21d8c443f68a0a6ebff669423706ebfc15e575bcdbecfa637d3",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0119.bf16",
+      "bytes": 211904000,
+      "sha256": "c61801242dacfa7772c5ddc18b8734b862e84d8594e4bbd4813f94a0c91b0848",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0120.bf16",
+      "bytes": 221760000,
+      "sha256": "ecbfde757b512814f6d58e6d4824d1f12875059ceafc63e9fd55982fbf18ce13",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0121.bf16",
+      "bytes": 213568000,
+      "sha256": "838c031b64c0f01bd8fa0bd8ef6f63e0209379e88ba3a0ddd94573ea5ad4db6f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0122.bf16",
+      "bytes": 238144000,
+      "sha256": "8179a8c65967b7eba6010e0324fe1ebf40025cc138fb8f3e914be69d16f61910",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0123.bf16",
+      "bytes": 198144000,
+      "sha256": "0234d5ce70727d6e81dc5aaffbeffd72ddc90d8f82efebfa4267491386a45395",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0124.bf16",
+      "bytes": 208896000,
+      "sha256": "76e0a931d3eb8ec2a83b582256e494111e34de8d6c3e34f6c89c62f84bc01771",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0125.bf16",
+      "bytes": 196800000,
+      "sha256": "56d7ea173db321386b39982e4b143b5c4bbc4eca34dae6bd775ae7b2018815cd",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0126.bf16",
+      "bytes": 233344000,
+      "sha256": "cc1055ec7f1f01db59089d7e79ca7f0336a6856776559d1131c430940b30a141",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0127.bf16",
+      "bytes": 182336000,
+      "sha256": "47011c35258fd637f35fc6a1f6c740b4e649f572dcba427097d2ec2e6a058ac2",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0128.bf16",
+      "bytes": 238144000,
+      "sha256": "f0489c51be908448ea4762580ebee2b6d223c9b140988652d198ab7aabba1bf3",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0129.bf16",
+      "bytes": 219008000,
+      "sha256": "4d442ac90861581b29ffad5e66e85a4610875334ad7fb567b82ea06ea276251d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0130.bf16",
+      "bytes": 175232000,
+      "sha256": "1d0e1618c9e8ae191e077bc9260bd48c3610750c25520ac55d39fb619f15ea1d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0131.bf16",
+      "bytes": 263488000,
+      "sha256": "8cb413fb58179bbc86a6984c616a7b323b2cf1123b342f7aee1240aaf6b3047a",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0132.bf16",
+      "bytes": 225152000,
+      "sha256": "3b54f21893d75646df0dd6a82181d0a9bc707a8d7a684a74f436b9f1132bdbda",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0133.bf16",
+      "bytes": 193792000,
+      "sha256": "9086569620b5ad2da4e12dafa9a847ee2f4fc9fe3c1f41dcca559e057631af9d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0134.bf16",
+      "bytes": 193216000,
+      "sha256": "1cb2830fb66fde70e729f4eb8c8f7235ed0cf95c51227c9086794e9dbaef15c9",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0135.bf16",
+      "bytes": 356928000,
+      "sha256": "6edc50f18f65068c326335a29612698579ecbcabf70170320c70acff2941254e",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0136.bf16",
+      "bytes": 214400000,
+      "sha256": "cb011bfe4f48b887c1f5224d59e46d51aa9864abd21a439e9bec6a8b532ce3e2",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0137.bf16",
+      "bytes": 207872000,
+      "sha256": "0ae4092a4f0152d2b50673f0bd10d8492572432af361fb29c5c4b6f7db956876",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0138.bf16",
+      "bytes": 230848000,
+      "sha256": "e597ebb6ea15cad01eb1b4a6a9069868ce06ea602eee2f46291af26e6b6030f6",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0139.bf16",
+      "bytes": 236544000,
+      "sha256": "b64763c8c0a019c5827566efa76acd836319d38768a9d7af82ef9ebb33ada5a5",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0140.bf16",
+      "bytes": 262208000,
+      "sha256": "9bd7fd4917565cc699d50ab1fed86231186e1c7186e76036d1e624fd37679f5f",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0141.bf16",
+      "bytes": 188544000,
+      "sha256": "738313e4abfcea259a1212dec99838bc42a5b30bb035626252786aac7f19b592",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0142.bf16",
+      "bytes": 196288000,
+      "sha256": "ff2fcf9ce97b23fcf8530d050045190cabcd3687bc1f18401dfb4f669e092ffc",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0143.bf16",
+      "bytes": 221952000,
+      "sha256": "4ea5ae5f2d2340130b28f8273a07bd98c423bd3506c67ff542aeb7f28d30e6c4",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0144.bf16",
+      "bytes": 215168000,
+      "sha256": "2c887d1e801e551efff9922cc76d84c16a83ef2937692e131b2a2ea7d2f9c5c5",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0145.bf16",
+      "bytes": 296448000,
+      "sha256": "eebf8b234b149daebdf4ae87dc571ef395c696a19acd537238dec5f183c1fe21",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0146.bf16",
+      "bytes": 205696000,
+      "sha256": "12e30194f6f8750105d52aedd01fc0427e726aa3f3786e3dbe379331dda81d84",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0147.bf16",
+      "bytes": 219392000,
+      "sha256": "eb630c225310825485e13048708765212d33efb6c3e0e9c76b2efa49bc2ab16d",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0148.bf16",
+      "bytes": 161664000,
+      "sha256": "ea4bc378269dc9338c6aebf4f3175af552760552fbff4a9111e46c340e8f3ed9",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0149.bf16",
+      "bytes": 321792000,
+      "sha256": "4858415e280b03f900dcc2d7c35dfc286cf018f78e3c926edc21e596756d45ef",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0150.bf16",
+      "bytes": 240576000,
+      "sha256": "7260710b75dda31e3f9cb30d0e2a94ffea073c530924e313fea67e1a71369996",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0151.bf16",
+      "bytes": 252480000,
+      "sha256": "3a9962438cafd4259364c263ee8b66e9973d8c377192c02b36f97bc486aae343",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0152.bf16",
+      "bytes": 180608000,
+      "sha256": "d0402eb83813c753bf666050708a0c75a5b788db53d84ac2764483c4955c52f2",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0153.bf16",
+      "bytes": 195072000,
+      "sha256": "e89f7cbefc74cc857fc2d04ce36bb7359e60b889c545bf8a13eb6be45b9b01a4",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0154.bf16",
+      "bytes": 201408000,
+      "sha256": "fdef600781dc2ba21bbe5d818eeaedacb22c8c7c252fceabbea047db04ae23ba",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0155.bf16",
+      "bytes": 222912000,
+      "sha256": "744793c910a5eecbc07b078c7186f2027e2014397b04b576dac8db544c9e86f7",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    },
+    {
+      "path": "/root/autodl-tmp/WMKD_Benchmark_data/awm_7b/logit_cache/shard-0156.bf16",
+      "bytes": 69440000,
+      "sha256": "ae9eb3e863fdaeaaaaec18d27f3ac47ea229392292964a951f98a7f5a31183b2",
+      "classification": "DELETE_REGENERABLE_RAW_LOGIT_ONLY"
+    }
+  ],
+  "reclaimed_bytes": 33291968000,
+  "disk_after": {
+    "total": 634581417984,
+    "used": 254138400768,
+    "free": 380443017216
+  },
+  "manifests_datasets_models_retained": true,
+  "time": 1789849262.1314874,
+  "auto_shutdown": false
+}
