@@ -66,6 +66,12 @@ def main():
                 if digest not in blocked_seen:update(terminal['status'],True);blocked_seen.add(digest);push()
         except Exception as exc:put('local_transport_retry.json',dict(error=str(exc),time=time.time()))
         time.sleep(60)
+    # User-authorized cleanup is bounded to this campaign's reproducible shards.
+    # Failures are noncritical: preserve assets and record pending, never expand scope.
+    try:
+        cleaned=call([*SSH,'/root/miniconda3/bin/python /root/autodl-tmp/WMKD_Benchmark/scripts/awm_7b_cleanup.py'],600)
+        if cleaned.returncode:put('cleanup_pending.json',dict(error=cleaned.stderr[-1500:],noncritical=True))
+    except Exception as exc:put('cleanup_pending.json',dict(error=str(exc),noncritical=True))
     while True:
         try:
             sync()
