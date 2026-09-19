@@ -1,0 +1,20 @@
+{
+  "status": "RUNNING",
+  "host": "6004",
+  "construction_supervisor_pid": 2714,
+  "construction_worker_pid": 2719,
+  "campaign_pid": 4328,
+  "local_guardian_pid": 55188,
+  "temporary_heartbeat_id": "llmprint-7b",
+  "construction_target": {"fingerprints": 200, "iterations_each": 500},
+  "observed_completed_fingerprints": 6,
+  "observed_seconds_per_fingerprint": 179,
+  "observed_gpu_memory_MiB": 15251,
+  "negative_download_verified_slots": [1, 2],
+  "students_started": false,
+  "calibration_complete": false,
+  "engineering_repair": "CPU coordinator manifest path repaired; only waiting CPU coordinator3920 restarted. Healthy GPU worker2719 uninterrupted.",
+  "local_commits": ["516620e", "0c9d4de"],
+  "github_push": "PENDING_AUTH: noninteractive existing credentials unavailable",
+  "shutdown": "armed after terminal evidence/model verification, local sync and commit, and no worker; never release instance"
+}
