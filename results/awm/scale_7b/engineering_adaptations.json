@@ -1,0 +1,6 @@
+{
+  "optimizer": "AdamW8bit0.50.0 hardware storage adaptation; not FP32 equivalence",
+  "phi3_loader": "Native installed Phi3 loader used only to expose SHA-verified tensors; no forward; canonical config-derived QKV splitting and metric unchanged",
+  "paraphrase_prompt": "Requested response_transformation_prompt.txt resolves by exact approved SHA to configs/distillation/passive5_shared_bb_paraphrase_prompt_v1.txt; byte content unchanged",
+  "shutdown": false
+}

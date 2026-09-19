@@ -1,0 +1,43 @@
+{
+  "base": {
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+    "arc_challenge_acc_norm": 0.3660409556313993,
+    "truthfulqa_mc2_acc": 0.45754715790333667,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.45754715790333667,
+        "acc_stderr,none": 0.015803848095178836,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.35238907849829354,
+        "acc_stderr,none": 0.013960142600598661,
+        "acc_norm,none": 0.3660409556313993,
+        "acc_norm_stderr,none": 0.014077223108470144,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "a2": {
+    "model_path": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/models/Llama-2-7b-chat-hf",
+    "arc_challenge_acc_norm": 0.3660409556313993,
+    "truthfulqa_mc2_acc": 0.45754715790333667,
+    "raw_results": {
+      "truthfulqa_mc2": {
+        "acc,none": 0.45754715790333667,
+        "acc_stderr,none": 0.015803848095178836,
+        "alias": "truthfulqa_mc2"
+      },
+      "arc_challenge": {
+        "acc,none": 0.35238907849829354,
+        "acc_stderr,none": 0.013960142600598661,
+        "acc_norm,none": 0.3660409556313993,
+        "acc_norm_stderr,none": 0.014077223108470144,
+        "alias": "arc_challenge"
+      }
+    }
+  },
+  "reference_equals_base": true,
+  "source": "Existing benchmark clean Base utility at same exact revision; not PNFP Teacher utility",
+  "revision": "f5db02db724555f92da89c216ac04704f23d4590"
+}

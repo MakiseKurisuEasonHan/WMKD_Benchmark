@@ -1,0 +1,17 @@
+{
+  "method": "AWM", "scope": "a representative passive-method 7B extension",
+  "model_id": "meta-llama/Llama-2-7b-chat-hf", "revision": "f5db02db724555f92da89c216ac04704f23d4590",
+  "reference_modified": false, "independent_fresh_students": ["direct", "paraphrase", "logit"],
+  "awm_protocol": "results/ownership_protocols/awm_formal_protocol.json",
+  "detector": "all layers Wq/Wk; overlapping-vocabulary absolute-cosine dimension LAP/sign; full layer LAP if unequal layer counts; official unbiased linear CKA(W.T); original aggregation",
+  "threshold": "max of three fixed negative scores; positive strictly greater; ties negative",
+  "negatives": ["google/gemma-2b", "Qwen/Qwen2.5-3B-Instruct", "microsoft/Phi-3-mini-128k-instruct"],
+  "freeze_before_student_results": true,
+  "data": {"teacher": "clean canonical 7B", "samples": 20000, "categories": 8, "initial_candidates": 24000, "candidate_increment": 2000, "candidate_ceiling": 60000, "seed": 42},
+  "training": {"epochs": 3, "steps": 7500, "lr": 0.00001, "scheduler": "cosine", "warmup_ratio": 0.03, "effective_batch": 8, "max_length": 1024, "weight_decay": 0.0, "seed": 42, "bf16": true, "full_parameter": true, "activation_checkpointing": true, "optimizer": "bitsandbytes.optim.adamw.AdamW8bit", "optimizer_version": "0.50.0", "optimizer_note": "7B hardware storage adaptation, not canonical FP32 Adam implementation equivalence"},
+  "bc": {"temperature": 2, "ce_weight": 0.5, "kd_weight": 0.5, "kl_direction": "Teacher||Student", "mask": "all shifted assistant response positions", "cache": "full-vocabulary BF16, streamed/sharded, per-shard SHA", "compatibility": "cast selected FP32 output logits to canonical BF16 serialization"},
+  "paraphrase": {"model": "Qwen/Qwen2.5-3B-Instruct", "revision": "8f4992eda43eea7c770690ddc0de8f732da246f5", "prompt_sha256": "085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676", "do_sample": true, "temperature": 0.7, "top_p": 0.9, "seed": 42, "min_tokens": 64, "length_multiplier": 1.5, "cap": 1536, "targeted": false, "canonical_atomic_identity_rule": "Qwen token count<=1"},
+  "utility": ["arc_challenge", "truthfulqa_mc2"],
+  "llmprint": "PAUSED_FOR_AWM_SPEED_COMPARISON; all artifacts preserved",
+  "auto_shutdown": false, "completion": "verify, sync, commit, keep instance on and GPU idle"
+}

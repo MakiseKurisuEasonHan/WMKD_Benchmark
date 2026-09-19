@@ -1,0 +1,420 @@
+正式决策：
+
+本轮 7B passive extension 从 LLMPrint 切换为 AWM。
+
+LLMPrint 保持：
+PAUSED_FOR_AWM_SPEED_COMPARISON
+
+不要删除：
+- 已完成的 58/200 fingerprints
+- 13 个 negative models
+- manifests
+- SHA
+- logs
+- resume state
+
+后续本轮不再运行 LLMPrint。
+
+现在一次完成：
+
+AWM 7B reference/calibration
+→ Direct Distillation
+→ Paraphrasing + Distillation
+→ Logit Distillation
+→ final detector
+→ utility
+→ unified report
+
+━━━━━━━━━━━━━━━━━━━━
+一、固定模型
+━━━━━━━━━━━━━━━━━━━━
+
+所有正式模型继续使用：
+
+Llama-2-7b-chat-hf
+
+revision:
+f5db02db724555f92da89c216ac04704f23d4590
+
+AWM reference：
+clean 7B Llama
+
+三个 Student：
+全部独立从 clean 7B Llama 初始化。
+
+不得使用 PN-FP watermarked Teacher 或 Student。
+
+━━━━━━━━━━━━━━━━━━━━
+二、AWM 7B reference / calibration
+━━━━━━━━━━━━━━━━━━━━
+
+已完成真实测速：
+
+- 完整 32×36 layer matching
+- 2304 CKA
+- total wall time = 47.77 s
+- self-score = 1.0
+- canonical negative score = 0.001993625
+- peak GPU = 2.25 GiB
+- host RAM = 15.18 GiB
+
+测速没有简化 detector。
+
+现在正式执行 AWM 7B calibration。
+
+必须严格恢复现有 WMKD_Benchmark AWM canonical protocol：
+
+- Wq/Wk extraction
+- alignment
+- layer matching
+- CKA
+- native score
+- threshold definition
+- fixed negative model count
+- negative model identity rules
+
+7B threshold 不得沿用 3B threshold。
+
+历史规则：
+threshold = 三个固定 negative models 得分的最大值
+
+请从项目现有 AWM records 中确认 exact rule 并执行。
+
+完成后冻结：
+- clean 7B reference
+- three negative scores
+- final 7B threshold
+- detector config
+- manifests / SHA
+
+Student 结果出来后不得重新 calibration。
+
+━━━━━━━━━━━━━━━━━━━━
+三、Direct Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+Teacher：
+clean Llama-2-7b-chat-hf
+
+Student：
+independent clean Llama-2-7b-chat-hf
+
+严格复用 WMKD_Benchmark canonical Direct / Ba protocol。
+
+如果 canonical setting 是：
+- 20k frozen ordinary teacher-response dataset
+- 3 epochs
+- 7500 steps
+- fixed seed
+- fixed template
+- fixed response masking
+- fixed LR / scheduler
+
+则全部保持。
+
+7B engineering adaptation允许：
+- BF16
+- full parameter
+- activation checkpointing
+- AdamW8bit 0.50.0
+- smaller micro batch + gradient accumulation while preserving effective batch
+
+不要减少：
+- dataset size
+- epochs
+- steps
+- scientific objective
+
+Direct 完成后：
+- fresh reload Student
+- AWM detector
+- native AWM score
+- threshold comparison
+- detected / not detected
+- ARC-Challenge
+- TruthfulQA-MC2
+- runtime
+- peak VRAM
+- host RAM
+- final model SHA
+- report
+
+Detector 高低都接受，不重训。
+
+━━━━━━━━━━━━━━━━━━━━
+四、Paraphrasing + Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+改写工具模型保持之前 canonical：
+
+Qwen/Qwen2.5-3B-Instruct
+
+来源：
+ModelScope
+
+必须复用已有 repo / revision / manifest。
+
+固定 generation：
+
+do_sample = true
+temperature = 0.7
+top_p = 0.9
+seed = 42
+
+dynamic max_new_tokens：
+minimum = 64
+multiplier = 1.5
+cap = 1536
+
+canonical prompt：
+response_transformation_prompt.txt
+
+expected SHA256：
+085a77a7a32d06f31ec4a11a23977517fef64eee794817a5a1a9ed51a1e45676
+
+开始前重新核验 SHA。
+
+流程：
+
+clean 7B Teacher responses
+→ Qwen2.5-3B-Instruct paraphrase
+→ frozen 20k paraphrased dataset
+→ unload paraphraser
+→ independent clean 7B Student
+→ canonical paraphrase distillation
+→ fresh reload
+→ AWM detector
+→ utility
+→ final model/report
+
+不要针对 AWM 做 targeted paraphrase。
+
+━━━━━━━━━━━━━━━━━━━━
+五、Logit Distillation
+━━━━━━━━━━━━━━━━━━━━
+
+严格复用 existing canonical Bc / soft-logit protocol。
+
+冻结：
+- temperature
+- KL / CE weighting
+- masking
+- supervised positions
+- tokenizer alignment
+- sequence construction
+- LR
+- steps/epochs
+- seed
+- effective batch
+
+Teacher：
+clean 7B Llama
+
+Student：
+independent clean 7B Llama
+
+优先使用已经在 PN-FP 7B 验证过的 offline full-vocab logit cache pipeline。
+
+已知 compatibility fix：
+Transformers 可能将 BF16 lm_head output 转为 FP32。
+
+如果本轮也发生：
+在 canonical supervised positions 选取之后显式 cast 回 BF16，
+再做 full-vocab serialization。
+
+这只记录为：
+serialization dtype compatibility fix
+
+禁止：
+- top-k
+- hard-label替代
+- 改 temperature
+- 改 KL/CE weights
+- 改 supervised positions
+- 改 vocab
+
+先统计真实 supervised token count，再算空间。
+
+logits：
+- sharded
+- streamed
+- SHA verified
+- manifest recorded
+
+缓存完成后卸载 Teacher，再训练 Student。
+
+完成后：
+- fresh reload
+- AWM native score
+- threshold
+- detected?
+- ARC
+- TruthfulQA
+- final model/report
+
+━━━━━━━━━━━━━━━━━━━━
+六、最终统一表
+━━━━━━━━━━━━━━━━━━━━
+
+最终输出：
+
+Condition
+Base/Reference
+Direct
+Paraphrase
+Logit
+
+至少包含：
+
+- AWM native score
+- frozen 7B threshold
+- detected?
+- score / reference ratio if useful
+- ARC-Challenge
+- TruthfulQA-MC2
+- runtime
+- peak GPU VRAM
+- peak host RAM
+
+不要只报 detected / not detected。
+必须保留 native AWM score。
+
+━━━━━━━━━━━━━━━━━━━━
+七、持续监控
+━━━━━━━━━━━━━━━━━━━━
+
+从现在开始持续监控整个 pipeline。
+
+至少每 30 分钟检查一次：
+
+- 当前阶段
+- progress / total
+- training loss
+- GPU VRAM
+- GPU utilization
+- host RAM
+- disk free
+- OOM count
+- NaN/Inf
+- stalled process
+- dataset generation status
+- cache generation status
+- detector status
+
+不要因为普通进展向我频繁提问。
+
+如果一切正常：
+继续自动执行，不等待确认。
+
+━━━━━━━━━━━━━━━━━━━━
+八、出现问题时的处理
+━━━━━━━━━━━━━━━━━━━━
+
+普通可修复工程问题：
+自行修复、记录、继续。
+
+例如：
+- dtype compatibility
+- path mismatch
+- resume state
+- cache serialization
+- minor runner bug
+- retryable generation failure
+
+无需询问我。
+
+但出现以下情况必须立即停止相关阶段并告诉我：
+
+1. scientific protocol 需要改变
+2. AWM detector / threshold rule 无法按 canonical protocol保持
+3. model / dataset corruption
+4. repeated OOM 无法通过纯 engineering adaptation解决
+5. NaN/Inf 持续出现
+6. loss 明显发散
+7. disk 预计不足且继续会危及正式 artifact
+8. logit scientific definition无法保持
+9. paraphrase prompt SHA 不匹配且无法解释
+10. Student 初始化或 dataset identity 出现无法确认的偏差
+
+此时：
+- 保存证据
+- 停止相关任务
+- 保持 GPU安全
+- 不自动重设计实验
+- 立即向我汇报
+
+━━━━━━━━━━━━━━━━━━━━
+九、磁盘和模型
+━━━━━━━━━━━━━━━━━━━━
+
+一次只跑一个大型 GPU task。
+
+每个阶段前后：
+nvidia-smi
+df -h
+
+保留：
+- AWM calibration artifacts
+- Direct final 7B Student
+- Paraphrase final 7B Student
+- Logit final 7B Student
+- detector
+- utility
+- configs
+- manifests
+- reports
+
+清理：
+- intermediate optimizer checkpoints
+- redundant temp caches
+- temporary logits after final verification if safe
+- duplicate base copies
+
+不要删除唯一正式模型。
+
+━━━━━━━━━━━━━━━━━━━━
+十、记录与 Git
+━━━━━━━━━━━━━━━━━━━━
+
+每个阶段完成后：
+- update experiment log
+- update project status
+- update TODO
+- update decisions
+- write reproduction report
+- local git commit
+
+GitHub authentication失败：
+记录 push pending
+不要阻塞实验
+
+不要修改 PN-FP 7B已有正式结果。
+不要修改暂停的 LLMPrint artifacts。
+
+━━━━━━━━━━━━━━━━━━━━
+十一、这次不要自动关机
+━━━━━━━━━━━━━━━━━━━━
+
+和之前不同：
+
+全部 AWM Direct / Paraphrase / Logit 做完后，
+完成最终核验和本地同步，
+但不要自动关机。
+
+保持实例开启并 GPU idle。
+
+最后向我汇报：
+
+1. AWM 7B calibration
+2. Direct结果
+3. Paraphrase结果
+4. Logit结果
+5. utility
+6. runtime
+7. memory
+8. disk
+9. final artifact状态
+
+然后等待我的下一步决定。
+
+现在直接开始执行，不要只给计划。
