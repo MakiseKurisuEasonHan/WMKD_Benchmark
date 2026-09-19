@@ -1,3 +1,5 @@
+当前状态（PN-FP7B 6004蒸馏）：FAILED；终态证据已本地SHA核验，详见docs/reproduction_reports/pnfp_7b_distillation_6004_final.md。按本轮授权准备安全关机；不释放实例、不删除正式模型。
+
 当前最高执行状态（2026-09-19 PN-FP7B 6004）：新实例591GiB数据盘、约539GiB可用，Teacher/Base/fingerprints/prompt SHA通过；Direct canonical数据生成已启动。授权独立fresh Direct→Paraphrase→Logit，20k/7500updates不变；精确监督token预算后生成BF16 full-vocab shards，禁止top-k。全部完成或不可恢复阻塞后，本地同步SHA核验/Git提交，再安全关闭6004、不释放。入口results/pnfp/scale_7b/distillation_6004/。
 
 当前最高状态（2026-09-19 PN-FP 7B蒸馏）：用户正式接受Teacher804/1024，授权独立fresh7B Direct→Paraphrase→Logit串行；原extension终态保留为历史。本轮磁盘门槛预检BLOCKED：实测剩余18.186GiB，三份Student仅权重需37.661GiB；未启动数据生成/训练/logits，未删除正式模型。指定原prompt SHA已精确匹配。每阶段新增峰值不得超过当前剩余85%，Bc禁止自行full-vocab→top-k。入口results/pnfp/scale_7b/distillation/preflight.json；报告docs/reproduction_reports/pnfp_7b_distillation_preflight_20260919.md。

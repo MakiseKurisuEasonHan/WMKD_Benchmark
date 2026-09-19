@@ -1,0 +1,20 @@
+[
+  "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/env/bin/python",
+  "/root/autodl-tmp/WMKD_Benchmark/scripts/generate_teacher_qa_formal.py",
+  "--model-path",
+  "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+  "--teacher-run-id",
+  "wa050_extension_v1_best_call21_fresh804",
+  "--output",
+  "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/distillation_6004/direct/raw_candidates.jsonl",
+  "--errors",
+  "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/distillation_6004/direct/errors.jsonl",
+  "--target-candidates",
+  "24000",
+  "--batch-size",
+  "8",
+  "--seed",
+  "42",
+  "--telemetry",
+  "/root/autodl-tmp/WMKD_Benchmark/results/pnfp/scale_7b/distillation_6004/generation_telemetry.json"
+]

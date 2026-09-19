@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-18T14:42:00.550665+00:00",
-  "object_count": 72,
+  "generated_at": "2026-09-19T02:12:23.684379+00:00",
+  "object_count": 74,
   "objects": [
     {
       "method": "PN-FP",
@@ -102,7 +102,7 @@
       "full_log_sha256": "6691fca531d7929c0fcb87c6cc7029425fc8bfe45b836dd5a1f5ce893a7c7303",
       "final_model_manifest": "86287873ef8d86f7b056bd907b65a0e05e1dddd8a2047b66f114a04e3c3b51bb",
       "modelscope_repo": "MakiseKurisuEasonHan/WMKD-iSeal-A6-Teacher",
-      "scientific_status": "A6 COMPLETE \u2014 PREFERRED TEACHER SELECTED",
+      "scientific_status": "A6 COMPLETE — PREFERRED TEACHER SELECTED",
       "watermark_evaluation_available": false,
       "utility_available": true,
       "checkpoint_localization_support": false,
@@ -1079,6 +1079,36 @@
       "modelscope_repo": null,
       "preferred_teacher_candidate": false,
       "telemetry_records": 24
+    },
+    {
+      "method": "PN-FP",
+      "role": "ba_7b_student",
+      "experiment": "Ba",
+      "run_id": "pnfp_7b_6004_direct",
+      "full_log_path": "results/pnfp/scale_7b/distillation_6004/direct/full_experiment_log.json",
+      "full_log_sha256": "f29d31b67226ad8911925441f9c1b4b2fd9c941bd73bc25b939dd6af4b47fe47",
+      "scientific_status": "completed",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "final_model_manifest": "results/pnfp/scale_7b/distillation_6004/direct_final_manifest.json",
+      "modelscope_repo": null,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 7500
+    },
+    {
+      "method": "PN-FP",
+      "role": "bb_7b_student",
+      "experiment": "Bb",
+      "run_id": "pnfp_7b_6004_paraphrase",
+      "full_log_path": "results/pnfp/scale_7b/distillation_6004/paraphrase/full_experiment_log.json",
+      "full_log_sha256": "e8fd173f9e1778f861e1d5b6af9c16ace9cf22ac6e6a45cc6f93b134dca9a776",
+      "scientific_status": "completed",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "final_model_manifest": "results/pnfp/scale_7b/distillation_6004/paraphrase_final_manifest.json",
+      "modelscope_repo": null,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 7500
     }
   ]
 }
