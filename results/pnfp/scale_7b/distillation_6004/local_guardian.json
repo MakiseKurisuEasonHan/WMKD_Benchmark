@@ -1,5 +1,17 @@
 {
   "pid": 50036,
-  "status": "MONITORING",
-  "host": "6004"
+  "status": "SHUTDOWN_COMMAND_SENT",
+  "terminal": {
+    "status": "FAILED",
+    "started": 1789750663.5698156,
+    "error": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_distill_campaign.py\", line 186, in main\n    run('logit_cache','pnfp_7b_distill_worker.py',['cache','--base',BASE,'--teacher',TEACHER,'--dataset',direct,\n  File \"/root/autodl-tmp/WMKD_Benchmark/scripts/pnfp_7b_distill_campaign.py\", line 63, in run\n    assert process.returncode==0,stage+' failed; see preserved log'\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: logit_cache failed; see preserved log\n",
+    "ended": 1789783643.3184028,
+    "pid": 2988,
+    "shutdown_requires_local_sync_commit": true,
+    "final_model_sha_verified": {
+      "direct": true,
+      "paraphrase": true
+    },
+    "teacher_preserved": true
+  }
 }
