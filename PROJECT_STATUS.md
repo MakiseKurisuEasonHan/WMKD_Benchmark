@@ -1,3 +1,5 @@
+当前状态（PN-FP7B 6004蒸馏）：COMPLETED；终态证据已本地SHA核验，详见docs/reproduction_reports/pnfp_7b_distillation_6004_final.md。按本轮授权准备安全关机；不释放实例、不删除正式模型。
+
 当前最高状态（2026-09-19 PN-FP7B Logit-only恢复）：6004已启动，仅恢复Logit。Teacher/Direct/Paraphrase全部SHA核验通过，既有结果804/53/71不重跑。实测BF16 lm_head被Transformers4.44.2显式提升为FP32输出；按原Bc监督位置后cast BF16修复序列化，两样本23监督位置dtype/argmax/softmax/KL/重载/consumer梯度全部PASS，数值差异0。正式31.45GiB全词表缓存已启动，接续独立cleanStudent7500steps及Logit评估；完成同步/Git后关机，普通工程错误不自动当科学失败关机。入口results/pnfp/scale_7b/logit_recovery_6004/。
 
 当前状态（PN-FP7B 6004蒸馏）：FAILED；终态证据已本地SHA核验，详见docs/reproduction_reports/pnfp_7b_distillation_6004_final.md。按本轮授权准备安全关机；不释放实例、不删除正式模型。

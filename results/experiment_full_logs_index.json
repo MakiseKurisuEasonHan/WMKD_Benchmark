@@ -1,7 +1,7 @@
 {
   "schema_version": "wmkd.full-experiment-log-index.v1",
-  "generated_at": "2026-09-19T02:12:23.684379+00:00",
-  "object_count": 74,
+  "generated_at": "2026-09-19T04:17:11.365291+00:00",
+  "object_count": 75,
   "objects": [
     {
       "method": "PN-FP",
@@ -1106,6 +1106,21 @@
       "watermark_evaluation_available": true,
       "utility_available": true,
       "final_model_manifest": "results/pnfp/scale_7b/distillation_6004/paraphrase_final_manifest.json",
+      "modelscope_repo": null,
+      "checkpoint_localization_support": false,
+      "telemetry_records": 7500
+    },
+    {
+      "method": "PN-FP",
+      "role": "bc_7b_student",
+      "experiment": "Bc",
+      "run_id": "pnfp_7b_6004_logit",
+      "full_log_path": "results/pnfp/scale_7b/logit_recovery_6004/logit/full_experiment_log.json",
+      "full_log_sha256": "cb5f6400991ee6fbb93b55a97e5be9533865bc1235aa9e88ea18d6a20d2878c3",
+      "scientific_status": "completed",
+      "watermark_evaluation_available": true,
+      "utility_available": true,
+      "final_model_manifest": "results/pnfp/scale_7b/logit_recovery_6004/logit_final_manifest.json",
       "modelscope_repo": null,
       "checkpoint_localization_support": false,
       "telemetry_records": 7500
