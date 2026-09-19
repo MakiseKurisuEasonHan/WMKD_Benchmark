@@ -1,0 +1,27 @@
+{
+  "time": 1789814545.8156679,
+  "remote_outer_pid": 25947,
+  "remote_watchdog_pid": 25948,
+  "local_guardian_pid": 71496,
+  "campaign_pid_unchanged": 20134,
+  "science_worker_pid_unchanged": 20140,
+  "heartbeat": "PAUSED",
+  "auto_shutdown": true,
+  "instance_release": false,
+  "tests": [
+    "Python syntax PASS",
+    "bash syntax PASS",
+    "bounded transient retry PASS",
+    "no training replay PASS",
+    "scientific WAITING classification PASS",
+    "hard OOM classification PASS",
+    "active campaign/CPU worker/GPU shutdown veto PASS",
+    "remote read-only probe PASS"
+  ],
+  "remote_local_script_sha_match": true,
+  "script_sha256": {
+    "scripts/awm_7b_night_watchdog.py": "de73b56850ac6b23a6861d4d0078d35c0aad3defd990f8f484bfd9689f2457f8",
+    "scripts/awm_7b_night_watchdog.sh": "cba11757382ae5383ff0f8b6ef17e3d6a10b6c7e83184df3e7c3ff68e5da6cf7",
+    "scripts/awm_7b_night_local.py": "236099d713e509fd488365d66073634cfb9ce0934052c4ac9420af348c2093be"
+  }
+}

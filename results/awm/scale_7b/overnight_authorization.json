@@ -1,0 +1,16 @@
+{
+  "authorized_at": "2026-09-19T10:39:18.022443+00:00",
+  "source": "User explicit unattended overnight instruction 2026-09-19",
+  "supersedes": "Previous no-auto-shutdown operational rule only",
+  "science_unchanged": true,
+  "auto_shutdown": true,
+  "release_instance": false,
+  "chat_periodic_monitor": "PAUSED",
+  "success": "verify all models/results/SHA; sync local evidence; update reports/status; local commit; push nonblocking; no active workers; /usr/bin/shutdown",
+  "hard_failure": "preserve evidence; failure report; local sync/commit; no active workers; shutdown",
+  "waiting_for_user": "question/block report; WAITING_FOR_USER; 1800-second timeout from first wait; no protocol changes; safe closeout then shutdown",
+  "healthy_long_workers": "never classify elapsed runtime as idle",
+  "llmprint": "remain paused 58/200; preserve all assets",
+  "pnfp": "unchanged",
+  "transport_outage_fallback": "After 30 minutes without local closeout acknowledgement and no workers: archive full remote evidence, explicitly record sync pending, shutdown to prevent indefinite idle billing."
+}

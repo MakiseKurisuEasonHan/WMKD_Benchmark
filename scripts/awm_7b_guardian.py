@@ -19,7 +19,11 @@ def commit(message):
     r=call(['git','commit','--only','--pathspec-from-file='+str(spec),'-m',message]);assert r.returncode==0 or 'nothing to commit' in r.stdout,r.stderr
     return call(['git','rev-parse','HEAD']).stdout.strip()
 def update(stage,terminal=False):
-    text=(E/'final_report.md').read_text(encoding='utf-8') if terminal else '# AWM 7B representative passive-method extension\n\nCompleted stage: '+stage+'. Serial pipeline active; no shutdown. LLMPrint remains paused.\n'
+    night=(E/'overnight_authorization.json').exists()
+    text=(E/'final_report.md').read_text(encoding='utf-8') if terminal and (E/'final_report.md').exists() else '# AWM 7B representative passive-method extension\n\nStage: '+stage+'. LLMPrint remains paused.\n'
+    if night:
+        text=text.replace('No shutdown is authorized.','Night authorization: verified closeout then shutdown, never release instance.')
+        text+='\nLatest operational authority: overnight_authorization.json; automatic shutdown after success, hard failure, or 30-minute unanswered wait. Scientific protocol unchanged.\n'
     if not terminal:
         for s in ['reference','direct','paraphrase','logit']:
             f=E/s/'full_experiment_log.json'
@@ -28,7 +32,8 @@ def update(stage,terminal=False):
                 text+=f'\n{s}: native score={d["score"]}, frozen threshold={d["threshold"]}, detected={d["detected"]}; ARC={u["arc_challenge_acc_norm"]}, MC2={u["truthfulqa_mc2_acc"]}.\n'
     text+='\nAll Students independently start from clean canonical Llama2-7B-chat; AdamW8bit storage adaptation is not FP32 Adam implementation equivalence. Existing PNFP results and paused LLMPrint artifacts are unchanged.\n'
     REPORT.write_text(text,encoding='utf-8')
-    line=f'AWM7B（{datetime.datetime.now().isoformat(timespec="seconds")}）：{stage}。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；禁止自动关机。\n\n'
+    policy='夜间授权：核验/同步/commit后自动关机；不释放实例' if night else '禁止自动关机'
+    line=f'AWM7B（{datetime.datetime.now().isoformat(timespec="seconds")}）：{stage}。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；{policy}。\n\n'
     for name in STATUS:
         f=P/name;f.write_text(line+f.read_text(encoding='utf-8'),encoding='utf-8')
     ip=P/'results/experiment_full_logs_index.json';index=json.loads(ip.read_text(encoding='utf-8'))

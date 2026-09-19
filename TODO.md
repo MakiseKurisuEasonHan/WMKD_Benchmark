@@ -1,3 +1,5 @@
+当前最高夜间授权（2026-09-19 AWM7B）：冻结科学pipeline继续；暂停聊天15分钟心跳，独立远端watchdog与本地guardian静默运行。成功/不可恢复失败→证据核验、本地同步、commit后自动关机；真正WAITING_FOR_USER最多30分钟。正常长GPU/CPU worker不算idle。有worker禁止关机；不释放实例。LLMPrint暂停及PNFP结果不变。授权 results/awm/scale_7b/overnight_authorization.json 覆盖旧禁止关机文字。
+
 AWM7B（2026-09-19T19:07:16）：reference。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；禁止自动关机。
 
 当前最高正式授权（AWM7B）：本轮代表性passive7B扩展正式切换AWM，按冻结三负模型calibration→Direct→Untargeted Paraphrase→Logit串行闭环。LLMPrint保持PAUSED_FOR_AWM_SPEED_COMPARISON及58/200全部资产；PNFP结果不变。7B阈值已冻结0.007566815861277831，禁止根据Student重校准；3个Student均独立clean初始化，20k/7500steps不减。普通工程修复自主推进，科学/完整性硬阻塞停相关阶段汇报。至少30分钟监控，阶段同步/commit；完成后保持实例开启与GPU idle，明确禁止自动关机。入口results/awm/scale_7b，报告docs/reproduction_reports/awm_7b_extension.md。
