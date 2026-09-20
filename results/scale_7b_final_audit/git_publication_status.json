@@ -16,5 +16,20 @@
   "history_policy": "No API replay/squash/rebase/force push, no alternate repository or identity; preserve all local original commits",
   "head_equals_origin_main": false,
   "final_remote_content_verification": "NOT_POSSIBLE_UNTIL_PUSH",
-  "credentials_not_written": true
+  "credentials_not_written": true,
+  "local_scientific_closeout_commit": "1e757c28ee8cb37b23a7dd2b215b7675915fa04d",
+  "remote_main": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
+  "push_attempt": {
+    "observed_exec_exit_code": 1,
+    "error": "Cannot prompt because user interactivity has been disabled; unable to get password from user"
+  },
+  "remote_content_readback": {
+    "final_summary": "404_NOT_PUBLISHED",
+    "pnfp_report": "404_NOT_PUBLISHED",
+    "awm_report": "404_NOT_PUBLISHED",
+    "PROJECT_STATUS": "STALE_3B_STATUS",
+    "EXPERIMENT_LOG": "STALE_3B_LOG"
+  },
+  "remote_behind_existing_local_commits_before_receipt": 41,
+  "github_ready_as_7b_canonical_source": false
 }
