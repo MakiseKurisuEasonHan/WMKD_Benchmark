@@ -1,0 +1,42 @@
+{
+  "verified_commit": "3a6a924a0875e19f3704ef68699d345e0962b8ae",
+  "method": "GitHub App remote file API, pinned published commit",
+  "files": [
+    {
+      "path": "docs/reproduction_reports/7b_scale_extension_final_summary.md",
+      "blob_sha": "de5bb6fd3d6e1951f5fd487c3083392f93b48b08"
+    },
+    {
+      "path": "docs/reproduction_reports/pnfp_7b_distillation_6004_final.md",
+      "blob_sha": "d9d8a228fe176b67f8781e76fc03789ee116196b"
+    },
+    {
+      "path": "docs/reproduction_reports/awm_7b_extension.md",
+      "blob_sha": "4bb77d9dbab24ca38aa49033d2efc2679f51ec0a"
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "blob_sha": "6bc7386dec98a13cc6f8a3961a5559ad1894eea0"
+    },
+    {
+      "path": "EXPERIMENT_LOG.md",
+      "blob_sha": "97ccbb3470428d6ba5cbd405d5c38674ba5dce11"
+    }
+  ],
+  "checked_values": {
+    "pnfp": [
+      804,
+      53,
+      71,
+      144
+    ],
+    "awm": [
+      1,
+      0.9999952428042889,
+      0.9999933559447527,
+      0.999995737336576
+    ],
+    "threshold": 0.007566815861277831
+  },
+  "local_git_blob_match": true
+}

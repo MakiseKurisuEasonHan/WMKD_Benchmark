@@ -1,3 +1,5 @@
+2026-09-20 GitHub最终收口：原private仓库main已通过SSH正常push，42个原有本地提交完整保留；五个关键文件已通过GitHub API回读并匹配Git blob SHA。PN-FP/AWM 7B结果可作为论文修改的canonical source。旧push pending仅为历史；LLMPrint仍58/200暂停，7B cross-lineage未执行。本轮没有新实验、评估、生成、下载或关机。
+
 当前最高状态（2026-09-20 7B最终收口）：仅无卡核验/总结/文档/Git；不启动训练、检测、utility、生成、下载或关机。PN-FP Teacher804/1024；Direct53、Paraphrase71、Logit144（均/1024）已完成。AWM Reference1.0；Direct0.9999952428042889、Paraphrase0.9999933559447527、Logit0.9999957373365760；冻结tau0.007566815861277831，均检出。LLMPrint保持PAUSED_FOR_AWM_SPEED_COMPARISON58/200，cross-lineage暂停未运行。权威汇总 docs/reproduction_reports/7b_scale_extension_final_summary.md；核验/发布状态 results/scale_7b_final_audit/。以下旧授权与阶段状态为历史记录，不是新执行指令。
 
 当前状态（2026-09-09 Active Cross-Lineage Ba 最终闭环）：五个fresh Qwen Student全部7500steps、final save/fresh reload与utility完成。PNFP84/1024（Base43）；CTCC trigger0/95；SCW p0.9158855080604553未检出；EverTracer canonical N/A、exploratory AUC0.523；iSeal Level3 N/A。CPU证据/报告/索引闭环，等待用户独立preferred模型归档选择；禁止新实验、自动上传/删除或关机。shutdown_provenance=UNVERIFIED。入口 results/active_cross_lineage_ba/pipeline_state.json；总报告 docs/reproduction_reports/active_cross_lineage_ba_final_20260909.md。

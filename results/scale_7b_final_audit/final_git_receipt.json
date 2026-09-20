@@ -1,16 +1,27 @@
 {
-  "time": "2026-09-20T05:55:40.379306+00:00",
-  "scientific_closeout_commit": "1e757c28ee8cb37b23a7dd2b215b7675915fa04d",
-  "remote_commit": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
-  "branch": "main",
-  "origin": "https://github.com/MakiseKurisuEasonHan/WMKD_Benchmark.git",
-  "head_equals_origin_main": false,
-  "status": "PUSH_BLOCKED_CREDENTIALS",
-  "private_repo_identity_verified": true,
-  "original_40_commits_preserved": true,
+  "status": "PUSH_SUCCESS_REMOTE_CONTENT_VERIFIED",
+  "verified_local_head": "3a6a924a0875e19f3704ef68699d345e0962b8ae",
+  "verified_origin_main": "3a6a924a0875e19f3704ef68699d345e0962b8ae",
+  "head_equals_origin_main": true,
+  "remote_readback": "github_remote_readback.json",
+  "previous_receipt": {
+    "time": "2026-09-20T05:55:40.379306+00:00",
+    "scientific_closeout_commit": "1e757c28ee8cb37b23a7dd2b215b7675915fa04d",
+    "remote_commit": "d840b76637afaf6c699598832eee7d9c8c8d0d8d",
+    "branch": "main",
+    "origin": "https://github.com/MakiseKurisuEasonHan/WMKD_Benchmark.git",
+    "head_equals_origin_main": false,
+    "status": "PUSH_BLOCKED_CREDENTIALS",
+    "private_repo_identity_verified": true,
+    "original_40_commits_preserved": true,
+    "unrelated_dirty_files_preserved": true,
+    "force_push": false,
+    "history_rewrite": false,
+    "GitHub_readback_completed": true,
+    "GitHub_7b_reports_present": false
+  },
   "unrelated_dirty_files_preserved": true,
   "force_push": false,
   "history_rewrite": false,
-  "GitHub_readback_completed": true,
-  "GitHub_7b_reports_present": false
+  "scope": "Scientific closeout publication checkpoint; receipt itself is committed afterwards."
 }

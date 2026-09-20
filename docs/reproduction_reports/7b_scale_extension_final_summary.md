@@ -1,6 +1,6 @@
 # 7B scale extension: PN-FP and AWM — final verified summary
 
-Scope: **representative active/passive 7B scale extension**, specifically same-backbone Llama-2-7B-chat → independently fresh Llama-2-7B-chat Students. Cross-lineage was paused before training. LLMPrint remains paused at 58/200; neither is a completed result in this table.
+Scope: **7B same-backbone scale extension for one representative active method (PN-FP) and one representative passive method (AWM)**, specifically same-backbone Llama-2-7B-chat → independently fresh Llama-2-7B-chat Students. Cross-lineage was paused before training. LLMPrint remains paused at 58/200; neither is a completed result in this table.
 
 This closeout reads existing artifacts and hashes files on a CPU-only AutoDL instance. It does not regenerate data, retrain, recalibrate, or rerun detector/utility. Git publication status is recorded separately in `results/scale_7b_final_audit/git_publication_status.json`.
 
@@ -67,8 +67,8 @@ Same-lineage 3B results are historical references and were not changed. Project 
 
 ## Limitations and bounded conclusion
 
-In this **7B same-backbone extension for PN-FP and AWM**, PN-FP ownership hits decrease strongly after response distillation; Logit has higher retention than Direct/Paraphrase but still substantially fewer hits than the Teacher. AWM native weight-space scores remain near1.0 after all three training conditions.
-These are single-seed, method-specific endpoint observations, not significance tests or universal active/passive claims. The two methods use different Teacher/data conditions and different native metrics. Every Student begins from the same pretrained backbone lineage; near-reference AWM scores may reflect initialization/parameter similarity, not causal transmission of a new ownership signal. Utility ARC increases versus clean while MC2 declines; the two benchmarks do not prove global utility preservation. This is not all passive methods, all active methods, all7Bmodels, or a cross-lineage evaluation.
+In this **7B same-backbone extension for PN-FP and AWM**, PN-FP ownership hits decrease strongly after Direct, Paraphrase, and Logit distillation; Logit has higher retention than Direct/Paraphrase but still substantially fewer hits than the Teacher. AWM native weight-space scores remain near1.0 after all three training conditions.
+These are single-seed, method-specific endpoint observations, not significance tests or universal active/passive claims. The two methods use different Teacher/data conditions and different native metrics. Every Student begins from the same pretrained backbone lineage; near-reference AWM scores may reflect initialization/parameter similarity, not causal transmission of a new ownership signal. Utility remains broadly usable on these two recorded benchmarks: ARC increases versus clean while MC2 declines; the two benchmarks do not prove global utility preservation. This is not all passive methods, all active methods, all7Bmodels, or a cross-lineage evaluation.
 
 Primary reports: [PN-FP](pnfp_7b_distillation_6004_final.md), [Teacher trajectory/extension](pnfp_7b_wa050_extension_20260919.md), [AWM](awm_7b_extension.md).
 
@@ -76,4 +76,4 @@ Primary reports: [PN-FP](pnfp_7b_distillation_6004_final.md), [Teacher trajector
 
 CPU-only verification PASS:22 artifact groups, 270 files hashed,81 critical evidence files identical between AutoDL and local; no science workers. Prior AWM shutdown script exit0 is now independently recovered from disk; current CPU-only restart remains on. No new evaluation/training/download or cleanup was performed.
 
-**Git publication remains blocked:** original HTTPS Git credential is unavailable; the existing SSH key is rejected. Existing GitHub App confirms the correct private repository/account and remote main `d840b76637afaf6c699598832eee7d9c8c8d0d8d`, but is not a faithful native-Git push transport for the40 preserved original local commits. No force push, squash, history rewrite, new repository, identity switch, or committed credential. Until a successful push and readback, GitHub is **not yet the canonical source for this completed7B summary**.
+**Git publication verified:** normal SSH push to the original private repository succeeded, preserving all 42 local commits. Five required files were independently read from GitHub at published commit `3a6a924a0875e19f3704ef68699d345e0962b8ae` and their Git blob SHAs matched. GitHub is now the canonical source for the completed 7B reports and evidence (large model weights remain at their manifest locations). Previous authentication failures are retained as historical receipts. No force push or history rewrite.
