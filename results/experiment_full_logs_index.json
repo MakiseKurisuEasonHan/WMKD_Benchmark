@@ -1072,13 +1072,20 @@
       "run_id": "wa050_extension_v1",
       "full_log_path": "results/pnfp/scale_7b/wa050_extension/full_experiment_log.json",
       "full_log_sha256": "580c816843b56eb3474a64c1ee4ee29ef3f5377f0422160a6b37efc14bf20191",
-      "scientific_status": "EXTENSION_COMPLETE_NOT_PREFERRED",
+      "scientific_status": "COMPLETED_USER_ACCEPTED_7B_TEACHER",
       "watermark_evaluation_available": true,
       "utility_available": true,
-      "preferred_teacher": false,
+      "preferred_teacher": true,
       "modelscope_repo": null,
       "preferred_teacher_candidate": false,
-      "telemetry_records": 24
+      "telemetry_records": 24,
+      "historical_extension_assessment": {
+        "scientific_status": "EXTENSION_COMPLETE_NOT_PREFERRED",
+        "preferred_teacher": false,
+        "preferred_teacher_candidate": false
+      },
+      "selection_receipt": "results/scale_7b_final_audit/preferred_teacher_selection.json",
+      "selection_note": "User acceptance after extension automatic gate; no source full-log or measurement changed."
     },
     {
       "method": "PN-FP",

@@ -1,3 +1,5 @@
+当前最高状态（2026-09-20 7B最终收口）：仅无卡核验/总结/文档/Git；不启动训练、检测、utility、生成、下载或关机。PN-FP Teacher804/1024；Direct53、Paraphrase71、Logit144（均/1024）已完成。AWM Reference1.0；Direct0.9999952428042889、Paraphrase0.9999933559447527、Logit0.9999957373365760；冻结tau0.007566815861277831，均检出。LLMPrint保持PAUSED_FOR_AWM_SPEED_COMPARISON58/200，cross-lineage暂停未运行。权威汇总 docs/reproduction_reports/7b_scale_extension_final_summary.md；核验/发布状态 results/scale_7b_final_audit/。以下旧授权与阶段状态为历史记录，不是新执行指令。
+
 AWM7B（2026-09-20T06:31:01）：COMPLETED。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；夜间授权：核验/同步/commit后自动关机；不释放实例。
 
 AWM7B（2026-09-20T06:24:27）：logit。独立results/awm/scale_7b；报告docs/reproduction_reports/awm_7b_extension.md。LLMPrint保持58/200暂停，PNFP结果不变；夜间授权：核验/同步/commit后自动关机；不释放实例。

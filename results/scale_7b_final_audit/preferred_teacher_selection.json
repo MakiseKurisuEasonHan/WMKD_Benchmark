@@ -1,0 +1,13 @@
+{
+  "status": "USER_ACCEPTED_FINAL_TEACHER",
+  "fresh_hits": 804,
+  "total": 1024,
+  "nonzero_update": 19,
+  "optimizer_call": 21,
+  "checkpoint": "/root/autodl-tmp/WMKD_Benchmark_data/scale_7b/wa050_extension_v1/best_model",
+  "manifest_path": "results/pnfp/scale_7b/wa050_extension/receipts/best_manifest.json",
+  "manifest_sha256": "273fe9bba84a7293053354497582a2a7bc459c3b1d7eb110209c74ea2d104c8a",
+  "historical_assessment": "EXTENSION_COMPLETE_NOT_PREFERRED preserved: the automatic >=80% gate was not met at extension closeout",
+  "later_authority": "User accepted 804/1024 for formal distillation; see results/pnfp/scale_7b/distillation/user_authorization_20260919.txt and subsequent 6004 authorization",
+  "scientific_results_changed": false
+}

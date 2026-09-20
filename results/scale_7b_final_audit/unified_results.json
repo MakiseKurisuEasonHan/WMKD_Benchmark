@@ -1,0 +1,235 @@
+{
+  "scope": "representative active/passive 7B same-backbone scale extension",
+  "rows": [
+    {
+      "method": "PN-FP",
+      "condition": "Teacher",
+      "hits": 804,
+      "total": 1024,
+      "recall": 0.78515625,
+      "retention": 1.0,
+      "score": null,
+      "threshold": null,
+      "detected": null,
+      "arc": 0.4206484641638225,
+      "truthfulqa": 0.44199761508116137
+    },
+    {
+      "method": "PN-FP",
+      "condition": "Direct",
+      "hits": 53,
+      "total": 1024,
+      "recall": 0.0517578125,
+      "retention": 0.06592039800995025,
+      "score": null,
+      "threshold": null,
+      "detected": null,
+      "arc": 0.4684300341296928,
+      "truthfulqa": 0.4240413977812835
+    },
+    {
+      "method": "PN-FP",
+      "condition": "Paraphrase",
+      "hits": 71,
+      "total": 1024,
+      "recall": 0.0693359375,
+      "retention": 0.08830845771144279,
+      "score": null,
+      "threshold": null,
+      "detected": null,
+      "arc": 0.48464163822525597,
+      "truthfulqa": 0.43801799874931996
+    },
+    {
+      "method": "PN-FP",
+      "condition": "Logit",
+      "hits": 144,
+      "total": 1024,
+      "recall": 0.140625,
+      "retention": 0.1791044776119403,
+      "score": null,
+      "threshold": null,
+      "detected": null,
+      "arc": 0.4462457337883959,
+      "truthfulqa": 0.42416776003683065
+    },
+    {
+      "method": "AWM",
+      "condition": "Reference",
+      "hits": null,
+      "total": null,
+      "recall": null,
+      "retention": null,
+      "score": 1.0,
+      "threshold": 0.007566815861277831,
+      "detected": true,
+      "arc": 0.3660409556313993,
+      "truthfulqa": 0.45754715790333667
+    },
+    {
+      "method": "AWM",
+      "condition": "Direct",
+      "hits": null,
+      "total": null,
+      "recall": null,
+      "retention": null,
+      "score": 0.9999952428042889,
+      "threshold": 0.007566815861277831,
+      "detected": true,
+      "arc": 0.4684300341296928,
+      "truthfulqa": 0.4295359888279958
+    },
+    {
+      "method": "AWM",
+      "condition": "Paraphrase",
+      "hits": null,
+      "total": null,
+      "recall": null,
+      "retention": null,
+      "score": 0.9999933559447527,
+      "threshold": 0.007566815861277831,
+      "detected": true,
+      "arc": 0.4778156996587031,
+      "truthfulqa": 0.43869721529079625
+    },
+    {
+      "method": "AWM",
+      "condition": "Logit",
+      "hits": null,
+      "total": null,
+      "recall": null,
+      "retention": null,
+      "score": 0.999995737336576,
+      "threshold": 0.007566815861277831,
+      "detected": true,
+      "arc": 0.44112627986348124,
+      "truthfulqa": 0.4263976584873499
+    }
+  ],
+  "runtime": [
+    {
+      "method": "PN-FP",
+      "condition": "Direct",
+      "training_summary_s": 3394.7857228666544,
+      "subprocess_wall_s": 3421.1984577178955,
+      "peak_allocated_GiB": 38.78591775894165,
+      "peak_sampled_GPU_GiB": 53.0400390625,
+      "peak_RSS_GiB": 19.657012939453125,
+      "manifest": "results/pnfp/scale_7b/distillation_6004/direct_final_manifest.json",
+      "manifest_sha256": "3945e0d515979f1ce5faf87f2fcd75e854e422c7c815aff6494f0ebe39c100fe"
+    },
+    {
+      "method": "PN-FP",
+      "condition": "Paraphrase",
+      "training_summary_s": 3426.771614897996,
+      "subprocess_wall_s": 3452.740153312683,
+      "peak_allocated_GiB": 38.72249698638916,
+      "peak_sampled_GPU_GiB": 53.0048828125,
+      "peak_RSS_GiB": 19.66158676147461,
+      "manifest": "results/pnfp/scale_7b/distillation_6004/paraphrase_final_manifest.json",
+      "manifest_sha256": "a2ca3f2644bbc52a871b21dde6621002d7bb11c8c7390d904c0163dfbbb17603"
+    },
+    {
+      "method": "PN-FP",
+      "condition": "Logit",
+      "training_summary_s": 3453.1376740299165,
+      "subprocess_wall_s": 3502.650898218155,
+      "peak_allocated_GiB": 38.785964012145996,
+      "peak_sampled_GPU_GiB": 48.4150390625,
+      "peak_RSS_GiB": 19.656898498535156,
+      "manifest": "results/pnfp/scale_7b/logit_recovery_6004/logit_final_manifest.json",
+      "manifest_sha256": "3c1b2bfa360ed388be9d12037a14a63af0cf6cc164c22f9d396094255564840b"
+    },
+    {
+      "method": "AWM",
+      "condition": "Direct",
+      "training_summary_s": 3381.2345238886774,
+      "subprocess_wall_s": 3409.5282413959503,
+      "peak_allocated_GiB": 38.671868324279785,
+      "peak_sampled_GPU_GiB": 46.9599609375,
+      "peak_RSS_GiB": 19.656631469726562,
+      "manifest": "results/awm/scale_7b/direct_final_manifest.json",
+      "manifest_sha256": "fd824dd1155b9f05791a382696ffc2f87a082ce86e9b0bdb36ee4d403fd39dd1"
+    },
+    {
+      "method": "AWM",
+      "condition": "Paraphrase",
+      "training_summary_s": 3425.4949252307415,
+      "subprocess_wall_s": 3454.5665748119354,
+      "peak_allocated_GiB": 38.635640144348145,
+      "peak_sampled_GPU_GiB": 49.4072265625,
+      "peak_RSS_GiB": 19.661354064941406,
+      "manifest": "results/awm/scale_7b/paraphrase_final_manifest.json",
+      "manifest_sha256": "641730d94307ba02c7c5b624c071d5ced2d8d8e96f3c9dda3289b6d4aff58ce9"
+    },
+    {
+      "method": "AWM",
+      "condition": "Logit",
+      "training_summary_s": 3455.137544218451,
+      "subprocess_wall_s": 3510.3761043548584,
+      "peak_allocated_GiB": 38.671093463897705,
+      "peak_sampled_GPU_GiB": 44.8173828125,
+      "peak_RSS_GiB": 19.65621566772461,
+      "manifest": "results/awm/scale_7b/logit_final_manifest.json",
+      "manifest_sha256": "32952b62afdb7fb0a466776314d3bfcbeaaed43f88ce2e94d20e92eaa910d225"
+    }
+  ],
+  "model_id": "meta-llama/Llama-2-7b-chat-hf",
+  "revision": "f5db02db724555f92da89c216ac04704f23d4590",
+  "sources": [
+    {
+      "path": "results/pnfp/scale_7b/distillation_6004/direct/full_experiment_log.json",
+      "sha256": "f29d31b67226ad8911925441f9c1b4b2fd9c941bd73bc25b939dd6af4b47fe47"
+    },
+    {
+      "path": "results/pnfp/scale_7b/distillation_6004/paraphrase/full_experiment_log.json",
+      "sha256": "e8fd173f9e1778f861e1d5b6af9c16ace9cf22ac6e6a45cc6f93b134dca9a776"
+    },
+    {
+      "path": "results/pnfp/scale_7b/logit_recovery_6004/logit/full_experiment_log.json",
+      "sha256": "cb5f6400991ee6fbb93b55a97e5be9533865bc1235aa9e88ea18d6a20d2878c3"
+    },
+    {
+      "path": "results/awm/scale_7b/reference/full_experiment_log.json",
+      "sha256": "fb86e1a3be04d5b762cbd2103eda1fb9422e3e740ef542a1310d8080f3516c5a"
+    },
+    {
+      "path": "results/awm/scale_7b/direct/full_experiment_log.json",
+      "sha256": "b8b68d2181e41fee0002c6a1527f09b498d374878eee49272c1b964ceef11550"
+    },
+    {
+      "path": "results/awm/scale_7b/paraphrase/full_experiment_log.json",
+      "sha256": "3275a686a0127d5b35800ae924147cd9b1c687f2ec50b8a225b1dbeb82b58637"
+    },
+    {
+      "path": "results/awm/scale_7b/logit/full_experiment_log.json",
+      "sha256": "59a476b1a7cb484bee5599379c47a4dcbb5ffd800850c618f5a3c5cb4b250a7b"
+    },
+    {
+      "path": "results/pnfp/scale_7b/wa050_extension/receipts/final_detector.json",
+      "sha256": "97e61eea4a3210414f75351e410e86ba3a7205e6a15b5adbd9dce0f523e1d4ba"
+    },
+    {
+      "path": "results/pnfp/scale_7b/wa050_extension/receipts/final_utility.json",
+      "sha256": "23778ab46e3ee51e743f08dce74ac00125fa460ca9132758093d7311fc09c769"
+    },
+    {
+      "path": "results/pnfp/scale_7b/wa050_extension/receipts/best_manifest.json",
+      "sha256": "273fe9bba84a7293053354497582a2a7bc459c3b1d7eb110209c74ea2d104c8a"
+    },
+    {
+      "path": "results/awm/scale_7b/calibration.json",
+      "sha256": "627107dc6c7db1569a43c2f94f67b5e7f9314bdcd2968c36f288f07b83b47a3f"
+    }
+  ],
+  "no_new_experiments": true,
+  "cross_lineage": "PAUSED_NOT_EXECUTED",
+  "llmprint": "PAUSED_FOR_AWM_SPEED_COMPARISON",
+  "awm_cache": {
+    "shards": 157,
+    "verified_before_cleanup": true,
+    "payload_bytes": 33291968000,
+    "cleanup_after_all_stage_completions": true
+  },
+  "paraphrase_retries": 6
+}

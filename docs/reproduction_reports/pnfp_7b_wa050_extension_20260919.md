@@ -1,3 +1,5 @@
+> 2026-09-20 最终选择补记：下文 `EXTENSION_COMPLETE_NOT_PREFERRED` 是本次 extension 结束时未达到自动 ≥80% 门槛的历史判断。用户随后明确接受同一 call21 / 有效 update19、fresh-reload804/1024 checkpoint，并用于已完成的三套正式蒸馏。当前唯一正式 Teacher 指向 `scale_7b/wa050_extension_v1/best_model`；原始 assessment 和测量值不覆盖。完整选择记录见 `results/scale_7b_final_audit/preferred_teacher_selection.json`，汇总见 [7B final summary](7b_scale_extension_final_summary.md)。
+
 # PN-FP 7B WA=.50 extension — 2026-09-19
 
 WA=.50 extension EXTENSION_COMPLETE_NOT_PREFERRED；fresh-reload 804/1024，best有效更新19；preferred候选=False。训练停止，未启动蒸馏，授权证据闭环后自动关机。

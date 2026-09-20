@@ -1,0 +1,427 @@
+现在不要启动任何新的 GPU 实验、训练、生成、评估或下载。
+
+当前 AutoDL 已以无卡模式开机：
+
+ssh -p 32061 root@connect.westd.seetacloud.com
+
+请使用现有 SSH config / alias 连接该实例，并对已经完成的 PN-FP 7B 与 AWM 7B 实验做最终完整收口。
+
+目标：
+
+1. 核验 PN-FP 7B 正式结果；
+2. 核验 AWM 7B 正式结果；
+3. 汇总所有 7B scale-extension 结果；
+4. 检查本地项目记录是否一致；
+5. 修复缺失/不一致的文档记录；
+6. 解决 GitHub push pending；
+7. 将最终结果推送到原来的 private GitHub；
+8. 不启动任何新实验。
+
+━━━━━━━━━━━━━━━━━━━━
+一、严格禁止
+━━━━━━━━━━━━━━━━━━━━
+
+禁止：
+
+- 启动 GPU training
+- 启动 detector 重跑
+- 启动 utility 重跑
+- 重新生成 Teacher data
+- 重新生成 paraphrase data
+- 重新生成 logits
+- 下载新模型
+- 下载新数据
+- 修改已有科学结果
+- 重调 threshold
+- 重调 WA / DM
+- 重跑 PN-FP Teacher
+- 重跑 AWM calibration
+- 启动 cross-lineage
+- 启动 LLMPrint
+
+当前任务仅是：
+
+核验
+→ 汇总
+→ 补文档
+→ commit
+→ push
+
+━━━━━━━━━━━━━━━━━━━━
+二、先检查 Git / 项目状态
+━━━━━━━━━━━━━━━━━━━━
+
+请先检查：
+
+- current branch
+- HEAD
+- origin
+- origin/main
+- working tree
+- untracked files
+- local commits not pushed
+- remote commits not pulled
+
+不要：
+
+- reset --hard
+- clean
+- force push
+- rewrite history
+- rebase existing experiment history unless absolutely necessary
+
+如果本地有多个未推送 commit：
+
+请按时间顺序核对，不要 squash 掉实验历史，除非当前项目固定规则明确允许。
+
+━━━━━━━━━━━━━━━━━━━━
+三、PN-FP 7B 正式结果核验
+━━━━━━━━━━━━━━━━━━━━
+
+从以下来源交叉核验：
+
+- docs/reproduction_reports/
+- results/pnfp/
+- manifests
+- detector receipts
+- utility receipts
+- final model SHA
+- experiment logs
+- decisions
+- project status
+- TODO
+- CODEX_LOG
+- any scale_7b directories
+
+必须确认以下结果是否为最终正式结果：
+
+Teacher:
+- backbone = Llama-2-7b-chat-hf
+- revision = f5db02db724555f92da89c216ac04704f23d4590
+- PN-FP fresh-reload = 804 / 1024
+- recall = 78.52%
+- WA = 0.50
+- DM = 0.25
+- full-parameter
+- BF16
+- AdamW8bit 0.50.0 engineering adaptation
+- ARC-Challenge = 42.06%
+- TruthfulQA-MC2 = 44.20%
+
+Direct:
+- PN-FP fresh-reload = 53 / 1024
+- recall = 5.18%
+- retention vs Teacher = 53 / 804 = 6.59%
+- ARC-Challenge = 46.84%
+- TruthfulQA-MC2 = 42.40%
+
+Paraphrase:
+- PN-FP fresh-reload = 71 / 1024
+- recall = 6.93%
+- retention vs Teacher = 71 / 804 ≈ 8.83%
+- ARC-Challenge = 48.46%
+- TruthfulQA-MC2 = 43.80%
+
+Logit:
+请从正式结果文件中读取最终数值。
+不要猜。
+必须确认：
+- hits / 1024
+- recall %
+- retention vs Teacher
+- ARC-Challenge
+- TruthfulQA-MC2
+- final model SHA
+- runtime
+- peak VRAM / host RAM
+- whether final run completed successfully
+
+如果 Logit 已完成但项目记录中遗漏：
+补充正式记录。
+
+如果 Logit 实际未完成：
+明确标记，不要虚构结果。
+
+━━━━━━━━━━━━━━━━━━━━
+四、PN-FP 7B 训练轨迹记录
+━━━━━━━━━━━━━━━━━━━━
+
+保留并核对这些关键科学事实：
+
+WA=.75:
+- best fresh-reload ≈ 334/1024 = 32.62%
+- later collapse to 0/1024
+
+WA=.50:
+- short pilot fresh-reload = 654/1024 = 63.87%
+- extension best at effective update 19
+- final selected Teacher fresh-reload = 804/1024 = 78.52%
+- stopped after plateau criterion
+
+不要把 exploratory failed configs 当最终 Teacher。
+
+最终 Teacher 必须唯一指向 804/1024 checkpoint。
+
+━━━━━━━━━━━━━━━━━━━━
+五、AWM 7B 正式结果核验
+━━━━━━━━━━━━━━━━━━━━
+
+从以下来源交叉核验：
+
+- docs/reproduction_reports/awm_7b_extension.md
+- results/awm/
+- calibration receipts
+- detector receipts
+- utility receipts
+- model SHA manifests
+- project logs
+
+必须确认：
+
+Reference:
+- clean Llama-2-7b-chat-hf
+- self score = 1.0
+
+Negative calibration scores:
+- 0.00338617
+- 0.00199362
+- 0.00756682
+
+Frozen threshold:
+0.007566815861277831
+
+确认 threshold 规则仍是：
+max of three fixed negative scores
+
+且 Student 结果后未重调 threshold。
+
+正式 Student：
+
+Direct:
+- AWM native score = 0.9999952428042889
+- detected = yes
+- ARC-Challenge = 46.84%
+- TruthfulQA-MC2 = 42.95%
+
+Paraphrase:
+- AWM native score = 0.9999933559447527
+- detected = yes
+- ARC-Challenge = 47.78%
+- TruthfulQA-MC2 = 43.87%
+
+Logit:
+- AWM native score = 0.9999957373365760
+- detected = yes
+- ARC-Challenge = 44.11%
+- TruthfulQA-MC2 = 42.64%
+
+同时确认：
+- three final models SHA verified
+- 157/157 logit shards completed and verified
+- temporary logits cleaned only after final verification
+- paraphrase retries did not alter scientific protocol
+- no threshold recalibration occurred
+
+━━━━━━━━━━━━━━━━━━━━
+六、暂停的 LLMPrint
+━━━━━━━━━━━━━━━━━━━━
+
+LLMPrint 7B 必须保持：
+
+PAUSED_FOR_AWM_SPEED_COMPARISON
+
+确认：
+
+- 58 / 200 fingerprints preserved
+- 13 negative models preserved
+- resume state preserved
+- no accidental deletion
+- no restart
+- no status change to failed/cancelled
+
+不要继续 LLMPrint。
+
+━━━━━━━━━━━━━━━━━━━━
+七、统一 7B 结果总结
+━━━━━━━━━━━━━━━━━━━━
+
+生成一个正式 summary，建议放到：
+
+docs/reproduction_reports/7b_scale_extension_final_summary.md
+
+内容至少包括：
+
+1. Hardware / environment
+2. Model identities / revisions
+3. Engineering adaptations
+4. PN-FP Teacher selection history
+5. PN-FP final results
+6. AWM calibration
+7. AWM final results
+8. Utility
+9. Runtime / memory
+10. Limitations
+11. Bounded scientific conclusion
+
+请生成统一表：
+
+Method | Condition | Native ownership score | Detected/retained | ARC-Challenge | TruthfulQA-MC2
+
+PN-FP:
+- Teacher
+- Direct
+- Paraphrase
+- Logit
+
+AWM:
+- Reference
+- Direct
+- Paraphrase
+- Logit
+
+注意：
+PN-FP 与 AWM native metric 不同。
+不要直接把两者数值大小横向比较。
+
+PN-FP 应报告：
+- hits /1024
+- recall %
+- retention vs Teacher
+
+AWM 应报告：
+- native score
+- frozen threshold
+- detected?
+
+━━━━━━━━━━━━━━━━━━━━
+八、科学结论边界
+━━━━━━━━━━━━━━━━━━━━
+
+最终总结可以支持：
+
+在 7B same-backbone setting 下：
+
+PN-FP active ownership signal 在 Direct / Paraphrase 等 response-distillation 条件下显著下降；
+
+AWM passive weight-space ownership score 在 Direct / Paraphrase / Logit 后保持接近 reference 水平。
+
+但不要扩大成：
+- 所有 active methods 都如此
+- 所有 passive methods 都如此
+- 所有 7B models 都如此
+
+正确表述：
+
+representative active/passive 7B scale extension
+
+或者：
+
+7B same-backbone extension for PN-FP and AWM
+
+如果 PN-FP Logit 结果与 Direct/Paraphrase不同，必须如实体现，不要为了叙事隐藏。
+
+━━━━━━━━━━━━━━━━━━━━
+九、检查项目文档一致性
+━━━━━━━━━━━━━━━━━━━━
+
+检查并必要时更新：
+
+- PROJECT_STATUS.md
+- TODO.md
+- DECISIONS.md
+- EXPERIMENT_LOG.md
+- CODEX_LOG.md
+- README.md（仅当现有规范要求）
+- docs/reproduction_reports/
+- results summaries
+- manifests
+
+确保：
+
+- 旧 3B结果未被修改
+- 7B结果明确标记为 scale extension
+- PN-FP / AWM结果没有混淆
+- Teacher / Student model identity清楚
+- same-backbone 7B→7B描述一致
+- ModelScope provenance正确
+- AdamW8bit adaptation透明记录
+- AWM threshold frozen rule透明记录
+- LLMPrint paused状态正确
+
+━━━━━━━━━━━━━━━━━━━━
+十、GitHub push
+━━━━━━━━━━━━━━━━━━━━
+
+之前一直 push pending。
+
+现在请优先检查：
+
+- GitHub remote URL
+- credential availability
+- SSH / HTTPS authentication
+- current repository identity
+
+原 private GitHub 仓库和账号保持不变。
+
+不要创建新仓库。
+不要切换 GitHub identity。
+
+如果当前 HTTPS remote认证失败，但现有项目已允许 SSH GitHub身份：
+使用现有正确的私人 GitHub身份恢复 push。
+
+禁止：
+- force push
+- history rewrite
+- alternate repository
+- personal access token硬编码进文件
+- commit credential
+
+完成后：
+
+git status
+git log
+git push
+
+确认：
+
+local HEAD == origin/main
+
+然后报告最终 remote commit SHA。
+
+如果 GitHub认证仍无法在不需要用户新授权的情况下解决：
+
+不要破坏项目。
+明确报告具体认证阻塞。
+
+但请先尽最大努力使用现有 Git/SSH credential安全恢复。
+
+━━━━━━━━━━━━━━━━━━━━
+十一、最终核验
+━━━━━━━━━━━━━━━━━━━━
+
+完成 push 后重新从 GitHub remote读取：
+
+- final 7B summary
+- PN-FP report
+- AWM report
+- PROJECT_STATUS
+- experiment log
+
+确认远端内容与本地一致。
+
+最终向我汇报：
+
+1. PN-FP 7B最终结果
+2. AWM 7B最终结果
+3. PN-FP Logit最终结果
+4. 统一 scientific conclusion
+5. 所有更新文件
+6. final local commit
+7. final remote commit
+8. local HEAD是否等于origin/main
+9. GitHub是否已可作为我们接下来论文讨论的canonical source
+
+不要启动任何新实验。
+
+这轮的唯一目标：
+把已经完成的7B实验正式核验、总结、记录并推送到GitHub，方便我和ChatGPT接下来直接基于GitHub讨论论文修改。

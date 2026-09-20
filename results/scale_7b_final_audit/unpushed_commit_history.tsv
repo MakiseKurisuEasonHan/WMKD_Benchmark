@@ -1,0 +1,41 @@
+sha	author_time	subject
+45efff85bfdd9cca38b63090e2798219cd9ac5da	2026-09-18T20:19:24+10:00	Record PN-FP 7B protocol, verified model and full-parameter RAM blocker
+15f4128cfa335c8bb75b227e1d1eef545d9ca442	2026-09-18T20:20:48+10:00	Preserve PN-FP 7B failed full-parameter training logs
+40177ad151358a18f9ddee1163b081772b54c9d4	2026-09-18T20:56:34+10:00	Record isolated GPU BF16 Adam-state pilot and stop on first-step OOM
+180ee0f315bd81a766ecd94f5c3b23a302d977ee	2026-09-18T21:14:54+10:00	Record successful full-parameter PN-FP 7B AdamW8bit short pilot
+53819296ce7ea8c6f95dbb47de9f0255b2387023	2026-09-18T21:43:35+10:00	Launch frozen full-parameter PN-FP 7B AdamW8bit Teacher with serial final evaluations
+453b1f77e150e413a83351a87af6598477e1e1f4	2026-09-18T22:04:34+10:00	Close PN-FP 7B Teacher: zero final recall, preserved utility and verified artifacts
+b17f84011d2660432d27cfd889e7f8a8e644264b	2026-09-18T22:24:42+10:00	Start frozen PN-FP 7B recall trajectory diagnostic with best checkpoint retention
+7e1f219f48686487c727ec536ffcd6f89a64c7c0	2026-09-18T23:07:38+10:00	Close controlled PN-FP 7B trajectory: best call13, verified collapse and reload discrepancy
+112b4adb3d2792861b84fee52685e23e23e6932e	2026-09-18T23:25:51+10:00	Launch bounded PNFP 7B WA050 sensitivity pilot
+b10b63cb2b7d98dbf2c0e05c74d19969b933cbb4	2026-09-18T23:51:25+10:00	Record PNFP WA050 Pareto candidate and validated final utility
+5a88087085993ed3a711a4241bb95a86011dadc5	2026-09-18T23:52:46+10:00	Verify WA050 evidence synchronization and idle closeout
+c20af9ec0f2c49c5678edf5bceaa2f307bd828b0	2026-09-19T00:07:54+10:00	Extend frozen WA050 with verified Adam-history replay and bounded stopping
+ee28d978ffed017ede74f797b1c4cab90bd2d20c	2026-09-19T00:36:31+10:00	Close WA050 extension with verified best and automatic shutdown authorization
+3d4a7f0a30389529b1f35425ca77db1fc709481c	2026-09-19T00:39:44+10:00	Record WA050 extension closeout and shutdown receipts
+904e0f08b6b862361990355840129af96a3c41d3	2026-09-19T00:42:05+10:00	Verify AutoDL shutdown and finalize WA050 extension evidence
+0daad513e2598ea010422f2f5a27b9d1dc2c83d0	2026-09-19T02:08:57+10:00	Record 7B distillation disk preflight and enforce capacity budget
+f95de9487cd5ceb08c7c99301e52fa200deb94df	2026-09-19T02:49:04+10:00	Launch canonical PN-FP 7B distillation on cloned 6004 with exact BF16 cache and closeout
+962e424f52591b24ce6d8246db604eb082815810	2026-09-19T02:59:15+10:00	Preserve current Bb preprocessing and verify bounded 7B memory recovery and final closeout
+03441996fbb97b4e884e560027d2f207a5588f47	2026-09-19T12:12:23+10:00	Close PN-FP 7B 6004 distillation campaign with verified evidence
+9ac59f6bf02c250117e9fb2859374a386eabb0dc	2026-09-19T12:12:33+10:00	Record 6004 shutdown invocation and Git receipt
+4c5d98186a5ac92e66dfe51702f193babab6f725	2026-09-19T13:09:41+10:00	Fix canonical BF16 target serialization and resume only 7B Logit distillation
+d0a62dbb12e113bbac7c214cca16f250e2c1a83a	2026-09-19T13:11:09+10:00	Record real Llama output dtype and passed BF16 cache consumer smoke
+e22794a86dac435366b8d012a82d660fd5e9b661	2026-09-19T14:17:11+10:00	Close PN-FP 7B 6004 distillation campaign with verified evidence
+38cfe3aa3ec03951c23bb4658db29627c6f12f3f	2026-09-19T14:17:21+10:00	Record 6004 shutdown invocation and Git receipt
+516620e79d8b15506a04419e60f044d283494543	2026-09-19T15:51:43+10:00	Launch independent LLMPrint 7B canonical A2 reference and serial distillation campaign
+0c9d4de122117578f1c83192e1aaa12c0f9d4f54	2026-09-19T15:54:09+10:00	Verify both canonical negative provenance manifest schemas before acquisition
+2cb91bb00db0266069a3eb8c065ead428378fd24	2026-09-19T15:58:49+10:00	Record LLMPrint7B live launch, canonical calibration rationale and push pending
+e7fdbc17ca714858ce9df4b4db18c9727a9aa759	2026-09-19T17:00:22+10:00	Restrict 7B passive extension to representative LLMPrint experiment
+9ab60b51bb844cc0894c1f5b06c905b9c75f24c3	2026-09-19T18:37:12+10:00	Safely pause LLMPrint at58 fingerprints and record full canonical AWM7B timing
+76b2e6ef244c6ca96e7d0c7802f3200a5b00fae9	2026-09-19T18:38:00+10:00	Preserve LF bytes for paused fingerprint and AWM timing SHA evidence
+f867001edb9b3a804507b322ad010b790df46108	2026-09-19T19:04:48+10:00	Launch authorized AWM7B formal calibration and three clean Student pipeline; no shutdown
+db516d024dad39ba54b8e5e31db1f1bc961f7539	2026-09-19T19:07:16+10:00	Record formal AWM7B reference evidence and frozen native detector
+fd86fba77a39ac69ee0e53447c4559ed3b0e9fb2	2026-09-19T19:09:01+10:00	Keep final AWM models and clean only verified reproducible logits after completion
+8b3b141da68bfe0d279f75e56030006aca654a9c	2026-09-19T20:42:31+10:00	Enable AWM7B unattended night closeout and safe shutdown watchdog
+14af3cabb5df0e30b1912368d4570cc654f545bf	2026-09-20T02:35:47+10:00	Record formal AWM7B direct evidence and frozen native detector
+c391ccd66a8bf60e03f9bb2c9c6feed8126e5044	2026-09-20T05:20:21+10:00	Record formal AWM7B paraphrase evidence and frozen native detector
+004f0b1fe0c904a632743b92ba8b1bc2b5a41bb2	2026-09-20T06:24:27+10:00	Record formal AWM7B logit evidence and frozen native detector
+16aaf5ed3c030a1ec9db043cd6e199ba2b8bbbc5	2026-09-20T06:31:01+10:00	Record formal AWM7B COMPLETED evidence and frozen native detector
+a277c04d0d0891d775edfee9de873db83b6a294d	2026-09-20T06:31:02+10:00	Record AWM7B verified night closeout and shutdown authorization
+9729a4975eab287c022bab84d5b73c89b497a982	2026-09-20T06:32:24+10:00	Record AWM7B shutdown connection observation
